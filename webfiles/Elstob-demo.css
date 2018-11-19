@@ -1,12 +1,12 @@
 @font-face {
     font-family: 'ElstobVF';
-    src:url("./ElstobVF.ttf");
+    src:url("./ElstobVF.woff2");
     font-weight: 300 800;
     font-style: normal;
 }
 @font-face {
     font-family: 'ElstobVF';
-    src:url("./ElstobVFItalic.ttf");
+    src:url("./ElstobVFItalic.woff2");
     font-weight: 300 800;
     font-style: italic;
 }
