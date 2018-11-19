@@ -1,12 +1,12 @@
 @font-face {
     font-family: 'ElstobVF';
-    src:url("/Users/peterbaker/work/Anglo_Saxon_Collection/Elstob/web/fonts/ElstobVF.ttf");
+    src:url("ElstobVF.ttf");
     font-weight: 300 800;
     font-style: normal;
 }
 @font-face {
     font-family: 'ElstobVF';
-    src:url("/Users/peterbaker/work/Anglo_Saxon_Collection/Elstob/web/fonts/ElstobVFItalic.ttf");
+    src:url("ElstobVFItalic.ttf");
     font-weight: 300 800;
     font-style: italic;
 }
