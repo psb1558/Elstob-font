@@ -1,0 +1,154 @@
+@font-face {
+    font-family: 'ElstobVF';
+    src:url("/Users/peterbaker/work/Anglo_Saxon_Collection/Elstob/web/fonts/ElstobVF.ttf");
+    font-weight: 300 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ElstobVF';
+    src:url("/Users/peterbaker/work/Anglo_Saxon_Collection/Elstob/web/fonts/ElstobVFItalic.ttf");
+    font-weight: 300 800;
+    font-style: italic;
+}
+:root {
+    --romsize: 20;
+    --italsize: 20;
+    --romopsz: 60;
+    --romwght: 380;
+    --romGRAD: 1;
+    --italopsz: 60;
+    --italwght: 380;
+    --italslnt: 0;
+}
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+}
+h1 {
+    font-family: ElstobVF;
+    font-size: 40px;
+    font-variation-settings: 'opsz' 100, 'wght' 300, 'GRAD' 1;
+}
+h2 {
+    font-family: ElstobVF;
+    font-size: 25px;
+    font-variation-settings: 'opsz' 80, 'wght' 300, 'GRAD' 1;
+    font-feature-settings: 'smcp' on;
+}
+p {
+    font-family: ElstobVF;
+    font-size: 20px;
+    font-variation-settings: 'opsz' 60, 'wght' 380, 'GRAD' 1, 'slnt' 0;
+    font-feature-settings: 'calt' on;
+}
+b{
+    font-variation-settings: 'opsz' 60, 'wght' 700, 'GRAD' 1,
+    'slnt' 0;
+}
+#romtextarea {
+    background-color: #F8F8F8;
+    margin: 0 0 20px 0;
+    font-style: normal;
+    font-size: var(--romsize);
+    font-variation-settings: 'opsz' var(--romopsz),
+         'wght' var(--romwght),
+         'GRAD' var(--romGRAD);
+    font-feature-settings: 'calt' on;
+}
+#italtextarea {
+    background-color: #F8F8F8;
+    margin: 0 0 20px 0;
+    font-style: italic;
+    font-size: var(--italsize);
+    font-variation-settings: 'opsz' var(--italopsz),
+         'wght' var(--italwght),
+         'slnt' var(--italslnt);
+    font-feature-settings: 'calt' on;
+}
+.fineprint {
+    font-variation-settings: 'opsz' 1, 'wght' 700, 'GRAD' 1;
+}
+.footnote {
+    font-variation-settings: 'opsz' 20, 'wght' 700, 'GRAD' 1;
+}
+.blockquote {
+    font-variation-settings: 'opsz' 40, 'wght' 700, 'GRAD' 1;
+}
+.subhead {
+    font-variation-settings: 'opsz' 80, 'wght' 700, 'GRAD' 1;
+}
+.display {
+    font-variation-settings: 'opsz' 1, 'wght' 700, 'GRAD' 1;
+   }
+.light {
+    font-variation-settings: 'opsz' 60, 'wght' 300, 'GRAD' 1;
+}
+.medium {
+    font-variation-settings: 'opsz' 60, 'wght' 500, 'GRAD' 1;
+}
+.semibold {
+    font-variation-settings: 'opsz' 60, 'wght' 600, 'GRAD' 1;
+}
+.bold {
+    font-variation-settings: 'opsz' 60, 'wght' 700, 'GRAD' 1;
+}
+.extrabold {
+    font-variation-settings: 'opsz' 1, 'wght' 800, 'GRAD' 1;
+}
+.slanted {
+    font-style: italic;
+    font-variation-settings: 'opsz' 60, 'wght' 380, 'slnt' -40;
+}
+.upright {
+    font-style: italic;
+    font-variation-settings: 'opsz' 60, 'wght' 380, 'slnt' 60;
+}
+.bigtitle {
+    font-size: 60px;
+    font-variation-settings: 'opsz' 1, 'wght' 800, 'GRAD' 1;
+}
+/* #headerbox {
+    width: 95%;
+    padding: 20px;
+} */
+/*
+#underbox, #headerbox, #topbox {
+    width: 95%;
+    padding: 20px;
+}
+*/
+.paragroup {
+    width: 95%;
+    padding: 20px;
+ }
+#topbox {
+    margin: 0 0 0 20px;
+    width: 93%;
+    background-color: #F0F0F0;
+    padding: 20px;
+}
+.controlbox {
+    float: left;
+    width: 35%;
+    padding: 20px;
+    margin: 0 0 20px 0;
+    background-color: #F0F0F0;
+}
+.samplebox {
+    float: right;
+    width: 55%;
+    padding: 20px;
+}
+.bbx {
+    white-space: nowrap;
+}
+.featurebox {
+    padding: 20px 0 0 0;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.sliderlabel {
+    margin: 10px 0 0 0;
+}
