@@ -1,18 +1,18 @@
 @font-face {
     font-family: 'ElstobVF';
-    src:url("./ElstobVF.woff2");
+    src:url("/Users/peterbaker/work/Anglo_Saxon_Collection/Elstob/web/fonts/ElstobVF.ttf");
     font-weight: 300 800;
     font-style: normal;
 }
 @font-face {
     font-family: 'ElstobVF';
-    src:url("./ElstobVFItalic.woff2");
+    src:url("/Users/peterbaker/work/Anglo_Saxon_Collection/Elstob/web/fonts/ElstobVFItalic.ttf");
     font-weight: 300 800;
     font-style: italic;
 }
 :root {
-    --romsize: 20;
-    --italsize: 20;
+    --romsize: 1.5em;
+    --italsize: 1.5em;
     --romopsz: 60;
     --romwght: 380;
     --romGRAD: 1;
@@ -25,18 +25,18 @@
 }
 h1 {
     font-family: ElstobVF;
-    font-size: 40px;
+    font-size: 3em;
     font-variation-settings: 'opsz' 100, 'wght' 300, 'GRAD' 1;
 }
 h2 {
     font-family: ElstobVF;
-    font-size: 25px;
+    font-size: 1.8em;
     font-variation-settings: 'opsz' 80, 'wght' 300, 'GRAD' 1;
     font-feature-settings: 'smcp' on;
 }
 p {
     font-family: ElstobVF;
-    font-size: 20px;
+    font-size: 1.5em;
     font-variation-settings: 'opsz' 60, 'wght' 380, 'GRAD' 1, 'slnt' 0;
     font-feature-settings: 'calt' on;
 }
@@ -103,8 +103,13 @@ b{
     font-variation-settings: 'opsz' 60, 'wght' 380, 'slnt' 60;
 }
 .bigtitle {
-    font-size: 60px;
-    font-variation-settings: 'opsz' 1, 'wght' 800, 'GRAD' 1;
+    font-size: 1.3em;
+    font-style: italic;
+    font-variation-settings: 'opsz' 1, 'wght' 600, 'GRAD' 1;
+    font-feature-settings: 'hist' on;
+}
+.hoverable:hover {
+    font-variation-settings: 'opsz' 60, 'wght' 380, 'GRAD' 800;
 }
 /* #headerbox {
     width: 95%;
@@ -141,7 +146,7 @@ b{
 .bbx {
     white-space: nowrap;
 }
-.featurebox {
+.featurebox, .selectbox {
     padding: 20px 0 0 0;
 }
 .row:after {
