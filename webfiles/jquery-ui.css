@@ -1,6 +1,6 @@
-/*! jQuery UI - v1.12.1 - 2018-11-18
+/*! jQuery UI - v1.12.1 - 2018-11-22
 * http://jqueryui.com
-* Includes: core.css, resizable.css, selectable.css, button.css, controlgroup.css, checkboxradio.css, slider.css, tooltip.css, theme.css
+* Includes: core.css, resizable.css, selectable.css, button.css, controlgroup.css, checkboxradio.css, menu.css, selectmenu.css, slider.css, tooltip.css, theme.css
 * To view and modify this theme, visit http://jqueryui.com/themeroller/?scope=&folderName=pepper-grinder&cornerRadiusShadow=18px&offsetLeftShadow=-10px&offsetTopShadow=0&thicknessShadow=5px&opacityShadow=60&bgImgOpacityShadow=40&bgTextureShadow=diagonal_maze&bgColorShadow=000000&opacityOverlay=60&bgImgOpacityOverlay=20&bgTextureOverlay=diagonal_maze&bgColorOverlay=6e4f1c&iconColorError=fbdb93&fcError=ffffff&borderColorError=681818&bgImgOpacityError=68&bgTextureError=fine_grain&bgColorError=b83400&iconColorHighlight=3572ac&fcHighlight=3a3427&borderColorHighlight=b2a266&bgImgOpacityHighlight=15&bgTextureHighlight=fine_grain&bgColorHighlight=f7f3de&iconColorActive=8c291d&fcActive=140f06&borderColorActive=d9d6c4&bgImgOpacityActive=15&bgTextureActive=fine_grain&bgColorActive=eceadf&iconColorHover=ffffff&fcHover=ffffff&borderColorHover=654b24&bgImgOpacityHover=65&bgTextureHover=fine_grain&bgColorHover=654b24&iconColorDefault=b83400&fcDefault=654b24&borderColorDefault=cbc7bd&bgImgOpacityDefault=10&bgTextureDefault=fine_grain&bgColorDefault=f8f7f6&iconColorContent=222222&fcContent=1f1f1f&borderColorContent=d9d6c4&bgImgOpacityContent=10&bgTextureContent=fine_grain&bgColorContent=eceadf&iconColorHeader=b83400&fcHeader=453821&borderColorHeader=d4d1bf&bgImgOpacityHeader=15&bgTextureHeader=fine_grain&bgColorHeader=ffffff&cornerRadius=6px&fsDefault=1.1em&fwDefault=bold&ffDefault=Trebuchet%20MS%2CTahoma%2CVerdana%2CArial%2Csans-serif
 * Copyright jQuery Foundation and other contributors; Licensed MIT */
 
@@ -317,6 +317,100 @@ button.ui-button::-moz-focus-inner {
 }
 .ui-checkboxradio-disabled {
 	pointer-events: none;
+}
+.ui-menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: block;
+	outline: 0;
+}
+.ui-menu .ui-menu {
+	position: absolute;
+}
+.ui-menu .ui-menu-item {
+	margin: 0;
+	cursor: pointer;
+	/* support: IE10, see #8844 */
+	list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+}
+.ui-menu .ui-menu-item-wrapper {
+	position: relative;
+	padding: 3px 1em 3px .4em;
+}
+.ui-menu .ui-menu-divider {
+	margin: 5px 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	border-width: 1px 0 0 0;
+}
+.ui-menu .ui-state-focus,
+.ui-menu .ui-state-active {
+	margin: -1px;
+}
+
+/* icon support */
+.ui-menu-icons {
+	position: relative;
+}
+.ui-menu-icons .ui-menu-item-wrapper {
+	padding-left: 2em;
+}
+
+/* left-aligned */
+.ui-menu .ui-icon {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: .2em;
+	margin: auto 0;
+}
+
+/* right-aligned */
+.ui-menu .ui-menu-icon {
+	left: auto;
+	right: 0;
+}
+.ui-selectmenu-menu {
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.ui-selectmenu-menu .ui-menu {
+	overflow: auto;
+	overflow-x: hidden;
+	padding-bottom: 1px;
+}
+.ui-selectmenu-menu .ui-menu .ui-selectmenu-optgroup {
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1.5;
+	padding: 2px 0.4em;
+	margin: 0.5em 0 0 0;
+	height: auto;
+	border: 0;
+}
+.ui-selectmenu-open {
+	display: block;
+}
+.ui-selectmenu-text {
+	display: block;
+	margin-right: 20px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.ui-selectmenu-button.ui-button {
+	text-align: left;
+	white-space: nowrap;
+	width: 14em;
+}
+.ui-selectmenu-icon.ui-icon {
+	float: right;
+	margin-top: 0;
 }
 .ui-slider {
 	position: relative;
