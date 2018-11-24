@@ -3,11 +3,10 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Elstob variable font specimen page</title>
+    <link rel="stylesheet" href="./webfiles/jquery-ui.css"/>
     <script src="./webfiles/jquery.js"></script>
     <script src="./webfiles/jquery-ui.js"></script>
-    <script src="./webfiles/Elstob-demo.js"></script>
-    <link rel="stylesheet" href="./webfiles/jquery-ui.css"/>
-    <link rel="stylesheet" href="./webfiles/Elstob-demo.css"/>
+    <link rel="stylesheet" href="Elstob-demo.css"/>
   </head>
   <body>
     <div id="topbox">
@@ -20,15 +19,14 @@
 	used by medievalists. It is a variable font—that is, one that can
 	do the work of a number of conventional fonts by varying different
 	aspects of the characters’ shapes. Variable fonts are especially
-	appropriate for use on the web, since a single font can do the
-	work of multiple fonts, with significant speed gains. All the
-	major browsers (Chrome, Firefox, Edge, Safari) now support variable fonts: if this page doesn't
+	appropriate for use on the web, since a single file can do the
+	work of multiple files, with significant speed gains. All the
+	major browsers now support variable fonts: if this page doesn't
 	work for you, consider updating your browser.
       </p>
       <p>
 	To get a sense of what Elstob can
-	do, play with the sliders and checkboxes below, and, if you don't
-	yet know much about variable fonts, check out the
+	do, play with the sliders and checkboxes below, and check out the
 	notes on the font’s variable axes at the bottom of this page. The
 	sample paragraphs are editable: type or paste in a bit of your
 	favorite text to see what it looks like in Elstob.
@@ -40,19 +38,19 @@
 	medieval characters. Is hinting of a variable font possible
 	yet? Is it necessary?
       </p>
-      <!-- <div id="errmsg">nothing</div> -->
+
     </div>
     <div class="row">
       <div class="controlbox">
-	<div class="slidecontainer">
-	  <div class="sliderlabel">Size: <span id="romsizetext">20</span></div>
-	  <div id="romsize"></div>
+	<div class="slidecontainer" id="romsliders">
+	  <div class="sliderlabel">Size: <span id="romsizetext">1.5em</span></div>
+	  <div id="romsize" class="myslider"></div>
 	  <div class="sliderlabel">Weight: <span id="romwghttext">380</span></div>
-	  <div id="romweight"></div>
+	  <div id="romweight" class="myslider"></div>
 	  <div class="sliderlabel">Optical Size: <span id="romopsztext">60</span></div>
-	  <div id="romopticalsize"></div>
+	  <div id="romopticalsize" class="myslider"></div>
 	  <div class="sliderlabel">Grade: <span id="romGRADtext">1</span></div>
-	  <div id="romgrade"></div>
+	  <div id="romgrade" class="myslider"></div>
 	</div>
 	<div class="featurebox" id="rfb">
 	  <span class="bbx">
@@ -96,17 +94,30 @@
 	    <label for="romhist">Long s</label>
 	  </span>
 	</div>
+	<div class="selectbox overflow">
+	  <label for="rompresets">Examples</label><br/>
+	  <select id="rompresets">
+	    <option selected="selected">Any</option>
+	    <option>FinePrint Medium 0.6em</option>
+	    <option>Footnote Medium 0.8em</option>
+	    <option>BlockQuote Regular 1.2em</option>
+	    <option>Regular 1.5em</option>
+	    <option>Medium 1.5em</option>
+	    <option>Subhead Regular 1.8em</option>
+	    <option>Subhead Bold 1.8em</option>
+	    <option>Display Light 2.3em</option>
+	  </select>
+	  </div>
       </div>
       <p contenteditable="true" id="romtextarea" class="samplebox">
 	This is Elstob roman. The font is based on the Double Pica
 	commissioned by Bishop John Fell (1625–1686) for the use of
 	the Oxford University Press. Wherever possible, the type is
 	based on a specimen book printed in 1925 with type cast in the
-	1890s from the
-	seventeenth-century matrices; digital images from the 1693 and
-	1706 Fell specimen books served as backup, and also an early
-	eighteenth-century folio in which a lengthy dedication was
-	printed in Fell’s Double Pica. The typeface
+	1890s from the seventeenth-century matrices; digital images
+	from the 1693 and 1706 Fell specimen books served as backup,
+	and also an early eighteenth-century folio in which a lengthy
+	dedication was printed in Fell’s Double Pica. The typeface
 	doesn’t have a high reputation: the typographer Stanley
 	Morison called it “amateurish.”  However, its angular
 	character (especially its flat or flattish serifs with minimal
@@ -115,17 +126,18 @@
 	by removing idiosyncrasies and addressing awkward features.
       </p>
     </div>
+<!--    <div id="errmsg">nothing</div> -->
     <div class="row">
       <div class="controlbox">
-	<div class="slidecontainer">
-	  <div class="sliderlabel">Size: <span id="italsizetext">20</span></div>
-	  <div id="italsize"></div>
+	<div class="slidecontainer" id="italsliders">
+	  <div class="sliderlabel">Size: <span id="italsizetext">1.5em</span></div>
+	  <div id="italsize" class="myslider"></div>
 	  <div class="sliderlabel">Weight: <span id="italwghttext">380</span></div>
-	  <div id="italweight"></div>
+	  <div id="italweight" class="myslider"></div>
 	  <div class="sliderlabel">Optical Size: <span id="italopsztext">60</span></div>
-	  <div id="italopticalsize"></div>
+	  <div id="italopticalsize" class="myslider"></div>
 	  <div class="sliderlabel">Slant: <span id="italslnttext">0</span></div>
-	  <div id="italslant"></div>
+	  <div id="italslant" class="myslider"></div>
 	</div>
 	<div class="featurebox" id="ifb">
 	  <span class="bbx">
@@ -169,13 +181,27 @@
 	    <label for="italhist">Long s</label>
 	  </span>
 	</div>
+	<div class="selectbox overflow">
+	  <label for="italpresets">Examples</label><br/>
+	  <select id="italpresets">
+	    <option selected="selected">Any</option>
+	    <option>FinePrint Medium 0.6em</option>
+	    <option>Footnote Medium 0.8em</option>
+	    <option>BlockQuote Regular 1.2em</option>
+	    <option>Regular 1.5em</option>
+	    <option>Medium 1.5em</option>
+	    <option>Subhead Regular 1.8em</option>
+	    <option>Subhead Bold 1.8em</option>
+	    <option>Display Light 2.3em</option>
+	  </select>
+	  </div>
       </div>
       <p id="italtextarea" contenteditable="true" class="samplebox">
-	The font is named for Elizabeth Elstob (1683–1756), an important
-	scholar of the earliest centuries of the English language.
-	Although her published works do not use the Fell
-	types, her close association with the Oxford “Saxonists”
-	of her day (see the Oxford Dictionary of National Biography
+	The font is named for Elizabeth Elstob (1683–1756), an
+	important scholar of the earliest centuries of the English
+	language.  Although her published works do not use the Fell
+	types, her close association with the Oxford “Saxonists” of
+	her day (see the Oxford Dictionary of National Biography
 	entry) makes the name appropriate. The Fell Double Pica italic
 	has a pointed look that, in Elstob, becomes more pronounced as
 	the slant increases (the slant number decreases). For the
@@ -246,9 +272,12 @@
 	<b>Grade</b> is like Weight in that it varies the heaviness of
 	the letters; but it does so without changing their width. Use
 	Grade when you want to change the weight of a stretch of text
-	dynamically (for example, on mouseover) without annoying your
-	readers by forcing the text to reflow. The range of allowable
-	numbers on this axis is 1–500.
+	dynamically <span class="hoverable">(for example, on
+	mouseover)</span> without annoying your readers by forcing the
+	text to reflow. You can combine Grade with Weight to make
+	weights beyond Extra Bold, but do this with care: you might
+	cause the whitespace inside your characters to close up. The
+	range of allowable numbers on this axis is 1–500.
       </p>
       <p>
 	<b>Slant</b> is the amount of slope in an italic typeface: in
@@ -259,5 +288,6 @@
 	numbers for a more modern look.
       </p>
     </div>
+    <script src="./webfilesElstob-demo.js" type="text/javascript"></script>
   </body>
 </html>
