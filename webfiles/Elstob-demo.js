@@ -5,7 +5,7 @@ $( function() {
     $("label").addClass("ui-widget");
     $(".sliderlabel").addClass("ui-widget");
     $(".featurebutton").checkboxradio();
-    $(".dflton").attr("checked", "checked");
+    // $(".dflton").attr("checked", "checked");
     $( "#romweight" ).slider({
         min: 300,
         max: 800,
