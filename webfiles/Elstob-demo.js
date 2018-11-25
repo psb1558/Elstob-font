@@ -276,7 +276,9 @@ $( function() {
 		fstring = featureString(fstring, "ss01", "on");
 	    if ($("#italhist").is(":checked"))
 		fstring = featureString(fstring, "hist", "on");
-	    $("#errmsg").text(fstring);
+	    if ($("#italss20").is(":checked"))
+		fstring = featureString(fstring, "ss20", "on");
+	    // $("#errmsg").text(fstring);
 	}
 	else {
 	    if ($("#romcalt").is(":checked"))
@@ -303,7 +305,9 @@ $( function() {
 		fstring = featureString(fstring, "ss01", "on");
 	    if ($("#romhist").is(":checked"))
 		fstring = featureString(fstring, "hist", "on");
-	    $("#errmsg").text(fstring);
+	    if ($("#romss20").is(":checked"))
+		fstring = featureString(fstring, "ss20", "on");
+	    // $("#errmsg").text(fstring);
 	}
 	$(targetbox).css("font-feature-settings", fstring);	    
     });
