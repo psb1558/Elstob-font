@@ -1,11 +1,16 @@
 $( function() {
-//    $(".slidecontainer").controlgroup();
-//    $(".featurebox").controlgroup();
-    //    $(".selectbox").controlgroup();
+
+    //style labels consistent with jquery-ui widgets
+
     $("label").addClass("ui-widget");
     $(".sliderlabel").addClass("ui-widget");
+
+    // Set up the checkboxes.
+
     $(".featurebutton").checkboxradio();
-    // $(".dflton").attr("checked", "checked");
+
+    // Set up the sliders, each with its range and initial value.
+
     $( "#romweight" ).slider({
         min: 300,
         max: 800,
@@ -40,7 +45,8 @@ $( function() {
         max: 5,
 	step: 0.05,
         value: 1.5});
-    // Had slide and change events here, but change event is not being fired, so omitted for now.
+
+    // Event handler for the sliders. Isn't there a more efficient way to do this?
     $(".slidecontainer").on("slide", ".myslider",
 		      function(event,info){
 			  // $("#errmsg").text(event.type + " " + $(this).attr("id"));
@@ -81,6 +87,11 @@ $( function() {
 			      break;
 			  }
 		      });
+
+    // The "presets" are the menus that show some basic configurations. When one is selected,
+    // it sends a "change" event to the parent element of the sliders for either roman or
+    // italic, which then sets up the css appropriately.
+
     $("#italpresets", "#rompresets").selectmenu();
     $("#italsliders").on("change", function(event, size, wght, opsz, slnt){
 	// $("#errmsg").text(wght);
@@ -103,11 +114,11 @@ $( function() {
 	$('html').css('--romGRAD', GRAD.toString());
 	$('#romGRADtext').text(GRAD);
     });
-
-    // The following is sort of working, but it messes things up. Some of the variable features
-    // don't get applied, and the sliders are disabled for a while after a selection is made
-    // from the menu. This behavior is the same in all tested browsers (Firefox, Safari, Chrome).
     
+    // When a preset menu gets a select event, it sets up the sliders and sends a "change" event
+    // to the sliders' parent element, which then adjusts the css. Why are we sending the data
+    // redundantly? Why not read the values from the sliders?
+
     $("#rompresets, #italpresets").selectmenu({
 	select: function(event, ui){
 	    if ($(this).attr('id') == "italpresets") {
@@ -237,7 +248,8 @@ $( function() {
 	    }
 	}
     });
-    
+
+    // Helper function to build string for font-feature-settings.
 
     function featureString (s, tag, v) {
 	var ss = s;
@@ -247,6 +259,10 @@ $( function() {
 	return ss;
     }
     
+    // When you change one OpenType feature, all the others get reset to
+    // default. So we read the state of the checkboxes and build a
+    // string that will turn on every feature whose box is checked.
+
     $(".featurebutton").on("change", function() {
 	var fstring = "";
 	var targetbox = "#romtextarea";
