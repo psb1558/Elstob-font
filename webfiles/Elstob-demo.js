@@ -25,7 +25,7 @@ $( function() {
         value: 1});
     $( "#romsize" ).slider({
         min: 0.2,
-        max: 5,
+        max: 8,
 	step: 0.05,
         value: 1.5});
     $( "#italweight" ).slider({
@@ -42,7 +42,7 @@ $( function() {
         value: 0});
     $( "#italsize" ).slider({
         min: 0.2,
-        max: 5,
+        max: 8,
 	step: 0.05,
         value: 1.5});
 
