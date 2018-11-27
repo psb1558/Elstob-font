@@ -327,4 +327,7 @@ $( function() {
 	}
 	$(targetbox).css("font-feature-settings", fstring);	    
     });
+    $(".featurebutton").prop("checked", false);
+    $("#romcalt,#romliga,#italcalt,#italliga").prop("checked", true);
+    $(".featurebutton").change();
 } );
