@@ -21,7 +21,7 @@
 	aspects of the characters’ shapes. Variable fonts are especially
 	appropriate for use on the web, since a single file can do the
 	work of multiple files, with significant speed gains. All the
-	major browsers now support variable fonts: if this page doesn't
+	major browsers now support variable fonts: if this page doesn’t
 	work for you, consider updating your browser.
       </p>
       <p>
@@ -228,7 +228,7 @@
 	<span style="font-feature-settings: 'ss01' on">þðꝥ</span> ꝑꝓꝝ<br/>
 	1234567890 <span style="font-feature-settings: 'onum'
 	on">1234567890</span> <span style="font-feature-settings: 'onum'
-	on, 'pnum' on">1234567890</span><br/>
+	on, 'pnum' on">1234567890</span><br/><br/>
 	<i>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>
 	abcdefghijklmnopqrstuvwxyz<br/>
 	<span style="font-feature-settings: 'smcp' on">abcdefghijklmnopqrstuvwxyz</span><br/>
@@ -245,7 +245,13 @@
       <h2>Notes on the Variable Axes</h2>
       <p>
 	An <em>axis</em> is an aspect of a font that can be varied along a
-	numerical range. A web designer can either choose some combination
+	numerical scale. For example, in most font families, "Regular" and "Bold"
+	are points on a “Weight” axis. With a variable font, you don’t have to
+	choose from two (or a few) weights; instead, the weight is <i>continuously</i>
+	variable. In Elstob, you can choose any weight from 300 (Light) to 800 (Extra-Bold),
+	and two other axes give you similar ranges to choose from, so that a single
+	font file lets you select from more than five million different shapes.
+	A web designer can either choose some combination
 	of axes for static text or vary the axes dynamically (for example,
 	changing the weight of a stretch of type in response to some kind
 	of user action). Each of Elstob’s two faces has three axes: Both
@@ -267,8 +273,8 @@
       </p>
       <p>
 	<b>Optical Size</b> optimizes the type for display at different
-	sizes by varying the x-height, the contrast, and the width of thin
-	strokes. Smaller numbers are more appropriate for smaller
+	sizes by varying the x-height and the contrast (the difference between
+	thin and thick strokes). Smaller numbers are more appropriate for smaller
 	type. Elstob names certain points on the Optical Size axis: <span
 	class="fineprint">“Fine Print”</span> 1 (best at around 6 points);
 	<span class="footnote">“Footnote”</span> 20 (8 points), <span
@@ -284,9 +290,9 @@
 	the letters; but it does so without changing their width. Use
 	Grade when you want to change the weight of a stretch of text
 	dynamically <span class="hoverable">(for example, on
-	mouseover)</span> without annoying your readers by forcing the
-	text to reflow. You can combine Grade with Weight to make
-	weights beyond Extra Bold, but do this with care: you might
+	mouseover)</span> without annoying your readers by making the
+	text reflow. You can combine Grade with Weight to make
+	weights beyond Extra Bold, but do so with care: you might
 	cause the whitespace inside your characters to close up. The
 	range of allowable numbers on this axis is 1–500.
       </p>
