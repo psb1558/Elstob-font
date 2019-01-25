@@ -1,13 +1,13 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Elstob variable font specimen page</title>
-    <link rel="stylesheet" href="./webfiles/jquery-ui.css"/>
-    <script src="./webfiles/jquery.js"></script>
-    <script src="./webfiles/jquery-ui.js"></script>
-    <link rel="stylesheet" href="./webfiles/Elstob-demo.css"/>
-  </head>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Elstob variable font specimen page</title>
+		<link rel="stylesheet" href="./webfiles/jquery-ui.css"/>
+		<script src="./webfiles/jquery.js"></script>
+		<script src="./webfiles/jquery-ui.js"></script>
+		<link rel="stylesheet" href="./webfiles/Elstob-demo.css"/>
+	</head>
   <body>
     <div id="topbox">
       <h1><span class="bigtitle">Elstob</span> a variable font for
@@ -28,14 +28,14 @@
 	To get a sense of what Elstob can
 	do, play with the sliders and checkboxes below, and check out the
 	notes on the font’s variable axes at the bottom of this page. The
-	sample paragraphs are editable: type or paste in a bit of your
+	sample paragraph is editable: type or paste in a bit of your
 	favorite text to see what it looks like in Elstob.
       </p>
       <p>
 	This is a work in progress. To do: lots of work on spacing,
-	especially in the italic face; further refinement of OpenType
-	features; fixing of ligature widths; check for additional
-	medieval characters. Better hinting.
+	especially in the italic face (where there is no kerning yet);
+	further refinement of OpenType features; fixing of ligature
+	widths; additional medieval characters.
       </p>
 
     </div>
@@ -53,11 +53,15 @@
 	</div>
 	<div class="featurebox" id="rfb">
 	  <span class="bbx">
-	    <input type="checkbox" class="featurebutton dflton" id="romcalt" checked="checked"/>
+	    <input type="checkbox" class="featurebutton" id="romital"/>
+	    <label for="romital">Italic</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox" class="featurebutton" id="romcalt" checked="checked"/>
 	    <label for="romcalt">Contextual alternates</label>
 	  </span>
 	  <span class="bbx">
-	    <input type="checkbox" class="featurebutton dflton" id="romliga" checked="checked"/>
+	    <input type="checkbox" class="featurebutton" id="romliga" checked="checked"/>
 	    <label for="romliga">Standard ligatures</label>
 	  </span>
 	  <span class="bbx">
@@ -92,9 +96,25 @@
 	    <input type="checkbox"  class="featurebutton" id="romhist"/>
 	    <label for="romhist">Long s</label>
 	  </span>
+	  <span class="bbx" id="aespan">
+	    <input type="checkbox"  class="featurebutton" id="romss11"/>
+	    <label for="romss11">Alternate æ</label>
+	  </span>
 	  <span class="bbx">
 	    <input type="checkbox"  class="featurebutton" id="romss20"/>
 	    <label for="romss20">r rotunda</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox"  class="featurebutton" id="romss12"/>
+	    <label for="romss12">Old English futhorc</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox"  class="featurebutton" id="romss13"/>
+	    <label for="romss13">Elder futhark</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox"  class="featurebutton" id="romss14"/>
+	    <label for="romss14">Younger futhark</label>
 	  </span>
 	</div>
 	<div class="selectbox overflow">
@@ -113,122 +133,38 @@
 	  </div>
       </div>
       <p contenteditable="true" id="romtextarea" class="samplebox">
-	This is Elstob roman. The font is based on the Double Pica
-	commissioned by Bishop John Fell (1625–1686) for the use of
-	the Oxford University Press. Wherever possible, the model is
-	a specimen book printed in 1925 with type cast in the
-	1890s from the seventeenth-century matrices; digital images
-	from the 1693 and 1706 Fell specimen books served as backup,
-	and also an early eighteenth-century folio in which a lengthy
-	dedication was printed in Fell’s Double Pica. The typeface
-	doesn’t have a high reputation: the typographer Stanley
-	Morison called it “amateurish.”  However, its angular
-	character (especially its flat or flattish serifs with minimal
-	or no brackets) makes it well suited to adaptation as a
-	variable font. Elstob attempts to improve on the original face
-	by removing idiosyncrasies and addressing awkward features.
+	Elstob is based on the Double Pica commissioned by Bishop John
+	Fell (1625–1686) for the use of the Oxford University
+	Press. Wherever possible, it is modeled on a specimen book
+	printed in 1925 with type cast in the 1890s from the
+	seventeenth-century matrices; digital images from the 1693 and
+	1706 Fell specimen books served as backup, and also an early
+	eighteenth-century folio in which a lengthy dedication was
+	printed in Fell’s Double Pica. The type doesn’t have a great
+	reputation: the typographer Stanley Morison called it
+	“amateurish” in comparison with the excellent Fell English.
+	However, its angular character (especially its flat or
+	flattish serifs with minimal or no brackets) makes it well
+	suited to adaptation as a variable font. It is named for
+	Elizabeth Elstob (1683–1756), an important early scholar of
+	Old English language and literature. For the closest
+	approximation to the original type, set the sliders to Weight
+	380, Optical Size 100, and Grade 1.
       </p>
     </div>
 <!--    <div id="errmsg">nothing</div> -->
-    <div class="row">
-      <div class="controlbox">
-	<div class="slidecontainer" id="italsliders">
-	  <div class="sliderlabel">Size: <span id="italsizetext">1.5em</span></div>
-	  <div id="italsize" class="myslider"></div>
-	  <div class="sliderlabel">Weight: <span id="italwghttext">380</span></div>
-	  <div id="italweight" class="myslider"></div>
-	  <div class="sliderlabel">Optical Size: <span id="italopsztext">60</span></div>
-	  <div id="italopticalsize" class="myslider"></div>
-	  <div class="sliderlabel">Slant: <span id="italslnttext">0</span></div>
-	  <div id="italslant" class="myslider"></div>
-	</div>
-	<div class="featurebox" id="ifb">
-	  <span class="bbx">
-	    <input type="checkbox" class="featurebutton dflton" id="italcalt" checked="checked"/>
-	    <label for="italcalt">Contextual alternates</label>
-	  </span>
-	  <span class="bbx">
-	    <input type="checkbox" class="featurebutton dflton" id="italliga" checked="checked"/>
-	    <label for="italliga">Standard ligatures</label>
-	  </span>
-	  <span class="bbx">
-	    <input type="checkbox" class="featurebutton" id="italdlig"/>
-	    <label for="italdlig">Discretionary ligatures</label>
-	  </span>
-	  <span class="bbx">
-	    <input type="checkbox" class="featurebutton" id="italsmcp"/>
-	    <label for="italsmcp">Small caps</label>
-	  </span>
-	  <span class="bbx">
-	    <input type="checkbox"  class="featurebutton" id="italpnum"/>
-	    <label for="italpnum">Proportional figures</label>
-	  </span>
-	  <span class="bbx">
-	    <input type="checkbox"  class="featurebutton" id="italonum"/>
-	    <label for="italonum">Old-style figures</label>
-	  </span>
-	  <span class="bbx">
-	    <input type="checkbox"  class="featurebutton" id="italzero"/>
-	    <label for="italzero">Slashed zero</label>
-	  </span>
-      	  <span class="bbx">
-	    <input type="checkbox"  class="featurebutton" id="italss02"/>
-	    <label for="italss02">Insular letter-shapes</label>
-	  </span>
-	  <span class="bbx">
-	    <input type="checkbox"  class="featurebutton" id="italss01"/>
-	    <label for="italss01">Nordic þ and ð</label>
-	  </span>
-	  <span class="bbx">
-	    <input type="checkbox"  class="featurebutton" id="italhist"/>
-	    <label for="italhist">Long s</label>
-	  </span>
-	  <span class="bbx">
-	    <input type="checkbox"  class="featurebutton" id="italss20"/>
-	    <label for="italss20">r rotunda</label>
-	  </span>
-	</div>
-	<div class="selectbox overflow">
-	  <label for="italpresets">Examples</label><br/>
-	  <select id="italpresets">
-	    <option selected="selected">Any</option>
-	    <option>FinePrint Medium 0.6em</option>
-	    <option>Footnote Medium 0.8em</option>
-	    <option>BlockQuote Regular 1.2em</option>
-	    <option>Regular 1.5em</option>
-	    <option>Medium 1.5em</option>
-	    <option>Subhead Regular 1.8em</option>
-	    <option>Subhead Bold 1.8em</option>
-	    <option>Display Light 2.3em</option>
-	  </select>
-	  </div>
-      </div>
-      <p id="italtextarea" contenteditable="true" class="samplebox">
-	The font is named for Elizabeth Elstob (1683–1756), an
-	important scholar of the earliest centuries of the English
-	language.  Although her published works do not use the Fell
-	types, her close association with the Oxford “Saxonists” of
-	her day (see the Oxford Dictionary of National Biography
-	entry) makes the name appropriate. The Fell Double Pica italic
-	has a pointed look that, in Elstob, becomes more pronounced as
-	the slant increases (slide the pointer left). For the
-	closest approximation of the original roman and italic, set
-	the sliders to Weight 380 and Optical Size 100, then Grade 1
-	for roman and Slant -40 for italic.
-      </p>
-    </div>
     <div id="bigsamples" class="paragroup">
       <p style="font-size: 40px">
 	ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>
 	abcdefghijklmnopqrstuvwxyz<br/>
-	<span style="font-feature-settings: 'smcp' on">abcdefghijklmnopqrstuvwxyz</span><br/>
 	ÄÁÀĀËÉÈEÏÍÌĪÖÓÒŌǪŒÜÚÙŪŸÝȲǼǢĊĠ<br/>
 	äáàāëéèeïíìīöóòōǫœüúùūÿýȳǽǣċġ<br/>
+	<span style="font-feature-settings: 'smcp' on">abcdefghijklmnopqrstuvwxyz</span><br/>
 	ÆÞÐǷȜǶ æþðƿȝꝥƕ <span style="font-feature-settings: 'ss02' on">dfgrsst</span>
 	<span style="font-feature-settings: 'ss01' on">þðꝥ</span> ꝑꝓꝝ<br/>
 	1234567890 <span style="font-feature-settings: 'onum'
 	on">1234567890</span> <span style="font-feature-settings: 'onum'
-	on, 'pnum' on">1234567890</span><br/><br/>
+	on, 'pnum' on">1234567890</span><br/>
 	<i>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>
 	abcdefghijklmnopqrstuvwxyz<br/>
 	<span style="font-feature-settings: 'smcp' on">abcdefghijklmnopqrstuvwxyz</span><br/>
@@ -244,37 +180,30 @@
     <div id="underbox" class="paragroup">
       <h2>Notes on the Variable Axes</h2>
       <p>
-	An <em>axis</em> is an aspect of a font that can be varied along a
-	numerical scale. For example, in most font families, "Regular" and "Bold"
-	are points on a “Weight” axis. With a variable font, you don’t have to
-	choose from two (or a few) weights; instead, the weight is <i>continuously</i>
-	variable. In Elstob, you can choose any weight from 300 (Light) to 800 (Extra-Bold),
-	and two other axes give you similar ranges to choose from, so that a single
-	font file lets you select from more than five million different shapes.
-	A web designer can either choose some combination
-	of axes for static text or vary the axes dynamically (for example,
-	changing the weight of a stretch of type in response to some kind
-	of user action). Each of Elstob’s two faces has three axes: Both
-	roman and italic have <b>Weight</b> and <b>Optical Size</b>;
-	additionally, the roman face has <b>Grade</b> and the italic has
-	<b>Slant</b>.
+	An <em>axis</em> is an aspect of a font that can be varied
+	along a numerical range. A web designer can either choose some
+	combination of axes for static text or vary the axes
+	dynamically (for example, changing the weight of a stretch of
+	type in response to some kind of user action). Each of
+	Elstob’s two faces has three axes:<b>Weight</b>, <b>Optical
+	Size</b>, and <b>Grade</b>.
       </p>
       <p>
-	<b>Weight</b> varies the heaviness of the font along a numerical
-	axis from 300 to 800, where 300 is <span
+	<b>Weight</b> varies the heaviness of the font along a
+	numerical axis from 300 to 800, where 300 is <span
 	class="light">“Light”</span> and 800 is <span
-	class="extrabold">“Extra Bold.”</span> There are several standard
-	weights between these extremes: “Regular” 380 (or 400 if you
-	prefer the standard numerical scheme), <span
+	class="extrabold">“Extra Bold.”</span> There are several
+	standard weights between these extremes: “Regular” 380 (or 400
+	if you prefer the standard numerical scheme), <span
 	class="medium">“Medium”</span> 500, <span
 	class="semibold">“Semibold”</span> 600, <span
-	class="bold">“Bold”</span> 700. However, Weight can be varied
-	continuously along the 500-unit axis.
+	class="bold">“Bold”</span> 700. However, there are 501
+	possible values for Weight.
       </p>
       <p>
 	<b>Optical Size</b> optimizes the type for display at different
-	sizes by varying the x-height and the contrast (the difference between
-	thin and thick strokes). Smaller numbers are more appropriate for smaller
+	sizes by varying the x-height, the contrast, and the width of thin
+	strokes. Smaller numbers are more appropriate for smaller
 	type. Elstob names certain points on the Optical Size axis: <span
 	class="fineprint">“Fine Print”</span> 1 (best at around 6 points);
 	<span class="footnote">“Footnote”</span> 20 (8 points), <span
@@ -290,19 +219,12 @@
 	the letters; but it does so without changing their width. Use
 	Grade when you want to change the weight of a stretch of text
 	dynamically <span class="hoverable">(for example, on
-	mouseover)</span> without annoying your readers by making the
-	text reflow. You can combine Grade with Weight to make
-	weights beyond Extra Bold, but do so with care: you might
-	cause the whitespace inside your characters to close up. The
-	range of allowable numbers on this axis is 1–500.
-      </p>
-      <p>
-	<b>Slant</b> is the amount of slope in an italic typeface: in
-	Elstob Italic it runs from -40 (<span class="slanted">most
-	slanted</span>) to 60 (<span class="upright">least
-	slanted</span>). <em>“Normal”</em> for Elstob is zero, though
-	the slant of the original Fell italic is -40. Use higher
-	numbers for a more modern look.
+	mouseover)</span> without annoying your readers by forcing the
+	text to reflow. You can combine Grade with Weight to make
+	weights beyond Extra Bold, but if you take it to extremes, you
+	may have to increase the letterspacing of your text (CSS
+	letter-spacing property). The range of allowable numbers on
+	this axis is 1–500.
       </p>
     </div>
     <script src="./webfiles/Elstob-demo.js" type="text/javascript"></script>
