@@ -276,6 +276,11 @@ name = ss14;
 notes = "Name: Younger Futhark";
 },
 {
+code = "sub uni16AC by uni16AD ;\012sub uni16BC by uni16BD ;\012sub uni16BE by uni16BF ;\012sub uni16C5 by uni16C6 ;\012sub uni16CB by uni16CC ;\012sub uni16CF by uni16D0 ;\012sub uni16D2 by uni16D3 ;\012sub uni16D8 by uni16D9 ;\012sub uni16E6 by uni16E7 ;";
+name = ss15;
+notes = "Name: Long Branch to Short Twig";
+},
+{
 code = "sub r by uniA75B;";
 name = ss20;
 notes = "Name: r rotunda";
@@ -160651,7 +160656,7 @@ unicode = 16CB;
 },
 {
 glyphname = uni16CC;
-lastChange = "2019-01-27 16:34:52 +0000";
+lastChange = "2019-01-31 03:50:16 +0000";
 layers = (
 {
 hints = (
@@ -160726,19 +160731,19 @@ paths = (
 {
 closed = 1;
 nodes = (
-"524 550 LINE",
-"816 1358 LINE",
-"536 1358 LINE",
-"237 550 LINE"
+"952 1261 LINE",
+"986 1358 LINE",
+"372 1358 LINE",
+"338 1261 LINE"
 );
 },
 {
 closed = 1;
 nodes = (
-"952 1261 LINE",
-"986 1358 LINE",
-"372 1358 LINE",
-"338 1261 LINE"
+"524 550 LINE",
+"816 1358 LINE",
+"536 1358 LINE",
+"237 550 LINE"
 );
 }
 );
@@ -160796,19 +160801,19 @@ paths = (
 {
 closed = 1;
 nodes = (
-"521 722 LINE",
-"740 1358 LINE",
-"502 1358 LINE",
-"283 722 LINE"
+"849 1272 LINE",
+"880 1358 LINE",
+"363 1358 LINE",
+"332 1272 LINE"
 );
 },
 {
 closed = 1;
 nodes = (
-"849 1272 LINE",
-"880 1358 LINE",
-"363 1358 LINE",
-"332 1272 LINE"
+"521 722 LINE",
+"740 1358 LINE",
+"502 1358 LINE",
+"283 722 LINE"
 );
 }
 );

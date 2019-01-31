@@ -226,6 +226,11 @@ name = ss14;
 notes = "Name: Younger Futhark";
 },
 {
+code = "sub uni16AC by uni16AD ;\012sub uni16BC by uni16BD ;\012sub uni16BE by uni16BF ;\012sub uni16C5 by uni16C6 ;\012sub uni16CB by uni16CC ;\012sub uni16CF by uni16D0 ;\012sub uni16D2 by uni16D3 ;\012sub uni16D8 by uni16D9 ;\012sub uni16E6 by uni16E7 ;";
+name = ss15;
+notes = "Name: Long Branch to Short Twig";
+},
+{
 code = "sub r by uniA75B;";
 name = ss20;
 notes = "Name: r rotunda";
