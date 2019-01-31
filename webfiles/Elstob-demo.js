@@ -155,6 +155,8 @@ $( function() {
 	    fstring = featureString(fstring, "dlig", "on");
 	if ($("#romsmcp").is(":checked"))
 	    fstring = featureString(fstring, "smcp", "on");
+	if ($("#romc2sc").is(":checked"))
+	    fstring = featureString(fstring, "c2sc", "on");
 	if ($("#rompnum").is(":checked"))
 	    fstring = featureString(fstring, "pnum", "on");
 	if ($("#romonum").is(":checked"))
