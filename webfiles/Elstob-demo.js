@@ -179,6 +179,9 @@ $( function() {
 	    fstring = featureString(fstring, "ss13", "on");
 	if ($("#romss14").is(":checked"))
 	    fstring = featureString(fstring, "ss14", "on");
+	if ($("#romss15").is(":checked"))
+	    fstring = featureString(fstring, "ss15", "on");
+
 	// $("#errmsg").text(fstring);
 	$("#romtextarea").css("font-feature-settings", fstring);	    
     });
