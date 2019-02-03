@@ -50,6 +50,7 @@ b{
     margin: 0 0 20px 0;
     font-style: normal;
     font-size: var(--romsize);
+    letter-spacing: var(--romspacing);
     font-variation-settings: 'opsz' var(--romopsz),
          'wght' var(--romwght),
          'GRAD' var(--romGRAD);
