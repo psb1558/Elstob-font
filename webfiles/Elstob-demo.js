@@ -78,6 +78,7 @@ $( function() {
 		break;
 	    case "FinePrint Medium 0.6em":
 		$("#romsize").slider("value", 0.6);
+		$("#romspacing").slider("value", 0);
 		$("#romgrade").slider("value", 1);
 		$("#romopticalsize").slider("value", 1);
 		$("#romweight").slider("value", 500);
@@ -85,6 +86,7 @@ $( function() {
 		break;
 	    case "Footnote Medium 0.8em":
 		$("#romsize").slider("value", 0.8);
+	        $("#romspacing").slider("value", 0);
 		$("#romgrade").slider("value", 1);
 		$("#romopticalsize").slider("value", 20);
 		$("#romweight").slider("value", 500);
@@ -92,6 +94,7 @@ $( function() {
 		break;
 	    case "BlockQuote Regular 1.2em":
 		$("#romsize").slider("value", 1.2);
+		$("#romspacing").slider("value", 0);
 		$("#romgrade").slider("value", 1);
 		$("#romopticalsize").slider("value", 40);
 		$("#romweight").slider("value", 380);
@@ -99,6 +102,7 @@ $( function() {
 		break;
 	    case "Regular 1.5em":
 		$("#romsize").slider("value", 1.5);
+		$("#romspacing").slider("value", 0);
 		$("#romgrade").slider("value", 1);
 		$("#romopticalsize").slider("value", 60);
 		$("#romweight").slider("value", 380);
@@ -106,6 +110,7 @@ $( function() {
 		break;
 	    case "Medium 1.5em":
 		$("#romsize").slider("value", 1.5);
+		$("#romspacing").slider("value", 0);
 		$("#romgrade").slider("value", 1);
 		$("#romopticalsize").slider("value", 60);
 		$("#romweight").slider("value", 500);
@@ -113,6 +118,7 @@ $( function() {
 		break;
 	    case "Subhead Regular 1.8em":
 		$("#romsize").slider("value", 1.8);
+		$("#romspacing").slider("value", 0);
 		$("#romgrade").slider("value", 1);
 		$("#romopticalsize").slider("value", 80);
 		$("#romweight").slider("value", 380);
@@ -120,6 +126,7 @@ $( function() {
 		break;
 	    case "Subhead Bold 1.8em":
 		$("#romsize").slider("value", 1.8);
+		$("#romspacing").slider("value", 0);
 		$("#romgrade").slider("value", 1);
 		$("#romopticalsize").slider("value", 80);
 		$("#romweight").slider("value", 700);
@@ -127,6 +134,7 @@ $( function() {
 		break;
 	    case "Display Light 2.3em":
 		$("#romsize").slider("value", 2.3);
+		$("#romspacing").slider("value", 0);
 		$("#romgrade").slider("value", 1);
 		$("#romopticalsize").slider("value", 100);
 		$("#romweight").slider("value", 300);
