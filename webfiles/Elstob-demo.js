@@ -49,7 +49,7 @@ $( function() {
 			      break;
 			  case "romspacing":
 			      $('html').css('--romspacing', valstring + "px");
-			      $('#romsizetext').text(valstring + "px");
+			      $('#romspacingtext').text(valstring + "px");
 			      break;
 
 			  }
@@ -80,56 +80,56 @@ $( function() {
 		$("#romgrade").slider("value", 1);
 		$("#romopticalsize").slider("value", 1);
 		$("#romweight").slider("value", 500);
-		$("#romsliders").trigger("change", [0.6, 500, 1, 1]);
+		$("#romsliders").trigger("change", [0.6, 500, 1, 1, 0]);
 		break;
 	    case "Footnote Medium 0.8em":
 		$("#romsize").slider("value", 0.8);
 		$("#romgrade").slider("value", 1);
 		$("#romopticalsize").slider("value", 20);
 		$("#romweight").slider("value", 500);
-		$("#romsliders").trigger("change", [0.8, 500, 20, 1]);
+		$("#romsliders").trigger("change", [0.8, 500, 20, 1, 0]);
 		break;
 	    case "BlockQuote Regular 1.2em":
 		$("#romsize").slider("value", 1.2);
 		$("#romgrade").slider("value", 1);
 		$("#romopticalsize").slider("value", 40);
 		$("#romweight").slider("value", 380);
-		$("#romsliders").trigger("change", [1.2, 380, 40, 1]);
+		$("#romsliders").trigger("change", [1.2, 380, 40, 1, 0]);
 		break;
 	    case "Regular 1.5em":
 		$("#romsize").slider("value", 1.5);
 		$("#romgrade").slider("value", 1);
 		$("#romopticalsize").slider("value", 60);
 		$("#romweight").slider("value", 380);
-		$("#romsliders").trigger("change", [1.5, 380, 60, 1]);
+		$("#romsliders").trigger("change", [1.5, 380, 60, 1, 0]);
 		break;
 	    case "Medium 1.5em":
 		$("#romsize").slider("value", 1.5);
 		$("#romgrade").slider("value", 1);
 		$("#romopticalsize").slider("value", 60);
 		$("#romweight").slider("value", 500);
-		$("#romsliders").trigger("change", [1.5, 500, 60, 1]);
+		$("#romsliders").trigger("change", [1.5, 500, 60, 1, 0]);
 		break;
 	    case "Subhead Regular 1.8em":
 		$("#romsize").slider("value", 1.8);
 		$("#romgrade").slider("value", 1);
 		$("#romopticalsize").slider("value", 80);
 		$("#romweight").slider("value", 380);
-		$("#romsliders").trigger("change", [1.8, 380, 80, 1]);
+		$("#romsliders").trigger("change", [1.8, 380, 80, 1, 0]);
 		break;
 	    case "Subhead Bold 1.8em":
 		$("#romsize").slider("value", 1.8);
 		$("#romgrade").slider("value", 1);
 		$("#romopticalsize").slider("value", 80);
 		$("#romweight").slider("value", 700);
-		$("#romsliders").trigger("change", [1.8, 700, 80, 1]);
+		$("#romsliders").trigger("change", [1.8, 700, 80, 1, 0]);
 		break;
 	    case "Display Light 2.3em":
 		$("#romsize").slider("value", 2.3);
 		$("#romgrade").slider("value", 1);
 		$("#romopticalsize").slider("value", 100);
 		$("#romweight").slider("value", 300);
-		$("#romsliders").trigger("change", [2.3, 300, 100, 1]);
+		$("#romsliders").trigger("change", [2.3, 300, 100, 1, 0]);
 		break;
 	    }
 	}
