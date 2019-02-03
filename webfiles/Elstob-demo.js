@@ -19,6 +19,11 @@ $( function() {
         max: 5,
 	step: 0.05,
         value: 1.5});
+    $( "#romspacing" ).slider({
+        min: -20,
+        max: 20,
+        value: 0});
+
 
     $(".slidecontainer").on("slide", ".myslider",
 		      function(event,info){
@@ -42,14 +47,21 @@ $( function() {
 			      $('html').css('--romsize', valstring + "em");
 			      $('#romsizetext').text(valstring + "em");
 			      break;
+			  case "romspacing":
+			      $('html').css('--romspacing', valstring + "px");
+			      $('#romsizetext').text(valstring + "px");
+			      break;
+
 			  }
 		      });
 
     $("#rompresets").selectmenu();
 
-    $("#romsliders").on("change", function(event, size, wght, opsz, GRAD){
+    $("#romsliders").on("change", function(event, size, wght, opsz, GRAD, spacing){
 	$('html').css('--romsize', size.toString() + "em");
 	$('#romsizetext').text(size + "em");
+	$('html').css('--romspacing', spacing.toString() + "px");
+	$('#romspacingtext').text(spacing + "px");
 	$('html').css("--romwght", wght.toString());
 	$('#romwghttext').text(wght);
 	$('html').css('--romopsz', opsz.toString());
