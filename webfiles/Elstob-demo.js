@@ -20,9 +20,9 @@ $( function() {
 	step: 0.05,
         value: 1.5});
     $( "#romspacing" ).slider({
-        min: -20,
-        max: 20,
-	step: 0.5,
+        min: -10,
+        max: 10,
+	step: 0.2,
         value: 0});
 
 
