@@ -1,5 +1,9 @@
 {
 .appVersion = "1202";
+DisplayStrings = (
+rhomboid,
+W
+);
 classes = (
 {
 code = "dieresiscomb dotaccentcomb gravecomb acutecomb hungarumlautcomb circumflexcomb caroncomb brevecomb ringcomb tildecomb macroncomb uni0305 commaturnedabovecomb uni0325 uni035B uni1DD1 uni1DD2 uni0363 uni0364 uni0365 uni0366 uni0367 uni0368 uni0369 uni036A uni036B uni036C uni036D uni036E uni036F uni1DD3 ";
@@ -674,14 +678,6 @@ width = 86;
 }
 );
 descender = -563;
-guideLines = (
-{
-position = "{850, 42}";
-},
-{
-position = "{1545, 896}";
-}
-);
 horizontalStems = (
 98,
 114
@@ -16420,7 +16416,7 @@ unicode = 0056;
 },
 {
 glyphname = W;
-lastChange = "2019-01-27 16:34:52 +0000";
+lastChange = "2019-02-01 19:26:12 +0000";
 layers = (
 {
 anchors = (
@@ -16596,22 +16592,22 @@ paths = (
 {
 closed = 1;
 nodes = (
-"1051 -29 LINE",
+"973 -29 LINE",
 "2182 1315 LINE",
 "2018 1315 LINE",
-"1140 236 LINE",
-"1241 236 LINE",
-"1526 1315 LINE",
-"1240 1315 LINE",
-"885 -29 LINE"
+"1090 236 LINE",
+"1173 236 LINE",
+"1458 1315 LINE",
+"1172 1315 LINE",
+"817 -29 LINE"
 );
 },
 {
 closed = 1;
 nodes = (
 "296 -29 LINE",
-"1232 793 LINE",
-"1250 958 LINE",
+"1232 843 LINE",
+"1250 1008 LINE",
 "417 221 LINE",
 "488 211 LINE",
 "783 1315 LINE",
@@ -16622,8 +16618,8 @@ nodes = (
 {
 closed = 1;
 nodes = (
-"941 1261 LINE",
-"975 1358 LINE",
+"911 1261 LINE",
+"945 1358 LINE",
 "395 1358 LINE",
 "361 1261 LINE"
 );
@@ -16631,10 +16627,10 @@ nodes = (
 {
 closed = 1;
 nodes = (
-"1656 1261 LINE",
-"1690 1358 LINE",
-"1146 1358 LINE",
-"1112 1261 LINE"
+"1596 1261 LINE",
+"1630 1358 LINE",
+"1096 1358 LINE",
+"1062 1261 LINE"
 );
 },
 {
@@ -16755,8 +16751,8 @@ nodes = (
 "1858 1315 LINE",
 "1004 224 LINE",
 "1087 226 LINE",
-"1342 1315 LINE",
-"1104 1315 LINE",
+"1304 1315 LINE",
+"1066 1315 LINE",
 "782 -29 LINE"
 );
 },
@@ -16776,8 +16772,8 @@ nodes = (
 {
 closed = 1;
 nodes = (
-"858 1271 LINE",
-"889 1358 LINE",
+"838 1271 LINE",
+"869 1358 LINE",
 "354 1358 LINE",
 "323 1271 LINE"
 );
@@ -16785,10 +16781,10 @@ nodes = (
 {
 closed = 1;
 nodes = (
-"1479 1271 LINE",
-"1510 1358 LINE",
-"1004 1358 LINE",
-"973 1271 LINE"
+"1441 1271 LINE",
+"1472 1358 LINE",
+"966 1358 LINE",
+"935 1271 LINE"
 );
 },
 {
