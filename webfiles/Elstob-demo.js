@@ -22,7 +22,7 @@ $( function() {
     $( "#romspacing" ).slider({
         min: -2,
         max: 2,
-	step: 0.05,
+	step: 0.01,
         value: 0});
 
 
