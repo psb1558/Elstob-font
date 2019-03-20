@@ -13,11 +13,11 @@
 :root {
     --romsize: 1.5em;
     --italsize: 1.5em;
-    --romopsz: 60;
+    --romopsz: 12;
     --romwght: 380;
     --romGRAD: 1;
     --romspacing: 0em;
-    --italopsz: 60;
+    --italopsz: 12;
     --italwght: 380;
     --italslnt: 0;
 }
@@ -27,22 +27,22 @@
 h1 {
     font-family: ElstobVF;
     font-size: 3em;
-    font-variation-settings: 'opsz' 100, 'wght' 300, 'GRAD' 1;
+    font-variation-settings: 'opsz' 18, 'wght' 300, 'GRAD' 1;
 }
 h2 {
     font-family: ElstobVF;
     font-size: 1.8em;
-    font-variation-settings: 'opsz' 80, 'wght' 300, 'GRAD' 1;
+    font-variation-settings: 'opsz' 14, 'wght' 300, 'GRAD' 1;
     font-feature-settings: 'smcp' on;
 }
 p {
     font-family: ElstobVF;
     font-size: 1.5em;
-    font-variation-settings: 'opsz' 60, 'wght' 380, 'GRAD' 1, 'slnt' 0;
+    font-variation-settings: 'opsz' 12, 'wght' 380, 'GRAD' 1, 'slnt' 0;
     font-feature-settings: 'calt' on;
 }
 b{
-    font-variation-settings: 'opsz' 60, 'wght' 700, 'GRAD' 1,
+    font-variation-settings: 'opsz' 12, 'wght' 700, 'GRAD' 1,
     'slnt' 0;
 }
 #romtextarea {
@@ -67,51 +67,51 @@ b{
     font-feature-settings: 'calt' on;
 }
 .fineprint {
-    font-variation-settings: 'opsz' 1, 'wght' 700, 'GRAD' 1;
+    font-variation-settings: 'opsz' 6, 'wght' 700, 'GRAD' 1;
 }
 .footnote {
-    font-variation-settings: 'opsz' 20, 'wght' 700, 'GRAD' 1;
+    font-variation-settings: 'opsz' 8, 'wght' 700, 'GRAD' 1;
 }
 .blockquote {
-    font-variation-settings: 'opsz' 40, 'wght' 700, 'GRAD' 1;
+    font-variation-settings: 'opsz' 10, 'wght' 700, 'GRAD' 1;
 }
 .subhead {
-    font-variation-settings: 'opsz' 80, 'wght' 700, 'GRAD' 1;
+    font-variation-settings: 'opsz' 14, 'wght' 700, 'GRAD' 1;
 }
 .display {
-    font-variation-settings: 'opsz' 100, 'wght' 700, 'GRAD' 1;
+    font-variation-settings: 'opsz' 18, 'wght' 700, 'GRAD' 1;
    }
 .light {
-    font-variation-settings: 'opsz' 60, 'wght' 300, 'GRAD' 1;
+    font-variation-settings: 'opsz' 12, 'wght' 300, 'GRAD' 1;
 }
 .medium {
-    font-variation-settings: 'opsz' 60, 'wght' 500, 'GRAD' 1;
+    font-variation-settings: 'opsz' 12, 'wght' 500, 'GRAD' 1;
 }
 .semibold {
-    font-variation-settings: 'opsz' 60, 'wght' 600, 'GRAD' 1;
+    font-variation-settings: 'opsz' 12, 'wght' 600, 'GRAD' 1;
 }
 .bold {
-    font-variation-settings: 'opsz' 60, 'wght' 700, 'GRAD' 1;
+    font-variation-settings: 'opsz' 12, 'wght' 700, 'GRAD' 1;
 }
 .extrabold {
-    font-variation-settings: 'opsz' 1, 'wght' 800, 'GRAD' 1;
+    font-variation-settings: 'opsz' 6, 'wght' 800, 'GRAD' 1;
 }
 .slanted {
     font-style: italic;
-    font-variation-settings: 'opsz' 60, 'wght' 380, 'slnt' -40;
+    font-variation-settings: 'opsz' 12, 'wght' 380, 'slnt' -40;
 }
 .upright {
     font-style: italic;
-    font-variation-settings: 'opsz' 60, 'wght' 380, 'slnt' 60;
+    font-variation-settings: 'opsz' 12, 'wght' 380, 'slnt' 60;
 }
 .bigtitle {
     font-size: 1.3em;
     font-style: italic;
-    font-variation-settings: 'opsz' 1, 'wght' 600, 'GRAD' 1;
+    font-variation-settings: 'opsz' 6, 'wght' 600, 'GRAD' 1;
     font-feature-settings: 'hist' on;
 }
 .hoverable:hover {
-    font-variation-settings: 'opsz' 60, 'wght' 380, 'GRAD' 800;
+    font-variation-settings: 'opsz' 12, 'wght' 380, 'GRAD' 800;
 }
 /* #headerbox {
     width: 95%;
