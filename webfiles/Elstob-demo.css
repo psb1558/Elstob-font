@@ -98,11 +98,11 @@ b{
 }
 .slanted {
     font-style: italic;
-    font-variation-settings: 'opsz' 12, 'wght' 380, 'slnt' -40;
+    font-variation-settings: 'opsz' 12, 'wght' 420, 'slnt' -40;
 }
 .upright {
     font-style: italic;
-    font-variation-settings: 'opsz' 12, 'wght' 380, 'slnt' 60;
+    font-variation-settings: 'opsz' 12, 'wght' 420, 'slnt' 60;
 }
 .bigtitle {
     font-size: 1.3em;
@@ -111,7 +111,7 @@ b{
     font-feature-settings: 'hist' on;
 }
 .hoverable:hover {
-    font-variation-settings: 'opsz' 12, 'wght' 380, 'GRAD' 800;
+    font-variation-settings: 'opsz' 12, 'wght' 420, 'GRAD' 500;
 }
 /* #headerbox {
     width: 95%;
