@@ -14,11 +14,11 @@
     --romsize: 1.5em;
     --italsize: 1.5em;
     --romopsz: 12;
-    --romwght: 380;
+    --romwght: 420;
     --romGRAD: 1;
     --romspacing: 0em;
     --italopsz: 12;
-    --italwght: 380;
+    --italwght: 420;
     --italslnt: 0;
 }
 .slidecontainer {
@@ -38,11 +38,11 @@ h2 {
 p {
     font-family: ElstobVF;
     font-size: 1.5em;
-    font-variation-settings: 'opsz' 12, 'wght' 380, 'GRAD' 1, 'slnt' 0;
+    font-variation-settings: 'opsz' 12, 'wght' 420, 'GRAD' 1, 'slnt' 0;
     font-feature-settings: 'calt' on;
 }
 b{
-    font-variation-settings: 'opsz' 12, 'wght' 700, 'GRAD' 1,
+    font-variation-settings: 'opsz' 12, 'wght' 695, 'GRAD' 1,
     'slnt' 0;
 }
 #romtextarea {
@@ -67,19 +67,19 @@ b{
     font-feature-settings: 'calt' on;
 }
 .fineprint {
-    font-variation-settings: 'opsz' 6, 'wght' 700, 'GRAD' 1;
+    font-variation-settings: 'opsz' 6, 'wght' 695, 'GRAD' 1;
 }
 .footnote {
-    font-variation-settings: 'opsz' 8, 'wght' 700, 'GRAD' 1;
+    font-variation-settings: 'opsz' 8, 'wght' 695, 'GRAD' 1;
 }
 .blockquote {
-    font-variation-settings: 'opsz' 10, 'wght' 700, 'GRAD' 1;
+    font-variation-settings: 'opsz' 10, 'wght' 695, 'GRAD' 1;
 }
 .subhead {
-    font-variation-settings: 'opsz' 14, 'wght' 700, 'GRAD' 1;
+    font-variation-settings: 'opsz' 14, 'wght' 695, 'GRAD' 1;
 }
 .display {
-    font-variation-settings: 'opsz' 18, 'wght' 700, 'GRAD' 1;
+    font-variation-settings: 'opsz' 18, 'wght' 695, 'GRAD' 1;
    }
 .light {
     font-variation-settings: 'opsz' 12, 'wght' 300, 'GRAD' 1;
@@ -88,10 +88,10 @@ b{
     font-variation-settings: 'opsz' 12, 'wght' 500, 'GRAD' 1;
 }
 .semibold {
-    font-variation-settings: 'opsz' 12, 'wght' 600, 'GRAD' 1;
+    font-variation-settings: 'opsz' 12, 'wght' 590, 'GRAD' 1;
 }
 .bold {
-    font-variation-settings: 'opsz' 12, 'wght' 700, 'GRAD' 1;
+    font-variation-settings: 'opsz' 12, 'wght' 695, 'GRAD' 1;
 }
 .extrabold {
     font-variation-settings: 'opsz' 6, 'wght' 800, 'GRAD' 1;
@@ -107,7 +107,7 @@ b{
 .bigtitle {
     font-size: 1.3em;
     font-style: italic;
-    font-variation-settings: 'opsz' 6, 'wght' 600, 'GRAD' 1;
+    font-variation-settings: 'opsz' 6, 'wght' 590, 'GRAD' 1;
     font-feature-settings: 'hist' on;
 }
 .hoverable:hover {
