@@ -5,7 +5,7 @@ $( function() {
     $( "#romweight" ).slider({
         min: 300,
         max: 800,
-        value: 380});
+        value: 420});
     $( "#romopticalsize" ).slider({
         min: 6,
         max: 18,
@@ -97,16 +97,16 @@ $( function() {
 		$("#romspacing").slider("value", 0);
 		$("#romgrade").slider("value", 1);
 		$("#romopticalsize").slider("value", 10);
-		$("#romweight").slider("value", 380);
-		$("#romsliders").trigger("change", [1.2, 380, 10, 1, 0]);
+		$("#romweight").slider("value", 420);
+		$("#romsliders").trigger("change", [1.2, 420, 10, 1, 0]);
 		break;
 	    case "Regular 1.5em":
 		$("#romsize").slider("value", 1.5);
 		$("#romspacing").slider("value", 0);
 		$("#romgrade").slider("value", 1);
 		$("#romopticalsize").slider("value", 12);
-		$("#romweight").slider("value", 380);
-		$("#romsliders").trigger("change", [1.5, 380, 12, 1, 0]);
+		$("#romweight").slider("value", 420);
+		$("#romsliders").trigger("change", [1.5, 420, 12, 1, 0]);
 		break;
 	    case "Medium 1.5em":
 		$("#romsize").slider("value", 1.5);
@@ -121,16 +121,16 @@ $( function() {
 		$("#romspacing").slider("value", 0);
 		$("#romgrade").slider("value", 1);
 		$("#romopticalsize").slider("value", 14);
-		$("#romweight").slider("value", 380);
-		$("#romsliders").trigger("change", [1.8, 380, 14, 1, 0]);
+		$("#romweight").slider("value", 420);
+		$("#romsliders").trigger("change", [1.8, 420, 14, 1, 0]);
 		break;
 	    case "Subhead Bold 1.8em":
 		$("#romsize").slider("value", 1.8);
 		$("#romspacing").slider("value", 0);
 		$("#romgrade").slider("value", 1);
 		$("#romopticalsize").slider("value", 14);
-		$("#romweight").slider("value", 700);
-		$("#romsliders").trigger("change", [1.8, 700, 14, 1, 0]);
+		$("#romweight").slider("value", 695);
+		$("#romsliders").trigger("change", [1.8, 695, 14, 1, 0]);
 		break;
 	    case "Display Light 2.3em":
 		$("#romsize").slider("value", 2.3);
