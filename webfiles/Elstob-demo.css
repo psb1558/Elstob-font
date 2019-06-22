@@ -81,6 +81,9 @@ b{
 .display {
     font-variation-settings: 'opsz' 18, 'wght' 695, 'GRAD' 1;
    }
+.extralight {
+    font-variation-settings: 'opsz' 12, 'wght' 200, 'GRAD' 1;
+}
 .light {
     font-variation-settings: 'opsz' 12, 'wght' 300, 'GRAD' 1;
 }
@@ -95,14 +98,6 @@ b{
 }
 .extrabold {
     font-variation-settings: 'opsz' 6, 'wght' 800, 'GRAD' 1;
-}
-.slanted {
-    font-style: italic;
-    font-variation-settings: 'opsz' 12, 'wght' 420, 'slnt' -40;
-}
-.upright {
-    font-style: italic;
-    font-variation-settings: 'opsz' 12, 'wght' 420, 'slnt' 60;
 }
 .bigtitle {
     font-size: 1.3em;
