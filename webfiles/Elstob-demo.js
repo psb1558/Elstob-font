@@ -3,7 +3,7 @@ $( function() {
     $(".sliderlabel").addClass("ui-widget");
     $( ".featurebutton").checkboxradio();
     $( "#romweight" ).slider({
-        min: 300,
+        min: 200,
         max: 800,
         value: 420});
     $( "#romopticalsize" ).slider({
