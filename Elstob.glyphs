@@ -222,11 +222,11 @@ name = licenseURL;
 value = "http://scripts.sil.org/OFL";
 }
 );
-date = "2019-07-22 13:57:07 +0000";
+date = "2019-07-27 02:57:23 +0000";
 designer = "Peter S. Baker";
 designerURL = "https://github.com/psb1558/Elstob-font";
 disablesNiceNames = 1;
-familyName = Elstob;
+familyName = ElstobVF;
 featurePrefixes = (
 {
 code = "languagesystem DFLT dflt;\012languagesystem latn dflt;\012languagesystem latn ENG;\012languagesystem latn ISL;\012languagesystem latn NOR;\012languagesystem runr dflt;\012";
@@ -234091,7 +234091,6 @@ width = 520;
 );
 instances = (
 {
-exports = 0;
 interpolationCustom = 1;
 interpolationCustom2 = 500;
 interpolationWeight = 200;
@@ -234103,7 +234102,6 @@ name = "FinePrint ExtraLight";
 weightClass = ExtraLight;
 },
 {
-exports = 0;
 interpolationCustom = 1;
 interpolationCustom2 = 500;
 interpolationWeight = 200;
@@ -234116,7 +234114,6 @@ name = "Footnote ExtraLight";
 weightClass = ExtraLight;
 },
 {
-exports = 0;
 interpolationCustom = 1;
 interpolationCustom2 = 500;
 interpolationWeight = 200;
@@ -234129,7 +234126,6 @@ name = "BlockQuote ExtraLight";
 weightClass = ExtraLight;
 },
 {
-exports = 0;
 customParameters = (
 {
 name = "Style Name as STAT entry";
@@ -234148,7 +234144,6 @@ name = ExtraLight;
 weightClass = ExtraLight;
 },
 {
-exports = 0;
 interpolationCustom = 1;
 interpolationCustom2 = 500;
 interpolationWeight = 200;
@@ -234161,7 +234156,6 @@ name = "Subhead ExtraLight";
 weightClass = ExtraLight;
 },
 {
-exports = 0;
 interpolationCustom = 1;
 interpolationCustom2 = 500;
 interpolationWeight = 200;
@@ -234186,7 +234180,6 @@ name = "FinePrint Light";
 weightClass = Light;
 },
 {
-exports = 0;
 interpolationCustom = 1;
 interpolationCustom2 = 500;
 interpolationWeight = 300;
@@ -234199,7 +234192,6 @@ name = "Footnote Light";
 weightClass = Light;
 },
 {
-exports = 0;
 interpolationCustom = 1;
 interpolationCustom2 = 500;
 interpolationWeight = 300;
@@ -234232,7 +234224,6 @@ name = Light;
 weightClass = Light;
 },
 {
-exports = 0;
 interpolationCustom = 1;
 interpolationCustom2 = 500;
 interpolationWeight = 300;
@@ -234276,7 +234267,6 @@ instanceInterpolations = {
 name = FinePrint;
 },
 {
-exports = 0;
 customParameters = (
 {
 name = "Style Name as STAT entry";
@@ -234295,7 +234285,6 @@ instanceInterpolations = {
 name = Footnote;
 },
 {
-exports = 0;
 customParameters = (
 {
 name = "Style Name as STAT entry";
@@ -234352,7 +234341,6 @@ instanceInterpolations = {
 name = Regular;
 },
 {
-exports = 0;
 customParameters = (
 {
 name = "Style Name as STAT entry";
@@ -234401,7 +234389,6 @@ name = "FinePrint Medium";
 weightClass = Medium;
 },
 {
-exports = 0;
 interpolationCustom = 1;
 interpolationCustom2 = 500;
 interpolationWeight = 500;
@@ -234415,7 +234402,6 @@ name = "Footnote Medium";
 weightClass = Medium;
 },
 {
-exports = 0;
 interpolationCustom = 1;
 interpolationCustom2 = 500;
 interpolationWeight = 500;
@@ -234447,7 +234433,6 @@ name = Medium;
 weightClass = Medium;
 },
 {
-exports = 0;
 interpolationCustom = 1;
 interpolationCustom2 = 500;
 interpolationWeight = 500;
@@ -234473,7 +234458,6 @@ name = "Display Medium";
 weightClass = Medium;
 },
 {
-exports = 0;
 interpolationCustom = 1;
 interpolationCustom2 = 500;
 interpolationWeight = 590;
@@ -234487,7 +234471,6 @@ name = "FinePrint Semibold";
 weightClass = SemiBold;
 },
 {
-exports = 0;
 interpolationCustom = 1;
 interpolationCustom2 = 500;
 interpolationWeight = 590;
@@ -234501,7 +234484,6 @@ name = "Footnote Semibold";
 weightClass = SemiBold;
 },
 {
-exports = 0;
 interpolationCustom = 1;
 interpolationCustom2 = 500;
 interpolationWeight = 590;
@@ -234515,7 +234497,6 @@ name = "BlockQuote Semibold";
 weightClass = SemiBold;
 },
 {
-exports = 0;
 customParameters = (
 {
 name = "Style Name as STAT entry";
@@ -234535,7 +234516,6 @@ name = Semibold;
 weightClass = SemiBold;
 },
 {
-exports = 0;
 interpolationCustom = 1;
 interpolationCustom2 = 500;
 interpolationWeight = 590;
@@ -234549,7 +234529,6 @@ name = "Subhead Semibold";
 weightClass = SemiBold;
 },
 {
-exports = 0;
 interpolationCustom = 1;
 interpolationCustom2 = 500;
 interpolationWeight = 590;
@@ -234577,7 +234556,6 @@ name = "FinePrint Bold";
 weightClass = Bold;
 },
 {
-exports = 0;
 interpolationCustom = 1;
 interpolationCustom2 = 500;
 interpolationWeight = 695;
@@ -234593,7 +234571,6 @@ name = "Footnote Bold";
 weightClass = Bold;
 },
 {
-exports = 0;
 interpolationCustom = 1;
 interpolationCustom2 = 500;
 interpolationWeight = 695;
@@ -234630,7 +234607,6 @@ name = Bold;
 weightClass = Bold;
 },
 {
-exports = 0;
 interpolationCustom = 1;
 interpolationCustom2 = 500;
 interpolationWeight = 695;
@@ -234660,7 +234636,6 @@ name = "Display Bold";
 weightClass = Bold;
 },
 {
-exports = 0;
 interpolationCustom = 1;
 interpolationCustom2 = 500;
 interpolationWeight = 800;
@@ -234674,7 +234649,6 @@ name = "FinePrint Extrabold";
 weightClass = ExtraBold;
 },
 {
-exports = 0;
 interpolationCustom = 1;
 interpolationCustom2 = 500;
 interpolationWeight = 800;
@@ -234688,7 +234662,6 @@ name = "Footnote Extrabold";
 weightClass = ExtraBold;
 },
 {
-exports = 0;
 interpolationCustom = 1;
 interpolationCustom2 = 500;
 interpolationWeight = 800;
@@ -234702,7 +234675,6 @@ name = "BlockQuote Extrabold";
 weightClass = ExtraBold;
 },
 {
-exports = 0;
 customParameters = (
 {
 name = "Style Name as STAT entry";
@@ -234722,7 +234694,6 @@ name = Extrabold;
 weightClass = ExtraBold;
 },
 {
-exports = 0;
 interpolationCustom = 1;
 interpolationCustom2 = 500;
 interpolationWeight = 800;
@@ -234736,7 +234707,6 @@ name = "Subhead Extrabold";
 weightClass = ExtraBold;
 },
 {
-exports = 0;
 interpolationCustom = 1;
 interpolationCustom2 = 500;
 interpolationWeight = 800;
@@ -236924,5 +236894,5 @@ tH = "77";
 };
 };
 versionMajor = 0;
-versionMinor = 1;
+versionMinor = 2;
 }
