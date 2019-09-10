@@ -1,11 +1,11 @@
 @font-face {
-    font-family: 'ElstobVF';
+    font-family: 'Elstob';
     src:url("./ElstobVF.woff2");
     font-weight: 200 800;
     font-style: normal;
 }
 @font-face {
-    font-family: 'ElstobVF';
+    font-family: 'Elstob';
     src:url("./ElstobVFItalic.woff2");
     font-weight: 200 800;
     font-style: italic;
@@ -25,18 +25,18 @@
     width: 100%; /* Width of the outside container */
 }
 h1 {
-    font-family: ElstobVF;
+    font-family: Elstob;
     font-size: 3em;
     font-variation-settings: 'opsz' 18, 'wght' 300, 'GRAD' 1;
 }
 h2 {
-    font-family: ElstobVF;
+    font-family: Elstob;
     font-size: 1.8em;
     font-variation-settings: 'opsz' 14, 'wght' 300, 'GRAD' 1;
     font-feature-settings: 'smcp' on;
 }
 p {
-    font-family: ElstobVF;
+    font-family: Elstob;
     font-size: 1.5em;
     font-variation-settings: 'opsz' 12, 'wght' 420, 'GRAD' 1, 'slnt' 0;
     font-feature-settings: 'calt' on;
