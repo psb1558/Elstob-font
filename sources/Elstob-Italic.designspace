@@ -1,0 +1,320 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+    Designspace file for Elstob Italic. Not the one generated
+    automatically by glyphs2ufo, but written by hand and meant
+    to be used with the ufos generated from within Glyphs.
+-->
+<designspace format="4.0">
+  <axes>
+    <axis tag="wght" name="weight" minimum="200" maximum="800" default="400"/>
+    <axis tag="opsz" name="opticalsize" minimum="6" maximum="18" default="12">
+      <labelname xml:lang="en">Optical Size</labelname>
+    </axis>
+    <axis tag="GRAD" name="grade" minimum="1" maximum="500" default="1">
+      <labelname xml:lang="en">Grade</labelname>
+    </axis>
+    <axis tag="ital" name="italic" minimum="1" maximum="1" default="1" hidden="1"/>
+  </axes>
+  <sources>
+    <source filename="Elstob-Italic.ufo" name="reg-ital">
+      <location>
+        <dimension name="weight" xvalue="400"/>
+        <dimension name="opticalsize" xvalue="12"/>
+        <dimension name="grade" xvalue="1"/>
+        <dimension name="italic" xvalue="1"/>
+      </location>
+    </source>
+    <source filename="Elstob-wght-min-Italic.ufo" name="wght-min-ital">
+      <location>
+        <dimension name="weight" xvalue="200"/>
+        <dimension name="opticalsize" xvalue="12"/>
+        <dimension name="grade" xvalue="1"/>
+        <dimension name="italic" xvalue="1"/>
+      </location>
+    </source>
+    <source filename="Elstob-wght-max-Italic.ufo" name="wght-max-ital">
+      <location>
+        <dimension name="weight" xvalue="800"/>
+        <dimension name="opticalsize" xvalue="12"/>
+        <dimension name="grade" xvalue="1"/>
+        <dimension name="italic" xvalue="1"/>
+      </location>
+    </source>
+    <source filename="Elstob-opsz-min-Italic.ufo" name="opsz-min-ital">
+      <location>
+        <dimension name="weight" xvalue="400"/>
+        <dimension name="opticalsize" xvalue="6"/>
+        <dimension name="grade" xvalue="1"/>
+        <dimension name="italic" xvalue="1"/>
+      </location>
+    </source>
+    <source filename="Elstob-opsz-max-Italic.ufo" name="opsz-max-ital">
+      <location>
+        <dimension name="weight" xvalue="400"/>
+        <dimension name="opticalsize" xvalue="18"/>
+        <dimension name="grade" xvalue="1"/>
+        <dimension name="italic" xvalue="1"/>
+      </location>
+    </source>
+    <source filename="Elstob-grademax-Italic.ufo" name="GRAD-max-ital">
+      <location>
+        <dimension name="weight" xvalue="400"/>
+        <dimension name="opticalsize" xvalue="12"/>
+        <dimension name="grade" xvalue="500"/>
+        <dimension name="italic" xvalue="1"/>
+      </location>
+    </source>
+  </sources>
+  <rules>
+    <rule name="dollar.rule.weight">
+      <conditionset>
+	<condition minimum="550" maximum="800" name="weight"/>
+      </conditionset>
+      <sub name="dollar" with="dollar.altstroke"/>
+      <sub name="dollar.lf" with="dollar.altstrokelf"/>
+      <sub name="dollar.osf" with="dollar.altstrokeosf"/>
+      <sub name="dollar.tosf" with="dollar.altstroketosf"/>
+    </rule>
+    <rule name="dollar.rule.grade">
+      <conditionset>
+	<condition minimum="250" maximum="500" name="grade"/>
+      </conditionset>
+      <sub name="dollar" with="dollar.altstroke"/>
+      <sub name="dollar.lf" with="dollar.altstrokelf"/>
+      <sub name="dollar.osf" with="dollar.altstrokeosf"/>
+      <sub name="dollar.tosf" with="dollar.altstroketosf"/>
+    </rule>
+  </rules>
+  <instances>
+    <instance familyname="Elstob" stylename="Italic" postscriptfontname="Elstob-Italic">
+      <location>
+        <dimension name="weight" xvalue="400"/>
+        <dimension name="opticalsize" xvalue="12"/>
+        <dimension name="grade" xvalue="1"/>
+        <dimension name="italic" xvalue="1"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Elstob" stylename="FinePrint Italic" postscriptfontname="Elstob-Italic">
+      <location>
+        <dimension name="weight" xvalue="400"/>
+        <dimension name="opticalsize" xvalue="6"/>
+        <dimension name="grade" xvalue="1"/>
+        <dimension name="italic" xvalue="1"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Elstob" stylename="Display Italic" postscriptfontname="Elstob-Italic">
+      <location>
+        <dimension name="weight" xvalue="400"/>
+        <dimension name="opticalsize" xvalue="18"/>
+        <dimension name="grade" xvalue="1"/>
+        <dimension name="italic" xvalue="1"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Elstob" stylename="ExtraLight Italic" postscriptfontname="Elstob-ExtraLightItalic">
+      <location>
+        <dimension name="weight" xvalue="200"/>
+        <dimension name="opticalsize" xvalue="12"/>
+        <dimension name="grade" xvalue="1"/>
+        <dimension name="italic" xvalue="1"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Elstob" stylename="ExtraLight FinePrint Italic" postscriptfontname="Elstob-ExtraLightItalic">
+      <location>
+        <dimension name="weight" xvalue="200"/>
+        <dimension name="opticalsize" xvalue="6"/>
+        <dimension name="grade" xvalue="1"/>
+        <dimension name="italic" xvalue="1"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Elstob" stylename="ExtraLight Display Italic" postscriptfontname="Elstob-ExtraLightItalic">
+      <location>
+        <dimension name="weight" xvalue="200"/>
+        <dimension name="opticalsize" xvalue="18"/>
+        <dimension name="grade" xvalue="1"/>
+        <dimension name="italic" xvalue="1"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Elstob" stylename="ExtraLight Grade Italic" postscriptfontname="Elstob-ExtraLightItalic">
+      <location>
+        <dimension name="weight" xvalue="200"/>
+        <dimension name="opticalsize" xvalue="12"/>
+        <dimension name="grade" xvalue="500"/>
+        <dimension name="italic" xvalue="1"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Elstob" stylename="Light Italic" postscriptfontname="Elstob-LightItalic">
+      <location>
+        <dimension name="weight" xvalue="300"/>
+        <dimension name="opticalsize" xvalue="12"/>
+        <dimension name="grade" xvalue="1"/>
+        <dimension name="italic" xvalue="1"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Elstob" stylename="Light FinePrint Italic" postscriptfontname="Elstob-LightItalic">
+      <location>
+        <dimension name="weight" xvalue="300"/>
+        <dimension name="opticalsize" xvalue="6"/>
+        <dimension name="grade" xvalue="1"/>
+        <dimension name="italic" xvalue="1"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Elstob" stylename="Light Display Italic" postscriptfontname="Elstob-LightItalic">
+      <location>
+        <dimension name="weight" xvalue="300"/>
+        <dimension name="opticalsize" xvalue="18"/>
+        <dimension name="grade" xvalue="1"/>
+        <dimension name="italic" xvalue="1"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Elstob" stylename="Medium Italic" postscriptfontname="Elstob-MediumItalic">
+      <location>
+        <dimension name="weight" xvalue="500"/>
+        <dimension name="opticalsize" xvalue="12"/>
+        <dimension name="grade" xvalue="1"/>
+        <dimension name="italic" xvalue="1"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Elstob" stylename="Medium FinePrint Italic" postscriptfontname="Elstob-MediumItalic">
+      <location>
+        <dimension name="weight" xvalue="500"/>
+        <dimension name="opticalsize" xvalue="6"/>
+        <dimension name="grade" xvalue="1"/>
+        <dimension name="italic" xvalue="1"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Elstob" stylename="Medium Display Italic" postscriptfontname="Elstob-MediumItalic">
+      <location>
+        <dimension name="weight" xvalue="500"/>
+        <dimension name="opticalsize" xvalue="18"/>
+        <dimension name="grade" xvalue="1"/>
+        <dimension name="italic" xvalue="1"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Elstob" stylename="SemiBold Italic" postscriptfontname="Elstob-SemiBoldItalic">
+      <location>
+        <dimension name="weight" xvalue="600"/>
+        <dimension name="opticalsize" xvalue="12"/>
+        <dimension name="grade" xvalue="1"/>
+        <dimension name="italic" xvalue="1"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Elstob" stylename="SemiBold FinePrint Italic" postscriptfontname="Elstob-SemiBoldItalic">
+      <location>
+        <dimension name="weight" xvalue="600"/>
+        <dimension name="opticalsize" xvalue="6"/>
+        <dimension name="grade" xvalue="1"/>
+        <dimension name="italic" xvalue="1"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Elstob" stylename="SemiBold Display Italic" postscriptfontname="Elstob-SemiBoldItalic">
+      <location>
+        <dimension name="weight" xvalue="600"/>
+        <dimension name="opticalsize" xvalue="18"/>
+        <dimension name="grade" xvalue="1"/>
+        <dimension name="italic" xvalue="1"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Elstob" stylename="Bold Italic" postscriptfontname="Elstob-BoldItalic">
+      <location>
+        <dimension name="weight" xvalue="700"/>
+        <dimension name="opticalsize" xvalue="12"/>
+        <dimension name="grade" xvalue="1"/>
+        <dimension name="italic" xvalue="1"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Elstob" stylename="Bold FinePrint Italic" postscriptfontname="Elstob-BoldItalic">
+      <location>
+        <dimension name="weight" xvalue="700"/>
+        <dimension name="opticalsize" xvalue="6"/>
+        <dimension name="grade" xvalue="1"/>
+        <dimension name="italic" xvalue="1"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Elstob" stylename="Bold Display Italic" postscriptfontname="Elstob-BoldItalic">
+      <location>
+        <dimension name="weight" xvalue="700"/>
+        <dimension name="opticalsize" xvalue="18"/>
+        <dimension name="grade" xvalue="1"/>
+        <dimension name="italic" xvalue="1"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Elstob" stylename="ExtraBold Italic" postscriptfontname="Elstob-ExtraBoldItalic">
+      <location>
+        <dimension name="weight" xvalue="800"/>
+        <dimension name="opticalsize" xvalue="12"/>
+        <dimension name="grade" xvalue="1"/>
+        <dimension name="italic" xvalue="1"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Elstob" stylename="ExtraBold FinePrint Italic" postscriptfontname="Elstob-ExtraBoldItalic">
+      <location>
+        <dimension name="weight" xvalue="800"/>
+        <dimension name="opticalsize" xvalue="6"/>
+        <dimension name="grade" xvalue="1"/>
+        <dimension name="italic" xvalue="1"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Elstob" stylename="ExtraBold Display Italic" postscriptfontname="Elstob-ExtraBoldItalic">
+      <location>
+        <dimension name="weight" xvalue="800"/>
+        <dimension name="opticalsize" xvalue="18"/>
+        <dimension name="grade" xvalue="1"/>
+        <dimension name="italic" xvalue="1"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance familyname="Elstob" stylename="ExtraBold Grade Italic" postscriptfontname="Elstob-ExtraBoldItalic">
+      <location>
+        <dimension name="weight" xvalue="800"/>
+        <dimension name="opticalsize" xvalue="12"/>
+        <dimension name="grade" xvalue="500"/>
+        <dimension name="italic" xvalue="1"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+  </instances>
+</designspace>
