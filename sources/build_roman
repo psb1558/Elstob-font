@@ -1,0 +1,93 @@
+#!/bin/bash
+
+if [ $# -gt 0 ]
+then
+    echo "Usage: build_roman (no arguments)"
+    echo "Script assumes that Elstob.glyphs is in the parent directory and makes a copy here."
+    echo "If the family name is ElstobD, it builds static fonts. Otherwise, it builds a variable font."
+    return 0
+fi
+
+if [ ! -f "../Elstob.glyphs" ];
+then
+    echo "Did not find Elstob.glyphs in parent directory"
+    return 1
+fi
+
+echo "Making a copy of ../Elstob.glyphs"
+cp ../Elstob.glyphs .
+echo "Generating master UFOs"
+glyphs2ufo --propagate-anchors --no-store-editor-state -m master_ufo -d master_ufo/Elstob.designspace Elstob.glyphs
+outputType="v"
+fn="Elstob"
+grep -q "familyname=\"ElstobD\"" master_ufo/Elstob.designspace
+if [ $? -eq 0 ]
+then
+    outputType="s"
+    fn="ElstobD"
+    echo "Building static fonts"
+else
+    echo "Building a variable font"
+fi
+
+# Not bothering with this just now, since fontmake drops the italic axis (as handled here, anyway).
+# However, I gather that in the future fonts should have an italic axis (presumably hidden) to identify
+# them as italic or roman.
+#
+# echo "Adding italic axis"
+# rm -f master_ufo/Elstob-new.designspace
+# xsltproc add_italic_axis_1.xsl master_ufo/Elstob.designspace | xmllint --output master_ufo/Elstob-new.designspace --format -
+   
+# There's an extraneous anchor in any combining mark that has a "us" anchor: it has to be there
+# so that glyphslib chooses the right "us" anchor (the one from the mark rather than the base
+# glyph) when propagating anchors for composites. But it doesn't have to be there for any other
+# purpose: we strip it out because it makes me nervous. The mark glifs (listed in combiningGlyphs)
+# are edited by the XSLT script del_usanchor.xsl.
+Echo "Removing extraneous anchors"
+combiningGlyphs=("acutecomb.case.glif" "acutecomb.glif" "acutecomb.sc.glif" "brevecomb.glif"
+                 "caroncomb.case.glif" "caroncomb.glif" "circumflexcomb.glif" "dotaccentcomb.glif"
+                 "gravecomb.case.glif" "gravecomb.glif" "gravecomb.sc.glif" "hungarumlautcomb.case.glif"
+                 "hungarumlautcomb.glif" "hungarumlautcomb.sc.glif" "macroncomb.glif"
+                 "ringcomb.glif" "tildecomb.case.glif" "tildecomb.glif" "uni0302.case.glif"
+                 "uni0304.case.glif" "uni0306.case.glif" "uni0307.case.glif" "uni0308.case.glif"
+                 "uni035B_.glif" "uni0363.glif" "uni0364.glif" "uni0365.glif" "uni0366.glif"
+                 "uni0367.glif" "uni0368.glif" "uni0369.glif" "uni036A_.glif" "uni036B_.glif"
+                 "uni036C_.glif" "uni036D_.glif" "uni036E_.glif" "uni036F_.glif" "uni1D_D_1.glif"
+                 "uni1D_D_3.glif" "uni1D_D_4.glif" "uni1D_D_8.glif" "uni1D_D_A_.glif"
+                 "uni1D_D_C_.glif" "uni1D_D_D_.glif" "uni1D_E_0.glif" "uni1D_E_3.glif"
+                 "uni1D_E_4.glif" "uni1D_E_5.glif" "uni1D_E_6.glif" "aocomb.glif" "avcomb.glif"
+		 "ccedillacomb.glif")
+allUFOs=("${fn}-Regular.ufo" "${fn}-grademax.ufo" "${fn}-opsz-max.ufo"
+         "${fn}-opsz-min.ufo" "${fn}-wght-max.ufo" "${fn}-wght-min.ufo")
+for u in ${allUFOs[@]}; do
+    for f in ${combiningGlyphs[@]};
+    do
+#	echo "u = ${u}"
+#	echo "f = ${f}"
+	xsltproc -o "master_ufo/$u/glyphs/$f" del_usanchor.xsl "master_ufo/$u/glyphs/$f"
+  done
+done
+
+# build the fonts.
+if [ $outputType = "s" ];
+then
+    echo "Running fontmake to build static instances"
+    fontmake -o ttf -a -i -m master_ufo/Elstob.designspace
+    cd autohinted/instance_ttf
+    for ff in "Elstob*.ttf";
+    do
+	gftools fix-dsig --autofix $ff
+    done
+    cd ../..
+else
+    echo "Running fontmake to build variable font"
+    fontmake -o variable -m master_ufo/Elstob.designspace
+    cd variable_ttf
+    echo "Checking for dsig table"
+    gftools fix-dsig --autofix Elstob-VF.ttf
+    echo "Running ttxautohint-vf"
+    ttfautohint-vf Elstob-VF.ttf "Elstob[GRAD,opsz,wght].ttf"
+    echo "Creating woff2 version"
+    woff2_compress "Elstob[GRAD,opsz,wght].ttf"
+    cd ..
+fi
