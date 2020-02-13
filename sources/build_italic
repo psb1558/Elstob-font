@@ -4,7 +4,9 @@ if [ $# -gt 0 ]
 then
     echo "Usage: build_italic (no arguments)"
     echo "Script assumes that Elstob-Italic.glyphs is in the parent directory and makes a copy here."
-    echo "If the family name is ElstobD, it builds static fonts. Otherwise, it builds a variable font."
+    echo "If the family name is Elstob, it builds a variable font. Otherwise, it builds static fonts,"
+    echo "extracting the family name from the designspace file."
+    echo "Dependencies: fontmake, ttfautohint-vf, gftools, xsltproc, grep, gsed, woff2_compress"
     return 0
 fi
 
@@ -14,23 +16,34 @@ then
     return 1
 fi
 
-echo "Making a copy of ../Elstob-Italic.glyphs"
-cp ../Elstob-Italic.glyphs .
-echo "Generating master UFOs and designspace files"
-glyphs2ufo --propagate-anchors --no-store-editor-state -m master_ufo -d master_ufo/Elstob-Italic.designspace Elstob-Italic.glyphs
-outputType="v"
-fn="Elstob"
-grep -q "familyname=\"ElstobD\"" master_ufo/Elstob-Italic.designspace
-if [ $? -eq 0 ]
+# We can skip copying if the file in the parent directly is not newer than the one here. If we
+# don't need to copy, we assume we also don't need to run glyphs2ufo.
+if [ ! -f "Elstob-Italic.glyphs" ] || [ "../Elstob-Italic.glyphs" -nt "Elstob-Italic.glyphs" ]
 then
-    outputType="s"
-    fn="ElstobD"
-    echo "Building static fonts"
-else
-    echo "Building a variable font"
+  echo "Making a copy of ../Elstob-Italic.glyphs"
+  cp ../Elstob-Italic.glyphs .
+  echo "Generating master UFOs and designspace files"
+  glyphs2ufo --propagate-anchors --no-store-editor-state -m master_ufo -d master_ufo/Elstob-Italic.designspace Elstob-Italic.glyphs
+  if [ $? -ne 0 ]
+  then
+      echo "Failed to generate UFO and designspace"
+      return 1
+  fi
 fi
 
-# Not bothering with this just now, since fontmake drops the italic axis (as handled here, anyway).
+outputType="v"
+fn="Elstob"
+grep -q "familyname=\"Elstob\"" master_ufo/Elstob-Italic.designspace
+if [ $? -eq 0 ]
+then
+    echo "Building a variable font"
+else
+    outputType="s"
+    fn=`gsed -n '1,/<source.*familyname/s/.*familyname="\([^"]*\)"[^\n]*/\1/p' master_ufo/Elstob-Italic.designspace`
+    echo "Building static fonts with family name \"${fn}\""
+fi
+
+# Not bothering with this just now, since fontmake drops the italic axis (as implemented here, anyway).
 # However, I gather that in the future fonts should have an italic axis (presumably hidden) to identify
 # them as italic or roman.
 #
@@ -53,14 +66,23 @@ combiningGlyphs=("acutecomb.glif" "brevecomb.case.glif" "brevecomb.glif" "caronc
 		 "uni036D_.glif" "uni036E_.glif" "uni036F_.glif" "uni1D_D_1.glif" "uni1D_D_3.glif"
 		 "uni1D_D_4.glif" "uni1D_D_8.glif" "uni1D_D_A_.glif" "uni1D_D_C_.glif" "uni1D_D_D_.glif"
 		 "uni1D_E_0.glif" "uni1D_E_3.glif" "uni1D_E_4.glif" "uni1D_E_5.glif" "uni1D_E_6.glif"
-		 "aocomb.glif" "avcomb.glif" "ccedillacomb.glif")
+		 "aocomb.glif" "avcomb.glif" "ccedillacomb.glif" "commaturnedabovecomb.glif")
 allUFOs=("${fn}-Italic.ufo" "${fn}-grademax-Italic.ufo" "${fn}-opsz-max-Italic.ufo"
          "${fn}-opsz-min-Italic.ufo" "${fn}-wght-max-Italic.ufo" "${fn}-wght-min-Italic.ufo")
 for u in ${allUFOs[@]}; do
     for f in ${combiningGlyphs[@]};
     do
-	xsltproc -o "master_ufo/$u/glyphs/$f" del_usanchor.xsl "master_ufo/$u/glyphs/$f"
-  done
+	fff="master_ufo/$u/glyphs/$f"
+	grep -q "_us" $fff
+	if [ $? -eq 0 ]
+	then
+	    xsltproc -o $fff del_usanchor.xsl $fff
+	    if [ $? -ne 0 ]
+	    then
+		return 1
+	    fi
+	fi
+    done
 done
 
 # build the fonts.
@@ -68,6 +90,11 @@ if [ $outputType = "s" ];
 then
     echo "Running fontmake to build static instances"
     fontmake -o ttf -a -i -m master_ufo/Elstob-Italic.designspace
+    if [ $? -ne 0 ]
+    then
+	echo "fontmake failed"
+	return 1
+    fi
     cd autohinted/instance_ttf
     for ff in "Elstob*.ttf";
     do
@@ -77,10 +104,15 @@ then
 else
     echo "Running fontmake to build variable font"
     fontmake -o variable -m master_ufo/Elstob-Italic.designspace
+    if [ $? -ne 0 ]
+    then
+	echo "fontmake failed"
+	return 1
+    fi
     cd variable_ttf
     echo "Checking for dsig table"
     gftools fix-dsig --autofix Elstob-Italic-VF.ttf
-    echo "Running ttxautohint-vf"
+    echo "Running ttfautohint-vf"
     ttfautohint-vf Elstob-Italic-VF.ttf "Elstob-Italic[GRAD,opsz,wght].ttf"
     echo "Creating woff2 version"
     woff2_compress "Elstob-Italic[GRAD,opsz,wght].ttf"
