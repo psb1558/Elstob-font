@@ -73,7 +73,8 @@ combiningGlyphs=("acutecomb.case.glif" "acutecomb.glif" "acutecomb.sc.glif" "bre
 		 "ccedillacomb.glif" "commaturnedabovecomb.glif")
 allUFOs=("${fn}-Regular.ufo" "${fn}-grademax.ufo" "${fn}-opsz-max.ufo"
          "${fn}-opsz-min.ufo" "${fn}-wght-max.ufo" "${fn}-wght-min.ufo")
-for u in ${allUFOs[@]}; do
+for u in ${allUFOs[@]};
+do
     for f in ${combiningGlyphs[@]};
     do
 	fff="master_ufo/$u/glyphs/$f"
@@ -100,7 +101,8 @@ then
 	return 1
     fi
     cd autohinted/instance_ttf
-    for ff in "Elstob*.ttf";
+    # for ff in "Elstob*.ttf";
+    for ff in `find . -maxdepth 1 -name "Elstob*.ttf" -not -name "*Italic.ttf"`
     do
 	gftools fix-dsig --autofix $ff
     done
