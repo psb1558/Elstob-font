@@ -1,0 +1,174 @@
+#!/bin/bash
+
+if [ $# -lt 1 ]
+then
+    echo "Usage: build_font [-s] file.glyphs"
+    echo " Type \"build_font -h\" for help."
+    return 1
+fi
+
+outputType="v"
+
+glyphsfile="nofile"
+
+fontname="nofont"
+
+for arg in $@
+do
+    if [ $arg == "-h" ] || [ $arg == "--help" ]
+    then
+	echo "Usage: build_font [-s] file.glyphs"
+	echo ""
+	echo "A script for building variable and static versions of the Elstob font."
+	echo "It does several things that are specific to Elstob and probably unsuitable"
+	echo "for other fonts. Also things for passing fontbakery's check-googlefonts"
+	echo "tests."
+	echo ""
+	echo "  -s Builds static fonts instead of a variable font"
+	return 0
+    fi
+    if [ $arg == "-s" ]
+    then
+	outputType="s"
+    elif [ -f $arg ]
+    then
+	if [ ${arg##*.} == "glyphs" ]
+	then
+	    glyphsfile=$arg
+	    ff=$(basename -- $arg)
+	    fontname=${ff%.*}
+	else
+	    echo "${arg} appears not to be a Glyphs file"
+	    return 1
+	fi
+    else
+	echo "Unknown argument or non-existent file ${arg}"
+	return 1
+    fi
+done
+if [ $glyphsfile == "nofile" ] || [ $fontname == "nofont" ]
+then
+    echo "Could not derive the filename or fontname."
+    return 1
+fi
+
+if [[ $fontname == *"Italic"* ]]
+then
+    fonttype="italic"
+else
+    fonttype="roman"
+fi
+
+des="master_ufo/${fontname}.designspace"
+
+echo "Generating master UFOs and designspace files"
+glyphs2ufo --propagate-anchors --generate-GDEF --no-store-editor-state -m master_ufo -d $des $glyphsfile
+if [ $? -ne 0 ]
+then
+    echo "Failed to generate UFO and designspace"
+    return 1
+fi
+
+familyname=`gsed -n '1,/<source.*familyname/s/.*familyname="\([^"]*\)"[^\n]*/\1/p' $des`
+echo "Building font(s) with family name \"${familyname}\""
+ 
+# There's an extraneous anchor in any combining mark that has a "us" anchor: it has to be there
+# so that glyphslib chooses the right "us" anchor (the one from the mark rather than the base
+# glyph) when propagating anchors for composites. But it doesn't have to be there for any other
+# purpose: we strip it out because it makes me nervous. Get a list of UFOs from the
+# designspace file and search out and remove "_us" anchors everywhere but in usabovecomb.glif.
+
+Echo "Removing extraneous anchors"
+
+for u in `gsed -n '/<source.*filename/s/.*filename="\([^"]*\)"[^\n]*/\1/p' $des`
+do
+    # echo "Checking $u"
+    for fff in `grep -l "anchor.*\"_us\"" master_ufo/$u/glyphs/*.glif`
+    do
+	if [[ ! $fff == *"usabovecomb.glif"* ]]
+	then
+	    xsltproc -o $fff del_usanchor.xsl $fff
+	    if [ $? -ne 0 ]
+	    then
+		return 1
+	    fi
+	fi
+    done
+done
+
+# We had to have a "Grade" instance for glyphsLib to calculate the axes properly, but
+# we don't actually want it in the output font(s). Remove that instance, if we haven't
+# already performed this edit on the designspace file. Also several others that
+# aren't really needed.
+
+if [ $fonttype == "italic" ]
+then
+    sn="Grade Italic"
+else
+    sn="Grade"
+fi
+grep -q "stylename=\"${sn}\"" $des
+if [ $? -eq 0 ]
+then
+    echo "Removing unnneeded instances"
+    xsltproc -o $des del_instances.xsl $des
+fi
+
+# build the fonts.
+if [ $outputType = "s" ];
+then
+    echo "Running fontmake to build static instances"
+    fontmake -o ttf -a -i -m $des
+    if [ $? -ne 0 ]
+    then
+	echo "fontmake failed"
+	return 1
+    fi
+    cd autohinted/instance_ttf
+    if [ $fonttype == "italic" ]
+    then
+	for ff in "${familyname}*Italic.ttf"
+	do
+	    gftools fix-dsig --autofix $ff
+	done
+    else
+	for ff in `find . -maxdepth 1 -name "${familyname}*.ttf" -not -name "*Italic.ttf"`
+	do
+	    gftools fix-dsig --autofix $ff
+	    gftools-fix-hinting.py $ff
+	    if [ -f "${ff}.fix" ]
+	    then
+		cp "${ff}.fix"  $ff
+		rm "${ff}.fix"
+	    else
+		echo "fix for head table flags in ${ff} appears to have failed"
+	    fi
+	done
+    fi
+    cd ../..
+else
+    echo "Running fontmake to build variable font"
+    fontmake -o variable -m $des
+    if [ $? -ne 0 ]
+    then
+	echo "fontmake failed"
+	return 1
+    fi
+    cd variable_ttf
+    echo "Checking for dsig table"
+    gftools fix-dsig --autofix "${fontname}-VF.ttf"
+    # temp line
+    mv "${fontname}-VF.ttf" "${fontname}[GRAD,opsz,wght].ttf"
+#    echo "Checking for unwanted tables"
+#    gftools-fix-unwanted-tables.py "${fontname}-VF.ttf"
+#    echo "Running ttfautohint-vf"
+#    ttfautohint-vf "${fontname}-VF.ttf" tmp-hinted.ttf
+#    gftools-fix-hinting.py tmp-hinted.ttf
+#    mv tmp-hinted.ttf.fix "${fontname}[GRAD,opsz,wght].ttf"
+#    echo "Creating woff2 version"
+#    woff2_compress "${fontname}[GRAD,opsz,wght].ttf"
+    # Clean up
+#    rm ${fontname}-VF.ttf
+#   rm tmp-hinted.ttf
+   cd ..
+fi
