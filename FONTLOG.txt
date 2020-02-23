@@ -1,0 +1,10 @@
+FONTLOG for the Elstob fonts
+
+Elstob is a variable font intended to support medievalists working with European languages
+that use the Latin script, but the character set is also complete for all modern European
+languages using the Latin script. It is intended to contain all Unicode characters commonly
+used by medievalists. In addition, it includes the complete Unicode Runic range and all
+characters used in the International Phonetic Alphabet.
+
+The variable font includes Weight, Optical Size and Grade axes. For details, see the "Features
+and Character Set" document.
