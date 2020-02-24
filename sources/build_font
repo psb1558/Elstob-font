@@ -13,6 +13,10 @@ glyphsfile="nofile"
 
 fontname="nofont"
 
+autohint=0
+
+createwoff=0
+
 for arg in $@
 do
     if [ $arg == "-h" ] || [ $arg == "--help" ]
@@ -25,11 +29,22 @@ do
 	echo "tests."
 	echo ""
 	echo "  -s Builds static fonts instead of a variable font"
+	echo "  -a Autohint the variable font with ttfautohint-vf"
+	echo "  -w Create a woff2 version of the variable font"
 	return 0
     fi
     if [ $arg == "-s" ]
     then
 	outputType="s"
+    elif [ $arg == "-o" ]
+    then
+	outputType="o"
+    elif [ $arg == "-a" ]
+    then
+	 autohint=1
+    elif [ $arg == "-w" ]
+    then
+	 createwoff=1
     elif [ -f $arg ]
     then
 	if [ ${arg##*.} == "glyphs" ]
@@ -146,6 +161,30 @@ then
 	done
     fi
     cd ../..
+elif [ $outputType == "o" ]
+then
+    fontmake -o otf -i -m $des
+    if [ $? -ne 0 ]
+    then
+	echo "fontmake failed"
+	return 1
+    fi
+    cd instance_otf
+    if [ $fonttype == "italic" ]
+    then
+	for ff in "${familyname}*Italic.otf"
+	do
+	    gftools fix-dsig --autofix $ff
+	    psautohint $ff
+	done
+    else
+	for ff in `find . -maxdepth 1 -name "${familyname}*.otf" -not -name "*Italic.otf"`
+	do
+	    gftools fix-dsig --autofix $ff
+	    psautohint $ff
+	done
+    fi
+    cd ../..
 else
     echo "Running fontmake to build variable font"
     fontmake -o variable -m $des
@@ -157,8 +196,22 @@ else
     cd variable_ttf
     echo "Checking for dsig table"
     gftools fix-dsig --autofix "${fontname}-VF.ttf"
-    # temp line
-    mv "${fontname}-VF.ttf" "${fontname}[GRAD,opsz,wght].ttf"
+    if [ $autohint == 1 ]
+    then
+	echo "Running ttfautohint-vf"
+	ttfautohint-vf "${fontname}-VF.ttf" tmp-font.ttf
+	gftools-fix-hinting.py tmp-font.ttf
+	mv tmp-font.ttf.fix "${fontname}[GRAD,opsz,wght].ttf"
+    else
+	cp "${fontname}-VF.ttf" "${fontname}[GRAD,opsz,wght].ttf"
+    fi
+    if [ $createwoff == 1 ]
+    then
+	echo "Creating woff2 version"
+	woff2_compress "${fontname}[GRAD,opsz,wght].ttf"
+    fi
+    rm -f ${fontname}-VF.ttf
+    rm -f tmp-font.ttf
 #    echo "Checking for unwanted tables"
 #    gftools-fix-unwanted-tables.py "${fontname}-VF.ttf"
 #    echo "Running ttfautohint-vf"
