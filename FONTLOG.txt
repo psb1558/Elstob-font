@@ -8,3 +8,8 @@ characters used in the International Phonetic Alphabet.
 
 The variable font includes Weight, Optical Size and Grade axes. For details, see the "Features
 and Character Set" document.
+
+The model for this font is the Double Pica commissioned by Bishop John Fell, cut by the Dutch
+designer Peter De Walpergen, and used by the Oxford University Press in the late seventeenth
+and early eighteenth centuries. Wherever possible, it is based on a specimen printed in 1925
+with type cast in the 1890s from the seventeenth-century matrices.
