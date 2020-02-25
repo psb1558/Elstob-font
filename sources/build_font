@@ -13,6 +13,8 @@ glyphsfile="nofile"
 
 fontname="nofont"
 
+instanceScript="del_instances.xsl"
+
 autohint=0
 
 createwoff=0
@@ -28,8 +30,10 @@ do
 	echo "for other fonts. Also things for passing fontbakery's check-googlefonts"
 	echo "tests."
 	echo ""
-	echo "  -s Builds static fonts instead of a variable font"
+	echo "  -s Builds static TrueType fonts instead of a variable font"
+	echo "  -o Builds static CFF fonts instead of a variable font"
 	echo "  -a Autohint the variable font with ttfautohint-vf"
+	echo "  -i Generate a shorter collection of instances"
 	echo "  -w Create a woff2 version of the variable font"
 	return 0
     fi
@@ -44,7 +48,10 @@ do
 	 autohint=1
     elif [ $arg == "-w" ]
     then
-	 createwoff=1
+	createwoff=1
+    elif [ $arg == "-i" ]
+    then
+	instanceScript="del_instances_shorter.xsl"
     elif [ -f $arg ]
     then
 	if [ ${arg##*.} == "glyphs" ]
@@ -61,6 +68,10 @@ do
 	return 1
     fi
 done
+
+# echo $instanceScript
+# return 0
+
 if [ $glyphsfile == "nofile" ] || [ $fontname == "nofont" ]
 then
     echo "Could not derive the filename or fontname."
@@ -126,13 +137,13 @@ grep -q "stylename=\"${sn}\"" $des
 if [ $? -eq 0 ]
 then
     echo "Removing unnneeded instances"
-    xsltproc -o $des del_instances.xsl $des
+    xsltproc -o $des $instanceScript $des
 fi
 
 # build the fonts.
 if [ $outputType = "s" ];
 then
-    echo "Running fontmake to build static instances"
+    echo "Running fontmake to build static TrueType instances"
     fontmake -o ttf -a -i -m $des
     if [ $? -ne 0 ]
     then
@@ -163,6 +174,7 @@ then
     cd ../..
 elif [ $outputType == "o" ]
 then
+    echo "Running fontmake to build static CFF instances"
     fontmake -o otf -i -m $des
     if [ $? -ne 0 ]
     then
@@ -184,7 +196,7 @@ then
 	    psautohint $ff
 	done
     fi
-    cd ../..
+    cd ..
 else
     echo "Running fontmake to build variable font"
     fontmake -o variable -m $des
@@ -212,16 +224,5 @@ else
     fi
     rm -f ${fontname}-VF.ttf
     rm -f tmp-font.ttf
-#    echo "Checking for unwanted tables"
-#    gftools-fix-unwanted-tables.py "${fontname}-VF.ttf"
-#    echo "Running ttfautohint-vf"
-#    ttfautohint-vf "${fontname}-VF.ttf" tmp-hinted.ttf
-#    gftools-fix-hinting.py tmp-hinted.ttf
-#    mv tmp-hinted.ttf.fix "${fontname}[GRAD,opsz,wght].ttf"
-#    echo "Creating woff2 version"
-#    woff2_compress "${fontname}[GRAD,opsz,wght].ttf"
-    # Clean up
-#    rm ${fontname}-VF.ttf
-#   rm tmp-hinted.ttf
    cd ..
 fi
