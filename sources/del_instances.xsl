@@ -9,23 +9,7 @@
       </xsl:copy>
     </xsl:template>
 
-    <xsl:template match="instance[@stylename='Grade']"/>
+    <xsl:template match="instance[starts-with(@stylename,'6pt') or
+			 starts-with(@stylename,'Grade')]"/>
     
-    <xsl:template match="instance[@stylename='6pt']"/>
-
-    <xsl:template match="instance[@stylename='6pt Medium']"/>
-
-    <xsl:template match="instance[@stylename='6pt SemiBold']"/>
-
-    <xsl:template match="instance[@stylename='6pt Bold']"/>
-
-    <xsl:template match="instance[@stylename='Grade Italic']"/>
-
-    <xsl:template match="instance[@stylename='6pt Italic']"/>
-
-    <xsl:template match="instance[@stylename='6pt Medium Italic']"/>
-
-    <xsl:template match="instance[@stylename='6pt SemiBold Italic']"/>
-
-    <xsl:template match="instance[@stylename='6pt Bold Italic']"/>
 </xsl:stylesheet>
