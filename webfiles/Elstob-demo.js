@@ -76,7 +76,7 @@ $( function() {
 	    switch (this.value) {
 	    case "Any":
 		break;
-	    case "FinePrint Medium 0.6em":
+	    case "6pt Medium 0.6em":
 		$("#romsize").slider("value", 0.6);
 		$("#romspacing").slider("value", 0);
 		$("#romgrade").slider("value", 1);
@@ -84,7 +84,7 @@ $( function() {
 		$("#romweight").slider("value", 500);
 		$("#romsliders").trigger("change", [0.6, 500, 6, 1, 0]);
 		break;
-	    case "Footnote Medium 0.8em":
+	    case "8pt Medium 0.8em":
 		$("#romsize").slider("value", 0.8);
 	        $("#romspacing").slider("value", 0);
 		$("#romgrade").slider("value", 1);
@@ -92,7 +92,7 @@ $( function() {
 		$("#romweight").slider("value", 500);
 		$("#romsliders").trigger("change", [0.8, 500, 8, 1, 0]);
 		break;
-	    case "BlockQuote Regular 1.2em":
+	    case "10pt Regular 1.2em":
 		$("#romsize").slider("value", 1.2);
 		$("#romspacing").slider("value", 0);
 		$("#romgrade").slider("value", 1);
@@ -116,7 +116,7 @@ $( function() {
 		$("#romweight").slider("value", 500);
 		$("#romsliders").trigger("change", [1.5, 500, 12, 1, 0]);
 		break;
-	    case "Subhead Regular 1.8em":
+	    case "14pt Regular 1.8em":
 		$("#romsize").slider("value", 1.8);
 		$("#romspacing").slider("value", 0);
 		$("#romgrade").slider("value", 1);
@@ -124,7 +124,7 @@ $( function() {
 		$("#romweight").slider("value", 400);
 		$("#romsliders").trigger("change", [1.8, 400, 14, 1, 0]);
 		break;
-	    case "Subhead Bold 1.8em":
+	    case "14pt Bold 1.8em":
 		$("#romsize").slider("value", 1.8);
 		$("#romspacing").slider("value", 0);
 		$("#romgrade").slider("value", 1);
@@ -132,7 +132,7 @@ $( function() {
 		$("#romweight").slider("value", 700);
 		$("#romsliders").trigger("change", [1.8, 700, 14, 1, 0]);
 		break;
-	    case "Display Light 2.3em":
+	    case "18pt Light 2.3em":
 		$("#romsize").slider("value", 2.3);
 		$("#romspacing").slider("value", 0);
 		$("#romgrade").slider("value", 1);
