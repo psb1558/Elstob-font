@@ -27,14 +27,17 @@ do
 	echo ""
 	echo "A script for building variable and static versions of the Elstob font."
 	echo "It does several things that are specific to Elstob and probably unsuitable"
-	echo "for other fonts. Also things for passing fontbakery's check-googlefonts"
-	echo "tests."
+	echo "for other fonts."
 	echo ""
 	echo "  -s Builds static TrueType fonts instead of a variable font"
 	echo "  -o Builds static CFF fonts instead of a variable font"
 	echo "  -a Autohint the variable font with ttfautohint-vf"
 	echo "  -i Generate a shorter collection of instances"
 	echo "  -w Create a woff2 version of the variable font"
+	echo ""
+	echo "To create a font with a different family name (e.g. ElstobO), change the"
+	echo "family name in Glyphs. Hinting by ttfautohint-vf may not be production"
+	echo "quality: use the VTT code instead."
 	return 0
     fi
     if [ $arg == "-s" ]
@@ -101,7 +104,8 @@ echo "Building font(s) with family name \"${familyname}\""
 # There's an extraneous anchor in any combining mark that has a "us" anchor: it has to be there
 # so that glyphslib chooses the right "us" anchor (the one from the mark rather than the base
 # glyph) when propagating anchors for composites. But it doesn't have to be there for any other
-# purpose: we strip it out because it makes me nervous. Get a list of UFOs from the
+# purpose: we strip it out because I can't be sure that some layout engine won't wrongly use it to
+# position a mark over a base character. We get a list of UFOs from the
 # designspace file and search out and remove "_us" anchors everywhere but in usabovecomb.glif.
 
 Echo "Removing extraneous anchors"
