@@ -188,6 +188,8 @@ $( function() {
 	    fstring = featureString(fstring, "ss02", "on");
 	if ($("#romss01").is(":checked"))
 	    fstring = featureString(fstring, "ss01", "on");
+	if ($("#romss05").is(":checked"))
+	    fstring = featureString(fstring, "ss05", "on");
 	if ($("#romhist").is(":checked"))
 	    fstring = featureString(fstring, "hist", "on");
 	if ($("#romss11").is(":checked"))
