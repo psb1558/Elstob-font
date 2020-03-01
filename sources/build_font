@@ -2,7 +2,7 @@
 
 if [ $# -lt 1 ]
 then
-    echo "Usage: build_font [-s] file.glyphs"
+    echo "Usage: build_font [-s | -o] [-i] [-a] [-w] file.glyphs"
     echo " Type \"build_font -h\" for help."
     return 1
 fi
