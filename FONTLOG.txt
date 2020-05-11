@@ -16,3 +16,9 @@ with type cast in the 1890s from the seventeenth-century matrices.
 
 18 April 2020
 Withdrew from consideration for Google Fonts; various fixes; rolled to v1.002.
+
+21 April 2020
+Added lowtildemod (U+02F7)
+
+11 May 2020
+Added is (U+A76D). Time for a release (1.003).
