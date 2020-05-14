@@ -5,7 +5,7 @@ The Elstob font (named for the eighteenth-century Anglo-Saxonist Elizabeth Elsto
 4. The intention of the font is to include everything in Unicode useful to a substantial number of medievalists, but the character set has been limited to around 1000 glyphs to keep file size reasonable. Many characters from the Medieval Unicode Font Initiative, present in the designer's Junicode font, can be represented with combining diacritics.
 
 ---
-![elstob-sample.png](Elstob Sample)
+![./elstob-sample.png](Elstob Sample)
 ---
 
 # File Structure
