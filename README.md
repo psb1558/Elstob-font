@@ -1,5 +1,5 @@
 # Elstob-font
----?image=images/parch-light.jpg&size=auto&repeat=repeat
+
 ![Elstob Header](images/Elstob_Header.png)
 
 The Elstob font (named for the eighteenth-century Anglo-Saxonist Elizabeth Elstob) is based on the Double Pica commissioned by Bishop John Fell in the seventeenth century. Elstob is designed as a webfont. Thus:
