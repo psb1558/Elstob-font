@@ -1,4 +1,4 @@
-These are the CVT deltas for Elstob Roman. Just paste into
+These are the CVT deltas for Elstob Italic. Just paste into
 the appropriate Variation CVT windows in VTT.
 
 ExtraLight:
