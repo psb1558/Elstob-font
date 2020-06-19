@@ -1,0 +1,373 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <!-- statmake stylespace file for producing a version 1.2, format 4 STAT
+       table. There are still things I don't understand, like how to register
+       both roman and italic faces in this one file and how to make sure
+       Grade is represented adequately when there are no Grade instances.
+       (As of now, the Grade dict is getting dropped, so there is no record
+       in the STAT table of the value of GRAD ever being anything but zero.) -->
+  <dict>
+    <key>axes</key>
+    <array>
+      <dict>
+        <key>name</key>
+        <string>Weight</string>
+        <key>tag</key>
+        <string>wght</string>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Optical size</string>
+        <key>tag</key>
+        <string>opsz</string>
+      </dict>
+      <dict>
+        <key>name</key>
+        <string>Grade</string>
+        <key>tag</key>
+        <string>GRAD</string>
+      </dict>
+    </array>
+    <key>locations</key>
+    <array>
+
+      <dict>
+        <key>name</key>
+        <string>Regular</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>400</integer>
+          <key>Optical size</key>
+          <integer>12</integer>
+          <key>Grade</key>
+          <integer>0</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>Grade</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>400</integer>
+          <key>Optical size</key>
+          <integer>12</integer>
+          <key>Grade</key>
+          <integer>1</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>8pt</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>400</integer>
+          <key>Optical size</key>
+          <integer>8</integer>
+          <key>Grade</key>
+          <integer>0</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>10pt</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>400</integer>
+          <key>Optical size</key>
+          <integer>10</integer>
+          <key>Grade</key>
+          <integer>0</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>14pt</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>400</integer>
+          <key>Optical size</key>
+          <integer>14</integer>
+          <key>Grade</key>
+          <integer>0</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>18pt</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>400</integer>
+          <key>Optical size</key>
+          <integer>18</integer>
+          <key>Grade</key>
+          <integer>0</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>ExtraLight</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>200</integer>
+          <key>Optical size</key>
+          <integer>12</integer>
+          <key>Grade</key>
+          <integer>0</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>Light</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>300</integer>
+          <key>Optical size</key>
+          <integer>12</integer>
+          <key>Grade</key>
+          <integer>0</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>Medium</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>500</integer>
+          <key>Optical size</key>
+          <integer>12</integer>
+          <key>Grade</key>
+          <integer>0</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>8pt Medium</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>500</integer>
+          <key>Optical size</key>
+          <integer>8</integer>
+          <key>Grade</key>
+          <integer>0</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>10pt Medium</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>500</integer>
+          <key>Optical size</key>
+          <integer>10</integer>
+          <key>Grade</key>
+          <integer>0</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>14pt Medium</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>500</integer>
+          <key>Optical size</key>
+          <integer>14</integer>
+          <key>Grade</key>
+          <integer>0</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>SemiBold</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>600</integer>
+          <key>Optical size</key>
+          <integer>12</integer>
+          <key>Grade</key>
+          <integer>0</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>8pt SemiBold</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>600</integer>
+          <key>Optical size</key>
+          <integer>8</integer>
+          <key>Grade</key>
+          <integer>0</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>10pt SemiBold</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>600</integer>
+          <key>Optical size</key>
+          <integer>10</integer>
+          <key>Grade</key>
+          <integer>0</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>14pt SemiBold</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>600</integer>
+          <key>Optical size</key>
+          <integer>14</integer>
+          <key>Grade</key>
+          <integer>0</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>18pt SemiBold</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>600</integer>
+          <key>Optical size</key>
+          <integer>18</integer>
+          <key>Grade</key>
+          <integer>0</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>Bold</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>700</integer>
+          <key>Optical size</key>
+          <integer>12</integer>
+          <key>Grade</key>
+          <integer>0</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>8pt Bold</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>700</integer>
+          <key>Optical size</key>
+          <integer>8</integer>
+          <key>Grade</key>
+          <integer>0</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>10pt Bold</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>700</integer>
+          <key>Optical size</key>
+          <integer>10</integer>
+          <key>Grade</key>
+          <integer>0</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>14pt Bold</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>700</integer>
+          <key>Optical size</key>
+          <integer>14</integer>
+          <key>Grade</key>
+          <integer>0</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>18pt Bold</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>700</integer>
+          <key>Optical size</key>
+          <integer>18</integer>
+          <key>Grade</key>
+          <integer>0</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>ExtraBold</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>800</integer>
+          <key>Optical size</key>
+          <integer>12</integer>
+          <key>Grade</key>
+          <integer>0</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>18pt ExtraBold</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>800</integer>
+          <key>Optical size</key>
+          <integer>18</integer>
+          <key>Grade</key>
+          <integer>0</integer>
+        </dict>
+      </dict>
+
+    </array>
+  </dict>
+</plist>
