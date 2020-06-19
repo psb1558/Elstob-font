@@ -2,11 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
   <!-- statmake stylespace file for producing a version 1.2, format 4 STAT
-       table. There are still things I don't understand, like how to register
-       both roman and italic faces in this one file and how to make sure
-       Grade is represented adequately when there are no Grade instances.
-       (As of now, the Grade dict is getting dropped, so there is no record
-       in the STAT table of the value of GRAD ever being anything but zero.) -->
+       table. Run it against the "ref" designspace file, which has a larger
+       collection of instances. This seems to work, mostly, but the Grade
+       instance is getting dropped, and I don't know why. -->
   <dict>
     <key>axes</key>
     <array>
@@ -30,6 +28,7 @@
       </dict>
     </array>
     <key>locations</key>
+    <!-- These correspond to the instances of the designspace file. -->
     <array>
 
       <dict>
@@ -48,15 +47,15 @@
 
       <dict>
         <key>name</key>
-        <string>Grade</string>
+        <string>6pt</string>
         <key>axis_values</key>
         <dict>
           <key>Weight</key>
           <integer>400</integer>
           <key>Optical size</key>
-          <integer>12</integer>
+          <integer>6</integer>
           <key>Grade</key>
-          <integer>1</integer>
+          <integer>0</integer>
         </dict>
       </dict>
 
@@ -160,6 +159,20 @@
 
       <dict>
         <key>name</key>
+        <string>6pt Medium</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>500</integer>
+          <key>Optical size</key>
+          <integer>6</integer>
+          <key>Grade</key>
+          <integer>0</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
         <string>8pt Medium</string>
         <key>axis_values</key>
         <dict>
@@ -202,6 +215,20 @@
 
       <dict>
         <key>name</key>
+        <string>18pt Medium</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>500</integer>
+          <key>Optical size</key>
+          <integer>18</integer>
+          <key>Grade</key>
+          <integer>0</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
         <string>SemiBold</string>
         <key>axis_values</key>
         <dict>
@@ -209,6 +236,20 @@
           <integer>600</integer>
           <key>Optical size</key>
           <integer>12</integer>
+          <key>Grade</key>
+          <integer>0</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>6pt SemiBold</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>600</integer>
+          <key>Optical size</key>
+          <integer>6</integer>
           <key>Grade</key>
           <integer>0</integer>
         </dict>
@@ -279,6 +320,20 @@
           <integer>700</integer>
           <key>Optical size</key>
           <integer>12</integer>
+          <key>Grade</key>
+          <integer>0</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>6pt Bold</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>700</integer>
+          <key>Optical size</key>
+          <integer>6</integer>
           <key>Grade</key>
           <integer>0</integer>
         </dict>
@@ -365,6 +420,20 @@
           <integer>18</integer>
           <key>Grade</key>
           <integer>0</integer>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>name</key>
+        <string>Grade</string>
+        <key>axis_values</key>
+        <dict>
+          <key>Weight</key>
+          <integer>400</integer>
+          <key>Optical size</key>
+          <integer>12</integer>
+          <key>Grade</key>
+          <integer>1</integer>
         </dict>
       </dict>
 
