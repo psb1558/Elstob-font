@@ -1,0 +1,344 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<designspace format="4.1">
+  <!-- This designspace is for statmake to refer to, not for generating fonts. -->
+  <axes>
+    <axis tag="wght" name="Weight" minimum="200" maximum="800" default="400"/>
+    <axis tag="opsz" name="Optical size" minimum="6" maximum="18" default="12"/>
+    <axis tag="GRAD" name="Grade" minimum="0" maximum="1" default="0"/>
+  </axes>
+  <rules>
+    <rule name="BRACKET.550.800">
+      <conditionset>
+        <condition name="Weight" minimum="550" maximum="800"/>
+      </conditionset>
+      <sub name="dollar" with="dollar.BRACKET.550"/>
+      <sub name="dollar.lf" with="dollar.lf.BRACKET.550"/>
+      <sub name="dollar.osf" with="dollar.osf.BRACKET.550"/>
+      <sub name="dollar.tosf" with="dollar.tosf.BRACKET.550"/>
+    </rule>
+  </rules>
+  <sources>
+    <source filename="Elstob-Regular.ufo" name="Elstob Regular" familyname="Elstob" stylename="Regular">
+      <lib copy="1"/>
+      <groups copy="1"/>
+      <features copy="1"/>
+      <info copy="1"/>
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+        <dimension name="Optical size" xvalue="12"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+    </source>
+    <source filename="Elstob-wght-min.ufo" name="Elstob wght-min" familyname="Elstob" stylename="wght-min">
+      <location>
+        <dimension name="Weight" xvalue="200"/>
+        <dimension name="Optical size" xvalue="12"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+    </source>
+    <source filename="Elstob-opsz-min.ufo" name="Elstob opsz-min" familyname="Elstob" stylename="opsz-min">
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+        <dimension name="Optical size" xvalue="6"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+    </source>
+    <source filename="Elstob-opsz-max.ufo" name="Elstob opsz-max" familyname="Elstob" stylename="opsz-max">
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+        <dimension name="Optical size" xvalue="18"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+    </source>
+    <source filename="Elstob-wght-max.ufo" name="Elstob wght-max" familyname="Elstob" stylename="wght-max">
+      <location>
+        <dimension name="Weight" xvalue="800"/>
+        <dimension name="Optical size" xvalue="12"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+    </source>
+    <source filename="Elstob-grademax.ufo" name="Elstob grademax" familyname="Elstob" stylename="grademax">
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+        <dimension name="Optical size" xvalue="12"/>
+        <dimension name="Grade" xvalue="1"/>
+      </location>
+    </source>
+  </sources>
+  <instances>
+    <instance name="Elstob Regular" familyname="Elstob" stylename="Regular" filename="instance_ufos/Elstob-Regular.ufo">
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+        <dimension name="Optical size" xvalue="12"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Elstob 6pt" familyname="Elstob" stylename="6pt" filename="instance_ufos/Elstob-6pt.ufo">
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+        <dimension name="Optical size" xvalue="6"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Elstob 8pt" familyname="Elstob" stylename="8pt" filename="instance_ufos/Elstob-8pt.ufo">
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+        <dimension name="Optical size" xvalue="8"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Elstob 10pt" familyname="Elstob" stylename="10pt" filename="instance_ufos/Elstob-10pt.ufo">
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+        <dimension name="Optical size" xvalue="10"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Elstob 14pt" familyname="Elstob" stylename="14pt" filename="instance_ufos/Elstob-14pt.ufo">
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+        <dimension name="Optical size" xvalue="14"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Elstob 18pt" familyname="Elstob" stylename="18pt" filename="instance_ufos/Elstob-18pt.ufo">
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+        <dimension name="Optical size" xvalue="18"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Elstob ExtraLight" familyname="Elstob" stylename="ExtraLight" filename="instance_ufos/Elstob-ExtraLight.ufo">
+      <location>
+        <dimension name="Weight" xvalue="200"/>
+        <dimension name="Optical size" xvalue="12"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Elstob Light" familyname="Elstob" stylename="Light" filename="instance_ufos/Elstob-Light.ufo">
+      <location>
+        <dimension name="Weight" xvalue="300"/>
+        <dimension name="Optical size" xvalue="12"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Elstob Medium" familyname="Elstob" stylename="Medium" filename="instance_ufos/Elstob-Medium.ufo">
+      <location>
+        <dimension name="Weight" xvalue="500"/>
+        <dimension name="Optical size" xvalue="12"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Elstob 6pt Medium" familyname="Elstob" stylename="6pt Medium" filename="instance_ufos/Elstob-6ptMedium.ufo">
+      <location>
+        <dimension name="Weight" xvalue="500"/>
+        <dimension name="Optical size" xvalue="6"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Elstob 8pt Medium" familyname="Elstob" stylename="8pt Medium" filename="instance_ufos/Elstob-8ptMedium.ufo">
+      <location>
+        <dimension name="Weight" xvalue="500"/>
+        <dimension name="Optical size" xvalue="8"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Elstob 10pt Medium" familyname="Elstob" stylename="10pt Medium" filename="instance_ufos/Elstob-10ptMedium.ufo">
+      <location>
+        <dimension name="Weight" xvalue="500"/>
+        <dimension name="Optical size" xvalue="10"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Elstob 14pt Medium" familyname="Elstob" stylename="14pt Medium" filename="instance_ufos/Elstob-14ptMedium.ufo">
+      <location>
+        <dimension name="Weight" xvalue="500"/>
+        <dimension name="Optical size" xvalue="14"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Elstob 18pt Medium" familyname="Elstob" stylename="18pt Medium" filename="instance_ufos/Elstob-18ptMedium.ufo">
+      <location>
+        <dimension name="Weight" xvalue="500"/>
+        <dimension name="Optical size" xvalue="18"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Elstob SemiBold" familyname="Elstob" stylename="SemiBold" filename="instance_ufos/Elstob-SemiBold.ufo">
+      <location>
+        <dimension name="Weight" xvalue="600"/>
+        <dimension name="Optical size" xvalue="12"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Elstob 6pt SemiBold" familyname="Elstob" stylename="6pt SemiBold" filename="instance_ufos/Elstob-6ptSemiBold.ufo">
+      <location>
+        <dimension name="Weight" xvalue="600"/>
+        <dimension name="Optical size" xvalue="6"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Elstob 8pt SemiBold" familyname="Elstob" stylename="8pt SemiBold" filename="instance_ufos/Elstob-8ptSemiBold.ufo">
+      <location>
+        <dimension name="Weight" xvalue="600"/>
+        <dimension name="Optical size" xvalue="8"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Elstob 10pt SemiBold" familyname="Elstob" stylename="10pt SemiBold" filename="instance_ufos/Elstob-10ptSemiBold.ufo">
+      <location>
+        <dimension name="Weight" xvalue="600"/>
+        <dimension name="Optical size" xvalue="10"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Elstob 14pt SemiBold" familyname="Elstob" stylename="14pt SemiBold" filename="instance_ufos/Elstob-14ptSemiBold.ufo">
+      <location>
+        <dimension name="Weight" xvalue="600"/>
+        <dimension name="Optical size" xvalue="14"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Elstob 18pt SemiBold" familyname="Elstob" stylename="18pt SemiBold" filename="instance_ufos/Elstob-18ptSemiBold.ufo">
+      <location>
+        <dimension name="Weight" xvalue="600"/>
+        <dimension name="Optical size" xvalue="18"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Elstob Bold" familyname="Elstob" stylename="Bold" filename="instance_ufos/Elstob-Bold.ufo">
+      <location>
+        <dimension name="Weight" xvalue="700"/>
+        <dimension name="Optical size" xvalue="12"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Elstob 6pt Bold" familyname="Elstob" stylename="6pt Bold" filename="instance_ufos/Elstob-6ptBold.ufo" stylemapfamilyname="Elstob 6pt" stylemapstylename="bold">
+      <location>
+        <dimension name="Weight" xvalue="700"/>
+        <dimension name="Optical size" xvalue="6"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Elstob 8pt Bold" familyname="Elstob" stylename="8pt Bold" filename="instance_ufos/Elstob-8ptBold.ufo" stylemapfamilyname="Elstob 8pt" stylemapstylename="bold">
+      <location>
+        <dimension name="Weight" xvalue="700"/>
+        <dimension name="Optical size" xvalue="8"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Elstob 10pt Bold" familyname="Elstob" stylename="10pt Bold" filename="instance_ufos/Elstob-10ptBold.ufo" stylemapfamilyname="Elstob 10pt" stylemapstylename="bold">
+      <location>
+        <dimension name="Weight" xvalue="700"/>
+        <dimension name="Optical size" xvalue="10"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Elstob 14pt Bold" familyname="Elstob" stylename="14pt Bold" filename="instance_ufos/Elstob-14ptBold.ufo" stylemapfamilyname="Elstob 14pt" stylemapstylename="bold">
+      <location>
+        <dimension name="Weight" xvalue="700"/>
+        <dimension name="Optical size" xvalue="14"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Elstob 18pt Bold" familyname="Elstob" stylename="18pt Bold" filename="instance_ufos/Elstob-18ptBold.ufo" stylemapfamilyname="Elstob 18pt" stylemapstylename="bold">
+      <location>
+        <dimension name="Weight" xvalue="700"/>
+        <dimension name="Optical size" xvalue="18"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Elstob ExtraBold" familyname="Elstob" stylename="ExtraBold" filename="instance_ufos/Elstob-ExtraBold.ufo">
+      <location>
+        <dimension name="Weight" xvalue="800"/>
+        <dimension name="Optical size" xvalue="12"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Elstob 18pt ExtraBold" familyname="Elstob" stylename="18pt ExtraBold" filename="instance_ufos/Elstob-18ptExtraBold.ufo">
+      <location>
+        <dimension name="Weight" xvalue="800"/>
+        <dimension name="Optical size" xvalue="18"/>
+        <dimension name="Grade" xvalue="0"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Elstob Grade" familyname="Elstob" stylename="Grade" filename="instance_ufos/Elstob-Grade.ufo">
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+        <dimension name="Optical size" xvalue="12"/>
+        <dimension name="Grade" xvalue="1"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+  </instances>
+  <lib>
+    <dict>
+      <key>org.statmake.stylespacePath</key>
+      <string>Elstob.stylespace</string>
+      <!--
+      <key>org.statmake.additionalLocations</key>
+      <dict>
+        <key>Italic</key>
+        <integer>0</integer>
+	</dict>
+	-->
+    </dict>
+  </lib>
+</designspace>
