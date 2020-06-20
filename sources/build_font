@@ -13,7 +13,7 @@ glyphsfile="nofile"
 
 fontname="nofont"
 
-instanceScript="del_instances.xsl"
+instanceScript="del_instances_vf.xsl"
 
 autohint=0
 
@@ -23,54 +23,56 @@ for arg in $@
 do
     if [ $arg == "-h" ] || [ $arg == "--help" ]
     then
-	echo "Usage: build_font [-s | -o] [-i] [-a] [-w] file.glyphs"
-	echo ""
-	echo "A script for building variable and static versions of the Elstob font."
-	echo "It does several things that are specific to Elstob and probably unsuitable"
-	echo "for other fonts."
-	echo ""
-	echo "  -s Builds static TrueType fonts instead of a variable font"
-	echo "  -o Builds static CFF fonts instead of a variable font"
-	echo "  -a Autohint the variable font with ttfautohint-vf"
-	echo "  -i Generate a shorter collection of instances"
-	echo "  -w Create a woff2 version of the variable font"
-	echo ""
-	echo "To create a font with a different family name (e.g. ElstobO), change the"
-	echo "family name in Glyphs. Hinting by ttfautohint-vf may not be production"
-	echo "quality: use the VTT code instead."
-	return 0
+      echo "Usage: build_font [-s | -o] [-i] [-a] [-w] file.glyphs"
+      echo ""
+      echo "A script for building variable and static versions of the Elstob font."
+      echo "It does several things that are specific to Elstob and probably unsuitable"
+      echo "for other fonts."
+      echo ""
+      echo "  -s Builds static TrueType fonts instead of a variable font"
+      echo "  -o Builds static CFF fonts instead of a variable font"
+      echo "  -a Autohint the variable font with ttfautohint-vf"
+      echo "  -i Generate a shorter collection of instances"
+      echo "  -w Create a woff2 version of the variable font"
+      echo ""
+      echo "To create a font with a different family name (e.g. ElstobO), change the"
+      echo "family name in Glyphs. Hinting by ttfautohint-vf may not be production"
+      echo "quality: use the VTT code instead."
+      return 0
     fi
     if [ $arg == "-s" ]
     then
-	outputType="s"
+      outputType="s"
+      instanceScript="del_instances.xsl"
     elif [ $arg == "-o" ]
     then
-	outputType="o"
+      outputType="o"
+      instanceScript="del_instances.xsl"
     elif [ $arg == "-a" ]
     then
-	 autohint=1
+  	 autohint=1
     elif [ $arg == "-w" ]
     then
-	createwoff=1
+  	createwoff=1
     elif [ $arg == "-i" ]
     then
-	instanceScript="del_instances_shorter.xsl"
+  	instanceScript="del_instances_shorter.xsl"
     elif [ -f $arg ]
     then
-	if [ ${arg##*.} == "glyphs" ]
-	then
-	    glyphsfile=$arg
-	    ff=$(basename -- $arg)
-	    fontname=${ff%.*}
-	else
-	    echo "${arg} appears not to be a Glyphs file"
-	    return 1
-	fi
+	     if [ ${arg##*.} == "glyphs" ]
+	     then
+	        glyphsfile=$arg
+	        ff=$(basename -- $arg)
+	        fontname=${ff%.*}
+	     else
+	        echo "${arg} appears not to be a Glyphs file"
+	        return 1
+	     fi
     else
-	echo "Unknown argument or non-existent file ${arg}"
-	return 1
+  	    echo "Unknown argument or non-existent file ${arg}"
+        return 1
     fi
-done
+  done
 
 # echo $instanceScript
 # return 0
@@ -100,7 +102,7 @@ fi
 
 familyname=`gsed -n '1,/<source.*familyname/s/.*familyname="\([^"]*\)"[^\n]*/\1/p' $des`
 echo "Building font(s) with family name \"${familyname}\""
- 
+
 # There's an extraneous anchor in any combining mark that has a "us" anchor: it has to be there
 # so that glyphslib chooses the right "us" anchor (the one from the mark rather than the base
 # glyph) when propagating anchors for composites. But it doesn't have to be there for any other
