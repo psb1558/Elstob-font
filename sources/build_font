@@ -103,12 +103,11 @@ fi
 familyname=`gsed -n '1,/<source.*familyname/s/.*familyname="\([^"]*\)"[^\n]*/\1/p' $des`
 echo "Building font(s) with family name \"${familyname}\""
 
-# There's an extraneous anchor in any combining mark that has a "us" anchor: it has to be there
-# so that glyphslib chooses the right "us" anchor (the one from the mark rather than the base
-# glyph) when propagating anchors for composites. But it doesn't have to be there for any other
-# purpose: we strip it out because I can't be sure that some layout engine won't wrongly use it to
-# position a mark over a base character. We get a list of UFOs from the
-# designspace file and search out and remove "_us" anchors everywhere but in usabovecomb.glif.
+# The Glyphs file has more instances than needed--some only there to hold down
+# the corners of the design space. There are standard collections of instances:
+# Variable fonts: all 7 standard weights, and for Regular and Bold all 6 Optical
+# sizes. Desktop set: all but the 6pt optical size and the Grade axis. Web
+# static set: Just the 7 standard weights in the default optical size.
 
 Echo "Removing extraneous anchors"
 
@@ -149,86 +148,86 @@ fi
 # build the fonts.
 if [ $outputType = "s" ];
 then
-    echo "Running fontmake to build static TrueType instances"
-    fontmake -o ttf -a -i -m $des
-    if [ $? -ne 0 ]
-    then
-	echo "fontmake failed"
-	return 1
-    fi
-    cd autohinted/instance_ttf
-    if [ $fonttype == "italic" ]
-    then
-	for ff in "${familyname}*Italic.ttf"
-	do
-	    gftools fix-dsig --autofix $ff
-	done
-    else
-	for ff in `find . -maxdepth 1 -name "${familyname}*.ttf" -not -name "*Italic.ttf"`
-	do
-	    gftools fix-dsig --autofix $ff
-	    gftools-fix-hinting.py $ff
-	    if [ -f "${ff}.fix" ]
-	    then
-		cp "${ff}.fix"  $ff
-		rm "${ff}.fix"
-	    else
-		echo "fix for head table flags in ${ff} appears to have failed"
-	    fi
-	done
-    fi
-    cd ../..
+  echo "Running fontmake to build static TrueType instances"
+  fontmake -o ttf -a -i -m $des
+  if [ $? -ne 0 ]
+  then
+    echo "fontmake failed"
+    return 1
+  fi
+  cd autohinted/instance_ttf
+  if [ $fonttype == "italic" ]
+  then
+    for ff in "${familyname}*Italic.ttf"
+    do
+      gftools fix-dsig --autofix $ff
+    done
+  else
+    for ff in `find . -maxdepth 1 -name "${familyname}*.ttf" -not -name "*Italic.ttf"`
+    do
+      gftools fix-dsig --autofix $ff
+      gftools-fix-hinting.py $ff
+      if [ -f "${ff}.fix" ]
+      then
+        cp "${ff}.fix"  $ff
+        rm "${ff}.fix"
+      else
+        echo "fix for head table flags in ${ff} appears to have failed"
+      fi
+    done
+  fi
+  cd ../..
 elif [ $outputType == "o" ]
 then
-    echo "Running fontmake to build static CFF instances"
-    fontmake -o otf -i -m $des
-    if [ $? -ne 0 ]
-    then
-	echo "fontmake failed"
-	return 1
-    fi
-    cd instance_otf
-    if [ $fonttype == "italic" ]
-    then
-	for ff in "${familyname}*Italic.otf"
-	do
-	    gftools fix-dsig --autofix $ff
+  echo "Running fontmake to build static CFF instances"
+  fontmake -o otf -i -m $des
+  if [ $? -ne 0 ]
+  then
+    echo "fontmake failed"
+    return 1
+  fi
+  cd instance_otf
+  if [ $fonttype == "italic" ]
+  then
+    for ff in "${familyname}*Italic.otf"
+    do
+      gftools fix-dsig --autofix $ff
 	    psautohint $ff
-	done
-    else
-	for ff in `find . -maxdepth 1 -name "${familyname}*.otf" -not -name "*Italic.otf"`
-	do
-	    gftools fix-dsig --autofix $ff
-	    psautohint $ff
-	done
-    fi
-    cd ..
+    done
+  else
+    for ff in `find . -maxdepth 1 -name "${familyname}*.otf" -not -name "*Italic.otf"`
+    do
+      gftools fix-dsig --autofix $ff
+      psautohint $ff
+    done
+  fi
+  cd ..
 else
-    echo "Running fontmake to build variable font"
-    fontmake -o variable -m $des
-    if [ $? -ne 0 ]
-    then
-	echo "fontmake failed"
-	return 1
-    fi
-    cd variable_ttf
-    echo "Checking for dsig table"
-    gftools fix-dsig --autofix "${fontname}-VF.ttf"
-    if [ $autohint == 1 ]
-    then
-	echo "Running ttfautohint-vf"
-	ttfautohint-vf "${fontname}-VF.ttf" tmp-font.ttf
-	gftools-fix-hinting.py tmp-font.ttf
-	mv tmp-font.ttf.fix "${fontname}[GRAD,opsz,wght].ttf"
-    else
-	cp "${fontname}-VF.ttf" "${fontname}[GRAD,opsz,wght].ttf"
-    fi
-    if [ $createwoff == 1 ]
-    then
-	echo "Creating woff2 version"
-	woff2_compress "${fontname}[GRAD,opsz,wght].ttf"
-    fi
-    rm -f ${fontname}-VF.ttf
-    rm -f tmp-font.ttf
-   cd ..
+  echo "Running fontmake to build variable font"
+  fontmake -o variable -m $des
+  if [ $? -ne 0 ]
+  then
+    echo "fontmake failed"
+    return 1
+  fi
+  cd variable_ttf
+  echo "Checking for dsig table"
+  gftools fix-dsig --autofix "${fontname}-VF.ttf"
+  if [ $autohint == 1 ]
+  then
+    echo "Running ttfautohint-vf"
+    ttfautohint-vf "${fontname}-VF.ttf" tmp-font.ttf
+    gftools-fix-hinting.py tmp-font.ttf
+    mv tmp-font.ttf.fix "${fontname}[GRAD,opsz,wght].ttf"
+  else
+    cp "${fontname}-VF.ttf" "${fontname}[GRAD,opsz,wght].ttf"
+  fi
+  if [ $createwoff == 1 ]
+  then
+    echo "Creating woff2 version"
+    woff2_compress "${fontname}[GRAD,opsz,wght].ttf"
+  fi
+  rm -f ${fontname}-VF.ttf
+  rm -f tmp-font.ttf
+  cd ..
 fi
