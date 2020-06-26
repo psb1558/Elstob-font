@@ -15,7 +15,7 @@
     --italsize: 1.5em;
     --romopsz: 12;
     --romwght: 400;
-    --romGRAD: 1;
+    --romGRAD: 0;
     --romspacing: 0em;
     --italopsz: 12;
     --italwght: 400;
@@ -27,22 +27,22 @@
 h1 {
     font-family: Elstob;
     font-size: 3em;
-    font-variation-settings: 'opsz' 18, 'wght' 300, 'GRAD' 1;
+    font-variation-settings: 'opsz' 18, 'wght' 300, 'GRAD' 0;
 }
 h2 {
     font-family: Elstob;
     font-size: 1.8em;
-    font-variation-settings: 'opsz' 14, 'wght' 300, 'GRAD' 1;
+    font-variation-settings: 'opsz' 14, 'wght' 300, 'GRAD' 0;
     font-feature-settings: 'smcp' on;
 }
 p {
     font-family: Elstob;
     font-size: 1.5em;
-    font-variation-settings: 'opsz' 12, 'wght' 400, 'GRAD' 1, 'slnt' 0;
+    font-variation-settings: 'opsz' 12, 'wght' 400, 'GRAD' 0;
     font-feature-settings: 'calt' on;
 }
 b{
-    font-variation-settings: 'opsz' 12, 'wght' 700, 'GRAD' 1,
+    font-variation-settings: 'opsz' 12, 'wght' 700, 'GRAD' 0,
     'slnt' 0;
 }
 #romtextarea {
@@ -67,46 +67,46 @@ b{
     font-feature-settings: 'calt' on;
 }
 .fineprint {
-    font-variation-settings: 'opsz' 6, 'wght' 700, 'GRAD' 1;
+    font-variation-settings: 'opsz' 6, 'wght' 700, 'GRAD' 0;
 }
 .footnote {
-    font-variation-settings: 'opsz' 8, 'wght' 700, 'GRAD' 1;
+    font-variation-settings: 'opsz' 8, 'wght' 700, 'GRAD' 0;
 }
 .blockquote {
-    font-variation-settings: 'opsz' 10, 'wght' 700, 'GRAD' 1;
+    font-variation-settings: 'opsz' 10, 'wght' 700, 'GRAD' 0;
 }
 .subhead {
-    font-variation-settings: 'opsz' 14, 'wght' 700, 'GRAD' 1;
+    font-variation-settings: 'opsz' 14, 'wght' 700, 'GRAD' 0;
 }
 .display {
-    font-variation-settings: 'opsz' 18, 'wght' 700, 'GRAD' 1;
+    font-variation-settings: 'opsz' 18, 'wght' 700, 'GRAD' 0;
    }
 .extralight {
-    font-variation-settings: 'opsz' 12, 'wght' 200, 'GRAD' 1;
+    font-variation-settings: 'opsz' 12, 'wght' 200, 'GRAD' 0;
 }
 .light {
-    font-variation-settings: 'opsz' 12, 'wght' 300, 'GRAD' 1;
+    font-variation-settings: 'opsz' 12, 'wght' 300, 'GRAD' 0;
 }
 .medium {
-    font-variation-settings: 'opsz' 12, 'wght' 500, 'GRAD' 1;
+    font-variation-settings: 'opsz' 12, 'wght' 500, 'GRAD' 0;
 }
 .semibold {
-    font-variation-settings: 'opsz' 12, 'wght' 600, 'GRAD' 1;
+    font-variation-settings: 'opsz' 12, 'wght' 600, 'GRAD' 0;
 }
 .bold {
-    font-variation-settings: 'opsz' 12, 'wght' 700, 'GRAD' 1;
+    font-variation-settings: 'opsz' 12, 'wght' 700, 'GRAD' 0;
 }
 .extrabold {
-    font-variation-settings: 'opsz' 6, 'wght' 800, 'GRAD' 1;
+    font-variation-settings: 'opsz' 6, 'wght' 800, 'GRAD' 0;
 }
 .bigtitle {
     font-size: 1.3em;
     font-style: italic;
-    font-variation-settings: 'opsz' 6, 'wght' 600, 'GRAD' 1;
+    font-variation-settings: 'opsz' 6, 'wght' 600, 'GRAD' 0;
     font-feature-settings: 'hist' on;
 }
 .hoverable:hover {
-    font-variation-settings: 'opsz' 12, 'wght' 400, 'GRAD' 500;
+    font-variation-settings: 'opsz' 12, 'wght' 400, 'GRAD' 1;
 }
 /* #headerbox {
     width: 95%;
