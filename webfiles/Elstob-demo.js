@@ -12,9 +12,10 @@ $( function() {
 	step: 0.01,
         value: 12});
     $( "#romgrade" ).slider({
-        min: 1,
-        max: 500,
-        value: 1});
+        min: 0,
+        max: 1,
+	step: 0.01,
+        value: 0});
     $( "#romsize" ).slider({
         min: 0.2,
         max: 5,
@@ -79,7 +80,7 @@ $( function() {
 	    case "6pt Medium 0.6em":
 		$("#romsize").slider("value", 0.6);
 		$("#romspacing").slider("value", 0);
-		$("#romgrade").slider("value", 1);
+		$("#romgrade").slider("value", 0);
 		$("#romopticalsize").slider("value", 6);
 		$("#romweight").slider("value", 500);
 		$("#romsliders").trigger("change", [0.6, 500, 6, 1, 0]);
@@ -87,7 +88,7 @@ $( function() {
 	    case "8pt Medium 0.8em":
 		$("#romsize").slider("value", 0.8);
 	        $("#romspacing").slider("value", 0);
-		$("#romgrade").slider("value", 1);
+		$("#romgrade").slider("value", 0);
 		$("#romopticalsize").slider("value", 8);
 		$("#romweight").slider("value", 500);
 		$("#romsliders").trigger("change", [0.8, 500, 8, 1, 0]);
@@ -95,7 +96,7 @@ $( function() {
 	    case "10pt Regular 1.2em":
 		$("#romsize").slider("value", 1.2);
 		$("#romspacing").slider("value", 0);
-		$("#romgrade").slider("value", 1);
+		$("#romgrade").slider("value", 0);
 		$("#romopticalsize").slider("value", 10);
 		$("#romweight").slider("value", 400);
 		$("#romsliders").trigger("change", [1.2, 400, 10, 1, 0]);
@@ -103,7 +104,7 @@ $( function() {
 	    case "Regular 1.5em":
 		$("#romsize").slider("value", 1.5);
 		$("#romspacing").slider("value", 0);
-		$("#romgrade").slider("value", 1);
+		$("#romgrade").slider("value", 0);
 		$("#romopticalsize").slider("value", 12);
 		$("#romweight").slider("value", 400);
 		$("#romsliders").trigger("change", [1.5, 400, 12, 1, 0]);
@@ -111,7 +112,7 @@ $( function() {
 	    case "Medium 1.5em":
 		$("#romsize").slider("value", 1.5);
 		$("#romspacing").slider("value", 0);
-		$("#romgrade").slider("value", 1);
+		$("#romgrade").slider("value", 0);
 		$("#romopticalsize").slider("value", 12);
 		$("#romweight").slider("value", 500);
 		$("#romsliders").trigger("change", [1.5, 500, 12, 1, 0]);
@@ -119,7 +120,7 @@ $( function() {
 	    case "14pt Regular 1.8em":
 		$("#romsize").slider("value", 1.8);
 		$("#romspacing").slider("value", 0);
-		$("#romgrade").slider("value", 1);
+		$("#romgrade").slider("value", 0);
 		$("#romopticalsize").slider("value", 14);
 		$("#romweight").slider("value", 400);
 		$("#romsliders").trigger("change", [1.8, 400, 14, 1, 0]);
@@ -127,7 +128,7 @@ $( function() {
 	    case "14pt Bold 1.8em":
 		$("#romsize").slider("value", 1.8);
 		$("#romspacing").slider("value", 0);
-		$("#romgrade").slider("value", 1);
+		$("#romgrade").slider("value", 0);
 		$("#romopticalsize").slider("value", 14);
 		$("#romweight").slider("value", 700);
 		$("#romsliders").trigger("change", [1.8, 700, 14, 1, 0]);
@@ -135,7 +136,7 @@ $( function() {
 	    case "18pt Light 2.3em":
 		$("#romsize").slider("value", 2.3);
 		$("#romspacing").slider("value", 0);
-		$("#romgrade").slider("value", 1);
+		$("#romgrade").slider("value", 0);
 		$("#romopticalsize").slider("value", 18);
 		$("#romweight").slider("value", 300);
 		$("#romsliders").trigger("change", [2.3, 300, 18, 1, 0]);
