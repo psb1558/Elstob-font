@@ -1,0 +1,1630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xgridfit xmlns="http://xgridfit.sourceforge.net/Xgridfit2"
+	  xmlns:xi="http://www.w3.org/2001/XInclude">
+  <!-- Some marks are already hinted in other files. -->
+
+  <gl pnm="macron">
+    <cn nm="top" val="2"/>
+    <cn nm="bottom" val="0"/>
+    <setvs axis="y"/>
+    <push>top bottom</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDRP">
+      <modifier type="color" val="black"/>
+    </command>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="macron.case" init-graphics="no">
+    <callg pnm="macron"/>
+  </gl>
+
+  <gl pnm="uni0305" init-graphics="no">
+    <callg pnm="macron"/>
+  </gl>
+
+  <gl pnm="uni0305.high" init-graphics="no">
+    <callg pnm="macron"/>
+  </gl>
+
+  <gl pnm="uni0305.med" init-graphics="no">
+    <callg pnm="macron"/>
+  </gl>
+
+  <gl pnm="uni0335" init-graphics="no">
+    <callg pnm="macron"/>
+  </gl>
+
+  <gl pnm="uni0335.sc" init-graphics="no">
+    <callg pnm="macron"/>
+  </gl>
+
+  <gl pnm="uni0335.wide" init-graphics="no">
+    <callg pnm="macron"/>
+  </gl>
+
+  <gl pnm="breve">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="0"/>
+      <mv color="black">
+	<pt n="6"/>
+	<sh>
+	  <pt n="3"/>
+	  <pt n="9"/>
+	</sh>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="caron">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="0"/>
+      <sh>
+	<pt n="4"/>
+	<pt n="2"/>
+	<pt n="5"/>
+      </sh>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="caron.case">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="0"/>
+      <sh>
+	<pt n="2"/>
+	<pt n="3"/>
+	<pt n="4"/>
+      </sh>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="circumflex">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="0"/>
+      <sh><pt n="5"/></sh>
+      <mv>
+	<pt n="2"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="circumflex.case">
+    <callg pnm="circumflex"/>
+  </gl>
+
+  <gl pnm="dotaccent">
+    <pm nm="offset" val="0"/>
+    <pm nm="include-iup" val="0"/>
+    <cn nm="bottom" val="0"/>
+    <cn nm="top" val="6"/>
+    <setvs axis="y"/>
+    <mv di="dotaccent-bottom">
+      <pt n="bottom"/>
+      <mv di="dotaccent-height">
+	<pt n="top"/>
+      </mv>
+    </mv>
+    <compile-if test="include-iup = 0">
+      <iup axis="y"/>
+    </compile-if>
+  </gl>
+
+  <gl pnm="dotbelowcomb">
+    <pm nm="offset" val="0"/>
+    <pm nm="include-iup" val="0"/>
+    <cn nm="bottom" val="0"/>
+    <cn nm="top" val="6"/>
+    <setvs axis="y"/>
+    <mv>
+      <pt n="top"/>
+      <mv di="dotaccent-height">
+	<pt n="bottom"/>
+      </mv>
+    </mv>
+    <compile-if test="include-iup = 0">
+      <iup axis="y"/>
+    </compile-if>
+  </gl>
+  
+  <gl pnm="dieresis">
+    <setvs axis="y"/>
+    <mv di="dotaccent-bottom">
+      <pt n="0"/>
+      <sh><pt n="12"/></sh>
+      <mv di="dotaccent-height">
+	<pt n="6"/>
+	<sh><pt n="18"/></sh>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="dieresis.case">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="0"/>
+      <sh><pt n="12"/></sh>
+      <mv di="dotaccent-height">
+	<pt n="6"/>
+	<sh><pt n="18"/></sh>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni1DCE"> <!-- ogonek above -->
+    <setvs axis="y"/>
+    <push>6 13 0</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDAP">
+      <modifier type="color" val="gray"/>
+    </command>
+    <command nm="MDAP">
+      <modifier type="color" val="black"/>
+    </command>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni1DCE.case"> <!-- cap ogonek above -->
+    <setvs axis="y"/>
+    <push>6 13 0</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDAP">
+      <modifier type="color" val="gray"/>
+    </command>
+    <command nm="MDAP">
+      <modifier type="color" val="black"/>
+    </command>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni1DCF"> <!-- zigzag below -->
+    <setvs axis="y"/>
+    <mv>
+      <pt n="9"/>
+      <sh><pt n="5"/></sh>
+      <mv color="black">
+	<pt n="3"/>
+	<sh><pt n="0"/></sh>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni1DD1"> <!-- rum above -->
+    <setvs axis="y"/>
+    <push>7 36 14 0</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDRP">
+      <modifier type="color" val="gray"/>
+    </command>
+    <command nm="SHP" modifier="0"/>
+    <command nm="MDAP">
+      <modifier type="color" val="black"/>
+    </command>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni1DD2"> <!-- combining us -->
+    <setvs axis="y"/>
+    <push>7 23 0</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDRP">
+      <modifier type="color" val="gray"/>
+    </command>
+    <command nm="MDRP">
+      <modifier type="color" val="black"/>
+    </command>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni0328.alt"> <!-- alt ogonek -->
+    <setvs axis="y"/>
+    <push>13 0 7</push>
+    <command nm="MDAP" modifier="0"/>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDRP">
+      <modifier type="color" val="black"/>
+    </command>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni0328.case.alt"> <!-- alt case ogonek -->
+    <setvs axis="y"/>
+    <mv di="baseline">
+      <pt n="9"/>
+      <sh><pt n="8"/></sh>
+    </mv>
+    <push>15 0</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDRP">
+      <modifier type="color" val="black"/>
+    </command>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni0307.case">
+    <setvs axis="y"/>
+    <push>6 0</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDRP">
+      <modifier type="color" val="black"/>
+    </command>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="ring">
+    <setvs axis="y"/>
+    <push>20 7 14 0</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="SHP" modifier="0"/>
+    <command nm="MDRP">
+      <modifier type="color" val="black"/>
+    </command>
+    <command nm="SHP" modifier="0"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni030A.case">
+    <setvs axis="y"/>
+    <push>20 7 14 0</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="SHP" modifier="0"/>
+    <command nm="MDRP">
+      <modifier type="color" val="black"/>
+    </command>
+    <command nm="SHP" modifier="0"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni0312"> <!-- comma above comb -->
+    <setvs axis="y"/>
+    <push>17 0</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDRP">
+      <modifier type="color" val="black"/>
+    </command>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="cedilla">
+    <setvs axis="y"/>
+    <mv di="baseline">
+      <pt n="20"/>
+      <mv>
+	<pt n="0"/>
+	<mv color="black">
+	  <pt n="12"/>
+	</mv>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="ogonek">
+    <setvs axis="y"/>
+    <push> 11 0 7</push>
+    <command nm="MDAP" modifier="0"/>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDRP">
+      <modifier type="color" val="black"/>
+    </command>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni02DE">
+    <setvs axis="y"/>
+    <push>18 0 11 8 7</push>
+    <command nm="MDAP" modifier="0"/>
+    <command nm="SHP" modifier="1"/>
+    <command nm="SHP" modifier="1"/>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDRP">
+      <modifier type="color" val="black"/>
+    </command>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni1DD5"> <!-- ao -->
+    <setvs axis="y"/>
+    <push>65 mark-curve 51 51 7 8 0 27 mark-curve 39 59 mark-curve 43 43 16 0</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDRP">
+      <modifier type="color" val="black"/>
+    </command>
+    <command nm="SHP" modifier="1"/>
+    <command nm="SRP0"/>
+    <command nm="MIRP">
+      <modifier type="color" val="black"/>
+    </command>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MIRP">
+      <modifier type="color" val="black"/>
+    </command>
+    <command nm="SRP2"/>
+    <command nm="IP"/>
+    <command nm="IP"/>
+    <command nm="SHP" modifier="1"/>
+    <command nm="SRP0"/>
+    <command nm="MIRP">
+      <modifier type="color" val="black"/>
+    </command>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni1DD6"> <!-- av -->
+    <setvs axis="y"/>
+    <mv>
+      <pt n="0"/>
+      <sh>
+	<pt n="46"/>
+	<pt n="23"/>
+      </sh>
+    </mv>
+    <mv>
+      <pt n="23"/>
+      <mv color="black">
+	<pt n="38"/>
+      </mv>
+    </mv>
+    <mv>
+      <pt n="52"/>
+      <sh><pt n="47"/><pt n="17"/></sh>
+      <mv color="black">
+	<pt n="51"/>
+      </mv>
+    </mv>
+    <mv>
+      <pt n="17"/>
+      <mv color="black">
+	<pt n="4"/>
+      </mv>
+    </mv>
+    <ip>
+      <ref>
+	<pt n="17"/>
+	<pt n="23"/>
+      </ref>
+      <pt n="30"/>
+      <pt n="31"/>
+    </ip>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni1DD7"> <!-- c cedilla -->
+    <setvs axis="y"/>
+    <mv>
+      <pt n="0"/>
+      <sh><pt n="51"/></sh>
+      <mv color="black" di="mark-curve">
+	<pt n="26"/>
+      </mv>
+    </mv>
+    <mv>
+      <pt n="33"/>
+      <mv color="black" di="mark-curve">
+	<pt n="45"/>
+      </mv>
+    </mv>
+    <mv>
+      <pt n="6"/>
+      <mv color="black">
+	<pt n="19"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni1DD9"> <!-- eth -->
+    <setvs axis="y"/>
+    <mv>
+      <pt n="0"/>
+      <mv color="black" di="mark-curve">
+	<pt n="20"/>
+      </mv>
+    </mv>
+    <push>36 35 27</push>
+    <command nm="MDAP" modifier="0"/>
+    <command nm="SHP" modifier="1"/>
+    <command nm="SHP" modifier="1"/>
+    <ip>
+      <ref>
+	<pt n="27"/>
+	<pt n="0"/>
+      </ref>
+      <pt n="6"/>
+    </ip>
+    <push>13 mark-curve 6</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MIRP">
+      <modifier type="color" val="black"/>
+    </command>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni0363"> <!-- a -->
+    <setvs axis="y"/>
+    <mv>
+      <pt n="36"/>
+      <sh><pt n="0"/></sh>
+      <mv color="black">
+	<pt n="51"/>
+      </mv>
+    </mv>
+    <callm nm="one-wd-stem">
+      <wpm nm="pt1" val="21"/>
+      <wpm nm="pt2" val="8"/>
+      <wpm nm="cv" val="mark-curve"/>
+    </callm>
+    <ip>
+      <ref>
+	<pt n="21"/>
+	<pt n="36"/>
+      </ref>
+      <pt n="43"/>
+      <pt n="44"/>
+    </ip>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni0364"> <!-- e -->
+    <setvs axis="y"/>
+    <callm nm="plain-stem">
+      <wpm nm="pt1" val="0"/>
+      <wpm nm="pt2" val="14"/>
+    </callm>
+    <callm nm="one-wd-stem">
+      <wpm nm="pt1" val="6"/>
+      <wpm nm="pt2" val="24"/>
+      <wpm nm="cv" val="mark-curve"/>
+    </callm>
+    <callm nm="mid-stem">
+      <wpm nm="ref1" val="6"/>
+      <wpm nm="ref2" val="0"/>
+      <wpm nm="pt1" val="10"/>
+      <wpm nm="pt2" val="20"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni0365"> <!-- i -->
+    <setvs axis="y"/>
+    <mv>
+      <pt n="12"/>
+      <sh><pt n="15"/><pt n="25"/></sh>
+      <mv color="black">
+	<pt n="13"/>
+	<sh>
+	  <pt n="14"/>
+	  <pt n="26"/>
+	  <pt n="27"/>
+	</sh>
+      </mv>
+    </mv>
+    <mv>
+      <pt n="20"/>
+      <mv color="white">
+	<pt n="0"/>
+	<mv color="black">
+	  <pt n="6"/>
+	</mv>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni0366"> <!-- o -->
+    <setvs axis="y"/>
+    <callm nm="one-wd-stem">
+      <wpm nm="pt1" val="0"/>
+      <wpm nm="pt2" val="13"/>
+      <wpm nm="cv" val="mark-curve"/>
+    </callm>
+    <callm nm="one-wd-stem">
+      <wpm nm="pt1" val="7"/>
+      <wpm nm="pt2" val="19"/>
+      <wpm nm="cv" val="mark-curve"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni0367"> <!-- u -->
+    <setvs axis="y"/>
+    <mv>
+      <pt n="0"/>
+      <sh><pt n="21"/></sh>
+      <mv color="black">
+	<pt n="14"/>
+      </mv>
+    </mv>
+    <mv>
+      <pt n="6"/>
+      <sh><pt n="25"/></sh>
+      <mv color="black">
+	<pt n="5"/>
+	<sh><pt n="24"/></sh>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni0368"> <!-- c -->
+    <setvs axis="y"/>
+    <callm nm="plain-stem">
+      <wpm nm="pt1" val="0"/>
+      <wpm nm="pt2" val="28"/>
+    </callm>
+    <callm nm="one-wd-stem">
+      <wpm nm="pt1" val="7"/>
+      <wpm nm="pt2" val="21"/>
+      <wpm nm="cv" val="mark-curve"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni0369"> <!-- d -->
+    <setvs axis="y"/>
+    <mv>
+      <pt n="5"/>
+      <sh><pt n="0"/></sh>
+      <mv color="black" di="mark-curve">
+	<pt n="36"/>
+      </mv>
+    </mv>
+    <callm nm="round-point">
+      <wpm nm="p" val="20"/>
+    </callm>
+    <callm nm="mid-stem">
+      <wpm nm="ref1" val="20"/>
+      <wpm nm="ref2" val="5"/>
+      <wpm nm="pt1" val="11"/>
+      <wpm nm="pt2" val="43"/>
+      <wpm nm="cv" val="mark-curve"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni036A"> <!-- h -->
+    <setvs axis="y"/>
+    <mv>
+      <pt n="33"/>
+      <sh>
+	<pt n="0"/>
+	<pt n="38"/>
+	<pt n="11"/>
+      </sh>
+      <mv>
+	<pt n="34"/>
+	<sh><pt n="39"/></sh>
+      </mv>
+    </mv>
+    <callm nm="round-point">
+      <wpm nm="p" val="5"/>
+    </callm>
+    <callm nm="mid-stem">
+      <wpm nm="ref1" val="5"/>
+      <wpm nm="ref2" val="33"/>
+      <wpm nm="pt1" val="25"/>
+      <wpm nm="pt2" val="18"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni036B"> <!-- m -->
+    <setvs axis="y"/>
+    <mv>
+      <pt n="55"/>
+      <sh>
+	<pt n="0"/>
+	<pt n="11"/>
+	<pt n="33"/>
+	<pt n="60"/>
+	<pt n="65"/>
+      </sh>
+      <mv color="black">
+	<pt n="56"/>
+	<sh>
+	  <pt n="61"/>
+	  <pt n="66"/>
+	</sh>
+      </mv>
+    </mv>
+    <mv>
+      <pt n="25"/>
+      <sh>
+	<pt n="5"/>
+	<pt n="47"/>
+      </sh>
+      <mv color="black">
+	<pt n="18"/>
+	<sh><pt n="40"/></sh>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni036C">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="23"/>
+      <sh><pt n="28"/></sh>
+      <mv color="black">
+	<pt n="24"/>
+      </mv>
+    </mv>
+    <mv>
+      <pt n="8"/>
+      <sh>
+	<pt n="20"/>
+	<pt n="15"/>
+	<pt n="33"/>
+      </sh>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni036D"> <!-- t -->
+    <setvs axis="y"/>
+    <mv>
+      <pt n="0"/>
+      <mv color="black">
+	<pt n="24"/>
+      </mv>
+    </mv>
+    <callm nm="round-point">
+      <wpm nm="p" val="12"/>
+    </callm>
+    <callm nm="mid-stem">
+      <wpm nm="ref1" val="12"/>
+      <wpm nm="ref2" val="0"/>
+      <wpm nm="pt1" val="14"/>
+      <wpm nm="pt2" val="17"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni036E"> <!-- v -->
+    <setvs axis="y"/>
+    <mv>
+      <pt n="0"/>
+      <sh><pt n="4"/></sh>
+    </mv>
+    <mv>
+      <pt n="10"/>
+      <sh>
+	<pt n="1"/>
+	<pt n="15"/>
+	<pt n="5"/>
+      </sh>
+      <mv color="black">
+	<pt n="9"/>
+	<sh><pt n="14"/></sh>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+  
+  <gl pnm="uni036F"> <!-- x -->
+    <setvs axis="y"/>
+    <mv>
+      <pt n="20"/>
+      <sh>
+	<pt n="6"/>
+	<pt n="25"/>
+	<pt n="1"/>
+      </sh>
+      <mv color="black">
+	<pt n="19"/>
+	<sh><pt n="24"/></sh>
+      </mv>
+    </mv>
+    <mv>
+      <pt n="8"/>
+      <sh>
+	<pt n="0"/>
+	<pt n="13"/>
+	<pt n="4"/>
+      </sh>
+      <mv color="black">
+	<pt n="9"/>
+	<sh><pt n="14"/></sh>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni1DD3"> <!-- flattened a -->
+    <setvs axis="y"/>
+    <mv>
+      <pt n="0"/>
+      <sh><pt n="34"/></sh>
+      <mv color="black">
+	<pt n="14"/>
+      </mv>
+    </mv>
+    <mv color="black">
+      <ref><pt n="34"/></ref>
+      <pt n="25"/>
+    </mv>
+    <mv>
+      <ref><pt n="14"/></ref>
+      <pt n="8"/>
+      <sh><pt n="18"/></sh>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni1DD4"> <!-- ae -->
+    <setvs axis="y"/>
+    <mv>
+      <pt n="0"/>
+      <sh><pt n="24"/></sh>
+      <mv color="black">
+	<pt n="63"/>
+	<sh><pt n="17"/></sh>
+      </mv>
+    </mv>
+    <mv>
+      <pt n="46"/>
+      <sh><pt n="53"/></sh>
+      <mv di="mark-curve" color="black">
+	<pt n="33"/>
+      </mv>
+    </mv>
+    <mv di="mark-curve" color="black">
+      <ref><pt n="53"/></ref>
+      <pt n="10"/>
+    </mv>
+    <ip>
+      <ref>
+	<pt n="46"/>
+	<pt n="0"/>
+      </ref>
+      <pt n="6"/>
+      <pt n="57"/>
+      <pt n="7"/>
+      <pt n="56"/>
+    </ip>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni1DD8"> <!-- insular d -->
+    <setvs axis="y"/>
+    <callm nm="one-wd-stem">
+      <wpm nm="pt1" val="0"/>
+      <wpm nm="pt2" val="21"/>
+      <wpm nm="cv" val="mark-curve"/>
+    </callm>
+    <callm nm="round-point">
+      <wpm nm="p" val="12"/>
+    </callm>
+    <callm nm="mid-stem">
+      <wpm nm="ref1" val="12"/>
+      <wpm nm="ref2" val="0"/>
+      <wpm nm="pt1" val="7"/>
+      <wpm nm="pt2" val="28"/>
+      <wpm nm="cv" val="mark-curve"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni1DDA"> <!-- g -->
+    <setvs axis="y"/>
+    <callm nm="one-wd-stem">
+      <wpm nm="pt1" val="0"/>
+      <wpm nm="pt2" val="13"/>
+      <wpm nm="cv" val="mark-curve"/>
+    </callm>
+    <callm nm="one-wd-stem">
+      <wpm nm="pt1" val="46"/>
+      <wpm nm="pt2" val="58"/>
+      <wpm nm="cv" val="mark-curve"/>
+    </callm>
+    <callm nm="mid-stem">
+      <wpm nm="ref1" val="46"/>
+      <wpm nm="ref2" val="0"/>
+      <wpm nm="pt1" val="40"/>
+      <wpm nm="pt2" val="52"/>
+      <wpm nm="cv" val="mark-curve"/>
+    </callm>
+    <callm nm="mid-stem">
+      <wpm nm="ref1" val="40"/>
+      <wpm nm="ref2" val="0"/>
+      <wpm nm="pt1" val="33"/>
+      <wpm nm="pt2" val="20"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni1DDC"> <!-- k -->
+    <setvs axis="y"/>
+    <callm nm="round-point">
+      <wpm nm="p" val="5"/>
+    </callm>
+    <mv>
+      <pt n="27"/>
+      <sh>
+	<pt n="0"/>
+	<pt n="32"/>
+	<pt n="11"/>
+      </sh>
+      <mv color="black">
+	<pt n="28"/>
+	<sh><pt n="33"/></sh>
+      </mv>
+    </mv>
+    <ip>
+      <ref>
+	<pt n="5"/>
+	<pt n="27"/>
+      </ref>
+      <pt n="39"/>
+    </ip>
+    <mv>
+      <pt n="39"/>
+      <sh><pt n="22"/></sh>
+      <mv color="black">
+	<pt n="38"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni1DDD"> <!-- kl -->
+    <setvs axis="y"/>
+    <callm nm="round-point">
+      <wpm nm="p" val="5"/>
+    </callm>
+    <mv>
+      <pt n="11"/>
+      <sh><pt n="0"/></sh>
+      <mv color="black">
+	<pt n="12"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni1DE0"> <!-- n -->
+    <setvs axis="y"/>
+    <mv>
+      <pt n="22"/>
+      <sh>
+	<pt n="32"/>
+	<pt n="27"/>
+	<pt n="0"/>
+      </sh>
+      <mv color="black">
+	<pt n="23"/>
+	<sh><pt n="28"/></sh>
+      </mv>
+    </mv>
+    <mv>
+      <pt n="14"/>
+      <sh><pt n="37"/></sh>
+      <mv color="black">
+	<pt n="7"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni1DE3"> <!-- rrotunda -->
+    <setvs axis="y"/>
+    <mv>
+      <pt n="25"/>
+      <sh><pt n="22"/></sh>
+      <mv color="black">
+	<pt n="24"/>
+      </mv>
+    </mv>
+    <mv>
+      <pt n="15"/>
+      <mv color="black">
+	<pt n="8"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni1DE4"> <!-- s -->
+    <setvs axis="y"/>
+    <callm nm="one-wd-stem">
+      <wpm nm="pt1" val="0"/>
+      <wpm nm="pt2" val="10"/>
+      <wpm nm="cv" val="mark-curve"/>
+    </callm>
+    <callm nm="one-wd-stem">
+      <wpm nm="pt1" val="23"/>
+      <wpm nm="pt2" val="39"/>
+      <wpm nm="cv" val="mark-curve"/>
+    </callm>
+    <ip>
+      <ref>
+	<pt n="23"/>
+	<pt n="0"/>
+      </ref>
+      <pt n="45"/>
+      <pt n="16"/>
+    </ip>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni1DE5"> <!-- longs -->
+    <setvs axis="y"/>
+    <mv>
+      <pt n="26"/>
+      <sh><pt n="0"/></sh>
+      <mv color="black">
+	<pt n="27"/>
+      </mv>
+    </mv>
+    <callm nm="one-wd-stem">
+      <wpm nm="pt1" val="9"/>
+      <wpm nm="pt2" val="21"/>
+      <wpm nm="cv" val="mark-curve"/>
+    </callm>
+    <callm nm="mid-stem">
+      <wpm nm="ref1" val="9"/>
+      <wpm nm="ref2" val="26"/>
+      <wpm nm="pt1" val="2"/>
+      <wpm nm="pt2" val="3"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni1DE6"> <!-- z -->
+    <setvs axis="y"/>
+    <mv>
+      <pt n="20"/>
+      <sh><pt n="6"/></sh>
+      <mv color="black">
+	<pt n="8"/>
+      </mv>
+    </mv>
+    <mv>
+      <pt n="3"/>
+      <sh><pt n="23"/></sh>
+      <mv color="black">
+	<pt n="25"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni0361">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="4"/>
+      <mv color="black">
+	<pt n="12"/>
+	<sh>
+	  <pt n="0"/>
+	  <pt n="9"/>
+	</sh>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni0361.med">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="4"/>
+      <mv color="black">
+	<pt n="12"/>
+	<sh>
+	  <pt n="0"/>
+	  <pt n="9"/>
+	</sh>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni0361.high">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="4"/>
+      <mv color="black">
+	<pt n="12"/>
+	<sh>
+	  <pt n="0"/>
+	  <pt n="9"/>
+	</sh>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni035C"> <!-- undertie -->
+    <setvs axis="y"/>
+    <mv>
+      <pt n="8"/>
+      <sh><pt n="5"/><pt n="11"/></sh>
+      <mv color="black">
+	<pt n="0"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni035C.low"> <!-- undertie -->
+    <setvs axis="y"/>
+    <mv>
+      <pt n="8"/>
+      <sh><pt n="5"/><pt n="11"/></sh>
+      <mv color="black">
+	<pt n="0"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="tilde" init-graphics="yes">
+    <cn nm="right-bot" val="0"/>
+    <cn nm="right-top" val="19"/>
+    <cn nm="left-bot" val="6"/>
+    <cn nm="left-top" val="13"/>
+    <setvs axis="y"/>
+    <mv>
+      <pt n="right-bot"/>
+      <sh><pt n="left-bot"/></sh>
+      <mv color="black">
+	<pt n="right-top"/>
+	<sh><pt n="left-top"/></sh>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+
+  <gl pnm="tilde.case" init-graphics="yes">
+    <cn nm="right-bot" val="0"/>
+    <cn nm="right-top" val="17"/>
+    <cn nm="left-bot" val="4"/>
+    <cn nm="left-top" val="11"/>
+    <setvs axis="y"/>
+    <mv>
+      <pt n="right-bot"/>
+      <sh><pt n="left-bot"/></sh>
+      <mv color="black">
+	<pt n="right-top"/>
+	<sh><pt n="left-top"/></sh>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni0315">
+    <setvs axis="y"/>
+    <callm nm="plain-stem">
+      <wpm nm="pt1" val="13"/>
+      <wpm nm="pt2" val="5"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni0318">
+    <setvs axis="y"/>
+    <callm nm="plain-stem">
+      <wpm nm="pt1" val="1"/>
+      <wpm nm="pt2" val="0"/>
+    </callm>
+    <callm nm="mid-stem">
+      <wpm nm="ref1" val="1"/>
+      <wpm nm="ref2" val="0"/>
+      <wpm nm="pt1" val="6"/>
+      <wpm nm="pt2" val="7"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni0319">
+    <setvs axis="y"/>
+    <callm nm="plain-stem">
+      <wpm nm="pt1" val="1"/>
+      <wpm nm="pt2" val="0"/>
+    </callm>
+    <callm nm="mid-stem">
+      <wpm nm="ref1" val="1"/>
+      <wpm nm="ref2" val="0"/>
+      <wpm nm="pt1" val="6"/>
+      <wpm nm="pt2" val="7"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni031A">
+    <setvs axis="y"/>
+    <callm nm="plain-stem">
+      <wpm nm="pt1" val="3"/>
+      <wpm nm="pt2" val="2"/>
+    </callm>
+    <mv>
+      <ref><pt n="2"/></ref>
+      <pt n="0"/>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni031C">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="8"/>
+      <mv color="black">
+	<pt n="0"/>
+	<ip>
+	  <pt n="9"/>
+	  <pt n="15"/>
+	</ip>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni031D">
+    <setvs axis="y"/>
+    <callm nm="plain-stem">
+      <wpm nm="pt1" val="3"/>
+      <wpm nm="pt2" val="2"/>
+    </callm>
+    <sh>
+      <ref><pt n="5"/></ref>
+      <pt n="0"/>
+      <pt n="1"/>
+    </sh>
+    <callm nm="round-point">
+      <wpm nm="p" val="1"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni031E">
+    <setvs axis="y"/>
+    <callm nm="plain-stem">
+      <wpm nm="pt1" val="5"/>
+      <wpm nm="pt2" val="4"/>
+    </callm>
+    <sh>
+      <ref><pt n="4"/></ref>
+      <pt n="1"/>
+      <pt n="0"/>
+    </sh>
+    <callm nm="round-point">
+      <wpm nm="p" val="0"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+  
+  <gl pnm="uni031F">
+    <setvs axis="y"/>
+    <push>0 4 1 4 5</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDRP" modifier="11101"/>
+    <command nm="DUP"/>
+    <command nm="SHP" modifier="1"/>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="SRP1"/>
+    <command nm="DUP"/>
+    <command nm="SHP" modifier="1"/>
+    <command nm="MDAP" modifier="1"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni0320">
+    <setvs axis="y"/>
+    <push>8 9 11 6 0 1</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDRP" modifier="11101"/>
+    <command nm="SHP" modifier="0"/>
+    <command nm="SHP" modifier="0"/>
+    <command nm="SHP" modifier="1"/>
+    <command nm="SHP" modifier="1"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni0324"> <!-- dieresis below -->
+    <cn nm="bottom" val="0"/>
+    <cn nm="top" val="6"/>
+    <setvs axis="y"/>
+    <mv>
+      <pt n="top"/>
+      <sh><pt n="18"/></sh>
+      <mv di="dotaccent-height">
+	<pt n="bottom"/>
+	<sh><pt n="12"/></sh>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni0325"> <!-- ring below -->
+    <setvs axis="y"/>
+    <push>20 7 14 0</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="SHP" modifier="0"/>
+    <command nm="MDRP">
+      <modifier type="color" val="black"/>
+    </command>
+    <command nm="SHP" modifier="0"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni0326"> <!-- comma below -->
+    <setvs axis="y"/>
+    <callm nm="plain-stem">
+      <wpm nm="pt1" val="14"/>
+      <wpm nm="pt2" val="6"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni0329"> <!-- v line below -->
+    <setvs axis="y"/>
+    <callm nm="plain-stem">
+      <wpm nm="pt1" val="1"/>
+      <wpm nm="pt2" val="0"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni032A">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="1"/>
+      <mv color="black">
+	<pt n="6"/>
+	<mv>
+	  <pt n="7"/>
+	  <sh><pt n="4"/></sh>
+	</mv>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni032F"> <!--inverted breve below -->
+    <setvs axis="y"/>
+    <mv>
+      <pt n="2"/>
+      <mv color="black">
+	<pt n="8"/>
+	<sh><pt n="0"/><pt n="4"/></sh>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+  
+  <gl pnm="uni0330" init-graphics="yes">
+    <cn nm="right-bot" val="0"/>
+    <cn nm="right-top" val="19"/>
+    <cn nm="left-bot" val="6"/>
+    <cn nm="left-top" val="13"/>
+    <setvs axis="y"/>
+    <mv>
+      <pt n="right-bot"/>
+      <sh><pt n="left-bot"/></sh>
+      <mv color="black">
+	<pt n="right-top"/>
+	<sh><pt n="left-top"/></sh>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni0339">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="8"/>
+      <mv color="black">
+	<pt n="0"/>
+	<ip>
+	  <pt n="7"/>
+	  <pt n="1"/>
+	</ip>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni033A">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="0"/>
+      <mv color="black">
+	<pt n="3"/>
+	<mv>
+	  <pt n="2"/>
+	  <sh><pt n="5"/></sh>
+	</mv>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni033B">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="1"/>
+      <sh><pt n="7"/></sh>
+      <mv>
+	<pt n="0"/>
+	<sh><pt n="4"/></sh>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni033C">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="3"/>
+      <sh><pt n="9"/></sh>
+      <mv color="black">
+	<pt n="24"/>
+	<sh><pt n="17"/></sh>
+	<mv>
+	  <pt n="27"/>
+	  <sh>
+	    <pt n="21"/>
+	    <pt n="14"/>
+	  </sh>
+	</mv>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni033C">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="1"/>
+      <sh><pt n="6"/></sh>
+      <mv>
+	<pt n="6"/>
+	<sh><pt n="0"/></sh>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni035B"> <!-- zigzag above -->
+    <setvs axis="y"/>
+    <mv>
+      <pt n="9"/>
+      <sh><pt n="5"/></sh>
+      <mv color="black">
+	<pt n="3"/>
+	<sh><pt n="0"/></sh>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni02E0">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="0"/>
+      <mv>
+	<pt n="20"/>
+      </mv>
+    </mv>
+    <mv>
+      <pt n="36"/>
+      <sh>
+	<pt n="9"/>
+	<pt n="41"/>
+	<pt n="11"/>
+      </sh>
+      <mv>
+	<pt n="35"/>
+	<sh><pt n="40"/></sh>
+      </mv>
+    </mv>
+    <ip>
+      <ref><pt n="36"/><pt n="0"/></ref>
+	<pt n="10"/>
+	<pt n="7"/>
+	<pt n="13"/>
+	<pt n="27"/>
+    </ip>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni02C1">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="8"/>
+      <mv>
+	<pt n="23"/>
+      </mv>
+    </mv>
+    <mv>
+      <pt n="32"/>
+      <sh><pt n="0"/></sh>
+      <mv>
+	<pt n="33"/>
+      </mv>
+    </mv>
+    <ip>
+      <ref>
+	<pt n="8"/>
+	<pt n="32"/>
+      </ref>
+      <pt n="2"/>
+      <pt n="29"/>
+    </ip>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni02C1">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="0"/>
+      <mv>
+	<pt n="1"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni02CC">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="0"/>
+      <mv>
+	<pt n="1"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni02E5">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="1"/>
+      <sh><pt n="5"/></sh>
+      <mv>
+	<pt n="0"/>
+      </mv>
+    </mv>
+    <mv>
+      <ref><pt n="5"/></ref>
+      <pt n="8"/>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni02E6">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="1"/>
+      <mv>
+	<pt n="0"/>
+      </mv>
+    </mv>
+    <mv>
+      <pt n="5"/>
+      <mv>
+	<pt n="8"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni02E7">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="1"/>
+      <mv>
+	<pt n="0"/>
+      </mv>
+    </mv>
+    <mv>
+      <pt n="5"/>
+      <mv>
+	<pt n="8"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni02E8">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="1"/>
+      <mv>
+	<pt n="0"/>
+      </mv>
+    </mv>
+    <mv>
+      <pt n="5"/>
+      <mv>
+	<pt n="8"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni02E9">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="1"/>
+      <mv>
+	<pt n="0"/>
+	<sh><pt n="8"/></sh>
+      </mv>
+    </mv>
+    <mv>
+      <ref><pt n="8"/></ref>
+      <pt n="5"/>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni02D0">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="4"/>
+      <mv color="black">
+	<pt n="5"/>
+	<mv color="white">
+	  <pt n="0"/>
+	  <mv color="black">
+	    <pt n="1"/>
+	  </mv>
+	</mv>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni02D1">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="1"/>
+      <mv color="black">
+	<pt n="0"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni02F7">
+    <cn nm="right-bot" val="0"/>
+    <cn nm="right-top" val="19"/>
+    <cn nm="left-bot" val="6"/>
+    <cn nm="left-top" val="13"/>
+    <setvs axis="y"/>
+    <mv>
+      <pt n="right-bot"/>
+      <sh><pt n="left-bot"/></sh>
+      <mv color="black">
+	<pt n="right-top"/>
+	<sh><pt n="left-top"/></sh>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni02C8">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="1"/>
+      <mv color="black">
+	<pt n="0"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+</xgridfit>

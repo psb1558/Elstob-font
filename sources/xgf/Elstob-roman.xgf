@@ -1,0 +1,4085 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xgridfit xmlns="http://xgridfit.sourceforge.net/Xgridfit2"
+	  xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <infile>Elstob[GRAD,opsz,wght].ttf</infile>
+
+  <outfile>Elstob[GRAD,opsz,wght]-hinted.ttf</outfile>
+
+  <default type="max-storage" val="70"/>
+<!--  <default type="use-truetype-defaults" val="yes"/> -->
+  <default type="init-graphics" val="no"/>
+
+<!-- Caps are complete. I think lc is complete too. -->
+
+  <cv nm="xheight" val="891"/>
+  <cv nm="xheight-overshoot" val="914"/>
+  <cv nm="lc-curved-stem" val="57"/>
+  <cv nm="lc-ascender-top" val="1487"/>
+  <cv nm="lc-ascender-top-slope" val="85"/>
+  <cv nm="lc-ascender-top-end" val="39"/>
+  <cv nm="baseline" val="0"/>
+  <cv nm="baseline-undershoot" val="-23"/>
+  <cv nm="lc-bar" val="61"/>
+  <cv nm="lc-ascender-top-overshoot" val="1492"/>
+  <cv nm="lc-serif" val="51"/>
+  <cv nm="dotaccent-bottom" val="1128"/>
+  <cv nm="dotaccent-height" val="214"/>
+  <cv nm="lc-descender" val="-501"/>
+  <cv nm="lc-descender-undershoot" val="-533"/>
+  <cv nm="cap-height" val="1358"/>
+  <cv nm="cap-height-overshoot" val="1385"/>
+  <cv nm="cap-baseline-undershoot" val="-27"/>
+  <cv nm="cap-serif" val="51"/>
+  <cv nm="cap-bar" val="61"/>
+  <cv nm="cap-curved-stem" val="57"/>
+  <cv nm="sc-height" val="1016"/>
+  <cv nm="sc-serif" val="51"/>
+  <cv nm="sc-bar" val="61"/>
+  <cv nm="sc-curved-stem" val="57"/>
+  <cv nm="sc-height-overshoot" val="1035"/>
+  <cv nm="sc-baseline-undershoot" val="-23"/>
+  <cv nm="lc-thick-curve" val="97"/>
+  <cv nm="period-height" val="247"/>
+  <cv nm="numbersign-bar" val="95"/>
+  <cv nm="num-top-round" val="1358"/>
+  <cv nm="num-top-flat" val="1321"/>
+  <cv nm="sup-num-base" val="519"/>
+  <cv nm="sup-num-base-undershoot" val="505"/>
+  <cv nm="ring-stem" val="66"/>
+  <cv nm="zero-osf-stem" val="106"/>
+  <cv nm="lower-f-top" val="1452"/>
+  <cv nm="longs-knob" val="797"/>
+  <cv nm="euro-bar" val="100"/>
+  <cv nm="mark-curve" val="43"/>
+  <cv nm="percent-zero" val="66"/>
+  <cv nm="percent-zero-sc" val="54"/>
+  <cv nm="rune-punct" val="274"/>
+
+  <!--
+      You will probably need one region element for each master (other
+      than the default) in your font. Assuming that they are at the
+      extremes of their axes, as here, the attributes for the region
+      element will ordinarily be -1.0, -1.0, 0.0 for the region minimum
+      and 0.0, 1.0, 1.0 for the region maximum. (A more complex layout
+      is not supported here). Each cvv element corresponds to a cv: it
+      is matched to the cv by name, not number, so don't worry about
+      the order. You don't need a cvv except when its @val is
+      different from the @val of the matching cv, but in that case
+      there's no harm in including it: the compiler will simplhy
+      ignore it. The font's cvar table stores deltas, not control
+      values, but use the control values here and let the compiler
+      calulate the deltas.
+  -->
+  <cvar>
+<!--    <region tag="wght" bot="-1.0" peak="-1.0" top="0.0"> -->
+    <region tag="wght" bot="-0.33" peak="-0.33" top="0.66">
+      <cvv nm="xheight" val="891"/>
+      <cvv nm="xheight-overshoot" val="914"/>
+      <cvv nm="lc-curved-stem" val="42"/>
+      <cvv nm="lc-ascender-top-slope" val="70"/>
+      <cvv nm="lc-ascender-top-end" val="28"/>
+      <cvv nm="lc-bar" val="50"/>
+      <cvv nm="lc-serif" val="40"/>
+      <cvv nm="dotaccent-bottom" val="1128"/>
+      <cvv nm="dotaccent-height" val="151"/>
+      <cvv nm="lc-descender" val="-501"/>
+      <cvv nm="lc-descender-undershoot" val="-533"/>
+      <cvv nm="cap-serif" val="40"/>
+      <cvv nm="cap-bar" val="42"/>
+      <cvv nm="cap-curved-stem" val="42"/>
+      <cvv nm="sc-height" val="1016"/>
+      <cvv nm="sc-serif" val="40"/>
+      <cvv nm="sc-bar" val="50"/>
+      <cvv nm="sc-curved-stem" val="42"/>
+      <cvv nm="sc-height-overshoot" val="1036"/>
+      <cvv nm="period-height" val="208"/>
+      <cvv nm="numbersign-bar" val="74"/>
+      <cvv nm="ring-stem" val="54"/>
+      <cvv nm="zero-osf-stem" val="83"/>
+      <cvv nm="longs-knob" val="812"/>
+      <cvv nm="euro-bar" val="82"/>
+      <cvv nm="mark-curve" val="34"/>
+      <cvv nm="percent-zero" val="53"/>
+      <cvv nm="percent-zero-sc" val="45"/>
+      <cvv nm="rune-punct" val="253"/>
+    </region>
+<!--    <region tag="wght" bot="0.0" peak="1.0" top="1.0"> -->
+    <region tag="wght" bot="0.33" peak="0.66" top="0.66">
+      <cvv nm="xheight" val="891"/>
+      <cvv nm="xheight-overshoot" val="914"/>
+      <cvv nm="lc-curved-stem" val="68"/>
+      <cvv nm="lc-ascender-top-slope" val="115"/>
+      <cvv nm="lc-ascender-top-end" val="61"/>
+      <cvv nm="lc-bar" val="70"/>
+      <cvv nm="lc-serif" val="60"/>
+      <cvv nm="dotaccent-bottom" val="1128"/>
+      <cvv nm="dotaccent-height" val="340"/>
+      <cvv nm="lc-descender" val="-50"/>
+      <cvv nm="lc-descender-undershoot" val="-533"/>
+      <cvv nm="cap-serif" val="60"/>
+      <cvv nm="cap-bar" val="70"/>
+      <cvv nm="cap-curved-stem" val="68"/>
+      <cvv nm="sc-height" val="1016"/>
+      <cvv nm="sc-serif" val="60"/>
+      <cvv nm="sc-bar" val="70"/>
+      <cvv nm="sc-curved-stem" val="68"/>
+      <cvv nm="sc-height-overshoot" val="1036"/>
+      <cvv nm="period-height" val="346"/>
+      <cvv nm="numbersign-bar" val="137"/>
+      <cvv nm="ring-stem" val="90"/>
+      <cvv nm="zero-osf-stem" val="152"/>
+      <cvv nm="longs-knob" val="787"/>
+      <cvv nm="euro-bar" val="105"/>
+      <cvv nm="mark-curve" val="49"/>
+      <cvv nm="percent-zero" val="92"/>
+      <cvv nm="percent-zero-sc" val="75"/>
+      <cvv nm="rune-punct" val="316"/>
+    </region>
+    <region tag="opsz" bot="-1.0" peak="-1.0" top="0.0">
+      <cvv nm="xheight" val="933"/>
+      <cvv nm="xheight-overshoot" val="957"/>
+      <cvv nm="lc-curved-stem" val="89"/>
+      <cvv nm="lc-ascender-top-slope" val="88"/>
+      <cvv nm="lc-ascender-top-end" val="46"/>
+      <cvv nm="lc-bar" val="83"/>
+      <cvv nm="lc-serif" val="83"/>
+      <cvv nm="dotaccent-bottom" val="1170"/>
+      <cvv nm="dotaccent-height" val="216"/>
+      <cvv nm="lc-descender" val="-451"/>
+      <cvv nm="lc-descender-undershoot" val="-510"/>
+      <cvv nm="cap-serif" val="83"/>
+      <cvv nm="cap-bar" val="93"/>
+      <cvv nm="cap-curved-stem" val="89"/>
+      <cvv nm="sc-height" val="1051"/>
+      <cvv nm="sc-serif" val="83"/>
+      <cvv nm="sc-bar" val="93"/>
+      <cvv nm="sc-curved-stem" val="89"/>
+      <cvv nm="sc-height-overshoot" val="1071"/>
+      <cvv nm="period-height" val="248"/>
+      <cvv nm="numbersign-bar" val="96"/>
+      <cvv nm="ring-stem" val="67"/>
+      <cvv nm="zero-osf-stem" val="110"/>
+      <cvv nm="longs-knob" val="817"/>
+      <cvv nm="euro-bar" val="111"/>
+      <cvv nm="mark-curve" val="49"/>
+      <cvv nm="percent-zero" val="77"/>
+      <cvv nm="percent-zero-sc" val="55"/>
+      <cvv nm="rune-punct" val="275"/>
+    </region>
+    <region tag="opsz" bot="0.0" peak="1.0" top="1.0">
+      <cvv nm="xheight" val="848"/>
+      <cvv nm="xheight-overshoot" val="870"/>
+      <cvv nm="lc-curved-stem" val="57"/>
+      <cvv nm="lc-ascender-top-slope" val="82"/>
+      <cvv nm="lc-ascender-top-end" val="30"/>
+      <cvv nm="lc-bar" val="60"/>
+      <cvv nm="lc-serif" val="50"/>
+      <cvv nm="dotaccent-bottom" val="1085"/>
+      <cvv nm="dotaccent-height" val="209"/>
+      <cvv nm="lc-descender" val="-551"/>
+      <cvv nm="lc-descender-undershoot" val="-555"/>
+      <cvv nm="cap-serif" val="50"/>
+      <cvv nm="cap-bar" val="60"/>
+      <cvv nm="cap-curved-stem" val="57"/>
+      <cvv nm="sc-height" val="980"/>
+      <cvv nm="sc-serif" val="52"/>
+      <cvv nm="sc-bar" val="60"/>
+      <cvv nm="sc-curved-stem" val="57"/>
+      <cvv nm="sc-height-overshoot" val="999"/>
+      <cvv nm="period-height" val="250"/>
+      <cvv nm="numbersign-bar" val="93"/>
+      <cvv nm="ring-stem" val="65"/>
+      <cvv nm="zero-osf-stem" val="100"/>
+      <cvv nm="longs-knob" val="761"/>
+      <cvv nm="euro-bar" val="98"/>
+      <cvv nm="mark-curve" val="38"/>
+      <cvv nm="percent-zero" val="54"/>
+      <cvv nm="percent-zero-sc" val="54"/>
+      <cvv nm="rune-punct" val="273"/>
+    </region>
+    <region tag="GRAD" bot="0.0" peak="1.0" top="1.0">
+      <cvv nm="xheight" val="891"/>
+      <cvv nm="xheight-overshoot" val="914"/>
+      <cvv nm="lc-curved-stem" val="68"/>
+      <cvv nm="lc-ascender-top-slope" val="117"/>
+      <cvv nm="lc-ascender-top-end" val="62"/>
+      <cvv nm="lc-serif" val="60"/>
+      <cvv nm="dotaccent-bottom" val="1128"/>
+      <cvv nm="dotaccent-height" val="332"/>
+      <cvv nm="lc-descender" val="-501"/>
+      <cvv nm="lc-descender-undershoot" val="-533"/>
+      <cvv nm="cap-serif" val="60"/>
+      <cvv nm="cap-bar" val="70"/>
+      <cvv nm="lc-bar" val="70"/>
+      <cvv nm="cap-curved-stem" val="68"/>
+      <cvv nm="sc-height" val="1016"/>
+      <cvv nm="sc-serif" val="60"/>
+      <cvv nm="sc-bar" val="70"/>
+      <cvv nm="sc-curved-stem" val="68"/>
+      <cvv nm="sc-height-overshoot" val="1036"/>
+      <cvv nm="period-height" val="346"/>
+      <cvv nm="numbersign-bar" val="137"/>
+      <cvv nm="ring-stem" val="92"/>
+      <cvv nm="zero-osf-stem" val="156"/>
+      <cvv nm="longs-knob" val="787"/>
+      <cvv nm="euro-bar" val="105"/>
+      <cvv nm="mark-curve" val="49"/>
+      <cvv nm="percent-zero" val="92"/>
+      <cvv nm="percent-zero-sc" val="75"/>
+      <cvv nm="rune-punct" val="316"/>
+    </region>
+  </cvar>
+
+  <prep>
+    <push>4 511</push>
+    <command nm="SCANCTRL"/>
+    <command nm="SCANTYPE"/>
+    <round val="lc-serif"/>
+    <round val="lc-bar"/>
+    <round val="lc-curved-stem"/>
+    <round val="lc-ascender-top"/>
+    <round val="lower-f-top"/>
+    <round val="lc-ascender-top-slope"/>
+    <round val="lc-ascender-top-end"/>
+    <round val="xheight-overshoot"/>
+    <if test="pixels-per-em &lt; 53">
+      <setcv nm="lower-f-top" unit="pixel"
+	     val="control-value(lc-ascender-top)"/>
+    </if>
+    <if test="pixels-per-em &lt; 39">
+      <setcv nm="xheight" unit="pixel"
+	     val="control-value(xheight-overshoot)"/>
+      <setcv nm="baseline-undershoot" unit="pixel"
+	     val="control-value(baseline)"/>
+      <else>
+	<round val="xheight"/>
+	<round val="baseline-undershoot"/>
+      </else>
+    </if>
+    <if test="pixels-per-em &lt; 37">
+      <setcv nm="cap-bar" unit="pixel"
+	     val="control-value(cap-serif)"/>
+    </if>
+  </prep>
+
+  <!--
+      At end, RP0 = p and RP1 = p.
+  -->
+  <mo nm="round-point">
+    <pm nm="p"/>
+    <push>p</push>
+    <command nm="MDAP" modifier="1"/>
+  </mo>
+
+  <mo nm="hook">
+    <pm nm="init"/>
+    <pm nm="cv" val="-1"/>
+    <pm nm="sh"/>
+    <pm nm="mv"/>
+    <compile-if test="cv &gt;= 0">
+      <push>mv sh init cv</push>
+      <command nm="MIAP" modifier="1"/>
+      <command nm="SHP" modifier="1"/>
+      <command nm="MDRP">
+	<modifier type="color" val="black"/>
+      </command>
+      <else>
+	<push>mv sh init</push>
+	<command nm="MDAP" modifier="1"/>
+	<command nm="SHP" modifier="1"/>
+	<command nm="MDRP">
+	  <modifier type="color" val="black"/>
+	</command>
+      </else>
+    </compile-if>
+  </mo>
+
+  <mo nm="lc-bottom-serif">
+    <pm nm="bottom-left"/>
+    <pm nm="top-left"/>
+    <pm nm="cv" val="baseline"/>
+    <pm nm="codefrag"/>
+    <mv di="cv">
+      <pt n="bottom-left"/>
+      <mv di="lc-serif" color="black">
+	<pt n="top-left"/>
+      </mv>
+    </mv>
+    <callp nm="codefrag"/>
+  </mo>
+
+  <!--
+      A function, since the parameters aren't complex.
+      For each serif, it is assumed that there's one other
+      point that needs to be shifted. If the setup is more
+      complex, use serif-sh.
+  -->
+  <fn nm="cap-dbl-serif">
+    <pm nm="first-left"/>
+    <pm nm="second-left"/>
+    <pm nm="first-right"/>
+    <pm nm="second-right"/>
+    <pm nm="stem1"/>
+    <pm nm="stem2"/>
+    <pm nm="cv" val="baseline"/>
+    <mv di="cv">
+      <pt n="first-left"/>
+      <sh>
+	<pt n="first-right"/>
+	<pt n="stem1"/>
+	<pt n="stem2"/>
+      </sh>
+      <mv di="cap-serif" color="black">
+	<pt n="second-left"/>
+	<sh><pt n="second-right"/></sh>
+      </mv>
+    </mv>
+  </fn>
+
+  <fn nm="f-lig">
+    <pm nm="serif-bot"/>
+    <pm nm="vertical-bot"/>
+    <pm nm="top"/>
+    <pm nm="top-ins"/>
+    <pm nm="bar-top" val="-1"/>
+    <pm nm="bar-bot" val="-1"/>
+    <pm nm="bar-bot-left" val="-1"/>
+    <pm nm="top-cv" val="lc-ascender-top"/>
+
+    <mv di="baseline">
+      <pt n="serif-bot"/>
+      <sh>
+	<pt n="vertical-bot"/>
+      </sh>
+      <mv di="lc-serif" color="black">
+	<pt n="serif-bot + 1"/>
+      </mv>
+    </mv>
+    <mv di="top-cv">
+      <pt n="top"/>
+      <mv di="lc-curved-stem" color="black">
+	<pt n="top-ins"/>
+      </mv>
+    </mv>
+    <if test="bar-top &gt;= 0">
+      <ip>
+	<ref>
+	  <pt n="serif-bot"/>
+	  <pt n="top"/>
+	</ref>
+	<pt n="bar-top"/>
+      </ip>
+      <push>bar-bot-left bar-bot bar-top</push>
+      <command nm="MDAP" modifier="1"/>
+      <command nm="MDRP">
+	<modifier type="color" val="black"/>
+      </command>
+      <command nm="SHP" modifier="0"/>
+    </if>
+  </fn>
+
+  <fn nm="longs-lig">
+    <pm nm="serif-bot"/>
+    <pm nm="vertical-bot"/>
+    <pm nm="top"/>
+    <pm nm="top-ins"/>
+    <pm nm="bar-bot"/>
+    <pm nm="bar-top"/>
+    <pm nm="top-cv" val="lc-ascender-top"/>
+    <mv di="baseline">
+      <pt n="serif-bot"/>
+      <sh>
+	<pt n="vertical-bot"/>
+      </sh>
+      <mv di="lc-serif" color="black">
+	<pt n="serif-bot + 1"/>
+      </mv>
+    </mv>
+    <mv di="top-cv">
+      <pt n="top"/>
+      <mv di="lc-curved-stem" color="black">
+	<pt n="top-ins"/>
+      </mv>
+    </mv>
+    <mv di="longs-knob">
+      <pt n="bar-bot"/>
+      <mv color="black">
+	<pt n="bar-top"/>
+      </mv>
+    </mv>
+  </fn>
+
+  <fn nm="lig-join">
+    <pm nm="ref1"/>
+    <pm nm="ref2"/>
+    <pm nm="pt1"/>
+    <pm nm="pt2"/>
+    <al>
+      <ref><pt n="ref1"/></ref>
+      <pt n="pt1"/>
+    </al>
+    <al>
+      <ref><pt n="ref2"/></ref>
+      <pt n="pt2"/>
+    </al>
+  </fn>
+
+  <fn nm="rhotic-hook">
+    <pm nm="d-top"/>
+    <pm nm="d-bot"/>
+    <pm nm="a"/>
+    <pm nm="b"/>
+    <push>b a d-bot d-top</push>
+    <command nm="MDAP" modifier="0"/>
+    <command nm="MDAP" modifier="0"/>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDRP">
+      <modifier type="color" val="black"/>
+    </command>
+  </fn>
+
+  <fn nm="lc-dbl-serif">
+    <pm nm="first-left"/>
+    <pm nm="second-left"/>
+    <pm nm="first-right"/>
+    <pm nm="second-right"/>
+    <pm nm="stem1"/>
+    <pm nm="stem2"/>
+    <pm nm="cv" val="baseline"/>
+    <mv di="cv">
+      <pt n="first-left"/>
+      <sh>
+	<pt n="first-right"/>
+	<pt n="stem1"/>
+	<pt n="stem2"/>
+      </sh>
+      <mv di="lc-serif" color="black">
+	<pt n="second-left"/>
+	<sh><pt n="second-right"/></sh>
+      </mv>
+    </mv>
+  </fn>
+
+  <fn nm="lc-bowl">
+    <pm nm="t"/>
+    <pm nm="t-ins"/>
+    <pm nm="cv-t" val="lc-curved-stem"/>
+    <pm nm="b"/>
+    <pm nm="b-ins"/>
+    <pm nm="cv-b" val="lc-curved-stem"/>
+    <mv di="xheight-overshoot">
+      <pt n="t"/>
+      <mv di="cv-t">
+	<pt n="t-ins"/>
+      </mv>
+    </mv>
+    <mv di="baseline-undershoot">
+      <pt n="b"/>
+      <mv di="cv-b">
+	<pt n="b-ins"/>
+      </mv>
+    </mv>
+  </fn>
+
+  <mo nm="shift-rel">
+    <pm nm="r"/>
+    <pm nm="p"/>
+    <push>p r</push>
+    <command nm="SRP1"/>
+    <command nm="SHP" modifier="1"/>
+  </mo>
+
+  <fn nm="interpolated-stem">
+    <pm nm="ref-a"/>
+    <pm nm="ref-b"/>
+    <pm nm="stem-a"/>
+    <pm nm="stem-b"/>
+    <pm nm="cv"/>
+    <ip>
+      <ref>
+	<pt n="ref-a"/>
+	<pt n="ref-b"/>
+      </ref>
+      <pt n="stem-a"/>
+    </ip>
+    <mv round="yes">
+      <pt n="stem-a"/>
+      <mv di="cv" color="black">
+	<pt n="stem-b"/>
+      </mv>
+    </mv>
+  </fn>
+
+  <!--
+      A macro, since sh-a and sh-b can be points, sets, or
+      absent. At the end, RP0, RP2 = pt-b, and RP1 = pt-a
+  -->
+  <mo nm="serif-sh">
+    <pm nm="pt-a"/>
+    <pm nm="pt-b"/>
+    <pm nm="sh-a" val="-1"/>
+    <pm nm="sh-b" val="-1"/>
+    <pm nm="cv" val="baseline"/>
+    <pm nm="cv-h" val="cap-serif"/>
+    <pm nm="align-b" val="-1"/>
+    <compile-if test="align-b = 0">
+      <mv di="cv">
+	<pt n="pt-a"/>
+	<sh compile-if="not( nan(sh-a) ) and sh-a &gt;= 0"><pt n="sh-a"/></sh>
+	<sh compile-if="nan(sh-a)"><set ref="sh-a"/></sh>
+	<mv di="cv-h">
+	  <pt n="pt-b"/>
+	  <al compile-if="not( nan(sh-b) ) and sh-b &gt;= 0"><pt n="sh-b"/></al>
+	  <al compile-if="nan(sh-b)"><set ref="sh-b"/></al>
+	</mv>
+      </mv>
+      <else>
+	<mv di="cv">
+	  <pt n="pt-a"/>
+	  <sh compile-if="not( nan(sh-a) ) and sh-a &gt;= 0"><pt n="sh-a"/></sh>
+	  <sh compile-if="nan(sh-a)"><set ref="sh-a"/></sh>
+	  <mv di="cv-h">
+	    <pt n="pt-b"/>
+	    <sh compile-if="not( nan(sh-b) ) and sh-b &gt;= 0"><pt n="sh-b"/></sh>
+	    <sh compile-if="nan(sh-b)"><set ref="sh-b"/></sh>
+	  </mv>
+	</mv>
+      </else>
+    </compile-if>
+  </mo>
+
+  <fn nm="ascender-top">
+    <pm nm="top"/>
+    <mv di="lc-ascender-top">
+      <pt n="top"/>
+      <sh>
+	<pt n="top - 1"/>
+	<pt n="top - 2"/>
+      </sh>
+    </mv>
+  </fn>
+
+  <fn nm="minim-top">
+    <pm nm="top"/>
+    <mv di="xheight-overshoot">
+      <pt n="top"/>
+      <sh>
+	<pt n="top - 1"/>
+	<pt n="top - 2"/>
+      </sh>
+    </mv>
+  </fn>
+
+  <mo nm="lc-horz-stroke">
+    <pm nm="pt1"/>
+    <pm nm="pt2"/>
+    <pm nm="cv"/>
+    <push>pt2 pt1 cv</push>
+    <command nm="MIAP" modifier="1"/>
+    <command nm="MDRP">
+      <modifier type="color" val="black"/>
+    </command>
+  </mo>
+
+  <mo nm="lc-horz-stroke-cv">
+    <pm nm="pt1"/>
+    <pm nm="pt2"/>
+    <pm nm="cv"/>
+    <pm nm="cv-h"/>
+    <pm nm="codefrag"/>
+    <push>pt2 cv-h pt1 cv</push>
+    <command nm="MIAP" modifier="1"/>
+    <command nm="MIRP">
+      <modifier type="color" val="black"/>
+    </command>
+    <callp nm="codefrag"/>
+  </mo>
+
+  <!--
+      Makes a stem, rounded to the grid, without consulting
+      a cv. At the end, RP0 = pt2, RP1 = pt1 and RP2 = pt2
+  -->
+  <mo nm="plain-stem">
+    <pm nm="pt1"/>
+    <pm nm="pt2"/>
+    <push>pt2 pt1</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDRP">
+      <modifier type="color" val="black"/>
+    </command>
+  </mo>
+
+  <!--
+      Like plain-stem, but with a cv for pt1
+  -->
+  <mo nm="one-cv-stem">
+    <pm nm="pt1"/>
+    <pm nm="pt2"/>
+    <pm nm="cv" val="baseline"/>
+    <push>pt2 pt1 cv</push>
+    <command nm="MIAP" modifier="1"/>
+    <command nm="MDRP">
+      <modifier type="color" val="black"/>
+      <modifier type="round" val="yes"/>
+    </command>
+  </mo>
+
+  <!--
+      Like plain-stem, but with a cv for the distance
+      between pt1 and pt2.
+  -->
+  <mo nm="one-wd-stem">
+    <pm nm="pt1"/>
+    <pm nm="pt2"/>
+    <pm nm="cv" val="baseline"/>
+    <push>pt2 cv pt1</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MIRP">
+      <modifier type="color" val="black"/>
+      <modifier type="round" val="yes"/>
+    </command>
+  </mo>
+
+  <!--
+      Interpolates pt1 between two references points, then
+      rounds pt1 and makes a horizontal stem by positioning pt2
+      relative to it (using a control-value, if cv has been
+      passed to the macro). After this macro has run, RP0 and
+      RP2 are equal to pt2, and RP1 is equal to pt1.
+  -->
+  <mo nm="mid-stem">
+    <pm nm="ref1"/>
+    <pm nm="ref2"/>
+    <pm nm="pt1"/>
+    <pm nm="pt2"/>
+    <pm nm="cv" val="-1"/>
+    <push>pt1 ref2 ref1</push>
+    <command nm="SRP1"/>
+    <command nm="SRP2"/>
+    <command nm="DUP"/>
+    <command nm="IP"/>
+    <command nm="MDAP" modifier="1"/>
+    <compile-if test="cv &gt;= 0">
+      <push>pt2 cv</push>
+      <command nm="MIRP" modifier="11100"/>
+      <else>
+	<push>pt2</push>
+	<command nm="MDRP" modifier="11100"/>
+      </else>
+    </compile-if>
+  </mo>
+
+  <mo nm="rune-vert">
+    <pm nm="serif-top"/>
+    <pm nm="serif-bot"/>
+    <pm nm="stem-top"/>
+    <pm nm="stem-bot"/>
+    <push>
+      (serif-bot + 1)
+      cap-serif
+      stem-bot
+      serif-bot
+      baseline
+      (serif-top - 1)
+      cap-serif
+      stem-top
+      serif-top
+      cap-height
+    </push>
+    <command nm="MIAP" modifier="1"/>
+    <command nm="SHP" modifier="1"/>
+    <command nm="MIRP">
+      <modifier type="color" val="black"/>
+    </command>
+    <command nm="MIAP" modifier="1"/>
+    <command nm="SHP" modifier="1"/>
+    <command nm="MIRP">
+      <modifier type="color" val="black"/>
+    </command>
+  </mo>
+
+  <gl pnm="a">
+    <cn nm="top" val="24"/>
+    <cn nm="top-inside" val="11"/>
+    <cn nm="bottom" val="41"/>
+    <cn nm="bottom-inside" val="55"/>
+    <cn nm="bottom-right" val="0"/>
+    <cn nm="mid-upper" val="48"/>
+    <cn nm="mid-lower" val="49"/>
+
+    <setvs axis="y"/>
+    <mv di="baseline-undershoot">
+      <pt n="bottom"/>
+      <sh>
+	<pt n="bottom-right"/>
+      </sh>
+      <mv color="black">
+	<pt n="bottom-inside"/>
+      </mv>
+    </mv>
+    <mv di="xheight-overshoot">
+      <pt n="top"/>
+      <mv di="lc-curved-stem" color="black">
+	<pt n="top-inside"/>
+      </mv>
+    </mv>
+    <ip>
+      <ref>
+	<pt n="top"/>
+	<pt n="bottom"/>
+      </ref>
+      <pt n="mid-upper"/>
+    </ip>
+    <sh>
+      <ref><pt n="mid-upper"/></ref>
+      <pt n="mid-lower"/>
+    </sh>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="b">
+    <cn nm="top" val="9"/>
+    <cn nm="bowl-top" val="32"/>
+    <cn nm="bowl-top-inside" val="26"/>
+    <cn nm="bottom" val="40"/>
+    <cn nm="bottom-inside" val="18"/>
+    <cn nm="stem-bot" val="0"/>
+    <setvs axis="y"/>
+    <callf nm="ascender-top">
+      <wpm nm="top" val="top"/>
+    </callf>
+    <callf nm="lc-bowl">
+      <wpm nm="t" val="bowl-top"/>
+      <wpm nm="t-ins" val="bowl-top-inside"/>
+      <wpm nm="b" val="bottom"/>
+      <wpm nm="b-ins" val="bottom-inside"/>
+    </callf>
+    <callm nm="shift-rel">
+      <wpm nm="p" val="stem-bot"/>
+      <wpm nm="r" val="bottom"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="c">
+    <pm nm="include-iup" val="0"/>
+    <setvs axis="y"/>
+    <callf nm="lc-bowl">
+      <wpm nm="t" val="8"/>
+      <wpm nm="t-ins" val="24"/>
+      <wpm nm="b" val="0"/>
+      <wpm nm="b-ins" val="32"/>
+      <wpm nm="cv-b" val="lc-thick-curve"/>
+    </callf>
+    <compile-if test="include-iup = 0">
+      <iup axis="y"/>
+    </compile-if>
+  </gl>
+
+  <gl pnm="d">
+    <cn nm="top" val="23"/>
+    <cn nm="bowl-top" val="14"/>
+    <cn nm="bowl-top-inside" val="47"/>
+    <cn nm="bottom" val="5"/>
+    <cn nm="bottom-inside" val="40"/>
+    <cn nm="foot-bottom" val="0"/>
+    <setvs axis="y"/>
+    <callf nm="ascender-top">
+      <wpm nm="top" val="top"/>
+    </callf>
+    <callf nm="lc-bowl">
+      <wpm nm="t" val="bowl-top"/>
+      <wpm nm="t-ins" val="bowl-top-inside"/>
+      <wpm nm="b" val="bottom"/>
+      <wpm nm="b-ins" val="bottom-inside"/>
+      <wpm nm="cv-b" val="lc-thick-curve"/>
+    </callf>
+    <callm nm="shift-rel">
+      <wpm nm="r" val="bottom"/>
+      <wpm nm="p" val="foot-bottom"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="e">
+    <cn nm="top" val="8"/>
+    <cn nm="top-inside" val="18"/>
+    <cn nm="bottom" val="0"/>
+    <cn nm="bottom-inside" val="26"/>
+    <cn nm="mid-bar-top" val="15"/>
+    <cn nm="mid-bar-bottom" val="12"/>
+    <setvs axis="y"/>
+    <callm nm="lc-horz-stroke">
+      <wpm nm="pt1" val="bottom"/>
+      <wpm nm="pt2" val="bottom-inside"/>
+      <wpm nm="cv" val="baseline-undershoot"/>
+    </callm>
+    <callm nm="lc-horz-stroke-cv">
+      <wpm nm="pt1" val="top"/>
+      <wpm nm="pt2" val="top-inside"/>
+      <wpm nm="cv" val="xheight-overshoot"/>
+      <wpm nm="cv-h" val="lc-curved-stem"/>
+    </callm>
+    <callm nm="mid-stem">
+      <wpm nm="ref1" val="top"/>
+      <wpm nm="ref2" val="bottom"/>
+      <wpm nm="pt1" val="mid-bar-bottom"/>
+      <wpm nm="pt2" val="mid-bar-top"/>
+      <wpm nm="cv" val="lc-bar"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="f">
+    <cn nm="serif-bottom" val="36"/>
+    <cn nm="vertical-bottom" val="0"/>
+    <cn nm="top" val="10"/>
+    <cn nm="top-inside" val="26"/>
+    <cn nm="bar-top" val="32"/>
+    <cn nm="bar-bottom" val="bar-top + 1"/>
+    <cn nm="bar-bottom-left" val="1"/>
+
+    <setvs axis="y"/>
+    <mv di="baseline">
+      <pt n="serif-bottom"/>
+      <sh>
+	<pt n="vertical-bottom"/>
+      </sh>
+      <mv di="lc-serif" color="black">
+	<pt n="serif-bottom + 1"/>
+      </mv>
+    </mv>
+    <mv di="lc-ascender-top-overshoot">
+      <pt n="top"/>
+      <mv di="lc-curved-stem" color="black">
+	<pt n="top-inside"/>
+      </mv>
+    </mv>
+    <ip>
+      <ref>
+	<pt n="serif-bottom"/>
+	<pt n="top"/>
+      </ref>
+      <pt n="bar-top"/>
+    </ip>
+    <callm nm="round-point">
+      <wpm nm="p" val="bar-top"/>
+    </callm>
+    <push>bar-bottom-left bar-bottom</push>
+    <command nm="MDRP">
+      <modifier type="color" val="black"/>
+    </command>
+    <command nm="SHP" modifier="0"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="longs">
+    <cn nm="serif-bottom" val="33"/>
+    <cn nm="vertical-bottom" val="0"/>
+    <cn nm="top" val="10"/>
+    <cn nm="top-inside" val="26"/>
+    <cn nm="bar-bottom-left" val="1"/>
+    <setvs axis="y"/>
+    <mv di="baseline">
+      <pt n="serif-bottom"/>
+      <sh>
+	<pt n="vertical-bottom"/>
+      </sh>
+      <mv di="lc-serif" color="black">
+	<pt n="serif-bottom + 1"/>
+      </mv>
+    </mv>
+    <mv di="lc-ascender-top-overshoot">
+      <pt n="top"/>
+      <mv di="lc-curved-stem" color="black">
+	<pt n="top-inside"/>
+      </mv>
+    </mv>
+    <ip>
+      <ref>
+	<pt n="serif-bottom"/>
+	<pt n="top"/>
+      </ref>
+      <pt n="bar-bottom-left"/>
+    </ip>
+    <callm nm="round-point">
+      <wpm nm="p" val="bar-bottom-left"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="f.alt">
+    <cn nm="serif-bottom" val="37"/>
+    <cn nm="vertical-bottom" val="0"/>
+    <cn nm="top" val="11"/>
+    <cn nm="top-inside" val="26"/>
+    <cn nm="bar-top" val="33"/>
+    <cn nm="bar-bottom" val="bar-top + 1"/>
+    <cn nm="bar-bottom-left" val="1"/>
+    <setvs axis="y"/>
+    <mv di="baseline">
+      <pt n="serif-bottom"/>
+      <sh>
+	<pt n="vertical-bottom"/>
+      </sh>
+      <mv di="lc-serif" color="black">
+	<pt n="serif-bottom + 1"/>
+      </mv>
+    </mv>
+    <mv di="lc-ascender-top-overshoot">
+      <pt n="top"/>
+      <mv di="lc-curved-stem" color="black">
+	<pt n="top-inside"/>
+      </mv>
+    </mv>
+    <ip>
+      <ref>
+	<pt n="serif-bottom"/>
+	<pt n="top"/>
+      </ref>
+      <pt n="bar-top"/>
+    </ip>
+    <callm nm="round-point">
+      <wpm nm="p" val="bar-top"/>
+    </callm>
+    <push>bar-bottom-left bar-bottom</push>
+    <command nm="MDRP"/>
+    <command nm="SHP" modifier="0"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="g">
+    <cn nm="top" val="51"/>
+    <cn nm="top-inside" val="65"/>
+    <cn nm="ear-top" val="75"/>
+    <cn nm="ear-below" val="90"/>
+    <cn nm="bowl-bottom" val="43"/>
+    <cn nm="bowl-bottom-inside" val="59"/>
+    <cn nm="spur" val="29"/>
+    <cn nm="lower-spur" val="7"/>
+    <cn nm="baseline-above" val="36"/>
+    <cn nm="baseline-below" val="20"/>
+    <cn nm="bottom" val="0"/>
+    <cn nm="bottom-inside" val="14"/>
+    
+    <setvs axis="y"/>
+    <callm nm="lc-horz-stroke-cv">
+      <wpm nm="pt1" val="top"/>
+      <wpm nm="pt2" val="top-inside"/>
+      <wpm nm="cv" val="xheight-overshoot"/>
+      <wpm nm="cv-h" val="lc-curved-stem"/>
+    </callm>
+    <sh>
+      <ref><pt n="top"/></ref>
+      <pt n="ear-top"/>
+      <pt n="ear-below"/>
+    </sh>
+    <callm nm="lc-horz-stroke-cv">
+      <wpm nm="pt1" val="bottom"/>
+      <wpm nm="pt2" val="bottom-inside"/>
+      <wpm nm="cv" val="lc-descender-undershoot"/>
+      <wpm nm="cv-h" val="lc-curved-stem"/>
+    </callm>
+    <ip>
+      <ref>
+	<pt n="top"/>
+	<pt n="bottom"/>
+      </ref>
+      <pt n="baseline-below"/>
+      <pt n="bowl-bottom"/>
+    </ip>
+    <push>baseline-below bowl-bottom</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDAP" modifier="1"/>
+    <mv di="lc-curved-stem" color="black">
+      <ref><pt n="bowl-bottom"/></ref>
+      <pt n="bowl-bottom-inside"/>
+      <ip>
+	<pt n="spur"/>
+      </ip>
+      <sh>
+	<ref><pt n="spur"/></ref>
+	<pt n="spur - 1"/>
+      </sh>
+    </mv>
+    <mv color="black">
+      <ref><pt n="baseline-below"/></ref>
+      <pt n="baseline-above"/>
+      <ip>
+	<pt n="lower-spur"/>
+      </ip>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="h">
+    <cn nm="top" val="5"/>
+    <cn nm="counter-top" val="35"/>
+    <cn nm="counter-top-inside" val="28"/>
+    <cn nm="serif-bottom" val="11"/>
+    <cn nm="serif-top-left" val="12"/>
+    <setvs axis="y"/>
+    <callf nm="ascender-top">
+      <wpm nm="top" val="top"/>
+    </callf>
+    <callm nm="lc-horz-stroke">
+      <wpm nm="pt1" val="counter-top"/>
+      <wpm nm="pt2" val="counter-top-inside"/>
+      <wpm nm="cv" val="xheight-overshoot"/>
+    </callm>
+    <callm nm="lc-bottom-serif">
+      <wpm nm="bottom-left" val="serif-bottom"/>
+      <wpm nm="top-left" val="serif-top-left"/>
+      <wpm nm="codefrag">
+	<sh>
+	  <ref><pt n="serif-top-left"/></ref>
+	  <pt n="17"/>
+	</sh>
+	<sh>
+	  <ref><pt n="serif-bottom"/></ref>
+	  <pt n="0"/>
+	  <pt n="16"/>
+	  <pt n="21"/>
+	</sh>
+      </wpm>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="dotlessi">
+    <pm nm="offset" val="0"/>
+    <pm nm="include-iup" val="0"/>
+    <cn nm="top" val="8"/>
+    <cn nm="serif-bottom" val="0"/>
+    <setvs axis="y"/>
+    <callf nm="minim-top">
+      <wpm nm="top" val="top"/>
+    </callf>
+    <callm nm="lc-bottom-serif">
+      <wpm nm="bottom-left" val="serif-bottom"/>
+      <wpm nm="top-left" val="serif-bottom + 1"/>
+      <wpm nm="codefrag">
+	<sh>
+	  <ref><pt n="serif-bottom + 1"/></ref>
+	  <pt n="serif-bottom + 2"/>
+	  <pt n="serif-bottom + 14"/>
+	  <pt n="serif-bottom + 15"/>
+	</sh>
+      </wpm>
+    </callm>
+    <compile-if test="include-iup = 0">
+      <iup axis="y"/>
+    </compile-if>
+  </gl>
+
+  <gl pnm="uni0237">
+    <cn nm="top" val="21"/>
+    <cn nm="bottom" val="0"/>
+    <cn nm="bottom1" val="12"/>
+    <cn nm="bottom2" val="6"/>
+
+    <setvs axis="y"/>
+    <callf nm="minim-top">
+      <wpm nm="top" val="top"/>
+    </callf>
+    <mv di="lc-descender-undershoot">
+      <pt n="bottom"/>
+      <mv><pt n="bottom1"/></mv>
+      <mv><pt n="bottom2"/></mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="minus">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="0"/>
+      <mv di="euro-bar">
+	<pt n="1"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="hyphen" init-graphics="no">
+    <callg pnm="minus"/>
+  </gl>
+
+  <gl pnm="hyphen.cap" init-graphics="no">
+    <callg pnm="minus"/>
+  </gl>
+
+  <gl pnm="endash" init-graphics="no">
+    <callg pnm="minus"/>
+  </gl>
+
+  <gl pnm="emdash" init-graphics="no">
+    <callg pnm="minus"/>
+  </gl>
+
+  <gl pnm="underscore" init-graphics="no">
+    <setvs axis="y"/>
+    <push>2 0</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDRP">
+      <modifier type="color" val="black"/>
+    </command>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni2010" init-graphics="no">
+    <callg pnm="minus"/>
+  </gl>
+
+  <gl pnm="uni2011" init-graphics="no">
+    <callg pnm="minus"/>
+  </gl>
+
+  <gl pnm="uni2015" init-graphics="no">
+    <callg pnm="minus"/>
+  </gl>
+
+  <gl pnm="plus">
+    <cn nm="top" val="5"/>
+    <cn nm="bottom" val="0"/>
+    <cn nm="cross-top" val="3"/>
+    <cn nm="cross-bottom" val="2"/>
+    <setvs axis="y"/>
+    <mv>
+      <pt n="cross-bottom"/>
+      <sh><pt n="top"/></sh>
+      <mv color="black">
+	<pt n="cross-top"/>
+	<sh><pt n="cross-bottom"/></sh>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="k">
+    <cn nm="top" val="5"/>
+    <cn nm="serif-bottom" val="27"/>
+    <cn nm="serif-top" val="28"/>
+    <cn nm="serif-top2" val="33"/>
+    <cn nm="serif-bottom2" val="32"/>
+    <cn nm="vert-bot" val="0"/>
+    <cn nm="diag-bot" val="11"/>
+    <cn nm="xh" val="39"/>
+    <cn nm="diag-top" val="22"/>
+    <cn nm="mid-top" val="16"/>
+    <cn nm="mid-bottom" val="17"/>
+    <cn nm="mid-mid" val="24"/>
+    <setvs axis="y"/>
+    <callf nm="ascender-top">
+      <wpm nm="top" val="top"/>
+    </callf>
+    <callm nm="lc-bottom-serif">
+      <wpm nm="bottom-left" val="serif-bottom"/>
+      <wpm nm="top-left" val="serif-top"/>
+      <wpm nm="codefrag">
+	<sh>
+	  <ref><pt n="serif-bottom"/></ref>
+	  <pt n="serif-bottom2"/>
+	  <pt n="vert-bot"/>
+	  <pt n="diag-bot"/>
+	</sh>
+	<sh>
+	  <ref><pt n="serif-top"/></ref>
+	  <pt n="serif-top2"/>
+	</sh>
+      </wpm>
+    </callm>
+    <mv di="xheight">
+      <pt n="xh"/>
+      <sh>
+	<pt n="diag-top"/>
+      </sh>
+      <mv di="lc-serif" color="black">
+	<pt n="xh - 1"/>
+      </mv>
+    </mv>
+    <ip>
+      <ref>
+	<pt n="xh"/>
+	<pt n="serif-bottom"/>
+      </ref>
+      <pt n="mid-top"/>
+      <pt n="mid-mid"/>
+    </ip>
+    <push>mid-bottom mid-top</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDRP"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="l">
+    <pm nm="include-iup" val="0"/>
+    <pm nm="serif-bottom" val="11"/>
+    <pm nm="vertical-bottom" val="0"/>
+    <pm nm="top" val="5"/>
+    <setvs axis="y"/>
+    <callm nm="lc-bottom-serif">
+      <wpm nm="bottom-left" val="serif-bottom"/>
+      <wpm nm="top-left" val="serif-bottom + 1"/>
+      <wpm nm="codefrag">
+	<sh>
+	  <ref><pt n="serif-bottom"/></ref>
+	  <pt n="vertical-bottom"/>
+	</sh>
+      </wpm>
+    </callm>
+    <callf nm="ascender-top">
+      <wpm nm="top" val="top"/>
+    </callf>
+    <compile-if test="include-iup = 0">
+      <iup axis="y"/>
+    </compile-if>
+  </gl>
+
+  <gl pnm="m">
+    <cn nm="minim-top" val="5"/>
+    <cn nm="counter1-top" val="38"/>
+    <cn nm="counter2-top" val="58"/>
+    <cn nm="counter1-top-inside" val="31"/>
+    <cn nm="counter2-top-inside" val="51"/>
+    <cn nm="serif-bottom1" val="11"/>
+    <cn nm="serif-bottom2" val="16"/>
+    <cn nm="serif-bottom3" val="21"/>
+    <cn nm="serif-top1" val="12"/>
+    <cn nm="serif-top2" val="17"/>
+    <cn nm="serif-top3" val="22"/>
+    <cn nm="vert-bottom1" val="0"/>
+    <cn nm="vert-bottom2" val="26"/>
+    <cn nm="vert-bottom3" val="44"/>
+    <setvs axis="y"/>
+    <mv di="xheight-overshoot">
+      <pt n="minim-top"/>
+      <sh>
+	<pt n="minim-top - 1"/>
+	<pt n="minim-top - 2"/>
+	<pt n="counter1-top"/>
+	<pt n="counter2-top"/>
+      </sh>
+    </mv>
+    <mv>
+      <ref><pt n="counter1-top"/></ref>	
+      <pt n="counter1-top-inside"/>
+      <sh>
+	<pt n="counter2-top-inside"/>
+      </sh>
+    </mv>
+    <callm nm="lc-bottom-serif">
+      <wpm nm="bottom-left" val="serif-bottom1"/>
+      <wpm nm="top-left" val="serif-top1"/>
+      <wpm nm="codefrag">
+	<sh>
+	  <ref><pt n="serif-bottom1"/></ref>
+	  <pt n="serif-bottom2"/>
+	  <pt n="serif-bottom3"/>
+	  <pt n="vert-bottom1"/>
+	  <pt n="vert-bottom2"/>
+	  <pt n="vert-bottom3"/>
+	</sh>
+	<sh>
+	  <ref><pt n="serif-top1"/></ref>
+	  <pt n="serif-top2"/>
+	  <pt n="serif-top3"/>
+	</sh>
+      </wpm>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="n">
+    <cn nm="minim-top" val="37"/>
+    <cn nm="counter1-top" val="14"/>
+    <cn nm="counter1-top-inside" val="7"/>
+    <cn nm="serif-bottom1" val="22"/>
+    <cn nm="serif-bottom2" val="27"/>
+    <cn nm="serif-top1" val="23"/>
+    <cn nm="serif-top2" val="28"/>
+    <cn nm="vert-bottom1" val="32"/>
+    <cn nm="vert-bottom2" val="0"/>
+    <setvs axis="y"/>
+    <mv di="xheight-overshoot">
+      <pt n="minim-top"/>
+      <sh>
+	<pt n="minim-top - 1"/>
+	<pt n="minim-top - 2"/>
+	<pt n="counter1-top"/>
+      </sh>
+    </mv>
+    <mv color="black">
+      <ref><pt n="counter1-top"/></ref>	
+      <pt n="counter1-top-inside"/>
+    </mv>
+    <callm nm="lc-bottom-serif">
+      <wpm nm="bottom-left" val="serif-bottom1"/>
+      <wpm nm="top-left" val="serif-top1"/>
+      <wpm nm="codefrag">
+	<sh>
+	  <ref><pt n="serif-bottom1"/></ref>
+	  <pt n="serif-bottom2"/>
+	  <pt n="vert-bottom1"/>
+	  <pt n="vert-bottom2"/>
+	</sh>
+	<sh>
+	  <ref><pt n="serif-top1"/></ref>
+	  <pt n="serif-top2"/>
+	</sh>
+      </wpm>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="o">
+    <pm nm="include-iup" val="0"/>
+    <cn nm="top" val="8"/>
+    <cn nm="top-inside" val="24"/>
+    <cn nm="bottom" val="0"/>
+    <cn nm="bottom-inside" val="16"/>
+
+    <setvs axis="y"/>
+    <callm nm="lc-horz-stroke-cv">
+      <wpm nm="pt1" val="top"/>
+      <wpm nm="pt2" val="top-inside"/>
+      <wpm nm="cv" val="xheight-overshoot"/>
+      <wpm nm="cv-h" val="lc-curved-stem"/>
+    </callm>
+    <callm nm="lc-horz-stroke-cv">
+      <wpm nm="pt1" val="bottom"/>
+      <wpm nm="pt2" val="bottom-inside"/>
+      <wpm nm="cv" val="baseline-undershoot"/>
+      <wpm nm="cv-h" val="lc-curved-stem"/>
+    </callm>
+    <compile-if test="include-iup = 0">
+      <iup axis="y"/>
+    </compile-if>
+  </gl>
+
+  <gl pnm="p">
+    <cn nm="bowl-top" val="35"/>
+    <cn nm="bowl-top-inside" val="27"/>
+    <cn nm="bowl-bottom" val="11"/>
+    <cn nm="bowl-bottom-inside" val="19"/>
+    <cn nm="stem-top" val="5"/>
+    <cn nm="stem-bottom" val="0"/>
+    <cn nm="serif-bottom" val="43"/>
+
+    <setvs axis="y"/>
+    <callf nm="minim-top">
+      <wpm nm="top" val="stem-top"/>
+    </callf>
+    <sh>
+      <ref><pt n="stem-top"/></ref>
+      <pt n="bowl-top"/>
+    </sh>
+    <mv di="lc-curved-stem" color="black">
+      <ref><pt n="bowl-top"/></ref>
+      <pt n="bowl-top-inside"/>
+    </mv>
+    <callm nm="lc-horz-stroke-cv">
+      <wpm nm="pt1" val="bowl-bottom"/>
+      <wpm nm="pt2" val="bowl-bottom-inside"/>
+      <wpm nm="cv" val="baseline-undershoot"/>
+      <wpm nm="cv-h" val="lc-curved-stem"/>
+    </callm>
+    <mv di="lc-descender">
+      <pt n="serif-bottom"/>
+      <mv di="lc-serif" color="black">
+	<pt n="serif-bottom + 1"/>
+	<sh>
+	  <pt n="stem-bottom"/>
+	</sh>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="q">
+    <cn nm="bowl-top" val="13"/>
+    <cn nm="bowl-top-inside" val="33"/>
+    <cn nm="bowl-bottom" val="5"/>
+    <cn nm="bowl-bottom-inside" val="24"/>
+    <cn nm="serif-bottom" val="41"/>
+    <cn nm="stem-top" val="17"/>
+    <cn nm="stem-bottom" val="0"/>
+    <setvs axis="y"/>
+    <callm nm="lc-horz-stroke-cv">
+      <wpm nm="pt1" val="bowl-top"/>
+      <wpm nm="pt2" val="bowl-top-inside"/>
+      <wpm nm="cv" val="xheight-overshoot"/>
+      <wpm nm="cv-h" val="lc-curved-stem"/>
+    </callm>
+    <sh>
+      <ref><pt n="bowl-top"/></ref>
+      <pt n="stem-top"/>
+    </sh>
+    <callm nm="lc-horz-stroke-cv">
+      <wpm nm="pt1" val="bowl-bottom"/>
+      <wpm nm="pt2" val="bowl-bottom-inside"/>
+      <wpm nm="cv" val="baseline-undershoot"/>
+      <wpm nm="cv-h" val="lc-curved-stem"/>
+    </callm>
+    <callm nm="lc-bottom-serif">
+      <wpm nm="bottom-left" val="serif-bottom"/>
+      <wpm nm="top-left" val="serif-bottom + 1"/>
+      <wpm nm="cv" val="lc-descender"/>
+      <wpm nm="codefrag">
+	<sh>
+	  <ref><pt n="serif-bottom"/></ref>
+	  <pt n="stem-bottom"/>
+	</sh>
+      </wpm>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="r">
+    <cn nm="stem-top" val="37"/>
+    <cn nm="stem-bottom" val="32"/>
+    <cn nm="serif-bottom" val="27"/>
+    <cn nm="arm-top" val="8"/>
+    <cn nm="arm-below1" val="23"/>
+    <cn nm="arm-below2" val="17"/>
+    <setvs axis="y"/>
+    <callf nm="minim-top">
+      <wpm nm="top" val="stem-top"/>
+    </callf>
+    <sh>
+      <!-- <ref><pt n="stem-top"/></ref> -->
+      <pt n="arm-top"/>
+    </sh>
+    <mv>
+      <ref><pt n="arm-top"/></ref>
+      <pt n="arm-below2"/>
+      <ip><pt n="arm-below1"/></ip>
+    </mv>
+    <callm nm="lc-bottom-serif">
+      <wpm nm="bottom-left" val="serif-bottom"/>
+      <wpm nm="top-left" val="serif-bottom + 1"/>
+      <wpm nm="codefrag">
+	<sh>
+	  <ref><pt n="serif-bottom"/></ref>
+	  <pt n="stem-bottom"/>
+	</sh>
+      </wpm>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="s">
+    <cn nm="top" val="24"/>
+    <cn nm="top-ins" val="40"/>
+    <cn nm="bottom" val="0"/>
+    <cn nm="bottom-ins" val="10"/>
+    <cn nm="mid-top" val="48"/>
+    <cn nm="mid-bottom" val="16"/>
+    <setvs axis="y"/>
+    <callm nm="lc-horz-stroke-cv">
+      <wpm nm="pt1" val="top"/>
+      <wpm nm="pt2" val="top-ins"/>
+      <wpm nm="cv" val="xheight-overshoot"/>
+      <wpm nm="cv-h" val="lc-curved-stem"/>
+    </callm>
+    <callm nm="lc-horz-stroke-cv">
+      <wpm nm="pt1" val="bottom"/>
+      <wpm nm="pt2" val="bottom-ins"/>
+      <wpm nm="cv" val="baseline-undershoot"/>
+      <wpm nm="cv-h" val="lc-curved-stem"/>
+    </callm>
+    <ip>
+      <ref>
+	<pt n="top"/>
+	<pt n="bottom"/>
+      </ref>
+      <pt n="mid-top"/>
+    </ip>
+    <sh>
+      <ref><pt n="mid-top"/></ref>
+      <pt n="mid-bottom"/>
+    </sh>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="t">
+    <cn nm="top" val="14"/>
+    <cn nm="bar-top" val="16"/>
+    <cn nm="bar-bottom1" val="19"/>
+    <cn nm="bar-bottom2" val="8"/>
+    <cn nm="bottom" val="0"/>
+    <cn nm="bottom-ins" val="27"/>
+    <setvs axis="y"/>
+    <mv><pt n="top"/></mv>
+    <callm nm="lc-horz-stroke">
+      <wpm nm="pt1" val="bottom"/>
+      <wpm nm="pt2" val="bottom-ins"/>
+      <wpm nm="cv" val="baseline-undershoot"/>
+    </callm>
+    <ip>
+      <ref>
+	<pt n="top"/>
+	<pt n="bottom"/>
+      </ref>
+      <pt n="bar-top"/>
+    </ip>
+    <push>bar-bottom2 bar-bottom1 bar-top</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDRP">
+      <modifier type="color" val="black"/>
+    </command>
+    <command nm="SHP" modifier="0"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="u">
+    <pm nm="include-iup" val="0"/>
+    <cn nm="top-left" val="7"/>
+    <cn nm="top-right" val="27"/>
+    <cn nm="bottom" val="0"/>
+    <cn nm="bottom-ins" val="15"/>
+    <cn nm="stem-bottom" val="22"/>
+    <setvs axis="y"/>
+    <mv di="xheight">
+      <pt n="top-left"/>
+      <sh><pt n="top-right"/></sh>
+      <mv di="lc-serif" color="black">
+	<pt n="top-left - 1"/>
+	<sh><pt n="top-right - 1"/></sh>
+      </mv>
+    </mv>
+    <mv di="baseline-undershoot">
+      <pt n="bottom"/>
+      <sh><pt n="stem-bottom"/></sh>
+      <mv color="black"><pt n="bottom-ins"/></mv>
+    </mv>
+    <compile-if test="include-iup = 0">
+      <iup axis="y"/>
+    </compile-if>
+  </gl>
+
+  <gl pnm="v">
+    <cn nm="serif-left" val="10"/>
+    <cn nm="serif-right" val="15"/>
+    <cn nm="diag-left-top" val="1"/>
+    <cn nm="diag-right-top" val="6"/>
+    <cn nm="bottom" val="0"/>
+    <cn nm="bottom-ins" val="4"/>
+    <setvs axis="y"/>
+    <mv di="xheight">
+      <pt n="serif-left"/>
+      <sh><pt n="serif-right"/></sh>
+      <mv di="lc-serif" color="black">
+	<pt n="serif-left - 1 "/>
+	<sh><pt n="serif-right - 1"/></sh>
+      </mv>
+    </mv>
+    <mv di="baseline-undershoot">
+      <pt n="bottom"/>
+      <sh>
+	<pt n="bottom-ins"/>
+	<pt n="bottom-ins - 1"/>
+      </sh>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="w">
+    <cn nm="serif-left" val="18"/>
+    <cn nm="serif-mid" val="23"/>
+    <cn nm="serif-right" val="28"/>
+    <cn nm="diag-left-top" val="1"/>
+    <cn nm="diag-mid-top" val="9"/>
+    <cn nm="diag-mid-top2" val="5"/>
+    <cn nm="diag-right-top" val="14"/>
+    <cn nm="bottom" val="0"/>
+    <cn nm="bottom-ins" val="4"/>
+    <cn nm="bottom-right" val="8"/>
+    <cn nm="bottom-right-ins" val="12"/>
+    <setvs axis="y"/>
+    <mv di="xheight">
+      <pt n="serif-left"/>
+      <sh>
+	<pt n="serif-mid"/>
+	<pt n="serif-right"/>
+	<pt n="diag-left-top"/>
+	<pt n="diag-mid-top"/>
+	<pt n="diag-mid-top2"/>
+	<pt n="diag-right-top"/>
+      </sh>
+      <mv di="lc-serif" color="black">
+	<pt n="serif-left - 1 "/>
+	<sh>
+	  <pt n="serif-mid - 1"/>
+	  <pt n="serif-right - 1"/>
+	</sh>
+      </mv>
+    </mv>
+    <mv di="baseline-undershoot">
+      <pt n="bottom"/>
+      <sh>
+	<pt n="bottom-ins"/>
+	<pt n="bottom-ins - 1"/>
+	<pt n="bottom-right"/>
+	<pt n="bottom-right-ins"/>
+	<pt n="bottom-right-ins - 1"/>
+      </sh>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="x">
+    <cn nm="serif-top-left" val="20"/>
+    <cn nm="serif-top-right" val="25"/>
+    <cn nm="serif-bottom-left" val="8"/>
+    <cn nm="serif-bottom-right" val="13"/>
+    <cn nm="diag-top-left" val="5"/>
+    <cn nm="diag-top-right" val="2"/>
+    <cn nm="diag-bottom-left" val="0"/>
+    <cn nm="diag-bottom-right" val="7"/>
+    <setvs axis="y"/>
+    <mv di="xheight">
+      <pt n="serif-top-left"/>
+      <sh>
+	<pt n="serif-top-right"/>
+	<pt n="diag-top-left"/>
+	<pt n="diag-top-right"/>
+      </sh>
+      <mv di="lc-serif" color="black">
+	<pt n="serif-top-left - 1"/>
+	<sh><pt n="serif-top-right - 1"/></sh>
+      </mv>
+    </mv>
+    <mv di="baseline">
+      <pt n="serif-bottom-left"/>
+      <sh>
+	<pt n="serif-bottom-right"/>
+	<pt n="diag-bottom-left"/>
+	<pt n="diag-bottom-right"/>
+      </sh>
+      <mv di="lc-serif" color="black">
+	<pt n="serif-bottom-left + 1"/>
+	<sh><pt n="serif-bottom-right + 1"/></sh>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="y">
+    <pm nm="include-iup" val="0"/>
+    <cn nm="serif-top-left" val="21"/>
+    <cn nm="serif-top-right" val="26"/>
+    <cn nm="diag-top-left" val="16"/>
+    <cn nm="diag-top-right" val="10"/>
+    <cn nm="bottom" val="0"/>
+    <cn nm="bottom-above" val="6"/>
+    <cn nm="crotch" val="15"/>
+    <setvs axis="y"/>
+    <mv di="xheight">
+      <pt n="serif-top-left"/>
+      <sh>
+	<pt n="serif-top-right"/>
+	<pt n="diag-top-left"/>
+	<pt n="diag-top-right"/>
+      </sh>
+      <mv di="lc-serif" color="black">
+	<pt n="serif-top-left - 1"/>
+	<sh><pt n="serif-top-right - 1"/></sh>
+      </mv>
+    </mv>
+    <mv di="lc-descender">
+      <pt n="bottom"/>
+      <mv><pt n="bottom-above"/></mv>
+    </mv>
+    <ip>
+      <ref>
+	<pt n="serif-top-left"/>
+	<pt n="bottom"/>
+      </ref>
+      <pt n="crotch"/>
+    </ip>
+    <compile-if test="include-iup = 0">
+      <iup axis="y"/>
+    </compile-if>
+  </gl>
+
+  <gl pnm="z">
+    <cn nm="top" val="20"/>
+    <cn nm="top-ins" val="8"/>
+    <cn nm="bottom" val="3"/>
+    <cn nm="bottom-ins" val="25"/>
+    <cn nm="diag-top" val="6"/>
+    <cn nm="diag-bottom" val="23"/>
+    <cn nm="bump-top" val="17"/>
+    <cn nm="bump-bottom" val="0"/>
+    <setvs axis="y"/>
+    <mv di="xheight">
+      <pt n="top"/>
+      <sh>
+	<pt n="bump-top"/>
+	<pt n="diag-top"/>
+      </sh>
+      <mv di="lc-serif" color="black">
+	<pt n="top-ins"/>
+      </mv>
+    </mv>
+    <mv di="baseline">
+      <pt n="bottom"/>
+      <sh>
+	<pt n="bump-bottom"/>
+	<pt n="diag-bottom"/>
+      </sh>
+      <mv di="lc-serif" color="black">
+	<pt n="bottom-ins"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="ae">
+    <cn nm="top-left" val="49"/>
+    <cn nm="top-right" val="56"/>
+    <cn nm="top-left-ins" val="35"/>
+    <cn nm="top-right-ins" val="10"/>
+    <cn nm="bottom-left" val="0"/>
+    <cn nm="bottom-right" val="25"/>
+    <cn nm="bottom-left-ins" val="68"/>
+    <cn nm="bottom-right-ins" val="18"/>
+    <cn nm="diag-top" val="6"/>
+    <cn nm="diag-bottom" val="61"/>
+    <setvs axis="y"/>
+    <mv di="xheight-overshoot">
+      <pt n="top-left"/>
+      <sh><pt n="top-right"/></sh>
+      <mv color="black">
+	<pt n="top-left-ins"/>
+	<sh><pt n="top-right-ins"/></sh>
+      </mv>
+    </mv>
+    <mv di="baseline-undershoot">
+      <pt n="bottom-left"/>
+      <sh><pt n="bottom-right"/></sh>
+      <mv color="black">
+	<pt n="bottom-left-ins"/>
+	<sh><pt n="bottom-right-ins"/></sh>
+      </mv>
+    </mv>
+    <ip>
+      <ref>
+	<pt n="top-left"/>
+	<pt n="bottom-left"/>
+      </ref>
+      <pt n="diag-bottom"/>
+    </ip>
+    <sh>
+      <ref><pt n="diag-bottom"/></ref>
+      <pt n="diag-top"/>
+    </sh>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="thorn">
+    <cn nm="top" val="5"/>
+    <cn nm="serif-bottom" val="11"/>
+    <cn nm="stem-bottom" val="0"/>
+    <cn nm="bowl-top" val="40"/>
+    <cn nm="bowl-top-ins" val="32"/>
+    <cn nm="bowl-bottom" val="16"/>
+    <cn nm="bowl-bottom-ins" val="24"/>
+    <setvs axis="y"/>
+    <callf nm="ascender-top">
+      <wpm nm="top" val="top"/>
+    </callf>
+    <callm nm="lc-bottom-serif">
+      <wpm nm="bottom-left" val="serif-bottom"/>
+      <wpm nm="top-left" val="serif-bottom + 1"/>
+      <wpm nm="cv" val="lc-descender"/>
+      <wpm nm="codefrag">
+	<sh>
+	  <ref><pt n="serif-bottom"/></ref>
+	  <pt n="stem-bottom"/>
+	</sh>
+      </wpm>
+    </callm>
+    <callm nm="lc-horz-stroke">
+      <wpm nm="pt1" val="bowl-top"/>
+      <wpm nm="pt2" val="bowl-top-ins"/>
+      <wpm nm="cv" val="xheight-overshoot"/>
+    </callm>
+    <callm nm="lc-horz-stroke-cv">
+      <wpm nm="pt1" val="bowl-bottom"/>
+      <wpm nm="pt2" val="bowl-bottom-ins"/>
+      <wpm nm="cv" val="baseline-undershoot"/>
+      <wpm nm="cv-h" val="lc-curved-stem"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="eth">
+    <cn nm="bowl-top" val="8"/>
+    <cn nm="bowl-top-ins" val="35"/>
+    <cn nm="bowl-bottom" val="0"/>
+    <cn nm="bowl-bottom-ins" val="25"/>
+    <cn nm="top" val="16"/>
+    <cn nm="cross1" val="44"/>
+    <setvs axis="y"/>
+    <callm nm="lc-horz-stroke-cv">
+      <wpm nm="pt1" val="bowl-top"/>
+      <wpm nm="pt2" val="bowl-top-ins"/>
+      <wpm nm="cv" val="xheight-overshoot"/>
+      <wpm nm="cv-h" val="lc-curved-stem"/>
+    </callm>
+    <callm nm="lc-horz-stroke-cv">
+      <wpm nm="pt1" val="bowl-bottom"/>
+      <wpm nm="pt2" val="bowl-bottom-ins"/>
+      <wpm nm="cv" val="baseline-undershoot"/>
+      <wpm nm="cv-h" val="lc-curved-stem"/>
+    </callm>
+    <mv><pt n="top"/></mv>
+    <ip>
+      <ref>
+	<pt n="top"/>
+	<pt n="bowl-top"/>
+      </ref>
+      <pt n="cross1"/>
+      <pt n="cross1 + 1"/>
+      <pt n="cross1 + 2"/>
+      <pt n="cross1 + 3"/>
+    </ip>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="oslash">
+    <cn nm="s-top" val="34"/>
+    <cn nm="s-bottom" val="32"/>
+    <cn nm="top" val="8"/>
+    <cn nm="bottom" val="0"/>
+    <setvs axis="y"/>
+    <callg pnm="o"/>
+    <sh>
+      <ref><pt n="top"/></ref>
+      <pt n="s-top"/>
+    </sh>
+    <sh>
+      <ref><pt n="bottom"/></ref>
+      <pt n="s-bottom"/>
+    </sh>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="thorn.loclENG">
+    <cn nm="top" val="8"/>
+    <cn nm="stem-bottom" val="0"/>
+    <cn nm="bowl-top" val="30"/>
+    <cn nm="bowl-top-ins" val="23"/>
+    <cn nm="bowl-bottom" val="15"/>
+    <cn nm="bowl-bottom-ins" val="16"/>
+    <setvs axis="y"/>
+    <callf nm="ascender-top">
+      <wpm nm="top" val="top"/>
+    </callf>
+    <mv di="lc-descender-undershoot">
+      <pt n="stem-bottom"/>
+    </mv>
+    <callm nm="lc-horz-stroke-cv">
+      <wpm nm="pt1" val="bowl-top"/>
+      <wpm nm="pt2" val="bowl-top-ins"/>
+      <wpm nm="cv" val="xheight-overshoot"/>
+      <wpm nm="cv-h" val="lc-curved-stem"/>
+    </callm>
+    <callm nm="lc-horz-stroke-cv">
+      <wpm nm="pt1" val="bowl-bottom"/>
+      <wpm nm="pt2" val="bowl-bottom-ins"/>
+      <wpm nm="cv" val="baseline-undershoot"/>
+      <wpm nm="cv-h" val="lc-curved-stem"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni01BF"> <!-- wynn -->
+    <cn nm="top" val="31"/>
+    <cn nm="stem-bottom" val="23"/>
+    <cn nm="bowl-top" val="15"/>
+    <cn nm="bowl-top-ins" val="8"/>
+    <cn nm="bowl-bottom" val="0"/>
+    <cn nm="bowl-bottom-ins" val="1"/>
+    <setvs axis="y"/>
+    <callf nm="minim-top">
+      <wpm nm="top" val="top"/>
+    </callf>
+    <mv di="lc-descender-undershoot">
+      <pt n="stem-bottom"/>
+    </mv>
+    <callm nm="lc-horz-stroke-cv">
+      <wpm nm="pt1" val="bowl-top"/>
+      <wpm nm="pt2" val="bowl-top-ins"/>
+      <wpm nm="cv" val="xheight-overshoot"/>
+      <wpm nm="cv-h" val="lc-curved-stem"/>
+    </callm>
+    <callm nm="lc-horz-stroke-cv">
+      <wpm nm="pt1" val="bowl-bottom"/>
+      <wpm nm="pt2" val="bowl-bottom-ins"/>
+      <wpm nm="cv" val="baseline-undershoot"/>
+      <wpm nm="cv-h" val="lc-curved-stem"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="eth.loclENG">
+    <cn nm="bowl-top" val="8"/>
+    <cn nm="bowl-top-ins" val="35"/>
+    <cn nm="bowl-bottom" val="0"/>
+    <cn nm="bowl-bottom-ins" val="26"/>
+    <cn nm="top" val="13"/>
+    <cn nm="cross1" val="43"/>
+    <cn nm="cross2" val="47"/>
+    <cn nm="cross3" val="48"/>
+    <cn nm="cross4" val="52"/>
+    <setvs axis="y"/>
+    <callm nm="lc-horz-stroke-cv">
+      <wpm nm="pt1" val="bowl-top"/>
+      <wpm nm="pt2" val="bowl-top-ins"/>
+      <wpm nm="cv" val="xheight-overshoot"/>
+      <wpm nm="cv-h" val="lc-curved-stem"/>
+    </callm>
+    <callm nm="lc-horz-stroke-cv">
+      <wpm nm="pt1" val="bowl-bottom"/>
+      <wpm nm="pt2" val="bowl-bottom-ins"/>
+      <wpm nm="cv" val="baseline-undershoot"/>
+      <wpm nm="cv-h" val="lc-curved-stem"/>
+    </callm>
+    <mv><pt n="top"/></mv>
+    <ip>
+      <ref>
+	<pt n="top"/>
+	<pt n="bowl-top"/>
+      </ref>
+      <pt n="cross1"/>
+      <pt n="cross2"/>
+    </ip>
+    <sh>
+      <ref><pt n="cross1"/></ref>
+      <pt n="cross4"/>
+    </sh>
+    <sh>
+      <ref><pt n="cross2"/></ref>
+      <pt n="cross3"/>
+    </sh>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="eth.loclENG.alt">
+    <cn nm="bowl-top" val="8"/>
+    <cn nm="bowl-top-ins" val="35"/>
+    <cn nm="bowl-bottom" val="0"/>
+    <cn nm="bowl-bottom-ins" val="25"/>
+    <cn nm="top" val="13"/>
+    <cn nm="cross1" val="45"/>
+    <cn nm="cross2" val="49"/>
+    <cn nm="cross3" val="50"/>
+    <cn nm="cross4" val="54"/>
+    <setvs axis="y"/>
+    <callm nm="lc-horz-stroke-cv">
+      <wpm nm="pt1" val="bowl-top"/>
+      <wpm nm="pt2" val="bowl-top-ins"/>
+      <wpm nm="cv" val="xheight-overshoot"/>
+      <wpm nm="cv-h" val="lc-curved-stem"/>
+    </callm>
+    <callm nm="lc-horz-stroke-cv">
+      <wpm nm="pt1" val="bowl-bottom"/>
+      <wpm nm="pt2" val="bowl-bottom-ins"/>
+      <wpm nm="cv" val="baseline-undershoot"/>
+      <wpm nm="cv-h" val="lc-curved-stem"/>
+    </callm>
+    <mv><pt n="top"/></mv>
+    <ip>
+      <ref>
+	<pt n="top"/>
+	<pt n="bowl-top"/>
+      </ref>
+      <pt n="cross1"/>
+      <pt n="cross2"/>
+    </ip>
+    <sh>
+      <ref><pt n="cross1"/></ref>
+      <pt n="cross4"/>
+    </sh>
+    <sh>
+      <ref><pt n="cross2"/></ref>
+      <pt n="cross3"/>
+    </sh>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uniA77A.alt">
+    <cn nm="bowl-top" val="8"/>
+    <cn nm="bowl-top-ins" val="35"/>
+    <cn nm="bowl-bottom" val="0"/>
+    <cn nm="bowl-bottom-ins" val="26"/>
+    <cn nm="top" val="13"/>
+    <setvs axis="y"/>
+    <callm nm="lc-horz-stroke-cv">
+      <wpm nm="pt1" val="bowl-top"/>
+      <wpm nm="pt2" val="bowl-top-ins"/>
+      <wpm nm="cv" val="xheight-overshoot"/>
+      <wpm nm="cv-h" val="lc-curved-stem"/>
+    </callm>
+    <callm nm="lc-horz-stroke-cv">
+      <wpm nm="pt1" val="bowl-bottom"/>
+      <wpm nm="pt2" val="bowl-bottom-ins"/>
+      <wpm nm="cv" val="baseline-undershoot"/>
+      <wpm nm="cv-h" val="lc-curved-stem"/>
+    </callm>
+    <mv><pt n="top"/></mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="A">
+    <pm nm="include-iup" val="0"/>
+    <cn nm="top" val="11"/>
+    <cn nm="serif-bottom-left" val="30"/>
+    <cn nm="serif-bottom-right" val="25"/>
+    <cn nm="left-diag-top" val="18"/>
+    <cn nm="left-diag-bottom" val="17"/>
+    <cn nm="right-diag-bottom" val="0"/>
+    <cn nm="bar-bottom" val="21"/>
+    <cn nm="bar-top" val="22"/>
+    <setvs axis="y"/>
+    <mv di="cap-height-overshoot">
+      <pt n="top"/>
+      <sh><pt n="left-diag-top"/></sh>
+    </mv>
+    <callf nm="cap-dbl-serif">
+      <wpm nm="first-left" val="serif-bottom-left"/>
+      <wpm nm="second-left" val="serif-bottom-left + 1"/>
+      <wpm nm="first-right" val="serif-bottom-right"/>
+      <wpm nm="second-right" val="serif-bottom-right + 1"/>
+      <wpm nm="stem1" val="left-diag-bottom"/>
+      <wpm nm="stem2" val="right-diag-bottom"/>
+    </callf>
+    <callm nm="mid-stem">
+      <wpm nm="ref1" val="top"/>
+      <wpm nm="ref2" val="serif-bottom-left"/>
+      <wpm nm="pt1" val="bar-bottom"/>
+      <wpm nm="pt2" val="bar-top"/>
+      <wpm nm="cv" val="cap-bar"/>
+    </callm>
+    <compile-if test="include-iup = 0">
+      <iup axis="y"/>
+    </compile-if>
+  </gl>
+
+  <gl pnm="Aring">
+    <cn nm="R-top" val="11"/>
+    <cn nm="R-top-ins" val="24"/>
+    <cn nm="R-bottom" val="4"/>
+    <cn nm="R-bottom-ins" val="18"/>
+    <cn nm="A-top" val="31"/>
+    <cn nm="A-top-ins" val="35"/>
+    <cn nm="serif-bottom-left" val="42"/>
+    <cn nm="serif-bottom-right" val="37"/>
+    <cn nm="left-diag-bottom" val="30"/>
+    <cn nm="right-diag-bottom" val="34"/>
+    <cn nm="bar-bottom" val="0"/>
+    <cn nm="bar-top" val="1"/>
+    <setvs axis="y"/>
+    <mv>
+      <pt n="R-top"/>
+      <mv color="black">
+	<pt n="R-top-ins"/>
+	<mv color="white">
+	  <pt n="R-bottom-ins"/>
+	  <mv color="black">
+	    <pt n="R-bottom"/>
+	    <ip><pt n="A-top"/></ip>
+	  </mv>
+	</mv>
+      </mv>
+    </mv>
+    <sh>
+      <ref><pt n="A-top"/></ref>
+      <pt n="A-top-ins"/>
+    </sh>
+    <callf nm="cap-dbl-serif">
+      <wpm nm="first-left" val="serif-bottom-left"/>
+      <wpm nm="second-left" val="serif-bottom-left + 1"/>
+      <wpm nm="first-right" val="serif-bottom-right"/>
+      <wpm nm="second-right" val="serif-bottom-right + 1"/>
+      <wpm nm="stem1" val="left-diag-bottom"/>
+      <wpm nm="stem2" val="right-diag-bottom"/>
+    </callf>
+    <callm nm="mid-stem">
+      <wpm nm="ref1" val="A-top"/>
+      <wpm nm="ref2" val="serif-bottom-left"/>
+      <wpm nm="pt1" val="bar-bottom"/>
+      <wpm nm="pt2" val="bar-top"/>
+      <wpm nm="cv" val="cap-bar"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uniA73C"> <!-- AY -->
+    <cn nm="A-top" val="47"/>
+    <cn nm="A-bottom-serif" val="23"/>
+    <cn nm="A-left-diag-top" val="29"/>
+    <cn nm="A-left-diag-bottom" val="28"/>
+    <cn nm="A-right-diag-bottom" val="36"/>
+    <cn nm="A-bar-bottom" val="32"/>
+    <cn nm="A-bar-top" val="33"/>
+    <cn nm="Y-top-serif" val="55"/>
+    <cn nm="Y-diag-top" val="17"/>
+    <cn nm="Y-bottom" val="0"/>
+    <cn nm="Y-bottom-sh" val="11"/>
+    <cn nm="Y-bottom-ins" val="6"/>
+    <set nm="A-bottom-serif-sh">
+      <pt n="A-left-diag-bottom"/>
+      <pt n="A-right-diag-bottom"/>
+    </set>
+    <setvs axis="y"/>
+    <mv di="cap-height-overshoot">
+      <pt n="A-top"/>
+      <sh><pt n="A-left-diag-top"/></sh>
+    </mv>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="A-bottom-serif"/>
+      <wpm nm="pt-b" val="A-bottom-serif + 1"/>
+      <wpm nm="sh-a" val="A-bottom-serif-sh"/>
+    </callm>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="Y-top-serif"/>
+      <wpm nm="pt-b" val="Y-top-serif - 1"/>
+      <wpm nm="sh-a" val="Y-diag-top"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <mv>
+      <pt n="Y-bottom"/>
+      <sh><pt n="Y-bottom-sh"/></sh>
+      <mv color="black">
+	<pt n="Y-bottom-ins"/>
+      </mv>
+    </mv>
+    <callf nm="interpolated-stem">
+      <wpm nm="ref-a" val="A-bottom-serif"/>
+      <wpm nm="ref-b" val="A-top"/>
+      <wpm nm="stem-a" val="A-bar-bottom"/>
+      <wpm nm="stem-b" val="A-bar-top"/>
+      <wpm nm="cv" val="cap-bar"/>
+    </callf>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uniA732">
+    <cn nm="top" val="11"/>
+    <cn nm="serif-bottom-a" val="30"/>
+    <cn nm="serif-bottom-b" val="31"/>
+    <cn nm="left-diag-top" val="18"/>
+    <cn nm="left-diag-bottom" val="17"/>
+    <cn nm="bar-bottom" val="21"/>
+    <cn nm="bar-top" val="22"/>
+    <cn nm="R-top" val="48"/>
+    <cn nm="R-serif-bottom-a" val="60"/>
+    <cn nm="R-serif-bottom-b" val="61"/>
+    <cn nm="R-left-diag-top" val="54"/>
+    <cn nm="R-diag-bottom-a" val="52"/>
+    <cn nm="R-diag-bottom-b" val="35"/>
+    <cn nm="R-bar-bottom" val="56"/>
+    <cn nm="R-bar-top" val="57"/>
+    <callg pnm="A">
+      <wpm nm="include-iup" val="-1"/>
+    </callg>
+    <sh>
+      <ref><pt n="top"/></ref>
+      <pt n="R-top"/>
+    </sh>
+    <sh>
+      <ref><pt n="serif-bottom-a"/></ref>
+      <pt n="R-serif-bottom-a"/>
+    </sh>
+    <sh>
+      <ref><pt n="serif-bottom-b"/></ref>
+      <pt n="R-serif-bottom-b"/>
+    </sh>
+    <sh>
+      <ref><pt n="left-diag-top"/></ref>
+      <pt n="R-left-diag-top"/>
+    </sh>
+    <sh>
+      <ref><pt n="left-diag-bottom"/></ref>
+      <pt n="R-diag-bottom-a"/>
+      <pt n="R-diag-bottom-b"/>
+    </sh>
+    <sh>
+      <ref><pt n="bar-bottom"/></ref>
+      <pt n="R-bar-bottom"/>
+    </sh>
+    <sh>
+      <ref><pt n="bar-top"/></ref>
+      <pt n="R-bar-top"/>
+    </sh>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uniA734"> <!-- AO -->
+    <cn nm="A-top" val="34"/>
+    <cn nm="A-serif-left" val="72"/>
+    <cn nm="A-serif-right" val="67"/>
+    <cn nm="A-diag-top" val="60"/>
+    <cn nm="A-bar-bot" val="63"/>
+    <cn nm="A-bar-top" val="64"/>
+    <cn nm="O-top" val="10"/>
+    <cn nm="O-top-ins" val="49"/>
+    <cn nm="O-bot" val="0"/>
+    <cn nm="O-bot-ins" val="40"/>
+    <set nm="serif-sh-a">
+      <pt n="59"/>
+      <pt n="A-serif-right"/>
+      <pt n="20"/>
+    </set>
+    <setvs axis="y"/>
+    <mv di="cap-height-overshoot">
+      <pt n="O-top"/>
+      <sh>
+	<pt n="A-top"/>
+	<pt n="A-diag-top"/>
+      </sh>
+      <mv di="cap-curved-stem" color="black">
+	<pt n="O-top-ins"/>
+      </mv>
+    </mv>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="A-serif-left"/>
+      <wpm nm="pt-b" val="A-serif-left + 1"/>
+      <wpm nm="sh-a" val="serif-sh-a"/>
+      <wpm nm="sh-b" val="A-serif-right + 1"/>
+    </callm>
+    <sh>
+      <ref><pt n="A-serif-left"/></ref>
+      <pt n="O-bot"/>
+    </sh>
+    <mv round="yes">
+      <pt n="O-bot"/>
+      <mv di="cap-curved-stem" color="black">
+	<pt n="O-bot-ins"/>
+      </mv>
+    </mv>
+    <callf nm="interpolated-stem">
+      <wpm nm="ref-a" val="A-top"/>
+      <wpm nm="ref-b" val="A-serif-left"/>
+      <wpm nm="stem-a" val="A-bar-bot"/>
+      <wpm nm="stem-b" val="A-bar-top"/>
+      <wpm nm="cv" val="cap-bar"/>
+    </callf>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uniA736">
+    <cn nm="bot-serif" val="4"/>
+    <cn nm="top-serif-left" val="15"/>
+    <cn nm="top-serif-right" val="20"/>
+    <cn nm="diag-top" val="1"/>
+    <cn nm="diag-bot" val="0"/>
+    <cn nm="stem-left-top" val="31"/>
+    <cn nm="stem-right-top" val="41"/>
+    <cn nm="bar-bot" val="9"/>
+    <cn nm="bar-top" val="10"/>
+    <cn nm="U-bot" val="23"/>
+    <cn nm="U-bot-ins" val="36"/>
+    <set nm="bot-sh-a">
+      <pt n="diag-bot"/>
+      <pt n="U-bot"/>
+    </set>
+    <setvs axis="y"/>
+    <callf nm="cap-dbl-serif">
+      <wpm nm="first-left" val="top-serif-left"/>
+      <wpm nm="second-left" val="top-serif-left - 1"/>
+      <wpm nm="first-right" val="top-serif-right"/>
+      <wpm nm="second-right" val="top-serif-right - 1"/>
+      <wpm nm="stem1" val="stem-left-top"/>
+      <wpm nm="stem2" val="stem-right-top"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callf>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="bot-serif"/>
+      <wpm nm="pt-b" val="bot-serif + 1"/>
+      <wpm nm="sh-a" val="bot-sh-a"/>
+    </callm>
+    <mv round="yes">
+      <pt n="U-bot"/>
+      <mv di="cap-curved-stem" color="black">
+	<pt n="U-bot-ins"/>
+      </mv>
+    </mv>
+    <callf nm="interpolated-stem">
+      <wpm nm="ref-a" val="top-serif-left"/>
+      <wpm nm="ref-b" val="bot-serif"/>
+      <wpm nm="stem-a" val="bar-bot"/>
+      <wpm nm="stem-b" val="bar-top"/>
+      <wpm nm="cv" val="cap-bar"/>
+    </callf>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uniA738">
+    <cn nm="A-top" val="14"/>
+    <cn nm="left-diag-top" val="1"/>
+    <cn nm="right-diag-top" val="21"/>
+    <cn nm="bot-serif" val="24"/>
+    <cn nm="top-serif" val="31"/>
+    <cn nm="bar-bot" val="34"/>
+    <cn nm="bar-top" val="35"/>
+    <set nm="bot-sh">
+      <pt n="0"/>
+      <pt n="4"/>
+      <pt n="20"/>
+    </set>
+    <setvs axis="y"/>
+    <mv di="cap-height-overshoot">
+      <pt n="A-top"/>
+      <sh><pt n="left-diag-top"/></sh>
+    </mv>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="bot-serif"/>
+      <wpm nm="pt-b" val="bot-serif + 1"/>
+      <wpm nm="sh-a" val="bot-sh"/>
+    </callm>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="top-serif"/>
+      <wpm nm="pt-b" val="top-serif - 1"/>
+      <wpm nm="sh-a" val="right-diag-top"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <callf nm="interpolated-stem">
+      <wpm nm="ref-a" val="A-top"/>
+      <wpm nm="ref-b" val="bot-serif"/>
+      <wpm nm="stem-a" val="bar-bot"/>
+      <wpm nm="stem-b" val="bar-top"/>
+      <wpm nm="cv" val="cap-bar"/>
+    </callf>
+    <iup axis="y"/>
+  </gl>
+
+    <gl pnm="uniA73C">
+    <cn nm="A-top" val="47"/>
+    <cn nm="left-diag-top" val="29"/>
+    <cn nm="right-diag-top" val="17"/>
+    <cn nm="bot-serif" val="23"/>
+    <cn nm="top-serif" val="55"/>
+    <cn nm="bar-bot" val="32"/>
+    <cn nm="bar-top" val="33"/>
+    <cn nm="tail" val="0"/>
+    <cn nm="tail-sh" val="11"/>
+    <cn nm="tail-mv" val="6"/>
+    <set nm="bot-sh">
+      <pt n="28"/>
+      <pt n="36"/>
+    </set>
+    <setvs axis="y"/>
+    <mv di="cap-height-overshoot">
+      <pt n="A-top"/>
+      <sh><pt n="left-diag-top"/></sh>
+    </mv>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="bot-serif"/>
+      <wpm nm="pt-b" val="bot-serif + 1"/>
+      <wpm nm="sh-a" val="bot-sh"/>
+    </callm>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="top-serif"/>
+      <wpm nm="pt-b" val="top-serif - 1"/>
+      <wpm nm="sh-a" val="right-diag-top"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <callf nm="interpolated-stem">
+      <wpm nm="ref-a" val="A-top"/>
+      <wpm nm="ref-b" val="bot-serif"/>
+      <wpm nm="stem-a" val="bar-bot"/>
+      <wpm nm="stem-b" val="bar-top"/>
+      <wpm nm="cv" val="cap-bar"/>
+    </callf>
+    <mv round="yes">
+      <pt n="tail"/>
+      <sh><pt n="tail-sh"/></sh>
+      <mv color="black">
+	<pt n="tail-mv"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uniA73A">
+    <callg pnm="uniA738"/>
+  </gl>
+
+  <gl pnm="B">
+    <cn nm="top-serif" val="35"/>
+    <cn nm="bottom-serif" val="17"/>
+    <cn nm="stem-top-left" val="1"/>
+    <cn nm="stem-top-right" val="45"/>
+    <cn nm="stem-bottom-left" val="0"/>
+    <cn nm="stem-bottom-right" val="21"/>
+    <cn nm="bar-top" val="37"/>
+    <cn nm="bar-bottom" val="32"/>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="bottom-serif"/>
+      <wpm nm="pt-b" val="bottom-serif + 1"/>
+      <wpm nm="sh-a" val="stem-bottom-left"/>
+    </callm>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="top-serif"/>
+      <wpm nm="pt-b" val="top-serif - 1"/>
+      <wpm nm="sh-a" val="stem-top-left"/>
+    </callm>
+    <mv di="cap-bar" color="black">
+      <ref><pt n="top-serif"/></ref>
+      <pt n="stem-top-right"/>
+    </mv>
+    <mv di="cap-bar" color="black">
+      <ref><pt n="bottom-serif"/></ref>
+      <pt n="stem-bottom-right"/>
+    </mv>
+    <callm nm="mid-stem">
+      <wpm nm="ref1" val="top-serif"/>
+      <wpm nm="ref2" val="bottom-serif"/>
+      <wpm nm="pt1" val="bar-bottom"/>
+      <wpm nm="pt2" val="bar-top"/>
+      <wpm nm="cv" val="cap-bar"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="C">
+    <cn nm="top" val="10"/>
+    <cn nm="top-ins" val="22"/>
+    <cn nm="top-serif" val="15"/>
+    <cn nm="bottom" val="0"/>
+    <cn nm="bottom-ins" val="31"/>
+    <cn nm="bottom-serif" val="38"/>
+    <setvs axis="y"/>
+    <mv di="cap-height-overshoot">
+      <pt n="top"/>
+      <sh><pt n="top-serif"/></sh>
+      <mv di="cap-curved-stem" color="black">
+	<pt n="top-ins"/>
+      </mv>
+    </mv>
+    <mv di="cap-baseline-undershoot">
+      <pt n="bottom"/>
+      <sh><pt n="bottom-serif"/></sh>
+      <mv di="cap-curved-stem" color="black">
+	<pt n="bottom-ins"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="D">
+    <cn nm="top-serif" val="26"/>
+    <cn nm="bottom-serif" val="28"/>
+    <cn nm="stem-top-left" val="1"/>
+    <cn nm="stem-top-right" val="23"/>
+    <cn nm="stem-bottom-left" val="0"/>
+    <cn nm="stem-bottom-right" val="11"/>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="bottom-serif"/>
+      <wpm nm="pt-b" val="bottom-serif + 1"/>
+      <wpm nm="sh-a" val="stem-bottom-left"/>
+    </callm>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="top-serif"/>
+      <wpm nm="pt-b" val="top-serif - 1"/>
+      <wpm nm="sh-a" val="stem-top-left"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <mv di="cap-bar" color="black">
+      <ref><pt n="top-serif"/></ref>
+      <pt n="stem-top-right"/>
+    </mv>
+    <mv di="cap-bar" color="black">
+      <ref><pt n="bottom-serif"/></ref>
+      <pt n="stem-bottom-right"/>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="E">
+    <cn nm="top-serif" val="32"/>
+    <cn nm="bottom-serif" val="34"/>
+    <cn nm="stem-top-upper" val="19"/>
+    <cn nm="stem-top-lower" val="18"/> <!-- * -->
+    <cn nm="stem-bottom-lower" val="4"/>
+    <cn nm="stem-bottom-upper" val="5"/> <!-- * -->
+    <cn nm="bar-bottom" val="22"/>
+    <cn nm="bar-top" val="23"/>
+    <cn nm="v-serif-bottom" val="26"/>
+    <cn nm="v-serif-top" val="27"/>
+    <set nm="top-pts">
+      <pt n="1"/>
+      <pt n="19"/>
+    </set>
+    <set nm="bottom-pts">
+      <pt n="0"/>
+      <pt n="4"/>
+    </set>
+    <mv>
+      <pt n="28"/>
+      <mv color="black">
+	<pt n="27"/>
+	<ip><pt n="24"/></ip>
+      </mv>
+    </mv>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="bottom-serif"/>
+      <wpm nm="pt-b" val="bottom-serif + 1"/>
+      <wpm nm="sh-a" val="bottom-pts"/>
+      <wpm nm="cv" val="baseline"/>
+    </callm>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="top-serif"/>
+      <wpm nm="pt-b" val="top-serif - 1"/>
+      <wpm nm="sh-a" val="top-pts"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <mv di="cap-bar" color="black">
+      <ref><pt n="top-serif"/></ref>
+      <pt n="stem-top-lower"/>
+    </mv>
+    <mv di="cap-bar" color="black">
+      <ref><pt n="bottom-serif"/></ref>
+      <pt n="stem-bottom-upper"/>
+    </mv>
+    <callm nm="mid-stem">
+      <wpm nm="ref1" val="top-serif"/>
+      <wpm nm="ref2" val="bottom-serif"/>
+      <wpm nm="pt1" val="bar-bottom"/>
+      <wpm nm="pt2" val="bar-top"/>
+      <wpm nm="cv" val="cap-bar"/>
+    </callm>
+    <sh ref-ptr="2">
+      <pt n="v-serif-top"/>
+    </sh>
+    <sh ref-ptr="1">
+      <pt n="v-serif-bottom"/>
+    </sh>
+    <iup/>
+  </gl>
+
+  <gl pnm="F">
+    <cn nm="top-serif" val="28"/>
+    <cn nm="bottom-serif" val="13"/>
+    <cn nm="stem-top-lower" val="9"/> <!-- * -->
+    <cn nm="stem-bottom" val="0"/>
+    <cn nm="bar-bottom" val="18"/>
+    <cn nm="bar-top" val="19"/>
+    <cn nm="v-serif-bottom" val="22"/>
+    <cn nm="v-serif-top" val="23"/>
+    <set nm="top-pts">
+      <pt n="1"/>
+      <pt n="10"/>
+    </set>
+    <mv>
+      <pt n="24"/>
+      <mv color="black">
+	<pt n="23"/>
+	<ip><pt n="20"/></ip>
+      </mv>
+    </mv>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="top-serif"/>
+      <wpm nm="pt-b" val="top-serif - 1"/>
+      <wpm nm="sh-a" val="top-pts"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <mv di="cap-bar" color="black">
+      <ref><pt n="top-serif"/></ref>
+      <pt n="stem-top-lower"/>
+    </mv>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="bottom-serif"/>
+      <wpm nm="pt-b" val="bottom-serif + 1"/>
+      <wpm nm="sh-a" val="stem-bottom"/>
+    </callm>
+    <callm nm="mid-stem">
+      <wpm nm="ref1" val="top-serif"/>
+      <wpm nm="ref2" val="bottom-serif"/>
+      <wpm nm="pt1" val="bar-bottom"/>
+      <wpm nm="pt2" val="bar-top"/>
+      <wpm nm="cv" val="cap-bar"/>
+    </callm>
+    <sh ref-ptr="2">
+      <pt n="v-serif-top"/>
+    </sh>
+    <sh ref-ptr="1">
+      <pt n="v-serif-bottom"/>
+    </sh>
+    <iup/>
+  </gl>
+
+  <gl pnm="G">
+    <cn nm="top" val="9"/>
+    <cn nm="top-ins" val="21"/>
+    <cn nm="bottom" val="0"/>
+    <cn nm="bottom-ins" val="29"/>
+    <cn nm="serif-top" val="38"/>
+    <cn nm="stema" val="35"/>
+    <cn nm="stemb" val="42"/>
+    <cn nm="v-serif-top" val="15"/>
+    <setvs axis="y"/>
+    <callm nm="lc-horz-stroke-cv">
+      <wpm nm="pt1" val="top"/>
+      <wpm nm="pt2" val="top-ins"/>
+      <wpm nm="cv" val="cap-height-overshoot"/>
+      <wpm nm="cv-h" val="cap-curved-stem"/>
+      <wpm nm="codefrag">
+	<sh>
+	  <ref><pt n="top"/></ref>
+	  <pt n="v-serif-top"/>
+	</sh>
+      </wpm>
+    </callm>
+    <callm nm="lc-horz-stroke-cv">
+      <wpm nm="pt1" val="bottom"/>
+      <wpm nm="pt2" val="bottom-ins"/>
+      <wpm nm="cv" val="baseline-undershoot"/>
+      <wpm nm="cv-h" val="cap-curved-stem"/>
+    </callm>
+    <ip>
+      <ref>
+	<pt n="top"/>
+	<pt n="bottom"/>
+      </ref>
+      <pt n="serif-top"/>
+    </ip>
+    <mv>
+      <pt n="serif-top"/>
+      <mv di="cap-serif" color="black">
+	<pt n="serif-top - 1 "/>
+	<sh><pt n="stema"/><pt n="stemb"/></sh>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="H">
+    <cn nm="top-left-a" val="24"/>
+    <cn nm="top-left-b" val="23"/>
+    <cn nm="top-right-a" val="29"/>
+    <cn nm="top-right-b" val="28"/>
+    <cn nm="left-stem-top" val="1"/>
+    <cn nm="right-stem-top" val="5"/>
+    <cn nm="bottom-left-a" val="12"/>
+    <cn nm="bottom-left-b" val="13"/>
+    <cn nm="bottom-right-a" val="17"/>
+    <cn nm="bottom-right-b" val="18"/>
+    <cn nm="left-stem-bottom" val="0"/>
+    <cn nm="right-stem-bottom" val="4"/>
+    <cn nm="bar-top" val="9"/>
+    <cn nm="bar-bottom" val="8"/>
+    <setvs axis="y"/>
+    <callf nm="cap-dbl-serif">
+      <wpm nm="first-left" val="top-left-a"/>
+      <wpm nm="second-left" val="top-left-b"/>
+      <wpm nm="first-right" val="top-right-a"/>
+      <wpm nm="second-right" val="top-right-b"/>
+      <wpm nm="stem1" val="left-stem-top"/>
+      <wpm nm="stem2" val="right-stem-top"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callf>
+    <callf nm="cap-dbl-serif">
+      <wpm nm="first-left" val="bottom-left-a"/>
+      <wpm nm="second-left" val="bottom-left-b"/>
+      <wpm nm="first-right" val="bottom-right-a"/>
+      <wpm nm="second-right" val="bottom-right-b"/>
+      <wpm nm="stem1" val="left-stem-bottom"/>
+      <wpm nm="stem2" val="right-stem-bottom"/>
+    </callf>
+    <callm nm="mid-stem">
+      <wpm nm="ref1" val="bottom-left-a"/>
+      <wpm nm="ref2" val="top-left-a"/>
+      <wpm nm="pt1" val="bar-bottom"/>
+      <wpm nm="pt2" val="bar-top"/>
+      <wpm nm="cv" val="cap-bar"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni01F6"> <!-- Gothic Hv -->
+    <cn nm="top-left-a" val="53"/>
+    <cn nm="top-left-b" val="52"/>
+    <cn nm="top-right-a" val="48"/>
+    <cn nm="top-right-b" val="47"/>
+    <cn nm="left-stem-top" val="38"/>
+    <cn nm="right-stem-top" val="6"/>
+    <cn nm="bottom-left-a" val="41"/>
+    <cn nm="bottom-left-b" val="42"/>
+    <cn nm="left-stem-bottom" val="0"/>
+    <cn nm="bar-top" val="34"/>
+    <cn nm="bar-bottom" val="33"/>
+    <cn nm="v-bottom" val="0"/>
+    <cn nm="v-bottom-ins" val="13"/>
+    <setvs axis="y"/>
+    <callf nm="cap-dbl-serif">
+      <wpm nm="first-left" val="top-left-a"/>
+      <wpm nm="second-left" val="top-left-b"/>
+      <wpm nm="first-right" val="top-right-a"/>
+      <wpm nm="second-right" val="top-right-b"/>
+      <wpm nm="stem1" val="left-stem-top"/>
+      <wpm nm="stem2" val="right-stem-top"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callf>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="bottom-left-a"/>
+      <wpm nm="pt-b" val="bottom-left-b"/>
+      <wpm nm="sh-a" val="left-stem-bottom"/>
+    </callm>
+    <callf nm="interpolated-stem">
+      <wpm nm="ref-a" val="bottom-left-a"/>
+      <wpm nm="ref-b" val="top-left-a"/>
+      <wpm nm="stem-a" val="bar-bottom"/>
+      <wpm nm="stem-b" val="bar-top"/>
+      <wpm nm="cv" val="cap-bar"/>
+    </callf>
+    <mv di="baseline-undershoot">
+      <pt n="v-bottom"/>
+      <mv di="cap-curved-stem" color="black">
+	<pt n="v-bottom-ins"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni0126">
+    <cn nm="bar-bottom" val="32"/>
+    <cn nm="bar-top" val="33"/>
+    <cn nm="bottom" val="12"/>
+    <cn nm="top" val="30"/>
+    <callg pnm="H"/>
+    <callm nm="mid-stem">
+      <wpm nm="ref1" val="top"/>
+      <wpm nm="ref2" val="bottom"/>
+      <wpm nm="pt1" val="bar-bottom"/>
+      <wpm nm="pt2" val="bar-top"/>
+      <wpm nm="cv" val="cap-bar"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="I">
+    <cn nm="top-a" val="6"/>
+    <cn nm="top-b" val="5"/>
+    <cn nm="stem-top" val="1"/>
+    <cn nm="bottom-a" val="9"/>
+    <cn nm="bottom-b" val="10"/>
+    <cn nm="stem-bottom" val="0"/>
+    <setvs axis="y"/>
+    <mv di="baseline">
+      <pt n="bottom-a"/>
+      <sh><pt n="stem-bottom"/></sh>
+      <mv di="cap-serif" color="black">
+	<pt n="bottom-b"/>
+      </mv>
+    </mv>
+    <mv di="cap-height">
+      <pt n="top-a"/>
+      <sh><pt n="stem-top"/></sh>
+      <mv di="cap-serif" color="black">
+	<pt n="top-b"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="J">
+    <cn nm="top-a" val="26"/>
+    <cn nm="top-b" val="25"/>
+    <cn nm="bottom" val="0"/>
+    <cn nm="bottom-above-a" val="11"/>
+    <cn nm="bottom-above-b" val="6"/>
+    <cn nm="stem-top" val="17"/>
+    <setvs axis="y"/>
+    <mv di="cap-height">
+      <pt n="top-a"/>
+      <sh><pt n="stem-top"/></sh>
+      <mv di="cap-serif" color="black">
+	<pt n="top-b"/>
+      </mv>
+    </mv>
+    <mv>
+      <pt n="bottom"/>
+      <sh><pt n="bottom-above-a"/></sh>
+      <mv color="black">
+	<pt n="bottom-above-b"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="K">
+    <cn nm="top-left-a" val="37"/>
+    <cn nm="top-left-b" val="36"/>
+    <cn nm="top-right-a" val="42"/>
+    <cn nm="top-right-b" val="41"/>
+    <cn nm="left-stem-top" val="1"/>
+    <cn nm="right-stem-top" val="17"/>
+    <cn nm="bottom-left-a" val="30"/>
+    <cn nm="bottom-left-b" val="31"/>
+    <cn nm="bottom-right-a" val="29"/>
+    <cn nm="bottom-right-b" val="28"/>
+    <cn nm="left-stem-bottom" val="0"/>
+    <cn nm="bar-top" val="12"/>
+    <cn nm="bar-mid" val="19"/>
+    <cn nm="bar-bottom" val="11"/>
+    <setvs axis="y"/>
+    <callf nm="cap-dbl-serif">
+      <wpm nm="first-left" val="top-left-a"/>
+      <wpm nm="second-left" val="top-left-b"/>
+      <wpm nm="first-right" val="top-right-a"/>
+      <wpm nm="second-right" val="top-right-b"/>
+      <wpm nm="stem1" val="left-stem-top"/>
+      <wpm nm="stem2" val="right-stem-top"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callf>
+    <mv di="baseline">
+      <pt n="bottom-left-a"/>
+      <sh>
+	<pt n="left-stem-bottom"/>
+	<pt n="bottom-right-a"/>
+      </sh>
+      <mv di="cap-serif" color="black">
+	<pt n="bottom-left-b"/>
+	<sh><pt n="bottom-right-b"/></sh>
+      </mv>
+    </mv>
+    <callm nm="mid-stem">
+      <wpm nm="ref1" val="top-left-a"/>
+      <wpm nm="ref2" val="bottom-left-a"/>
+      <wpm nm="pt1" val="bar-bottom"/>
+      <wpm nm="pt2" val="bar-top"/>
+      <wpm nm="cv" val="cap-bar"/>
+    </callm>
+    <sh ref-ptr="2">
+      <pt n="bar-mid"/>
+    </sh>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="L">
+    <cn nm="top-a" val="15"/>
+    <cn nm="top-b" val="14"/>
+    <cn nm="stem-top" val="1"/>
+    <cn nm="bottom" val="18"/>
+    <cn nm="bottom-a1" val="4"/>
+    <cn nm="bottom-a2" val="0"/>
+    <cn nm="bottom-b" val="5"/> <!-- * -->
+    <setvs axis="y"/>
+    <mv di="cap-height">
+      <pt n="top-a"/>
+      <sh><pt n="stem-top"/></sh>
+      <mv di="cap-serif" color="black">
+	<pt n="top-b"/>
+      </mv>
+    </mv>
+    <mv di="baseline">
+      <pt n="bottom"/>
+      <sh>
+	<pt n="bottom-a1"/>
+	<pt n="bottom-a2"/>
+      </sh>
+      <mv di="cap-serif" color="black">
+	<pt n="bottom + 1"/>
+      </mv>
+    </mv>
+    <mv di="cap-bar" color="black">
+      <ref><pt n="bottom"/></ref>
+      <pt n="bottom-b"/>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni2C62"> <!-- L with tilde cross-stroke -->
+    <cn nm="tilde-top-a" val="33"/>
+    <cn nm="tilde-top-b" val="38"/>
+    <cn nm="tilde-bot-a" val="26"/>
+    <cn nm="tilde-bot-b" val="22"/>
+    <cn nm="l-top" val="15"/>
+    <cn nm="l-bot" val="18"/>
+    <callg pnm="L">
+      <wpm nm="include-iup" val="-1"/>
+    </callg>
+    <callm nm="mid-stem">
+      <wpm nm="ref1" val="l-top"/>
+      <wpm nm="ref2" val="l-bot"/>
+      <wpm nm="pt1" val="tilde-bot-a"/>
+      <wpm nm="pt2" val="tilde-top-a"/>
+    </callm>
+    <push>tilde-top-b tilde-bot-b</push>
+    <command nm="SHP" modifier="1"/>
+    <command nm="SHP" modifier="0"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="M">
+    <cn nm="bottom-left-a" val="26"/>
+    <cn nm="bottom-left-b" val="27"/>
+    <cn nm="bottom-right-a" val="31"/>
+    <cn nm="bottom-right-b" val="32"/>
+    <cn nm="left-stem-bottom" val="22"/>
+    <cn nm="right-stem-bottom" val="0"/>
+    <cn nm="top-left-a" val="9"/>
+    <cn nm="top-left-b" val="8"/>
+    <cn nm="top-left-stem" val="23"/>
+    <cn nm="top-right-a" val="38"/>
+    <cn nm="top-right-b" val="39"/>
+    <cn nm="top-right-sh1" val="20"/>
+    <cn nm="top-right-sh2" val="1"/>
+    <cn nm="point-lower" val="4"/>
+    <cn nm="point-upper" val="14"/>
+    <setvs axis="y"/>
+    <callf nm="cap-dbl-serif">
+      <wpm nm="first-left" val="bottom-left-a"/>
+      <wpm nm="second-left" val="bottom-left-b"/>
+      <wpm nm="first-right" val="bottom-right-a"/>
+      <wpm nm="second-right" val="bottom-right-b"/>
+      <wpm nm="stem1" val="left-stem-bottom"/>
+      <wpm nm="stem2" val="right-stem-bottom"/>
+    </callf>
+    <mv di="cap-height">
+      <pt n="top-left-a"/>
+      <sh>
+	<pt n="top-left-stem"/>
+	<pt n="top-right-a"/>
+	<pt n="top-right-sh1"/>
+	<pt n="top-right-sh2"/>
+	<pt n="point-lower"/>
+	<pt n="point-upper"/>
+      </sh>
+      <mv di="cap-serif" color="black">
+	<pt n="top-left-b"/>
+	<sh><pt n="top-right-b"/></sh>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="N">
+    <cn nm="top-serif" val="27"/>
+    <cn nm="top-left-serif-b" val="6"/>
+    <cn nm="bottom-serif" val="20"/>
+    <cn nm="right-stem-bottom" val="12"/>
+    <set nm="top-pts">
+      <pt n="13"/>
+      <pt n="6"/>
+      <pt n="17"/>
+    </set>
+    <set nm="bottom-pts">
+      <pt n="16"/>
+      <pt n="0"/>
+    </set>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="top-serif"/>
+      <wpm nm="pt-b" val="top-serif - 1"/>
+      <wpm nm="sh-a" val="top-pts"/>
+      <wpm nm="sh-b" val="top-left-serif-b - 1"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="bottom-serif"/>
+      <wpm nm="pt-b" val="bottom-serif + 1"/>
+      <wpm nm="sh-a" val="bottom-pts"/>
+      <wpm nm="sh-b" val="right-stem-bottom"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="Eng">
+    <cn nm="top-left-serif" val="23"/>
+    <cn nm="top-right-serif" val="47"/>
+    <cn nm="bottom-serif" val="40"/>
+    <cn nm="left-stem-bottom" val="36"/>
+    <cn nm="tail-bottom" val="0"/>
+    <cn nm="tail-bottom-mv" val="6"/>
+    <cn nm="tail-bottom-sh" val="12"/>
+    <set nm="top-shift-a">
+      <pt n="30"/>
+      <pt n="37"/>
+      <pt n="top-right-serif"/>
+    </set>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="top-left-serif"/>
+      <wpm nm="pt-b" val="top-left-serif - 1"/>
+      <wpm nm="sh-a" val="top-shift-a"/>
+      <wpm nm="sh-b" val="top-right-serif - 1"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="bottom-serif"/>
+      <wpm nm="pt-b" val="bottom-serif + 1"/>
+      <wpm nm="sh-a" val="left-stem-bottom"/>
+    </callm>
+    <mv>
+      <pt n="tail-bottom"/>
+      <sh><pt n="tail-bottom-sh"/></sh>
+      <mv color="black">
+	<pt n="tail-bottom-mv"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="O">
+    <pm nm="offset" val="0"/>
+    <pm nm="include-iup" val="0"/>
+    <cn nm="top" val="10"/>
+    <cn nm="top-ins" val="30"/>
+    <cn nm="bottom" val="0"/>
+    <cn nm="bottom-ins" val="20"/>
+    <setvs axis="y"/>
+    <mv di="cap-height-overshoot">
+      <pt n="top"/>
+      <mv di="cap-curved-stem">
+	<pt n="top-ins"/>
+      </mv>
+    </mv>
+    <mv di="baseline-undershoot">
+      <pt n="bottom"/>
+      <mv di="cap-curved-stem">
+	<pt n="bottom-ins"/>
+      </mv>
+    </mv>
+    <compile-if test="include-iup = 0">
+      <iup axis="y"/>
+    </compile-if>
+  </gl>
+
+  <gl pnm="uniA74A"> <!-- Obit -->
+    <cn nm="top" val="14"/>
+    <cn nm="bot" val="4"/>
+    <cn nm="bar-top" val="1"/>
+    <cn nm="bar-bot" val="0"/>
+    <callg pnm="O">
+      <wpm nm="offset" val="4"/>
+      <wpm nm="include-iup" val="-1"/>
+    </callg>
+    <callf nm="interpolated-stem">
+      <wpm nm="ref-a" val="top"/>
+      <wpm nm="ref-b" val="bot"/>
+      <wpm nm="stem-a" val="bar-bot"/>
+      <wpm nm="stem-b" val="bar-top"/>
+      <wpm nm="cv" val="cap-bar"/>
+    </callf>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="OE">
+    <cn nm="top" val="10"/>
+    <cn nm="top-ins" val="21"/>
+    <cn nm="bottom" val="0"/>
+    <cn nm="bottom-ins" val="13"/>
+    <cn nm="E-top-a" val="37"/>
+    <cn nm="E-top-b" val="36"/> <!-- * -->
+    <cn nm="E-bottom-a" val="40"/>
+    <cn nm="E-bottom-b" val="41"/> <!-- * -->
+    <cn nm="bar-bottom" val="49"/>
+    <cn nm="bar-top" val="50"/>
+    <cn nm="vserif-top" val="54"/>
+    <cn nm="vserif-bottom" val="53"/>
+    <setvs axis="y"/>
+    <mv di="cap-height">
+      <pt n="top"/>
+      <sh><pt n="E-top-a"/></sh>
+      <mv di="cap-curved-stem">
+	<pt n="top-ins"/>
+      </mv>
+    </mv>
+    <mv di="baseline">
+      <pt n="bottom"/>
+      <sh><pt n="E-bottom-a"/></sh>
+      <mv di="cap-curved-stem">
+	<pt n="bottom-ins"/>
+      </mv>
+    </mv>
+    <mv di="cap-bar" color="black">
+      <ref><pt n="top"/></ref>
+      <pt n="E-top-b"/>
+    </mv>
+    <mv di="cap-bar" color="black">
+      <ref><pt n="bottom"/></ref>
+      <pt n="E-bottom-b"/>
+    </mv>
+    <ip>
+      <ref>
+	<pt n="top"/>
+	<pt n="bottom"/>
+      </ref>
+      <pt n="bar-bottom"/>
+    </ip>
+    <mv>
+      <pt n="bar-bottom"/>
+      <sh><pt n="vserif-bottom"/></sh>
+      <mv di="cap-bar" color="black">
+	<pt n="bar-top"/>
+	<sh><pt n="vserif-top"/></sh>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uniA74E">
+    <cn nm="top" val="10"/>
+    <cn nm="top-ins" val="39"/>
+    <cn nm="bottom" val="0"/>
+    <cn nm="bottom-ins" val="32"/>
+    <cn nm="top-b" val="16"/>
+    <cn nm="top-ins-b" val="59"/>
+    <cn nm="bottom-b" val="26"/>
+    <cn nm="bottom-ins-b" val="49"/>
+    <setvs axis="y"/>
+    <mv di="cap-height-overshoot">
+      <pt n="top"/>
+      <sh><pt n="top-b"/></sh>
+      <mv di="cap-curved-stem">
+	<pt n="top-ins"/>
+	<sh><pt n="top-ins-b"/></sh>
+      </mv>
+    </mv>
+    <mv di="baseline-undershoot">
+      <pt n="bottom"/>
+      <sh><pt n="bottom-b"/></sh>
+      <mv di="cap-curved-stem">
+	<pt n="bottom-ins"/>
+	<sh><pt n="bottom-ins-b"/></sh>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="P">
+    <cn nm="top-serif-left" val="31"/>
+    <cn nm="stem-top-left" val="1"/>
+    <cn nm="stem-top-right" val="24"/> <!-- * -->
+    <cn nm="bottom-serif-left" val="33"/>
+    <cn nm="stem-bottom" val="0"/>
+    <cn nm="bowl-bottom" val="10"/>
+    <cn nm="bowl-bottom-ins" val="16"/>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="top-serif-left"/>
+      <wpm nm="pt-b" val="top-serif-left - 1"/>
+      <wpm nm="sh-a" val="stem-top-left"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <mv di="cap-bar" color="black">
+      <ref><pt n="top-serif-left"/></ref>
+      <pt n="stem-top-right"/>
+    </mv>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="bottom-serif-left"/>
+      <wpm nm="pt-b" val="bottom-serif-left + 1"/>
+      <wpm nm="sh-a" val="stem-bottom"/>
+    </callm>
+    <callf nm="interpolated-stem">
+      <wpm nm="ref-a" val="top-serif-left"/>
+      <wpm nm="ref-b" val="bottom-serif-left"/>
+      <wpm nm="stem-a" val="bowl-bottom"/>
+      <wpm nm="stem-b" val="bowl-bottom-ins"/>
+      <wpm nm="cv" val="cap-curved-stem"/>
+    </callf>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni01F7"> <!-- Wynn -->
+    <cn nm="top-serif" val="34"/>
+    <cn nm="bottom-serif" val="27"/>
+    <cn nm="stem-bottom" val="0"/>
+    <cn nm="bowl-bottom" val="4"/>
+    <cn nm="bowl-top-inside" val="15"/> <!-- * -->
+    <set nm="top-sh">
+      <pt n="1"/>
+      <pt n="16"/>
+    </set>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="top-serif"/>
+      <wpm nm="pt-b" val="top-serif - 1"/>
+      <wpm nm="sh-a" val="top-sh"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <mv di="cap-bar" color="black">
+      <ref><pt n="top-serif"/></ref>
+      <pt n="bowl-top-inside"/>
+    </mv>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="bottom-serif"/>
+      <wpm nm="pt-b" val="bottom-serif + 1"/>
+      <wpm nm="sh-a" val="stem-bottom"/>
+    </callm>
+    <callf nm="interpolated-stem">
+      <wpm nm="ref-a" val="top-serif"/>
+      <wpm nm="ref-b" val="bottom-serif"/>
+      <wpm nm="stem-a" val="bowl-bottom"/>
+      <wpm nm="stem-b" val="bowl-bottom + 1"/>
+      <wpm nm="cv" val="cap-curved-stem"/>
+    </callf>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="Q">
+    <cn nm="top" val="11"/>
+    <cn nm="top-ins" val="37"/>
+    <cn nm="bottom" val="21"/>
+    <cn nm="bottom-ins" val="27"/>
+    <cn nm="tail-bottom" val="0"/>
+    <cn nm="tail-ins" val="46"/>
+    <setvs axis="y"/>
+    <mv di="cap-height-overshoot">
+      <pt n="top"/>
+      <mv di="cap-curved-stem">
+	<pt n="top-ins"/>
+      </mv>
+    </mv>
+    <mv di="baseline-undershoot">
+      <pt n="bottom"/>
+      <sh round="yes"><pt n="tail-bottom"/></sh>
+      <mv di="cap-curved-stem">
+	<pt n="bottom-ins"/>
+	<sh><pt n="tail-ins"/></sh>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="Q.alt">
+    <cn nm="top" val="14"/>
+    <cn nm="top-ins" val="41"/>
+    <cn nm="bottom" val="24"/>
+    <cn nm="bottom-ins" val="31"/>
+    <cn nm="tail-bottom" val="0"/>
+    <cn nm="tail-ins" val="55"/>
+    <setvs axis="y"/>
+    <mv di="cap-height-overshoot">
+      <pt n="top"/>
+      <mv di="cap-curved-stem">
+	<pt n="top-ins"/>
+      </mv>
+    </mv>
+    <mv di="baseline-undershoot">
+      <pt n="bottom"/>
+      <sh round="yes"><pt n="tail-bottom"/></sh>
+      <mv di="cap-curved-stem">
+	<pt n="bottom-ins"/>
+	<sh><pt n="tail-ins"/></sh>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="R">
+    <cn nm="top-serif-left" val="47"/>
+    <cn nm="stem-top-left" val="23"/>
+    <cn nm="stem-top-right" val="20"/> <!--  -->
+    <cn nm="bottom-serif-left" val="40"/>
+    <cn nm="stem-bottom" val="22"/>
+    <cn nm="bowl-bottom" val="6"/>
+    <cn nm="bowl-bottom-ins" val="11"/>
+    <cn nm="foot-bottom" val="39"/>
+    <cn nm="bowl-crotch" val="31"/>
+    <set nm="sh-a-pts">
+      <pt n="stem-bottom"/>
+      <pt n="foot-bottom"/>
+    </set>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="top-serif-left"/>
+      <wpm nm="pt-b" val="top-serif-left - 1"/>
+      <wpm nm="sh-a" val="stem-top-left"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <mv di="cap-bar" color="black">
+      <ref><pt n="top-serif-left"/></ref>
+      <pt n="stem-top-right"/>
+    </mv>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="bottom-serif-left"/>
+      <wpm nm="pt-b" val="bottom-serif-left + 1"/>
+      <wpm nm="sh-a" val="sh-a-pts"/>
+      <wpm nm="sh-b" val="foot-bottom - 1"/>
+      <wpm nm="cv" val="baseline"/>
+    </callm>
+    <callm nm="mid-stem">
+      <wpm nm="ref1" val="top-serif-left"/>
+      <wpm nm="ref2" val="bottom-serif-left"/>
+      <wpm nm="pt1" val="bowl-bottom"/>
+      <wpm nm="pt2" val="bowl-bottom-ins"/>
+      <wpm nm="cv" val="cap-curved-stem"/>
+    </callm>
+    <ip><pt n="bowl-crotch"/></ip>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="S">
+    <cn nm="top" val="25"/>
+    <cn nm="top-ins" val="37"/>
+    <cn nm="bottom" val="0"/>
+    <cn nm="bottom-ins" val="9"/>
+    <cn nm="mid-upper" val="44"/>
+    <cn nm="mid-lower" val="17"/>
+    <setvs axis="y"/>
+    <mv di="cap-height-overshoot">
+      <pt n="top"/>
+      <mv di="cap-curved-stem" color="black">
+	<pt n="top-ins"/>
+      </mv>
+    </mv>
+    <mv di="baseline-undershoot">
+      <pt n="bottom"/>
+      <mv di="cap-curved-stem" color="black">
+	<pt n="bottom-ins"/>
+      </mv>
+    </mv>
+    <ip>
+      <ref>
+	<pt n="top"/>
+	<pt n="bottom"/>
+      </ref>
+      <pt n="mid-upper"/>
+      <pt n="mid-lower"/>
+    </ip>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="T">
+    <cn nm="top" val="12"/>
+    <cn nm="top-ins-a" val="1"/>
+    <cn nm="top-ins-b" val="30"/>
+    <cn nm="bottom-serif" val="32"/>
+    <cn nm="stem-bottom" val="0"/>
+    <setvs axis="y"/>
+    <mv di="cap-height">
+      <pt n="top"/>
+      <mv di="cap-bar" color="black">
+	<pt n="top-ins-a"/>
+	<sh><pt n="top-ins-b"/></sh>
+      </mv>
+    </mv>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="bottom-serif"/>
+      <wpm nm="pt-b" val="bottom-serif + 1"/>
+      <wpm nm="sh-a" val="stem-bottom"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="U">
+    <cn nm="serif-left" val="29"/>
+    <cn nm="serif-right" val="34"/>
+    <cn nm="stem-left" val="8"/>
+    <cn nm="stem-right" val="18"/>
+    <cn nm="bottom" val="0"/>
+    <cn nm="bottom-ins" val="13"/>
+    <setvs axis="y"/>
+    <callf nm="cap-dbl-serif">
+      <wpm nm="first-left" val="serif-left"/>
+      <wpm nm="second-left" val="serif-left - 1"/>
+      <wpm nm="first-right" val="serif-right"/>
+      <wpm nm="second-right" val="serif-right - 1"/>
+      <wpm nm="stem1" val="stem-left"/>
+      <wpm nm="stem2" val="stem-right"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callf>
+    <mv di="baseline-undershoot">
+      <pt n="bottom"/>
+      <mv di="cap-curved-stem" color="black">
+	<pt n="bottom-ins"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+  
+  <gl pnm="Uogonek">
+    <cn nm="ogonek-connect" val="24"/>
+    <cn nm="ogonek-top" val="44"/>
+    <cn nm="ogonek-bottom" val="37"/>
+    <cn nm="ogonek-bottom-ins" val="48"/>
+    <callg pnm="U"/>
+    <al>
+      <ref><pt n="ogonek-connect"/></ref>
+      <pt n="ogonek-top"/>
+    </al>
+    <srp whichpointer="0">
+      <pt n="ogonek-top"/>
+    </srp>
+    <push>ogonek-bottom-ins ogonek-bottom ogonek-bottom</push>
+    <command nm="MDRP">
+      <modifier type="round" val="no"/>
+    </command>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDRP">
+      <modifier type="color" val="black"/>
+    </command>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="V">
+    <cn nm="serif-left" val="10"/>
+    <cn nm="serif-right" val="15"/>
+    <cn nm="stem-left" val="1"/>
+    <cn nm="stem-right" val="6"/>
+    <cn nm="bottom" val="0"/>
+    <cn nm="bottom-ins" val="4"/>
+    <setvs axis="y"/>
+    <callf nm="cap-dbl-serif">
+      <wpm nm="first-left" val="serif-left"/>
+      <wpm nm="second-left" val="serif-left - 1"/>
+      <wpm nm="first-right" val="serif-right"/>
+      <wpm nm="second-right" val="serif-right - 1"/>
+      <wpm nm="stem1" val="stem-left"/>
+      <wpm nm="stem2" val="stem-right"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callf>
+    <mv di="baseline-undershoot">
+      <pt n="bottom"/>
+      <sh><pt n="bottom-ins"/></sh>
+    </mv>
+    <iup axis="y"/>    
+  </gl>
+
+  <gl pnm="W">
+    <cn nm="serif-left" val="18"/>
+    <cn nm="bottom-left" val="0"/>
+    <cn nm="bottom-left-ins" val="4"/>
+    <cn nm="bottom-right" val="8"/>
+    <cn nm="bottom-right-ins" val="12"/>
+    <set nm="shift-a">
+      <pt n="1"/>
+      <pt n="5"/>
+      <pt n="9"/>
+      <pt n="13"/>
+      <pt n="23"/>
+      <pt n="28"/>
+    </set>
+    <set nm="shift-b">
+      <pt n="22"/>
+      <pt n="27"/>
+    </set>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="serif-left"/>
+      <wpm nm="pt-b" val="serif-left - 1"/>
+      <wpm nm="sh-a" val="shift-a"/>
+      <wpm nm="sh-b" val="shift-b"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <mv di="baseline-undershoot">
+      <pt n="bottom-left"/>
+      <sh>
+	<pt n="bottom-right"/>
+	<pt n="bottom-left-ins"/>
+	<pt n="bottom-right-ins"/>
+      </sh>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uniA760"> <!-- WY -->
+    <cn nm="serif-left" val="15"/>
+    <cn nm="bottom-left" val="0"/>
+    <cn nm="bottom-left-ins" val="4"/>
+    <cn nm="bottom-right" val="8"/>
+    <cn nm="bottom-right-ins" val="11"/>
+    <cn nm="tail-bottom" val="28"/>
+    <cn nm="tail-bottom-sh" val="39"/>
+    <cn nm="tail-bottom-mv" val="34"/>
+    <set nm="shift-a">
+      <pt n="1"/>
+      <pt n="5"/>
+      <pt n="9"/>
+      <pt n="20"/>
+      <pt n="25"/>
+      <pt n="44"/>
+    </set>
+    <set nm="shift-b">
+      <pt n="10"/>
+      <pt n="24"/>
+    </set>
+    <set nm="bottom-sh">
+      <pt n="bottom-left-ins"/>
+      <pt n="bottom-right"/>
+      <pt n="bottom-right-ins"/>
+    </set>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="serif-left"/>
+      <wpm nm="pt-b" val="serif-left - 1"/>
+      <wpm nm="sh-a" val="shift-a"/>
+      <wpm nm="sh-b" val="shift-b"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <mv di="baseline-undershoot">
+      <pt n="bottom-left"/>
+      <sh><set ref="bottom-sh"/></sh>
+    </mv>
+    <mv>
+      <pt n="tail-bottom"/>
+      <sh><pt n="tail-bottom-sh"/></sh>
+      <mv color="black">
+	<pt n="tail-bottom-mv"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="X">
+    <pm nm="include-iup" val="0"/>
+    <cn nm="top-serif-left" val="10"/>
+    <cn nm="bottom-serif-left" val="23"/>
+    <cn nm="top-serif-right" val="15"/>
+    <cn nm="bottom-serif-right" val="18"/>
+    <cn nm="top-stem-left" val="5"/>
+    <cn nm="top-stem-right" val="2"/>
+    <cn nm="bottom-stem-left" val="0"/>
+    <cn nm="bottom-stem-right" val="7"/>
+    <setvs axis="y"/>
+    <callf nm="cap-dbl-serif">
+      <wpm nm="first-left" val="top-serif-left"/>
+      <wpm nm="second-left" val="top-serif-left - 1"/>
+      <wpm nm="first-right" val="top-serif-right"/>
+      <wpm nm="second-right" val="top-serif-right - 1"/>
+      <wpm nm="stem1" val="top-stem-left"/>
+      <wpm nm="stem2" val="top-stem-right"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callf>
+    <callf nm="cap-dbl-serif">
+      <wpm nm="first-left" val="bottom-serif-left"/>
+      <wpm nm="second-left" val="bottom-serif-left + 1"/>
+      <wpm nm="first-right" val="bottom-serif-right"/>
+      <wpm nm="second-right" val="bottom-serif-right + 1"/>
+      <wpm nm="stem1" val="bottom-stem-left"/>
+      <wpm nm="stem2" val="bottom-stem-right"/>
+    </callf>
+    <compile-if test="include-iup = 0">
+      <iup axis="y"/>
+    </compile-if>
+  </gl>
+
+  <gl pnm="Y">
+    <cn nm="top-serif-left" val="19"/>
+    <cn nm="bottom-serif" val="22"/>
+    <cn nm="top-serif-right" val="14"/>
+    <cn nm="top-stem-left" val="3"/>
+    <cn nm="top-stem-right" val="8"/>
+    <cn nm="bottom-stem" val="0"/>
+    <setvs axis="y"/>
+    <callf nm="cap-dbl-serif">
+      <wpm nm="first-left" val="top-serif-left"/>
+      <wpm nm="second-left" val="top-serif-left - 1"/>
+      <wpm nm="first-right" val="top-serif-right"/>
+      <wpm nm="second-right" val="top-serif-right - 1"/>
+      <wpm nm="stem1" val="top-stem-left"/>
+      <wpm nm="stem2" val="top-stem-right"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callf>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="bottom-serif"/>
+      <wpm nm="pt-b" val="bottom-serif + 1"/>
+      <wpm nm="sh-a" val="bottom-stem"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="Z">
+    <cn nm="top" val="24"/>
+    <cn nm="top-ins" val="9"/>
+    <cn nm="top-sh" val="7"/>
+    <cn nm="bottom" val="4"/>
+    <cn nm="bottom-ins" val="28"/>
+    <cn nm="bottom-sh" val="27"/>
+    <setvs axis="y"/>
+    <mv di="cap-height">
+      <pt n="top"/>
+      <sh><pt n="top-sh"/></sh>
+      <mv di="cap-serif" color="black">
+	<pt n="top-ins"/>
+      </mv>
+    </mv>
+    <mv di="baseline">
+      <pt n="bottom"/>
+      <sh><pt n="bottom-sh"/></sh>
+      <mv di="cap-serif" color="black">
+	<pt n="bottom-ins"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="AE">
+    <cn nm="top-serif" val="8"/>
+    <cn nm="top-sh-a" val="32"/>
+    <cn nm="top-bar-b" val="16"/>
+    <cn nm="bot-bar-b" val="19"/>
+    <cn nm="bottom-left-serif" val="26"/>
+    <cn nm="bar-bottom" val="35"/>
+    <cn nm="bar-top" val="36"/>
+    <cn nm="vserif-bottom" val="39"/>
+    <cn nm="vserif-top" val="40"/>
+    <set nm="bottom-sh-a">
+      <pt n="31"/>
+      <pt n="0"/>
+    </set>
+    <mv>
+      <pt n="41"/>
+      <mv color="black">
+	<pt n="40"/>
+	<ip><pt n="37"/></ip>
+      </mv>
+    </mv>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="top-serif"/>
+      <wpm nm="pt-b" val="top-serif - 1"/>
+      <wpm nm="sh-a" val="top-sh-a"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="bottom-left-serif"/>
+      <wpm nm="pt-b" val="bottom-left-serif + 1"/>
+      <wpm nm="sh-a" val="bottom-sh-a"/>
+      <wpm nm="sh-b" val="1"/>
+      <wpm nm="align-b" val="0"/>
+    </callm>
+    <mv di="cap-bar" color="black">
+      <ref><pt n="top-serif"/></ref>
+      <pt n="top-bar-b"/>
+    </mv>
+    <mv di="cap-bar" color="black">
+      <ref><pt n="bottom-left-serif"/></ref>
+      <pt n="bot-bar-b"/>
+    </mv>
+    <ip>
+      <ref>
+	<pt n="top-serif"/>
+	<pt n="bottom-left-serif"/>
+      </ref>
+      <pt n="bar-bottom"/>
+    </ip>
+    <mv>
+      <pt n="bar-bottom"/>
+      <sh><pt n="vserif-bottom"/></sh>
+      <mv di="cap-bar" color="black">
+	<pt n="bar-top"/>
+	<sh><pt n="vserif-top"/>
+	</sh>
+      </mv>
+    </mv>
+    <iup/>
+  </gl>
+
+  <gl pnm="Eth">
+    <cn nm="bar-bottom" val="32"/>
+    <cn nm="bar-top" val="33"/>
+    <cn nm="top" val="26"/>
+    <cn nm="bottom" val="28"/>
+    <callg pnm="D"/>
+    <callf nm="interpolated-stem">
+      <wpm nm="ref-a" val="top"/>
+      <wpm nm="ref-b" val="bottom"/>
+      <wpm nm="stem-a" val="bar-bottom"/>
+      <wpm nm="stem-b" val="bar-top"/>
+      <wpm nm="cv" val="cap-bar"/>
+    </callf>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni021C"> <!-- Yogh -->
+    <cn nm="top" val="34"/>
+    <cn nm="top-ins" val="21"/>
+    <cn nm="bottom" val="0"/>
+    <cn nm="bottom-ins" val="1"/>
+    <cn nm="mid" val="10"/>
+    <set nm="mid-sh">
+      <pt n="13"/>
+      <pt n="14"/>
+      <pt n="41"/>
+      <pt n="42"/>
+    </set>
+    <setvs axis="y"/>
+    <mv di="cap-height-overshoot">
+      <pt n="top"/>
+      <mv color="black">
+	<pt n="top-ins"/>
+      </mv>
+    </mv>
+    <mv>
+      <pt n="bottom"/> 
+      <mv color="black">
+	<pt n="bottom-ins"/>
+      </mv>
+    </mv>
+    <ip>
+      <ref>
+	<pt n="top"/>
+	<pt n="bottom"/> 
+      </ref>
+      <pt n="mid"/>
+    </ip>
+    <callm nm="round-point">
+      <wpm nm="p" val="mid"/>
+    </callm>
+    <sh><set ref="mid-sh"/></sh>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="Thorn">
+    <cn nm="top-serif" val="38"/>
+    <cn nm="stem-top" val="1"/>
+    <cn nm="bottom-serif" val="31"/>
+    <cn nm="stem-bottom" val="0"/>
+    <cn nm="bowl-bottom" val="12"/>
+    <cn nm="bowl-bottom-ins" val="22"/>
+    <cn nm="bowl-top" val="4"/>
+    <cn nm="bowl-top-ins" val="29"/>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="top-serif"/>
+      <wpm nm="pt-b" val="top-serif - 1"/>
+      <wpm nm="sh-a" val="stem-top"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="bottom-serif"/>
+      <wpm nm="pt-b" val="bottom-serif + 1"/>
+      <wpm nm="sh-a" val="stem-bottom"/>
+    </callm>
+    <ip round="yes">
+      <ref>
+	<pt n="top-serif"/>
+	<pt n="bottom-serif"/>
+      </ref>
+      <pt n="bowl-top"/>
+      <pt n="bowl-bottom"/>
+    </ip>
+    <mv di="cap-serif" color="black">
+      <ref><pt n="bowl-top"/></ref>
+      <pt n="bowl-top-ins"/>
+    </mv>
+    <mv di="cap-curved-stem">
+      <ref><pt n="bowl-bottom"/></ref>
+      <pt n="bowl-bottom-ins"/>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="Thorn.loclENG">
+    <cn nm="stem-top" val="46"/>
+    <cn nm="stem-bottom" val="38"/>
+    <cn nm="bowl-top" val="26"/>
+    <cn nm="bowl-top-ins" val="14"/>
+    <cn nm="bowl-bottom" val="0"/>
+    <cn nm="bowl-bottom-ins" val="1"/>
+    <setvs axis="y"/>
+    <mv di="cap-height-overshoot">
+      <pt n="stem-top"/>
+      <sh>
+	<pt n="stem-top - 1"/>
+	<pt n="stem-top - 2"/>
+	<pt n="bowl-top"/>
+      </sh>
+    </mv>
+    <mv>
+      <pt n="bowl-top"/>
+      <mv color="black">
+	<pt n="bowl-top-ins"/>
+      </mv>
+    </mv>
+    <mv><pt n="stem-bottom"/></mv>
+    <mv di="baseline-undershoot">
+      <pt n="bowl-bottom"/>
+      <mv di="cap-curved-stem">
+	<pt n="bowl-bottom-ins"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni1E9E"> <!-- cap Germandbls -->
+    <cn nm="top" val="39"/>
+    <cn nm="top-ins" val="25"/>
+    <cn nm="serif" val="53"/>
+    <cn nm="stem-bottom" val="33"/>
+    <cn nm="bowl-bottom" val="0"/>
+    <cn nm="bowl-bottom-ins" val="10"/>
+    <cn nm="mid" val="18"/>
+    <set nm="mid-sh">
+      <pt n="44"/>
+      <pt n="45"/>
+    </set>
+    <setvs axis="y"/>
+    <mv di="cap-height-overshoot">
+      <pt n="top"/>
+      <mv di="cap-curved-stem" color="black">
+	<pt n="top-ins"/>
+      </mv>
+    </mv>
+    <mv di="baseline-undershoot">
+      <pt n="bowl-bottom"/>
+      <mv di="cap-curved-stem" color="black">
+	<pt n="bowl-bottom-ins"/>
+      </mv>
+    </mv>
+    <ip>
+      <ref>
+	<pt n="top"/>
+	<pt n="bowl-bottom"/>
+      </ref>
+      <pt n="mid"/>
+    </ip>
+    <callm nm="round-point">
+      <wpm nm="p" val="mid"/>
+    </callm>
+    <sh><set ref="mid-sh"/></sh>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="serif"/>
+      <wpm nm="pt-b" val="serif + 1"/>
+      <wpm nm="sh-a" val="stem-bottom"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uniA779"> <!-- Dinsular -->
+    <cn nm="top" val="21"/>
+    <cn nm="top-ins" val="39"/>
+    <cn nm="top-sh" val="15"/>
+    <cn nm="top-ins-sh" val="11"/>
+    <cn nm="bot" val="0"/>
+    <cn nm="bot-ins" val="31"/>
+    <setvs axis="y"/>
+    <mv di="cap-height">
+      <pt n="top"/>
+      <sh><pt n="top-sh"/></sh>
+      <mv di="cap-bar" color="black">
+	<pt n="top-ins"/>
+	<sh><pt n="top-ins-sh"/></sh>
+      </mv>
+    </mv>
+    <mv di="baseline-undershoot">
+      <pt n="bot"/>
+      <mv di="cap-curved-stem">
+	<pt n="bot-ins"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uniA77B"> <!-- Finsular -->
+    <cn nm="stem-top" val="8"/>
+    <cn nm="arm-top" val="24"/>
+    <cn nm="arm-top-ins" val="38"/>
+    <cn nm="arm-end" val="32"/>
+    <cn nm="stem-bot" val="0"/>
+    <cn nm="bar-bot" val="15"/>
+    <cn nm="bar-top" val="16"/>
+    <setvs axis="y"/>
+    <mv di="cap-height-overshoot">
+      <pt n="stem-top"/>
+      <sh>
+	<pt n="stem-top - 1"/>
+	<pt n="stem-top - 2"/>
+	<pt n="arm-top"/>
+      </sh>
+    </mv>
+    <mv round="yes">
+      <pt n="arm-top"/>
+      <mv color="black">
+	<pt n="arm-top-ins"/>
+      </mv>
+      <mv round="yes">
+	<pt n="arm-end"/>
+      </mv>
+    </mv>
+    <mv>
+      <pt n="stem-bot"/>
+    </mv>
+    <callf nm="interpolated-stem">
+      <wpm nm="ref-a" val="stem-top"/>
+      <wpm nm="ref-b" val="stem-bot"/>
+      <wpm nm="stem-a" val="bar-bot"/>
+      <wpm nm="stem-b" val="bar-top"/>
+      <wpm nm="cv" val="cap-bar"/>
+    </callf>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uniA77D"> <!-- Ginsular -->
+    <cn nm="top" val="34"/>
+    <cn nm="top-under" val="35"/>
+    <cn nm="bottom" val="0"/>
+    <cn nm="bottom-ins" val="54"/>
+    <cn nm="mid-lower" val="63"/>
+    <cn nm="mid-upper" val="10"/>
+    <set nm="top-sh">
+      <pt n="29"/>
+      <pt n="23"/>
+    </set>
+    <set nm="top-under-sh">
+      <pt n="19"/>
+      <pt n="18"/>
+      <pt n="37"/>
+    </set>
+    <setvs axis="y"/>
+    <mv di="cap-height">
+      <pt n="top"/>
+      <sh><set ref="top-sh"/></sh>
+      <mv color="black">
+	<pt n="top-under"/>
+	<sh><set ref="top-under-sh"/></sh>
+      </mv>
+    </mv>
+    <mv round="yes">
+      <pt n="bottom"/>
+      <mv di="cap-curved-stem" color="black">
+	<pt n="bottom-ins"/>
+      </mv>
+    </mv>
+    <ip round="yes">
+      <ref>
+	<pt n="top"/>
+	<pt n="bottom"/>
+      </ref>
+      <pt n="mid-lower"/>
+    </ip>
+    <mv>
+      <ref><pt n="mid-lower"/></ref>
+      <pt n="mid-upper"/>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uniA782"> <!-- Rinsular -->
+    <cn nm="stem-top" val="28"/>
+    <cn nm="stem-bot" val="20"/>
+    <cn nm="bow-top" val="13"/>
+    <cn nm="bow-top-ins" val="4"/>
+    <cn nm="serif" val="35"/>
+    <cn nm="right-stem-bot" val="0"/>
+    <setvs axis="y"/>
+    <mv di="cap-height-overshoot">
+      <pt n="stem-top"/>
+      <sh>
+	<pt n="stem-top - 1"/>
+	<pt n="stem-top - 2"/>
+	<pt n="bow-top"/>
+      </sh>
+      <mv round="yes">
+	<pt n="bow-top"/>
+	<mv di="cap-curved-stem" color="black">
+	  <pt n="bow-top-ins"/>
+	</mv>
+      </mv>
+    </mv>
+    <mv>
+      <pt n="stem-bot"/>
+    </mv>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="serif"/>
+      <wpm nm="pt-b" val="serif + 1"/>
+      <wpm nm="sh-a" val="right-stem-bot"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uniA784"> <!-- Sinsular -->
+    <cn nm="stem-top" val="8"/>
+    <cn nm="arm-top" val="20"/>
+    <cn nm="arm-top-ins" val="34"/>
+    <cn nm="arm-end" val="28"/>
+    <cn nm="stem-bot" val="0"/>
+    <setvs axis="y"/>
+    <mv di="cap-height-overshoot">
+      <pt n="stem-top"/>
+      <sh>
+	<pt n="stem-top - 1"/>
+	<pt n="stem-top - 2"/>
+	<pt n="arm-top"/>
+      </sh>
+    </mv>
+    <mv round="yes">
+      <pt n="arm-top"/>
+      <mv color="black">
+	<pt n="arm-top-ins"/>
+      </mv>
+      <mv round="yes">
+	<pt n="arm-end"/>
+      </mv>
+    </mv>
+    <mv>
+      <pt n="stem-bot"/>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uniA786"> <!-- Tinsular -->
+    <cn nm="top" val="48"/>
+    <cn nm="top-under" val="49"/>
+    <cn nm="curve-top" val="8"/>
+    <cn nm="bot" val="0"/>
+    <cn nm="bot-ins" val="17"/>
+    <set nm="top-sh">
+      <pt n="43"/>
+      <pt n="34"/>
+    </set>
+    <setvs axis="y"/>
+    <mv di="cap-height">
+      <pt n="top"/>
+      <sh><set ref="top-sh"/></sh>
+      <mv color="black">
+	<pt n="top-under"/>
+	<sh><pt n="curve-top"/></sh>
+      </mv>
+    </mv>
+    <mv di="cap-baseline-undershoot">
+      <pt n="bot"/>
+      <mv di="cap-curved-stem">
+	<pt n="bot-ins"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <xi:include href="Elstob-roman-b.xgf"
+                xpointer="xmlns(x=http://xgridfit.sourceforge.net/Xgridfit2)
+                xpointer(/x:xgridfit/x:gl)"/>
+
+  <xi:include href="Elstob-roman-num.xgf"
+                xpointer="xmlns(x=http://xgridfit.sourceforge.net/Xgridfit2)
+                xpointer(/x:xgridfit/x:gl)"/>
+
+  <xi:include href="Elstob-roman-sc.xgf"
+                xpointer="xmlns(x=http://xgridfit.sourceforge.net/Xgridfit2)
+                xpointer(/x:xgridfit/x:gl)"/>
+
+  <xi:include href="Elstob-roman-ipa.xgf"
+                xpointer="xmlns(x=http://xgridfit.sourceforge.net/Xgridfit2)
+                xpointer(/x:xgridfit/x:gl)"/>
+
+  <xi:include href="Elstob-roman-punct.xgf"
+                xpointer="xmlns(x=http://xgridfit.sourceforge.net/Xgridfit2)
+			  xpointer(/x:xgridfit/x:gl)"/>
+
+  <xi:include href="Elstob-roman-marks.xgf"
+                xpointer="xmlns(x=http://xgridfit.sourceforge.net/Xgridfit2)
+			  xpointer(/x:xgridfit/x:gl)"/>
+
+  <xi:include href="Elstob-roman-lig.xgf"
+                xpointer="xmlns(x=http://xgridfit.sourceforge.net/Xgridfit2)
+			  xpointer(/x:xgridfit/x:gl)"/>
+
+  <xi:include href="Elstob-roman-runic.xgf"
+                xpointer="xmlns(x=http://xgridfit.sourceforge.net/Xgridfit2)
+                xpointer(/x:xgridfit/x:gl)"/>
+
+</xgridfit>

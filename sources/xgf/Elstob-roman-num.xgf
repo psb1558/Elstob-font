@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xgridfit xmlns="http://xgridfit.sourceforge.net/Xgridfit2"
+	  xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <gl pnm="zero">
+    <pm nm="offset" val="0"/>
+    <pm nm="include-iup" val="0"/>
+    <cn nm="top" val="8"/>
+    <cn nm="top-ins" val="27"/>
+    <cn nm="bot" val="0"/>
+    <cn nm="bot-ins" val="17"/>
+    <setvs axis="y"/>
+    <mv di="baseline-undershoot">
+      <pt n="bot"/>
+      <mv color="black">
+	<pt n="bot-ins"/>
+      </mv>
+    </mv>
+    <mv di="num-top-round">
+      <pt n="top"/>
+      <mv color="black">
+	<pt n="top-ins"/>
+      </mv>
+    </mv>
+    <compile-if test="include-iup = 0">
+      <iup axis="y"/>
+    </compile-if>
+  </gl>
+
+  <gl pnm="one">
+    <cn nm="top" val="8"/>
+    <cn nm="stem-top" val="1"/>
+    <cn nm="stem-bot" val="0"/>
+    <cn nm="serif" val="14"/>
+    <setvs axis="y"/>
+    <push>stem-top top</push>
+    <command nm="MDAP" modifier="0"/>
+    <command nm="MDAP" modifier="0"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="serif"/>
+      <wpm nm="pt-b" val="serif + 1"/>
+      <wpm nm="sh-a" val="stem-bot"/>
+      <wpm nm="cv-h" val="lc-serif"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="two">
+    <cn nm="top" val="19"/>
+    <cn nm="top-ins" val="12"/>
+    <cn nm="bot" val="34"/>
+    <cn nm="bot-ins" val="28"/>
+    <setvs axis="y"/>
+    <mv di="num-top-round">
+      <pt n="top"/>
+      <mv color="black">
+	<pt n="top-ins"/>
+      </mv>
+    </mv>
+    <callm nm="one-cv-stem">
+      <wpm nm="pt1" val="bot"/>
+      <wpm nm="pt2" val="bot-ins"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="three">
+    <cn nm="top" val="39"/>
+    <cn nm="top-ins" val="32"/>
+    <cn nm="bot" val="0"/>
+    <cn nm="bot-ins" val="13"/>
+    <cn nm="mid" val="21"/>
+    <set nm="mid-sh">
+      <pt n="24"/>
+      <pt n="25"/>
+      <pt n="47"/>
+      <pt n="48"/>
+    </set>
+    <setvs axis="y"/>
+    <mv di="num-top-round">
+      <pt n="top"/>
+      <mv color="black">
+	<pt n="top-ins"/>
+      </mv>
+    </mv>
+    <mv di="baseline-undershoot">
+      <pt n="bot"/>
+      <mv color="black">
+	<pt n="bot-ins"/>
+      </mv>
+    </mv>
+    <ip>
+      <ref>
+	<pt n="top"/>
+	<pt n="bot"/>
+      </ref>
+      <pt n="mid"/>
+    </ip>
+    <callm nm="round-point">
+      <wpm nm="p" val="mid"/>
+    </callm>
+    <sh><set ref="mid-sh"/></sh>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="four">
+    <cn nm="diag-top" val="8"/>
+    <cn nm="diag-bot-a" val="1"/>
+    <cn nm="diag-bot-b" val="0"/>
+    <cn nm="bar-top"  val="11"/>
+    <cn nm="stem-top" val="20"/>
+    <cn nm="stem-bot" val="19"/>
+    <cn nm="serif" val="14"/>
+    <setvs axis="y"/>
+    <callm nm="round-point">
+      <wpm nm="p" val="diag-top"/>
+    </callm>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="serif"/>
+      <wpm nm="pt-b" val="serif + 1"/>
+      <wpm nm="sh-a" val="stem-bot"/>
+      <wpm nm="cv-h" val="lc-serif"/>
+    </callm>
+    <srp whichpointer="2">
+      <pt n="diag-top"/>
+    </srp>
+    <ip>
+      <pt n="stem-top"/>
+      <pt n="diag-bot-b"/>
+    </ip>
+    <callm nm="round-point">
+      <wpm nm="p" val="stem-top"/>
+    </callm>
+    <callm nm="plain-stem">
+      <wpm nm="pt1" val="diag-bot-b"/>
+      <wpm nm="pt2" val="bar-top"/>
+    </callm>
+    <sh><pt n="diag-bot-a"/></sh>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="five">
+    <cn nm="top" val="26"/>
+    <cn nm="top-ins" val="28"/>
+    <cn nm="bot" val="0"/>
+    <cn nm="bot-ins" val="13"/>
+    <cn nm="mid-lower" val="21"/>
+    <cn nm="mid-upper" val="36"/>
+    <setvs axis="y"/>
+    <callm nm="one-cv-stem">
+      <wpm nm="pt1" val="top"/>
+      <wpm nm="pt2" val="top-ins"/>
+      <wpm nm="cv" val="num-top-flat"/>
+    </callm>
+    <callm nm="one-cv-stem">
+      <wpm nm="pt1" val="bot"/>
+      <wpm nm="pt2" val="bot-ins"/>
+      <wpm nm="cv" val="baseline-undershoot"/>
+    </callm>
+    <callm nm="mid-stem">
+      <wpm nm="ref1" val="top"/>
+      <wpm nm="ref2" val="bot"/>
+      <wpm nm="pt1" val="mid-lower"/>
+      <wpm nm="pt2" val="mid-upper"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="six">
+    <cn nm="top" val="9"/>
+    <cn nm="bot" val="0"/>
+    <cn nm="bot-ins" val="19"/>
+    <cn nm="mid-lower" val="26"/>
+    <cn nm="mid-upper" val="34"/>
+    <setvs axis="y"/>
+    <push>(top + 1) top</push>
+    <command nm="MDAP" modifier="0"/>
+    <command nm="MDAP" modifier="0"/>
+    <callm nm="one-cv-stem">
+      <wpm nm="pt1" val="bot"/>
+      <wpm nm="pt2" val="bot-ins"/>
+      <wpm nm="cv" val="baseline-undershoot"/>
+    </callm>
+    <callm nm="mid-stem">
+      <wpm nm="ref1" val="top"/>
+      <wpm nm="ref2" val="bot"/>
+      <wpm nm="pt1" val="mid-lower"/>
+      <wpm nm="pt2" val="mid-upper"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="seven" init-graphics="no">
+    <setvs axis="y"/>
+    <callm nm="one-cv-stem">
+      <wpm nm="pt1" val="13"/>
+      <wpm nm="pt2" val="6"/>
+      <wpm nm="cv" val="num-top-flat"/>
+    </callm>
+    <push>0 baseline</push>
+    <command nm="MIAP" modifier="1"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="eight" init-graphics="no">
+    <setvs axis="y"/>
+    <callm nm="one-cv-stem">
+      <wpm nm="pt1" val="43"/>
+      <wpm nm="pt2" val="15"/>
+      <wpm nm="cv" val="num-top-round"/>
+    </callm>
+    <callm nm="one-cv-stem">
+      <wpm nm="pt1" val="0"/>
+      <wpm nm="pt2" val="30"/>
+      <wpm nm="cv" val="baseline-undershoot"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="nine" init-graphics="no">
+    <cn nm="top" val="33"/>
+    <cn nm="top-ins" val="10"/>
+    <cn nm="bot" val="0"/>
+    <cn nm="mid-lower" val="25"/>
+    <cn nm="mid-upper" val="17"/>
+    <setvs axis="y"/>
+    <push>(bot + 1) bot</push>
+    <command nm="MDAP" modifier="0"/>
+    <command nm="MDAP" modifier="0"/>
+    <callm nm="one-cv-stem">
+      <wpm nm="pt1" val="top"/>
+      <wpm nm="pt2" val="top-ins"/>
+      <wpm nm="cv" val="num-top-round"/>
+    </callm>
+    <callm nm="mid-stem">
+      <wpm nm="ref1" val="top"/>
+      <wpm nm="ref2" val="bot"/>
+      <wpm nm="pt1" val="mid-lower"/>
+      <wpm nm="pt2" val="mid-upper"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="zero.zero" init-graphics="no">
+    <callg pnm="zero">
+      <wpm nm="offset" val="4"/>
+      <wpm nm="include-iup" val="-1"/>
+    </callg>
+    <ip>
+      <ref>
+	<pt n="12"/>
+	<pt n="4"/>
+      </ref>
+      <pt n="0"/>
+      <pt n="1"/>
+      <pt n="2"/>
+      <pt n="3"/>
+    </ip>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="zero.lf" init-graphics="no">
+    <callg pnm="zero"/>
+  </gl>
+
+  <gl pnm="one.lf" init-graphics="no">
+    <callg pnm="one"/>
+  </gl>
+
+  <gl pnm="two.lf" init-graphics="no">
+    <callg pnm="two"/>
+  </gl>
+
+  <gl pnm="three.lf" init-graphics="no">
+    <callg pnm="three"/>
+  </gl>
+
+  <gl pnm="four.lf" init-graphics="no">
+    <callg pnm="four"/>
+  </gl>
+
+  <gl pnm="five.lf" init-graphics="no">
+    <callg pnm="five"/>
+  </gl>
+
+  <gl pnm="six.lf" init-graphics="no">
+    <callg pnm="six"/>
+  </gl>
+
+  <gl pnm="seven.lf" init-graphics="no">
+    <callg pnm="seven"/>
+  </gl>
+
+  <gl pnm="nine.lf" init-graphics="no">
+    <callg pnm="nine"/>
+  </gl>
+
+  <gl pnm="zero.lfzero" init-graphics="no">
+    <callg pnm="zero">
+      <wpm nm="offset" val="4"/>
+      <wpm nm="include-iup" val="-1"/>
+    </callg>
+    <ip>
+      <ref>
+	<pt n="12"/>
+	<pt n="4"/>
+      </ref>
+      <pt n="0"/>
+      <pt n="1"/>
+      <pt n="2"/>
+      <pt n="3"/>
+    </ip>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="zero.osf">
+    <pm nm="offset" val="0"/>
+    <pm nm="include-iup" val="0"/>
+    <cn nm="top" val="8"/>
+    <cn nm="top-ins" val="24"/>
+    <cn nm="bot" val="0"/>
+    <cn nm="bot-ins" val="16"/>
+    <setvs axis="y"/>
+    <callm nm="lc-horz-stroke-cv">
+      <wpm nm="pt1" val="bot"/>
+      <wpm nm="pt2" val="bot-ins"/>
+      <wpm nm="cv" val="xheight-overshoot"/>
+      <wpm nm="cv-h" val="zero-osf-stem"/>
+    </callm>
+    <callm nm="lc-horz-stroke-cv">
+      <wpm nm="pt1" val="top"/>
+      <wpm nm="pt2" val="top-ins"/>
+      <wpm nm="cv" val="baseline-undershoot"/>
+      <wpm nm="cv-h" val="zero-osf-stem"/>
+    </callm>
+    <compile-if test="include-iup = 0">
+      <iup axis="y"/>
+    </compile-if>
+  </gl>
+
+  <gl pnm="one.osf">
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="4"/>
+      <wpm nm="pt-b" val="5"/>
+      <wpm nm="sh-a" val="0"/>
+      <wpm nm="cv-h" val="lc-serif"/>
+    </callm>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="11"/>
+      <wpm nm="pt-b" val="10"/>
+      <wpm nm="sh-a" val="1"/>
+      <wpm nm="cv" val="xheight"/>
+      <wpm nm="cv-h" val="lc-serif"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="two.osf">
+    <setvs axis="y"/>
+    <callm nm="one-cv-stem">
+      <wpm nm="pt1" val="18"/>
+      <wpm nm="pt2" val="9"/>
+      <wpm nm="cv" val="xheight-overshoot"/>
+    </callm>
+    <callm nm="one-cv-stem">
+      <wpm nm="pt1" val="32"/>
+      <wpm nm="pt2" val="28"/>
+      <wpm nm="cv" val="baseline"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="three.osf">
+    <setvs axis="y"/>
+    <callm nm="one-cv-stem">
+      <wpm nm="pt1" val="25"/>
+      <wpm nm="pt2" val="18"/>
+      <wpm nm="cv" val="xheight-overshoot"/>
+    </callm>
+    <callm nm="round-point">
+      <wpm nm="p" val="0"/>
+    </callm>
+    <sh><pt n="1"/></sh>
+    <iup axis="y"/>
+  </gl>
+
+  <!--
+      This one isn't working, and I haven't figured out why.
+      IUP appears to be moving things it shouldn't move. The
+      higher-level code doesn't do any better.
+  -->
+  <gl pnm="four.osf">
+    <cn nm="top" val="9"/>
+    <cn nm="stem-bot" val="0"/>
+    <cn nm="bar-bot" val="16"/>
+    <cn nm="bar-top" val="4"/>
+    <cn nm="bar-bot-sh" val="12"/>
+    <cn nm="bar-top-sh" val="14"/>
+    <set nm="top-ins">
+      <pt n="1"/>
+      <pt n="2"/>
+    </set>
+    <setvs axis="y"/>
+    <!--
+    <mv round="no">
+      <pt n="top"/>
+      <sh><pt n="1"/><pt n="2"/></sh>
+    </mv>
+    <mv di="baseline">
+      <pt n="bar-bot"/>
+      <sh><pt n="bar-bot-sh"/></sh>
+      <mv color="black">
+	<pt n="bar-top"/>
+	<sh><pt n="bar-top-sh"/></sh>
+      </mv>
+    </mv>
+    -->
+    <push>2 1 top</push>
+    <command nm="MDAP" modifier="0"/>
+    <command nm="SHP" modifier="1"/>
+    <command nm="SHP" modifier="1"/>
+    <callm nm="one-cv-stem">
+      <wpm nm="pt1" val="bar-bot"/>
+      <wpm nm="pt2" val="bar-top"/>
+    </callm>
+    <sh ref-ptr="2"><pt n="bar-top-sh"/></sh>
+    <sh ref-ptr="1"><pt n="bar-bot-sh"/></sh>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="six.osf">
+    <cn nm="top" val="10"/>
+    <cn nm="bot" val="0"/>
+    <cn nm="bot-ins" val="21"/>
+    <cn nm="mid-lower" val="29"/>
+    <cn nm="mid-upper" val="37"/>
+    <setvs axis="y"/>
+    <push>(top + 1) top</push>
+    <command nm="MDAP" modifier="0"/>
+    <command nm="MDAP" modifier="0"/>
+    <callm nm="one-cv-stem">
+      <wpm nm="pt1" val="bot"/>
+      <wpm nm="pt2" val="bot-ins"/>
+      <wpm nm="cv" val="baseline-undershoot"/>
+    </callm>
+    <callm nm="mid-stem">
+      <wpm nm="ref1" val="top"/>
+      <wpm nm="ref2" val="bot"/>
+      <wpm nm="pt1" val="mid-lower"/>
+      <wpm nm="pt2" val="mid-upper"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="seven.osf" init-graphics="no">
+    <setvs axis="y"/>
+    <callm nm="one-cv-stem">
+      <wpm nm="pt1" val="6"/>
+      <wpm nm="pt2" val="4"/>
+      <wpm nm="cv" val="xheight"/>
+    </callm>
+    <sh ref-ptr="1"><pt n="10"/></sh>
+    <sh ref-ptr="2"><pt n="8"/></sh>
+    <push>0</push>
+    <command nm="MDAP" modifier="1"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="eight.osf">
+    <setvs axis="y"/>
+    <callm nm="plain-stem">
+      <wpm nm="pt1" val="42"/>
+      <wpm nm="pt2" val="14"/>
+    </callm>
+    <callm nm="one-cv-stem">
+      <wpm nm="pt1" val="0"/>
+      <wpm nm="pt2" val="29"/>
+      <wpm nm="cv" val="baseline-undershoot"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="nine.osf">
+    <cn nm="top" val="35"/>
+    <cn nm="top-ins" val="11"/>
+    <cn nm="bot" val="0"/>
+    <cn nm="mid-lower" val="27"/>
+    <cn nm="mid-upper" val="19"/>
+    <setvs axis="y"/>
+    <push>(bot + 1) bot</push>
+    <command nm="MDAP" modifier="0"/>
+    <command nm="MDAP" modifier="0"/>
+    <callm nm="one-cv-stem">
+      <wpm nm="pt1" val="top"/>
+      <wpm nm="pt2" val="top-ins"/>
+      <wpm nm="cv" val="xheight-overshoot"/>
+    </callm>
+    <callm nm="mid-stem">
+      <wpm nm="ref1" val="top"/>
+      <wpm nm="ref2" val="bot"/>
+      <wpm nm="pt1" val="mid-lower"/>
+      <wpm nm="pt2" val="mid-upper"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="zero.osfzero" init-graphics="no">
+    <cn nm="top" val="12"/>
+    <cn nm="top-ins" val="28"/>
+    <cn nm="bot" val="4"/>
+    <cn nm="bot-ins" val="20"/>
+    <setvs axis="y"/>
+    <callm nm="lc-horz-stroke-cv">
+      <wpm nm="pt1" val="bot"/>
+      <wpm nm="pt2" val="bot-ins"/>
+      <wpm nm="cv" val="xheight-overshoot"/>
+      <wpm nm="cv-h" val="zero-osf-stem"/>
+    </callm>
+    <callm nm="lc-horz-stroke-cv">
+      <wpm nm="pt1" val="top"/>
+      <wpm nm="pt2" val="top-ins"/>
+      <wpm nm="cv" val="baseline-undershoot"/>
+      <wpm nm="cv-h" val="zero-osf-stem"/>
+    </callm>
+    <ip>
+      <ref>
+	<pt n="top"/>
+	<pt n="bot"/>
+      </ref>
+      <pt n="0"/>
+      <pt n="1"/>
+      <pt n="2"/>
+      <pt n="3"/>
+    </ip>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="zero.tosf" init-graphics="no">
+    <callg pnm="zero.osf"/>
+  </gl>
+
+  <gl pnm="one.tosf" init-graphics="no">
+    <callg pnm="one.osf"/>
+  </gl>
+
+  <gl pnm="three.tosf" init-graphics="no">
+    <callg pnm="three.osf"/>
+  </gl>
+
+  <gl pnm="four.tosf" init-graphics="no">
+    <callg pnm="four.osf"/>
+  </gl>
+
+  <gl pnm="six.tosf" init-graphics="no">
+    <callg pnm="six.osf"/>
+  </gl>
+
+  <gl pnm="seven.tosf" init-graphics="no">
+    <callg pnm="seven.osf"/>
+  </gl>
+
+  <gl pnm="eight.tosf">
+    <setvs axis="y"/>
+    <callm nm="plain-stem">
+      <wpm nm="pt1" val="44"/>
+      <wpm nm="pt2" val="16"/>
+    </callm>
+    <callm nm="one-cv-stem">
+      <wpm nm="pt1" val="0"/>
+      <wpm nm="pt2" val="31"/>
+      <wpm nm="cv" val="baseline-undershoot"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="nine.tosf" init-graphics="no">
+    <callg pnm="nine.osf"/>
+  </gl>
+
+  <gl pnm="zero.tosfzero" init-graphics="no">
+    <callg pnm="zero.osfzero"/>
+  </gl>
+
+  <gl pnm="uni00B9"> <!-- superscript one -->
+    <setvs axis="y"/>
+    <mv di="sup-num-base">
+      <pt n="14"/>
+      <sh><pt n="0"/></sh>
+      <mv><pt n="8"/></mv>
+      <mv color="black"><pt n="15"/></mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni00B2">
+    <setvs axis="y"/>
+    <mv di="sup-num-base">
+      <pt n="32"/>
+      <mv color="black"><pt n="27"/></mv>
+      <mv>
+	<pt n="18"/>
+	<mv color="black"><pt n="11"/></mv>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni00B3">
+    <setvs axis="y"/>
+    <mv di="sup-num-base-undershoot">
+      <pt n="0"/>
+      <mv color="black"><pt n="12"/></mv>
+      <mv>
+	<pt n="36"/>
+	<mv color="black"><pt n="29"/></mv>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni2074"> <!-- superscript four -->
+    <setvs axis="y"/>
+    <mv di="sup-num-base">
+      <pt n="22"/>
+      <sh><pt n="0"/></sh>
+      <mv color="black"><pt n="23"/></mv>
+      <mv>
+	<pt n="10"/>
+	<ip round="yes">
+	  <pt n="15"/>
+	  <pt n="1"/>
+	</ip>
+      </mv>
+    </mv>
+    <sh>
+      <ref><pt n="1"/></ref>
+      <pt n="20"/>
+    </sh>
+    <mv color="black">
+      <ref><pt n="1"/></ref>
+      <pt n="14"/>
+      <sh><pt n="17"/></sh>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="onehalf">
+    <setvs axis="y"/>
+    <!-- one -->
+    <mv round="yes">
+      <pt n="50"/>
+      <sh><pt n="37"/></sh>
+      <mv><pt n="44"/></mv>
+      <mv color="black"><pt n="51"/></mv>
+    </mv>
+    <!-- two -->
+    <mv di="baseline">
+      <pt n="36"/>
+      <mv color="black"><pt n="30"/></mv>
+      <mv>
+	<pt n="22"/>
+	<mv color="black"><pt n="15"/></mv>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="onequarter">
+    <setvs axis="y"/>
+    <!-- one -->
+    <mv round="yes">
+      <pt n="17"/>
+      <sh><pt n="4"/></sh>
+      <mv><pt n="11"/></mv>
+      <mv color="black"><pt n="18"/></mv>
+    </mv>
+    <!-- four -->
+    <mv di="baseline">
+      <pt n="22"/>
+      <sh><pt n="27"/></sh>
+      <mv color="black"><pt n="23"/></mv>
+      <mv>
+	<pt n="37"/>
+	<ip round="yes">
+	  <pt n="42"/>
+	  <pt n="28"/>
+	</ip>
+      </mv>
+    </mv>
+    <sh>
+      <ref><pt n="28"/></ref>
+      <pt n="47"/>
+    </sh>
+    <mv color="black">
+      <ref><pt n="28"/></ref>
+      <pt n="41"/>
+      <sh><pt n="44"/></sh>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="threequarters">
+    <setvs axis="y"/>
+    <!-- three -->
+    <mv round="yes">
+      <pt n="4"/>
+      <mv color="black"><pt n="16"/></mv>
+      <mv>
+	<pt n="40"/>
+	<mv color="black"><pt n="33"/></mv>
+      </mv>
+    </mv>
+    <!-- four -->
+    <mv di="baseline">
+      <pt n="76"/>
+      <sh><pt n="54"/></sh>
+      <mv color="black"><pt n="77"/></mv>
+      <mv>
+	<pt n="64"/>
+	<ip round="yes">
+	  <pt n="69"/>
+	  <pt n="55"/>
+	</ip>
+      </mv>
+    </mv>
+    <sh>
+      <ref><pt n="55"/></ref>
+      <pt n="74"/>
+    </sh>
+    <mv color="black">
+      <ref><pt n="55"/></ref>
+      <pt n="68"/>
+      <sh><pt n="71"/></sh>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+</xgridfit>

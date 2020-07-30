@@ -1,0 +1,1866 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xgridfit xmlns="http://xgridfit.sourceforge.net/Xgridfit2"
+	  xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <!--
+
+  <gl pnm="uni">
+    <setvs axis="y"/>
+    <iup axis="y"/>
+    </gl>
+
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="0"/>
+      <wpm nm="pt-b" val="0"/>
+      <wpm nm="sh-a" val="-1"/>
+      <wpm nm="sh-b" val="-1"/>
+      <wpm nm="cv" val="baseline"/>
+      <wpm nm="align-b" val="-1"/>
+    </callm>
+
+  -->
+
+  <gl pnm="uni16A0">
+    <set nm="top-sh-a">
+      <pt n="1"/>
+      <pt n="38"/>
+      <pt n="9"/>
+      <pt n="43"/>
+      <pt n="20"/>
+    </set>
+    <set nm="top-sh-b">
+      <pt n="37"/>
+      <pt n="42"/>
+    </set>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="28"/>
+      <wpm nm="pt-b" val="27"/>
+      <wpm nm="sh-a" val="top-sh-a"/>
+      <wpm nm="sh-b" val="top-sh-b"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="31"/>
+      <wpm nm="pt-b" val="32"/>
+      <wpm nm="sh-a" val="0"/>
+    </callm>
+    <ip>
+      <ref>
+	<pt n="28"/>
+	<pt n="31"/>
+      </ref>
+      <pt n="5"/>
+      <pt n="4"/>
+      <pt n="15"/>
+      <pt n="14"/>
+    </ip>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16A1">
+    <set nm="top-sh-a">
+      <pt n="1"/>
+      <pt n="56"/>
+      <pt n="9"/>
+      <pt n="51"/>
+      <pt n="21"/>
+    </set>
+    <set nm="top-sh-b">
+      <pt n="55"/>
+      <pt n="50"/>
+    </set>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="34"/>
+      <wpm nm="pt-b" val="33"/>
+      <wpm nm="sh-a" val="top-sh-a"/>
+      <wpm nm="sh-b" val="top-sh-b"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="27"/>
+      <wpm nm="pt-b" val="28"/>
+      <wpm nm="sh-a" val="0"/>
+    </callm>
+    <ip>
+      <ref>
+	<pt n="34"/>
+	<pt n="27"/>
+      </ref>
+      <pt n="5"/>
+      <pt n="4"/>
+      <pt n="15"/>
+      <pt n="16"/>
+    </ip>
+    <mv>
+      <pt n="43"/>
+      <mv color="black">
+	<pt n="37"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16A2">
+    <setvs axis="y"/>
+    <mv di="cap-height">
+      <pt n="2"/>
+      <sh>
+	<pt n="8"/>
+	<pt n="9"/>
+      </sh>
+    </mv>
+    <callf nm="cap-dbl-serif">
+      <wpm nm="first-left" val="11"/>
+      <wpm nm="second-left" val="12"/>
+      <wpm nm="first-right" val="16"/>
+      <wpm nm="second-right" val="17"/>
+      <wpm nm="stem1" val="0"/>
+      <wpm nm="stem2" val="5"/>
+    </callf>
+    <sh>
+      <ref><pt n="2"/></ref>
+      <pt n="3"/>
+    </sh>
+    <sh>
+      <ref><pt n="8"/></ref>
+      <pt n="7"/>
+    </sh>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16A3">
+    <setvs axis="y"/>
+    <mv di="cap-height">
+      <pt n="14"/>
+      <sh>
+	<pt n="20"/>
+	<pt n="21"/>
+      </sh>
+    </mv>
+    <callf nm="cap-dbl-serif">
+      <wpm nm="first-left" val="0"/>
+      <wpm nm="second-left" val="1"/>
+      <wpm nm="first-right" val="7"/>
+      <wpm nm="second-right" val="6"/>
+      <wpm nm="stem1" val="12"/>
+      <wpm nm="stem2" val="17"/>
+    </callf>
+    <sh>
+      <ref><pt n="14"/></ref>
+      <pt n="15"/>
+    </sh>
+    <sh>
+      <ref><pt n="20"/></ref>
+      <pt n="19"/>
+    </sh>
+    <mv di="baseline">
+      <pt n="8"/>
+      <mv>
+	<pt n="9"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16A4">
+    <setvs axis="y"/>
+    <mv di="cap-height">
+      <pt n="2"/>
+      <sh>
+	<pt n="8"/>
+	<pt n="9"/>
+      </sh>
+    </mv>
+    <callf nm="cap-dbl-serif">
+      <wpm nm="first-left" val="11"/>
+      <wpm nm="second-left" val="12"/>
+      <wpm nm="first-right" val="16"/>
+      <wpm nm="second-right" val="17"/>
+      <wpm nm="stem1" val="0"/>
+      <wpm nm="stem2" val="5"/>
+    </callf>
+    <sh>
+      <ref><pt n="2"/></ref>
+      <pt n="3"/>
+    </sh>
+    <sh>
+      <ref><pt n="8"/></ref>
+      <pt n="7"/>
+    </sh>
+    <callm nm="plain-stem">
+      <wpm nm="pt1" val="21"/>
+      <wpm nm="pt2" val="27"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16A5">
+    <setvs axis="y"/>
+    <mv di="cap-height">
+      <pt n="17"/>
+      <sh>
+	<pt n="23"/>
+	<pt n="24"/>
+      </sh>
+    </mv>
+    <callf nm="cap-dbl-serif">
+      <wpm nm="first-left" val="7"/>
+      <wpm nm="second-left" val="8"/>
+      <wpm nm="first-right" val="14"/>
+      <wpm nm="second-right" val="13"/>
+      <wpm nm="stem1" val="15"/>
+      <wpm nm="stem2" val="20"/>
+    </callf>
+    <sh>
+      <ref><pt n="23"/></ref>
+      <pt n="22"/>
+    </sh>
+    <sh>
+      <ref><pt n="17"/></ref>
+      <pt n="18"/>
+    </sh>
+    <mv di="baseline">
+      <pt n="0"/>
+      <sh>
+	<pt n="1"/>
+	<pt n="5"/>
+	<pt n="4"/>
+	<pt n="3"/>
+      </sh>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16A6">
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="21"/>
+      <wpm nm="serif-bot" val="14"/>
+      <wpm nm="stem-top" val="1"/>
+      <wpm nm="stem-bot" val="0"/>
+    </callm>
+    <!--
+    <srp whichpointer="2">
+      <pt n="21"/>
+    </srp>
+    <ip>
+      <range>
+	<pt n="3"/>
+	<pt n="13"/>
+      </range>
+      </ip>
+      -->
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16A7">
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="21"/>
+      <wpm nm="serif-bot" val="14"/>
+      <wpm nm="stem-top" val="1"/>
+      <wpm nm="stem-bot" val="0"/>
+    </callm>
+    <srp whichpointer="2">
+      <pt n="21"/>
+    </srp>
+    <ip>
+      <set>
+	<pt n="3"/>
+	<pt n="12"/>
+	<pt n="6"/>
+	<pt n="9"/>
+	<pt n="30"/>
+	<pt n="24"/>
+      </set>
+    </ip>
+    <push>30 24</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDAP" modifier="1"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16A8">
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="24"/>
+      <wpm nm="serif-bot" val="17"/>
+      <wpm nm="stem-top" val="1"/>
+      <wpm nm="stem-bot" val="0"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16A9">
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="29"/>
+      <wpm nm="serif-bot" val="22"/>
+      <wpm nm="stem-top" val="1"/>
+      <wpm nm="stem-bot" val="0"/>
+    </callm>
+    <sh>
+      <ref><pt n="29"/></ref>
+      <pt n="33"/>
+      <pt n="4"/>
+    </sh>
+    <sh>
+      <ref><pt n="28"/></ref>
+      <pt n="32"/>
+    </sh>
+    <mv>
+      <pt n="19"/>
+      <sh><pt n="11"/></sh>
+      <mv di="cap-serif" color="black">
+	<pt n="18"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16AA">
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="24"/>
+      <wpm nm="serif-bot" val="17"/>
+      <wpm nm="stem-top" val="1"/>
+      <wpm nm="stem-bot" val="0"/>
+    </callm>
+    <sh>
+      <ref><pt n="24"/></ref>
+      <pt n="28"/>
+      <pt n="4"/>
+    </sh>
+    <sh>
+      <ref><pt n="23"/></ref>
+      <pt n="27"/>
+    </sh>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16AB">
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="24"/>
+      <wpm nm="serif-bot" val="17"/>
+      <wpm nm="stem-top" val="1"/>
+      <wpm nm="stem-bot" val="0"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+  
+  <gl pnm="uni16AC">
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="31"/>
+      <wpm nm="serif-bot" val="24"/>
+      <wpm nm="stem-top" val="1"/>
+      <wpm nm="stem-bot" val="0"/>
+    </callm>
+    <srp whichpointer="2">
+      <pt n="31"/>
+    </srp>
+    <ip>
+      <pt n="22"/>
+      <pt n="17"/>
+      <pt n="12"/>
+      <pt n="6"/>
+    </ip>
+    <push>22 17 12 6</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDAP" modifier="1"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16AD">
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="20"/>
+      <wpm nm="serif-bot" val="23"/>
+      <wpm nm="stem-top" val="15"/>
+      <wpm nm="stem-bot" val="14"/>
+    </callm>
+    <srp whichpointer="2">
+      <pt n="20"/>
+    </srp>
+    <ip>
+      <pt n="5"/>
+      <pt n="12"/>
+    </ip>
+    <push>5 12</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDAP" modifier="1"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16AE">
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="20"/>
+      <wpm nm="serif-bot" val="23"/>
+      <wpm nm="stem-top" val="15"/>
+      <wpm nm="stem-bot" val="14"/>
+    </callm>
+    <srp whichpointer="2">
+      <pt n="20"/>
+    </srp>
+    <ip>
+      <pt n="1"/>
+      <pt n="8"/>
+    </ip>
+    <push>1 8</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDAP" modifier="1"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16AF">
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="26"/>
+      <wpm nm="serif-bot" val="29"/>
+      <wpm nm="stem-top" val="21"/>
+      <wpm nm="stem-bot" val="20"/>
+    </callm>
+    <srp whichpointer="2">
+      <pt n="26"/>
+    </srp>
+    <ip>
+      <pt n="6"/>
+      <pt n="1"/>
+      <pt n="11"/>
+      <pt n="16"/>
+    </ip>
+    <push>6 1 11 16</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDAP" modifier="1"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16B0">
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="23"/>
+      <wpm nm="serif-bot" val="26"/>
+      <wpm nm="stem-top" val="18"/>
+      <wpm nm="stem-bot" val="17"/>
+    </callm>
+    <srp whichpointer="2">
+      <pt n="23"/>
+    </srp>
+    <ip>
+      <pt n="6"/>
+      <pt n="1"/>
+      <pt n="11"/>
+    </ip>
+    <push>6 1 11</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDAP" modifier="1"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16B1">
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="28"/>
+      <wpm nm="serif-bot" val="21"/>
+      <wpm nm="stem-top" val="1"/>
+      <wpm nm="stem-bot" val="0"/>
+    </callm>
+    <srp whichpointer="2">
+      <pt n="28"/>
+    </srp>
+    <ip>
+      <pt n="16"/>
+      <pt n="12"/>
+      <pt n="5"/>
+    </ip>
+    <push>9 22 11 7 21</push>
+    <command nm="SRP2"/>
+    <command nm="SHP" modifier="0"/>
+    <command nm="SHP" modifier="0"/>
+    <command nm="SRP2"/>
+    <command nm="SHP" modifier="0"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16B2">
+    <setvs axis="y"/>
+    <push>4 0</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDAP" modifier="1"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16B3">
+    <setvs axis="y"/>
+    <callf nm="cap-dbl-serif">
+      <wpm nm="first-left" val="21"/>
+      <wpm nm="second-left" val="22"/>
+      <wpm nm="first-right" val="16"/>
+      <wpm nm="second-right" val="17"/>
+      <wpm nm="stem1" val="12"/>
+      <wpm nm="stem2" val="0"/>
+    </callf>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="28"/>
+      <wpm nm="pt-b" val="27"/>
+      <wpm nm="sh-a" val="13"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <ip>
+      <ref>
+	<pt n="28"/>
+	<pt n="21"/>
+      </ref>
+      <pt n="6"/>
+      <pt n="5"/>
+    </ip>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16B4">
+    <setvs axis="y"/>
+    <callf nm="cap-dbl-serif">
+      <wpm nm="first-left" val="23"/>
+      <wpm nm="second-left" val="22"/>
+      <wpm nm="first-right" val="28"/>
+      <wpm nm="second-right" val="27"/>
+      <wpm nm="stem1" val="18"/>
+      <wpm nm="stem2" val="6"/>
+    </callf>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="12"/>
+      <wpm nm="pt-b" val="13"/>
+      <wpm nm="sh-a" val="17"/>
+      <wpm nm="cv" val="baseline"/>
+    </callm>
+    <ip>
+      <ref>
+	<pt n="23"/>
+	<pt n="12"/>
+      </ref>
+      <pt n="1"/>
+      <pt n="0"/>
+    </ip>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16B5">
+    <setvs axis="y"/>
+    <callf nm="cap-dbl-serif">
+      <wpm nm="first-left" val="23"/>
+      <wpm nm="second-left" val="22"/>
+      <wpm nm="first-right" val="28"/>
+      <wpm nm="second-right" val="27"/>
+      <wpm nm="stem1" val="18"/>
+      <wpm nm="stem2" val="6"/>
+    </callf>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="12"/>
+      <wpm nm="pt-b" val="13"/>
+      <wpm nm="sh-a" val="17"/>
+      <wpm nm="cv" val="baseline"/>
+    </callm>
+    <ip>
+      <ref>
+	<pt n="23"/>
+	<pt n="12"/>
+      </ref>
+      <pt n="1"/>
+      <pt n="0"/>
+    </ip>
+    <mv>
+      <pt n="31"/>
+      <mv color="black">
+	<pt n="37"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+  
+  <gl pnm="uni16B6">
+    <setvs axis="y"/>
+    <callf nm="cap-dbl-serif">
+      <wpm nm="first-left" val="18"/>
+      <wpm nm="second-left" val="17"/>
+      <wpm nm="first-right" val="28"/>
+      <wpm nm="second-right" val="27"/>
+      <wpm nm="stem1" val="1"/>
+      <wpm nm="stem2" val="10"/>
+    </callf>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="21"/>
+      <wpm nm="pt-b" val="22"/>
+      <wpm nm="sh-a" val="0"/>
+      <wpm nm="cv" val="baseline"/>
+    </callm>
+    <ip>
+      <ref>
+	<pt n="18"/>
+	<pt n="21"/>
+      </ref>
+      <pt n="5"/>
+      <pt n="4"/>
+    </ip>
+    <mv>
+      <pt n="31"/>
+      <mv color="black">
+	<pt n="38"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16B7">
+    <callg pnm="X"/>
+  </gl>
+
+  <gl pnm="uni16B8">
+    <callg pnm="X">
+      <wpm nm="include-iup" val="-1"/>
+    </callg>
+    <ip>
+      <ref>
+	<pt n="10"/>
+	<pt n="23"/>
+      </ref>
+      <pt n="30"/>
+      <pt n="31"/>
+      <pt n="33"/>
+      <pt n="28"/>
+      <pt n="38"/>
+      <pt n="37"/>
+      <pt n="35"/>
+      <pt n="34"/>
+    </ip>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16B9">
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="20"/>
+      <wpm nm="serif-bot" val="13"/>
+      <wpm nm="stem-top" val="1"/>
+      <wpm nm="stem-bot" val="0"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16BA">
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="24"/>
+      <wpm nm="serif-bot" val="12"/>
+      <wpm nm="stem-top" val="5"/>
+      <wpm nm="stem-bot" val="4"/>
+    </callm>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="29"/>
+      <wpm nm="serif-bot" val="17"/>
+      <wpm nm="stem-top" val="9"/>
+      <wpm nm="stem-bot" val="8"/>
+    </callm>
+    <ip>
+      <ref>
+	<pt n="24"/><pt n="12"/>
+      </ref>
+      <pt n="0"/>
+      <pt n="1"/>
+      <pt n="2"/>
+      <pt n="3"/>
+    </ip>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16BB">
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="20"/>
+      <wpm nm="serif-bot" val="8"/>
+      <wpm nm="stem-top" val="1"/>
+      <wpm nm="stem-bot" val="0"/>
+    </callm>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="25"/>
+      <wpm nm="serif-bot" val="13"/>
+      <wpm nm="stem-top" val="5"/>
+      <wpm nm="stem-bot" val="4"/>
+    </callm>
+    <ip>
+      <ref>
+	<pt n="24"/><pt n="12"/>
+      </ref>
+      <pt n="28"/>
+      <pt n="29"/>
+      <pt n="30"/>
+      <pt n="31"/>
+      <pt n="32"/>
+      <pt n="33"/>
+      <pt n="34"/>
+      <pt n="35"/>
+    </ip>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16BC">
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="22"/>
+      <wpm nm="serif-bot" val="25"/>
+      <wpm nm="stem-top" val="17"/>
+      <wpm nm="stem-bot" val="16"/>
+    </callm>
+    <ip>
+      <ref>
+	<pt n="22"/>
+	<pt n="25"/>
+      </ref>
+      <pt n="12"/>
+      <pt n="7"/>
+    </ip>
+    <push>3 12 8 7</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="SHP" modifier="1"/>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="SHP" modifier="1"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16BD">
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="22"/>
+      <wpm nm="serif-bot" val="25"/>
+      <wpm nm="stem-top" val="17"/>
+      <wpm nm="stem-bot" val="16"/>
+    </callm>
+    <srp whichpointer="2">
+      <pt n="22"/>
+    </srp>
+    <ip>
+      <pt n="8"/>
+      <pt n="0"/>
+    </ip>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16BE">
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="14"/>
+      <wpm nm="serif-bot" val="17"/>
+      <wpm nm="stem-top" val="9"/>
+      <wpm nm="stem-bot" val="8"/>
+    </callm>
+    <srp whichpointer="2">
+      <pt n="14"/>
+    </srp>
+    <ip>
+      <pt n="3"/>
+      <pt n="7"/>
+    </ip>
+    <push>3 7</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDAP" modifier="1"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16BF">
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="12"/>
+      <wpm nm="serif-bot" val="15"/>
+      <wpm nm="stem-top" val="7"/>
+      <wpm nm="stem-bot" val="6"/>
+    </callm>
+    <push>5 5 12</push>
+    <command nm="SRP2"/>
+    <command nm="IP"/>
+    <command nm="MDAP" modifier="1"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16C0">
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="30"/>
+      <wpm nm="serif-bot" val="33"/>
+      <wpm nm="stem-top" val="25"/>
+      <wpm nm="stem-bot" val="24"/>
+    </callm>
+    <srp whichpointer="2">
+      <pt n="30"/>
+    </srp>
+    <ip>
+      <pt n="19"/>
+      <pt n="23"/>
+      <pt n="8"/>
+      <pt n="0"/>
+    </ip>
+    <push>19 23</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDAP" modifier="1"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16C1">
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="6"/>
+      <wpm nm="serif-bot" val="9"/>
+      <wpm nm="stem-top" val="1"/>
+      <wpm nm="stem-bot" val="0"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16C2"> <!-- duplicates 16BD -->
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="22"/>
+      <wpm nm="serif-bot" val="25"/>
+      <wpm nm="stem-top" val="17"/>
+      <wpm nm="stem-bot" val="16"/>
+    </callm>
+    <srp whichpointer="2">
+      <pt n="22"/>
+    </srp>
+    <ip>
+      <pt n="8"/>
+      <pt n="0"/>
+    </ip>
+    <iup axis="y"/>
+  </gl>
+
+  <!-- skip 16C3, which is all diagonals -->
+
+  <gl pnm="uni16C4"> <!-- duplicates 16BD -->
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="14"/>
+      <wpm nm="serif-bot" val="17"/>
+      <wpm nm="stem-top" val="9"/>
+      <wpm nm="stem-bot" val="8"/>
+    </callm>
+    <srp whichpointer="2">
+      <pt n="14"/>
+    </srp>
+    <ip>
+      <pt n="2"/>
+      <pt n="6"/>
+      <pt n="4"/>
+      <pt n="0"/>
+    </ip>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16C5">
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="14"/>
+      <wpm nm="serif-bot" val="17"/>
+      <wpm nm="stem-top" val="9"/>
+      <wpm nm="stem-bot" val="8"/>
+    </callm>
+    <srp whichpointer="2">
+      <pt n="14"/>
+    </srp>
+    <ip>
+      <pt n="4"/>
+      <pt n="0"/>
+    </ip>
+    <push>0 4</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDAP" modifier="1"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16C6">
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="12"/>
+      <wpm nm="serif-bot" val="15"/>
+      <wpm nm="stem-top" val="7"/>
+      <wpm nm="stem-bot" val="6"/>
+    </callm>
+    <push>0 0 12</push>
+    <command nm="SRP2"/>
+    <command nm="IP"/>
+    <command nm="MDAP" modifier="1"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16C7">
+    <setvs axis="y"/>
+    <mv di="cap-height">
+      <pt n="7"/>
+      <sh><pt n="11"/></sh>
+    </mv>
+    <mv di="baseline">
+      <pt n="15"/>
+      <sh><pt n="4"/></sh>
+    </mv>
+    <push>4 11</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDAP" modifier="1"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16C8">
+    <set nm="top-a">
+      <pt n="1"/>
+      <pt n="33"/>
+      <pt n="4"/>
+    </set>
+    <cn nm="top-b" val="32"/>
+    <set nm="bot-a">
+      <pt n="0"/>
+      <pt n="26"/>
+      <pt n="15"/>
+    </set>
+    <cn nm="bot-b" val="27"/>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="24"/>
+      <wpm nm="pt-b" val="23"/>
+      <wpm nm="sh-a" val="top-a"/>
+      <wpm nm="sh-b" val="top-b"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="18"/>
+      <wpm nm="pt-b" val="19"/>
+      <wpm nm="sh-a" val="bot-a"/>
+      <wpm nm="sh-b" val="bot-b"/>
+      <wpm nm="cv" val="baseline"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16C9">
+    <set nm="top-a">
+      <pt n="19"/>
+      <pt n="1"/>
+      <pt n="5"/>
+      <pt n="29"/>
+      <pt n="10"/>
+    </set>
+    <set nm="top-b">
+      <pt n="18"/>
+      <pt n="28"/>
+    </set>
+    <cn nm="bot-a" val="4"/>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="24"/>
+      <wpm nm="pt-b" val="23"/>
+      <wpm nm="sh-a" val="top-a"/>
+      <wpm nm="sh-b" val="top-b"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="12"/>
+      <wpm nm="pt-b" val="13"/>
+      <wpm nm="sh-a" val="bot-a"/>
+      <wpm nm="cv" val="baseline"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16CA">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="8"/>
+    </mv>
+    <mv>
+      <pt n="0"/>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16CB">
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="15"/>
+      <wpm nm="serif-bot" val="8"/>
+      <wpm nm="stem-top" val="3"/>
+      <wpm nm="stem-bot" val="0"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16CC">
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="6"/>
+      <wpm nm="pt-b" val="5"/>
+      <wpm nm="sh-a" val="1"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <mv>
+      <pt n="0"/>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16CD">
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="22"/>
+      <wpm nm="pt-b" val="21"/>
+      <wpm nm="sh-a" val="17"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <mv>
+      <pt n="8"/>
+      <mv color="black">
+	<pt n="0"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16CE">
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="22"/>
+      <wpm nm="pt-b" val="21"/>
+      <wpm nm="sh-a" val="9"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <mv>
+      <pt n="0"/>
+      <sh>
+	<pt n="3"/>
+	<pt n="16"/>
+      </sh>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16CF">
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="20"/>
+      <wpm nm="pt-b" val="21"/>
+      <wpm nm="sh-a" val="0"/>
+      <wpm nm="cv" val="baseline"/>
+    </callm>
+    <mv di="cap-height">
+      <pt n="9"/>
+      <sh>
+	<pt n="6"/>
+	<pt n="13"/>
+      </sh>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16D0">
+    <setvs axis="y"/>
+    <mv di="cap-height">
+      <pt n="9"/>
+      <sh round="yes"><pt n="6"/></sh>
+    </mv>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="12"/>
+      <wpm nm="pt-b" val="13"/>
+      <wpm nm="sh-a" val="0"/>
+      <wpm nm="cv" val="baseline"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16D1">
+    <setvs axis="y"/>
+    <mv di="cap-height">
+      <pt n="25"/>
+      <sh round="yes"><pt n="23"/></sh>
+    </mv>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="28"/>
+      <wpm nm="pt-b" val="29"/>
+      <wpm nm="sh-a" val="16"/>
+      <wpm nm="cv" val="baseline"/>
+    </callm>
+    <ip>
+      <ref>
+	<pt n="25"/>
+	<pt n="28"/>
+      </ref>
+	<pt n="8"/>
+	<pt n="0"/>
+    </ip>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16D2">
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="28"/>
+      <wpm nm="serif-bot" val="22"/>
+      <wpm nm="stem-top" val="1"/>
+      <wpm nm="stem-bot" val="0"/>
+    </callm>
+    <push>9</push>
+    <command nm="SHP" modifier="1"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16D3">
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="20"/>
+      <wpm nm="serif-bot" val="23"/>
+      <wpm nm="stem-top" val="15"/>
+      <wpm nm="stem-bot" val="14"/>
+    </callm>
+    <push>4 11 4 11 20</push>
+    <command nm="SRP2"/>
+    <command nm="IP"/>
+    <command nm="IP"/>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDAP" modifier="1"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16D4">
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="52"/>
+      <wpm nm="serif-bot" val="46"/>
+      <wpm nm="stem-top" val="25"/>
+      <wpm nm="stem-bot" val="24"/>
+    </callm>
+    <push>52</push>
+    <command nm="SRP2"/>
+    <ip>
+      <pt n="44"/>
+      <pt n="6"/>
+      <pt n="0"/>
+      <pt n="41"/>
+      <pt n="38"/>
+      <pt n="18"/>
+      <pt n="12"/>
+      <pt n="35"/>
+    </ip>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16D5">
+    <set nm="top-a">
+      <pt n="1"/>
+      <pt n="23"/>
+      <pt n="6"/>
+    </set>
+    <set nm="bot-a">
+      <pt n="0"/>
+      <pt n="4"/>
+      <pt n="26"/>
+    </set>
+    <cn nm="top-b" val="22"/>
+    <cn nm="bot-b" val="28"/>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="18"/>
+      <wpm nm="pt-b" val="17"/>
+      <wpm nm="sh-a" val="top-a"/>
+      <wpm nm="sh-b" val="top-b"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="11"/>
+      <wpm nm="pt-b" val="12"/>
+      <wpm nm="sh-a" val="bot-a"/>
+      <wpm nm="sh-b" val="bot-b"/>
+      <wpm nm="cv" val="baseline"/>
+    </callm>
+    <ip>
+      <ref>
+	<pt n="11"/>
+	<pt n="18"/>
+      </ref>
+      <pt n="5"/>
+      <pt n="8"/>
+      <pt n="9"/>
+    </ip>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16D6">
+    <set nm="top-a">
+      <pt n="1"/>
+      <pt n="5"/>
+      <pt n="16"/>
+    </set>
+    <set nm="bot-a">
+      <pt n="0"/>
+      <pt n="23"/>
+      <pt n="8"/>
+    </set>
+    <cn nm="top-b" val="18"/>
+    <cn nm="bot-b" val="24"/>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="21"/>
+      <wpm nm="pt-b" val="20"/>
+      <wpm nm="sh-a" val="top-a"/>
+      <wpm nm="sh-b" val="top-b"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="28"/>
+      <wpm nm="pt-b" val="29"/>
+      <wpm nm="sh-a" val="bot-a"/>
+      <wpm nm="sh-b" val="bot-b"/>
+      <wpm nm="cv" val="baseline"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16D7">
+    <set nm="top-a">
+      <pt n="1"/>
+      <pt n="5"/>
+      <pt n="29"/>
+    </set>
+    <set nm="bot-a">
+      <pt n="0"/>
+      <pt n="36"/>
+      <pt n="8"/>
+    </set>
+    <cn nm="top-b" val="31"/>
+    <cn nm="bot-b" val="37"/>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="34"/>
+      <wpm nm="pt-b" val="33"/>
+      <wpm nm="sh-a" val="top-a"/>
+      <wpm nm="sh-b" val="top-b"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="41"/>
+      <wpm nm="pt-b" val="42"/>
+      <wpm nm="sh-a" val="bot-a"/>
+      <wpm nm="sh-b" val="bot-b"/>
+      <wpm nm="cv" val="baseline"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16D8">
+    <set nm="top-a">
+      <pt n="26"/>
+      <pt n="8"/>
+      <pt n="1"/>
+      <pt n="36"/>
+      <pt n="19"/>
+    </set>
+    <set nm="top-b">
+      <pt n="28"/>
+      <pt n="35"/>
+    </set>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="31"/>
+      <wpm nm="pt-b" val="30"/>
+      <wpm nm="sh-a" val="top-a"/>
+      <wpm nm="sh-b" val="top-b"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="39"/>
+      <wpm nm="pt-b" val="40"/>
+      <wpm nm="sh-a" val="0"/>
+      <wpm nm="cv" val="baseline"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16D9">
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="4"/>
+      <wpm nm="pt-b" val="5"/>
+      <wpm nm="sh-a" val="0"/>
+      <wpm nm="cv" val="baseline"/>
+    </callm>
+    <push>17 1 9</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDAP" modifier="0"/>
+    <command nm="MDAP" modifier="1"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16DA">
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="10"/>
+      <wpm nm="pt-b" val="11"/>
+      <wpm nm="sh-a" val="0"/>
+      <wpm nm="cv" val="baseline"/>
+    </callm>
+    <mv di="cap-height">
+      <pt n="2"/>
+      <sh><pt n="4"/></sh>
+    </mv>
+    <push>4</push>
+    <command nm="MDAP" modifier="1"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16DB">
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="26"/>
+      <wpm nm="pt-b" val="27"/>
+      <wpm nm="sh-a" val="0"/>
+      <wpm nm="cv" val="baseline"/>
+    </callm>
+    <mv di="cap-height">
+      <pt n="2"/>
+      <sh><pt n="4"/></sh>
+    </mv>
+    <ip>
+      <ref><pt n="1"/><pt n="26"/></ref>
+      <pt n="18"/>
+      <pt n="10"/>
+      <pt n="4"/>
+    </ip>
+    <push>4 10 18</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDAP" modifier="1"/>
+    <iup axis="y"/>
+  </gl>
+
+  <!-- skip 16DC -->
+
+  <gl pnm="uni16DD">
+    <pm nm="include-iup" val="0"/>
+    <cn nm="top-serif-left" val="14"/>
+    <cn nm="bottom-serif-left" val="27"/>
+    <cn nm="top-serif-right" val="19"/>
+    <cn nm="bottom-serif-right" val="22"/>
+    <cn nm="top-stem-left" val="8"/>
+    <cn nm="top-stem-right" val="2"/>
+    <cn nm="bottom-stem-left" val="6"/>
+    <cn nm="bottom-stem-right" val="0"/>
+    <setvs axis="y"/>
+    <callf nm="cap-dbl-serif">
+      <wpm nm="first-left" val="top-serif-left"/>
+      <wpm nm="second-left" val="top-serif-left - 1"/>
+      <wpm nm="first-right" val="top-serif-right"/>
+      <wpm nm="second-right" val="top-serif-right - 1"/>
+      <wpm nm="stem1" val="top-stem-left"/>
+      <wpm nm="stem2" val="top-stem-right"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callf>
+    <callf nm="cap-dbl-serif">
+      <wpm nm="first-left" val="bottom-serif-left"/>
+      <wpm nm="second-left" val="bottom-serif-left + 1"/>
+      <wpm nm="first-right" val="bottom-serif-right"/>
+      <wpm nm="second-right" val="bottom-serif-right + 1"/>
+      <wpm nm="stem1" val="bottom-stem-left"/>
+      <wpm nm="stem2" val="bottom-stem-right"/>
+    </callf>
+    <compile-if test="include-iup = 0">
+      <iup axis="y"/>
+    </compile-if>
+  </gl>
+
+  <gl pnm="uni16DE">
+    <cn nm="top-b" val="24"/>
+    <cn nm="bot-b" val="29"/>
+    <set nm="top-a">
+      <pt n="11"/>
+      <pt n="22"/>
+      <pt n="19"/>
+      <pt n="26"/>
+    </set>
+    <set nm="bot-a">
+      <pt n="10"/>
+      <pt n="3"/>
+      <pt n="31"/>
+      <pt n="27"/>
+    </set>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="14"/>
+      <wpm nm="pt-b" val="13"/>
+      <wpm nm="sh-a" val="top-a"/>
+      <wpm nm="sh-b" val="top-b"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="7"/>
+      <wpm nm="pt-b" val="8"/>
+      <wpm nm="sh-a" val="bot-a"/>
+      <wpm nm="sh-b" val="bot-b"/>
+      <wpm nm="cv" val="baseline"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16DF">
+    <setvs axis="y"/>
+    <callf nm="cap-dbl-serif">
+      <wpm nm="first-left" val="19"/>
+      <wpm nm="second-left" val="20"/>
+      <wpm nm="first-right" val="14"/>
+      <wpm nm="second-right" val="15"/>
+      <wpm nm="stem1" val="0"/>
+      <wpm nm="stem2" val="7"/>
+    </callf>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16E0">
+    <set nm="top-a">
+      <pt n="5"/>
+      <pt n="8"/>
+      <pt n="9"/>
+      <pt n="25"/>
+      <pt n="11"/>
+      <pt n="2"/>
+      <pt n="15"/>
+    </set>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="20"/>
+      <wpm nm="pt-b" val="19"/>
+      <wpm nm="sh-a" val="top-a"/>
+      <wpm nm="sh-b" val="24"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="28"/>
+      <wpm nm="pt-b" val="29"/>
+      <wpm nm="sh-a" val="0"/>
+      <wpm nm="cv" val="baseline"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16E1">
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="22"/>
+      <wpm nm="serif-bot" val="25"/>
+      <wpm nm="stem-top" val="17"/>
+      <wpm nm="stem-bot" val="16"/>
+    </callm>
+    <ip>
+      <ref>
+	<pt n="22"/>
+	<pt n="25"/>
+      </ref>
+      <pt n="12"/>
+      <pt n="7"/>
+    </ip>
+    <push>3 12 8 7</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="SHP" modifier="1"/>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="SHP" modifier="1"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16E2">
+    <cn nm="top-b" val="32"/>
+    <cn nm="bot-b" val="25"/>
+    <set nm="top-a">
+      <pt n="9"/>
+      <pt n="16"/>
+      <pt n="33"/>
+      <pt n="11"/>
+    </set>
+    <set nm="bot-a">
+      <pt n="3"/>
+      <pt n="0"/>
+      <pt n="23"/>
+      <pt n="7"/>
+    </set>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="29"/>
+      <wpm nm="pt-b" val="28"/>
+      <wpm nm="sh-a" val="top-a"/>
+      <wpm nm="sh-b" val="top-b"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="18"/>
+      <wpm nm="pt-b" val="19"/>
+      <wpm nm="sh-a" val="bot-a"/>
+      <wpm nm="sh-b" val="bot-b"/>
+      <wpm nm="cv" val="baseline"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16E3">
+    <set nm="bot-a">
+      <pt n="14"/>
+      <pt n="9"/>
+      <pt n="23"/>
+      <pt n="18"/>
+      <pt n="0"/>
+    </set>
+    <set nm="bot-b">
+      <pt n="10"/>
+      <pt n="19"/>
+    </set>
+    <cn nm="top-a" val="24"/>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="29"/>
+      <wpm nm="pt-b" val="28"/>
+      <wpm nm="sh-a" val="top-a"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="4"/>
+      <wpm nm="pt-b" val="5"/>
+      <wpm nm="sh-a" val="bot-a"/>
+      <wpm nm="sh-b" val="bot-b"/>
+      <wpm nm="cv" val="baseline"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16E4">
+    <set nm="top-a">
+      <pt n="1"/>
+      <pt n="37"/>
+      <pt n="10"/>
+      <pt n="42"/>
+      <pt n="5"/>
+    </set>
+    <set nm="top-b">
+      <pt n="36"/>
+      <pt n="41"/>
+    </set>
+    <set nm="bot-a">
+      <pt n="4"/>
+      <pt n="50"/>
+      <pt n="13"/>
+      <pt n="55"/>
+      <pt n="0"/>
+    </set>
+    <set nm="bot-b">
+      <pt n="51"/>
+      <pt n="56"/>
+    </set>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="32"/>
+      <wpm nm="pt-b" val="31"/>
+      <wpm nm="sh-a" val="top-a"/>
+      <wpm nm="sh-b" val="top-b"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="45"/>
+      <wpm nm="pt-b" val="46"/>
+      <wpm nm="sh-a" val="bot-a"/>
+      <wpm nm="sh-b" val="bot-b"/>
+      <wpm nm="cv" val="baseline"/>
+    </callm>
+    <ip>
+      <ref>
+	<pt n="32"/>
+	<pt n="45"/>
+      </ref>
+      <pt n="8"/>
+      <pt n="20"/>
+      <pt n="21"/>
+      <pt n="28"/>
+      <pt n="27"/>
+      <pt n="25"/>
+      <pt n="24"/>
+      <pt n="23"/>
+      <pt n="18"/>
+    </ip>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16E5">
+    <set nm="top-a">
+      <pt n="1"/> <pt n="26"/> <pt n="4"/> <pt n="43"/>
+    </set>
+    <set nm="bot-a">
+      <pt n="0"/> <pt n="7"/> <pt n="20"/> <pt n="34"/>
+    </set>
+    <cn nm="bot-b" val="36"/>
+    <cn nm="top-b" val="45"/>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="40"/>
+      <wpm nm="pt-b" val="39"/>
+      <wpm nm="sh-a" val="top-a"/>
+      <wpm nm="sh-b" val="top-b"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="30"/>
+      <wpm nm="pt-b" val="31"/>
+      <wpm nm="sh-a" val="bot-a"/>
+      <wpm nm="sh-b" val="bot-b"/>
+      <wpm nm="cv" val="baseline"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16E6">
+    <set nm="bot-a">
+      <pt n="14"/>
+      <pt n="29"/>
+      <pt n="10"/>
+      <pt n="34"/>
+      <pt n="0"/>
+    </set>
+    <set nm="bot-b">
+      <pt n="30"/>
+      <pt n="35"/>
+    </set>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="41"/>
+      <wpm nm="pt-b" val="40"/>
+      <wpm nm="sh-a" val="11"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="24"/>
+      <wpm nm="pt-b" val="25"/>
+      <wpm nm="sh-a" val="bot-a"/>
+      <wpm nm="sh-b" val="bot-b"/>
+      <wpm nm="cv" val="baseline"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16E7">
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="4"/>
+      <wpm nm="pt-b" val="5"/>
+      <wpm nm="sh-a" val="0"/>
+      <wpm nm="cv" val="baseline"/>
+    </callm>
+    <push>1</push>
+    <command nm="MDAP" modifier="1"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16E8">
+    <setvs axis="y"/>
+    <mv di="cap-height">
+      <pt n="15"/>
+      <sh><pt n="11"/><pt n="20"/></sh>
+    </mv>
+    <mv di="baseline">
+      <pt n="0"/>
+      <sh><pt n="4"/><pt n="26"/></sh>
+    </mv>
+    <push>11 20 4 26</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDAP" modifier="1"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16E9">
+    <setvs axis="y"/>
+    <push>
+      8 cap-serif 0 7 baseline
+      21 cap-serif 5 20 cap-height
+    </push>
+    <command nm="MIAP" modifier="1"/>
+    <command nm="SHP" modifier="1"/>
+    <command nm="MIRP">
+      <modifier type="color" val="black"/>
+    </command>
+    <command nm="MIAP" modifier="1"/>
+    <command nm="SHP" modifier="1"/>
+    <command nm="MIRP">
+      <modifier type="color" val="black"/>
+    </command>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="21"/>
+      <wpm nm="serif-bot" val="14"/>
+      <wpm nm="stem-top" val="1"/>
+      <wpm nm="stem-bot" val="0"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16EA">
+    <setvs axis="y"/>
+    <mv di="cap-height">
+      <pt n="3"/>
+    </mv>
+    <mv di="baseline">
+      <pt n="0"/>
+    </mv>
+    <ip>
+      <ref>
+	<pt n="3"/>
+	<pt n="0"/>
+      </ref>
+      <pt n="13"/>
+      <pt n="11"/>
+    </ip>
+    <push>12 euro-bar 13 10 euro-bar 11</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MIRP">
+      <modifier type="color" val="black"/>
+    </command>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MIRP">
+      <modifier type="color" val="black"/>
+    </command>	
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16EB">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="6"/>
+      <mv di="rune-punct" color="black">
+	<pt n="0"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16EC">
+    <setvs axis="y"/>
+    <mv>
+      <pt n="6"/>
+      <mv di="rune-punct" color="black">
+	<pt n="0"/>
+      </mv>
+    </mv>
+    <mv>
+      <pt n="12"/>
+      <mv di="rune-punct" color="black">
+	<pt n="18"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16ED">
+    <setvs axis="y"/>
+    <mv di="baseline">
+      <pt n="0"/>
+    </mv>
+    <mv di="xheight">
+      <pt n="5"/>
+    </mv>
+    <srp whichpointer="2">
+      <pt n="0"/>
+    </srp>
+    <ip>
+      <pt n="7"/>
+      <pt n="4"/>
+      <pt n="10"/>
+      <pt n="1"/>
+    </ip>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16EE">
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="10"/>
+      <wpm nm="pt-b" val="11"/>
+      <wpm nm="sh-a" val="0"/>
+      <wpm nm="cv" val="baseline"/>
+    </callm>
+    <mv di="cap-height">
+      <pt n="2"/>
+      <sh><pt n="4"/><pt n="16"/></sh>
+    </mv>
+    <push>4 16</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDAP" modifier="1"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16EF">
+    <set nm="top-a">
+      <pt n="38"/>
+      <pt n="22"/>
+      <pt n="31"/>
+      <pt n="27"/>
+      <pt n="49"/>
+    </set>
+    <set nm="top-b">
+      <pt n="21"/>
+      <pt n="26"/>
+    </set>
+    <set nm="bot-a">
+      <pt n="54"/>
+      <pt n="5"/>
+      <pt n="30"/>
+      <pt n="10"/>
+      <pt n="64"/>
+    </set>
+    <set nm="bot-b">
+      <pt n="6"/>
+      <pt n="11"/>
+    </set>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="17"/>
+      <wpm nm="pt-b" val="16"/>
+      <wpm nm="sh-a" val="top-a"/>
+      <wpm nm="sh-b" val="top-b"/>
+      <wpm nm="cv" val="cap-height"/>
+    </callm>
+    <callm nm="serif-sh">
+      <wpm nm="pt-a" val="0"/>
+      <wpm nm="pt-b" val="1"/>
+      <wpm nm="sh-a" val="bot-a"/>
+      <wpm nm="sh-b" val="bot-b"/>
+      <wpm nm="cv" val="baseline"/>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni16F0">
+    <setvs axis="y"/>
+    <callm nm="rune-vert">
+      <wpm nm="serif-top" val="42"/>
+      <wpm nm="serif-bot" val="45"/>
+      <wpm nm="stem-top" val="37"/>
+      <wpm nm="stem-bot" val="36"/>
+    </callm>
+    <ip>
+      <ref>
+	<pt n="42"/>
+	<pt n="45"/>
+      </ref>
+      <pt n="10"/>
+      <pt n="28"/>
+      <pt n="20"/>
+      <pt n="0"/>
+    </ip>
+    <iup axis="y"/>
+  </gl>
+
+</xgridfit>
