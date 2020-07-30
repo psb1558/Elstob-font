@@ -99,6 +99,9 @@ b{
 .extrabold {
     font-variation-settings: 'opsz' 6, 'wght' 800, 'GRAD' 0;
 }
+.heavy {
+    font-variation-settings: 'opsz' 10, 'wght' 800, 'GRAD' 0.4;
+}
 .bigtitle {
     font-size: 1.3em;
     font-style: italic;
