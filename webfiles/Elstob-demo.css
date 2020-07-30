@@ -38,11 +38,11 @@ h2 {
 p {
     font-family: Elstob;
     font-size: 1.5em;
-    font-variation-settings: 'opsz' 10, 'wght' 450, 'GRAD' 0;
+    font-variation-settings: 'opsz' 10, 'wght' 500, 'GRAD' 0;
     font-feature-settings: 'calt' on;
 }
 b{
-    font-variation-settings: 'opsz' 10, 'wght' 750, 'GRAD' 0,
+    font-variation-settings: 'opsz' 10, 'wght' 800, 'GRAD' 0,
     'slnt' 0;
 }
 #romtextarea {
