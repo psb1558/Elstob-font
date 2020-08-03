@@ -17,7 +17,7 @@
     <mv di="xheight-overshoot">
       <pt n="o-top"/>
       <sh><pt n="e-top"/></sh>
-      <mv di="lc-curved-stem" color="black">
+      <mv di="lc-curved-stem" col="b">
 	<pt n="o-top-ins"/>
 	<sh><pt n="e-top-ins"/></sh>
       </mv>
@@ -25,11 +25,11 @@
     <mv di="baseline-undershoot">
       <pt n="o-bot"/>
       <sh><pt n="e-bot"/></sh>
-      <mv di="lc-curved-stem" color="black">
+      <mv di="lc-curved-stem" col="b">
 	<pt n="o-bot-ins"/>
       </mv>
     </mv>
-    <mv color="black">
+    <mv col="b">
       <ref>
 	<pt n="e-bot"/>
       </ref>
@@ -57,7 +57,7 @@
     </mv>
     <mv di="xheight-overshoot">
       <pt n="top"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="top-ins"/>
       </mv>
     </mv>
@@ -79,13 +79,13 @@
     <setvs axis="y"/>
     <mv di="xheight-overshoot">
       <pt n="top"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="top-ins"/>
       </mv>
     </mv>
     <mv di="lc-descender">
       <pt n="bot"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="bot-ins"/>
       </mv>
     </mv>
@@ -121,7 +121,7 @@
 	<pt n="counter1-top"/>
       </sh>
     </mv>
-    <mv color="black">
+    <mv col="b">
       <ref><pt n="counter1-top"/></ref>	
       <pt n="counter1-top-inside"/>
     </mv>
@@ -153,7 +153,7 @@
     <mv di="xheight-overshoot">
       <pt n="top"/>
       <sh><pt n="r-top"/></sh>
-      <mv di="lc-curved-stem" color="black">
+      <mv di="lc-curved-stem" col="b">
 	<pt n="top-ins"/>
 	<sh><pt n="r-top-ins"/></sh>
       </mv>
@@ -161,7 +161,7 @@
     <mv di="baseline-undershoot">
       <pt n="bot"/>
       <sh><pt n="r-bot"/></sh>
-      <mv di="lc-curved-stem" color="black">
+      <mv di="lc-curved-stem" col="b">
 	<pt n="bot-ins"/>
 	<sh><pt n="r-bot-ins"/></sh>
       </mv>
@@ -177,13 +177,13 @@
     <setvs axis="y"/>
     <mv di="baseline">
       <pt n="bot"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="bot-ins"/>
       </mv>
     </mv>
     <mv di="xheight-overshoot">
       <pt n="top"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="top-ins"/>
       </mv>
     </mv>
@@ -214,7 +214,7 @@
     </callm>
     <mv di="lc-ascender-top">
       <pt n="top"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="top-ins"/>
       </mv>
     </mv>
@@ -228,7 +228,7 @@
     <push>stub-b stub-a</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <iup axis="y"/>
   </gl>
@@ -288,13 +288,13 @@
       <sh>
 	<pt n="bottom-right"/>
       </sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="bottom-inside"/>
       </mv>
     </mv>
     <mv di="xheight-overshoot">
       <pt n="top"/>
-      <mv di="lc-curved-stem" color="black">
+      <mv di="lc-curved-stem" col="b">
 	<pt n="top-inside"/>
       </mv>
     </mv>
@@ -313,13 +313,13 @@
     <push>74 ring-stem 87 81 ring-stem 67</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MIRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <command nm="MDRP">
-      <modifier type="color" val="white"/>
+      <modifier type="col" val="w"/>
     </command>
     <command nm="MIRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <iup axis="y"/>
   </gl>
@@ -329,13 +329,13 @@
     <push>7 ring-stem 20 14 ring-stem 0</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MIRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <command nm="MDRP">
-      <modifier type="color" val="white"/>
+      <modifier type="col" val="w"/>
     </command>
     <command nm="MIRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <iup axis="y"/>
   </gl>
@@ -365,7 +365,7 @@
     <setvs axis="y"/>
     <mv di="xheight">
       <pt n="top"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="top-below"/>
 	<ip><pt n="stem-top"/></ip>
       </mv>
@@ -386,7 +386,7 @@
     <push>mid-top mid-bot</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <iup axis="y"/>
   </gl>
@@ -415,7 +415,7 @@
 	<pt n="a2-bottom-right"/>
       </al>
       <sh><pt n="a1-stub"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="a1-bottom-inside"/>
 	<al><pt n="a2-bottom-inside"/></al>
       </mv>
@@ -423,7 +423,7 @@
     <mv di="xheight-overshoot">
       <pt n="a1-top"/>
       <al><pt n="a2-top"/></al>
-      <mv di="lc-curved-stem" color="black">
+      <mv di="lc-curved-stem" col="b">
 	<pt n="a1-top-inside"/>
 	<al><pt n="a2-top-inside"/></al>
       </mv>
@@ -463,14 +463,14 @@
 	<pt n="a-stub"/>
 	<pt n="o-bot"/>
       </sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="a-bottom-inside"/>
       </mv>
     </mv>
     <mv di="xheight-overshoot">
       <pt n="a-top"/>
       <sh><pt n="o-top"/></sh>
-      <mv di="lc-curved-stem" color="black">
+      <mv di="lc-curved-stem" col="b">
 	<pt n="a-top-inside"/>
       </mv>
     </mv>
@@ -524,7 +524,7 @@
     <push>top-inside top</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <mv di="baseline-undershoot">
       <pt n="bottom"/>
@@ -532,7 +532,7 @@
 	<pt n="bottom-right"/>
 	<pt n="u-stem-bot"/>
       </sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="bottom-inside"/>
 	<sh><pt n="u-bow-ins"/></sh>
       </mv>
@@ -574,7 +574,7 @@
     <callm nm="round-point">
       <wpm nm="p" val="a-top"/>
     </callm>
-    <mv color="black">
+    <mv col="b">
       <ref><pt n="a-top"/></ref>
       <pt n="a-top-ins"/>
     </mv>
@@ -584,7 +584,7 @@
 	<pt n="v-diag-bot"/>
 	<pt n="a-diag-bot"/>
       </sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="a-bot-ins"/>
       </mv>
     </mv>
@@ -625,7 +625,7 @@
     <callm nm="round-point">
       <wpm nm="p" val="a-top"/>
     </callm>
-    <mv color="black">
+    <mv col="b">
       <ref><pt n="a-top"/></ref>
       <pt n="a-top-ins"/>
     </mv>
@@ -635,7 +635,7 @@
 	<pt n="v-diag-bot"/>
 	<pt n="a-diag-bot"/>
       </sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="a-bot-ins"/>
       </mv>
     </mv>
@@ -817,7 +817,7 @@
     <push>curve-top bowl-top-ins bowl-top</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <command nm="SHP" modifier="1"/>
     <callm nm="lc-horz-stroke-cv">
@@ -845,7 +845,7 @@
     <command nm="MIAP" modifier="1"/>
     <command nm="SHP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <command nm="MIAP" modifier="1"/>
     <callm nm="mid-stem">
@@ -870,7 +870,7 @@
     <command nm="MIAP" modifier="1"/>
     <command nm="SHP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <command nm="MIAP" modifier="1"/>
     <ip>
@@ -898,7 +898,7 @@
     <command nm="MIAP" modifier="1"/>
     <command nm="SHP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <command nm="MIAP" modifier="1"/>
     <iup axis="y"/>
@@ -948,7 +948,7 @@
     <mv di="xheight">
       <pt n="serif"/>
       <sh><set ref="serif-sh-a"/></sh>
-      <mv di="lc-serif" color="black">
+      <mv di="lc-serif" col="b">
 	<pt n="serif - 1"/>
 	<sh><set ref="serif-sh-b"/></sh>
       </mv>
@@ -959,7 +959,7 @@
     </mv>
     <mv di="lc-descender">
       <pt n="tail-bot"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="tail-ins"/>
       </mv>
     </mv>
@@ -984,13 +984,13 @@
       <sh>
 	<pt n="bottom-right"/>
       </sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="bottom-inside"/>
       </mv>
     </mv>
     <mv di="xheight-overshoot">
       <pt n="top"/>
-      <mv di="lc-curved-stem" color="black">
+      <mv di="lc-curved-stem" col="b">
 	<pt n="top-inside"/>
       </mv>
     </mv>
@@ -1028,13 +1028,13 @@
     <setvs axis="y"/>
     <mv di="cap-height-overshoot">
       <pt n="top"/>
-      <mv di="cap-curved-stem" color="black">
+      <mv di="cap-curved-stem" col="b">
 	<pt n="top-ins"/>
       </mv>
     </mv>
     <mv di="cap-baseline-undershoot">
       <pt n="bot"/>
-      <mv di="cap-curved-stem" color="black">
+      <mv di="cap-curved-stem" col="b">
 	<pt n="bot-ins"/>
       </mv>
     </mv>
@@ -1075,14 +1075,14 @@
     <setvs axis="y"/>
     <mv>
       <pt n="top"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="top-ins"/>
       </mv>
     </mv>
     <mv di="baseline-undershoot">
       <pt n="bot"/>
       <sh><pt n="bot-right"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="bot-ins"/>
 	<sh><pt n="bot-right-ins"/></sh>
       </mv>
@@ -1090,7 +1090,7 @@
     <mv di="xheight">
       <pt n="serif"/>
       <sh><pt n="curve-end"/></sh>
-      <mv di="lc-serif" color="black">
+      <mv di="lc-serif" col="b">
 	<pt n="serif - 1"/>
       </mv>
     </mv>
@@ -1106,7 +1106,7 @@
     <mv>
       <pt n="right-bot"/>
       <sh><pt n="left-bot"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="right-top"/>
 	<sh><pt n="left-top"/></sh>
       </mv>
@@ -1148,13 +1148,13 @@
     <setvs axis="y"/>
     <mv>
       <pt n="8"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="23"/>
       </mv>
     </mv>
     <mv>
       <pt n="0"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="31"/>
       </mv>
     </mv>
@@ -1203,7 +1203,7 @@
     <command nm="MDAP" modifier="1"/>
     <command nm="SHP" modifier="0"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <command nm="SHP" modifier="0"/>
     <iup axis="y"/>
@@ -1215,21 +1215,21 @@
       <wpm nm="pt1" val="0"/>
       <wpm nm="pt2" val="1"/>
     </callm>
-    <mv color="white">
+    <mv col="w">
       <ref>
 	<pt n="1"/>
       </ref>
       <pt n="16"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="22"/>
       </mv>
     </mv>
-    <mv color="white">
+    <mv col="w">
       <ref>
 	<pt n="0"/>
       </ref>
       <pt n="10"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="4"/>
       </mv>
     </mv>
@@ -1240,13 +1240,13 @@
     <setvs axis="y"/>
     <mv>
       <pt n="5"/>
-      <mv color="white">
+      <mv col="w">
 	<pt n="0"/>
-	<mv color="black" di="euro-bar">
+	<mv col="b" di="euro-bar">
 	  <pt n="1"/>
 	</mv>
       </mv>
-      <mv color="black" di="euro-bar">
+      <mv col="b" di="euro-bar">
 	<pt n="4"/>
       </mv>
     </mv>
@@ -1257,9 +1257,9 @@
     <setvs axis="y"/>
     <mv>
       <pt n="3"/>
-      <mv color="black" di="euro-bar">
+      <mv col="b" di="euro-bar">
 	<pt n="2"/>
-	<mv color="gray">
+	<mv col="g">
 	  <pt n="0"/>
 	</mv>
       </mv>
@@ -1278,7 +1278,7 @@
     <mv>
       <pt n="3"/>
       <sh><pt n="7"/></sh>
-      <mv color="black" di="euro-bar">
+      <mv col="b" di="euro-bar">
 	<pt n="2"/>
 	<sh><pt n="10"/></sh>
       </mv>
@@ -1291,12 +1291,12 @@
     <push>46 47 23 54 0 39 10 23</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <command nm="MDAP" modifier="1"/>
     <command nm="SHP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <command nm="SRP2"/>
     <command nm="IP"/>
@@ -1309,11 +1309,11 @@
     <push>21 8 15 0</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <iup axis="y"/>
   </gl>
@@ -1354,13 +1354,13 @@
     </mv>
     <mv>
       <pt n="5"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="4"/>
       </mv>
     </mv>
     <mv>
       <pt n="8"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="9"/>
       </mv>
     </mv>
@@ -1411,10 +1411,10 @@
     <setvs axis="y"/>
     <mv>
       <pt n="27"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="9"/>
       </mv>
-      <mv color="gray">
+      <mv col="g">
 	<pt n="0"/>
       </mv>
     </mv>
@@ -1440,7 +1440,7 @@
 	<pt n="counter1-top"/>
       </sh>
     </mv>
-    <mv color="black">
+    <mv col="b">
       <ref><pt n="counter1-top"/></ref>	
       <pt n="counter1-top-inside"/>
     </mv>
@@ -1451,7 +1451,7 @@
 	<pt n="vert-bottom1"/>
 	<pt n="vert-bottom2"/>
       </sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="serif-top1"/>
 	<sh><pt n="serif-top2"/></sh>
       </mv>
@@ -1467,7 +1467,7 @@
     <mv>
       <pt n="11"/>
       <sh><pt n="0"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="12"/>
       </mv>
     </mv>
@@ -1494,7 +1494,7 @@
 	<pt n="28"/>
 	<pt n="13"/>
       </sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="17"/>
 	<sh>
 	  <pt n="22"/>
@@ -1509,9 +1509,9 @@
     <setvs axis="y"/>
     <mv>
       <pt n="19"/>
-      <mv color="white">
+      <mv col="w">
 	<pt n="29"/>
-	<mv color="black">
+	<mv col="b">
 	  <pt n="35"/>
 	</mv>
       </mv>
@@ -1533,7 +1533,7 @@
     </mv>
     <mv>
       <pt n="18"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="10"/>
       </mv>
     </mv>
@@ -1544,7 +1544,7 @@
 	<pt n="38"/>
 	<pt n="0"/>
       </sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="29"/>
 	<sh><pt n="34"/></sh>
       </mv>
@@ -1559,7 +1559,7 @@
     </mv>
     <mv>
       <pt n="28"/>
-      <mv color="black">	
+      <mv col="b">	
 	<pt n="21"/>
       </mv>
     </mv>
@@ -1570,7 +1570,7 @@
 	<pt n="43"/>
 	<pt n="11"/>
       </sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="39"/>
 	<sh><pt n="44"/></sh>
       </mv>
@@ -1590,25 +1590,25 @@
     <setvs axis="y"/>
     <mv>
       <pt n="l-top"/>
-      <mv di="percent-zero" color="black">
+      <mv di="percent-zero" col="b">
 	<pt n="l-top-ins"/>
       </mv>
     </mv>
     <mv>
       <pt n="l-bot"/>
-      <mv di="percent-zero" color="black">
+      <mv di="percent-zero" col="b">
 	<pt n="l-bot-ins"/>
       </mv>
     </mv>
     <mv>
       <pt n="r-top"/>
-      <mv di="percent-zero" color="black">
+      <mv di="percent-zero" col="b">
 	<pt n="r-top-ins"/>
       </mv>
     </mv>
     <mv di="baseline-undershoot">
       <pt n="r-bot"/>
-      <mv di="percent-zero" color="black">
+      <mv di="percent-zero" col="b">
 	<pt n="r-bot-ins"/>
       </mv>
     </mv>
@@ -1627,25 +1627,25 @@
     <setvs axis="y"/>
     <mv>
       <pt n="l-top"/>
-      <mv di="percent-zero-sc" color="black">
+      <mv di="percent-zero-sc" col="b">
 	<pt n="l-top-ins"/>
       </mv>
     </mv>
     <mv>
       <pt n="l-bot"/>
-      <mv di="percent-zero-sc" color="black">
+      <mv di="percent-zero-sc" col="b">
 	<pt n="l-bot-ins"/>
       </mv>
     </mv>
     <mv>
       <pt n="r-top"/>
-      <mv di="percent-zero-sc" color="black">
+      <mv di="percent-zero-sc" col="b">
 	<pt n="r-top-ins"/>
       </mv>
     </mv>
     <mv di="baseline-undershoot">
       <pt n="r-bot"/>
-      <mv di="percent-zero-sc" color="black">
+      <mv di="percent-zero-sc" col="b">
 	<pt n="r-bot-ins"/>
       </mv>
     </mv>
@@ -1711,7 +1711,7 @@
     <setvs axis="y"/>
     <mv>
       <pt n="0"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="6"/>
       </mv>
     </mv>
@@ -1722,13 +1722,13 @@
     <setvs axis="y"/>
     <mv>
       <pt n="63"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="79"/>
       </mv>
     </mv>
     <mv>
       <pt n="0"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="16"/>
       </mv>
     </mv>
@@ -1739,7 +1739,7 @@
     <setvs axis="y"/>
     <mv>
       <pt n="28"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="47"/>
       </mv>
     </mv>
@@ -1769,14 +1769,14 @@
     <mv>
       <pt n="12"/>
       <sh><pt n="24"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="18"/>
 	<sh><pt n="30"/></sh>
       </mv>
     </mv>
     <mv>
       <pt n="0"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="6"/>
       </mv>
     </mv>
@@ -1867,7 +1867,7 @@
     <setvs axis="y"/>
     <mv di="lc-ascender-top">
       <pt n="20"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="36"/>
       </mv>
     </mv>
@@ -1890,7 +1890,7 @@
     <mv di="xheight">
       <pt n="29"/>
       <sh><pt n="51"/></sh>
-      <mv di="lc-serif" color="black">
+      <mv di="lc-serif" col="b">
 	<pt n="28"/>
 	<sh><pt n="50"/></sh>
       </mv>
@@ -1898,7 +1898,7 @@
     <mv di="baseline-undershoot">
       <pt n="22"/>
       <sh><pt n="46"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="37"/>
       </mv>
     </mv>

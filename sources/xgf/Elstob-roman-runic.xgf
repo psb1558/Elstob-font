@@ -2,24 +2,6 @@
 <xgridfit xmlns="http://xgridfit.sourceforge.net/Xgridfit2"
 	  xmlns:xi="http://www.w3.org/2001/XInclude">
 
-  <!--
-
-  <gl pnm="uni">
-    <setvs axis="y"/>
-    <iup axis="y"/>
-    </gl>
-
-    <callm nm="serif-sh">
-      <wpm nm="pt-a" val="0"/>
-      <wpm nm="pt-b" val="0"/>
-      <wpm nm="sh-a" val="-1"/>
-      <wpm nm="sh-b" val="-1"/>
-      <wpm nm="cv" val="baseline"/>
-      <wpm nm="align-b" val="-1"/>
-    </callm>
-
-  -->
-
   <gl pnm="uni16A0">
     <set nm="top-sh-a">
       <pt n="1"/>
@@ -95,7 +77,7 @@
     </ip>
     <mv>
       <pt n="43"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="37"/>
       </mv>
     </mv>
@@ -313,7 +295,7 @@
     <mv>
       <pt n="19"/>
       <sh><pt n="11"/></sh>
-      <mv di="cap-serif" color="black">
+      <mv di="cap-serif" col="b">
 	<pt n="18"/>
       </mv>
     </mv>
@@ -579,7 +561,7 @@
     </ip>
     <mv>
       <pt n="31"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="37"/>
       </mv>
     </mv>
@@ -612,7 +594,7 @@
     </ip>
     <mv>
       <pt n="31"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="38"/>
       </mv>
     </mv>
@@ -1022,7 +1004,7 @@
     </callm>
     <mv>
       <pt n="8"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="0"/>
       </mv>
     </mv>
@@ -1691,12 +1673,12 @@
     <command nm="MIAP" modifier="1"/>
     <command nm="SHP" modifier="1"/>
     <command nm="MIRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <command nm="MIAP" modifier="1"/>
     <command nm="SHP" modifier="1"/>
     <command nm="MIRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <callm nm="rune-vert">
       <wpm nm="serif-top" val="21"/>
@@ -1726,11 +1708,11 @@
     <push>12 euro-bar 13 10 euro-bar 11</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MIRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <command nm="MDAP" modifier="1"/>
     <command nm="MIRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>	
     <iup axis="y"/>
   </gl>
@@ -1739,7 +1721,7 @@
     <setvs axis="y"/>
     <mv>
       <pt n="6"/>
-      <mv di="rune-punct" color="black">
+      <mv di="rune-punct" col="b">
 	<pt n="0"/>
       </mv>
     </mv>
@@ -1750,13 +1732,13 @@
     <setvs axis="y"/>
     <mv>
       <pt n="6"/>
-      <mv di="rune-punct" color="black">
+      <mv di="rune-punct" col="b">
 	<pt n="0"/>
       </mv>
     </mv>
     <mv>
       <pt n="12"/>
-      <mv di="rune-punct" color="black">
+      <mv di="rune-punct" col="b">
 	<pt n="18"/>
       </mv>
     </mv>

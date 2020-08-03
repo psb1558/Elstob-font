@@ -12,13 +12,13 @@
     <setvs axis="y"/>
     <mv di="baseline-undershoot">
       <pt n="bot"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="bot-ins"/>
       </mv>
     </mv>
     <mv di="num-top-round">
       <pt n="top"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="top-ins"/>
       </mv>
     </mv>
@@ -53,7 +53,7 @@
     <setvs axis="y"/>
     <mv di="num-top-round">
       <pt n="top"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="top-ins"/>
       </mv>
     </mv>
@@ -79,13 +79,13 @@
     <setvs axis="y"/>
     <mv di="num-top-round">
       <pt n="top"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="top-ins"/>
       </mv>
     </mv>
     <mv di="baseline-undershoot">
       <pt n="bot"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="bot-ins"/>
       </mv>
     </mv>
@@ -410,7 +410,7 @@
     <mv di="baseline">
       <pt n="bar-bot"/>
       <sh><pt n="bar-bot-sh"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="bar-top"/>
 	<sh><pt n="bar-top-sh"/></sh>
       </mv>
@@ -588,7 +588,7 @@
       <pt n="14"/>
       <sh><pt n="0"/></sh>
       <mv><pt n="8"/></mv>
-      <mv color="black"><pt n="15"/></mv>
+      <mv col="b"><pt n="15"/></mv>
     </mv>
     <iup axis="y"/>
   </gl>
@@ -597,10 +597,10 @@
     <setvs axis="y"/>
     <mv di="sup-num-base">
       <pt n="32"/>
-      <mv color="black"><pt n="27"/></mv>
+      <mv col="b"><pt n="27"/></mv>
       <mv>
 	<pt n="18"/>
-	<mv color="black"><pt n="11"/></mv>
+	<mv col="b"><pt n="11"/></mv>
       </mv>
     </mv>
     <iup axis="y"/>
@@ -610,10 +610,10 @@
     <setvs axis="y"/>
     <mv di="sup-num-base-undershoot">
       <pt n="0"/>
-      <mv color="black"><pt n="12"/></mv>
+      <mv col="b"><pt n="12"/></mv>
       <mv>
 	<pt n="36"/>
-	<mv color="black"><pt n="29"/></mv>
+	<mv col="b"><pt n="29"/></mv>
       </mv>
     </mv>
     <iup axis="y"/>
@@ -624,7 +624,7 @@
     <mv di="sup-num-base">
       <pt n="22"/>
       <sh><pt n="0"/></sh>
-      <mv color="black"><pt n="23"/></mv>
+      <mv col="b"><pt n="23"/></mv>
       <mv>
 	<pt n="10"/>
 	<ip round="yes">
@@ -637,7 +637,7 @@
       <ref><pt n="1"/></ref>
       <pt n="20"/>
     </sh>
-    <mv color="black">
+    <mv col="b">
       <ref><pt n="1"/></ref>
       <pt n="14"/>
       <sh><pt n="17"/></sh>
@@ -652,15 +652,15 @@
       <pt n="50"/>
       <sh><pt n="37"/></sh>
       <mv><pt n="44"/></mv>
-      <mv color="black"><pt n="51"/></mv>
+      <mv col="b"><pt n="51"/></mv>
     </mv>
     <!-- two -->
     <mv di="baseline">
       <pt n="36"/>
-      <mv color="black"><pt n="30"/></mv>
+      <mv col="b"><pt n="30"/></mv>
       <mv>
 	<pt n="22"/>
-	<mv color="black"><pt n="15"/></mv>
+	<mv col="b"><pt n="15"/></mv>
       </mv>
     </mv>
     <iup axis="y"/>
@@ -673,13 +673,13 @@
       <pt n="17"/>
       <sh><pt n="4"/></sh>
       <mv><pt n="11"/></mv>
-      <mv color="black"><pt n="18"/></mv>
+      <mv col="b"><pt n="18"/></mv>
     </mv>
     <!-- four -->
     <mv di="baseline">
       <pt n="22"/>
       <sh><pt n="27"/></sh>
-      <mv color="black"><pt n="23"/></mv>
+      <mv col="b"><pt n="23"/></mv>
       <mv>
 	<pt n="37"/>
 	<ip round="yes">
@@ -692,7 +692,7 @@
       <ref><pt n="28"/></ref>
       <pt n="47"/>
     </sh>
-    <mv color="black">
+    <mv col="b">
       <ref><pt n="28"/></ref>
       <pt n="41"/>
       <sh><pt n="44"/></sh>
@@ -705,17 +705,17 @@
     <!-- three -->
     <mv round="yes">
       <pt n="4"/>
-      <mv color="black"><pt n="16"/></mv>
+      <mv col="b"><pt n="16"/></mv>
       <mv>
 	<pt n="40"/>
-	<mv color="black"><pt n="33"/></mv>
+	<mv col="b"><pt n="33"/></mv>
       </mv>
     </mv>
     <!-- four -->
     <mv di="baseline">
       <pt n="76"/>
       <sh><pt n="54"/></sh>
-      <mv color="black"><pt n="77"/></mv>
+      <mv col="b"><pt n="77"/></mv>
       <mv>
 	<pt n="64"/>
 	<ip round="yes">
@@ -728,7 +728,7 @@
       <ref><pt n="55"/></ref>
       <pt n="74"/>
     </sh>
-    <mv color="black">
+    <mv col="b">
       <ref><pt n="55"/></ref>
       <pt n="68"/>
       <sh><pt n="71"/></sh>

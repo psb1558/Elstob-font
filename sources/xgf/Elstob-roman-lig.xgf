@@ -22,7 +22,7 @@
     </callf>
     <mv>
       <pt n="j-bot"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="j-bot-ins"/>
       </mv>
     </mv>
@@ -67,15 +67,15 @@
     <push>di-top-b di-top-a di-bot-b di-bot-a o-top o-top-ins lc-curved-stem o-top</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MIRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <command nm="SRP0"/>
     <command nm="MDRP">
-      <modifier type="color" val="white"/>
+      <modifier type="col" val="w"/>
     </command>
     <command nm="ALIGNRP"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <command nm="ALIGNRP"/>
     <callm nm="lc-horz-stroke-cv">
@@ -164,13 +164,13 @@
     <mv di="baseline-undershoot">
       <pt n="bottom"/>
       <sh><pt n="stem-bottom"/></sh>
-      <mv color="black"><pt n="bottom-ins"/></mv>
+      <mv col="b"><pt n="bottom-ins"/></mv>
     </mv>
-    <mv color="white">
+    <mv col="w">
       <ref><pt n="f-bar-top"/></ref>
       <pt n="0"/>
       <al><pt n="13"/></al>
-      <mv color="black">
+      <mv col="b">
 	<pt n="6"/>
 	<al><pt n="18"/>
 	</al>
@@ -422,7 +422,7 @@
     <mv>
       <pt n="bar-bottom"/>
       <sh><pt n="vserif-bottom"/></sh>
-      <mv di="lc-bar" color="black">
+      <mv di="lc-bar" col="b">
 	<pt n="bar-top"/>
 	<sh><pt n="vserif-top"/></sh>
       </mv>
@@ -488,13 +488,13 @@
       <sh>
 	<pt n="bottom-right"/>
       </sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="bottom-inside"/>
       </mv>
     </mv>
     <mv di="xheight-overshoot">
       <pt n="top"/>
-      <mv di="lc-curved-stem" color="black">
+      <mv di="lc-curved-stem" col="b">
 	<pt n="top-inside"/>
       </mv>
     </mv>
@@ -526,7 +526,7 @@
     <mv di="xheight-overshoot">
       <pt n="top-left"/>
       <sh><pt n="top-right"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="top-left-ins"/>
 	<sh><pt n="top-right-ins"/></sh>
       </mv>
@@ -534,7 +534,7 @@
     <mv di="baseline-undershoot">
       <pt n="bottom-left"/>
       <sh><pt n="bottom-right"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="bottom-left-ins"/>
 	<sh><pt n="bottom-right-ins"/></sh>
       </mv>
@@ -746,7 +746,7 @@
     <mv di="xheight-overshoot">
       <pt n="o-top"/>
       <sh><pt n="e-top"/></sh>
-      <mv di="lc-curved-stem" color="black">
+      <mv di="lc-curved-stem" col="b">
 	<pt n="o-top-ins"/>
 	<sh><pt n="e-top-ins"/></sh>
       </mv>
@@ -754,11 +754,11 @@
     <mv di="baseline-undershoot">
       <pt n="o-bot"/>
       <sh><pt n="e-bot"/></sh>
-      <mv di="lc-curved-stem" color="black">
+      <mv di="lc-curved-stem" col="b">
 	<pt n="o-bot-ins"/>
       </mv>
     </mv>
-    <mv color="black">
+    <mv col="b">
       <ref>
 	<pt n="e-bot"/>
       </ref>
@@ -1004,7 +1004,7 @@
       <sh>
 	<pt n="diag-top"/>
       </sh>
-      <mv di="lc-serif" color="black">
+      <mv di="lc-serif" col="b">
 	<pt n="xh - 1"/>
 	<sh><pt n="27"/></sh>
       </mv>
@@ -1182,7 +1182,7 @@
     <push>bar-bottom2 bar-bottom1 bar-top</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <command nm="SHP" modifier="0"/>
     <iup axis="y"/>
@@ -1207,7 +1207,7 @@
     </callg>
     <mv>
       <pt n="loop-top"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="loop-top-ins"/>
       </mv>
     </mv>
@@ -1233,7 +1233,7 @@
     <push>bar-bottom2 bar-bottom1 bar-top</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <command nm="SHP" modifier="0"/>
     <iup axis="y"/>
@@ -1271,7 +1271,7 @@
     <!-- loop connecting s and t -->
     <mv>
       <pt n="loop-top"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="loop-top-ins"/>
       </mv>
     </mv>
@@ -1298,7 +1298,7 @@
       <ref><pt n="bottom"/></ref>
       <pt n="t-bot"/>
     </al>
-    <mv color="black">
+    <mv col="b">
       <ref><pt n="t-bot"/></ref>
       <pt n="t-bot-ins"/>
     </mv>
@@ -1313,7 +1313,7 @@
     <push>bar-bottom2 bar-bottom1 bar-top</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <command nm="SHP" modifier="0"/>
     <iup axis="y"/>

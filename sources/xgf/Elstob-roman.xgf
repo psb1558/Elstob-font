@@ -26,7 +26,7 @@
   <cv nm="dotaccent-bottom" val="1128"/>
   <cv nm="dotaccent-height" val="214"/>
   <cv nm="lc-descender" val="-501"/>
-  <cv nm="lc-descender-undershoot" val="-533"/>
+  <cv nm="lc-descender-undershoot" val="-531"/>
   <cv nm="cap-height" val="1358"/>
   <cv nm="cap-height-overshoot" val="1385"/>
   <cv nm="cap-baseline-undershoot" val="-27"/>
@@ -72,8 +72,8 @@
       calulate the deltas.
   -->
   <cvar>
-<!--    <region tag="wght" bot="-1.0" peak="-1.0" top="0.0"> -->
-    <region tag="wght" bot="-0.33" peak="-0.33" top="0.66">
+    <region tag="wght" bot="-1.0" peak="-1.0" top="0.0">
+<!--    <region tag="wght" bot="-0.33" peak="-0.33" top="0.0"> -->
       <cvv nm="xheight" val="891"/>
       <cvv nm="xheight-overshoot" val="914"/>
       <cvv nm="lc-curved-stem" val="42"/>
@@ -83,8 +83,6 @@
       <cvv nm="lc-serif" val="40"/>
       <cvv nm="dotaccent-bottom" val="1128"/>
       <cvv nm="dotaccent-height" val="151"/>
-      <cvv nm="lc-descender" val="-501"/>
-      <cvv nm="lc-descender-undershoot" val="-533"/>
       <cvv nm="cap-serif" val="40"/>
       <cvv nm="cap-bar" val="42"/>
       <cvv nm="cap-curved-stem" val="42"/>
@@ -104,8 +102,8 @@
       <cvv nm="percent-zero-sc" val="45"/>
       <cvv nm="rune-punct" val="253"/>
     </region>
-<!--    <region tag="wght" bot="0.0" peak="1.0" top="1.0"> -->
-    <region tag="wght" bot="0.33" peak="0.66" top="0.66">
+    <region tag="wght" bot="0.0" peak="1.0" top="1.0">
+<!--    <region tag="wght" bot="0.0" peak="0.66" top="0.66"> -->
       <cvv nm="xheight" val="891"/>
       <cvv nm="xheight-overshoot" val="914"/>
       <cvv nm="lc-curved-stem" val="68"/>
@@ -115,8 +113,6 @@
       <cvv nm="lc-serif" val="60"/>
       <cvv nm="dotaccent-bottom" val="1128"/>
       <cvv nm="dotaccent-height" val="340"/>
-      <cvv nm="lc-descender" val="-50"/>
-      <cvv nm="lc-descender-undershoot" val="-533"/>
       <cvv nm="cap-serif" val="60"/>
       <cvv nm="cap-bar" val="70"/>
       <cvv nm="cap-curved-stem" val="68"/>
@@ -147,7 +143,7 @@
       <cvv nm="dotaccent-bottom" val="1170"/>
       <cvv nm="dotaccent-height" val="216"/>
       <cvv nm="lc-descender" val="-451"/>
-      <cvv nm="lc-descender-undershoot" val="-510"/>
+      <cvv nm="lc-descender-undershoot" val="-502"/>
       <cvv nm="cap-serif" val="83"/>
       <cvv nm="cap-bar" val="93"/>
       <cvv nm="cap-curved-stem" val="89"/>
@@ -178,7 +174,7 @@
       <cvv nm="dotaccent-bottom" val="1085"/>
       <cvv nm="dotaccent-height" val="209"/>
       <cvv nm="lc-descender" val="-551"/>
-      <cvv nm="lc-descender-undershoot" val="-555"/>
+      <cvv nm="lc-descender-undershoot" val="-559"/>
       <cvv nm="cap-serif" val="50"/>
       <cvv nm="cap-bar" val="60"/>
       <cvv nm="cap-curved-stem" val="57"/>
@@ -207,8 +203,6 @@
       <cvv nm="lc-serif" val="60"/>
       <cvv nm="dotaccent-bottom" val="1128"/>
       <cvv nm="dotaccent-height" val="332"/>
-      <cvv nm="lc-descender" val="-501"/>
-      <cvv nm="lc-descender-undershoot" val="-533"/>
       <cvv nm="cap-serif" val="60"/>
       <cvv nm="cap-bar" val="70"/>
       <cvv nm="lc-bar" val="70"/>
@@ -282,14 +276,14 @@
       <command nm="MIAP" modifier="1"/>
       <command nm="SHP" modifier="1"/>
       <command nm="MDRP">
-	<modifier type="color" val="black"/>
+	<modifier type="col" val="b"/>
       </command>
       <else>
 	<push>mv sh init</push>
 	<command nm="MDAP" modifier="1"/>
 	<command nm="SHP" modifier="1"/>
 	<command nm="MDRP">
-	  <modifier type="color" val="black"/>
+	  <modifier type="col" val="b"/>
 	</command>
       </else>
     </compile-if>
@@ -302,7 +296,7 @@
     <pm nm="codefrag"/>
     <mv di="cv">
       <pt n="bottom-left"/>
-      <mv di="lc-serif" color="black">
+      <mv di="lc-serif" col="b">
 	<pt n="top-left"/>
       </mv>
     </mv>
@@ -330,7 +324,7 @@
 	<pt n="stem1"/>
 	<pt n="stem2"/>
       </sh>
-      <mv di="cap-serif" color="black">
+      <mv di="cap-serif" col="b">
 	<pt n="second-left"/>
 	<sh><pt n="second-right"/></sh>
       </mv>
@@ -352,13 +346,13 @@
       <sh>
 	<pt n="vertical-bot"/>
       </sh>
-      <mv di="lc-serif" color="black">
+      <mv di="lc-serif" col="b">
 	<pt n="serif-bot + 1"/>
       </mv>
     </mv>
     <mv di="top-cv">
       <pt n="top"/>
-      <mv di="lc-curved-stem" color="black">
+      <mv di="lc-curved-stem" col="b">
 	<pt n="top-ins"/>
       </mv>
     </mv>
@@ -373,7 +367,7 @@
       <push>bar-bot-left bar-bot bar-top</push>
       <command nm="MDAP" modifier="1"/>
       <command nm="MDRP">
-	<modifier type="color" val="black"/>
+	<modifier type="col" val="b"/>
       </command>
       <command nm="SHP" modifier="0"/>
     </if>
@@ -392,19 +386,19 @@
       <sh>
 	<pt n="vertical-bot"/>
       </sh>
-      <mv di="lc-serif" color="black">
+      <mv di="lc-serif" col="b">
 	<pt n="serif-bot + 1"/>
       </mv>
     </mv>
     <mv di="top-cv">
       <pt n="top"/>
-      <mv di="lc-curved-stem" color="black">
+      <mv di="lc-curved-stem" col="b">
 	<pt n="top-ins"/>
       </mv>
     </mv>
     <mv di="longs-knob">
       <pt n="bar-bot"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="bar-top"/>
       </mv>
     </mv>
@@ -435,7 +429,7 @@
     <command nm="MDAP" modifier="0"/>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
   </fn>
 
@@ -454,7 +448,7 @@
 	<pt n="stem1"/>
 	<pt n="stem2"/>
       </sh>
-      <mv di="lc-serif" color="black">
+      <mv di="lc-serif" col="b">
 	<pt n="second-left"/>
 	<sh><pt n="second-right"/></sh>
       </mv>
@@ -505,7 +499,7 @@
     </ip>
     <mv round="yes">
       <pt n="stem-a"/>
-      <mv di="cv" color="black">
+      <mv di="cv" col="b">
 	<pt n="stem-b"/>
       </mv>
     </mv>
@@ -578,7 +572,7 @@
     <push>pt2 pt1 cv</push>
     <command nm="MIAP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
   </mo>
 
@@ -591,7 +585,7 @@
     <push>pt2 cv-h pt1 cv</push>
     <command nm="MIAP" modifier="1"/>
     <command nm="MIRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <callp nm="codefrag"/>
   </mo>
@@ -606,7 +600,7 @@
     <push>pt2 pt1</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
   </mo>
 
@@ -620,7 +614,7 @@
     <push>pt2 pt1 cv</push>
     <command nm="MIAP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
       <modifier type="round" val="yes"/>
     </command>
   </mo>
@@ -636,7 +630,7 @@
     <push>pt2 cv pt1</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MIRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
       <modifier type="round" val="yes"/>
     </command>
   </mo>
@@ -690,12 +684,12 @@
     <command nm="MIAP" modifier="1"/>
     <command nm="SHP" modifier="1"/>
     <command nm="MIRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <command nm="MIAP" modifier="1"/>
     <command nm="SHP" modifier="1"/>
     <command nm="MIRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
   </mo>
 
@@ -714,13 +708,13 @@
       <sh>
 	<pt n="bottom-right"/>
       </sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="bottom-inside"/>
       </mv>
     </mv>
     <mv di="xheight-overshoot">
       <pt n="top"/>
-      <mv di="lc-curved-stem" color="black">
+      <mv di="lc-curved-stem" col="b">
 	<pt n="top-inside"/>
       </mv>
     </mv>
@@ -846,13 +840,13 @@
       <sh>
 	<pt n="vertical-bottom"/>
       </sh>
-      <mv di="lc-serif" color="black">
+      <mv di="lc-serif" col="b">
 	<pt n="serif-bottom + 1"/>
       </mv>
     </mv>
     <mv di="lc-ascender-top-overshoot">
       <pt n="top"/>
-      <mv di="lc-curved-stem" color="black">
+      <mv di="lc-curved-stem" col="b">
 	<pt n="top-inside"/>
       </mv>
     </mv>
@@ -868,7 +862,7 @@
     </callm>
     <push>bar-bottom-left bar-bottom</push>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <command nm="SHP" modifier="0"/>
     <iup axis="y"/>
@@ -886,13 +880,13 @@
       <sh>
 	<pt n="vertical-bottom"/>
       </sh>
-      <mv di="lc-serif" color="black">
+      <mv di="lc-serif" col="b">
 	<pt n="serif-bottom + 1"/>
       </mv>
     </mv>
     <mv di="lc-ascender-top-overshoot">
       <pt n="top"/>
-      <mv di="lc-curved-stem" color="black">
+      <mv di="lc-curved-stem" col="b">
 	<pt n="top-inside"/>
       </mv>
     </mv>
@@ -923,13 +917,13 @@
       <sh>
 	<pt n="vertical-bottom"/>
       </sh>
-      <mv di="lc-serif" color="black">
+      <mv di="lc-serif" col="b">
 	<pt n="serif-bottom + 1"/>
       </mv>
     </mv>
     <mv di="lc-ascender-top-overshoot">
       <pt n="top"/>
-      <mv di="lc-curved-stem" color="black">
+      <mv di="lc-curved-stem" col="b">
 	<pt n="top-inside"/>
       </mv>
     </mv>
@@ -992,7 +986,7 @@
     <push>baseline-below bowl-bottom</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDAP" modifier="1"/>
-    <mv di="lc-curved-stem" color="black">
+    <mv di="lc-curved-stem" col="b">
       <ref><pt n="bowl-bottom"/></ref>
       <pt n="bowl-bottom-inside"/>
       <ip>
@@ -1003,7 +997,7 @@
 	<pt n="spur - 1"/>
       </sh>
     </mv>
-    <mv color="black">
+    <mv col="b">
       <ref><pt n="baseline-below"/></ref>
       <pt n="baseline-above"/>
       <ip>
@@ -1083,7 +1077,7 @@
     <callf nm="minim-top">
       <wpm nm="top" val="top"/>
     </callf>
-    <mv di="lc-descender-undershoot">
+    <mv di="lc-descender">
       <pt n="bottom"/>
       <mv><pt n="bottom1"/></mv>
       <mv><pt n="bottom2"/></mv>
@@ -1123,7 +1117,7 @@
     <push>2 0</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <iup axis="y"/>
   </gl>
@@ -1149,7 +1143,7 @@
     <mv>
       <pt n="cross-bottom"/>
       <sh><pt n="top"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="cross-top"/>
 	<sh><pt n="cross-bottom"/></sh>
       </mv>
@@ -1195,7 +1189,7 @@
       <sh>
 	<pt n="diag-top"/>
       </sh>
-      <mv di="lc-serif" color="black">
+      <mv di="lc-serif" col="b">
 	<pt n="xh - 1"/>
       </mv>
     </mv>
@@ -1310,7 +1304,7 @@
 	<pt n="counter1-top"/>
       </sh>
     </mv>
-    <mv color="black">
+    <mv col="b">
       <ref><pt n="counter1-top"/></ref>	
       <pt n="counter1-top-inside"/>
     </mv>
@@ -1375,7 +1369,7 @@
       <ref><pt n="stem-top"/></ref>
       <pt n="bowl-top"/>
     </sh>
-    <mv di="lc-curved-stem" color="black">
+    <mv di="lc-curved-stem" col="b">
       <ref><pt n="bowl-top"/></ref>
       <pt n="bowl-top-inside"/>
     </mv>
@@ -1387,7 +1381,7 @@
     </callm>
     <mv di="lc-descender">
       <pt n="serif-bottom"/>
-      <mv di="lc-serif" color="black">
+      <mv di="lc-serif" col="b">
 	<pt n="serif-bottom + 1"/>
 	<sh>
 	  <pt n="stem-bottom"/>
@@ -1527,7 +1521,7 @@
     <push>bar-bottom2 bar-bottom1 bar-top</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <command nm="SHP" modifier="0"/>
     <iup axis="y"/>
@@ -1544,7 +1538,7 @@
     <mv di="xheight">
       <pt n="top-left"/>
       <sh><pt n="top-right"/></sh>
-      <mv di="lc-serif" color="black">
+      <mv di="lc-serif" col="b">
 	<pt n="top-left - 1"/>
 	<sh><pt n="top-right - 1"/></sh>
       </mv>
@@ -1552,7 +1546,7 @@
     <mv di="baseline-undershoot">
       <pt n="bottom"/>
       <sh><pt n="stem-bottom"/></sh>
-      <mv color="black"><pt n="bottom-ins"/></mv>
+      <mv col="b"><pt n="bottom-ins"/></mv>
     </mv>
     <compile-if test="include-iup = 0">
       <iup axis="y"/>
@@ -1570,7 +1564,7 @@
     <mv di="xheight">
       <pt n="serif-left"/>
       <sh><pt n="serif-right"/></sh>
-      <mv di="lc-serif" color="black">
+      <mv di="lc-serif" col="b">
 	<pt n="serif-left - 1 "/>
 	<sh><pt n="serif-right - 1"/></sh>
       </mv>
@@ -1608,7 +1602,7 @@
 	<pt n="diag-mid-top2"/>
 	<pt n="diag-right-top"/>
       </sh>
-      <mv di="lc-serif" color="black">
+      <mv di="lc-serif" col="b">
 	<pt n="serif-left - 1 "/>
 	<sh>
 	  <pt n="serif-mid - 1"/>
@@ -1646,7 +1640,7 @@
 	<pt n="diag-top-left"/>
 	<pt n="diag-top-right"/>
       </sh>
-      <mv di="lc-serif" color="black">
+      <mv di="lc-serif" col="b">
 	<pt n="serif-top-left - 1"/>
 	<sh><pt n="serif-top-right - 1"/></sh>
       </mv>
@@ -1658,7 +1652,7 @@
 	<pt n="diag-bottom-left"/>
 	<pt n="diag-bottom-right"/>
       </sh>
-      <mv di="lc-serif" color="black">
+      <mv di="lc-serif" col="b">
 	<pt n="serif-bottom-left + 1"/>
 	<sh><pt n="serif-bottom-right + 1"/></sh>
       </mv>
@@ -1683,7 +1677,7 @@
 	<pt n="diag-top-left"/>
 	<pt n="diag-top-right"/>
       </sh>
-      <mv di="lc-serif" color="black">
+      <mv di="lc-serif" col="b">
 	<pt n="serif-top-left - 1"/>
 	<sh><pt n="serif-top-right - 1"/></sh>
       </mv>
@@ -1720,7 +1714,7 @@
 	<pt n="bump-top"/>
 	<pt n="diag-top"/>
       </sh>
-      <mv di="lc-serif" color="black">
+      <mv di="lc-serif" col="b">
 	<pt n="top-ins"/>
       </mv>
     </mv>
@@ -1730,7 +1724,7 @@
 	<pt n="bump-bottom"/>
 	<pt n="diag-bottom"/>
       </sh>
-      <mv di="lc-serif" color="black">
+      <mv di="lc-serif" col="b">
 	<pt n="bottom-ins"/>
       </mv>
     </mv>
@@ -1752,7 +1746,7 @@
     <mv di="xheight-overshoot">
       <pt n="top-left"/>
       <sh><pt n="top-right"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="top-left-ins"/>
 	<sh><pt n="top-right-ins"/></sh>
       </mv>
@@ -1760,7 +1754,7 @@
     <mv di="baseline-undershoot">
       <pt n="bottom-left"/>
       <sh><pt n="bottom-right"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="bottom-left-ins"/>
 	<sh><pt n="bottom-right-ins"/></sh>
       </mv>
@@ -1879,7 +1873,7 @@
     <callf nm="ascender-top">
       <wpm nm="top" val="top"/>
     </callf>
-    <mv di="lc-descender-undershoot">
+    <mv di="lc-descender">
       <pt n="stem-bottom"/>
     </mv>
     <callm nm="lc-horz-stroke-cv">
@@ -1908,7 +1902,7 @@
     <callf nm="minim-top">
       <wpm nm="top" val="top"/>
     </callf>
-    <mv di="lc-descender-undershoot">
+    <mv di="lc-descender">
       <pt n="stem-bottom"/>
     </mv>
     <callm nm="lc-horz-stroke-cv">
@@ -2086,11 +2080,11 @@
     <setvs axis="y"/>
     <mv>
       <pt n="R-top"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="R-top-ins"/>
-	<mv color="white">
+	<mv col="w">
 	  <pt n="R-bottom-ins"/>
-	  <mv color="black">
+	  <mv col="b">
 	    <pt n="R-bottom"/>
 	    <ip><pt n="A-top"/></ip>
 	  </mv>
@@ -2155,7 +2149,7 @@
     <mv>
       <pt n="Y-bottom"/>
       <sh><pt n="Y-bottom-sh"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="Y-bottom-ins"/>
       </mv>
     </mv>
@@ -2243,7 +2237,7 @@
 	<pt n="A-top"/>
 	<pt n="A-diag-top"/>
       </sh>
-      <mv di="cap-curved-stem" color="black">
+      <mv di="cap-curved-stem" col="b">
 	<pt n="O-top-ins"/>
       </mv>
     </mv>
@@ -2259,7 +2253,7 @@
     </sh>
     <mv round="yes">
       <pt n="O-bot"/>
-      <mv di="cap-curved-stem" color="black">
+      <mv di="cap-curved-stem" col="b">
 	<pt n="O-bot-ins"/>
       </mv>
     </mv>
@@ -2306,7 +2300,7 @@
     </callm>
     <mv round="yes">
       <pt n="U-bot"/>
-      <mv di="cap-curved-stem" color="black">
+      <mv di="cap-curved-stem" col="b">
 	<pt n="U-bot-ins"/>
       </mv>
     </mv>
@@ -2400,7 +2394,7 @@
     <mv round="yes">
       <pt n="tail"/>
       <sh><pt n="tail-sh"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="tail-mv"/>
       </mv>
     </mv>
@@ -2431,11 +2425,11 @@
       <wpm nm="pt-b" val="top-serif - 1"/>
       <wpm nm="sh-a" val="stem-top-left"/>
     </callm>
-    <mv di="cap-bar" color="black">
+    <mv di="cap-bar" col="b">
       <ref><pt n="top-serif"/></ref>
       <pt n="stem-top-right"/>
     </mv>
-    <mv di="cap-bar" color="black">
+    <mv di="cap-bar" col="b">
       <ref><pt n="bottom-serif"/></ref>
       <pt n="stem-bottom-right"/>
     </mv>
@@ -2460,14 +2454,14 @@
     <mv di="cap-height-overshoot">
       <pt n="top"/>
       <sh><pt n="top-serif"/></sh>
-      <mv di="cap-curved-stem" color="black">
+      <mv di="cap-curved-stem" col="b">
 	<pt n="top-ins"/>
       </mv>
     </mv>
     <mv di="cap-baseline-undershoot">
       <pt n="bottom"/>
       <sh><pt n="bottom-serif"/></sh>
-      <mv di="cap-curved-stem" color="black">
+      <mv di="cap-curved-stem" col="b">
 	<pt n="bottom-ins"/>
       </mv>
     </mv>
@@ -2493,11 +2487,11 @@
       <wpm nm="sh-a" val="stem-top-left"/>
       <wpm nm="cv" val="cap-height"/>
     </callm>
-    <mv di="cap-bar" color="black">
+    <mv di="cap-bar" col="b">
       <ref><pt n="top-serif"/></ref>
       <pt n="stem-top-right"/>
     </mv>
-    <mv di="cap-bar" color="black">
+    <mv di="cap-bar" col="b">
       <ref><pt n="bottom-serif"/></ref>
       <pt n="stem-bottom-right"/>
     </mv>
@@ -2525,7 +2519,7 @@
     </set>
     <mv>
       <pt n="28"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="27"/>
 	<ip><pt n="24"/></ip>
       </mv>
@@ -2543,11 +2537,11 @@
       <wpm nm="sh-a" val="top-pts"/>
       <wpm nm="cv" val="cap-height"/>
     </callm>
-    <mv di="cap-bar" color="black">
+    <mv di="cap-bar" col="b">
       <ref><pt n="top-serif"/></ref>
       <pt n="stem-top-lower"/>
     </mv>
-    <mv di="cap-bar" color="black">
+    <mv di="cap-bar" col="b">
       <ref><pt n="bottom-serif"/></ref>
       <pt n="stem-bottom-upper"/>
     </mv>
@@ -2582,7 +2576,7 @@
     </set>
     <mv>
       <pt n="24"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="23"/>
 	<ip><pt n="20"/></ip>
       </mv>
@@ -2594,7 +2588,7 @@
       <wpm nm="sh-a" val="top-pts"/>
       <wpm nm="cv" val="cap-height"/>
     </callm>
-    <mv di="cap-bar" color="black">
+    <mv di="cap-bar" col="b">
       <ref><pt n="top-serif"/></ref>
       <pt n="stem-top-lower"/>
     </mv>
@@ -2656,7 +2650,7 @@
     </ip>
     <mv>
       <pt n="serif-top"/>
-      <mv di="cap-serif" color="black">
+      <mv di="cap-serif" col="b">
 	<pt n="serif-top - 1 "/>
 	<sh><pt n="stema"/><pt n="stemb"/></sh>
       </mv>
@@ -2745,7 +2739,7 @@
     </callf>
     <mv di="baseline-undershoot">
       <pt n="v-bottom"/>
-      <mv di="cap-curved-stem" color="black">
+      <mv di="cap-curved-stem" col="b">
 	<pt n="v-bottom-ins"/>
       </mv>
     </mv>
@@ -2779,14 +2773,14 @@
     <mv di="baseline">
       <pt n="bottom-a"/>
       <sh><pt n="stem-bottom"/></sh>
-      <mv di="cap-serif" color="black">
+      <mv di="cap-serif" col="b">
 	<pt n="bottom-b"/>
       </mv>
     </mv>
     <mv di="cap-height">
       <pt n="top-a"/>
       <sh><pt n="stem-top"/></sh>
-      <mv di="cap-serif" color="black">
+      <mv di="cap-serif" col="b">
 	<pt n="top-b"/>
       </mv>
     </mv>
@@ -2804,14 +2798,14 @@
     <mv di="cap-height">
       <pt n="top-a"/>
       <sh><pt n="stem-top"/></sh>
-      <mv di="cap-serif" color="black">
+      <mv di="cap-serif" col="b">
 	<pt n="top-b"/>
       </mv>
     </mv>
     <mv>
       <pt n="bottom"/>
       <sh><pt n="bottom-above-a"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="bottom-above-b"/>
       </mv>
     </mv>
@@ -2849,7 +2843,7 @@
 	<pt n="left-stem-bottom"/>
 	<pt n="bottom-right-a"/>
       </sh>
-      <mv di="cap-serif" color="black">
+      <mv di="cap-serif" col="b">
 	<pt n="bottom-left-b"/>
 	<sh><pt n="bottom-right-b"/></sh>
       </mv>
@@ -2879,7 +2873,7 @@
     <mv di="cap-height">
       <pt n="top-a"/>
       <sh><pt n="stem-top"/></sh>
-      <mv di="cap-serif" color="black">
+      <mv di="cap-serif" col="b">
 	<pt n="top-b"/>
       </mv>
     </mv>
@@ -2889,11 +2883,11 @@
 	<pt n="bottom-a1"/>
 	<pt n="bottom-a2"/>
       </sh>
-      <mv di="cap-serif" color="black">
+      <mv di="cap-serif" col="b">
 	<pt n="bottom + 1"/>
       </mv>
     </mv>
-    <mv di="cap-bar" color="black">
+    <mv di="cap-bar" col="b">
       <ref><pt n="bottom"/></ref>
       <pt n="bottom-b"/>
     </mv>
@@ -2957,7 +2951,7 @@
 	<pt n="point-lower"/>
 	<pt n="point-upper"/>
       </sh>
-      <mv di="cap-serif" color="black">
+      <mv di="cap-serif" col="b">
 	<pt n="top-left-b"/>
 	<sh><pt n="top-right-b"/></sh>
       </mv>
@@ -3025,7 +3019,7 @@
     <mv>
       <pt n="tail-bottom"/>
       <sh><pt n="tail-bottom-sh"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="tail-bottom-mv"/>
       </mv>
     </mv>
@@ -3104,11 +3098,11 @@
 	<pt n="bottom-ins"/>
       </mv>
     </mv>
-    <mv di="cap-bar" color="black">
+    <mv di="cap-bar" col="b">
       <ref><pt n="top"/></ref>
       <pt n="E-top-b"/>
     </mv>
-    <mv di="cap-bar" color="black">
+    <mv di="cap-bar" col="b">
       <ref><pt n="bottom"/></ref>
       <pt n="E-bottom-b"/>
     </mv>
@@ -3122,7 +3116,7 @@
     <mv>
       <pt n="bar-bottom"/>
       <sh><pt n="vserif-bottom"/></sh>
-      <mv di="cap-bar" color="black">
+      <mv di="cap-bar" col="b">
 	<pt n="bar-top"/>
 	<sh><pt n="vserif-top"/></sh>
       </mv>
@@ -3174,7 +3168,7 @@
       <wpm nm="sh-a" val="stem-top-left"/>
       <wpm nm="cv" val="cap-height"/>
     </callm>
-    <mv di="cap-bar" color="black">
+    <mv di="cap-bar" col="b">
       <ref><pt n="top-serif-left"/></ref>
       <pt n="stem-top-right"/>
     </mv>
@@ -3210,7 +3204,7 @@
       <wpm nm="sh-a" val="top-sh"/>
       <wpm nm="cv" val="cap-height"/>
     </callm>
-    <mv di="cap-bar" color="black">
+    <mv di="cap-bar" col="b">
       <ref><pt n="top-serif"/></ref>
       <pt n="bowl-top-inside"/>
     </mv>
@@ -3300,7 +3294,7 @@
       <wpm nm="sh-a" val="stem-top-left"/>
       <wpm nm="cv" val="cap-height"/>
     </callm>
-    <mv di="cap-bar" color="black">
+    <mv di="cap-bar" col="b">
       <ref><pt n="top-serif-left"/></ref>
       <pt n="stem-top-right"/>
     </mv>
@@ -3332,13 +3326,13 @@
     <setvs axis="y"/>
     <mv di="cap-height-overshoot">
       <pt n="top"/>
-      <mv di="cap-curved-stem" color="black">
+      <mv di="cap-curved-stem" col="b">
 	<pt n="top-ins"/>
       </mv>
     </mv>
     <mv di="baseline-undershoot">
       <pt n="bottom"/>
-      <mv di="cap-curved-stem" color="black">
+      <mv di="cap-curved-stem" col="b">
 	<pt n="bottom-ins"/>
       </mv>
     </mv>
@@ -3362,7 +3356,7 @@
     <setvs axis="y"/>
     <mv di="cap-height">
       <pt n="top"/>
-      <mv di="cap-bar" color="black">
+      <mv di="cap-bar" col="b">
 	<pt n="top-ins-a"/>
 	<sh><pt n="top-ins-b"/></sh>
       </mv>
@@ -3394,7 +3388,7 @@
     </callf>
     <mv di="baseline-undershoot">
       <pt n="bottom"/>
-      <mv di="cap-curved-stem" color="black">
+      <mv di="cap-curved-stem" col="b">
 	<pt n="bottom-ins"/>
       </mv>
     </mv>
@@ -3420,7 +3414,7 @@
     </command>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <iup axis="y"/>
   </gl>
@@ -3527,7 +3521,7 @@
     <mv>
       <pt n="tail-bottom"/>
       <sh><pt n="tail-bottom-sh"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="tail-bottom-mv"/>
       </mv>
     </mv>
@@ -3603,14 +3597,14 @@
     <mv di="cap-height">
       <pt n="top"/>
       <sh><pt n="top-sh"/></sh>
-      <mv di="cap-serif" color="black">
+      <mv di="cap-serif" col="b">
 	<pt n="top-ins"/>
       </mv>
     </mv>
     <mv di="baseline">
       <pt n="bottom"/>
       <sh><pt n="bottom-sh"/></sh>
-      <mv di="cap-serif" color="black">
+      <mv di="cap-serif" col="b">
 	<pt n="bottom-ins"/>
       </mv>
     </mv>
@@ -3633,7 +3627,7 @@
     </set>
     <mv>
       <pt n="41"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="40"/>
 	<ip><pt n="37"/></ip>
       </mv>
@@ -3652,11 +3646,11 @@
       <wpm nm="sh-b" val="1"/>
       <wpm nm="align-b" val="0"/>
     </callm>
-    <mv di="cap-bar" color="black">
+    <mv di="cap-bar" col="b">
       <ref><pt n="top-serif"/></ref>
       <pt n="top-bar-b"/>
     </mv>
-    <mv di="cap-bar" color="black">
+    <mv di="cap-bar" col="b">
       <ref><pt n="bottom-left-serif"/></ref>
       <pt n="bot-bar-b"/>
     </mv>
@@ -3670,7 +3664,7 @@
     <mv>
       <pt n="bar-bottom"/>
       <sh><pt n="vserif-bottom"/></sh>
-      <mv di="cap-bar" color="black">
+      <mv di="cap-bar" col="b">
 	<pt n="bar-top"/>
 	<sh><pt n="vserif-top"/>
 	</sh>
@@ -3710,13 +3704,13 @@
     <setvs axis="y"/>
     <mv di="cap-height-overshoot">
       <pt n="top"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="top-ins"/>
       </mv>
     </mv>
     <mv>
       <pt n="bottom"/> 
-      <mv color="black">
+      <mv col="b">
 	<pt n="bottom-ins"/>
       </mv>
     </mv>
@@ -3763,7 +3757,7 @@
       <pt n="bowl-top"/>
       <pt n="bowl-bottom"/>
     </ip>
-    <mv di="cap-serif" color="black">
+    <mv di="cap-serif" col="b">
       <ref><pt n="bowl-top"/></ref>
       <pt n="bowl-top-ins"/>
     </mv>
@@ -3792,7 +3786,7 @@
     </mv>
     <mv>
       <pt n="bowl-top"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="bowl-top-ins"/>
       </mv>
     </mv>
@@ -3821,13 +3815,13 @@
     <setvs axis="y"/>
     <mv di="cap-height-overshoot">
       <pt n="top"/>
-      <mv di="cap-curved-stem" color="black">
+      <mv di="cap-curved-stem" col="b">
 	<pt n="top-ins"/>
       </mv>
     </mv>
     <mv di="baseline-undershoot">
       <pt n="bowl-bottom"/>
-      <mv di="cap-curved-stem" color="black">
+      <mv di="cap-curved-stem" col="b">
 	<pt n="bowl-bottom-ins"/>
       </mv>
     </mv>
@@ -3861,7 +3855,7 @@
     <mv di="cap-height">
       <pt n="top"/>
       <sh><pt n="top-sh"/></sh>
-      <mv di="cap-bar" color="black">
+      <mv di="cap-bar" col="b">
 	<pt n="top-ins"/>
 	<sh><pt n="top-ins-sh"/></sh>
       </mv>
@@ -3894,7 +3888,7 @@
     </mv>
     <mv round="yes">
       <pt n="arm-top"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="arm-top-ins"/>
       </mv>
       <mv round="yes">
@@ -3934,14 +3928,14 @@
     <mv di="cap-height">
       <pt n="top"/>
       <sh><set ref="top-sh"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="top-under"/>
 	<sh><set ref="top-under-sh"/></sh>
       </mv>
     </mv>
     <mv round="yes">
       <pt n="bottom"/>
-      <mv di="cap-curved-stem" color="black">
+      <mv di="cap-curved-stem" col="b">
 	<pt n="bottom-ins"/>
       </mv>
     </mv>
@@ -3976,7 +3970,7 @@
       </sh>
       <mv round="yes">
 	<pt n="bow-top"/>
-	<mv di="cap-curved-stem" color="black">
+	<mv di="cap-curved-stem" col="b">
 	  <pt n="bow-top-ins"/>
 	</mv>
       </mv>
@@ -4009,7 +4003,7 @@
     </mv>
     <mv round="yes">
       <pt n="arm-top"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="arm-top-ins"/>
       </mv>
       <mv round="yes">
@@ -4036,7 +4030,7 @@
     <mv di="cap-height">
       <pt n="top"/>
       <sh><set ref="top-sh"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="top-under"/>
 	<sh><pt n="curve-top"/></sh>
       </mv>

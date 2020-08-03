@@ -8,7 +8,7 @@
     <setvs axis="y"/>
     <mv round="yes">
       <pt n="bot"/>
-      <mv di="period-height" color="black">
+      <mv di="period-height" col="b">
 	<pt n="top"/>
       </mv>
     </mv>
@@ -27,7 +27,7 @@
     <mv round="yes">
       <pt n="base"/>
       <sh><set ref="bottom"/></sh>
-      <mv  di="period-height" color="black">
+      <mv  di="period-height" col="b">
 	<pt n="top"/>
       </mv>
     </mv>
@@ -48,7 +48,7 @@
     <mv round="yes">
       <pt n="base"/>
       <sh><set ref="bottom"/></sh>
-      <mv  di="period-height" color="black">
+      <mv  di="period-height" col="b">
 	<pt n="top"/>
       </mv>
     </mv>
@@ -72,7 +72,7 @@
     <mv round="yes">
       <pt n="base"/>
       <sh><set ref="bottom"/></sh>
-      <mv  di="period-height" color="black">
+      <mv  di="period-height" col="b">
 	<pt n="top"/>
 	<sh><pt n="35"/></sh>
       </mv>
@@ -91,11 +91,11 @@
     <setvs axis="y"/>
     <mv round="yes">
       <pt n="a-bot"/>
-      <mv di="period-height" color="black">
+      <mv di="period-height" col="b">
 	<pt n="a-top"/>
-	<mv color="white">
+	<mv col="w">
 	  <pt n="b-bot"/>
-	  <mv di="period-height" color="black">
+	  <mv di="period-height" col="b">
 	    <pt n="b-top"/>
 	  </mv>
 	</mv>
@@ -111,9 +111,9 @@
     <callg pnm="comma">
       <wpm nm="include-iup" val="-1"/>
     </callg>
-    <mv color="white">
+    <mv col="w">
       <pt n="b-bot"/>
-      <mv di="period-height" color="black">
+      <mv di="period-height" col="b">
 	<pt n="b-top"/>
       </mv>
     </mv>
@@ -135,7 +135,7 @@
     <mv round="yes">
       <pt n="bot"/>
       <sh><set ref="bot-sh"/></sh>
-      <mv di="period-height" color="white">
+      <mv di="period-height" col="w">
 	<pt n="top"/>
 	<sh><set ref="top-sh"/></sh>
       </mv>
@@ -153,9 +153,9 @@
       <pt n="dot-bot"/>
       <mv di="period-height">
 	<pt n="dot-top"/>
-	<mv color="white">
+	<mv col="w">
 	  <pt n="stem-bot"/>
-	  <mv color="black">
+	  <mv col="b">
 	    <pt n="stem-top"/>
 	  </mv>
 	</mv>
@@ -174,9 +174,9 @@
       <pt n="dot-top"/>
       <mv di="period-height">
 	<pt n="dot-bot"/>
-	<mv color="white">
+	<mv col="w">
 	  <pt n="stem-top"/>
-	  <mv color="black">
+	  <mv col="b">
 	    <pt n="stem-bot"/>
 	  </mv>
 	</mv>
@@ -195,9 +195,9 @@
       <pt n="dot-bot"/>
       <mv di="period-height">
 	<pt n="dot-top"/>
-	<mv color="white">
+	<mv col="w">
 	  <pt n="stem-bot"/>
-	  <mv color="black">
+	  <mv col="b">
 	    <pt n="stem-top"/>
 	  </mv>
 	</mv>
@@ -216,9 +216,9 @@
       <pt n="dot-top"/>
       <mv di="period-height">
 	<pt n="dot-bot"/>
-	<mv color="white">
+	<mv col="w">
 	  <pt n="stem-top"/>
-	  <mv color="black">
+	  <mv col="b">
 	    <pt n="stem-bot"/>
 	  </mv>
 	</mv>
@@ -235,7 +235,7 @@
     <setvs axis="y"/>
     <mv round="yes">
       <pt n="0"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="8"/>
       </mv>
     </mv>
@@ -270,7 +270,7 @@
     <mv round="yes">
       <pt n="bot"/>
       <sh><pt n="bot-sh"/></sh>
-      <mv di="period-height" color="black">
+      <mv di="period-height" col="b">
 	<pt n="mid"/>
 	<sh><set ref="mid-sh"/></sh>
       </mv>
@@ -293,7 +293,7 @@
     <mv round="yes">
       <pt n="base"/>
       <sh><set ref="bottom"/></sh>
-      <mv  di="period-height" color="black">
+      <mv  di="period-height" col="b">
 	<pt n="top"/>
 	<sh><pt n="35"/></sh>
       </mv>
@@ -314,7 +314,7 @@
     <setvs axis="y"/>
     <mv round="yes">
       <pt n="bot"/>
-      <mv di="period-height" color="black">
+      <mv di="period-height" col="b">
 	<pt n="mid"/>
 	<sh><set ref="mid-sh"/></sh>
       </mv>
@@ -334,7 +334,7 @@
     <mv round="yes">
       <pt n="base"/>
       <sh><set ref="bottom"/></sh>
-      <mv  di="period-height" color="black">
+      <mv  di="period-height" col="b">
 	<pt n="top"/>
       </mv>
     </mv>
@@ -355,7 +355,7 @@
     <mv round="yes">
       <pt n="base"/>
       <sh><set ref="bottom"/></sh>
-      <mv  di="period-height" color="black">
+      <mv  di="period-height" col="b">
 	<pt n="top"/>
       </mv>
     </mv>
@@ -380,7 +380,7 @@
     <mv round="yes">
       <pt n="base"/>
       <sh><set ref="bottom"/></sh>
-      <mv  di="period-height" color="black">
+      <mv  di="period-height" col="b">
 	<pt n="top"/>
 	<sh><pt n="top-sh"/></sh>
       </mv>
@@ -464,13 +464,13 @@
     <setvs axis="y"/>
     <mv di="xheight">
       <pt n="bar-top"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="bar-bot"/>
       </mv>
     </mv>
     <mv di="lc-descender">
       <pt n="curve-bot"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="curve-top"/>
       </mv>
     </mv>
@@ -485,13 +485,13 @@
     <setvs axis="y"/>
     <mv di="xheight">
       <pt n="bar-top"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="bar-bot"/>
       </mv>
     </mv>
     <mv di="baseline-undershoot">
       <pt n="curve-bot"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="curve-top"/>
       </mv>
     </mv>
@@ -508,13 +508,13 @@
     <setvs axis="y"/>
     <mv di="xheight">
       <pt n="bar-top"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="bar-bot"/>
       </mv>
     </mv>
     <mv di="baseline-undershoot">
       <pt n="curve-bot"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="curve-top"/>
       </mv>
     </mv>
@@ -538,13 +538,13 @@
     <setvs axis="y"/>
     <mv round="yes">
       <pt n="bot"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="bot-ins"/>
       </mv>
     </mv>
     <mv round="yes">
       <pt n="top"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="top-ins"/>
       </mv>
     </mv>
@@ -567,13 +567,13 @@
     <setvs axis="y"/>
     <mv round="yes">
       <pt n="bot"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="bot-ins"/>
       </mv>
     </mv>
     <mv round="yes">
       <pt n="top"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="top-ins"/>
       </mv>
     </mv>
@@ -594,13 +594,13 @@
     <setvs axis="y"/>
     <mv round="yes">
       <pt n="bot"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="bot-ins"/>
       </mv>
     </mv>
     <mv round="yes">
       <pt n="top"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="top-ins"/>
       </mv>
     </mv>
@@ -615,13 +615,13 @@
     <setvs axis="y"/>
     <mv round="yes">
       <pt n="bot"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="bot-ins"/>
       </mv>
     </mv>
     <mv round="yes">
       <pt n="top"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="top-ins"/>
       </mv>
     </mv>
@@ -632,13 +632,13 @@
     <setvs axis="y"/>
     <mv round="yes">
       <pt n="0"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="1"/>
       </mv>
     </mv>
     <mv round="yes">
       <pt n="5"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="4"/>
       </mv>
     </mv>
@@ -668,9 +668,9 @@
     <setvs axis="y"/>
     <mv round="yes">
       <pt n="dot-lower"/>
-      <mv di="period-height" color="black">
+      <mv di="period-height" col="b">
 	<pt n="dot-upper"/>
-	<mv color="white">
+	<mv col="w">
 	  <pt n="bow-lower"/>
 	</mv>
       </mv>
@@ -691,7 +691,7 @@
     <mv di="cap-height">
       <pt n="top"/>
       <sh><pt n="diag-top"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="top-below"/>
       </mv>
     </mv>
@@ -714,13 +714,13 @@
     <push>curve-top period-height curve-bot dot-top period-height dot-bot</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MIRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <command nm="MDRP">
-      <modifier type="color" val="white"/>
+      <modifier type="col" val="w"/>
     </command>
     <command nm="MIRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <iup axis="y"/>
   </gl>
@@ -746,17 +746,17 @@
     </push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MIRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <command nm="MDRP">
-      <modifier type="color" val="white"/>
+      <modifier type="col" val="w"/>
     </command>
     <command nm="MDRP">
-      <modifier type="color" val="gray"/>
+      <modifier type="col" val="g"/>
     </command>
     <command nm="SHP" modifier="0"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <command nm="SHP" modifier="0"/>
     <iup axis="y"/>

@@ -10,7 +10,7 @@
     <push>top bottom</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <iup axis="y"/>
   </gl>
@@ -47,7 +47,7 @@
     <setvs axis="y"/>
     <mv>
       <pt n="0"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="6"/>
 	<sh>
 	  <pt n="3"/>
@@ -165,10 +165,10 @@
     <push>6 13 0</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDAP">
-      <modifier type="color" val="gray"/>
+      <modifier type="col" val="g"/>
     </command>
     <command nm="MDAP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <iup axis="y"/>
   </gl>
@@ -178,10 +178,10 @@
     <push>6 13 0</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDAP">
-      <modifier type="color" val="gray"/>
+      <modifier type="col" val="g"/>
     </command>
     <command nm="MDAP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <iup axis="y"/>
   </gl>
@@ -191,7 +191,7 @@
     <mv>
       <pt n="9"/>
       <sh><pt n="5"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="3"/>
 	<sh><pt n="0"/></sh>
       </mv>
@@ -204,11 +204,11 @@
     <push>7 36 14 0</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="gray"/>
+      <modifier type="col" val="g"/>
     </command>
     <command nm="SHP" modifier="0"/>
     <command nm="MDAP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <iup axis="y"/>
   </gl>
@@ -218,10 +218,10 @@
     <push>7 23 0</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="gray"/>
+      <modifier type="col" val="g"/>
     </command>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <iup axis="y"/>
   </gl>
@@ -232,7 +232,7 @@
     <command nm="MDAP" modifier="0"/>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <iup axis="y"/>
   </gl>
@@ -246,7 +246,7 @@
     <push>15 0</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <iup axis="y"/>
   </gl>
@@ -256,7 +256,7 @@
     <push>6 0</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <iup axis="y"/>
   </gl>
@@ -267,7 +267,7 @@
     <command nm="MDAP" modifier="1"/>
     <command nm="SHP" modifier="0"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <command nm="SHP" modifier="0"/>
     <iup axis="y"/>
@@ -279,7 +279,7 @@
     <command nm="MDAP" modifier="1"/>
     <command nm="SHP" modifier="0"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <command nm="SHP" modifier="0"/>
     <iup axis="y"/>
@@ -290,7 +290,7 @@
     <push>17 0</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <iup axis="y"/>
   </gl>
@@ -301,7 +301,7 @@
       <pt n="20"/>
       <mv>
 	<pt n="0"/>
-	<mv color="black">
+	<mv col="b">
 	  <pt n="12"/>
 	</mv>
       </mv>
@@ -315,7 +315,7 @@
     <command nm="MDAP" modifier="0"/>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <iup axis="y"/>
   </gl>
@@ -328,7 +328,7 @@
     <command nm="SHP" modifier="1"/>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <iup axis="y"/>
   </gl>
@@ -338,16 +338,16 @@
     <push>65 mark-curve 51 51 7 8 0 27 mark-curve 39 59 mark-curve 43 43 16 0</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <command nm="SHP" modifier="1"/>
     <command nm="SRP0"/>
     <command nm="MIRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <command nm="MDAP" modifier="1"/>
     <command nm="MIRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <command nm="SRP2"/>
     <command nm="IP"/>
@@ -355,7 +355,7 @@
     <command nm="SHP" modifier="1"/>
     <command nm="SRP0"/>
     <command nm="MIRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <iup axis="y"/>
   </gl>
@@ -371,20 +371,20 @@
     </mv>
     <mv>
       <pt n="23"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="38"/>
       </mv>
     </mv>
     <mv>
       <pt n="52"/>
       <sh><pt n="47"/><pt n="17"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="51"/>
       </mv>
     </mv>
     <mv>
       <pt n="17"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="4"/>
       </mv>
     </mv>
@@ -404,19 +404,19 @@
     <mv>
       <pt n="0"/>
       <sh><pt n="51"/></sh>
-      <mv color="black" di="mark-curve">
+      <mv col="b" di="mark-curve">
 	<pt n="26"/>
       </mv>
     </mv>
     <mv>
       <pt n="33"/>
-      <mv color="black" di="mark-curve">
+      <mv col="b" di="mark-curve">
 	<pt n="45"/>
       </mv>
     </mv>
     <mv>
       <pt n="6"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="19"/>
       </mv>
     </mv>
@@ -427,7 +427,7 @@
     <setvs axis="y"/>
     <mv>
       <pt n="0"/>
-      <mv color="black" di="mark-curve">
+      <mv col="b" di="mark-curve">
 	<pt n="20"/>
       </mv>
     </mv>
@@ -445,7 +445,7 @@
     <push>13 mark-curve 6</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MIRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <iup axis="y"/>
   </gl>
@@ -455,7 +455,7 @@
     <mv>
       <pt n="36"/>
       <sh><pt n="0"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="51"/>
       </mv>
     </mv>
@@ -500,7 +500,7 @@
     <mv>
       <pt n="12"/>
       <sh><pt n="15"/><pt n="25"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="13"/>
 	<sh>
 	  <pt n="14"/>
@@ -511,9 +511,9 @@
     </mv>
     <mv>
       <pt n="20"/>
-      <mv color="white">
+      <mv col="w">
 	<pt n="0"/>
-	<mv color="black">
+	<mv col="b">
 	  <pt n="6"/>
 	</mv>
       </mv>
@@ -541,14 +541,14 @@
     <mv>
       <pt n="0"/>
       <sh><pt n="21"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="14"/>
       </mv>
     </mv>
     <mv>
       <pt n="6"/>
       <sh><pt n="25"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="5"/>
 	<sh><pt n="24"/></sh>
       </mv>
@@ -575,7 +575,7 @@
     <mv>
       <pt n="5"/>
       <sh><pt n="0"/></sh>
-      <mv color="black" di="mark-curve">
+      <mv col="b" di="mark-curve">
 	<pt n="36"/>
       </mv>
     </mv>
@@ -629,7 +629,7 @@
 	<pt n="60"/>
 	<pt n="65"/>
       </sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="56"/>
 	<sh>
 	  <pt n="61"/>
@@ -643,7 +643,7 @@
 	<pt n="5"/>
 	<pt n="47"/>
       </sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="18"/>
 	<sh><pt n="40"/></sh>
       </mv>
@@ -656,7 +656,7 @@
     <mv>
       <pt n="23"/>
       <sh><pt n="28"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="24"/>
       </mv>
     </mv>
@@ -675,7 +675,7 @@
     <setvs axis="y"/>
     <mv>
       <pt n="0"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="24"/>
       </mv>
     </mv>
@@ -704,7 +704,7 @@
 	<pt n="15"/>
 	<pt n="5"/>
       </sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="9"/>
 	<sh><pt n="14"/></sh>
       </mv>
@@ -721,7 +721,7 @@
 	<pt n="25"/>
 	<pt n="1"/>
       </sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="19"/>
 	<sh><pt n="24"/></sh>
       </mv>
@@ -733,7 +733,7 @@
 	<pt n="13"/>
 	<pt n="4"/>
       </sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="9"/>
 	<sh><pt n="14"/></sh>
       </mv>
@@ -746,11 +746,11 @@
     <mv>
       <pt n="0"/>
       <sh><pt n="34"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="14"/>
       </mv>
     </mv>
-    <mv color="black">
+    <mv col="b">
       <ref><pt n="34"/></ref>
       <pt n="25"/>
     </mv>
@@ -767,7 +767,7 @@
     <mv>
       <pt n="0"/>
       <sh><pt n="24"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="63"/>
 	<sh><pt n="17"/></sh>
       </mv>
@@ -775,11 +775,11 @@
     <mv>
       <pt n="46"/>
       <sh><pt n="53"/></sh>
-      <mv di="mark-curve" color="black">
+      <mv di="mark-curve" col="b">
 	<pt n="33"/>
       </mv>
     </mv>
-    <mv di="mark-curve" color="black">
+    <mv di="mark-curve" col="b">
       <ref><pt n="53"/></ref>
       <pt n="10"/>
     </mv>
@@ -856,7 +856,7 @@
 	<pt n="32"/>
 	<pt n="11"/>
       </sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="28"/>
 	<sh><pt n="33"/></sh>
       </mv>
@@ -871,7 +871,7 @@
     <mv>
       <pt n="39"/>
       <sh><pt n="22"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="38"/>
       </mv>
     </mv>
@@ -886,7 +886,7 @@
     <mv>
       <pt n="11"/>
       <sh><pt n="0"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="12"/>
       </mv>
     </mv>
@@ -902,7 +902,7 @@
 	<pt n="27"/>
 	<pt n="0"/>
       </sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="23"/>
 	<sh><pt n="28"/></sh>
       </mv>
@@ -910,7 +910,7 @@
     <mv>
       <pt n="14"/>
       <sh><pt n="37"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="7"/>
       </mv>
     </mv>
@@ -922,13 +922,13 @@
     <mv>
       <pt n="25"/>
       <sh><pt n="22"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="24"/>
       </mv>
     </mv>
     <mv>
       <pt n="15"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="8"/>
       </mv>
     </mv>
@@ -963,7 +963,7 @@
     <mv>
       <pt n="26"/>
       <sh><pt n="0"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="27"/>
       </mv>
     </mv>
@@ -986,14 +986,14 @@
     <mv>
       <pt n="20"/>
       <sh><pt n="6"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="8"/>
       </mv>
     </mv>
     <mv>
       <pt n="3"/>
       <sh><pt n="23"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="25"/>
       </mv>
     </mv>
@@ -1004,7 +1004,7 @@
     <setvs axis="y"/>
     <mv>
       <pt n="4"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="12"/>
 	<sh>
 	  <pt n="0"/>
@@ -1019,7 +1019,7 @@
     <setvs axis="y"/>
     <mv>
       <pt n="4"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="12"/>
 	<sh>
 	  <pt n="0"/>
@@ -1034,7 +1034,7 @@
     <setvs axis="y"/>
     <mv>
       <pt n="4"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="12"/>
 	<sh>
 	  <pt n="0"/>
@@ -1050,7 +1050,7 @@
     <mv>
       <pt n="8"/>
       <sh><pt n="5"/><pt n="11"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="0"/>
       </mv>
     </mv>
@@ -1062,7 +1062,7 @@
     <mv>
       <pt n="8"/>
       <sh><pt n="5"/><pt n="11"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="0"/>
       </mv>
     </mv>
@@ -1078,7 +1078,7 @@
     <mv>
       <pt n="right-bot"/>
       <sh><pt n="left-bot"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="right-top"/>
 	<sh><pt n="left-top"/></sh>
       </mv>
@@ -1096,7 +1096,7 @@
     <mv>
       <pt n="right-bot"/>
       <sh><pt n="left-bot"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="right-top"/>
 	<sh><pt n="left-top"/></sh>
       </mv>
@@ -1160,7 +1160,7 @@
     <setvs axis="y"/>
     <mv>
       <pt n="8"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="0"/>
 	<ip>
 	  <pt n="9"/>
@@ -1253,7 +1253,7 @@
     <command nm="MDAP" modifier="1"/>
     <command nm="SHP" modifier="0"/>
     <command nm="MDRP">
-      <modifier type="color" val="black"/>
+      <modifier type="col" val="b"/>
     </command>
     <command nm="SHP" modifier="0"/>
     <iup axis="y"/>
@@ -1281,7 +1281,7 @@
     <setvs axis="y"/>
     <mv>
       <pt n="1"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="6"/>
 	<mv>
 	  <pt n="7"/>
@@ -1296,7 +1296,7 @@
     <setvs axis="y"/>
     <mv>
       <pt n="2"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="8"/>
 	<sh><pt n="0"/><pt n="4"/></sh>
       </mv>
@@ -1313,7 +1313,7 @@
     <mv>
       <pt n="right-bot"/>
       <sh><pt n="left-bot"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="right-top"/>
 	<sh><pt n="left-top"/></sh>
       </mv>
@@ -1325,7 +1325,7 @@
     <setvs axis="y"/>
     <mv>
       <pt n="8"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="0"/>
 	<ip>
 	  <pt n="7"/>
@@ -1340,7 +1340,7 @@
     <setvs axis="y"/>
     <mv>
       <pt n="0"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="3"/>
 	<mv>
 	  <pt n="2"/>
@@ -1369,7 +1369,7 @@
     <mv>
       <pt n="3"/>
       <sh><pt n="9"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="24"/>
 	<sh><pt n="17"/></sh>
 	<mv>
@@ -1402,7 +1402,7 @@
     <mv>
       <pt n="9"/>
       <sh><pt n="5"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="3"/>
 	<sh><pt n="0"/></sh>
       </mv>
@@ -1575,11 +1575,11 @@
     <setvs axis="y"/>
     <mv>
       <pt n="4"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="5"/>
-	<mv color="white">
+	<mv col="w">
 	  <pt n="0"/>
-	  <mv color="black">
+	  <mv col="b">
 	    <pt n="1"/>
 	  </mv>
 	</mv>
@@ -1592,7 +1592,7 @@
     <setvs axis="y"/>
     <mv>
       <pt n="1"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="0"/>
       </mv>
     </mv>
@@ -1608,7 +1608,7 @@
     <mv>
       <pt n="right-bot"/>
       <sh><pt n="left-bot"/></sh>
-      <mv color="black">
+      <mv col="b">
 	<pt n="right-top"/>
 	<sh><pt n="left-top"/></sh>
       </mv>
@@ -1620,7 +1620,7 @@
     <setvs axis="y"/>
     <mv>
       <pt n="1"/>
-      <mv color="black">
+      <mv col="b">
 	<pt n="0"/>
       </mv>
     </mv>
