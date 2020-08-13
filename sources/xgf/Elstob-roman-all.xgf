@@ -10,6 +10,7 @@
   
   <default type="max-storage" val="70"/>
   <default type="init-graphics" val="no"/>
+  <default type="cleartype" val="yes"/>
   
   <cv nm="xheight" val="891"/>
   <cv nm="xheight-overshoot" val="914"/>
@@ -255,14 +256,20 @@
     <compile-if test="cv &gt;= 0">
       <push>mv sh init cv</push>
       <command nm="MIAP" modifier="1"/>
-      <command nm="SHP" modifier="1"/>
+      <command nm="MDRP">
+	<modifier type="set-rp0" val="no"/>
+	<modifier type="col" val="b"/>
+      </command>
       <command nm="MDRP">
         <modifier type="col" val="b"/>
       </command>
       <else>
         <push>mv sh init</push>
         <command nm="MDAP" modifier="1"/>
-        <command nm="SHP" modifier="1"/>
+	<command nm="MDRP">
+	  <modifier type="set-rp0" val="no"/>
+	  <modifier type="col" val="b"/>
+	</command>
         <command nm="MDRP">
           <modifier type="col" val="b"/>
         </command>
@@ -855,7 +862,7 @@
     <callg pnm="minus"/>
   </gl>
 
-  <gl init-graphics="no" pnm="hyphen.cap">
+  <gl init-graphics="no" pnm="hyphen.case">
     <callg pnm="minus"/>
   </gl>
 
@@ -2472,7 +2479,7 @@
       </sh>
     </mv>
     <mv p="tail-bottom">
-      <sh p="tail-bottom-sh"/>
+      <mv col="b" p="tail-bottom-sh"/>
       <mv col="b" p="tail-bottom-mv"/>
     </mv>
     <iup axis="y"/>
@@ -2760,9 +2767,9 @@
     <setvs axis="y"/>
     <mv di="cap-height-overshoot" p="stem-top">
       <sh p="(stem-top - 1) (stem-top - 2) bow-top"/>
-      <mv round="yes" p="bow-top">
-        <mv di="cap-curved-stem" col="b" p="bow-top-ins"/>
-      </mv>
+    </mv>
+    <mv p="bow-top">
+      <mv di="cap-curved-stem" col="b" p="bow-top-ins"/>
     </mv>
     <mv p="stem-bot"/>
     <callm nm="serif-sh">
@@ -3155,16 +3162,13 @@
     <cn nm="u-top-b" val="67"/>
     <cn nm="u-stem-top" val="65"/>
     <cn nm="u-stem-bot" val="63"/>
-    <set nm="top-sh" p="u-stem-top top"/>
     <setvs axis="y"/>
     <callm nm="serif-sh">
-      <pms>pt-a: u-top-a, pt-b: u-top-b, sh-a: top-sh, cv: xheight, cv-h: lc-serif</pms>
+      <pms>pt-a: u-top-a, pt-b: u-top-b, sh-a: u-stem-top, cv: xheight, cv-h: lc-serif</pms>
     </callm>
-    <push>top-inside top</push>
-    <command nm="MDAP" modifier="1"/>
-    <command nm="MDRP">
-      <modifier type="col" val="b"/>
-    </command>
+    <mv di="xheight-overshoot" p="top">
+      <mv col="black" p="top-inside"/>
+    </mv>
     <mv di="baseline-undershoot" p="bottom">
       <sh p="bottom-right u-stem-bot"/>
       <mv col="b" p="bottom-inside">
@@ -3190,11 +3194,9 @@
     <callm nm="serif-sh">
       <pms>pt-a: serif, pt-b: (serif - 1), sh-a: v-diag-top, cv: xheight, cv-h: lc-serif</pms>
     </callm>
-    <sh r="serif" p="a-top"/>
-    <callm nm="round-point">
-      <pms>p: a-top</pms>
-    </callm>
-    <mv col="b" r="a-top" p="a-top-ins"/>
+    <mv di="xheight-overshoot" p="a-top">
+      <mv col="b" p="a-top-ins"/>
+    </mv>
     <mv di="baseline-undershoot" p="a-bot">
       <sh p="v-diag-bot a-diag-bot"/>
       <mv col="b" p="a-bot-ins"/>
@@ -3494,7 +3496,13 @@
     </mv>
     <ip r="top bottom" p="mid-upper mid-lower"/>
     <callm nm="serif-sh">
-      <pms>pt-a: serif, pt-b: (serif - 1), sh-a: diag-top, cv: lc-serif</pms>
+      <pms>
+	pt-a: serif,
+	pt-b: (serif - 1),
+	sh-a: diag-top,
+	cv: xheight,
+	cv-h: lc-serif
+      </pms>
     </callm>
     <callm nm="one-cv-stem">
       <pms>pt1: tail-bot, pt2: tail-ins, cv: lc-descender</pms>
@@ -4879,7 +4887,10 @@
       </sh>
     </mv>
     <callm nm="serif-sh">
-      <pms>pt-a: serif-bottom-left, pt-b: (serif-bottom-left + 1), sh-a: bottom-sh-a, sh-b: bottom-sh-b, cv-h: sc-serif</pms>
+      <pms>
+	pt-a: serif-bottom-left, pt-b: (serif-bottom-left + 1),
+	sh-a: bottom-sh-a, sh-b: bottom-sh-b, cv-h: sc-serif
+      </pms>
     </callm>
     <callf nm="interpolated-stem">
       <pms>ref-a: serif-bottom-left, ref-b: top, stem-a: bar-bottom, stem-b: bar-top, cv: sc-bar</pms>
