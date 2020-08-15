@@ -8731,15 +8731,33 @@
   </gl>
 
   <gl init-graphics="no" pnm="uni0335">
-    <callg pnm="macron"/>
+    <setvs axis="y"/>
+    <push>1 lc-bar 0</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MIRP">
+      <modifier type="col" val="b"/>
+    </command>
+    <iup axis="y"/>
   </gl>
 
   <gl init-graphics="no" pnm="uni0335.sc">
-    <callg pnm="macron"/>
+    <setvs axis="y"/>
+    <push>1 sc-bar 0</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MIRP">
+      <modifier type="col" val="b"/>
+    </command>
+    <iup axis="y"/>
   </gl>
 
   <gl init-graphics="no" pnm="uni0335.wide">
-    <callg pnm="macron"/>
+    <setvs axis="y"/>
+    <push>1 cap-bar 0</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MIRP">
+      <modifier type="col" val="b"/>
+    </command>
+    <iup axis="y"/>
   </gl>
 
   <gl pnm="breve">
