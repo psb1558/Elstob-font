@@ -415,10 +415,10 @@
     <command nm="MDAP" modifier="1"/>
     <compile-if test="cv &gt;= 0">
       <push>pt2 cv</push>
-      <command nm="MIRP" modifier="11100"/>
+      <command nm="MIRP" modifier="11101"/>
       <else>
         <push>pt2</push>
-        <command nm="MDRP" modifier="11100"/>
+        <command nm="MDRP" modifier="11101"/>
       </else>
     </compile-if>
   </mo>
@@ -440,11 +440,11 @@
     <command nm="SHP" modifier="1"/>
     <compile-if test="cv &gt;= 0">
       <push>sh2 pt2 cv</push>
-      <command nm="MIRP" modifier="11100"/>
+      <command nm="MIRP" modifier="11101"/>
       <command nm="SHP" modifier="0"/>
       <else>
         <push>sh2 pt2</push>
-        <command nm="MDRP" modifier="11100"/>
+        <command nm="MDRP" modifier="11101"/>
 	<command nm="SHP" modifier="0"/>
       </else>
     </compile-if>
@@ -5587,6 +5587,141 @@
     <mv p="8">
       <mv col="g" p="0">
 	<ip p="9 15"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="uni031D">
+    <mv p="5">
+      <sh round="yes" p="1"/>
+      <mv p="4">
+	<sh p="0"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="uni031E">
+    <mv p="5">
+      <sh p="1"/>
+      <mv p="4">
+	<sh round="yes" p="0"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="uni031F">
+    <mv p="5">
+      <sh p="1"/>
+      <mv p="4">
+	<sh p="0"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="uni0320">
+    <mv p="1">
+      <mv col="g" p="5">
+	<sh p="12"/>
+      </mv>
+      <mv p="0">
+	<mv col="g" p="4">
+	  <sh p="13"/>
+	</mv>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="dotbelowcomb">
+    <mv p="6">
+      <mv p="0"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni0324"> <!-- dieresis below -->
+    <mv p="21">
+      <sh p="7"/>
+      <mv p="14">
+	<sh p="0"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="uni0325"> <!-- ring below -->
+    <mv p="7">
+      <mv col="g" p="0">
+	<ip p="21 15"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="uni0326"> <!-- comma below -->
+    <mv p="12">
+      <mv p="6">
+	<sh p="0"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="uni0329">
+    <mv p="1">
+      <mv p="0"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni032A">
+    <mv p="1">
+      <mv p="6">
+	<mv col="g" p="0">
+	  <sh p="4"/>
+	</mv>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="uni032C"> <!-- caron below -->
+    <mv p="0">
+      <sh p="3 4 2 5"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni032F"> <!-- inverted breve below -->
+    <mv p="2">
+      <mv p="9">
+	<mv col="g" p="12">
+	  <sh p="6"/>
+	</mv>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="uni0330"> <!-- tilde below -->
+    <mv p="9">
+      <mv col="g" p="13">
+	<mv p="0"/>
+      </mv>
+      <mv p="4"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni0335"> <!-- lc combining bar -->
+    <mv p="0">
+      <mv di="lc-bar" p="1"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni0339">
+    <mv p="8">
+      <mv col="g" p="0">
+	<ip p="7 1"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="uni033A">
+    <mv p="1">
+      <sh p="5"/>
+      <mv col="g" p="3">
+	<mv p="0"/>
       </mv>
     </mv>
   </gl>
