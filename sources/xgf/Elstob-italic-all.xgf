@@ -22,6 +22,8 @@
 
   <default type="assume-always-y" val="yes"/>
 
+  <default type="color" val="auto"/>
+
   <cv nm="baseline" val="0"/>
   <!-- caps -->
   <cv nm="cap-baseline-undershoot" val="-27"/>
@@ -215,6 +217,14 @@
       <setcv nm="cap-bar" unit="pixel" val="control-value(cap-serif)"/>
     </if>
   </prep>
+
+  <fn nm="test-func">
+    <pm nm="a"/>
+    <pm nm="b"/>
+    <mv p="a">
+      <mv p="b"/>
+    </mv>
+  </fn>
 
   <!-- As on b, d -->
   <fn nm="lc-ascender">
@@ -503,7 +513,7 @@
     <callm nm="round-point">
       <pms>p: 18</pms>
     </callm>
-    <mv di="caprs" col="b" r="18" p="36"/>
+    <mv di="caprs" r="18" p="36"/>
     <callm nm="mid-stem">
       <pms>ref1: 54, ref2: 11, pt1: 62, pt2: 63</pms>
     </callm>
@@ -685,14 +695,14 @@
       <mv di="caprs" p="53"/>
     </mv>
     <mv di="cap-height" p="34">
-      <mv col="b" p="35">
+      <mv p="35">
         <ip p="20 37"/>
         <sh p="21"/>
       </mv>
     </mv>
     <ip r="34 0" p="62"/>
     <mv p="62">
-      <mv col="b" p="10">
+      <mv p="10">
         <ip p="11"/>
       </mv>
     </mv>
@@ -1138,7 +1148,7 @@
     </mv>
     <mv p="0"/>
     <mv di="cap-baseline-undershoot" p="15">
-      <mv col="b" p="16"/>
+      <mv p="16"/>
     </mv>
   </gl>
 
@@ -1180,8 +1190,8 @@
       <mv p="61"/>
     </mv>
     <mv p="0">
-      <sh p="11"/>
-      <mv col="b" p="6"/>
+      <mv p="11"/>
+      <mv p="6"/>
     </mv>
     <ip r="44 0" p="35 34"/>
   </gl>
@@ -1375,7 +1385,7 @@
       <sh p="18"/>
     </mv>
     <mv di="lcbu" p="0">
-      <mv col="b" p="27"/>
+      <mv p="27"/>
     </mv>
   </gl>
 
@@ -1405,7 +1415,7 @@
 
   <gl pnm="e">
     <mv di="lcbu" p="0">
-      <mv col="b" p="32"/>
+      <mv p="32"/>
     </mv>
     <mv di="xho" p="8">
       <mv di="lcrs" p="24"/>
@@ -1416,10 +1426,10 @@
 
   <gl pnm="uniA76B"> <!-- et abbrev -->
     <mv round="no" p="0">
-      <mv col="b" p="1"/>
+      <mv p="1"/>
     </mv>
     <mv di="xho" p="23">
-      <mv col="b" p="16"/>
+      <mv p="16"/>
     </mv>
     <ip r="23 0" p="9 10 30"/>
   </gl>
@@ -1429,7 +1439,7 @@
       <mv di="lcrs" p="16"/>
     </mv>
     <mv di="xho" p="31">
-      <mv col="b" p="24"/>
+      <mv p="24"/>
     </mv>
     <ip r="0 31" p="8"/>
     <mv r="8" p="9"/>
@@ -1440,7 +1450,7 @@
       <mv di="lcrs" p="39"/>
     </mv>
     <mv di="xho" p="55">
-      <mv col="b" p="48"/>
+      <mv p="48"/>
     </mv>
     <mv p="23">
       <mv p="16"/>
@@ -1482,12 +1492,12 @@
 
   <gl pnm="uni021D">
     <mv di="xho" p="43">
-      <mv col="b" p="36">
+      <mv p="36">
         <sh p="66"/>
       </mv>
     </mv>
     <mv di="lc-descender" p="0">
-      <mv col="b" p="12"/>
+      <mv p="12"/>
     </mv>
     <ip r="43 0" p="23"/>
     <mv p="23">
@@ -1501,7 +1511,7 @@
       <mv p="21"/>
     </mv>
     <mv di="xho" p="39">
-      <mv col="b" p="30"/>
+      <mv p="30"/>
     </mv>
     <callf nm="lc-ascender">
       <pms>top: 4</pms>
@@ -1519,7 +1529,7 @@
 
   <gl pnm="uni0237">
     <mv di="xho" p="31">
-      <mv col="b" p="22"/>
+      <mv p="22"/>
     </mv>
     <mv di="lc-descender" p="0">
       <mv p="12"/>
@@ -1529,7 +1539,7 @@
   <gl pnm="k">
     <mv di="baseline" p="7"/>
     <mv di="lcbu" p="8">
-      <mv col="b" p="24"/>
+      <mv p="24"/>
     </mv>
     <mv di="xho" p="51">
       <mv p="41"/>
@@ -1544,7 +1554,7 @@
     <pm nm="include-iup" val="0"/>
     <setvs axis="y"/>
     <mv di="lcbu" p="0">
-      <mv col="b" p="18"/>
+      <mv p="18"/>
     </mv>
     <callf nm="lc-ascender">
       <pms>top: 10</pms>
@@ -1559,11 +1569,11 @@
       <sh p="34 22 66"/>
     </mv>
     <mv di="lcbu" p="47">
-      <mv col="b" p="84"/>
+      <mv p="84"/>
     </mv>
     <mv di="xho" p="14">
       <sh p="39 71"/>
-      <mv col="b" p="6">
+      <mv p="6">
         <sh p="28 59"/>
       </mv>
     </mv>
@@ -1574,11 +1584,11 @@
       <sh p="19"/>
     </mv>
     <mv di="lcbu" p="0">
-      <mv col="b" p="38"/>
+      <mv p="38"/>
     </mv>
     <mv di="xho" p="60">
       <sh p="24"/>
-      <mv col="b" p="52">
+      <mv p="52">
         <sh p="12"/>
       </mv>
     </mv>
@@ -1589,11 +1599,11 @@
       <sh p="30"/>
     </mv>
     <mv di="lc-descender" p="0">
-      <mv col="b" p="12"/>
+      <mv p="12"/>
     </mv>
     <mv di="xho" p="64">
       <sh p="35"/>
-      <mv col="b" p="56">
+      <mv p="56">
         <sh p="23"/>
       </mv>
     </mv>
@@ -1628,7 +1638,7 @@
       <mv di="lcrs" p="35"/>
     </mv>
     <mv p="0">
-      <mv col="b" p="28"/>
+      <mv p="28"/>
     </mv>
     <mv di="xho" p="14">
       <mv di="lcrs" p="44"/>
@@ -1646,7 +1656,7 @@
         <sh p="56"/>
       </mv>
     </mv>
-    <mv col="b" r="33" p="64"/>
+    <mv r="33" p="64"/>
     <ip r="0 8" p="48 49"/>
   </gl>
 
@@ -1685,7 +1695,7 @@
 
   <gl pnm="q">
     <mv di="lcbu" p="0">
-      <mv col="b" p="25"/>
+      <mv p="25"/>
     </mv>
     <mv di="xho" p="10">
       <sh p="22"/>
@@ -1702,16 +1712,16 @@
     </mv>
     <mv di="xho" p="14">
       <sh p="28"/>
-      <mv col="b" p="6"/>
+      <mv p="6"/>
     </mv>
   </gl>
 
   <gl pnm="uniA75B"> <!-- r rotunda -->
     <mv di="baseline" p="28">
-      <mv col="b" p="27"/>
+      <mv p="27"/>
     </mv>
     <mv di="xho" p="16">
-      <mv col="b" p="9"/>
+      <mv p="9"/>
     </mv>
   </gl>
 
@@ -1730,8 +1740,8 @@
       <mv di="lcrs" p="60"/>
     </mv>
     <mv di="lc-descender" p="0">
-      <mv col="b" p="13"/>
-      <mv col="b" p="6"/>
+      <mv p="13"/>
+      <mv p="6"/>
     </mv>
     <mv di="lc-ascender-top" p="24">
       <mv di="lcrs" p="79"/>
@@ -1740,8 +1750,8 @@
 
   <gl pnm="longs">
     <mv di="lc-descender" p="0">
-      <mv col="b" p="13"/>
-      <mv col="b" p="6"/>
+      <mv p="13"/>
+      <mv p="6"/>
     </mv>
     <mv di="lc-ascender-top" p="24">
       <mv di="lcrs" p="36"/>
@@ -1750,7 +1760,7 @@
 
   <gl pnm="t">
     <mv di="lcbu" p="0">
-      <mv col="b" p="15"/>
+      <mv p="15"/>
     </mv>
     <mv p="8"/>
     <ip r="0 8" p="27 24"/>
@@ -1762,7 +1772,7 @@
     </callg>
     <ip r="36 4" p="48"/>
     <mv p="48">
-      <mv col="b" p="47"/>
+      <mv p="47"/>
     </mv>
     <iup axis="y"/>
   </gl>
@@ -1770,7 +1780,7 @@
   <gl pnm="u">
     <mv di="lcbu" p="0">
       <sh p="44"/>
-      <mv col="b" p="33">
+      <mv p="33">
         <sh p="58"/>
       </mv>
     </mv>
@@ -1778,7 +1788,7 @@
       <sh p="52"/>
     </mv>
     <mv di="xho" p="21">
-      <mv col="b" p="13"/>
+      <mv p="13"/>
     </mv>
   </gl>
 
@@ -1787,11 +1797,11 @@
       <sh p="20"/>
     </mv>
     <mv di="lcbu" p="0">
-      <mv col="b" p="40"/>
+      <mv p="40"/>
     </mv>
     <mv di="xho" p="25">
       <sh p="52"/>
-      <mv col="b" p="13"/>
+      <mv p="13"/>
     </mv>
     <callf nm="lc-ascender">
       <pms>top: 65</pms>
@@ -1804,7 +1814,7 @@
     </callg>
     <ip r="10 0" p="29"/>
     <mv p="29">
-      <mv col="b" p="28"/>
+      <mv p="28"/>
     </mv>
     <iup axis="y"/>
   </gl>
@@ -1828,7 +1838,7 @@
 
   <gl pnm="uni1D79"> <!-- insular g -->
     <mv di="xheight" p="62">
-      <mv col="b" p="54">
+      <mv p="54">
         <ip p="19"/>
       </mv>
     </mv>
@@ -1837,20 +1847,20 @@
     </mv>
     <ip r="62 0" p="45"/>
     <mv p="45">
-      <mv col="b" p="9"/>
+      <mv p="9"/>
     </mv>
   </gl>
 
   <gl pnm="uni2C71"> <!-- v with hook -->
     <mv di="lcbu" p="0">
-      <mv col="b" p="33"/>
+      <mv p="33"/>
     </mv>
     <mv di="xheight" p="24">
-      <mv col="b" p="8"/>
+      <mv p="8"/>
     </mv>
     <mv p="41">
-      <mv col="b" p="57"/>
-      <mv col="b" p="47"/>
+      <mv p="57"/>
+      <mv p="47"/>
     </mv>
   </gl>
 
@@ -1863,21 +1873,21 @@
     </mv>
     <ip r="8 0" p="35"/>
     <mv p="35">
-      <mv col="b" p="34"/>
+      <mv p="34"/>
     </mv>
   </gl>
 
   <gl pnm="uniA753"> <!-- pro -->
     <mv p="55"/>
     <mv di="xho" p="26">
-      <mv col="b" p="16"/>
+      <mv p="16"/>
     </mv>
     <mv di="lcbu" p="35">
-      <mv col="b" p="8"/>
+      <mv p="8"/>
     </mv>
     <ip r="35 49" p="0"/>
     <mv p="0">
-      <mv col="b" p="42"/>
+      <mv p="42"/>
     </mv>
     <callm nm="lc-serif-sh">
       <pms>pt: 49, sh: 53</pms>
@@ -1886,7 +1896,7 @@
 
   <gl pnm="uniA75D"> <!-- rum -->
     <mv di="baseline" p="28">
-      <mv col="b" p="27"/>
+      <mv p="27"/>
     </mv>
     <mv di="xho" p="17">
       <mv p="9"/>
@@ -1897,19 +1907,19 @@
 
   <gl pnm="uniA76F"> <!-- con -->
     <mv di="xho" p="35">
-      <mv col="b" p="9"/>
+      <mv p="9"/>
     </mv>
     <mv p="0"/>
     <ip r="35 0" p="26"/>
     <mv p="26">
-      <mv col="b" p="17"/>
+      <mv p="17"/>
     </mv>
   </gl>
 
   <gl pnm="uniA77A"> <!-- insular d -->
     <mv di="xheight" p="39">
       <sh p="33"/>
-      <mv col="b" p="26">
+      <mv p="26">
         <ip p="9"/>
       </mv>
     </mv>
@@ -1921,11 +1931,11 @@
   <gl pnm="uniA77C"> <!-- insular f -->
     <mv di="xho" p="17">
       <sh p="31"/>
-      <mv col="b" p="8"/>
+      <mv p="8"/>
     </mv>
     <mv r="31" p="44"/>
     <mv di="baseline" p="51">
-      <mv col="b" p="50"/>
+      <mv p="50"/>
     </mv>
     <mv di="lc-descender" p="0"/>
   </gl>
@@ -1933,12 +1943,12 @@
   <gl pnm="uniA783"> <!-- insular r -->
     <mv di="xho" p="17">
       <sh p="51"/>
-      <mv col="b" p="8">
+      <mv p="8">
         <sh p="39"/>
       </mv>
     </mv>
     <mv di="lcbu" p="26">
-      <mv col="b" p="64"/>
+      <mv p="64"/>
     </mv>
     <mv di="lc-descender" p="0"/>
   </gl>
@@ -1946,7 +1956,7 @@
   <gl pnm="uniA785"> <!-- insular s -->
     <mv di="xho" p="43">
       <sh p="6"/>
-      <mv col="b" p="34"/>
+      <mv p="34"/>
     </mv>
     <mv r="6" p="19"/>
     <mv di="baseline" p="0"/>
@@ -1956,32 +1966,32 @@
   <gl pnm="uniA787"> <!-- insular t -->
     <mv di="xh" p="32">
       <sh p="27"/>
-      <mv col="b" p="24">
+      <mv p="24">
         <ip p="9"/>
       </mv>
     </mv>
     <mv di="lcbu" p="0">
-      <mv col="b" p="17"/>
+      <mv p="17"/>
     </mv>
   </gl>
 
   <gl pnm="a.ipa">
     <mv di="xho" p="29">
-      <mv col="b" p="13"/>
+      <mv p="13"/>
     </mv>
     <mv di="lcbu" p="49">
       <sh p="0"/>
-      <mv col="b" p="64"/>
+      <mv p="64"/>
     </mv>
     <ip r="49 29" p="56 57"/>
   </gl>
 
   <gl pnm="v">
     <mv di="lcbu" p="0">
-      <mv col="b" p="33"/>
+      <mv p="33"/>
     </mv>
     <mv di="xh" p="25">
-      <mv col="b" p="6"/>
+      <mv p="6"/>
     </mv>
     <mv di="xho" p="46"/>
   </gl>
@@ -1989,60 +1999,60 @@
   <gl pnm="w">
     <mv di="lcbu" p="0">
       <sh p="73"/>
-      <mv col="b" p="34">
+      <mv p="34">
         <sh p="51"/>
       </mv>
     </mv>
     <mv di="xh" p="26">
-      <mv col="b" p="7"/>
+      <mv p="7"/>
     </mv>
     <mv di="xho" p="82">
       <sh p="63"/>
-      <mv col="b" p="43"/>
+      <mv p="43"/>
     </mv>
   </gl>
 
   <gl pnm="uniA761"> <!-- wy -->
     <mv di="lcbu" p="40">
       <sh p="22"/>
-      <mv col="b" p="74">
+      <mv p="74">
         <sh p="91"/>
       </mv>
     </mv>
     <mv di="xh" p="66">
-      <mv col="b" p="47"/>
+      <mv p="47"/>
     </mv>
     <mv di="xho" p="31">
       <sh p="103"/>
-      <mv col="b" p="83"/>
+      <mv p="83"/>
     </mv>
     <mv di="lc-descender" p="0">
-      <mv col="b" p="13"/>
+      <mv p="13"/>
     </mv>
   </gl>
 
   <gl pnm="uni01BF"> <!-- wynn -->
     <mv di="xho" p="45">
       <sh p="17"/>
-      <mv col="b" p="36"/>
+      <mv p="36"/>
     </mv>
-    <mv col="b" r="17" p="8"/>
+    <mv r="17" p="8"/>
     <mv di="lc-descender" p="0"/>
     <mv di="lcbu" p="26">
-      <mv col="b" p="27"/>
+      <mv p="27"/>
     </mv>
   </gl>
 
   <gl pnm="x">
     <mv di="lcbu" p="0">
       <sh p="33"/>
-      <mv col="b" p="10">
+      <mv p="10">
         <al p="55"/>
       </mv>
     </mv>
     <mv di="xho" p="48">
       <sh p="16"/>
-      <mv col="b" p="39">
+      <mv p="39">
         <al p="27"/>
       </mv>
     </mv>
@@ -2050,22 +2060,22 @@
 
   <gl pnm="y">
     <mv di="lc-descender" p="0">
-      <mv col="b" p="13"/>
+      <mv p="13"/>
     </mv>
     <mv di="xho" p="31">
       <sh p="51"/>
-      <mv col="b" p="23"/>
+      <mv p="23"/>
     </mv>
   </gl>
 
   <gl pnm="z">
     <mv di="lcbu" p="24">
       <sh p="34"/>
-      <mv col="b" p="7"/>
+      <mv p="7"/>
     </mv>
     <mv di="xho" p="57">
       <sh p="66"/>
-      <mv col="b" p="41"/>
+      <mv p="41"/>
     </mv>
   </gl>
 
@@ -2131,11 +2141,11 @@
     <pm nm="include-iup" val="0"/>
     <setvs axis="y"/>
     <mv di="xho" p="30">
-      <mv col="b" p="21"/>
+      <mv p="21"/>
     </mv>
     <mv di="lc-descender" p="0"/>
     <mv di="lcbu" p="11">
-      <mv col="b" p="12"/>
+      <mv p="12"/>
     </mv>
     <callf nm="lc-ascender">
       <pms>top: 6</pms>
@@ -2148,23 +2158,23 @@
   <gl pnm="ae.square">
     <mv di="lcbu" p="0">
       <sh p="29"/>
-      <mv col="b" p="36"/>
+      <mv p="36"/>
     </mv>
     <mv r="29" p="22"/>
     <mv di="xho" p="75">
       <sh p="83"/>
-      <mv col="b" p="54"/>
+      <mv p="54"/>
     </mv>
-    <mv col="b" r="83" p="14"/>
+    <mv r="83" p="14"/>
   </gl>
 
   <gl pnm="k.swash">
     <mv di="baseline" p="33"/>
     <mv p="34">
-      <mv col="b" p="55"/>
+      <mv p="55"/>
     </mv>
     <mv di="xho" p="18">
-      <mv col="b" p="9"/>
+      <mv p="9"/>
     </mv>
     <ip r="33 18" p="14 44 1"/>
     <callf nm="lc-ascender">
@@ -2175,18 +2185,18 @@
   <gl pnm="z.swash">
     <mv p="64">
       <mv min-distance="no" col="g" p="48">
-        <mv col="b" p="34">
+        <mv p="34">
           <sh p="54 27 28"/>
         </mv>
       </mv>
     </mv>
     <mv p="20">
       <mv col="g" p="9">
-        <mv col="b" p="72"/>
+        <mv p="72"/>
       </mv>
     </mv>
     <mv p="0">
-      <mv col="b" p="81"/>
+      <mv p="81"/>
     </mv>
   </gl>
 
@@ -2209,7 +2219,7 @@
       <mv di="lc-bar" p="67"/>
     </mv>
     <sh r="0" p="46"/>
-    <mv col="b" r="46" p="58"/>
+    <mv r="46" p="58"/>
   </gl>
 
   <gl pnm="f_odieresis">
@@ -2228,7 +2238,7 @@
     </mv>
     <mv col="w" r="54" p="84">
       <sh p="96"/>
-      <mv col="b" p="90">
+      <mv p="90">
         <sh p="102"/>
       </mv>
     </mv>
@@ -2259,7 +2269,7 @@
     </callm>
     <mv di="lcbu" p="0">
       <sh p="68"/>
-      <mv col="b" p="28">
+      <mv p="28">
         <sh p="82"/>
       </mv>
     </mv>
@@ -2274,7 +2284,7 @@
     </mv>
     <mv col="w" r="34" p="44">
       <sh p="56"/>
-      <mv col="b" p="50">
+      <mv p="50">
         <sh p="62"/>
       </mv>
     </mv>
@@ -2302,7 +2312,7 @@
       <mv p="19"/>
     </mv>
     <mv di="xho" p="37">
-      <mv col="b" p="28"/>
+      <mv p="28"/>
     </mv>
     <sh r="71" p="3"/>
   </gl>
@@ -2313,7 +2323,7 @@
     </callm>
     <mv di="baseline" p="55"/>
     <mv di="lcbu" p="0">
-      <mv col="b" p="16"/>
+      <mv p="16"/>
     </mv>
     <mv di="xho" p="43">
       <mv p="33"/>
@@ -2327,7 +2337,7 @@
       <pms>top: 48, top-a: 57, bot: 24, bot-a: 37, bot-b: 30</pms>
     </callm>
     <mv di="lcbu" p="0">
-      <mv col="b" p="16"/>
+      <mv p="16"/>
     </mv>
     <sh r="48" p="9"/>
   </gl>
@@ -2349,7 +2359,7 @@
       <pms>top: 60, top-a: 67, bot: 42, bot-a: 49, cvb: lc-descender-alt</pms>
     </callm>
     <mv di="lcbu" p="78">
-      <mv col="b" p="95"/>
+      <mv p="95"/>
     </mv>
     <sh r="60" p="88"/>
   </gl>
@@ -2397,7 +2407,7 @@
       <pms>top: 52, top-a: 61, bot: 28, bot-a: 41, bot-b: 34</pms>
     </callm>
     <mv di="lcbu" p="4">
-      <mv col="b" p="20"/>
+      <mv p="20"/>
     </mv>
     <sh r="52" p="13"/>
     <ip r="28 52" p="1"/>
@@ -2429,7 +2439,7 @@
       <pms>top: 64, top-a: 72, bot: 43, bot-a: 52, cvb: lc-descender-alt</pms>
     </callm>
     <mv di="lcbu" p="83">
-      <mv col="b" p="100"/>
+      <mv p="100"/>
     </mv>
     <sh r="64" p="93"/>
     <ip r="0 64" p="109"/>
@@ -2443,7 +2453,7 @@
       <pms>top: 24, top-a: 59, bot: 0, bot-a: 13, bot-b: 6</pms>
     </callm>
     <mv di="lcbu" p="45">
-      <mv col="b" p="36"/>
+      <mv p="36"/>
     </mv>
     <ip r="24 45" p="72 71"/>
   </gl>
@@ -2471,11 +2481,11 @@
       <mv di="lc-bar" p="0"/>
     </mv>
     <mv di="xho" p="32">
-      <mv col="b" p="23"/>
+      <mv p="23"/>
     </mv>
     <mv di="lc-descender" p="4"/>
     <mv di="lcbu" p="13">
-      <mv col="b" p="14"/>
+      <mv p="14"/>
     </mv>
   </gl>
 
@@ -2513,7 +2523,7 @@
   <gl pnm="u_s">
     <mv di="lcbu" p="0">
       <sh p="45 72"/>
-      <mv col="b" p="33">
+      <mv p="33">
         <sh p="59"/>
       </mv>
       <mv di="lcrs" p="87"/>
@@ -2523,7 +2533,7 @@
     </mv>
     <mv di="xho" p="21">
       <sh p="101"/>
-      <mv col="b" p="13"/>
+      <mv p="13"/>
       <mv di="lcrs" p="113"/>
     </mv>
     <ip r="101 72" p="94 119 65 66"/>
@@ -2535,12 +2545,12 @@
     </mv>
     <mv di="lcbu" p="0">
       <sh p="49"/>
-      <mv col="b" p="90"/>
-      <mv col="b" p="40"/>
+      <mv p="90"/>
+      <mv p="40"/>
     </mv>
     <mv p="16">
       <sh p="22"/>
-      <mv col="b" p="63"/>
+      <mv p="63"/>
     </mv>
     <ip r="22 49" p="99 98"/>
   </gl>
@@ -2549,7 +2559,7 @@
     <mv di="lcbu" p="70">
       <sh p="0"/>
       <mv di="lcrs" p="85"/>
-      <mv col="b" p="61"/>
+      <mv p="61"/>
     </mv>
     <mv di="xho" p="99">
       <mv di="lcrs" p="111"/>
@@ -2567,11 +2577,11 @@
 
   <gl pnm="uni0250"> <!-- turned a -->
     <mv di="lcbu" p="0">
-      <mv col="b" p="33"/>
+      <mv p="33"/>
     </mv>
     <mv di="xho" p="20">
       <sh p="67"/>
-      <mv col="b" p="12">
+      <mv p="12">
         <sh p="59"/>
       </mv>
     </mv>
@@ -2603,7 +2613,7 @@
     </callm>
     <ip r="42 53" p="5 4 17 16"/>
     <mv p="35">
-      <mv col="b" p="29"/>
+      <mv p="29"/>
     </mv>
   </gl>
 
@@ -2826,7 +2836,7 @@
     </callm>
     <ip r="17 24" p="5 4"/>
     <mv p="34">
-      <mv col="b" p="28"/>
+      <mv p="28"/>
     </mv>
   </gl>
 
@@ -3045,7 +3055,7 @@
       <pms>pt-a: 21, pt-b: 20, sh-a: 17, cv: cap-height</pms>
     </callm>
     <mv p="8">
-      <mv col="b" p="0"/>
+      <mv p="0"/>
     </mv>
   </gl>
 
@@ -3503,7 +3513,7 @@
       <mv di="sc-curved-stem" p="bowl-bot-ins"/>
     </mv>
     <mv di="scho" p="top">
-      <mv col="b" p="top-ins"/>
+      <mv p="top-ins"/>
     </mv>
     <ip r="bowl-bot top" p="mid"/>
     <mv round="yes" p="mid">
@@ -3577,7 +3587,7 @@
       </pms>
     </callm>
     <ip r="serif-bottom-left top" p="bar-bottom right-bar-bottom"/>
-    <mv col="b" r="bar-bottom" p="bar-top">
+    <mv r="bar-bottom" p="bar-top">
       <sh p="right-bar-top"/>
     </mv>
   </gl>
@@ -3619,7 +3629,7 @@
     <set nm="ring-bot-sh" p="0 28 32"/>
     <set nm="serif-sh-a" p="right-serif left-bottom-stem right-bottom-stem"/>
     <mv round="yes" p="top">
-      <mv col="b" p="top-ins"/>
+      <mv p="top-ins"/>
       <mv col="w" p="ring-bot-ins">
         <sh>
           <set ref="ring-bot-sh"/>
@@ -3652,7 +3662,7 @@
       <pms>pt-a: 36, pt-b: 37, sh-a: 0, cv-h: sc-serif</pms>
     </callm>
     <mv di="scbu" p="4">
-      <mv col="b" p="22"/>
+      <mv p="22"/>
     </mv>
     <callm nm="serif-sh">
       <pms>
@@ -3706,8 +3716,8 @@
     </mv>
     <ip r="34 22" p="47 48"/>
     <mv p="0">
-      <mv col="b" p="10"/>
-      <mv col="b" p="6"/>
+      <mv p="10"/>
+      <mv p="6"/>
     </mv>
   </gl>
 
@@ -3744,18 +3754,18 @@
   <gl pnm="c.sc">
     <mv di="scbu" p="0">
       <sh p="39"/>
-      <mv col="b" di="scrs" p="13"/>
+      <mv di="scrs" p="13"/>
     </mv>
     <mv di="scho" p="10">
       <sh p="16"/>
-      <mv col="b" di="scrs" p="24"/>
+      <mv di="scrs" p="24"/>
     </mv>
   </gl>
 
   <gl pnm="d.sc">
     <mv di="scho" p="24">
       <sh p="39"/>
-      <mv col="b" di="scrs" p="17"/>
+      <mv di="scrs" p="17"/>
     </mv>
     <callm nm="serif-sh">
       <pms>pt-a: 0, pt-b: 1, sh-a: 38, cv-h: sc-serif</pms>
@@ -3764,7 +3774,7 @@
 
   <gl pnm="uniA77A.sc"> <!-- insular d -->
     <mv di="sch" p="36">
-      <mv col="b" p="27">
+      <mv p="27">
 	<ip p="9"/>
       </mv>
     </mv>
@@ -3806,8 +3816,8 @@
   <gl pnm="uniA77C.sc"> <!-- insular f -->
     <mv di="scho" p="8">
       <mv min-distance="no" p="24">
-	<mv col="b" p="36"/>
-	<mv col="b" p="31"/>
+	<mv p="36"/>
+	<mv p="31"/>
       </mv>
     </mv>
     <mv p="0"/>
@@ -3832,27 +3842,27 @@
 
   <gl pnm="uni1D79.sc"> <!-- insular g -->
     <mv di="sch" p="30">
-      <mv col="b" p="36">
+      <mv p="36">
 	<sh p="20"/>
 	<ip p="19 37"/>
       </mv>
     </mv>
     <mv p="0">
-      <mv col="b" di="scrs" p="53"/>
+      <mv di="scrs" p="53"/>
     </mv>
     <ip r="30 0" p="61"/>
     <mv p="61">
-      <mv col="b" p="9"/>
+      <mv p="9"/>
     </mv>
   </gl>
 
   <gl pnm="uni021D.sc"> <!-- yogh -->
     <mv di="scho" p="27">
       <sh p="23 49"/>
-      <mv col="b" p="20"/>
+      <mv p="20"/>
     </mv>
     <mv p="0">
-      <mv col="b" p="1"/>
+      <mv p="1"/>
     </mv>
     <ip round="yes" r="0 27" p="8"/>
     <sh r="8" p="35 36"/>
@@ -3947,8 +3957,8 @@
       </pms>
     </callm>
     <mv p="0">
-      <mv col="b" p="10"/>
-      <mv col="b" p="6"/>
+      <mv p="10"/>
+      <mv p="6"/>
     </mv>
   </gl>
 
@@ -4009,7 +4019,7 @@
     <ip r="26 36" p="0"/>
     <mv p="0">
       <sh p="4"/>
-      <mv col="b" p="15">
+      <mv p="15">
 	<sh p="10"/>
       </mv>
     </mv>
@@ -4022,7 +4032,7 @@
     </mv>
     <mv r="36" p="27"/>
     <mv di="scbu" p="15">
-      <mv col="b" p="16"/>
+      <mv p="16"/>
     </mv>
     <mv p="0"/>
   </gl>
@@ -4097,8 +4107,8 @@
       </pms>
     </callm>
     <mv p="0">
-      <mv col="b" p="10"/>
-      <mv col="b" p="6"/>
+      <mv p="10"/>
+      <mv p="6"/>
     </mv>
   </gl>
 
@@ -4124,13 +4134,13 @@
   <gl pnm="uniA74F.sc"> <!-- oo -->
     <mv di="scho" p="9">
       <sh p="15"/>
-      <mv col="b" p="43">
+      <mv p="43">
 	<sh p="63"/>
       </mv>
     </mv>
     <mv di="scbu" p="0">
       <sh p="24"/>
-      <mv col="b" p="30">
+      <mv p="30">
 	<sh p="53"/>
       </mv>
     </mv>
@@ -4138,10 +4148,10 @@
 
   <gl pnm="oe.sc">
     <mv di="scho" p="9">
-      <mv col="b" p="36"/>
+      <mv p="36"/>
     </mv>
     <mv di="scbu" p="0">
-      <mv col="b" p="27"/>
+      <mv p="27"/>
     </mv>
     <callm nm="serif-sh">
       <pms>pt-a: 60, pt-b: 59, sh-a: 14, cv: sch, cv-h: sc-serif</pms>
@@ -4166,7 +4176,7 @@
     </callm>
     <ip r="30 21" p="4"/>
     <mv p="4">
-      <mv col="b" p="11"/>
+      <mv p="11"/>
     </mv>
   </gl>
 
@@ -4179,10 +4189,10 @@
     </callm>
     <ip r="25 28" p="17 0"/>
     <mv p="0">
-      <mv col="b" p="0"/>
+      <mv p="7"/>
     </mv>
     <mv p="17">
-      <mv col="b" p="16"/>
+      <mv p="16"/>
     </mv>
   </gl>
 
@@ -4231,14 +4241,14 @@
     </callm>
     <ip r="42 22" p="7"/>
     <mv p="7">
-      <mv col="b" p="12"/>
+      <mv p="12"/>
     </mv>
   </gl>
 
   <gl pnm="uniA783.sc"> <!-- insular r -->
     <mv di="scho" p="16">
       <sh p="36"/>
-      <mv col="b" p="7"/>
+      <mv p="7"/>
     </mv>
     <mv p="28"/>
     <callm nm="serif-sh">
@@ -4249,11 +4259,11 @@
   <gl pnm="s.sc">
     <mv di="scho" p="28">
       <sh p="33"/>
-      <mv col="b" p="42"/>
+      <mv p="42"/>
     </mv>
     <mv di="scbu" p="0">
       <sh p="7"/>
-      <mv col="b" p="16"/>
+      <mv p="16"/>
     </mv>
     <ip r="28 0" p="22 48"/>
   </gl>
@@ -4261,8 +4271,8 @@
   <gl pnm="uniA785.sc"> <!-- insular s -->
     <mv di="scho" p="31">
       <mv min-distance="no" p="5">
-	<mv col="b" p="17"/>
-	<mv col="b" p="12"/>
+	<mv p="17"/>
+	<mv p="12"/>
       </mv>
     </mv>
     <mv p="23"/>
@@ -4280,7 +4290,7 @@
 
   <gl pnm="uniA787.sc"> <!-- insular t -->
     <mv di="sch" p="40">
-      <mv col="b" p="45">
+      <mv p="45">
 	<ip p="8"/>
       </mv>
     </mv>
@@ -4340,7 +4350,7 @@
     <ip r="serif-left bottom" p="og-hook og-top"/>
     <sh r="og-top" p="41"/>
     <mv p="41">
-      <mv col="b" p="54"/>
+      <mv p="54"/>
     </mv>
     <iup axis="y"/>
   </gl>
@@ -4354,7 +4364,7 @@
     </callm>
     <ip r="25 16" p="4"/>
     <mv p="4">
-      <mv col="b" p="5"/>
+      <mv p="5"/>
     </mv>
   </gl>
 
@@ -4446,8 +4456,8 @@
       </sh>
     </mv>
     <mv p="0">
-      <mv col="b" p="10"/>
-      <mv col="b" p="6"/>
+      <mv p="10"/>
+      <mv p="6"/>
     </mv>
   </gl>
 
@@ -4486,10 +4496,10 @@
 
   <gl pnm="two">
     <mv di="baseline" p="37">
-      <mv col="b" p="31"/>
+      <mv p="31"/>
     </mv>
     <mv di="numto" p="20">
-      <mv col="b" p="12"/>
+      <mv p="12"/>
     </mv>
   </gl>
 
@@ -4499,14 +4509,14 @@
 
   <gl pnm="three">
     <mv di="numbu" p="0">
-      <mv col="b" p="12"/>
+      <mv p="12"/>
     </mv>
     <mv di="numto" p="39">
-      <mv col="b" p="32"/>
+      <mv p="32"/>
     </mv>
     <ip r="0 39" p="20 47 48"/>
     <mv p="20">
-      <mv col="b" p="24"/>
+      <mv p="24"/>
     </mv>
   </gl>
 
@@ -4522,7 +4532,7 @@
     <ip r="7 20" p="13 1"/>
     <mv p="1">
       <sh p="18"/>
-      <mv col="b" p="12">
+      <mv p="12">
         <sh p="15"/>
       </mv>
     </mv>
@@ -4534,14 +4544,14 @@
 
   <gl pnm="five">
     <mv di="numbu" p="0">
-      <mv col="b" p="12"/>
+      <mv p="12"/>
     </mv>
     <mv di="numt" p="26">
-      <mv col="b" p="27"/>
+      <mv p="27"/>
     </mv>
     <ip r="0 26" p="20"/>
     <mv p="20">
-      <mv col="b" p="34"/>
+      <mv p="34"/>
     </mv>
   </gl>
 
@@ -4551,13 +4561,13 @@
 
   <gl pnm="six">
     <mv di="numbu" p="0">
-      <mv col="b" p="19"/>
+      <mv p="19"/>
       <mv p="10">
         <ip p="35"/>
       </mv>
     </mv>
     <mv p="35">
-      <mv col="b" p="27"/>
+      <mv p="27"/>
     </mv>
   </gl>
 
@@ -4568,7 +4578,7 @@
   <gl pnm="seven">
     <mv di="baseline" p="14"/>
     <mv di="numt" p="11">
-      <mv col="b" p="3"/>
+      <mv p="3"/>
     </mv>
   </gl>
 
@@ -4578,10 +4588,10 @@
 
   <gl pnm="eight">
     <mv di="numbu" p="0">
-      <mv col="b" p="31"/>
+      <mv p="31"/>
     </mv>
     <mv di="numto" p="16">
-      <mv col="b" p="52"/>
+      <mv p="52"/>
     </mv>
     <ip r="16 0" p="45 23 8 38"/>
   </gl>
@@ -4593,10 +4603,10 @@
   <gl pnm="nine">
     <mv p="0"/>
     <mv di="numto" p="35">
-      <mv col="b" p="9"/>
+      <mv p="9"/>
     </mv>
     <ip round="yes" r="0 35" p="26"/>
-    <mv r="26" col="b" p="18"/>
+    <mv r="26" p="18"/>
   </gl>
 
   <gl pnm="nine.lf">
@@ -4625,10 +4635,10 @@
 
   <gl pnm="zero.osf">
     <mv di="lcbu" p="0">
-      <mv col="b" p="20"/>
+      <mv p="20"/>
     </mv>
     <mv di="xho" p="10">
-      <mv col="b" p="28"/>
+      <mv p="28"/>
     </mv>
   </gl>
 
@@ -4638,10 +4648,10 @@
 
   <gl pnm="zero.zero.osf">
     <mv di="lcbu" p="4">
-      <mv col="b" p="24"/>
+      <mv p="24"/>
     </mv>
     <mv di="xho" p="14">
-      <mv col="b" p="32"/>
+      <mv p="32"/>
     </mv>
     <ip r="14 4" p="2 0"/>
   </gl>
@@ -4665,10 +4675,10 @@
 
   <gl pnm="two.osf">
     <mv di="baseline" p="32">
-      <mv col="b" p="28"/>
+      <mv p="28"/>
     </mv>
     <mv di="xho" p="19">
-      <mv col="b" p="19"/>
+      <mv p="19"/>
     </mv>
   </gl>
 
@@ -4678,20 +4688,20 @@
 
   <gl pnm="three.osf">
     <mv di="xho" p="28">
-      <mv col="b" p="21"/>
+      <mv p="21"/>
     </mv>
     <mv p="0">
-      <mv col="b" p="1"/>
+      <mv p="1"/>
     </mv>
     <ip r="28 0" p="12 13 37 38"/>
   </gl>
 
   <gl pnm="three.tosf">
     <mv di="xho" p="29">
-      <mv col="b" p="22"/>
+      <mv p="22"/>
     </mv>
     <mv p="0">
-      <mv col="b" p="1"/>
+      <mv p="1"/>
     </mv>
     <ip r="29 0" p="13 14 38 39"/>
   </gl>
@@ -4700,7 +4710,7 @@
     <mv di="baseline" p="1">
       <sh p="9 16"/>
       <sh round="yes" p="0"/>
-      <mv col="b" p="13">
+      <mv p="13">
         <sh p="6 18"/>
       </mv>
     </mv>
@@ -4715,14 +4725,14 @@
 
   <gl pnm="six.osf">
     <mv di="lcbu" p="0">
-      <mv col="b" p="21"/>
+      <mv p="21"/>
     </mv>
     <mv p="10">
       <sh p="11"/>
     </mv>
     <ip r="10 0" p="38"/>
     <mv p="38">
-      <mv col="b" p="30"/>
+      <mv p="30"/>
     </mv>
   </gl>
 
@@ -4734,7 +4744,7 @@
     <mv p="0"/>
     <mv di="numt" p="5">
       <sh p="10"/>
-      <mv col="b" p="4">
+      <mv p="4">
         <sh p="8"/>
         <ip p="2"/>
       </mv>
@@ -4747,34 +4757,34 @@
 
   <gl pnm="eight.osf">
     <mv di="numbu" p="0">
-      <mv col="b" p="30"/>
+      <mv p="30"/>
     </mv>
     <mv di="numto" p="15">
-      <mv col="b" p="51"/>
+      <mv p="51"/>
     </mv>
     <ip r="15 0" p="44 22 7 37"/>
   </gl>
 
   <gl pnm="eight.tosf">
     <mv di="numbu" p="0">
-      <mv col="b" p="31"/>
+      <mv p="31"/>
     </mv>
     <mv di="numto" p="16">
-      <mv col="b" p="52"/>
+      <mv p="52"/>
     </mv>
     <ip r="16 0" p="45 23 8 38"/>
   </gl>
 
   <gl pnm="nine.osf">
     <mv di="xho" p="37">
-      <mv col="b" p="11"/>
+      <mv p="11"/>
     </mv>
     <mv p="0">
       <sh p="1"/>
     </mv>
     <ip r="37 0" p="28"/>
     <mv p="28">
-      <mv col="b" p="20"/>
+      <mv p="20"/>
     </mv>
   </gl>
 
@@ -4786,10 +4796,10 @@
     <pm nm="include-iup" val="0"/>
     <setvs axis="y"/>
     <mv di="supsbu" p="0">
-      <mv col="b" p="18"/>
+      <mv p="18"/>
     </mv>
     <mv di="supsto" p="9">
-      <mv col="b" p="27"/>
+      <mv p="27"/>
     </mv>
     <compile-if test="include-iup = 0">
       <iup axis="y"/>
@@ -4808,10 +4818,10 @@
     <pm nm="include-iup" val="0"/>
     <setvs axis="y"/>
     <mv di="supsbu" p="0">
-      <mv col="b" p="17"/>
+      <mv p="17"/>
     </mv>
     <mv di="supsoto" p="9">
-      <mv col="b" p="25"/>
+      <mv p="25"/>
     </mv>
     <compile-if test="include-iup = 0">
       <iup axis="y"/>
@@ -4832,58 +4842,58 @@
     </mv>
     <mv di="supsb" p="11">
       <sh p="0"/>
-      <mv col="b" p="12"/>
+      <mv p="12"/>
     </mv>
   </gl>
 
   <gl pnm="uni00B9.osf">
     <mv di="supsb" p="4">
       <sh p="0"/>
-      <mv col="b" p="5"/>
+      <mv p="5"/>
     </mv>
     <mv di="supsot" p="9">
       <sh p="1"/>
-      <mv col="b" p="8"/>
+      <mv p="8"/>
     </mv>
   </gl>
 
   <gl pnm="uni00B2"> <!-- superscript two -->
     <mv di="supsb" p="35">
-      <mv col="b" p="29"/>
+      <mv p="29"/>
     </mv>
     <mv di="supsto" p="20">
-      <mv col="b" p="13"/>
+      <mv p="13"/>
     </mv>
   </gl>
 
   <gl pnm="uni00B2.osf">
     <mv di="supsb" p="31">
-      <mv col="b" p="26"/>
+      <mv p="26"/>
     </mv>
     <mv di="supsoto" p="17">
-      <mv col="b" p="9"/>
+      <mv p="9"/>
     </mv>
   </gl>
 
   <gl pnm="uni00B3"> <!-- superscript three -->
     <mv di="supsbu" p="0">
-      <mv col="b" p="12"/>
+      <mv p="12"/>
     </mv>
     <mv di="supsto" p="37">
-      <mv col="b" p="30"/>
+      <mv p="30"/>
     </mv>
     <ip r="37 0" p="19"/>
     <mv p="19">
-      <mv col="b" p="23"/>
+      <mv p="23"/>
     </mv>
   </gl>
 
   <gl pnm="uni00B3.osf">
     <mv di="supsoto" p="26">
-      <mv col="b" p="19"/>
+      <mv p="19"/>
     </mv>
     <mv p="43">
-      <mv col="b" p="3"/>
+      <mv p="3"/>
     </mv>
     <ip r="26 43" p="10 11 35 36"/>
   </gl>
@@ -4891,14 +4901,14 @@
   <gl pnm="uni2074"> <!-- superscript four -->
     <mv di="supsb" p="21">
       <sh p="0"/>
-      <mv col="b" p="22"/>
+      <mv p="22"/>
     </mv>
     <mv p="9"/>
     <ip round="yes" r="9 21" p="14"/>
     <ip r="9 21" p="1"/>
     <mv p="1">
       <sh p="19"/>
-      <mv col="b" p="13">
+      <mv p="13">
 	<sh p="16"/>
       </mv>
     </mv>
@@ -4908,7 +4918,7 @@
     <mv di="supsb" p="1">
       <sh p="9 16"/>
       <sh round="y" p="0"/>
-      <mv col="b" p="13">
+      <mv p="13">
 	<sh p="6 18"/>
       </mv>
     </mv>
@@ -4919,14 +4929,14 @@
 
   <gl pnm="uni2075"> <!-- superscript five -->
     <mv di="supsbu" p="0">
-      <mv col="b" p="11"/>
+      <mv p="11"/>
     </mv>
     <mv di="supst" p="24">
-      <mv col="b" p="25"/>
+      <mv p="25"/>
     </mv>
     <ip r="24 0" p="32"/>
     <mv p="32">
-      <mv col="b" p="18"/>
+      <mv p="18"/>
     </mv>
   </gl>
 
@@ -4935,31 +4945,31 @@
       <sh p="9"/>
     </mv>
     <mv di="supsbu" p="0">
-      <mv col="b" p="16"/>
+      <mv p="16"/>
     </mv>
     <ip r="8 0" p="30"/>
     <mv p="30">
-      <mv col="b" p="23"/>
+      <mv p="23"/>
     </mv>
   </gl>
 
   <gl pnm="uni2076.osf">
     <mv di="supsbu" p="0">
-      <mv col="b" p="18"/>
+      <mv p="18"/>
     </mv>
     <mv p="9">
       <sh p="10"/>
     </mv>
     <ip r="9 0" p="33"/>
     <mv p="33">
-      <mv col="b" p="26"/>
+      <mv p="26"/>
     </mv>
   </gl>
 
   <gl pnm="uni2077"> <!-- superscript seven -->
     <mv di="supsb" p="0"/>
     <mv di="supst" p="11">
-      <mv col="b" p="3">
+      <mv p="3">
 	<ip p="1"/>
       </mv>
     </mv>
@@ -4969,7 +4979,7 @@
     <mv p="0"/>
     <mv di="supsot" p="4">
       <sh p="10"/>
-      <mv col="b" p="3">
+      <mv p="3">
 	<sh p="8"/>
 	<ip p="1"/>
       </mv>
@@ -4978,47 +4988,47 @@
 
   <gl pnm="uni2078"> <!-- superscript eight -->
     <mv di="supsbu" p="0">
-      <mv col="b" p="28"/>
+      <mv p="28"/>
     </mv>
     <mv di="supsto" p="14">
-      <mv col="b" p="46"/>
+      <mv p="46"/>
     </mv>
     <ip r="14 0" p="40 21 7 34"/>
   </gl>
 
   <gl pnm="uni2078.osf">
     <mv di="supsbu" p="0">
-      <mv col="b" p="28"/>
+      <mv p="28"/>
     </mv>
     <mv p="14">
-      <mv col="b" p="47"/>
+      <mv p="47"/>
     </mv>
     <ip r="14 0" p="41 21 7 35"/>
   </gl>
 
   <gl pnm="uni2079"> <!-- superscript nine -->
     <mv di="supsto" p="29">
-      <mv col="b" p="8"/>
+      <mv p="8"/>
     </mv>
     <mv p="0">
       <sh p="1"/>
     </mv>
     <ip r="29 0" p="22"/>
     <mv p="22">
-      <mv col="b" p="15"/>
+      <mv p="15"/>
     </mv>
   </gl>
 
   <gl pnm="uni2079.osf">
     <mv di="supsoto" p="31">
-      <mv col="b" p="9"/>
+      <mv p="9"/>
     </mv>
     <mv p="0">
       <sh p="1"/>
     </mv>
     <ip r="31 0" p="23"/>
     <mv p="23">
-      <mv col="b" p="16"/>
+      <mv p="16"/>
     </mv>
   </gl>
 
@@ -5026,13 +5036,13 @@
     <mv p="43"/>
     <mv p="49">
       <sh p="38"/>
-      <mv col="b" p="50"/>
+      <mv p="50"/>
     </mv>
     <mv di="baseline" p="37">
-      <mv col="b" p="31"/>
+      <mv p="31"/>
     </mv>
     <mv p="22">
-      <mv col="b" p="16"/>
+      <mv p="16"/>
     </mv>
   </gl>
  
@@ -5040,17 +5050,17 @@
     <mv p="34"/>
     <mv p="40">
       <sh p="29"/>
-      <mv col="b" p="41"/>
+      <mv p="41"/>
     </mv>
     <mv di="baseline" p="21">
       <sh p="0"/>
-      <mv col="b" p="22"/>
+      <mv p="22"/>
     </mv>
     <mv p="9"/>
     <ip r="9 21" p="14 1"/>
     <mv p="1">
       <sh p="19"/>
-      <mv col="b" p="13">
+      <mv p="13">
 	<sh p="16"/>
       </mv>
     </mv>
@@ -5058,24 +5068,24 @@
 
   <gl pnm="threequarters">
     <mv p="29">
-      <mv col="b" p="41"/>
+      <mv p="41"/>
     </mv>
     <mv p="66">
-      <mv col="b" p="59"/>
+      <mv p="59"/>
     </mv>
     <ip r="66 29" p="48"/>
     <mv p="48">
-      <mv col="b" p="52"/>
+      <mv p="52"/>
     </mv>
     <mv di="baseline" p="21">
       <sh p="0"/>
-      <mv col="b" p="22"/>
+      <mv p="22"/>
     </mv>
     <mv p="9"/>
     <ip r="9 21" p="14 1"/>
     <mv p="1">
       <sh p="19"/>
-      <mv col="b" p="13">
+      <mv p="13">
 	<sh p="16"/>
       </mv>
     </mv>
@@ -5108,7 +5118,7 @@
   <gl pnm="semicolon">
     <mv p="18">
       <sh p="12"/>
-      <mv col="b" p="24">
+      <mv p="24">
 	<mv col="w" p="0">
 	  <mv di="period-height" p="6"/>
 	</mv>
@@ -5120,7 +5130,7 @@
     <mv di="period-undershoot" p="12">
       <mv di="period-height" p="18">
 	<mv col="w" p="0">
-	  <mv col="b" p="4"/>
+	  <mv p="4"/>
 	</mv>
       </mv>
     </mv>
@@ -5128,7 +5138,7 @@
 
   <gl pnm="exclamdown">
     <mv p="0">
-      <mv col="b" p="6">
+      <mv p="6">
 	<mv col="w" p="11">
 	  <mv di="period-height" p="17"/>
 	</mv>
@@ -5140,7 +5150,7 @@
     <mv di="period-undershoot" p="39">
       <mv di="period-height" p="46">
 	<mv col="w" p="0">
-	  <mv col="b" p="22"/>
+	  <mv p="22"/>
 	</mv>
       </mv>
     </mv>
@@ -5148,7 +5158,7 @@
 
   <gl pnm="questiondown">
     <mv p="0">
-      <mv col="b" p="17">
+      <mv p="17">
 	<mv col="w" p="39">
 	  <mv di="period-height" p="45"/>
 	</mv>
@@ -5158,13 +5168,13 @@
   
   <gl pnm="periodcentered">
     <mv p="0">
-      <mv col="b" p="6"/>
+      <mv p="6"/>
     </mv>
   </gl>
 
   <gl pnm="bullet">
     <mv p="0">
-      <mv col="b" p="8"/>
+      <mv p="8"/>
     </mv>
   </gl>
   
@@ -5198,10 +5208,10 @@
 
   <gl pnm="uni204A"> <!-- Tironian sign -->
     <mv di="xh" p="27">
-      <mv col="b" p="13"/>
+      <mv p="13"/>
     </mv>
     <mv di="lc-descender" p="0">
-      <mv col="b" p="7"/>
+      <mv p="7"/>
     </mv>
   </gl>
 
@@ -5209,12 +5219,12 @@
     <pm nm="include-iup" val="0"/>
     <setvs axis="y"/>
     <mv di="xh" p="11">
-      <mv col="b" p="10">
+      <mv p="10">
 	<ip p="8"/>
       </mv>
     </mv>
     <mv di="lcbu" p="0">
-      <mv col="b" p="22"/>
+      <mv p="22"/>
     </mv>
     <compile-if test="include-iup = 0">
       <iup axis="y"/>
@@ -5227,52 +5237,52 @@
     </callg>
     <ip r="11 0" p="30"/>
     <mv p="30">
-      <mv col="b" p="29"/>
+      <mv p="29"/>
     </mv>
     <iup axis="y"/>
   </gl>
 
   <gl pnm="braceleft">
     <mv p="0">
-      <mv col="b" p="49"/>
+      <mv p="49"/>
     </mv>
     <mv p="24">
-      <mv col="b" p="25"/>
+      <mv p="25"/>
     </mv>
     <ip r="0 24" p="15"/>
     <mv p="15">
-      <mv col="b" p="14"/>
+      <mv p="14"/>
     </mv>
   </gl>
 
   <gl pnm="braceright">
     <mv p="0">
-      <mv col="b" p="1"/>
+      <mv p="1"/>
     </mv>
     <mv p="28">
-      <mv col="b" p="27"/>
+      <mv p="27"/>
     </mv>
     <ip r="0 28" p="42"/>
     <mv p="42">
-      <mv col="b" p="43"/>
+      <mv p="43"/>
     </mv>
   </gl>
 
   <gl pnm="bracketleft">
     <mv p="7">
-      <mv col="b" p="6"/>
+      <mv p="6"/>
     </mv>
     <mv p="2">
-      <mv col="b" p="3"/>
+      <mv p="3"/>
     </mv>
   </gl>
 
   <gl pnm="bracketright">
     <mv p="5">
-      <mv col="b" p="4"/>
+      <mv p="4"/>
     </mv>
     <mv p="0">
-      <mv col="b" p="1"/>
+      <mv p="1"/>
     </mv>
   </gl>
 
@@ -5383,9 +5393,9 @@
 
   <gl pnm="exclam.sc">
     <mv p="12">
-      <mv col="b" p="18">
+      <mv p="18">
 	<mv col="w" p="0">
-	  <mv col="b" p="4"/>
+	  <mv p="4"/>
 	</mv>
       </mv>
     </mv>
@@ -5393,9 +5403,9 @@
 
   <gl pnm="exclamdown.sc">
     <mv p="18">
-      <mv col="b" p="12">
+      <mv p="12">
 	<mv col="w" p="8">
-	  <mv col="b" p="0"/>
+	  <mv p="0"/>
 	</mv>
       </mv>
     </mv>
@@ -5403,9 +5413,9 @@
 
   <gl pnm="question.sc">
     <mv p="35">
-      <mv col="b" p="42">
+      <mv p="42">
 	<mv col="w" p="0">
-	  <mv col="b" p="20"/>
+	  <mv p="20"/>
 	</mv>
       </mv>
     </mv>
@@ -5413,9 +5423,9 @@
 
   <gl pnm="questiondown.sc">
     <mv p="41">
-      <mv col="b" p="35">
+      <mv p="35">
 	<mv col="w" p="15">
-	  <mv col="b" p="0"/>
+	  <mv p="0"/>
 	</mv>
       </mv>
     </mv>
@@ -5462,7 +5472,7 @@
 
   <gl pnm="uni2E4D"> <!-- paragraphus -->
     <mv di="cap-height" p="2">
-      <mv col="b" p="3">
+      <mv p="3">
 	<ip p="9"/>
       </mv>
     </mv>
@@ -5473,8 +5483,8 @@
     <mv p="23">
       <mv di="period-height" p="29">
 	<mv col="w" p="0">
-	  <mv col="b" p="13"/>
-	  <mv col="b" p="8"/>
+	  <mv p="13"/>
+	  <mv p="8"/>
 	</mv>
       </mv>
     </mv>
@@ -5485,7 +5495,7 @@
       <mv di="period-height" p="49">
 	<mv col="w" p="0">
 	  <mv p="30">
-	    <mv col="b" p="8"/>
+	    <mv p="8"/>
 	  </mv>
 	</mv>
       </mv>
@@ -5524,13 +5534,60 @@
 
   <gl pnm="macron">
     <mv p="0">
-      <mv col="b" p="1"/>
+      <mv p="1"/>
     </mv>
   </gl>
 
   <gl pnm="macron.case">
+    <callg pnm="macron"/>
+  </gl>
+
+  <gl pnm="uni0305">
+    <callg pnm="macron"/>
+  </gl>
+
+  <gl pnm="uni0312">
     <mv p="0">
-      <mv col="b" p="1"/>
+      <mv p="15">
+	<sh p="9"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="uni0315">
+    <mv p="11">
+      <mv p="5">
+	<sh p="0"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="uni0318">
+    <mv p="5">
+      <sh p="1"/>
+      <mv p="4">
+	<sh p="0"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="uni0319">
+    <callg pnm="uni0318"/>
+  </gl>
+
+  <gl pnm="uni031A">
+    <mv p="3">
+      <mv p="2">
+	<sh round="yes" p="0"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="uni031C">
+    <mv p="8">
+      <mv col="g" p="0">
+	<ip p="9 15"/>
+      </mv>
     </mv>
   </gl>
 
