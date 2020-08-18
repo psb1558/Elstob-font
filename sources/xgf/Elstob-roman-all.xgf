@@ -11766,4 +11766,13 @@
     <iup axis="y"/>
   </gl>
 
+  <gl pnm="equal">
+    <mv p="1">
+      <mv p="2" di="euro-bar"/>
+    </mv>
+    <mv p="6">
+      <mv p="5" di="euro-bar"/>
+    </mv>
+  </gl>
+
 </xgridfit>

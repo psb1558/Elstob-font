@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <?xml-model
     href="file:///Users/peterbaker/work/xgridfit/Schemas/xgridfit-sh.rnc"
     type="application/relax-ng-compact-syntax"?>
@@ -67,6 +67,12 @@
   <cv nm="sc-serif" val="53" col="b"/>
   <cv nm="sc-bar" val="62" col="b"/>
   <cv nm="sc-curved-stem" val="58" col="b"/>
+  <!-- marks -->
+  <cv nm="mark-baseline" val="1079"/>
+  <cv nm="mark-baseline-undershoot" val="1079"/>
+  <cv nm="mark-xheight" val="1495"/>
+  <cv nm="mark-xheight-overshoot" val="1500"/>
+  <cv nm="tilde-stem" val="101"/>
 
   <alias nm="lcas" target="lc-ascender-serif"/>
   <alias nm="xh" target="xheight"/>
@@ -91,6 +97,10 @@
   <alias nm="sch" target="sc-height"/>
   <alias nm="scho" target="sc-height-overshoot"/>
   <alias nm="scrs" target="sc-curved-stem"/>
+  <alias nm="mkb" target="mark-baseline"/>
+  <alias nm="mkbu" target="mark-baseline-undershoot"/>
+  <alias nm="mkx" target="mark-xheight"/>
+  <alias nm="mkxo" target="mark-xheight-overshoot"/>
 
   <cvar>
     <region tag="wght" bot="-1.0" peak="-1.0" top="0.0">
@@ -103,7 +113,6 @@
       <cvv nm="dot-width" val="151"/>
       <cvv nm="lc-serif" val="40"/>
       <cvv nm="rune-punct" val="225"/>
-      <cvv nm="euro-bar" val="81"/>
       <cvv nm="period-height" val="207"/>
       <cvv nm="period-undershoot" val="-22"/>
       <cvv nm="comma-height" val="293"/>
@@ -113,6 +122,7 @@
       <cvv nm="sc-serif" val="40"/>
       <cvv nm="sc-bar" val="45"/>
       <cvv nm="sc-curved-stem" val="31"/>
+      <cvv nm="tilde-stem" val="81"/>
     </region>
     <region tag="wght" bot="0.0" peak="1.0" top="1.0">
     <!-- <region tag="wght" bot="0.33" peak="0.66" top="0.66"> -->
@@ -125,7 +135,6 @@
       <cvv nm="lc-serif" val="40"/>
       <cvv nm="lc-serif" val="60"/>
       <cvv nm="rune-punct" val="313"/>
-      <cvv nm="euro-bar" val="130"/>
       <cvv nm="period-height" val="350"/>
       <cvv nm="period-undershoot" val="-47"/>
       <cvv nm="numbersign-bar" val="120"/>
@@ -133,6 +142,7 @@
       <cvv nm="sc-serif" val="61"/>
       <cvv nm="sc-bar" val="70"/>
       <cvv nm="sc-curved-stem" val="68"/>
+      <cvv nm="tilde-stem" val="137"/>
     </region>
     <region tag="opsz" bot="-1.0" peak="-1.0" top="0.0">
       <cvv nm="xheight" val="944"/>
@@ -154,6 +164,11 @@
       <cvv nm="sc-serif" val="87"/>
       <cvv nm="sc-bar" val="94"/>
       <cvv nm="sc-curved-stem" val="69"/>
+      <cvv nm="mark-baseline" val="1122"/>
+      <cvv nm="mark-baseline-undershoot" val="1111"/>
+      <cvv nm="mark-xheight" val="1576"/>
+      <cvv nm="mark-xheight-overshoot" val="1580"/>
+      <cvv nm="tilde-stem" val="104"/>
     </region>
     <region tag="opsz" bot="0.0" peak="1.0" top="1.0">
       <cvv nm="xheight" val="856"/>
@@ -173,6 +188,11 @@
       <cvv nm="sc-height-overshoot" val="1000"/>
       <cvv nm="sc-serif" val="50"/>
       <cvv nm="sc-bar" val="60"/>
+      <cvv nm="mark-baseline" val="1035"/>
+      <cvv nm="mark-baseline-undershoot" val="1024"/>
+      <cvv nm="mark-xheight" val="1451"/>
+      <cvv nm="mark-xheight-overshoot" val="1456"/>
+      <cvv nm="tilde-stem" val="103"/>
     </region>
     <region tag="GRAD" bot="0.0" peak="1.0" top="1.0">
       <cvv nm="cap-serif" val="60"/>
@@ -183,7 +203,6 @@
       <cvv nm="dot-width" val="340"/>
       <cvv nm="lc-serif" val="60"/>
       <cvv nm="rune-punct" val="328"/>
-      <cvv nm="euro-bar" val="139"/>
       <cvv nm="period-height" val="350"/>
       <cvv nm="period-undershoot" val="-47"/>
       <cvv nm="comma-height" val="293"/>
@@ -192,10 +211,15 @@
       <cvv nm="sc-serif" val="62"/>
       <cvv nm="sc-bar" val="70"/>
       <cvv nm="sc-curved-stem" val="68"/>
+      <cvv nm="tilde-stem" val="81"/>
+      <cvv nm="tilde-stem" val="151"/>
     </region>
   </cvar>
 
   <prep>
+    <if test="pixels-per-em &gt; 200">
+      <disable-instructions/>
+    </if>
     <round val="lc-baseline-undershoot"/>
     <round val="xheight"/>
     <round val="xheight-overshoot"/>
@@ -247,8 +271,7 @@
       <sh p="first-right stem1 stem2"/>
       <mv di="cap-serif" col="b" p="second-left">
         <sh p="second-right"/>
-      </mv>
-    </mv>
+    </mv></mv>
   </fn>
 
   <fn nm="interpolated-stem">
@@ -388,8 +411,7 @@
             <sh compile-if="nan(sh-b)">
               <set ref="sh-b"/>
             </sh>
-          </mv>
-        </mv>
+        </mv></mv>
       </else>
     </compile-if>
   </mo>
@@ -704,8 +726,7 @@
     <mv p="62">
       <mv p="10">
         <ip p="11"/>
-      </mv>
-    </mv>
+    </mv></mv>
   </gl>
 
   <gl pnm="uni021C"> <!-- Yogh -->
@@ -837,8 +858,7 @@
       <sh p="17"/>
       <mv p="47">
         <sh p="69"/>
-      </mv>
-    </mv>
+    </mv></mv>
   </gl>
 
   <gl pnm="OE">
@@ -1047,14 +1067,19 @@
     </compile-if>
   </gl>
 
-  <gl pnm="Y">
+  <gl pnm="Y" assume-y="no">
+    <pm nm="include-iup" val="0"/>
     <set nm="top-a" p="3 17 7"/>
+    <setvs axis="y"/>
     <callm nm="serif-sh">
       <pms>pt-a: 13, pt-b: 12, sh-a: top-a, sh-b: 16, cv: cap-height</pms>
     </callm>
     <callm nm="serif-sh">
       <pms>pt-a: 20, pt-b: 21, sh-a: 0, cv: baseline</pms>
     </callm>
+    <compile-if test="include-iup = 0">
+      <iup axis="y"/>
+    </compile-if>
   </gl>
 
   <gl pnm="Z">
@@ -1066,8 +1091,7 @@
     <mv di="baseline" p="4">
       <mv di="cap-serif" p="24">
         <ip p="22"/>
-      </mv>
-    </mv>
+    </mv></mv>
   </gl>
 
   <gl pnm="uni0126" assume-y="no"> <!-- H with bar -->
@@ -1112,8 +1136,7 @@
       <sh p="5"/>
       <mv p="17">
         <sh p="12"/>
-      </mv>
-    </mv>
+    </mv></mv>
   </gl>
 
   <gl pnm="uniA74A">
@@ -1227,8 +1250,7 @@
     <mv p="0">
       <mv p="51">
         <mv p="58"/>
-      </mv>
-    </mv>
+    </mv></mv>
   </gl>
 
   <gl pnm="T.swash">
@@ -1264,8 +1286,7 @@
       <sh p="7 12 86"/>
       <mv di="lcrs" p="58">
         <sh p="20"/>
-      </mv>
-    </mv>
+    </mv></mv>
   </gl>
 
   <gl pnm="uniA735"> <!-- ao -->
@@ -1486,8 +1507,7 @@
     <mv p="68">
       <mv di="lcrs" p="83">
         <ip p="33"/>
-      </mv>
-    </mv>
+    </mv></mv>
   </gl>
 
   <gl pnm="uni021D">
@@ -1590,8 +1610,7 @@
       <sh p="24"/>
       <mv p="52">
         <sh p="12"/>
-      </mv>
-    </mv>
+    </mv></mv>
   </gl>
 
   <gl pnm="eng">
@@ -1605,8 +1624,7 @@
       <sh p="35"/>
       <mv p="56">
         <sh p="23"/>
-      </mv>
-    </mv>
+    </mv></mv>
   </gl>
 
   <gl pnm="uniA74F"> <!-- oo -->
@@ -1620,8 +1638,7 @@
       <sh p="13"/>
       <mv di="lcrs" p="37">
         <sh p="55"/>
-      </mv>
-    </mv>
+    </mv></mv>
   </gl>
 
   <gl pnm="o">
@@ -1832,8 +1849,7 @@
       <sh p="88"/>
       <mv col="g" p="68">
         <ip p="82 76"/>
-      </mv>
-    </mv>
+    </mv></mv>
   </gl>
 
   <gl pnm="uni1D79"> <!-- insular g -->
@@ -2240,8 +2256,7 @@
       <sh p="96"/>
       <mv p="90">
         <sh p="102"/>
-      </mv>
-    </mv>
+    </mv></mv>
   </gl>
 
   <gl pnm="f_thorn">
@@ -2344,7 +2359,10 @@
 
   <gl pnm="longs_longs">
     <callm nm="f_longs_lig">
-      <pms>top: 24, top-a: 31, bot: 0, bot-a: 13, bot-b: 6, cvt: lc-ascender-top-alt</pms>
+      <pms>
+	top: 24, top-a: 31, bot: 0, bot-a: 13, bot-b: 6,
+	cvt: lc-ascender-top-alt
+      </pms>
     </callm>
     <callm nm="f_longs_lig">
       <pms>top: 60, top-a: 72, bot: 42, bot-a: 49, cvb: lc-descender-alt</pms>
@@ -2353,7 +2371,10 @@
 
   <gl pnm="longs_longs_l">
     <callm nm="f_longs_lig">
-      <pms>top: 24, top-a: 31, bot: 0, bot-a: 13, bot-b: 6, cvt: lc-ascender-top-alt</pms>
+      <pms>
+	top: 24, top-a: 31, bot: 0, bot-a: 13, bot-b: 6,
+	cvt: lc-ascender-top-alt
+      </pms>
     </callm>
     <callm nm="f_longs_lig">
       <pms>top: 60, top-a: 67, bot: 42, bot-a: 49, cvb: lc-descender-alt</pms>
@@ -2366,7 +2387,10 @@
 
   <gl pnm="uniFB00"> <!-- f f -->
     <callm nm="f_longs_lig">
-      <pms>top: 28, top-a: 35, bot: 4, bot-a: 17, bot-b: 10, cvt: lc-ascender-top-alt</pms>
+      <pms>
+	top: 28, top-a: 35, bot: 4, bot-a: 17, bot-b: 10,
+	cvt: lc-ascender-top-alt
+      </pms>
     </callm>
     <callm nm="f_longs_lig">
       <pms>top: 64, top-a: 76, bot: 46, bot-a: 53, cvb: lc-descender-alt</pms>
@@ -2379,7 +2403,10 @@
 
   <gl pnm="uniFB00.alt"> <!-- f f.alt -->
     <callm nm="f_longs_lig">
-      <pms>top: 24, top-a: 31, bot: 0, bot-a: 13, bot-b: 6, cvt: lc-ascender-top-alt</pms>
+      <pms>
+	top: 24, top-a: 31, bot: 0, bot-a: 13, bot-b: 6,
+	cvt: lc-ascender-top-alt
+      </pms>
     </callm>
     <callm nm="f_longs_lig">
       <pms>top: 60, top-a: 72, bot: 42, bot-a: 49, cvb: lc-descender-alt</pms>
@@ -2418,7 +2445,10 @@
 
   <gl pnm="uniFB03"> <!-- f f i -->
     <callm nm="f_longs_lig">
-      <pms>top: 24, top-a: 32, bot: 0, bot-a: 13, bot-b: 6, cvt: lc-ascender-top-alt</pms>
+      <pms>
+	top: 24, top-a: 32, bot: 0, bot-a: 13, bot-b: 6,
+	cvt: lc-ascender-top-alt
+      </pms>
     </callm>
     <callm nm="f_longs_lig">
       <pms>top: 61, top-a: 73, bot: 43, bot-a: 50, cvb: lc-descender-alt</pms>
@@ -2433,7 +2463,10 @@
 
   <gl pnm="uniFB04"> <!-- f f l -->
     <callm nm="f_longs_lig">
-      <pms>top: 24, top-a: 32, bot: 0, bot-a: 13, bot-b: 6, cvt: lc-ascender-top-alt</pms>
+      <pms>
+	top: 24, top-a: 32, bot: 0, bot-a: 13, bot-b: 6,
+	cvt: lc-ascender-top-alt
+      </pms>
     </callm>
     <callm nm="f_longs_lig">
       <pms>top: 64, top-a: 72, bot: 43, bot-a: 52, cvb: lc-descender-alt</pms>
@@ -2624,7 +2657,10 @@
       <sh p="14 15 16 17"/>
     </mv>
     <callf nm="cap-dbl-serif">
-      <pms>first-left: 0, second-left: 1, first-right: 4, second-right: 5, stem1: 8, stem2: 13</pms>
+      <pms>
+	first-left: 0, second-left: 1, first-right: 4,
+	second-right: 5, stem1: 8, stem2: 13
+      </pms>
     </callf>
     <compile-if test="include-iup = 0">
       <iup axis="y"/>
@@ -2636,7 +2672,10 @@
       <sh p="15 18 19 20 21"/>
     </mv>
     <callf nm="cap-dbl-serif">
-      <pms>first-left: 4, second-left: 5, first-right: 11, second-right: 10, stem1: 12, stem2: 17</pms>
+      <pms>
+	first-left: 4, second-left: 5, first-right: 11,
+	second-right: 10, stem1: 12, stem2: 17
+      </pms>
     </callf>
     <sh r="4" p="12 0 17"/>
     <mv p="1"/>
@@ -2657,7 +2696,10 @@
       <sh p="21 22 23 24 18"/>
     </mv>
     <callf nm="cap-dbl-serif">
-      <pms>first-left: 7, second-left: 8, first-right: 14, second-right: 13, stem1: 15, stem2: 20</pms>
+      <pms>
+	first-left: 7, second-left: 8, first-right: 14,
+	second-right: 13, stem1: 15, stem2: 20
+      </pms>
     </callf>
     <sh r="7" p="0 6"/>
   </gl>
@@ -2809,7 +2851,10 @@
 
   <gl pnm="uni16B3">
     <callf nm="cap-dbl-serif">
-      <pms>first-left: 19, second-left: 20, first-right: 23, second-right: 24, stem1: 15, stem2: 0</pms>
+      <pms>
+	first-left: 19, second-left: 20, first-right: 23,
+	second-right: 24, stem1: 15, stem2: 0
+      </pms>
     </callf>
     <callm nm="serif-sh">
       <pms>pt-a: 28, pt-b: 27, sh-a: 16, cv: cap-height</pms>
@@ -2819,7 +2864,10 @@
 
   <gl pnm="uni16B4">
     <callf nm="cap-dbl-serif">
-      <pms>first-left: 17, second-left: 16, first-right: 21, second-right: 20, stem1: 1, stem2: 10</pms>
+      <pms>
+	first-left: 17, second-left: 16, first-right: 21,
+	second-right: 20, stem1: 1, stem2: 10
+      </pms>
     </callf>
     <callm nm="serif-sh">
       <pms>pt-a: 24, pt-b: 25, sh-a: 0, cv: baseline</pms>
@@ -2829,7 +2877,10 @@
 
   <gl pnm="uni16B5">
     <callf nm="cap-dbl-serif">
-      <pms>first-left: 17, second-left: 16, first-right: 21, second-right: 20, stem1: 1, stem2: 0</pms>
+      <pms>
+	first-left: 17, second-left: 16, first-right: 21,
+	second-right: 20, stem1: 1, stem2: 0
+      </pms>
     </callf>
     <callm nm="serif-sh">
       <pms>pt-a: 24, pt-b: 25, sh-a: 0, cv: baseline</pms>
@@ -2842,7 +2893,10 @@
 
   <gl pnm="uni16B6">
     <callf nm="cap-dbl-serif">
-      <pms>first-left: 31, second-left: 30, first-right: 35, second-right: 34, stem1: 15, stem2: 24</pms>
+      <pms>
+	first-left: 31, second-left: 30, first-right: 35,
+	second-right: 34, stem1: 15, stem2: 24
+      </pms>
     </callf>
     <callm nm="serif-sh">
       <pms>pt-a: 38, pt-b: 39, sh-a: 14, cv: baseline</pms>
@@ -3488,12 +3542,18 @@
       <sh p="left-diag-top"/>
     </mv>
     <callm nm="serif-sh">
-      <pms>pt-a: serif-bottom-left, pt-b: (serif-bottom-left + 1), sh-a: sh-top, cv-h: sc-serif</pms>
+      <pms>
+	pt-a: serif-bottom-left, pt-b: (serif-bottom-left + 1),
+	sh-a: sh-top, cv-h: sc-serif
+      </pms>
     </callm>
     <ip round="yes" r="top serif-bottom-left" p="bar-bottom"/>
     <mv di="sc-bar" r="bar-bottom" p="bar-top"/>
     <callm nm="serif-sh">
-      <pms>pt-a: top-serif, pt-b: (top-serif - 1), sh-a: v-diag-top, cv: sc-height, cv-h: sc-serif</pms>
+      <pms>
+	pt-a: top-serif, pt-b: (top-serif - 1), sh-a: v-diag-top,
+	cv: sc-height, cv-h: sc-serif
+      </pms>
     </callm>
   </gl>
 
@@ -5464,10 +5524,7 @@
 	<mv col="w" p="12">
 	  <mv p="21">
 	    <ip p="20 13"/>
-	  </mv>
-	</mv>
-      </mv>
-    </mv>
+    </mv></mv></mv></mv>
   </gl>
 
   <gl pnm="uni2E4D"> <!-- paragraphus -->
@@ -5485,9 +5542,7 @@
 	<mv col="w" p="0">
 	  <mv p="13"/>
 	  <mv p="8"/>
-	</mv>
-      </mv>
-    </mv>
+    </mv></mv></mv>
   </gl>
 
   <gl pnm="punctusinterrogativus">
@@ -5496,10 +5551,7 @@
 	<mv col="w" p="0">
 	  <mv p="30">
 	    <mv p="8"/>
-	  </mv>
-	</mv>
-      </mv>
-    </mv>
+    </mv></mv></mv></mv>
   </gl>
 
   <!-- Section: marks -->
@@ -5626,9 +5678,7 @@
       <mv p="0">
 	<mv col="g" p="4">
 	  <sh p="13"/>
-	</mv>
-      </mv>
-    </mv>
+    </mv></mv></mv>
   </gl>
 
   <gl pnm="dotbelowcomb">
@@ -5673,9 +5723,7 @@
       <mv p="6">
 	<mv col="g" p="0">
 	  <sh p="4"/>
-	</mv>
-      </mv>
-    </mv>
+    </mv></mv></mv>
   </gl>
 
   <gl pnm="uni032C"> <!-- caron below -->
@@ -5689,18 +5737,11 @@
       <mv p="9">
 	<mv col="g" p="12">
 	  <sh p="6"/>
-	</mv>
-      </mv>
-    </mv>
+    </mv></mv></mv>
   </gl>
 
   <gl pnm="uni0330"> <!-- tilde below -->
-    <mv p="9">
-      <mv col="g" p="13">
-	<mv p="0"/>
-      </mv>
-      <mv p="4"/>
-    </mv>
+    <callg pnm="tilde"/>
   </gl>
 
   <gl pnm="uni0335"> <!-- lc combining bar -->
@@ -5726,6 +5767,1145 @@
     </mv>
   </gl>
 
+  <gl pnm="uni033B">
+    <mv p="1">
+      <mv col="g" p="0">
+	<ip p="7 4"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="uni033C"> <!-- seagull below -->
+    <mv p="4">
+      <sh p="10"/>
+      <mv p="24">
+	<sh p="17"/>
+	<mv col="g" p="27">
+	  <sh p="21 14"/>
+    </mv></mv></mv>
+  </gl>
+
+  <gl pnm="uni033D"> <!-- x above -->
+    <mv p="1">
+      <sh p="6"/>
+      <mv p="0">
+	<sh p="4"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="uni035B"> <!-- zigzag above -->
+    <mv p="7">
+      <sh p="5"/>
+      <mv p="2">
+	<sh p="0"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="uni1DCF"> <!-- zigzag below -->
+    <callg pnm="uni035B"/>
+  </gl>
+
+  <gl pnm="uni035C"> <!-- tie below -->
+    <mv p="0">
+      <mv p="8">
+	<mv col="g" round="no" p="11">
+	  <sh p="5"/>
+    </mv></mv></mv>
+  </gl>
+
+  <gl pnm="uni0361"> <!-- tie above -->
+    <mv p="4">
+      <mv p="12">
+	<mv col="g" round="no" p="0">
+	  <sh p="9"/>
+	</mv>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="dieresis">
+    <mv di="dot-height" p="14">
+      <sh p="0"/>
+      <mv di="dot-width" p="21">
+	<sh p="7"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="circumflex">
+    <mv p="2">
+      <sh p="6 7 0 5"/>
+    </mv>
+  </gl>
+
+  <gl pnm="caron">
+    <callg pnm="uni032C"/>
+  </gl>
+
+  <gl pnm="breve">
+    <mv p="0">
+      <mv p="10">
+	<mv col="g" p="7">
+	  <sh p="13"/>
+    </mv></mv></mv>
+  </gl>
+
+  <gl pnm="ring"> <!-- ring below -->
+    <mv p="7">
+      <mv col="g" p="0">
+	<ip p="22 15"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="tilde">
+    <mv p="9">
+      <mv col="g" p="13">
+	<mv di="tilde-stem" p="0"/>
+      </mv>
+      <mv di="tilde-stem" p="4"/>
+    </mv>
+  </gl>
+
+  <gl pnm="cedilla">
+    <mv di="baseline" p="20">
+      <mv col="g" p="0">
+	<ip p="23 19 6 12"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="ogonek">
+    <mv p="6">
+      <mv col="g" p="0">
+	<mv p="13"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="uni1DCE"> <!-- inverted ogonek -->
+    <mv p="0">
+      <mv col="g" p="13">
+	<mv p="6"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="runedot">
+    <mv p="0">
+      <mv p="6"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni1DD1"> <!-- rum above -->
+    <mv p="0">
+      <mv p="1">
+	<ip p="24"/>
+	<mv p="9" col="w">
+	  <mv p="16">
+	    <sh round="yes" p="39"/>
+    </mv></mv></mv></mv>
+  </gl>
+
+  <gl pnm="uni1DD2"> <!-- us above -->
+    <mv p="0">
+      <mv p="1"/>
+      <mv col="g" p="25">
+	<mv p="8"/>
+    </mv></mv>
+  </gl>
+
+  <gl pnm="caron.alt">
+    <mv p="7">
+      <sh p="1"/>
+    </mv>
+  </gl>
+
+  <gl pnm="dieresis.case">
+    <mv p="14">
+      <sh p="0"/>
+      <mv di="dot-width" p="21">
+	<sh p="7"/>
+    </mv></mv>
+  </gl>
+
+  <gl pnm="circumflex.case">
+    <mv p="6">
+      <sh p="2 3 4 1"/>
+    </mv>
+  </gl>
+
+  <gl pnm="caron.case">
+    <mv p="0">
+      <sh p="4 3 2 5"/>
+    </mv>
+  </gl>
+
+  <gl pnm="tilde.case">
+    <callg pnm="tilde"/>
+  </gl>
+
+  <gl pnm="macron.case">
+    <callg pnm="macron"/>
+  </gl>
+
+  <gl pnm="uni1DCE.case"> <!-- inverted ogonek -->
+    <mv p="0">
+      <mv col="g" p="12">
+	<mv p="6"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="uni0305.high">
+    <callg pnm="macron"/>
+  </gl>
+
+  <gl pnm="uni0361.high">
+    <callg pnm="uni0361"/>
+  </gl>
+
+  <gl pnm="uni035C.low">
+    <callg pnm="uni035C"/>
+  </gl>
+
+  <gl pnm="uni0305.med">
+    <callg pnm="macron"/>
+  </gl>
+
+  <gl pnm="uni0361.med">
+    <callg pnm="uni0361"/>
+  </gl>
+
+  <gl pnm="uni1DD5"> <!-- ao -->
+    <mv di="mkxo" p="7">
+      <sh p="40"/>
+      <mv col="g" min-distance="no" p="31"/>
+      <mv p="14"/>
+      <mv p="56"/>
+    </mv>
+    <mv di="mkbu" p="0">
+      <sh p="34"/>
+      <mv col="g" min-distance="no" p="30"/>
+      <mv p="21"/>
+      <mv p="48"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni1DD6"> <!-- av -->
+    <mv di="mkxo" p="7">
+      <sh p="38 56"/>
+      <mv p="15"/>
+    </mv>
+    <mv di="mkbu" p="0">
+      <sh p="31"/>
+      <mv p="22">
+	<sh p="31"/>
+    </mv></mv>
+  </gl>
+
+  <gl pnm="uni1DD7"> <!-- c cedilla -->
+    <mv di="mkbu" p="30">
+      <mv col="g" p="50">
+	<ip p="42 49"/>
+    </mv></mv>
+    <mv p="7">
+      <sh p="16 17"/>
+    </mv>
+    <mv p="0">
+      <mv p="23"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni1DD9"> <!-- eth -->
+    <mv di="mkbu" p="0">
+      <mv p="28">
+	<ip p="37 35 7"/>
+      </mv>
+      <mv p="20"/>
+    </mv>
+    <mv p="7">
+      <mv p="13"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni0363"> <!-- a -->
+    <mv di="mkbu" p="0">
+      <sh p="33"/>
+      <mv p="23"/>
+      <mv p="46"/>
+    </mv>
+    <mv di="mkxo" p="8">
+      <sh p="39"/>
+      <mv p="15"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni0364"> <!-- e -->
+    <mv di="mkbu" p="0">
+      <mv p="31"/>
+    </mv>
+    <mv di="mkxo" p="8">
+      <mv p="24"/>
+    </mv>
+    <ip r="8 0" p="16 17"/>
+  </gl>
+
+  <gl pnm="uni0365"> <!-- i -->
+    <mv di="mkbu" p="0">
+      <mv p="29"/>
+    </mv>
+    <mv di="mkxo" p="18">
+      <mv p="11"/>
+      <mv col="w" p="36">
+	<mv p="42"/>
+    </mv></mv>
+  </gl>
+
+  <gl pnm="uni0366"> <!-- o -->
+    <mv di="mkbu" p="0">
+      <mv p="14"/>
+    </mv>
+    <mv di="mkxo" p="7">
+      <mv p="21"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni0367"> <!-- u -->
+    <mv di="mkxo" p="19">
+      <mv p="12"/>
+    </mv>
+    <mv di="mkx" p="34">
+      <sh p="45"/>
+    </mv>
+    <mv di="mkbu" p="0">
+      <sh p="39"/>
+      <mv p="30"/>
+      <mv p="52"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni0368"> <!-- c -->
+    <mv di="mkxo" p="8">
+      <sh p="17 18"/>
+    </mv>
+    <mv di="mkbu" p="0">
+      <mv p="25"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni0369"> <!-- d -->
+    <mv di="mkxo" p="8">
+      <sh p="41"/>
+      <mv p="15"/>
+    </mv>
+    <mv di="mkbu" p="0">
+      <sh p="32"/>
+      <mv p="22"/>
+      <mv p="49"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni036A"> <!-- h -->
+    <mv di="mkxo" p="35">
+      <sh p="4"/>
+      <mv p="28"/>
+    </mv>
+    <mv di="mkb" p="0"/>
+    <mv di="mkbu" p="8">
+      <mv p="20"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni036B"> <!-- m -->
+    <mv di="mkxo" p="13">
+      <sh p="35 62"/>
+      <mv p="6"/>
+      <mv p="26">
+	<sh p="53"/>
+      </mv>
+    </mv>
+    <mv di="mkb" p="0">
+      <sh p="30 20 57"/>
+    </mv>
+    <mv di="mkbu" p="42">
+      <mv p="73"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni036C"> <!-- r -->
+    <mv di="mkxo" p="13">
+      <sh p="24"/>
+      <mv p="6"/>
+      <mv p="34"/>
+    </mv>
+    <mv di="mkb" p="0">
+      <sh p="39"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni036D"> <!-- t -->
+    <mv di="mkbu" p="0">
+      <mv p="14"/>
+    </mv>
+    <mv p="7"/>
+    <ip r="0 7" p="23 24"/>
+  </gl>
+
+  <gl pnm="uni036E"> <!-- v -->
+    <mv di="mkbu" p="0">
+      <mv p="31"/>
+    </mv>
+    <mv di="mkx" p="23">
+      <mv p="7"/>
+      <mv col="g" p="17"/>
+    </mv>
+    <mv di="mkxo" p="43"/>
+  </gl>
+
+  <gl pnm="uni036F"> <!-- x -->
+    <mv di="mkxo" p="44">
+      <sh p="16"/>
+      <mv p="37">
+	<sh p="25"/>
+    </mv></mv>
+    <mv di="mkbu" p="0">
+      <sh p="31"/>
+      <mv p="10">
+	<sh p="50"/>
+    </mv></mv>
+  </gl>
+
+  <gl pnm="uni1DD3"> <!-- open a -->
+    <mv di="mkbu" p="0">
+      <sh p="33"/>
+      <mv p="13">
+	<sh p="25"/>
+	<mv col="g" p="6">
+	  <sh p="17"/>
+    </mv></mv></mv>
+  </gl>
+
+  <gl pnm="uni1DD4"> <!-- ae -->
+    <mv di="mkxo" p="8">
+      <mv p="23">
+	<sh p="45"/>
+    </mv></mv>
+    <mv di="mkbu" p="0">
+      <sh p="38"/>
+      <mv p="52">
+	<sh p="31"/>
+    </mv></mv>
+  </gl>
+
+  <gl pnm="uni1DD8"> <!-- round d -->
+    <mv p="31"/>
+    <mv di="mkbu" p="0">
+      <mv p="22"/>
+    </mv>
+    <ip r="31 0" p="7"/>
+    <mv p="7">
+      <mv p="14"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni1DDA"> <!-- g -->
+    <mv di="mkbu" p="0">
+      <mv col="g" p="66">
+	<sh p="53"/>
+	<ip p="73 28 60 8 9"/>
+	<mv p="80"/>
+      </mv>
+      <mv p="15"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni1DDC"> <!-- k -->
+    <mv di="mkxo" p="44">
+      <sh p="4"/>
+      <mv p="36"/>
+    </mv>
+    <mv di="mkb" p="0"/>
+    <mv di="mkbu" p="8">
+      <mv p="22"/>
+    </mv>
+    <ip r="0 44" p="41 15 30"/>
+  </gl>
+
+  <gl pnm="uni1DDD"> <!-- l -->
+    <mv di="mkbu" p="0">
+      <mv p="17"/>
+      <mv p="9"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni1DE0"> <!-- n -->
+    <mv di="mkbu" p="0">
+      <mv p="32"/>
+    </mv>
+    <mv di="mkb" p="39">
+      <sh p="17"/>
+    </mv>
+    <mv di="mkxo" p="52">
+      <sh p="21"/>
+      <mv p="45"/>
+      <mv p="11"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni1DE3"> <!-- r rotunda -->
+    <mv di="mkb" p="26">
+      <mv p="25">
+	<ip p="23"/>
+    </mv></mv>
+    <mv di="mkxo" p="16">
+      <mv p="9"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni1DE4"> <!-- s -->
+    <mv di="mkxo" p="27">
+      <mv p="39"/>
+    </mv>
+    <mv di="mkbu" p="0">
+      <mv p="15"/>
+    </mv>
+    <ip r="27 0" p="21 45"/>
+  </gl>
+
+  <gl pnm="uni1DE5"> <!-- long s -->
+    <mv di="mkbu" p="0">
+      <mv p="13"/>
+      <mv p="6"/>
+      <mv p="21">
+	<mv p="33"/>
+	<mv p="27"/>
+    </mv></mv>
+  </gl>
+
+  <gl pnm="uni1DE6"> <!-- z -->
+    <mv di="mkxo" p="52">
+      <mv p="38"/>
+    </mv>
+    <mv di="mkbu" p="23">
+      <mv p="7"/>
+      <mv p="16"/>
+    </mv>
+  </gl>
+
   <!-- Section: symbols -->
+
+  <gl pnm="Euro">
+    <mv di="cap-height-overshoot" p="10">
+      <mv p="25"/>
+    </mv>
+    <mv di="cap-baseline-undershoot" p="0">
+      <mv p="34"/>
+    </mv>
+    <ip r="10 0" p="42 47"/>
+    <mv p="42">
+      <mv di="euro-bar" p="43"/>
+    </mv>
+    <mv p="47">
+      <mv di="euro-bar" p="46"/>
+    </mv>
+  </gl>
+
+  <gl pnm="cent">
+    <mv di="lcbu" p="4">
+      <sh p="0"/>
+      <mv p="32"/>
+    </mv>
+    <mv p="13">
+      <sh p="24 2"/>
+    </mv>
+  </gl>
+
+  <gl pnm="currency">
+    <mv p="17">
+      <sh p="13 21"/>
+      <mv col="g" p="0">
+	<sh p="4 29"/>
+	<ip p="41 33"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="dollar">
+    <mv p="30">
+      <sh p="59 35"/>
+      <mv p="44"/>
+      <mv col="g" p="0">
+	<sh p="61 6"/>
+	<mv p="17">
+	  <ip p="23 51"/>
+    </mv></mv></mv>
+  </gl>
+
+  <gl pnm="dollar.lf">
+    <callg pnm="dollar"/>
+  </gl>
+
+  <gl pnm="sterling">
+    <mv di="cap-baseline-undershoot" p="14">
+      <mv min-distance="no" p="0">
+	<mv p="66"/>
+      </mv>
+      <mv p="21"/>
+    </mv>
+    <mv p="33">
+      <mv p="47"/>
+    </mv>
+    <ip r="33 14" p="82"/>
+    <mv p="82">
+      <mv p="83"/>
+    </mv>
+  </gl>
+
+  <gl pnm="dollar.osf">
+    <mv di="xheight-overshoot" p="29">
+      <sh p="56"/>
+      <mv p="41"/>
+    </mv>
+    <mv di="lcbu" p="0">
+      <sh p="54"/>
+      <mv p="15"/>
+    </mv>
+  </gl>
+
+  <gl pnm="dollar.tosf">
+    <callg pnm="dollar.osf"/>
+  </gl>
+
+  <gl pnm="plus">
+    <mv p="2">
+      <sh p="10 0"/>
+      <mv p="3">
+	<sh p="7 6"/>
+    </mv></mv>
+  </gl>
+
+  <gl pnm="minus">
+    <callg pnm="macron"/>
+  </gl>
+
+  <gl pnm="equal">
+    <mv p="6">
+      <mv di="euro-bar" p="5"/>
+    </mv>
+    <mv p="1">
+      <mv di="euro-bar" p="2"/>
+    </mv>
+  </gl>
+
+  <gl pnm="divide">
+    <mv p="0">
+      <mv col="w" p="10">
+	<mv p="4"/>
+      </mv>
+      <mv p="1">
+	<mv col="w" p="16">
+	  <mv p="22"/>
+    </mv></mv></mv>
+  </gl>
+
+  <gl pnm="plusminus">
+    <mv di="baseline" p="13">
+      <mv p="14"/>
+    </mv>
+    <mv p="5">
+      <sh p="1 3"/>
+      <mv p="6">
+	<sh p="10 9"/>
+    </mv></mv>
+  </gl>
+
+  <gl pnm="asciitilde">
+    <mv p="0">
+      <mv p="4">
+	<mv p="12"/>
+      </mv>
+      <mv p="16"/>
+    </mv>
+  </gl>
+
+  <gl pnm="logicalnot">
+    <mv di="baseline" p="0">
+      <mv col="g" p="2">
+	<mv p="3"/>
+    </mv></mv>
+  </gl>
+
+  <gl pnm="asciicircum">
+    <mv p="0">
+      <sh p="3"/>
+      <mv p="1">
+	<sh p="5 6"/>
+    </mv></mv>
+  </gl>
+
+  <gl pnm="uni03BC"> <!-- mu -->
+    <mv di="lcbu" p="54">
+      <sh p="68"/>
+      <mv p="31">
+	<sh p="48"/>
+    </mv></mv>
+    <mv p="0"/>
+    <mv di="xho" p="19">
+      <mv p="13"/>
+    </mv>
+    <mv di="xheight" p="40"/>
+  </gl>
+
+  <gl pnm="yen" assume-y="no">
+    <callg pnm="Y">
+      <pms>include-iup: -1</pms>
+    </callg>
+    <mv p="25">
+      <mv di="euro-bar" p="24"/>
+    </mv>
+    <mv p="28">
+      <sh p="32"/>
+      <mv di="euro-bar" p="29">
+	<sh p="33"/>
+    </mv></mv>
+  </gl>
+    
+  <gl pnm="percent">
+    <mv col="g" p="28">
+      <mv p="20">
+	<mv p="42"/>
+	<mv col="g" p="11">
+	  <mv p="31"/>
+    </mv></mv></mv>
+    <mv p="30">
+      <mv col="g" p="51">
+	<mv p="69"/>
+	<mv col="g" p="60">
+	  <mv p="78"/>
+    </mv></mv></mv>
+  </gl>
+
+  <gl pnm="therefore">
+    <mv di="period-undershoot" p="0">
+      <sh p="12"/>
+      <mv di="period-height" p="6">
+	<sh p="18"/>
+      </mv>
+    </mv>
+    <mv p="24">
+      <mv di="period-height" p="30"/>
+    </mv>
+  </gl>
+
+  <gl pnm="at">
+    <mv p="10">
+      <mv p="60"/>
+    </mv>
+    <mv p="0">
+      <mv p="70"/>
+    </mv>
+    <ip r="0 10" p="31 40"/>
+    <mv p="40">
+      <sh p="43"/>
+      <mv p="86"/>
+    </mv>
+    <mv p="31">
+      <sh p="20"/>
+      <mv p="76">
+	<sh p="51"/>
+    </mv></mv>
+  </gl>
+
+  <gl pnm="ampersand">
+    <mv p="0">
+      <mv p="54"/>
+    </mv>
+    <mv p="14">
+      <mv p="28"/>
+    </mv>
+    <ip r="0 14" p="109 89 81 38 44"/>
+    <mv p="109">
+      <mv p="100"/>
+    </mv>
+    <mv p="89">
+      <mv p="62"/>
+    </mv>
+    <mv p="81">
+      <mv p="74"/>
+    </mv>
+    <mv p="38">
+      <mv p="132"/>
+    </mv>
+    <mv p="44">
+      <mv p="126"/>
+    </mv>
+  </gl>
+
+  <gl pnm="paragraph">
+    <mv p="10">
+      <mv p="11">
+	<sh p="23"/>
+      </mv>
+    </mv>
+    <mv p="0">
+      <sh p="15"/>
+    </mv>
+    <ip round="yes" r="0 10" p="1"/>
+  </gl>
+
+  <gl pnm="section">
+    <mv p="30">
+      <mv p="42">
+	<sh p="7 77"/>
+      </mv>
+    </mv>
+    <mv p="0">
+      <mv p="11">
+	<sh p="61 62"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="copyright">
+    <mv p="0">
+      <mv p="63"/>
+      <mv p="10">
+	<ip p="28 20"/>
+	<mv p="73"/>
+      </mv>
+    </mv>
+    <mv p="28">
+      <mv p="41"/>
+    </mv>
+    <mv p="20">
+      <mv p="49"/>
+    </mv>
+  </gl>
+
+  <gl pnm="registered">
+    <mv p="10">
+      <mv p="30"/>
+      <mv col="g" p="0">
+	<mv p="20"/>
+    </mv></mv>
+    <mv p="76">
+      <sh p="80 40"/>
+      <mv p="77"/>
+    </mv>
+    <mv p="59">
+      <sh p="81"/>
+      <mv p="58"/>
+    </mv>
+    <ip r="59 76" p="51"/>
+    <mv p="51">
+      <mv p="46"/>
+    </mv>
+  </gl>
+
+  <gl pnm="trademark">
+    <mv p="30">
+      <sh p="26 62 54 34 66 58 44 43"/>
+      <mv p="31">
+	<sh p="63 67"/>
+    </mv></mv>
+    <mv p="1">
+      <sh p="9 27 20 38 35 55 48 52 60"/>
+      <mv p="0">
+	<sh p="10 19 3 37 50"/>
+    </mv></mv>
+  </gl>
+
+  <gl pnm="degree">
+    <mv p="7">
+      <mv col="g" p="0">
+	<ip p="22 14"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="bar">
+    <mv p="1">
+      <mv p="0"/>
+    </mv>
+  </gl>
+
+  <gl pnm="brokenbar">
+    <mv p="1">
+      <mv col="w" p="4">
+	<mv p="5"/>
+      </mv>
+      <mv p="0"/>
+    </mv>
+  </gl>
+
+  <gl pnm="dagger">
+    <mv p="50">
+      <mv p="0">
+	<ip p="35 62 14 86"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="daggerdbl">
+    <mv p="84">
+      <mv p="0">
+	<ip p="69 97 45 121 34 131 11 154"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <!-- spacing modifiers -->
+
+  <gl pnm="uni02F7"> <!-- tilde below -->
+    <mv p="0">
+      <mv col="g" p="4">
+	<mv di="tilde-stem" p="9"/>
+      </mv>
+      <mv di="tilde-stem" p="13"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni02DE"> <!-- rhotic hook -->
+    <mv p="10">
+      <sh p="6 7"/>
+      <mv col="g" p="0">
+	<mv p="18"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="uni02E5">
+    <mv p="5">
+      <sh p="1"/>
+      <mv p="4"/>
+    </mv>
+    <mv di="baseline" p="0"/>
+  </gl>
+
+  <gl pnm="uni02E6">
+    <mv p="1"/>
+    <mv di="baseline" p="0"/>
+    <ip r="1 0" p="5"/>
+    <mv p="5">
+      <mv p="4"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni02E7">
+    <callg pnm="uni02E6"/>
+  </gl>
+
+  <gl pnm="uni02E8">
+    <callg pnm="uni02E6"/>
+  </gl>
+
+  <gl pnm="uni02E9">
+    <mv di="baseline" p="4">
+      <sh p="0"/>
+      <mv p="5"/>
+    </mv>
+    <mv p="1"/>
+  </gl>
+
+  <gl pnm="ampersand.sc">
+    <mv p="0">
+      <mv p="51"/>
+      <mv p="13">
+	<ip p="101 82 75 35 41"/>
+      </mv>
+    </mv>
+    <mv p="101">
+      <mv p="92"/>
+    </mv>
+    <mv p="82">
+      <mv p="58"/>
+    </mv>
+    <mv p="75">
+      <mv p="69"/>
+    </mv>
+    <mv p="35">
+      <mv p="123"/>
+    </mv>
+    <mv p="41">
+      <mv p="117"/>
+    </mv>
+  </gl>
+
+  <gl pnm="percent.sc">
+    <mv col="g" p="29">
+      <mv p="20">
+	<mv p="43"/>
+	<mv col="g" p="12">
+	  <mv p="32"/>
+    </mv></mv></mv>
+    <mv p="31">
+      <mv col="g" p="51">
+	<mv p="67"/>
+	<mv col="g" p="59">
+	  <mv p="75"/>
+    </mv></mv></mv>
+  </gl>
+
+  <gl pnm="uni02E0"> <!-- gamma -->
+    <mv p="34">
+      <sh p="8 38 11"/>
+      <mv p="33">
+	<sh p="37"/>
+      </mv>
+    </mv>
+    <mv p="0">
+      <mv p="20"/>
+    </mv>
+    <ip r="0 34" p="10 13 7 27"/>
+  </gl>
+
+  <gl pnm="uni02BC">
+    <mv p="12">
+      <mv p="6">
+	<sh p="0"/>
+    </mv></mv>
+  </gl>
+
+  <gl pnm="uni02BD">
+    <mv p="0">
+      <mv p="14">
+	<sh p="8"/>
+    </mv></mv>
+  </gl>
+
+  <gl pnm="uni02C1">
+    <mv p="39">
+      <sh p="0"/>
+      <mv p="40"/>
+    </mv>
+    <mv p="9">
+      <mv p="28"/>
+    </mv>
+    <ip r="39 9" p="36"/>
+    <mv p="36">
+      <mv p="2"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni02C8">
+    <mv p="1">
+      <mv p="0"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni02CC">
+    <callg pnm="uni02C8"/>
+  </gl>
+
+  <gl pnm="uni02D0"> <!-- IPA length mark -->
+    <mv di="baseline" p="4">
+      <mv p="5">
+	<mv col="w" p="0">
+	  <mv p="1"/>
+    </mv></mv></mv>
+  </gl>
+
+  <gl pnm="uni02D1">
+    <mv p="1">
+      <mv p="0"/>
+    </mv>
+  </gl>
+
+  <!-- Greek -->
+
+  <gl pnm="beta">
+    <mv p="54">
+      <sh p="0"/>
+      <mv di="lc-serif" p="55"/>
+    </mv>
+    <mv di="lcbu" p="20">
+      <mv di="lcrs" p="27"/>
+    </mv>
+    <mv p="4">
+      <mv di="lcbu" p="4">
+	<mv p="44"/>
+      </mv>
+    </mv>
+    <ip r="54 4" p="35"/>
+    <mv p="35">
+      <mv p="39"/>
+    </mv>
+  </gl>
+
+  <gl pnm="theta">
+    <mv di="lcbu" p="0">
+      <mv p="24"/>
+    </mv>
+    <mv p="10">
+      <mv p="34"/>
+    </mv>
+    <callm nm="mid-stem">
+      <pms>ref1: 10, ref2: 0, pt1: 20, pt2: 21</pms>
+    </callm>
+  </gl>
+
+  <gl pnm="chi">
+    <mv di="xheight" p="5">
+      <sh p="11"/>
+      <mv p="6"/>
+    </mv>
+    <mv p="0">
+      <sh p="10"/>
+      <mv p="1"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni037C">
+    <mv di="cap-height-overshoot" p="9">
+      <mv p="21"/>
+    </mv>
+    <mv di="cap-baseline-undershoot" p="0">
+      <mv p="30"/>
+    </mv>
+    <ip r="9 0" p="47"/>
+    <mv p="47">
+      <mv p="40"/>
+    </mv>
+  </gl>
+
+  <!-- Various -->
+
+  <gl pnm="ordfeminine">
+    <mv p="0">
+      <sh p="35"/>
+      <mv p="24"/>
+      <mv p="48"/>
+    </mv>
+    <mv p="8">
+      <sh p="41"/>
+      <mv p="16"/>
+    </mv>
+  </gl>
+
+    <gl pnm="ordmasculine">
+    <mv p="0">
+      <mv p="16"/>
+    </mv>
+    <mv di="mkxo" p="8">
+      <mv p="23"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni01C2">
+    <mv di="baseline" p="0">
+      <mv p="1">
+	<ip p="5 8"/>
+      </mv>
+      <mv p="5">
+	<mv p="4"/>
+      </mv>
+      <mv p="8">
+	<mv p="9"/>
+      </mv>
+    </mv>
+  </gl>
 
 </xgridfit>
