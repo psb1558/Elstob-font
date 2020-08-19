@@ -73,6 +73,11 @@
   <cv nm="mark-xheight" val="1495"/>
   <cv nm="mark-xheight-overshoot" val="1500"/>
   <cv nm="tilde-stem" val="101"/>
+  <!-- modifiers -->
+  <cv nm="mod-baseline" val="567"/>
+  <cv nm="mod-baseline-undershoot" val="554"/>
+  <cv nm="mod-xheight-overshoot" val="1102"/>
+<!--  <cv nm="mod-xheight" val="1095"/> -->
 
   <alias nm="lcas" target="lc-ascender-serif"/>
   <alias nm="xh" target="xheight"/>
@@ -101,6 +106,8 @@
   <alias nm="mkbu" target="mark-baseline-undershoot"/>
   <alias nm="mkx" target="mark-xheight"/>
   <alias nm="mkxo" target="mark-xheight-overshoot"/>
+  <alias nm="modbu" target="mod-baseline-undershoot"/>
+  <alias nm="modxo" target="mod-xheight-overshoot"/>
 
   <cvar>
     <region tag="wght" bot="-1.0" peak="-1.0" top="0.0">
@@ -169,6 +176,10 @@
       <cvv nm="mark-xheight" val="1576"/>
       <cvv nm="mark-xheight-overshoot" val="1580"/>
       <cvv nm="tilde-stem" val="104"/>
+      <cvv nm="mod-baseline" val="611"/>
+      <cvv nm="mod-baseline-undershoot" val="598"/>
+      <cvv nm="mod-xheight-overshoot" val="1170"/>
+      <cvv nm="mod-xheight" val="1065"/>
     </region>
     <region tag="opsz" bot="0.0" peak="1.0" top="1.0">
       <cvv nm="xheight" val="856"/>
@@ -193,6 +204,10 @@
       <cvv nm="mark-xheight" val="1451"/>
       <cvv nm="mark-xheight-overshoot" val="1456"/>
       <cvv nm="tilde-stem" val="103"/>
+      <cvv nm="mod-baseline" val="523"/>
+      <cvv nm="mod-baseline-undershoot" val="510"/>
+      <cvv nm="mod-xheight-overshoot" val="1034"/>
+      <cvv nm="mod-xheight" val="1025"/>
     </region>
     <region tag="GRAD" bot="0.0" peak="1.0" top="1.0">
       <cvv nm="cap-serif" val="60"/>
@@ -2260,6 +2275,9 @@
   <gl pnm="f_thorn">
     <callm nm="f_longs_lig">
       <pms>top: 63, top-a: 72, bot: 39, bot-a: 13, bot-b: 6</pms>
+    </callm>
+    <callm nm="mid-stem">
+      <pms>ref1: 39, ref2: 63, pt1: 83, pt2: 84</pms>
     </callm>
     <mv di="lcbu" p="6">
       <mv di="lcrs" p="15"/>
@@ -6906,6 +6924,81 @@
       <mv p="8">
 	<mv p="9"/>
       </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="uni02B0"> <!-- superscript h -->
+    <mv di="modbu" p="8">
+      <mv p="20"/>
+    </mv>
+    <mv di="mod-baseline" p="0"/>
+    <mv round="no" p="4"/>
+    <mv di="xheight-overshoot" p="36">
+      <mv p="28"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni02B1"> <!-- superscript h with hook -->
+    <mv di="modbu" p="25">
+      <mv p="36"/>
+    </mv>
+    <mv di="mod-baseline" p="0"/>
+    <mv p="4">
+      <mv p="19"/>
+      <mv p="10"/>
+    </mv>
+    <mv di="xheight-overshoot" p="52">
+      <mv p="44"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni02B2"> <!-- superscript j -->
+    <mv p="0">
+      <mv p="12"/>
+      <mv p="6"/>
+    </mv>
+    <mv p="29">
+      <mv p="21"/>
+      <mv col="w" p="42">
+	<mv p="48"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="uni02B7"> <!-- superscript w -->
+    <mv di="modbu" p="0">
+      <sh p="66"/>
+      <mv p="31">
+	<sh p="46"/>
+      </mv>
+    </mv>
+    <mv di="modxo" p="73">
+      <sh p="57"/>
+      <mv p="39"/>
+      <mv min-distance="no" p="23">
+	<mv p="7"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="uni02E1"> <!-- superscript l -->
+    <mv di="modbu" p="0">
+      <mv p="17"/>
+    </mv>
+    <mv p="9"/>
+  </gl>
+
+  <gl pnm="uni207F"> <!-- superscript n -->
+    <mv di="modbu" p="0">
+      <mv p="34"/>
+    </mv>
+    <mv di="mod-baseline" p="42">
+      <sh p="17"/>
+    </mv>
+    <mv di="modxo" p="22">
+      <sh p="56"/>
+      <mv p="11"/>
+      <mv p="48"/>
     </mv>
   </gl>
 
