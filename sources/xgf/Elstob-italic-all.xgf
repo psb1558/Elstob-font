@@ -429,10 +429,9 @@
     <pm nm="pt1"/>
     <pm nm="pt2"/>
     <pm nm="cv" val="-1"/>
-    <push>pt1 ref2 ref1</push>
+    <push>pt1 pt1 ref2 ref1</push>
     <command nm="SRP1"/>
     <command nm="SRP2"/>
-    <command nm="DUP"/>
     <command nm="IP"/>
     <command nm="MDAP" modifier="1"/>
     <compile-if test="cv &gt;= 0">
@@ -453,10 +452,9 @@
     <pm nm="sh1"/>
     <pm nm="sh2"/>
     <pm nm="cv" val="-1"/>
-    <push>sh1 pt1 ref2 ref1</push>
+    <push>sh1 pt1 pt1 ref2 ref1</push>
     <command nm="SRP1"/>
     <command nm="SRP2"/>
-    <command nm="DUP"/>
     <command nm="IP"/>
     <command nm="MDAP" modifier="1"/>
     <command nm="SHP" modifier="1"/>
@@ -2495,6 +2493,9 @@
     <callm nm="f_longs_lig">
       <pms>top: 24, top-a: 36, bot: 0, bot-a: 13, bot-b: 6</pms>
     </callm>
+    <callm nm="mid-stem">
+      <pms>ref1: 24, ref2: 0, pt1: 101, pt2: 102, cv: lc-bar</pms>
+    </callm>
     <mv di="lcbu" p="45">
       <mv di="lcrs" p="70"/>
     </mv>
@@ -4097,7 +4098,7 @@
     <mv p="0"/>
   </gl>
 
-  <gl pnm="lslash.sc" assume-y="no">
+  <gl pnm="lslash.sc" assume-y="no" init-graphics="yes">
     <setvs axis="y"/>
     <callm nm="serif-sh">
       <pms>
@@ -6885,7 +6886,7 @@
     </mv>
   </gl>
 
-    <gl pnm="ordmasculine">
+  <gl pnm="ordmasculine">
     <mv p="0">
       <mv p="16"/>
     </mv>
