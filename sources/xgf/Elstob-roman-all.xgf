@@ -288,7 +288,7 @@
     <callp nm="codefrag"/>
   </mo>
 
-  <fn nm="cap-dbl-serif">
+  <mo nm="cap-dbl-serif">
     <pm nm="first-left"/>
     <pm nm="second-left"/>
     <pm nm="first-right"/>
@@ -302,9 +302,9 @@
         <sh p="second-right"/>
       </mv>
     </mv>
-  </fn>
+  </mo>
 
-  <fn nm="f-lig">
+  <mo nm="f-lig">
     <pm nm="serif-bot"/>
     <pm nm="vertical-bot"/>
     <pm nm="top"/>
@@ -329,9 +329,9 @@
       </command>
       <command nm="SHP" modifier="0"/>
     </if>
-  </fn>
+  </mo>
 
-  <fn nm="longs-lig">
+  <mo nm="longs-lig">
     <pm nm="serif-bot"/>
     <pm nm="vertical-bot"/>
     <pm nm="top"/>
@@ -349,18 +349,18 @@
     <mv di="longs-knob" p="bar-bot">
       <mv col="b" p="bar-top"/>
     </mv>
-  </fn>
+  </mo>
 
-  <fn nm="lig-join">
+  <mo nm="lig-join">
     <pm nm="ref1"/>
     <pm nm="ref2"/>
     <pm nm="pt1"/>
     <pm nm="pt2"/>
     <al r="ref1" p="pt1"/>
     <al r="ref2" p="pt2"/>
-  </fn>
+  </mo>
 
-  <fn nm="rhotic-hook">
+  <mo nm="rhotic-hook">
     <pm nm="d-top"/>
     <pm nm="d-bot"/>
     <pm nm="a"/>
@@ -372,9 +372,9 @@
     <command nm="MDRP">
       <modifier type="col" val="b"/>
     </command>
-  </fn>
+  </mo>
 
-  <fn nm="lc-dbl-serif">
+  <mo nm="lc-dbl-serif">
     <pm nm="first-left"/>
     <pm nm="second-left"/>
     <pm nm="first-right"/>
@@ -388,9 +388,9 @@
         <sh p="second-right"/>
       </mv>
     </mv>
-  </fn>
+  </mo>
 
-  <fn nm="lc-bowl">
+  <mo nm="lc-bowl">
     <pm nm="t"/>
     <pm nm="t-ins"/>
     <pm nm="cv-t" val="lc-curved-stem"/>
@@ -403,7 +403,7 @@
     <mv di="baseline-undershoot" p="b">
       <mv di="cv-b" p="b-ins"/>
     </mv>
-  </fn>
+  </mo>
 
   <mo nm="shift-rel">
     <pm nm="r"/>
@@ -413,7 +413,7 @@
     <command nm="SHP" modifier="1"/>
   </mo>
 
-  <fn nm="interpolated-stem">
+  <mo nm="interpolated-stem">
     <pm nm="ref-a"/>
     <pm nm="ref-b"/>
     <pm nm="stem-a"/>
@@ -423,7 +423,7 @@
     <mv round="yes" p="stem-a">
       <mv di="cv" col="b" p="stem-b"/>
     </mv>
-  </fn>
+  </mo>
 
   <mo nm="serif-sh">
     <pm nm="pt-a"/>
@@ -463,19 +463,19 @@
     </compile-if>
   </mo>
 
-  <fn nm="ascender-top">
+  <mo nm="ascender-top">
     <pm nm="top"/>
     <mv di="lc-ascender-top" p="top">
       <sh p="(top - 1) (top - 2)"/>
     </mv>
-  </fn>
+  </mo>
 
-  <fn nm="minim-top">
+  <mo nm="minim-top">
     <pm nm="top"/>
     <mv di="xheight-overshoot" p="top">
       <sh p="(top - 1) (top - 2)"/>
     </mv>
-  </fn>
+  </mo>
 
   <mo nm="lc-horz-stroke">
     <pm nm="pt1"/>
@@ -542,10 +542,9 @@
     <pm nm="pt1"/>
     <pm nm="pt2"/>
     <pm nm="cv" val="-1"/>
-    <push>pt1 ref2 ref1</push>
+    <push>pt1 pt1 ref2 ref1</push>
     <command nm="SRP1"/>
     <command nm="SRP2"/>
-    <command nm="DUP"/>
     <command nm="IP"/>
     <command nm="MDAP" modifier="1"/>
     <compile-if test="cv &gt;= 0">
@@ -616,12 +615,12 @@
     <cn nm="bottom-inside" val="18"/>
     <cn nm="stem-bot" val="0"/>
     <setvs axis="y"/>
-    <callf nm="ascender-top">
+    <callm nm="ascender-top">
       <pms>top: top</pms>
-    </callf>
-    <callf nm="lc-bowl">
+    </callm>
+    <callm nm="lc-bowl">
       <pms>t: bowl-top, t-ins: bowl-top-inside, b: bottom, b-ins: bottom-inside</pms>
-    </callf>
+    </callm>
     <callm nm="shift-rel">
       <pms>p: stem-bot, r: bottom</pms>
     </callm>
@@ -631,9 +630,9 @@
   <gl pnm="c">
     <pm nm="include-iup" val="0"/>
     <setvs axis="y"/>
-    <callf nm="lc-bowl">
+    <callm nm="lc-bowl">
       <pms>t: 8, t-ins: 24, b: 0, b-ins: 32, cv-b: lc-thick-curve</pms>
-    </callf>
+    </callm>
     <compile-if test="include-iup = 0">
       <iup axis="y"/>
     </compile-if>
@@ -647,12 +646,12 @@
     <cn nm="bottom-inside" val="40"/>
     <cn nm="foot-bottom" val="0"/>
     <setvs axis="y"/>
-    <callf nm="ascender-top">
+    <callm nm="ascender-top">
       <pms>top: top</pms>
-    </callf>
-    <callf nm="lc-bowl">
+    </callm>
+    <callm nm="lc-bowl">
       <pms>t: bowl-top, t-ins: bowl-top-inside, b: bottom, b-ins: bottom-inside, cv-b: lc-thick-curve</pms>
-    </callf>
+    </callm>
     <callm nm="shift-rel">
       <pms>r: bottom, p: foot-bottom</pms>
     </callm>
@@ -796,9 +795,9 @@
     <cn nm="serif-bottom" val="11"/>
     <cn nm="serif-top-left" val="12"/>
     <setvs axis="y"/>
-    <callf nm="ascender-top">
+    <callm nm="ascender-top">
       <pms>top: top</pms>
-    </callf>
+    </callm>
     <callm nm="lc-horz-stroke">
       <pms>pt1: counter-top, pt2: counter-top-inside, cv: xheight-overshoot</pms>
     </callm>
@@ -819,9 +818,9 @@
     <cn nm="top" val="8"/>
     <cn nm="serif-bottom" val="0"/>
     <setvs axis="y"/>
-    <callf nm="minim-top">
+    <callm nm="minim-top">
       <pms>top: top</pms>
-    </callf>
+    </callm>
     <callm nm="lc-bottom-serif">
       <wpm nm="bottom-left" val="serif-bottom"/>
       <wpm nm="top-left" val="serif-bottom + 1"/>
@@ -840,9 +839,9 @@
     <cn nm="bottom1" val="12"/>
     <cn nm="bottom2" val="6"/>
     <setvs axis="y"/>
-    <callf nm="minim-top">
+    <callm nm="minim-top">
       <pms>top: top</pms>
-    </callf>
+    </callm>
     <mv di="lc-descender" p="bottom">
       <mv p="bottom1"/>
       <mv p="bottom2"/>
@@ -925,9 +924,9 @@
     <cn nm="mid-bottom" val="17"/>
     <cn nm="mid-mid" val="24"/>
     <setvs axis="y"/>
-    <callf nm="ascender-top">
+    <callm nm="ascender-top">
       <pms>top: top</pms>
-    </callf>
+    </callm>
     <callm nm="lc-bottom-serif">
       <wpm nm="bottom-left" val="serif-bottom"/>
       <wpm nm="top-left" val="serif-top"/>
@@ -960,9 +959,9 @@
         <sh r="serif-bottom" p="vertical-bottom"/>
       </wpm>
     </callm>
-    <callf nm="ascender-top">
+    <callm nm="ascender-top">
       <pms>top: top</pms>
-    </callf>
+    </callm>
     <compile-if test="include-iup = 0">
       <iup axis="y"/>
     </compile-if>
@@ -1054,9 +1053,9 @@
     <cn nm="stem-bottom" val="0"/>
     <cn nm="serif-bottom" val="43"/>
     <setvs axis="y"/>
-    <callf nm="minim-top">
+    <callm nm="minim-top">
       <pms>top: stem-top</pms>
-    </callf>
+    </callm>
     <sh r="stem-top" p="bowl-top"/>
     <mv di="lc-curved-stem" col="b" r="bowl-top" p="bowl-top-inside"/>
     <callm nm="lc-horz-stroke-cv">
@@ -1105,9 +1104,9 @@
     <cn nm="arm-below1" val="23"/>
     <cn nm="arm-below2" val="17"/>
     <setvs axis="y"/>
-    <callf nm="minim-top">
+    <callm nm="minim-top">
       <pms>top: stem-top</pms>
-    </callf>
+    </callm>
     <sh p="arm-top"/>
     <mv r="arm-top" p="arm-below2">
       <ip p="arm-below1"/>
@@ -1340,9 +1339,9 @@
     <cn nm="bowl-bottom" val="16"/>
     <cn nm="bowl-bottom-ins" val="24"/>
     <setvs axis="y"/>
-    <callf nm="ascender-top">
+    <callm nm="ascender-top">
       <pms>top: top</pms>
-    </callf>
+    </callm>
     <callm nm="lc-bottom-serif">
       <wpm nm="bottom-left" val="serif-bottom"/>
       <wpm nm="top-left" val="serif-bottom + 1"/>
@@ -1399,9 +1398,9 @@
     <cn nm="bowl-bottom" val="15"/>
     <cn nm="bowl-bottom-ins" val="16"/>
     <setvs axis="y"/>
-    <callf nm="ascender-top">
+    <callm nm="ascender-top">
       <pms>top: top</pms>
-    </callf>
+    </callm>
     <mv di="lc-descender" p="stem-bottom"/>
     <callm nm="lc-horz-stroke-cv">
       <pms>pt1: bowl-top, pt2: bowl-top-ins, cv: xheight-overshoot, cv-h: lc-curved-stem</pms>
@@ -1420,9 +1419,9 @@
     <cn nm="bowl-bottom" val="0"/>
     <cn nm="bowl-bottom-ins" val="1"/>
     <setvs axis="y"/>
-    <callf nm="minim-top">
+    <callm nm="minim-top">
       <pms>top: top</pms>
-    </callf>
+    </callm>
     <mv di="lc-descender" p="stem-bottom"/>
     <callm nm="lc-horz-stroke-cv">
       <pms>pt1: bowl-top, pt2: bowl-top-ins, cv: xheight-overshoot, cv-h: lc-curved-stem</pms>
@@ -1512,9 +1511,9 @@
     <mv di="cap-height-overshoot" p="top">
       <sh p="left-diag-top"/>
     </mv>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: serif-bottom-left, second-left: (serif-bottom-left + 1), first-right: serif-bottom-right, second-right: (serif-bottom-right + 1), stem1: left-diag-bottom, stem2: right-diag-bottom</pms>
-    </callf>
+    </callm>
     <callm nm="mid-stem">
       <pms>ref1: top, ref2: serif-bottom-left, pt1: bar-bottom, pt2: bar-top, cv: cap-bar</pms>
     </callm>
@@ -1547,9 +1546,9 @@
       </mv>
     </mv>
     <sh r="A-top" p="A-top-ins"/>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: serif-bottom-left, second-left: (serif-bottom-left + 1), first-right: serif-bottom-right, second-right: (serif-bottom-right + 1), stem1: left-diag-bottom, stem2: right-diag-bottom</pms>
-    </callf>
+    </callm>
     <callm nm="mid-stem">
       <pms>ref1: A-top, ref2: serif-bottom-left, pt1: bar-bottom, pt2: bar-top, cv: cap-bar</pms>
     </callm>
@@ -1584,9 +1583,9 @@
       <sh p="Y-bottom-sh"/>
       <mv col="b" p="Y-bottom-ins"/>
     </mv>
-    <callf nm="interpolated-stem">
+    <callm nm="interpolated-stem">
       <pms>ref-a: A-bottom-serif, ref-b: A-top, stem-a: A-bar-bottom, stem-b: A-bar-top, cv: cap-bar</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -1643,9 +1642,9 @@
     <mv round="yes" p="O-bot">
       <mv di="cap-curved-stem" col="b" p="O-bot-ins"/>
     </mv>
-    <callf nm="interpolated-stem">
+    <callm nm="interpolated-stem">
       <pms>ref-a: A-top, ref-b: A-serif-left, stem-a: A-bar-bot, stem-b: A-bar-top, cv: cap-bar</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -1663,18 +1662,18 @@
     <cn nm="U-bot-ins" val="36"/>
     <set nm="bot-sh-a" p="diag-bot U-bot"/>
     <setvs axis="y"/>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: top-serif-left, second-left: (top-serif-left - 1), first-right: top-serif-right, second-right: (top-serif-right - 1), stem1: stem-left-top, stem2: stem-right-top, cv: cap-height</pms>
-    </callf>
+    </callm>
     <callm nm="serif-sh">
       <pms>pt-a: bot-serif, pt-b: (bot-serif + 1), sh-a: bot-sh-a</pms>
     </callm>
     <mv round="yes" p="U-bot">
       <mv di="cap-curved-stem" col="b" p="U-bot-ins"/>
     </mv>
-    <callf nm="interpolated-stem">
+    <callm nm="interpolated-stem">
       <pms>ref-a: top-serif-left, ref-b: bot-serif, stem-a: bar-bot, stem-b: bar-top, cv: cap-bar</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -1697,9 +1696,9 @@
     <callm nm="serif-sh">
       <pms>pt-a: top-serif, pt-b: (top-serif - 1), sh-a: right-diag-top, cv: cap-height</pms>
     </callm>
-    <callf nm="interpolated-stem">
+    <callm nm="interpolated-stem">
       <pms>ref-a: A-top, ref-b: bot-serif, stem-a: bar-bot, stem-b: bar-top, cv: cap-bar</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -1725,9 +1724,9 @@
     <callm nm="serif-sh">
       <pms>pt-a: top-serif, pt-b: (top-serif - 1), sh-a: right-diag-top, cv: cap-height</pms>
     </callm>
-    <callf nm="interpolated-stem">
+    <callm nm="interpolated-stem">
       <pms>ref-a: A-top, ref-b: bot-serif, stem-a: bar-bot, stem-b: bar-top, cv: cap-bar</pms>
-    </callf>
+    </callm>
     <mv round="yes" p="tail">
       <sh p="tail-sh"/>
       <mv col="b" p="tail-mv"/>
@@ -1914,12 +1913,12 @@
     <cn nm="bar-top" val="9"/>
     <cn nm="bar-bottom" val="8"/>
     <setvs axis="y"/>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: top-left-a, second-left: top-left-b, first-right: top-right-a, second-right: top-right-b, stem1: left-stem-top, stem2: right-stem-top, cv: cap-height</pms>
-    </callf>
-    <callf nm="cap-dbl-serif">
+    </callm>
+    <callm nm="cap-dbl-serif">
       <pms>first-left: bottom-left-a, second-left: bottom-left-b, first-right: bottom-right-a, second-right: bottom-right-b, stem1: left-stem-bottom, stem2: right-stem-bottom</pms>
-    </callf>
+    </callm>
     <callm nm="mid-stem">
       <pms>ref1: bottom-left-a, ref2: top-left-a, pt1: bar-bottom, pt2: bar-top, cv: cap-bar</pms>
     </callm>
@@ -1941,15 +1940,15 @@
     <cn nm="v-bottom" val="0"/>
     <cn nm="v-bottom-ins" val="13"/>
     <setvs axis="y"/>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: top-left-a, second-left: top-left-b, first-right: top-right-a, second-right: top-right-b, stem1: left-stem-top, stem2: right-stem-top, cv: cap-height</pms>
-    </callf>
+    </callm>
     <callm nm="serif-sh">
       <pms>pt-a: bottom-left-a, pt-b: bottom-left-b, sh-a: left-stem-bottom</pms>
     </callm>
-    <callf nm="interpolated-stem">
+    <callm nm="interpolated-stem">
       <pms>ref-a: bottom-left-a, ref-b: top-left-a, stem-a: bar-bottom, stem-b: bar-top, cv: cap-bar</pms>
-    </callf>
+    </callm>
     <mv di="baseline-undershoot" p="v-bottom">
       <mv di="cap-curved-stem" col="b" p="v-bottom-ins"/>
     </mv>
@@ -2022,9 +2021,9 @@
     <cn nm="bar-mid" val="19"/>
     <cn nm="bar-bottom" val="11"/>
     <setvs axis="y"/>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: top-left-a, second-left: top-left-b, first-right: top-right-a, second-right: top-right-b, stem1: left-stem-top, stem2: right-stem-top, cv: cap-height</pms>
-    </callf>
+    </callm>
     <mv di="baseline" p="bottom-left-a">
       <sh p="left-stem-bottom bottom-right-a"/>
       <mv di="cap-serif" col="b" p="bottom-left-b">
@@ -2095,9 +2094,9 @@
     <cn nm="point-lower" val="4"/>
     <cn nm="point-upper" val="14"/>
     <setvs axis="y"/>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: bottom-left-a, second-left: bottom-left-b, first-right: bottom-right-a, second-right: bottom-right-b, stem1: left-stem-bottom, stem2: right-stem-bottom</pms>
-    </callf>
+    </callm>
     <mv di="cap-height" p="top-left-a">
       <sh p="top-left-stem top-right-a top-right-sh1 top-right-sh2 point-lower point-upper"/>
       <mv di="cap-serif" col="b" p="top-left-b">
@@ -2174,9 +2173,9 @@
     <callg pnm="O">
       <pms>offset: 4, include-iup: -1</pms>
     </callg>
-    <callf nm="interpolated-stem">
+    <callm nm="interpolated-stem">
       <pms>ref-a: top, ref-b: bot, stem-a: bar-bot, stem-b: bar-top, cv: cap-bar</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -2255,9 +2254,9 @@
     <callm nm="serif-sh">
       <pms>pt-a: bottom-serif-left, pt-b: (bottom-serif-left + 1), sh-a: stem-bottom</pms>
     </callm>
-    <callf nm="interpolated-stem">
+    <callm nm="interpolated-stem">
       <pms>ref-a: top-serif-left, ref-b: bottom-serif-left, stem-a: bowl-bottom, stem-b: bowl-bottom-ins, cv: cap-curved-stem</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -2276,9 +2275,9 @@
     <callm nm="serif-sh">
       <pms>pt-a: bottom-serif, pt-b: (bottom-serif + 1), sh-a: stem-bottom</pms>
     </callm>
-    <callf nm="interpolated-stem">
+    <callm nm="interpolated-stem">
       <pms>ref-a: top-serif, ref-b: bottom-serif, stem-a: bowl-bottom, stem-b: (bowl-bottom + 1), cv: cap-curved-stem</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -2392,9 +2391,9 @@
     <cn nm="bottom" val="0"/>
     <cn nm="bottom-ins" val="13"/>
     <setvs axis="y"/>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: serif-left, second-left: (serif-left - 1), first-right: serif-right, second-right: (serif-right - 1), stem1: stem-left, stem2: stem-right, cv: cap-height</pms>
-    </callf>
+    </callm>
     <mv di="baseline-undershoot" p="bottom">
       <mv di="cap-curved-stem" col="b" p="bottom-ins"/>
     </mv>
@@ -2430,9 +2429,9 @@
     <cn nm="bottom" val="0"/>
     <cn nm="bottom-ins" val="4"/>
     <setvs axis="y"/>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: serif-left, second-left: (serif-left - 1), first-right: serif-right, second-right: (serif-right - 1), stem1: stem-left, stem2: stem-right, cv: cap-height</pms>
-    </callf>
+    </callm>
     <mv di="baseline-undershoot" p="bottom">
       <sh p="bottom-ins"/>
     </mv>
@@ -2496,12 +2495,12 @@
     <cn nm="bottom-stem-left" val="0"/>
     <cn nm="bottom-stem-right" val="7"/>
     <setvs axis="y"/>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: top-serif-left, second-left: (top-serif-left - 1), first-right: top-serif-right, second-right: (top-serif-right - 1), stem1: top-stem-left, stem2: top-stem-right, cv: cap-height</pms>
-    </callf>
-    <callf nm="cap-dbl-serif">
+    </callm>
+    <callm nm="cap-dbl-serif">
       <pms>first-left: bottom-serif-left, second-left: (bottom-serif-left + 1), first-right: bottom-serif-right, second-right: (bottom-serif-right + 1), stem1: bottom-stem-left, stem2: bottom-stem-right</pms>
-    </callf>
+    </callm>
     <compile-if test="include-iup = 0">
       <iup axis="y"/>
     </compile-if>
@@ -2515,9 +2514,9 @@
     <cn nm="top-stem-right" val="8"/>
     <cn nm="bottom-stem" val="0"/>
     <setvs axis="y"/>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: top-serif-left, second-left: (top-serif-left - 1), first-right: top-serif-right, second-right: (top-serif-right - 1), stem1: top-stem-left, stem2: top-stem-right, cv: cap-height</pms>
-    </callf>
+    </callm>
     <callm nm="serif-sh">
       <pms>pt-a: bottom-serif, pt-b: (bottom-serif + 1), sh-a: bottom-stem</pms>
     </callm>
@@ -2584,9 +2583,9 @@
     <cn nm="top" val="26"/>
     <cn nm="bottom" val="28"/>
     <callg pnm="D"/>
-    <callf nm="interpolated-stem">
+    <callm nm="interpolated-stem">
       <pms>ref-a: top, ref-b: bottom, stem-a: bar-bottom, stem-b: bar-top, cv: cap-bar</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -2723,9 +2722,9 @@
       <mv round="yes" p="arm-end"/>
     </mv>
     <mv p="stem-bot"/>
-    <callf nm="interpolated-stem">
+    <callm nm="interpolated-stem">
       <pms>ref-a: stem-top, ref-b: stem-bot, stem-a: bar-bot, stem-b: bar-top, cv: cap-bar</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -2984,9 +2983,9 @@
     <cn nm="bb-bot-ins" val="25"/>
     <cn nm="arm-top" val="36"/>
     <setvs axis="y"/>
-    <callf nm="ascender-top">
+    <callm nm="ascender-top">
       <pms>top: v-top</pms>
-    </callf>
+    </callm>
     <callm nm="serif-sh">
       <pms>pt-a: v-serif, pt-b: (v-serif + 1), sh-a: v-stem-bot, cv-h: lc-serif</pms>
     </callm>
@@ -3167,7 +3166,7 @@
       <pms>pt-a: u-top-a, pt-b: u-top-b, sh-a: u-stem-top, cv: xheight, cv-h: lc-serif</pms>
     </callm>
     <mv di="xheight-overshoot" p="top">
-      <mv col="black" p="top-inside"/>
+      <mv col="b" p="top-inside"/>
     </mv>
     <mv di="baseline-undershoot" p="bottom">
       <sh p="bottom-right u-stem-bot"/>
@@ -3373,9 +3372,9 @@
     <cn nm="bar-b" val="44"/>
     <cn nm="stem-bot" val="0"/>
     <setvs axis="y"/>
-    <callf nm="minim-top">
+    <callm nm="minim-top">
       <pms>top: stem-top</pms>
-    </callf>
+    </callm>
     <push>stem-bot lc-descender arm-ins-a arm-top stem-top xheight-overshoot</push>
     <command nm="MIAP" modifier="1"/>
     <command nm="SHP" modifier="1"/>
@@ -3415,9 +3414,9 @@
     <cn nm="arm-ins-b" val="17"/>
     <cn nm="stem-bot" val="26"/>
     <setvs axis="y"/>
-    <callf nm="minim-top">
+    <callm nm="minim-top">
       <pms>top: stem-top</pms>
-    </callf>
+    </callm>
     <push>stem-bot lc-descender arm-ins-a arm-top stem-top xheight-overshoot</push>
     <command nm="MIAP" modifier="1"/>
     <command nm="SHP" modifier="1"/>
@@ -4040,9 +4039,9 @@
     <cn nm="top-stem-right" val="8"/>
     <cn nm="bottom-stem" val="0"/>
     <setvs axis="y"/>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: top-serif-left, second-left: (top-serif-left - 1), first-right: top-serif-right, second-right: (top-serif-right - 1), stem1: top-stem-left, stem2: top-stem-right, cv: cap-height</pms>
-    </callf>
+    </callm>
     <callm nm="serif-sh">
       <pms>pt-a: bottom-serif, pt-b: (bottom-serif + 1), sh-a: bottom-stem</pms>
     </callm>
@@ -4825,12 +4824,12 @@
     <mv di="sc-height-overshoot" p="top">
       <sh p="left-diag-top"/>
     </mv>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: serif-bottom-left, second-left: (serif-bottom-left + 1), first-right: serif-bottom-right, second-right: (serif-bottom-right + 1), stem1: left-diag-bottom, stem2: right-diag-bottom</pms>
-    </callf>
-    <callf nm="interpolated-stem">
+    </callm>
+    <callm nm="interpolated-stem">
       <pms>ref-a: top, ref-b: serif-bottom-left, stem-a: bar-bottom, stem-b: bar-top, cv: sc-bar</pms>
-    </callf>
+    </callm>
     <compile-if test="include-iup = 0">
       <iup axis="y"/>
     </compile-if>
@@ -4860,9 +4859,9 @@
     <callm nm="serif-sh">
       <pms>pt-a: left-serif, pt-b: (left-serif + 1), sh-a: serif-sh-a, sh-b: (right-serif + 1), cv-h: sc-serif</pms>
     </callm>
-    <callf nm="interpolated-stem">
+    <callm nm="interpolated-stem">
       <pms>ref-a: top, ref-b: left-serif, stem-a: bar-bot, stem-b: bar-top, cv: sc-bar</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -4892,9 +4891,9 @@
 	sh-a: bottom-sh-a, sh-b: bottom-sh-b, cv-h: sc-serif
       </pms>
     </callm>
-    <callf nm="interpolated-stem">
+    <callm nm="interpolated-stem">
       <pms>ref-a: serif-bottom-left, ref-b: top, stem-a: bar-bottom, stem-b: bar-top, cv: sc-bar</pms>
-    </callf>
+    </callm>
     <sh r="bar-bottom" p="left-bar-bottom"/>
     <sh r="bar-top" p="left-bar-top"/>
     <iup axis="y"/>
@@ -4923,9 +4922,9 @@
     <callm nm="serif-sh">
       <pms>pt-a: bot-serif, pt-b: (bot-serif + 1), sh-a: diag-bottom, cv-h: sc-serif</pms>
     </callm>
-    <callf nm="interpolated-stem">
+    <callm nm="interpolated-stem">
       <pms>ref-a: top-left-serif, ref-b: bot-serif, stem-a: bar-bot, stem-b: bar-top, cv: sc-bar</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -5007,9 +5006,9 @@
       <sh p="Y-bottom-sh"/>
       <mv col="b" p="Y-bottom-ins"/>
     </mv>
-    <callf nm="interpolated-stem">
+    <callm nm="interpolated-stem">
       <pms>ref-a: A-bottom-serif, ref-b: A-top, stem-a: A-bar-bottom, stem-b: A-bar-top, cv: sc-bar</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -5192,9 +5191,9 @@
       <mv round="yes" p="arm-end"/>
     </mv>
     <mv p="stem-bot"/>
-    <callf nm="interpolated-stem">
+    <callm nm="interpolated-stem">
       <pms>ref-a: stem-top, ref-b: stem-bot, stem-a: bar-bot, stem-b: bar-top, cv: sc-bar</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -5294,15 +5293,15 @@
     <cn nm="bar-top" val="9"/>
     <cn nm="bar-bottom" val="8"/>
     <setvs axis="y"/>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: top-left-a, second-left: top-left-b, first-right: top-right-a, second-right: top-right-b, stem1: left-stem-top, stem2: right-stem-top, cv: sc-height</pms>
-    </callf>
-    <callf nm="cap-dbl-serif">
+    </callm>
+    <callm nm="cap-dbl-serif">
       <pms>first-left: bottom-left-a, second-left: bottom-left-b, first-right: bottom-right-a, second-right: bottom-right-b, stem1: left-stem-bottom, stem2: right-stem-bottom</pms>
-    </callf>
-    <callf nm="interpolated-stem">
+    </callm>
+    <callm nm="interpolated-stem">
       <pms>ref-a: bottom-left-a, ref-b: top-left-a, stem-a: bar-bottom, stem-b: bar-top, cv: sc-bar</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -5332,15 +5331,15 @@
     <cn nm="v-bottom" val="0"/>
     <cn nm="v-bottom-ins" val="9"/>
     <setvs axis="y"/>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: top-left-a, second-left: top-left-b, first-right: top-right-a, second-right: top-right-b, stem1: left-stem-top, stem2: right-stem-top, cv: sc-height</pms>
-    </callf>
+    </callm>
     <callm nm="serif-sh">
       <pms>pt-a: bottom-left-a, pt-b: bottom-left-b, sh-a: left-stem-bottom, cv-h: sc-serif</pms>
     </callm>
-    <callf nm="interpolated-stem">
+    <callm nm="interpolated-stem">
       <pms>ref-a: bottom-left-a, ref-b: top-left-a, stem-a: bar-bottom, stem-b: bar-top, cv: sc-bar</pms>
-    </callf>
+    </callm>
     <mv di="baseline-undershoot" p="v-bottom">
       <mv di="sc-curved-stem" col="b" p="v-bottom-ins"/>
     </mv>
@@ -5401,9 +5400,9 @@
     <cn nm="bar-mid" val="20"/>
     <cn nm="bar-bottom" val="12"/>
     <setvs axis="y"/>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: top-left-a, second-left: top-left-b, first-right: top-right-a, second-right: top-right-b, stem1: left-stem-top, stem2: right-stem-top, cv: sc-height</pms>
-    </callf>
+    </callm>
     <mv di="baseline" p="bottom-left-a">
       <sh p="left-stem-bottom bottom-right-a"/>
       <mv di="sc-serif" col="b" p="bottom-left-b">
@@ -5480,9 +5479,9 @@
     <cn nm="point-lower" val="4"/>
     <cn nm="point-upper" val="14"/>
     <setvs axis="y"/>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: bottom-left-a, second-left: bottom-left-b, first-right: bottom-right-a, second-right: bottom-right-b, stem1: left-stem-bottom, stem2: right-stem-bottom</pms>
-    </callf>
+    </callm>
     <mv di="sc-height" p="top-left-a">
       <sh p="top-left-stem top-right-a top-right-sh1 top-right-sh2 point-lower point-upper"/>
       <mv di="sc-serif" col="b" p="top-left-b">
@@ -5647,9 +5646,9 @@
     <callm nm="serif-sh">
       <pms>pt-a: bottom-serif-left, pt-b: (bottom-serif-left + 1), sh-a: stem-bottom, cv-h: sc-serif</pms>
     </callm>
-    <callf nm="interpolated-stem">
+    <callm nm="interpolated-stem">
       <pms>ref-a: top-serif-left, ref-b: bottom-serif-left, stem-a: bowl-bottom, stem-b: bowl-bottom-ins, cv: sc-curved-stem</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -5881,9 +5880,9 @@
     <pm nm="bottom" val="0"/>
     <pm nm="bottom-ins" val="13"/>
     <setvs axis="y"/>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: serif-left, second-left: (serif-left - 1), first-right: serif-right, second-right: (serif-right - 1), stem1: stem-left, stem2: stem-right, cv: sc-height</pms>
-    </callf>
+    </callm>
     <mv di="baseline-undershoot" p="bottom">
       <mv di="sc-curved-stem" col="b" p="bottom-ins"/>
     </mv>
@@ -5914,9 +5913,9 @@
     <cn nm="bottom" val="0"/>
     <cn nm="bottom-ins" val="4"/>
     <setvs axis="y"/>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: serif-left, second-left: (serif-left - 1), first-right: serif-right, second-right: (serif-right - 1), stem1: stem-left, stem2: stem-right, cv: sc-height</pms>
-    </callf>
+    </callm>
     <mv di="baseline-undershoot" p="bottom">
       <sh p="bottom-ins"/>
     </mv>
@@ -5986,9 +5985,9 @@
     <callm nm="serif-sh">
       <pms>pt-a: bottom-serif, pt-b: (bottom-serif + 1), sh-a: stem-bottom, cv-h: sc-serif</pms>
     </callm>
-    <callf nm="interpolated-stem">
+    <callm nm="interpolated-stem">
       <pms>ref-a: top-serif, ref-b: bottom-serif, stem-a: bowl-bottom, stem-b: (bowl-bottom + 1), cv: sc-curved-stem</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -6002,12 +6001,12 @@
     <cn nm="bottom-stem-left" val="0"/>
     <cn nm="bottom-stem-right" val="7"/>
     <setvs axis="y"/>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: top-serif-left, second-left: (top-serif-left - 1), first-right: top-serif-right, second-right: (top-serif-right - 1), stem1: top-stem-left, stem2: top-stem-right, cv: sc-height</pms>
-    </callf>
-    <callf nm="cap-dbl-serif">
+    </callm>
+    <callm nm="cap-dbl-serif">
       <pms>first-left: bottom-serif-left, second-left: (bottom-serif-left + 1), first-right: bottom-serif-right, second-right: (bottom-serif-right + 1), stem1: bottom-stem-left, stem2: bottom-stem-right</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -6019,9 +6018,9 @@
     <cn nm="top-stem-right" val="8"/>
     <cn nm="bottom-stem" val="0"/>
     <setvs axis="y"/>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: top-serif-left, second-left: (top-serif-left - 1), first-right: top-serif-right, second-right: (top-serif-right - 1), stem1: top-stem-left, stem2: top-stem-right, cv: sc-height</pms>
-    </callf>
+    </callm>
     <callm nm="serif-sh">
       <pms>pt-a: bottom-serif, pt-b: (bottom-serif + 1), sh-a: bottom-stem, cv-h: sc-serif</pms>
     </callm>
@@ -6201,9 +6200,9 @@
     <cn nm="bar-top" val="5"/>
     <cn nm="bar-bot" val="6"/>
     <setvs axis="y"/>
-    <callf nm="lc-bowl">
+    <callm nm="lc-bowl">
       <pms>t: top, t-ins: top-ins, cv-t: lc-thick-curve, b: bottom, b-ins: bottom-ins</pms>
-    </callf>
+    </callm>
     <callm nm="mid-stem">
       <pms>ref1: top, ref2: bottom, pt1: bar-top, pt2: bar-bot, cv: lc-bar</pms>
     </callm>
@@ -6335,9 +6334,9 @@
 
   <gl pnm="uni0254">
     <setvs axis="y"/>
-    <callf nm="lc-bowl">
+    <callm nm="lc-bowl">
       <pms>t: 32, t-ins: 24, cv-t: lc-thick-curve, b: 0, b-ins: 16</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -6349,9 +6348,9 @@
     <cn nm="mid-upper" val="45"/>
     <cn nm="mid-lower" val="38"/>
     <setvs axis="y"/>
-    <callf nm="lc-bowl">
+    <callm nm="lc-bowl">
       <pms>t: top, t-ins: top-ins, b: bot, b-ins: bot-ins, cv-b: lc-thick-curve</pms>
-    </callf>
+    </callm>
     <callm nm="mid-stem">
       <pms>ref1: top, ref2: bot, pt1: mid-upper, pt2: mid-lower</pms>
     </callm>
@@ -6368,12 +6367,12 @@
     <cn nm="bottom-sh" val="56"/>
     <cn nm="bottom-mv" val="61"/>
     <setvs axis="y"/>
-    <callf nm="ascender-top">
+    <callm nm="ascender-top">
       <pms>top: top</pms>
-    </callf>
-    <callf nm="lc-bowl">
+    </callm>
+    <callm nm="lc-bowl">
       <pms>t: bowl-top, t-ins: bowl-top-ins, b: bowl-bot, b-ins: bowl-bot-ins, cv-b: lc-thick-curve</pms>
-    </callf>
+    </callm>
     <mv di="lc-descender" p="bottom">
       <sh p="bottom-sh"/>
       <mv p="bottom-mv"/>
@@ -6386,9 +6385,9 @@
     <callm nm="hook">
       <pms>init: 26, cv: lc-ascender-top, sh: 37, mv: 32</pms>
     </callm>
-    <callf nm="lc-bowl">
+    <callm nm="lc-bowl">
       <pms>t: 14, t-ins: 61, b: 5, b-ins: 54, cv-b: lc-thick-curve</pms>
-    </callf>
+    </callm>
     <srp whichpointer="1">
       <pt n="5"/>
     </srp>
@@ -6398,9 +6397,9 @@
 
   <gl pnm="uni0258">
     <setvs axis="y"/>
-    <callf nm="lc-bowl">
+    <callm nm="lc-bowl">
       <pms>t: 25, t-ins: 15, b: 0, b-ins: 7, cv-b: lc-thick-curve</pms>
-    </callf>
+    </callm>
     <callm nm="mid-stem">
       <pms>ref1: 25, ref2: 0, pt1: 21, pt2: 18, cv: lc-bar</pms>
     </callm>
@@ -6409,9 +6408,9 @@
 
   <gl pnm="uni025B">
     <setvs axis="y"/>
-    <callf nm="lc-bowl">
+    <callm nm="lc-bowl">
       <pms>t: 12, t-ins: 26, b: 0, b-ins: 41, cv-b: lc-thick-curve</pms>
-    </callf>
+    </callm>
     <callm nm="mid-stem">
       <pms>ref1: 12, ref2: 0, pt1: 34, pt2: 33, cv: lc-bar</pms>
     </callm>
@@ -6420,9 +6419,9 @@
 
   <gl pnm="uni025C">
     <setvs axis="y"/>
-    <callf nm="lc-bowl">
+    <callm nm="lc-bowl">
       <pms>t: 35, t-ins: 21, b: 0, b-ins: 6, cv-b: lc-thick-curve</pms>
-    </callf>
+    </callm>
     <callm nm="mid-stem">
       <pms>ref1: 35, ref2: 0, pt1: 13, pt2: 14, cv: lc-bar</pms>
     </callm>
@@ -6436,9 +6435,9 @@
 
   <gl pnm="uni025E">
     <setvs axis="y"/>
-    <callf nm="lc-bowl">
+    <callm nm="lc-bowl">
       <pms>t: 9, t-ins: 39, b: 0, b-ins: 24</pms>
-    </callf>
+    </callm>
     <callm nm="mid-stem">
       <pms>ref1: 9, ref2: 0, pt1: 31, pt2: 32, cv: lc-bar</pms>
     </callm>
@@ -6476,9 +6475,9 @@
     <callm nm="hook">
       <pms>init: 0, cv: lc-descender, sh: 13, mv: 6</pms>
     </callm>
-    <callf nm="lc-bowl">
+    <callm nm="lc-bowl">
       <pms>t: 55, t-ins: 62, b: 47, b-ins: 69</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -6487,9 +6486,9 @@
     <callm nm="hook">
       <pms>init: 0, cv: lc-descender, sh: 13, mv: 6</pms>
     </callm>
-    <callf nm="lc-bowl">
+    <callm nm="lc-bowl">
       <pms>t: 36, t-ins: 43, b: 28, b-ins: 50</pms>
-    </callf>
+    </callm>
     <srp whichpointer="1">
       <pt n="36"/>
     </srp>
@@ -6532,9 +6531,9 @@
     <cn nm="bot" val="0"/>
     <cn nm="bot-ins" val="15"/>
     <setvs axis="y"/>
-    <callf nm="lc-dbl-serif">
+    <callm nm="lc-dbl-serif">
       <pms>first-left: 33, second-left: 32, first-right: 38, second-right: 37, stem1: 22, stem2: 7, cv: xheight</pms>
-    </callf>
+    </callm>
     <mv di="lc-descender" p="bot">
       <mv p="bot-ins"/>
     </mv>
@@ -6567,9 +6566,9 @@
     <cn nm="desc" val="22"/>
     <cn nm="lower-serif-end" val="32"/>
     <setvs axis="y"/>
-    <callf nm="lc-dbl-serif">
+    <callm nm="lc-dbl-serif">
       <pms>first-left: 35, second-left: 34, first-right: 40, second-right: 39, stem1: 7, stem2: 27, cv: xheight</pms>
-    </callf>
+    </callm>
     <mv di="baseline-undershoot" p="bot">
       <mv p="bot-ins"/>
     </mv>
@@ -6583,9 +6582,9 @@
     <cn nm="bow-top" val="51"/>
     <cn nm="bow-top-ins" val="44"/>
     <setvs axis="y"/>
-    <callf nm="lc-dbl-serif">
+    <callm nm="lc-dbl-serif">
       <pms>first-left: 27, second-left: 28, first-right: 32, second-right: 33, stem1: 0, stem2: 37, cv: xheight</pms>
-    </callf>
+    </callm>
     <mv di="xheight-overshoot" p="bow-top">
       <mv p="bow-top-ins"/>
     </mv>
@@ -6624,9 +6623,9 @@
     <callg pnm="dotaccent">
       <pms>offset: 20, include-iup: -1</pms>
     </callg>
-    <callf nm="minim-top">
+    <callm nm="minim-top">
       <pms>top: stem-top</pms>
-    </callf>
+    </callm>
     <mv di="baseline" p="serif">
       <sh p="stem-bot"/>
       <mv di="lc-serif" p="(serif + 1)"/>
@@ -6673,9 +6672,9 @@
 
   <gl pnm="uni026D">
     <setvs axis="y"/>
-    <callf nm="ascender-top">
+    <callm nm="ascender-top">
       <pms>top: 12</pms>
-    </callf>
+    </callm>
     <callm nm="hook">
       <pms>init: 0, cv: lc-descender, sh: 21, mv: 26</pms>
     </callm>
@@ -6821,9 +6820,9 @@
     <cn nm="hook-mid" val="12"/>
     <cn nm="hook-top" val="7"/>
     <setvs axis="y"/>
-    <callf nm="minim-top">
+    <callm nm="minim-top">
       <pms>top: left-stem-top</pms>
-    </callf>
+    </callm>
     <mv di="xheight-overshoot" p="bow-top">
       <mv col="b" p="bow-top-ins"/>
     </mv>
@@ -6846,9 +6845,9 @@
     <cn nm="hook-mid" val="32"/>
     <cn nm="hook-top" val="37"/>
     <setvs axis="y"/>
-    <callf nm="minim-top">
+    <callm nm="minim-top">
       <pms>top: left-stem-top</pms>
-    </callf>
+    </callm>
     <mv di="xheight-overshoot" p="bow-top">
       <mv col="b" p="bow-top-ins"/>
     </mv>
@@ -7031,9 +7030,9 @@
     <cn nm="hook-mid" val="49"/>
     <cn nm="hook-top" val="54"/>
     <setvs axis="y"/>
-    <callf nm="minim-top">
+    <callm nm="minim-top">
       <pms>top: stem-top</pms>
-    </callf>
+    </callm>
     <sh r="stem-top" p="arm-top"/>
     <mv r="arm-top" p="arm-below1">
       <sh p="arm-below1"/>
@@ -7296,9 +7295,9 @@
     <cn nm="bot-ins" val="18"/>
     <cn nm="top-right" val="32"/>
     <setvs axis="y"/>
-    <callf nm="minim-top">
+    <callm nm="minim-top">
       <pms>top: top</pms>
-    </callf>
+    </callm>
     <sh p="top-right"/>
     <mv di="xheight-overshoot" p="top">
       <sh p="(top - 1) (top - 2)"/>
@@ -7313,9 +7312,9 @@
     <cn nm="top" val="1"/>
     <cn nm="top-ins" val="6"/>
     <setvs axis="y"/>
-    <callf nm="lc-dbl-serif">
+    <callm nm="lc-dbl-serif">
       <pms>first-left: 8, second-left: 9, first-right: 13, second-right: 14, stem1: 0, stem2: 4</pms>
-    </callf>
+    </callm>
     <mv di="xheight-overshoot" p="top">
       <sh p="top-ins"/>
     </mv>
@@ -7346,9 +7345,9 @@
     <cn nm="diag-top" val="27"/>
     <cn nm="left-serif" val="15"/>
     <setvs axis="y"/>
-    <callf nm="lc-dbl-serif">
+    <callm nm="lc-dbl-serif">
       <pms>first-left: left-serif, second-left: 16, first-right: 20, second-right: 21, stem1: 0, stem2: 25</pms>
-    </callf>
+    </callm>
     <mv round="yes" p="top">
       <mv col="b" p="top-under"/>
     </mv>
@@ -7364,9 +7363,9 @@
     <cn nm="top-stem-right" val="8"/>
     <cn nm="bottom-stem" val="0"/>
     <setvs axis="y"/>
-    <callf nm="lc-dbl-serif">
+    <callm nm="lc-dbl-serif">
       <pms>first-left: top-serif-left, second-left: (top-serif-left - 1), first-right: top-serif-right, second-right: (top-serif-right - 1), stem1: top-stem-left, stem2: top-stem-right, cv: xheight</pms>
-    </callf>
+    </callm>
     <callm nm="serif-sh">
       <pms>pt-a: bottom-serif, pt-b: (bottom-serif + 1), sh-a: bottom-stem, cv-h: lc-serif</pms>
     </callm>
@@ -7637,15 +7636,15 @@
     <cn nm="bar-top" val="9"/>
     <cn nm="bar-bottom" val="8"/>
     <setvs axis="y"/>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: top-left-a, second-left: top-left-b, first-right: top-right-a, second-right: top-right-b, stem1: left-stem-top, stem2: right-stem-top, cv: xheight</pms>
-    </callf>
-    <callf nm="cap-dbl-serif">
+    </callm>
+    <callm nm="cap-dbl-serif">
       <pms>first-left: bottom-left-a, second-left: bottom-left-b, first-right: bottom-right-a, second-right: bottom-right-b, stem1: left-stem-bottom, stem2: right-stem-bottom</pms>
-    </callf>
-    <callf nm="interpolated-stem">
+    </callm>
+    <callm nm="interpolated-stem">
       <pms>ref-a: bottom-left-a, ref-b: top-left-a, stem-a: bar-bottom, stem-b: bar-top, cv: lc-bar</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -7656,9 +7655,9 @@
     <cn nm="loop-top" val="7"/>
     <cn nm="loop-bot" val="16"/>
     <setvs axis="y"/>
-    <callf nm="minim-top">
+    <callm nm="minim-top">
       <pms>top: stem-top</pms>
-    </callf>
+    </callm>
     <mv di="lc-descender" p="bot">
       <mv di="lc-curved-stem" p="bot-ins"/>
     </mv>
@@ -7703,9 +7702,9 @@
     <callm nm="serif-sh">
       <pms>pt-a: serif, pt-b: (serif + 1), sh-a: stem-bot, cv: lc-descender, cv-h: lc-serif</pms>
     </callm>
-    <callf nm="lc-bowl">
+    <callm nm="lc-bowl">
       <pms>t: bowl-top, t-ins: bowl-top-ins, b: bowl-bot, b-ins: bowl-bot-ins</pms>
-    </callf>
+    </callm>
     <callm nm="hook">
       <pms>init: hook-top, sh: hook-mid, mv: hook-bot</pms>
     </callm>
@@ -7714,12 +7713,12 @@
 
   <gl pnm="uni02A3">
     <setvs axis="y"/>
-    <callf nm="lc-bowl">
+    <callm nm="lc-bowl">
       <pms>t: 15, t-ins: 64, b: 6, b-ins: 57, cv-b: lc-thick-curve</pms>
-    </callf>
-    <callf nm="ascender-top">
+    </callm>
+    <callm nm="ascender-top">
       <pms>top: 24</pms>
-    </callf>
+    </callm>
     <mv di="baseline" p="52">
       <sh p="37"/>
       <mv di="lc-serif" p="39"/>
@@ -7733,12 +7732,12 @@
 
   <gl pnm="uni02A4">
     <setvs axis="y"/>
-    <callf nm="lc-bowl">
+    <callm nm="lc-bowl">
       <pms>t: 14, t-ins: 47, b: 5, b-ins: 40, cv-b: lc-thick-curve</pms>
-    </callf>
-    <callf nm="ascender-top">
+    </callm>
+    <callm nm="ascender-top">
       <pms>top: 23</pms>
-    </callf>
+    </callm>
     <mv di="xheight" p="59">
       <mv col="b" p="58"/>
     </mv>
@@ -7754,12 +7753,12 @@
 
   <gl pnm="uni02A5">
     <setvs axis="y"/>
-    <callf nm="lc-bowl">
+    <callm nm="lc-bowl">
       <pms>t: 33, t-ins: 79, b: 24, b-ins: 72, cv-b: lc-thick-curve</pms>
-    </callf>
-    <callf nm="ascender-top">
+    </callm>
+    <callm nm="ascender-top">
       <pms>top: 42</pms>
-    </callf>
+    </callm>
     <mv di="baseline" p="14">
       <sh p="55"/>
       <mv di="lc-serif" p="56"/>
@@ -7862,9 +7861,9 @@
       <modifier type="col" val="b"/>
     </command>
     <command nm="SHP" modifier="0"/>
-    <callf nm="lc-bowl">
+    <callm nm="lc-bowl">
       <pms>t: c-top, t-ins: c-top-ins, cv-t: lc-curved-stem, b: c-bot, b-ins: c-bot-ins, cv-b: lc-thick-curve</pms>
-    </callf>
+    </callm>
     <callm nm="mid-stem">
       <pms>ref1: c-top, ref2: c-bot, pt1: c-mid-a, pt2: c-mid-b</pms>
     </callm>
@@ -7886,9 +7885,9 @@
     <cn nm="hook-mid" val="70"/>
     <cn nm="hook-top" val="66"/>
     <setvs axis="y"/>
-    <callf nm="f-lig">
+    <callm nm="f-lig">
       <pms>serif-bot: 49, vertical-bot: 0, top: 10, top-ins: 26, bar-top: f-bar-top, bar-bot: f-bar-bot, bar-bot-left: 1</pms>
-    </callf>
+    </callm>
     <mv di="xheight-overshoot" p="minim-top">
       <sh p="(minim-top - 1) (minim-top - 2) counter1-top"/>
     </mv>
@@ -7928,9 +7927,9 @@
     <cn nm="z-top-bar-bot" val="41"/>
     <set nm="serif-sh-a" p="4 38"/>
     <setvs axis="y"/>
-    <callf nm="ascender-top">
+    <callm nm="ascender-top">
       <pms>top: 9</pms>
-    </callf>
+    </callm>
     <callm nm="serif-sh">
       <pms>pt-a: 34, pt-b: 35, sh-a: serif-sh-a, sh-b: z-bot-bar-top, align-b: 0</pms>
     </callm>
@@ -9592,14 +9591,12 @@
 
   <gl pnm="uni031F">
     <setvs axis="y"/>
-    <push>0 4 1 4 5</push>
+    <push>0 0 4 1 1 4 5</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDRP" modifier="11101"/>
-    <command nm="DUP"/>
     <command nm="SHP" modifier="1"/>
     <command nm="MDAP" modifier="1"/>
     <command nm="SRP1"/>
-    <command nm="DUP"/>
     <command nm="SHP" modifier="1"/>
     <command nm="MDAP" modifier="1"/>
     <iup axis="y"/>
@@ -9914,16 +9911,16 @@
     <cn nm="j-bot" val="5"/>
     <cn nm="j-bot-ins" val="16"/>
     <setvs axis="y"/>
-    <callf nm="f-lig">
+    <callm nm="f-lig">
       <pms>serif-bot: 0, vertical-bot: 38, top: 48, top-ins: 64, bar-top: f-bar-top, bar-bot: f-bar-bot, bar-bot-left: 39</pms>
-    </callf>
+    </callm>
     <mv p="j-bot">
       <mv col="b" p="j-bot-ins"/>
     </mv>
     <sh r="f-bar-top" p="j-top"/>
-    <callf nm="lig-join">
+    <callm nm="lig-join">
       <pms>ref1: f-bar-top, ref2: f-bar-bot, pt1: j-join-top, pt2: j-join-bot</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -9939,9 +9936,9 @@
     <cn nm="di-top-a" val="75"/>
     <cn nm="di-top-b" val="87"/>
     <setvs axis="y"/>
-    <callf nm="f-lig">
+    <callm nm="f-lig">
       <pms>serif-bot: 54, vertical-bot: 10, top: 21, top-ins: 36, bar-top: f-bar-top, bar-bot: f-bar-bot, bar-bot-left: 11</pms>
-    </callf>
+    </callm>
     <sh r="f-bar-top" p="o-top"/>
     <push>di-top-b di-top-a di-bot-b di-bot-a o-top o-top-ins lc-curved-stem o-top</push>
     <command nm="MDAP" modifier="1"/>
@@ -9972,9 +9969,9 @@
     <cn nm="bowl-bottom" val="18"/>
     <cn nm="bowl-bottom-ins" val="23"/>
     <setvs axis="y"/>
-    <callf nm="f-lig">
+    <callm nm="f-lig">
       <pms>serif-bot: 70, vertical-bot: 41, top: 51, top-ins: 59, bar-top: 68, bar-bot: 69, bar-bot-left: 42</pms>
-    </callf>
+    </callm>
     <mv di="lc-ascender-top" p="top"/>
     <callm nm="lc-bottom-serif">
       <wpm nm="bottom-left" val="serif-bottom"/>
@@ -10002,12 +9999,12 @@
     <cn nm="bottom-ins" val="38"/>
     <cn nm="stem-bottom" val="47"/>
     <setvs axis="y"/>
-    <callf nm="f-lig">
+    <callm nm="f-lig">
       <pms>serif-bot: 69, vertical-bot: 74, top: 84, top-ins: 100, bar-top: f-bar-top, bar-bot: f-bar-bot, bar-bot-left: 75</pms>
-    </callf>
-    <callf nm="lig-join">
+    </callm>
+    <callm nm="lig-join">
       <pms>ref1: f-bar-top, ref2: f-bar-bot, pt1: top-left, pt2: (top-left - 1)</pms>
-    </callf>
+    </callm>
     <al r="f-bar-top" p="top-right"/>
     <mv di="baseline-undershoot" p="bottom">
       <sh p="stem-bottom"/>
@@ -10024,23 +10021,23 @@
 
   <gl pnm="uniFB00">
     <setvs axis="y"/>
-    <callf nm="f-lig">
+    <callm nm="f-lig">
       <pms>serif-bot: 55, vertical-bot: 0, top: 10, top-ins: 17, bar-top: 52, bar-bot: 51, bar-bot-left: 1, top-cv: lower-f-top</pms>
-    </callf>
-    <callf nm="f-lig">
+    </callm>
+    <callm nm="f-lig">
       <pms>serif-bot: 60, vertical-bot: 24, top: 29, top-ins: 45</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
   <gl pnm="uniFB00.alt">
     <setvs axis="y"/>
-    <callf nm="f-lig">
+    <callm nm="f-lig">
       <pms>serif-bot: 56, vertical-bot: 0, top: 10, top-ins: 17, bar-top: 53, bar-bot: 52, bar-bot-left: 1, top-cv: lower-f-top</pms>
-    </callf>
-    <callf nm="f-lig">
+    </callm>
+    <callm nm="f-lig">
       <pms>serif-bot: 61, vertical-bot: 24, top: 30, top-ins: 45</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -10051,16 +10048,16 @@
     <cn nm="i-join-bot" val="8"/>
     <cn nm="i-top" val="12"/>
     <setvs axis="y"/>
-    <callf nm="f-lig">
+    <callm nm="f-lig">
       <pms>serif-bot: 18, vertical-bot: 23, top: 33, top-ins: 49, bar-top: 55, bar-bot: 56, bar-bot-left: 24</pms>
-    </callf>
+    </callm>
     <callm nm="serif-sh">
       <pms>pt-a: 0, pt-b: 1, sh-a: 5, cv-h: lc-serif</pms>
     </callm>
     <sh r="f-bar-top" p="i-top"/>
-    <callf nm="lig-join">
+    <callm nm="lig-join">
       <pms>ref1: f-bar-top, ref2: f-bar-bot, pt1: i-join-top, pt2: i-join-bot</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -10069,9 +10066,9 @@
     <pm nm="l-vertical-bottom" val="5"/>
     <pm nm="l-top" val="7"/>
     <setvs axis="y"/>
-    <callf nm="f-lig">
+    <callm nm="f-lig">
       <pms>serif-bot: 42, vertical-bot: 13, top: 23, top-ins: 31, bar-top: 39, bar-bot: 38, bar-bot-left: 14</pms>
-    </callf>
+    </callm>
     <callm nm="serif-sh">
       <pms>pt-a: l-serif-bottom, pt-b: (l-serif-bottom + 1), sh-a: l-vertical-bottom, cv-h: lc-serif</pms>
     </callm>
@@ -10086,19 +10083,19 @@
     <cn nm="i-join-bot" val="3"/>
     <cn nm="i-top" val="9"/>
     <setvs axis="y"/>
-    <callf nm="f-lig">
+    <callm nm="f-lig">
       <pms>serif-bot: 75, vertical-bot: 20, top: 30, top-ins: 37, bar-top: f-bar-top, bar-bot: f-bar-bot, bar-bot-left: 21, top-cv: lower-f-top</pms>
-    </callf>
-    <callf nm="f-lig">
+    </callm>
+    <callm nm="f-lig">
       <pms>serif-bot: 80, vertical-bot: 44, top: 49, top-ins: 65</pms>
-    </callf>
+    </callm>
     <callm nm="serif-sh">
       <pms>pt-a: 15, pt-b: 16, sh-a: 0, cv-h: lc-serif</pms>
     </callm>
     <sh r="f-bar-top" p="i-top"/>
-    <callf nm="lig-join">
+    <callm nm="lig-join">
       <pms>ref1: f-bar-top, ref2: f-bar-bot, pt1: i-join-top, pt2: i-join-bot</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -10109,12 +10106,12 @@
     <cn nm="l-vertical-bottom" val="38"/>
     <cn nm="l-top" val="40"/>
     <setvs axis="y"/>
-    <callf nm="f-lig">
+    <callm nm="f-lig">
       <pms>serif-bot: 28, vertical-bot: 0, top: 10, top-ins: 17, bar-top: f-bar-top, bar-bot: f-bar-bot, bar-bot-left: 1, top-cv: lower-f-top</pms>
-    </callf>
-    <callf nm="f-lig">
+    </callm>
+    <callm nm="f-lig">
       <pms>serif-bot: 33, vertical-bot: 51, top: 56, top-ins: 64</pms>
-    </callf>
+    </callm>
     <callm nm="serif-sh">
       <pms>pt-a: l-serif-bottom, pt-b: (l-serif-bottom + 1), sh-a: l-vertical-bottom, cv-h: lc-serif</pms>
     </callm>
@@ -10130,9 +10127,9 @@
     <cn nm="bowl-bottom" val="46"/>
     <cn nm="bowl-bottom-ins" val="47"/>
     <setvs axis="y"/>
-    <callf nm="f-lig">
+    <callm nm="f-lig">
       <pms>serif-bot: 41, vertical-bot: 12, top: 22, top-ins: 30, bar-top: 38, bar-bot: 37, bar-bot-left: 13</pms>
-    </callf>
+    </callm>
     <mv di="lc-ascender-top" p="top"/>
     <mv di="lc-descender-undershoot" p="stem-bottom"/>
     <callm nm="lc-horz-stroke-cv">
@@ -10181,9 +10178,9 @@
         <sh p="vserif-top"/>
       </mv>
     </mv>
-    <callf nm="rhotic-hook">
+    <callm nm="rhotic-hook">
       <pms>d-top: hook-d-top, d-bot: hook-d-bot, a: hook-a, b: hook-b</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -10199,15 +10196,15 @@
     <cn nm="hook-a" val="25"/>
     <cn nm="hook-b" val="19"/>
     <setvs axis="y"/>
-    <callf nm="lc-dbl-serif">
+    <callm nm="lc-dbl-serif">
       <pms>first-left: top-serif-left, second-left: (top-serif-left - 1), first-right: top-serif-right, second-right: (top-serif-right - 1), stem1: top-stem-left, stem2: top-stem-right, cv: xheight</pms>
-    </callf>
+    </callm>
     <callm nm="serif-sh">
       <pms>pt-a: bottom-serif, pt-b: (bottom-serif + 1), sh-a: bottom-stem, cv-h: lc-serif</pms>
     </callm>
-    <callf nm="rhotic-hook">
+    <callm nm="rhotic-hook">
       <pms>d-top: hook-d-top, d-bot: hook-d-bot, a: hook-a, b: hook-b</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -10229,9 +10226,9 @@
     <mv di="xheight-overshoot" p="top">
       <mv di="lc-curved-stem" col="b" p="top-inside"/>
     </mv>
-    <callf nm="rhotic-hook">
+    <callm nm="rhotic-hook">
       <pms>d-top: hook-d-top, d-bot: hook-d-bot, a: hook-a, b: hook-b</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -10265,9 +10262,9 @@
     </mv>
     <ip r="top-left bottom-left" p="diag-bottom"/>
     <sh r="diag-bottom" p="diag-top"/>
-    <callf nm="rhotic-hook">
+    <callm nm="rhotic-hook">
       <pms>d-top: hook-d-top, d-bot: hook-d-bot, a: hook-a, b: hook-b</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -10290,9 +10287,9 @@
       <pms>pt1: top, pt2: top-inside, cv: xheight-overshoot, cv-h: lc-curved-stem</pms>
     </callm>
     <ip r="top bottom" p="mid-bar-top mid-bar-bottom"/>
-    <callf nm="rhotic-hook">
+    <callm nm="rhotic-hook">
       <pms>d-top: hook-d-top, d-bot: hook-d-bot, a: hook-a, b: hook-b</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -10302,18 +10299,18 @@
     <cn nm="hook-a" val="43"/>
     <cn nm="hook-b" val="61"/>
     <setvs axis="y"/>
-    <callf nm="lc-bowl">
+    <callm nm="lc-bowl">
       <pms>t: 12, t-ins: 22, b: 0, b-ins: 37, cv-b: lc-thick-curve</pms>
-    </callf>
+    </callm>
     <callm nm="mid-stem">
       <pms>ref1: 12, ref2: 0, pt1: 29, pt2: 30, cv: lc-bar</pms>
     </callm>
     <push>52 16</push>
     <command nm="MDAP" modifier="0"/>
     <command nm="SHP" modifier="1"/>
-    <callf nm="rhotic-hook">
+    <callm nm="rhotic-hook">
       <pms>d-top: hook-d-top, d-bot: hook-d-bot, a: hook-a, b: hook-b</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -10323,15 +10320,15 @@
     <cn nm="hook-a" val="37"/>
     <cn nm="hook-b" val="30"/>
     <setvs axis="y"/>
-    <callf nm="lc-bowl">
+    <callm nm="lc-bowl">
       <pms>t: 54, t-ins: 15, b: 0, b-ins: 7, cv-b: lc-thick-curve</pms>
-    </callf>
+    </callm>
     <callm nm="mid-stem">
       <pms>ref1: 25, ref2: 0, pt1: 49, pt2: 19, cv: lc-bar</pms>
     </callm>
-    <callf nm="rhotic-hook">
+    <callm nm="rhotic-hook">
       <pms>d-top: hook-d-top, d-bot: hook-d-bot, a: hook-a, b: hook-b</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -10343,9 +10340,9 @@
     <cn nm="hook-a" val="0"/>
     <cn nm="hook-b" val="25"/>
     <setvs axis="y"/>
-    <callf nm="minim-top">
+    <callm nm="minim-top">
       <pms>top: top</pms>
-    </callf>
+    </callm>
     <callm nm="lc-bottom-serif">
       <wpm nm="bottom-left" val="serif-bottom"/>
       <wpm nm="top-left" val="serif-bottom + 1"/>
@@ -10359,9 +10356,9 @@
     <callm nm="mid-stem">
       <pms>ref1: top, ref2: serif-bottom, pt1: 11, pt2: 14, cv: lc-bar</pms>
     </callm>
-    <callf nm="rhotic-hook">
+    <callm nm="rhotic-hook">
       <pms>d-top: hook-d-top, d-bot: hook-d-bot, a: hook-a, b: hook-b</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -10376,9 +10373,9 @@
     <callm nm="mid-stem">
       <pms>ref1: 8, ref2: 0, pt1: 43, pt2: 46, cv: lc-bar</pms>
     </callm>
-    <callf nm="rhotic-hook">
+    <callm nm="rhotic-hook">
       <pms>d-top: hook-d-top, d-bot: hook-d-bot, a: hook-a, b: hook-b</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -10410,9 +10407,9 @@
     </mv>
     <mv col="b" r="e-bot" p="e-bot-ins"/>
     <ip r="e-top e-bot" p="bar-top bar-bot"/>
-    <callf nm="rhotic-hook">
+    <callm nm="rhotic-hook">
       <pms>d-top: hook-d-top, d-bot: hook-d-bot, a: hook-a, b: hook-b</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -10434,9 +10431,9 @@
     <mv di="baseline-undershoot" p="bot">
       <mv p="bot-ins"/>
     </mv>
-    <callf nm="rhotic-hook">
+    <callm nm="rhotic-hook">
       <pms>d-top: hook-d-top, d-bot: hook-d-bot, a: hook-a, b: hook-b</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -10451,9 +10448,9 @@
     <callm nm="mid-stem">
       <pms>ref1: 8, ref2: 0, pt1: 55, pt2: 58, cv: lc-bar</pms>
     </callm>
-    <callf nm="rhotic-hook">
+    <callm nm="rhotic-hook">
       <pms>d-top: hook-d-top, d-bot: hook-d-bot, a: hook-a, b: hook-b</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -10465,9 +10462,9 @@
     <callg pnm="y">
       <pms>include-iup: -1</pms>
     </callg>
-    <callf nm="rhotic-hook">
+    <callm nm="rhotic-hook">
       <pms>d-top: hook-d-top, d-bot: hook-d-bot, a: hook-a, b: hook-b</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -10479,13 +10476,13 @@
     <cn nm="bottom-inside" val="15"/>
     <cn nm="stem-bot" val="0"/>
     <setvs axis="y"/>
-    <callf nm="longs-lig">
+    <callm nm="longs-lig">
       <pms>serif-bot: 73, vertical-bot: 48, top: 58, top-ins: 66, bar-bot: 50, bar-top: 51</pms>
-    </callf>
+    </callm>
     <mv di="lc-ascender-top" p="top"/>
-    <callf nm="lc-bowl">
+    <callm nm="lc-bowl">
       <pms>t: bowl-top, t-ins: bowl-top-inside, b: bottom, b-ins: bottom-inside</pms>
-    </callf>
+    </callm>
     <callm nm="shift-rel">
       <pms>p: stem-bot, r: bottom</pms>
     </callm>
@@ -10502,9 +10499,9 @@
     <cn nm="right-stem-bot" val="48"/>
     <set nm="serif-sh-a" p="left-stem-bot right-serif right-stem-bot"/>
     <setvs axis="y"/>
-    <callf nm="longs-lig">
+    <callm nm="longs-lig">
       <pms>serif-bot: 43, vertical-bot: 18, top: 28, top-ins: 36, bar-bot: 20, bar-top: 21</pms>
-    </callf>
+    </callm>
     <mv di="lc-ascender-top" p="top"/>
     <callm nm="lc-horz-stroke">
       <pms>pt1: counter-top, pt2: counter-top-inside, cv: xheight-overshoot</pms>
@@ -10519,12 +10516,12 @@
     <cn nm="top" val="46"/>
     <cn nm="serif-bottom" val="38"/>
     <setvs axis="y"/>
-    <callf nm="longs-lig">
+    <callm nm="longs-lig">
       <pms>serif-bot: 33, vertical-bot: 0, top: 10, top-ins: 26, bar-bot: 2, bar-top: 3</pms>
-    </callf>
-    <callf nm="minim-top">
+    </callm>
+    <callm nm="minim-top">
       <pms>top: top</pms>
-    </callf>
+    </callm>
     <callm nm="lc-bottom-serif">
       <wpm nm="bottom-left" val="serif-bottom"/>
       <wpm nm="top-left" val="serif-bottom + 1"/>
@@ -10549,9 +10546,9 @@
     <cn nm="mid-bottom" val="16"/>
     <cn nm="mid-mid" val="30"/>
     <setvs axis="y"/>
-    <callf nm="longs-lig">
+    <callm nm="longs-lig">
       <pms>serif-bot: 66, vertical-bot: 41, top: 51, top-ins: 59, bar-bot: 43, bar-top: 44</pms>
-    </callf>
+    </callm>
     <mv di="lc-ascender-top" p="top"/>
     <callm nm="lc-bottom-serif">
       <wpm nm="bottom-left" val="serif-bottom"/>
@@ -10579,9 +10576,9 @@
     <cn nm="vertical-bottom" val="0"/>
     <cn nm="top" val="2"/>
     <setvs axis="y"/>
-    <callf nm="longs-lig">
+    <callm nm="longs-lig">
       <pms>serif-bot: 38, vertical-bot: 13, top: 23, top-ins: 31, bar-bot: 15, bar-top: 16</pms>
-    </callf>
+    </callm>
     <callm nm="lc-bottom-serif">
       <wpm nm="bottom-left" val="serif-bottom"/>
       <wpm nm="top-left" val="serif-bottom + 1"/>
@@ -10595,12 +10592,12 @@
 
   <gl pnm="longs_longs">
     <setvs axis="y"/>
-    <callf nm="longs-lig">
+    <callm nm="longs-lig">
       <pms>serif-bot: 56, vertical-bot: 0, top: 10, top-ins: 17, bar-bot: 2, bar-top: 3, top-cv: lower-f-top</pms>
-    </callf>
-    <callf nm="longs-lig">
+    </callm>
+    <callm nm="longs-lig">
       <pms>serif-bot: 61, vertical-bot: 24, top: 34, top-ins: 50, bar-bot: 26, bar-top: 27</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
@@ -10608,15 +10605,15 @@
     <cn nm="top" val="74"/>
     <cn nm="serif-bottom" val="66"/>
     <setvs axis="y"/>
-    <callf nm="longs-lig">
+    <callm nm="longs-lig">
       <pms>serif-bot: 56, vertical-bot: 0, top: 10, top-ins: 17, bar-bot: 2, bar-top: 3, top-cv: lower-f-top</pms>
-    </callf>
-    <callf nm="longs-lig">
+    </callm>
+    <callm nm="longs-lig">
       <pms>serif-bot: 61, vertical-bot: 24, top: 34, top-ins: 50, bar-bot: 26, bar-top: 27</pms>
-    </callf>
-    <callf nm="minim-top">
+    </callm>
+    <callm nm="minim-top">
       <pms>top: top</pms>
-    </callf>
+    </callm>
     <callm nm="lc-bottom-serif">
       <wpm nm="bottom-left" val="serif-bottom"/>
       <wpm nm="top-left" val="serif-bottom + 1"/>
@@ -10632,12 +10629,12 @@
     <cn nm="vertical-bottom" val="34"/>
     <cn nm="top" val="36"/>
     <setvs axis="y"/>
-    <callf nm="longs-lig">
+    <callm nm="longs-lig">
       <pms>serif-bot: 24, vertical-bot: 0, top: 10, top-ins: 17, bar-bot: 2, bar-top: 3, top-cv: lower-f-top</pms>
-    </callf>
-    <callf nm="longs-lig">
+    </callm>
+    <callm nm="longs-lig">
       <pms>serif-bot: 29, vertical-bot: 47, top: 57, top-ins: 65, bar-bot: 49, bar-top: 50</pms>
-    </callf>
+    </callm>
     <callm nm="lc-bottom-serif">
       <wpm nm="bottom-left" val="serif-bottom"/>
       <wpm nm="top-left" val="serif-bottom + 1"/>
@@ -10657,9 +10654,9 @@
     <cn nm="bottom" val="0"/>
     <cn nm="bottom-ins" val="47"/>
     <setvs axis="y"/>
-    <callf nm="longs-lig">
+    <callm nm="longs-lig">
       <pms>serif-bot: 55, vertical-bot: 22, top: 32, top-ins: 17, bar-bot: 24, bar-top: 25</pms>
-    </callf>
+    </callm>
     <callm nm="lc-horz-stroke">
       <pms>pt1: bottom, pt2: bottom-ins, cv: baseline-undershoot</pms>
     </callm>
@@ -10782,9 +10779,9 @@
     <mv di="cap-height" p="2">
       <sh p="8 9"/>
     </mv>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: 11, second-left: 12, first-right: 16, second-right: 17, stem1: 0, stem2: 5</pms>
-    </callf>
+    </callm>
     <sh r="2" p="3"/>
     <sh r="8" p="7"/>
     <iup axis="y"/>
@@ -10795,9 +10792,9 @@
     <mv di="cap-height" p="14">
       <sh p="20 21"/>
     </mv>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: 0, second-left: 1, first-right: 7, second-right: 6, stem1: 12, stem2: 17</pms>
-    </callf>
+    </callm>
     <sh r="14" p="15"/>
     <sh r="20" p="19"/>
     <mv di="baseline" p="8">
@@ -10811,9 +10808,9 @@
     <mv di="cap-height" p="2">
       <sh p="8 9"/>
     </mv>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: 11, second-left: 12, first-right: 16, second-right: 17, stem1: 0, stem2: 5</pms>
-    </callf>
+    </callm>
     <sh r="2" p="3"/>
     <sh r="8" p="7"/>
     <callm nm="plain-stem">
@@ -10827,9 +10824,9 @@
     <mv di="cap-height" p="17">
       <sh p="23 24"/>
     </mv>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: 7, second-left: 8, first-right: 14, second-right: 13, stem1: 15, stem2: 20</pms>
-    </callf>
+    </callm>
     <sh r="23" p="22"/>
     <sh r="17" p="18"/>
     <mv di="baseline" p="0">
@@ -11011,9 +11008,9 @@
 
   <gl pnm="uni16B3">
     <setvs axis="y"/>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: 21, second-left: 22, first-right: 16, second-right: 17, stem1: 12, stem2: 0</pms>
-    </callf>
+    </callm>
     <callm nm="serif-sh">
       <pms>pt-a: 28, pt-b: 27, sh-a: 13, cv: cap-height</pms>
     </callm>
@@ -11023,9 +11020,9 @@
 
   <gl pnm="uni16B4">
     <setvs axis="y"/>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: 23, second-left: 22, first-right: 28, second-right: 27, stem1: 18, stem2: 6</pms>
-    </callf>
+    </callm>
     <callm nm="serif-sh">
       <pms>pt-a: 12, pt-b: 13, sh-a: 17, cv: baseline</pms>
     </callm>
@@ -11035,9 +11032,9 @@
 
   <gl pnm="uni16B5">
     <setvs axis="y"/>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: 23, second-left: 22, first-right: 28, second-right: 27, stem1: 18, stem2: 6</pms>
-    </callf>
+    </callm>
     <callm nm="serif-sh">
       <pms>pt-a: 12, pt-b: 13, sh-a: 17, cv: baseline</pms>
     </callm>
@@ -11050,9 +11047,9 @@
 
   <gl pnm="uni16B6">
     <setvs axis="y"/>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: 18, second-left: 17, first-right: 28, second-right: 27, stem1: 1, stem2: 10</pms>
-    </callf>
+    </callm>
     <callm nm="serif-sh">
       <pms>pt-a: 21, pt-b: 22, sh-a: 0, cv: baseline</pms>
     </callm>
@@ -11503,12 +11500,12 @@
     <cn nm="bottom-stem-left" val="6"/>
     <cn nm="bottom-stem-right" val="0"/>
     <setvs axis="y"/>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: top-serif-left, second-left: (top-serif-left - 1), first-right: top-serif-right, second-right: (top-serif-right - 1), stem1: top-stem-left, stem2: top-stem-right, cv: cap-height</pms>
-    </callf>
-    <callf nm="cap-dbl-serif">
+    </callm>
+    <callm nm="cap-dbl-serif">
       <pms>first-left: bottom-serif-left, second-left: (bottom-serif-left + 1), first-right: bottom-serif-right, second-right: (bottom-serif-right + 1), stem1: bottom-stem-left, stem2: bottom-stem-right</pms>
-    </callf>
+    </callm>
     <compile-if test="include-iup = 0">
       <iup axis="y"/>
     </compile-if>
@@ -11531,9 +11528,9 @@
 
   <gl pnm="uni16DF">
     <setvs axis="y"/>
-    <callf nm="cap-dbl-serif">
+    <callm nm="cap-dbl-serif">
       <pms>first-left: 19, second-left: 20, first-right: 14, second-right: 15, stem1: 0, stem2: 7</pms>
-    </callf>
+    </callm>
     <iup axis="y"/>
   </gl>
 
