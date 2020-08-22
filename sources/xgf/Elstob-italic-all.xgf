@@ -297,19 +297,6 @@
     <command nm="SHP" modifier="0"/>
   </mo>
 
-  <mo nm="interpolated-stem">
-    <pm nm="ref-a"/>
-    <pm nm="ref-b"/>
-    <pm nm="stem-a"/>
-    <pm nm="stem-b"/>
-    <pm nm="cv"/>
-    <ip r="ref-a ref-b" p="stem-a"/>
-    <mv round="yes" p="stem-a">
-      <mv di="cv" col="b" p="stem-b"/>
-    </mv>
-  </mo>
-
-
   <!-- RP1 = serif-bot; RP2 = serif-bot + 1 -->
   <mo nm="rune-vert">
     <pm nm="serif-top"/>
@@ -336,16 +323,6 @@
     <command nm="MIAP" modifier="1"/>
     <command nm="SHP" modifier="1"/>
     <command nm="MIRP">
-      <modifier type="col" val="b"/>
-    </command>
-  </mo>
-
-  <mo nm="plain-stem">
-    <pm nm="pt1"/>
-    <pm nm="pt2"/>
-    <push>pt2 pt1</push>
-    <command nm="MDAP" modifier="1"/>
-    <command nm="MDRP">
       <modifier type="col" val="b"/>
     </command>
   </mo>
@@ -2920,6 +2897,391 @@
     </mv>
   </gl>
 
+  <gl pnm="uni0264">
+    <mv di="xho" p="49">
+      <sh p="39"/>
+      <mv p="39">
+	<sh p="21"/>
+    </mv></mv>
+    <mv di="lcbu" p="0">
+      <mv p="30"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni0265">
+    <mv p="0"/>
+    <mv di="xh" p="3"/>
+    <mv di="xho" p="18">
+      <mv p="31"/>
+    </mv>
+    <mv di="lcbu" p="8">
+      <mv p="40"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni0266">
+    <mv di="baseline" p="0"/>
+    <callm nm="hook">
+      <pms>pt1: 5, pt2: 21, pt3: 11</pms>
+    </callm>
+    <mv di="lcbu" p="28">
+      <mv p="41"/>
+    </mv>
+    <mv di="xho" p="59">
+      <mv p="50"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni0267">
+    <mv di="baseline" p="0">
+      <sh p="63"/>
+    </mv>
+    <mv di="xho" p="68">
+      <mv p="56"/>
+    </mv>
+    <callm nm="hook">
+      <pms>pt1: 5, pt2: 21, pt3: 11, cv: lc-ascender-top</pms>
+    </callm>
+    <callm nm="hook">
+      <pms>pt1: 28, pt2: 44, pt3: 34, cv: lc-descender</pms>
+    </callm>
+  </gl>
+
+  <gl pnm="uni026A">
+    <callm nm="serif-sh">
+      <pms>pt-a: 1, pt-b: 0, sh-a: 9, cv: xh, cv-h: lc-serif</pms>
+    </callm>
+    <callm nm="serif-sh">
+      <pms>pt-a: 4, pt-b: 5, sh-a: 8, cv: baseline, cv-h: lc-serif</pms>
+    </callm>
+  </gl>
+
+  <gl pnm="uni026C">
+    <callm nm="lc-ascender">
+      <pms>top: 43</pms>
+    </callm>
+    <mv di="lcbu" p="0">
+      <mv p="51"/>
+    </mv>
+    <ip r="0 43" p="13 20"/>
+    <mv p="13">
+      <mv p="36"/>
+    </mv>
+    <mv p="20">
+      <mv p="29"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni026D">
+    <callm nm="lc-ascender">
+      <pms>top: 10</pms>
+    </callm>
+    <callm nm="hook">
+      <pms>pt1: 0, pt2: 19, pt3: 29, cv: lc-descender</pms>
+    </callm>
+  </gl>
+
+  <gl pnm="uni026E">
+    <callm nm="lc-ascender">
+      <pms>top: 10</pms>
+    </callm>
+    <mv di="lcbu" p="0">
+      <mv p="19"/>
+    </mv>
+    <mv p="45">
+      <mv p="63"/>
+    </mv>
+    <mv di="xh" p="38">
+      <mv p="26">
+	<ip p="24"/>
+      </mv>
+    </mv>
+    <ip r="38 45" p="77"/>
+    <mv p="77">
+      <mv p="70"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni026F">
+    <mv di="lcbu" p="0">
+      <sh p="45 70"/>
+      <mv p="33">
+	<sh p="59 84"/>
+    </mv></mv>
+    <mv di="xho" p="21">
+      <mv p="13"/>
+    </mv>
+    <mv di="xh" p="39">
+      <sh p="53 64 78"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni0270">
+    <mv di="lcbu" p="0">
+      <sh p="45"/>
+      <mv p="33">
+	<sh p="61"/>
+    </mv></mv>
+    <mv di="lc-descender" p="72">
+      <mv p="86"/>
+    </mv>
+    <mv di="xho" p="21">
+      <mv p="13"/>
+    </mv>
+    <mv di="xh" p="39">
+      <sh p="54 66 80"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni0271">
+    <mv di="baseline" p="0">
+      <sh p="48 36 84"/>
+    </mv>
+    <mv di="xho" p="14">
+      <sh p="27 89"/>
+      <mv p="6">
+        <sh p="43 77"/>
+      </mv>
+    </mv>
+    <callm nm="hook">
+      <pms>pt1: 49, pt2: 65, pt3: 55, c: lc-descender</pms>
+    </callm>
+  </gl>
+
+  <gl pnm="uni0272">
+    <mv di="lcbu" p="70">
+      <mv p="62"/>
+    </mv>
+    <mv di="xho" p="36">
+      <sh p="49"/>
+      <mv p="28">
+        <sh p="82"/>
+    </mv></mv>
+    <callm nm="hook">
+      <pms>pt1: 0, pt2: 16, pt3: 6, c: lc-descender</pms>
+    </callm>
+  </gl>
+
+  <gl pnm="uni0273">
+    <mv di="baseline" p="55">
+      <sh p="19"/>
+    </mv>
+    <mv di="xho" p="69">
+      <sh p="24"/>
+      <mv p="61">
+        <sh p="12"/>
+    </mv></mv>
+    <callm nm="hook">
+      <pms>pt1: 0, pt2: 39, pt3: 49, c: lc-descender</pms>
+    </callm>
+  </gl>
+
+  <gl pnm="uni0274">
+    <set nm="top-a" p="16 20 12"/>
+    <set nm="bot-a" p="15 0 11"/>
+    <callm nm="serif-sh">
+      <pms>
+	pt-a: 5, pt-b: 4, sh-a: top-a, sh-b: 19,
+	cv: xh, cv-h: lc-serif
+      </pms>
+    </callm>
+    <callm nm="serif-sh">
+      <pms>
+	pt-a: 23, pt-b: 24, sh-a: bot-a, cv: baseline, cv-h: lc-serif
+      </pms>
+    </callm>
+  </gl>
+
+  <gl pnm="uni0275">
+    <mv di="lcbu" p="0">
+      <mv di="lcrs" p="16"/>
+    </mv>
+    <mv di="xho" p="8">
+      <mv di="lcrs" p="25"/>
+    </mv>
+    <callm nm="mid-stem">
+      <pms>ref1: 0, ref2: 8, pt1: 34, pt2: 35</pms>
+    </callm>
+  </gl>
+
+  <gl pnm="uni0276">
+    <mv di="xh" p="9">
+      <sh p="10"/>
+      <mv p="32"/>
+      <mv di="lc-bar" p="17"/>
+    </mv>
+    <mv di="baseline" p="0">
+      <sh p="26"/>
+      <mv p="27"/>
+      <mv di="lc-bar" p="20"/>
+    </mv>
+    <callm nm="mid-stem-serif">
+      <pms>
+	ref1: 9, ref2: 0, pt1: 41, pt2: 42,
+	cv: lc-bar, sh1: 45, sh2: 46
+      </pms>
+    </callm>
+  </gl>
+
+  <gl pnm="uni0278">
+    <mv di="lcbu" p="0">
+      <mv di="lcrs" p="16"/>
+    </mv>
+    <mv di="xho" p="8">
+      <mv di="lcrs" p="25"/>
+    </mv>
+    <callm nm="serif-sh">
+      <pms>pt-a: 35, pt-b: 34, sh-a: 43, cv-h: lc-serif</pms>
+    </callm>
+    <callm nm="serif-sh">
+      <pms>pt-a: 38, pt-b: 39, sh-a: 42, cv-h: lc-serif</pms>
+    </callm>
+  </gl>
+
+  <gl pnm="uni0279">
+    <mv di="xh" p="19">
+      <sh p="33"/>
+    </mv>
+    <mv di="lcbu" p="0">
+      <sh p="26"/>
+      <mv p="13"/>
+      <mv p="40"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni027A">
+    <mv p="20">
+      <sh p="35"/>
+    </mv>
+    <mv di="lcbu" p="0">
+      <sh p="28"/>
+      <mv p="13"/>
+      <mv p="42"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni027B">
+    <mv di="xh" p="18">
+      <sh p="34"/>
+    </mv>
+    <mv di="lcbu" p="7">
+      <mv p="13"/>
+    </mv>
+    <callm nm="hook">
+      <pms>pt1: 25, pt2: 42, pt3: 52, cv: lc-descender</pms>
+    </callm>
+  </gl>
+
+  <gl pnm="uni027D">
+    <mv di="xho" p="20">
+      <sh p="33"/>
+      <mv p="45"/>
+    </mv>
+    <callm nm="hook">
+      <pms>pt1: 0, pt2: 57, pt3: 67, cv: lc-descender</pms>
+    </callm>
+  </gl>
+
+  <gl pnm="uni027E">
+    <callm nm="serif-sh">
+      <pms>
+	pt-a: 25, pt-b: 26, sh-a: 0, cv: baseline, cv-h: lc-serif
+      </pms>
+    </callm>
+    <mv di="xho" p="5">
+      <mv p="18"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni027F">
+    <callm nm="serif-sh">
+      <pms>
+	pt-a: 31, pt-b: 32, sh-a: 0, cv: lc-descender, cv-h: lc-serif
+      </pms>
+    </callm>
+    <callm nm="hook">
+      <pms>pt1: 23, pt2: 7, pt3: 17, cv: xho</pms>
+    </callm>
+  </gl>
+
+  <gl pnm="uni0280">
+    <set nm="bot-a" p="45 0"/>
+    <mv di="xh" p="22">
+      <sh p="46"/>
+      <mv di="lc-serif" p="21"/>
+    </mv>
+    <callm nm="serif-sh">
+      <pms>
+	pt-a: 41, pt-b: 42, sh-a: bot-a,
+	cv: baseline, cv-h: lc-serif
+      </pms>
+    </callm>
+    <callm nm="mid-stem">
+      <pms>ref1: 41, ref2: 22, pt1: 7, pt2: 12</pms>
+    </callm>
+  </gl>
+    
+  <gl pnm="uni0281">
+    <set nm="top-a" p="37 19"/>
+    <mv di="baseline" p="0">
+      <sh p="36"/>
+      <mv di="lc-serif" p="1"/>
+    </mv>
+    <callm nm="serif-sh">
+      <pms>
+	pt-a: 41, pt-b: 40, sh-a: top-a,
+	cv: xh, cv-h: lc-serif
+      </pms>
+    </callm>
+    <callm nm="mid-stem">
+      <pms>ref1: 0, ref2: 41, pt1: 8, pt2: 12</pms>
+    </callm>
+  </gl>
+
+  <gl pnm="uni0282">
+    <mv di="xho" p="30">
+      <mv p="42"/>
+    </mv>
+    <mv di="lcbu" p="55">
+      <mv p="16"/>
+    </mv>
+    <callm nm="hook">
+      <pms>pt1: 0, pt2: 63, pt3: 73</pms>
+    </callm>
+  </gl>
+
+  <gl pnm="uni0283">
+    <callm nm="hook">
+      <pms>pt1: 24, pt2: 36, pt3: 30</pms>
+    </callm>
+    <callm nm="hook">
+      <pms>pt1: 0, pt2: 13, pt3: 6</pms>
+    </callm>
+  </gl>
+
+  <gl pnm="uni0284">
+    <callm nm="hook">
+      <pms>pt1: 22, pt2: 35, pt3: 28</pms>
+    </callm>
+    <callm nm="hook">
+      <pms>pt1: 0, pt2: 12, pt3: 6</pms>
+    </callm>
+    <callm nm="mid-stem">
+      <pms>
+	ref1: 0, ref2: 22, pt1: 46, pt2: 47
+      </pms>
+    </callm>
+  </gl>
+
+  <gl pnm="uni0285">
+    <callm nm="hook">
+      <pms>pt1: 29, pt2: 14, pt3: 23, cv: xho</pms>
+    </callm>
+    <callm nm="hook">
+      <pms>pt1: 0, pt2: 43, pt3: 52</pms>
+    </callm>
+  </gl>
+
   <!-- Section: runes -->
 
   <gl pnm="uni16A0">
@@ -2984,9 +3346,9 @@
     <callg pnm="uni16A2">
       <pms>include-iup: -1</pms>
     </callg>
-    <callm nm="plain-stem">
-      <pms>pt1: 19, pt2: 25</pms>
-    </callm>
+    <mv p="19">
+      <mv p="25"/>
+    </mv>
     <iup axis="y"/>
   </gl>
 
@@ -3016,9 +3378,7 @@
     <srp whichpointer="2">
       <pt n="24"/>
     </srp>
-    <ip>
-      <set p="15 2 20 18"/>
-    </ip>
+    <ip p="15 18 22 20 6 0"/>
     <push>0 6</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDAP" modifier="1"/>
@@ -3906,12 +4266,12 @@
 	cv-h: sc-serif
       </pms>
     </callm>
-    <callm nm="interpolated-stem">
+    <callm nm="mid-stem">
       <pms>
-	ref-a: top,
-	ref-b: serif-bottom-left,
-	stem-a: bar-bottom,
-	stem-b: bar-top,
+	ref1: top,
+	ref2: serif-bottom-left,
+	pt1: bar-bottom,
+	pt2: bar-top,
 	cv: sc-bar
       </pms>
     </callm>
@@ -4004,12 +4364,12 @@
 	cv-h: sc-serif
       </pms>
     </callm>
-    <callm nm="interpolated-stem">
+    <callm nm="mid-stem">
       <pms>
-	ref-a: top,
-	ref-b: left-serif,
-	stem-a: bar-bot,
-	stem-b: bar-top,
+	ref1: top,
+	ref2: left-serif,
+	pt1: bar-bot,
+	pt2: bar-top,
 	cv: sc-bar
       </pms>
     </callm>
@@ -6318,17 +6678,15 @@
   </gl>
 
   <gl pnm="uni1DD5"> <!-- ao -->
-    <mv di="mkxo" p="7">
-      <sh p="40"/>
-      <mv col="g" min-distance="no" p="31"/>
-      <mv p="14"/>
-      <mv p="56"/>
+    <mv di="mkxo" p="8">
+      <sh p="32 41"/>
+      <mv p="15"/>
+      <mv p="57"/>
     </mv>
     <mv di="mkbu" p="0">
-      <sh p="34"/>
-      <mv col="g" min-distance="no" p="30"/>
-      <mv p="21"/>
-      <mv p="48"/>
+      <sh p="34 35"/>
+      <mv p="22"/>
+      <mv p="49"/>
     </mv>
   </gl>
 
