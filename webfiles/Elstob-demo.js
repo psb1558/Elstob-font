@@ -5,12 +5,12 @@ $( function() {
     $( "#romweight" ).slider({
         min: 200,
         max: 800,
-        value: 400});
+        value: 500});
     $( "#romopticalsize" ).slider({
         min: 6,
         max: 18,
 	step: 0.01,
-        value: 12});
+        value: 10});
     $( "#romgrade" ).slider({
         min: 0,
         max: 1,
@@ -144,7 +144,7 @@ $( function() {
 	    }
 	}
     });
-    
+
 
     function featureString (s, tag, v) {
 	var ss = s;
@@ -153,7 +153,7 @@ $( function() {
 	ss += '"' + tag + '" ' + v;
 	return ss;
     }
-    
+
     $(".featurebutton").on("change", function() {
 	var fstring = "";
 	if ($("#romital").is(":checked")) {
@@ -211,7 +211,7 @@ $( function() {
 	    fstring = featureString(fstring, "ss18", "on");
 
 	// $("#errmsg").text(fstring);
-	$("#romtextarea").css("font-feature-settings", fstring);	    
+	$("#romtextarea").css("font-feature-settings", fstring);
     });
 
     $(".featurebutton").prop("checked", false);

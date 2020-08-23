@@ -13,12 +13,12 @@
 :root {
     --romsize: 1.5em;
     --italsize: 1.5em;
-    --romopsz: 12;
-    --romwght: 400;
+    --romopsz: 10;
+    --romwght: 500;
     --romGRAD: 0;
     --romspacing: 0em;
-    --italopsz: 12;
-    --italwght: 400;
+    --italopsz: 10;
+    --italwght: 500;
     --italslnt: 0;
 }
 .slidecontainer {
