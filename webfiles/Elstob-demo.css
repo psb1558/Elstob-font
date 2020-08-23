@@ -14,11 +14,11 @@
     --romsize: 1.5em;
     --italsize: 1.5em;
     --romopsz: 10;
-    --romwght: 500;
+    --romwght: 400;
     --romGRAD: 0;
     --romspacing: 0em;
     --italopsz: 10;
-    --italwght: 500;
+    --italwght: 400;
     --italslnt: 0;
 }
 .slidecontainer {
@@ -38,7 +38,7 @@ h2 {
 p {
     font-family: Elstob;
     font-size: 1.5em;
-    font-variation-settings: 'opsz' 10, 'wght' 500, 'GRAD' 0;
+    font-variation-settings: 'opsz' 10, 'wght' 400, 'GRAD' 0;
     font-feature-settings: 'calt' on;
 }
 b{

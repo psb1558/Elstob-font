@@ -5,7 +5,7 @@ $( function() {
     $( "#romweight" ).slider({
         min: 200,
         max: 800,
-        value: 500});
+        value: 400});
     $( "#romopticalsize" ).slider({
         min: 6,
         max: 18,
