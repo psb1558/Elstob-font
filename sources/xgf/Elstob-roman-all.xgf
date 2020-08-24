@@ -14,55 +14,56 @@
   
   <cv nm="xheight" val="891"/>
   <cv nm="xheight-overshoot" val="914"/>
-  <cv nm="lc-curved-stem" val="57"/>
+  <cv nm="lc-round-stem" val="57" col="b"/>
   <cv nm="lc-ascender-top" val="1487"/>
   <cv nm="lc-ascender-top-slope" val="85"/>
   <cv nm="lc-ascender-top-end" val="39"/>
   <cv nm="baseline" val="0"/>
   <cv nm="baseline-undershoot" val="-23"/>
-  <cv nm="lc-bar" val="61"/>
+  <cv nm="lc-bar" val="61" col="b"/>
   <cv nm="lc-ascender-top-overshoot" val="1492"/>
-  <cv nm="lc-serif" val="51"/>
+  <cv nm="lc-serif" val="51" col="b"/>
   <cv nm="dotaccent-bottom" val="1128"/>
-  <cv nm="dotaccent-height" val="214"/>
+  <cv nm="dotaccent-height" val="214" col="b"/>
   <cv nm="lc-descender" val="-501"/>
   <cv nm="lc-descender-undershoot" val="-531"/>
   <cv nm="cap-height" val="1358"/>
   <cv nm="cap-height-overshoot" val="1385"/>
   <cv nm="cap-baseline-undershoot" val="-27"/>
-  <cv nm="cap-serif" val="51"/>
-  <cv nm="cap-bar" val="61"/>
-  <cv nm="cap-curved-stem" val="57"/>
+  <cv nm="cap-serif" val="51" col="b"/>
+  <cv nm="cap-bar" val="61" col="b"/>
+  <cv nm="cap-round-stem" val="57" col="b"/>
   <cv nm="sc-height" val="1016"/>
-  <cv nm="sc-serif" val="51"/>
-  <cv nm="sc-bar" val="61"/>
-  <cv nm="sc-curved-stem" val="57"/>
+  <cv nm="sc-serif" val="51" col="b"/>
+  <cv nm="sc-bar" val="61" col="b"/>
+  <cv nm="sc-round-stem" val="57" col="b"/>
   <cv nm="sc-height-overshoot" val="1035"/>
   <cv nm="sc-baseline-undershoot" val="-23"/>
-  <cv nm="lc-thick-curve" val="97"/>
-  <cv nm="period-height" val="247"/>
-  <cv nm="numbersign-bar" val="95"/>
+  <cv nm="lc-thick-curve" val="97" col="b"/>
+  <cv nm="period-height" val="247" col="b"/>
+  <cv nm="numbersign-bar" val="95" col="b"/>
   <cv nm="num-top-round" val="1358"/>
   <cv nm="num-top-flat" val="1321"/>
   <cv nm="sups-baseline" val="519"/>
   <cv nm="sups-baseline-undershoot" val="505"/>
   <cv nm="sups-xheight" val="1194"/>
   <cv nm="sups-xheight-overshoot" val="1209"/>
-  <cv nm="ring-stem" val="66"/>
-  <cv nm="zero-osf-stem" val="106"/>
+  <cv nm="ring-stem" val="66" col="b"/>
+  <cv nm="zero-osf-stem" val="106" col="b"/>
   <cv nm="lower-f-top" val="1452"/>
   <cv nm="longs-knob" val="797"/>
-  <cv nm="euro-bar" val="100"/>
-  <cv nm="mark-curve" val="43"/>
+  <cv nm="euro-bar" val="100" col="b"/>
+  <cv nm="mark-curve" val="43" col="b"/>
   <cv nm="percent-zero" val="66"/>
   <cv nm="percent-zero-sc" val="54"/>
-  <cv nm="rune-punct" val="274"/>
+  <cv nm="rune-punct" val="274" col="b"/>
+  <cv nm="macronw" val="81" col="b"/>
   
   <cvar>
     <region tag="wght" bot="-1.0" peak="-1.0" top="0.0">
       <cvv nm="xheight" val="891"/>
       <cvv nm="xheight-overshoot" val="914"/>
-      <cvv nm="lc-curved-stem" val="42"/>
+      <cvv nm="lc-round-stem" val="42"/>
       <cvv nm="lc-ascender-top-slope" val="70"/>
       <cvv nm="lc-ascender-top-end" val="28"/>
       <cvv nm="lc-bar" val="50"/>
@@ -71,11 +72,11 @@
       <cvv nm="dotaccent-height" val="151"/>
       <cvv nm="cap-serif" val="40"/>
       <cvv nm="cap-bar" val="42"/>
-      <cvv nm="cap-curved-stem" val="42"/>
+      <cvv nm="cap-round-stem" val="42"/>
       <cvv nm="sc-height" val="1016"/>
       <cvv nm="sc-serif" val="40"/>
       <cvv nm="sc-bar" val="50"/>
-      <cvv nm="sc-curved-stem" val="42"/>
+      <cvv nm="sc-round-stem" val="42"/>
       <cvv nm="sc-height-overshoot" val="1036"/>
       <cvv nm="period-height" val="208"/>
       <cvv nm="numbersign-bar" val="74"/>
@@ -87,11 +88,12 @@
       <cvv nm="percent-zero" val="53"/>
       <cvv nm="percent-zero-sc" val="45"/>
       <cvv nm="rune-punct" val="253"/>
+      <cvv nm="macronw" val="66"/>
     </region>
     <region tag="wght" bot="0.0" peak="1.0" top="1.0">
       <cvv nm="xheight" val="891"/>
       <cvv nm="xheight-overshoot" val="914"/>
-      <cvv nm="lc-curved-stem" val="68"/>
+      <cvv nm="lc-round-stem" val="68"/>
       <cvv nm="lc-ascender-top-slope" val="115"/>
       <cvv nm="lc-ascender-top-end" val="61"/>
       <cvv nm="lc-bar" val="70"/>
@@ -100,11 +102,11 @@
       <cvv nm="dotaccent-height" val="340"/>
       <cvv nm="cap-serif" val="60"/>
       <cvv nm="cap-bar" val="70"/>
-      <cvv nm="cap-curved-stem" val="68"/>
+      <cvv nm="cap-round-stem" val="68"/>
       <cvv nm="sc-height" val="1016"/>
       <cvv nm="sc-serif" val="60"/>
       <cvv nm="sc-bar" val="70"/>
-      <cvv nm="sc-curved-stem" val="68"/>
+      <cvv nm="sc-round-stem" val="68"/>
       <cvv nm="sc-height-overshoot" val="1036"/>
       <cvv nm="period-height" val="346"/>
       <cvv nm="numbersign-bar" val="137"/>
@@ -116,11 +118,12 @@
       <cvv nm="percent-zero" val="92"/>
       <cvv nm="percent-zero-sc" val="75"/>
       <cvv nm="rune-punct" val="316"/>
+      <cvv nm="macronw" val="93"/>
     </region>
     <region tag="opsz" bot="-1.0" peak="-1.0" top="0.0">
       <cvv nm="xheight" val="933"/>
       <cvv nm="xheight-overshoot" val="957"/>
-      <cvv nm="lc-curved-stem" val="89"/>
+      <cvv nm="lc-round-stem" val="89"/>
       <cvv nm="lc-ascender-top-slope" val="88"/>
       <cvv nm="lc-ascender-top-end" val="46"/>
       <cvv nm="lc-bar" val="83"/>
@@ -131,11 +134,11 @@
       <cvv nm="lc-descender-undershoot" val="-502"/>
       <cvv nm="cap-serif" val="83"/>
       <cvv nm="cap-bar" val="93"/>
-      <cvv nm="cap-curved-stem" val="89"/>
+      <cvv nm="cap-round-stem" val="89"/>
       <cvv nm="sc-height" val="1051"/>
       <cvv nm="sc-serif" val="83"/>
       <cvv nm="sc-bar" val="93"/>
-      <cvv nm="sc-curved-stem" val="89"/>
+      <cvv nm="sc-round-stem" val="89"/>
       <cvv nm="sc-height-overshoot" val="1071"/>
       <cvv nm="period-height" val="248"/>
       <cvv nm="numbersign-bar" val="96"/>
@@ -149,11 +152,12 @@
       <cvv nm="percent-zero" val="77"/>
       <cvv nm="percent-zero-sc" val="55"/>
       <cvv nm="rune-punct" val="275"/>
+      <cvv nm="macronw" val="104"/>
     </region>
     <region tag="opsz" bot="0.0" peak="1.0" top="1.0">
       <cvv nm="xheight" val="848"/>
       <cvv nm="xheight-overshoot" val="870"/>
-      <cvv nm="lc-curved-stem" val="57"/>
+      <cvv nm="lc-round-stem" val="57"/>
       <cvv nm="lc-ascender-top-slope" val="82"/>
       <cvv nm="lc-ascender-top-end" val="30"/>
       <cvv nm="lc-bar" val="60"/>
@@ -164,11 +168,11 @@
       <cvv nm="lc-descender-undershoot" val="-559"/>
       <cvv nm="cap-serif" val="50"/>
       <cvv nm="cap-bar" val="60"/>
-      <cvv nm="cap-curved-stem" val="57"/>
+      <cvv nm="cap-round-stem" val="57"/>
       <cvv nm="sc-height" val="980"/>
       <cvv nm="sc-serif" val="52"/>
       <cvv nm="sc-bar" val="60"/>
-      <cvv nm="sc-curved-stem" val="57"/>
+      <cvv nm="sc-round-stem" val="57"/>
       <cvv nm="sc-height-overshoot" val="999"/>
       <cvv nm="period-height" val="250"/>
       <cvv nm="numbersign-bar" val="93"/>
@@ -182,11 +186,12 @@
       <cvv nm="percent-zero" val="54"/>
       <cvv nm="percent-zero-sc" val="54"/>
       <cvv nm="rune-punct" val="273"/>
+      <cvv nm="macronw" val="80"/>
     </region>
     <region tag="GRAD" bot="0.0" peak="1.0" top="1.0">
       <cvv nm="xheight" val="891"/>
       <cvv nm="xheight-overshoot" val="914"/>
-      <cvv nm="lc-curved-stem" val="68"/>
+      <cvv nm="lc-round-stem" val="68"/>
       <cvv nm="lc-ascender-top-slope" val="117"/>
       <cvv nm="lc-ascender-top-end" val="62"/>
       <cvv nm="lc-serif" val="60"/>
@@ -195,11 +200,11 @@
       <cvv nm="cap-serif" val="60"/>
       <cvv nm="cap-bar" val="70"/>
       <cvv nm="lc-bar" val="70"/>
-      <cvv nm="cap-curved-stem" val="68"/>
+      <cvv nm="cap-round-stem" val="68"/>
       <cvv nm="sc-height" val="1016"/>
       <cvv nm="sc-serif" val="60"/>
       <cvv nm="sc-bar" val="70"/>
-      <cvv nm="sc-curved-stem" val="68"/>
+      <cvv nm="sc-round-stem" val="68"/>
       <cvv nm="sc-height-overshoot" val="1036"/>
       <cvv nm="period-height" val="346"/>
       <cvv nm="numbersign-bar" val="137"/>
@@ -211,16 +216,23 @@
       <cvv nm="percent-zero" val="92"/>
       <cvv nm="percent-zero-sc" val="75"/>
       <cvv nm="rune-punct" val="316"/>
+      <cvv nm="macronw" val="93"/>
     </region>
   </cvar>
   
   <prep>
+    <if test="pixels-per-em &gt; 200">
+      <disable-instructions/>
+    </if>
     <push>4 511</push>
     <command nm="SCANCTRL"/>
     <command nm="SCANTYPE"/>
     <round val="lc-serif"/>
     <round val="lc-bar"/>
-    <round val="lc-curved-stem"/>
+    <round val="lc-round-stem"/>
+    <round val="cap-serif"/>
+    <round val="cap-bar"/>
+    <round val="cap-round-stem"/>
     <round val="lc-ascender-top"/>
     <round val="lower-f-top"/>
     <round val="lc-ascender-top-slope"/>
@@ -232,6 +244,8 @@
     <if test="pixels-per-em &lt; 39">
       <setcv nm="xheight" unit="pixel" val="control-value(xheight-overshoot)"/>
       <setcv nm="baseline-undershoot" unit="pixel" val="control-value(baseline)"/>
+      <setcv nm="cap-baseline-undershoot" unit="pixel" val="control-value(baseline)"/>
+      <setcv nm="sc-baseline-undershoot" unit="pixel" val="control-value(baseline)"/>
       <else>
         <round val="xheight"/>
         <round val="baseline-undershoot"/>
@@ -239,6 +253,8 @@
     </if>
     <if test="pixels-per-em &lt; 37">
       <setcv nm="cap-bar" unit="pixel" val="control-value(cap-serif)"/>
+      <setcv nm="lc-bar" unit="pixel" val="control-value(lc-serif)"/>
+      <setcv nm="sc-bar" unit="pixel" val="control-value(sc-serif)"/>
     </if>
   </prep>
   
@@ -318,7 +334,7 @@
       <mv di="lc-serif" col="b" p="(serif-bot + 1)"/>
     </mv>
     <mv di="top-cv" p="top">
-      <mv di="lc-curved-stem" col="b" p="top-ins"/>
+      <mv di="lc-round-stem" col="b" p="top-ins"/>
     </mv>
     <if test="bar-top &gt;= 0">
       <ip r="serif-bot top" p="bar-top"/>
@@ -344,7 +360,7 @@
       <mv di="lc-serif" col="b" p="(serif-bot + 1)"/>
     </mv>
     <mv di="top-cv" p="top">
-      <mv di="lc-curved-stem" col="b" p="top-ins"/>
+      <mv di="lc-round-stem" col="b" p="top-ins"/>
     </mv>
     <mv di="longs-knob" p="bar-bot">
       <mv col="b" p="bar-top"/>
@@ -393,10 +409,10 @@
   <mo nm="lc-bowl">
     <pm nm="t"/>
     <pm nm="t-ins"/>
-    <pm nm="cv-t" val="lc-curved-stem"/>
+    <pm nm="cv-t" val="lc-round-stem"/>
     <pm nm="b"/>
     <pm nm="b-ins"/>
-    <pm nm="cv-b" val="lc-curved-stem"/>
+    <pm nm="cv-b" val="lc-round-stem"/>
     <mv di="xheight-overshoot" p="t">
       <mv di="cv-t" p="t-ins"/>
     </mv>
@@ -600,7 +616,7 @@
       <mv col="b" p="bottom-inside"/>
     </mv>
     <mv di="xheight-overshoot" p="top">
-      <mv di="lc-curved-stem" col="b" p="top-inside"/>
+      <mv di="lc-round-stem" col="b" p="top-inside"/>
     </mv>
     <ip r="top bottom" p="mid-upper"/>
     <sh r="mid-upper" p="mid-lower"/>
@@ -670,7 +686,7 @@
       <pms>pt1: bottom, pt2: bottom-inside, cv: baseline-undershoot</pms>
     </callm>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: top, pt2: top-inside, cv: xheight-overshoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: top, pt2: top-inside, cv: xheight-overshoot, cv-h: lc-round-stem</pms>
     </callm>
     <callm nm="mid-stem">
       <pms>ref1: top, ref2: bottom, pt1: mid-bar-bottom, pt2: mid-bar-top, cv: lc-bar</pms>
@@ -692,7 +708,7 @@
       <mv di="lc-serif" col="b" p="(serif-bottom + 1)"/>
     </mv>
     <mv di="lc-ascender-top-overshoot" p="top">
-      <mv di="lc-curved-stem" col="b" p="top-inside"/>
+      <mv di="lc-round-stem" col="b" p="top-inside"/>
     </mv>
     <ip r="serif-bottom top" p="bar-top"/>
     <callm nm="round-point">
@@ -718,7 +734,7 @@
       <mv di="lc-serif" col="b" p="(serif-bottom + 1)"/>
     </mv>
     <mv di="lc-ascender-top-overshoot" p="top">
-      <mv di="lc-curved-stem" col="b" p="top-inside"/>
+      <mv di="lc-round-stem" col="b" p="top-inside"/>
     </mv>
     <ip r="serif-bottom top" p="bar-bottom-left"/>
     <callm nm="round-point">
@@ -741,7 +757,7 @@
       <mv di="lc-serif" col="b" p="(serif-bottom + 1)"/>
     </mv>
     <mv di="lc-ascender-top-overshoot" p="top">
-      <mv di="lc-curved-stem" col="b" p="top-inside"/>
+      <mv di="lc-round-stem" col="b" p="top-inside"/>
     </mv>
     <ip r="serif-bottom top" p="bar-top"/>
     <callm nm="round-point">
@@ -768,17 +784,17 @@
     <cn nm="bottom-inside" val="14"/>
     <setvs axis="y"/>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: top, pt2: top-inside, cv: xheight-overshoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: top, pt2: top-inside, cv: xheight-overshoot, cv-h: lc-round-stem</pms>
     </callm>
     <sh r="top" p="ear-top ear-below"/>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bottom, pt2: bottom-inside, cv: lc-descender-undershoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bottom, pt2: bottom-inside, cv: lc-descender-undershoot, cv-h: lc-round-stem</pms>
     </callm>
     <ip r="top bottom" p="baseline-below bowl-bottom"/>
     <push>baseline-below bowl-bottom</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MDAP" modifier="1"/>
-    <mv di="lc-curved-stem" col="b" r="bowl-bottom" p="bowl-bottom-inside">
+    <mv di="lc-round-stem" col="b" r="bowl-bottom" p="bowl-bottom-inside">
       <ip p="spur"/>
       <sh r="spur" p="(spur - 1)"/>
     </mv>
@@ -1034,10 +1050,10 @@
     <cn nm="bottom-inside" val="16"/>
     <setvs axis="y"/>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: top, pt2: top-inside, cv: xheight-overshoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: top, pt2: top-inside, cv: xheight-overshoot, cv-h: lc-round-stem</pms>
     </callm>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bottom, pt2: bottom-inside, cv: baseline-undershoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bottom, pt2: bottom-inside, cv: baseline-undershoot, cv-h: lc-round-stem</pms>
     </callm>
     <compile-if test="include-iup = 0">
       <iup axis="y"/>
@@ -1057,9 +1073,9 @@
       <pms>top: stem-top</pms>
     </callm>
     <sh r="stem-top" p="bowl-top"/>
-    <mv di="lc-curved-stem" col="b" r="bowl-top" p="bowl-top-inside"/>
+    <mv di="lc-round-stem" col="b" r="bowl-top" p="bowl-top-inside"/>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bowl-bottom, pt2: bowl-bottom-inside, cv: baseline-undershoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bowl-bottom, pt2: bowl-bottom-inside, cv: baseline-undershoot, cv-h: lc-round-stem</pms>
     </callm>
     <mv di="lc-descender" p="serif-bottom">
       <mv di="lc-serif" col="b" p="(serif-bottom + 1)">
@@ -1079,11 +1095,11 @@
     <cn nm="stem-bottom" val="0"/>
     <setvs axis="y"/>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bowl-top, pt2: bowl-top-inside, cv: xheight-overshoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bowl-top, pt2: bowl-top-inside, cv: xheight-overshoot, cv-h: lc-round-stem</pms>
     </callm>
     <sh r="bowl-top" p="stem-top"/>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bowl-bottom, pt2: bowl-bottom-inside, cv: baseline-undershoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bowl-bottom, pt2: bowl-bottom-inside, cv: baseline-undershoot, cv-h: lc-round-stem</pms>
     </callm>
     <callm nm="lc-bottom-serif">
       <wpm nm="bottom-left" val="serif-bottom"/>
@@ -1130,10 +1146,10 @@
     <cn nm="mid-bottom" val="16"/>
     <setvs axis="y"/>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: top, pt2: top-ins, cv: xheight-overshoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: top, pt2: top-ins, cv: xheight-overshoot, cv-h: lc-round-stem</pms>
     </callm>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bottom, pt2: bottom-ins, cv: baseline-undershoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bottom, pt2: bottom-ins, cv: baseline-undershoot, cv-h: lc-round-stem</pms>
     </callm>
     <ip r="top bottom" p="mid-top"/>
     <sh r="mid-top" p="mid-bottom"/>
@@ -1354,7 +1370,7 @@
       <pms>pt1: bowl-top, pt2: bowl-top-ins, cv: xheight-overshoot</pms>
     </callm>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bowl-bottom, pt2: bowl-bottom-ins, cv: baseline-undershoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bowl-bottom, pt2: bowl-bottom-ins, cv: baseline-undershoot, cv-h: lc-round-stem</pms>
     </callm>
     <iup axis="y"/>
   </gl>
@@ -1368,10 +1384,10 @@
     <cn nm="cross1" val="44"/>
     <setvs axis="y"/>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bowl-top, pt2: bowl-top-ins, cv: xheight-overshoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bowl-top, pt2: bowl-top-ins, cv: xheight-overshoot, cv-h: lc-round-stem</pms>
     </callm>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bowl-bottom, pt2: bowl-bottom-ins, cv: baseline-undershoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bowl-bottom, pt2: bowl-bottom-ins, cv: baseline-undershoot, cv-h: lc-round-stem</pms>
     </callm>
     <mv p="top"/>
     <ip r="top bowl-top" p="cross1 (cross1 + 1) (cross1 + 2) (cross1 + 3)"/>
@@ -1403,10 +1419,10 @@
     </callm>
     <mv di="lc-descender" p="stem-bottom"/>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bowl-top, pt2: bowl-top-ins, cv: xheight-overshoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bowl-top, pt2: bowl-top-ins, cv: xheight-overshoot, cv-h: lc-round-stem</pms>
     </callm>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bowl-bottom, pt2: bowl-bottom-ins, cv: baseline-undershoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bowl-bottom, pt2: bowl-bottom-ins, cv: baseline-undershoot, cv-h: lc-round-stem</pms>
     </callm>
     <iup axis="y"/>
   </gl>
@@ -1424,10 +1440,10 @@
     </callm>
     <mv di="lc-descender" p="stem-bottom"/>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bowl-top, pt2: bowl-top-ins, cv: xheight-overshoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bowl-top, pt2: bowl-top-ins, cv: xheight-overshoot, cv-h: lc-round-stem</pms>
     </callm>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bowl-bottom, pt2: bowl-bottom-ins, cv: baseline-undershoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bowl-bottom, pt2: bowl-bottom-ins, cv: baseline-undershoot, cv-h: lc-round-stem</pms>
     </callm>
     <iup axis="y"/>
   </gl>
@@ -1444,10 +1460,10 @@
     <cn nm="cross4" val="52"/>
     <setvs axis="y"/>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bowl-top, pt2: bowl-top-ins, cv: xheight-overshoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bowl-top, pt2: bowl-top-ins, cv: xheight-overshoot, cv-h: lc-round-stem</pms>
     </callm>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bowl-bottom, pt2: bowl-bottom-ins, cv: baseline-undershoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bowl-bottom, pt2: bowl-bottom-ins, cv: baseline-undershoot, cv-h: lc-round-stem</pms>
     </callm>
     <mv p="top"/>
     <ip r="top bowl-top" p="cross1 cross2"/>
@@ -1468,10 +1484,10 @@
     <cn nm="cross4" val="54"/>
     <setvs axis="y"/>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bowl-top, pt2: bowl-top-ins, cv: xheight-overshoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bowl-top, pt2: bowl-top-ins, cv: xheight-overshoot, cv-h: lc-round-stem</pms>
     </callm>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bowl-bottom, pt2: bowl-bottom-ins, cv: baseline-undershoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bowl-bottom, pt2: bowl-bottom-ins, cv: baseline-undershoot, cv-h: lc-round-stem</pms>
     </callm>
     <mv p="top"/>
     <ip r="top bowl-top" p="cross1 cross2"/>
@@ -1488,10 +1504,10 @@
     <cn nm="top" val="13"/>
     <setvs axis="y"/>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bowl-top, pt2: bowl-top-ins, cv: xheight-overshoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bowl-top, pt2: bowl-top-ins, cv: xheight-overshoot, cv-h: lc-round-stem</pms>
     </callm>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bowl-bottom, pt2: bowl-bottom-ins, cv: baseline-undershoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bowl-bottom, pt2: bowl-bottom-ins, cv: baseline-undershoot, cv-h: lc-round-stem</pms>
     </callm>
     <mv p="top"/>
     <iup axis="y"/>
@@ -1633,14 +1649,14 @@
     <setvs axis="y"/>
     <mv di="cap-height-overshoot" p="O-top">
       <sh p="A-top A-diag-top"/>
-      <mv di="cap-curved-stem" col="b" p="O-top-ins"/>
+      <mv di="cap-round-stem" col="b" p="O-top-ins"/>
     </mv>
     <callm nm="serif-sh">
       <pms>pt-a: A-serif-left, pt-b: (A-serif-left + 1), sh-a: serif-sh-a, sh-b: (A-serif-right + 1)</pms>
     </callm>
     <sh r="A-serif-left" p="O-bot"/>
     <mv round="yes" p="O-bot">
-      <mv di="cap-curved-stem" col="b" p="O-bot-ins"/>
+      <mv di="cap-round-stem" col="b" p="O-bot-ins"/>
     </mv>
     <callm nm="interpolated-stem">
       <pms>ref-a: A-top, ref-b: A-serif-left, stem-a: A-bar-bot, stem-b: A-bar-top, cv: cap-bar</pms>
@@ -1669,7 +1685,7 @@
       <pms>pt-a: bot-serif, pt-b: (bot-serif + 1), sh-a: bot-sh-a</pms>
     </callm>
     <mv round="yes" p="U-bot">
-      <mv di="cap-curved-stem" col="b" p="U-bot-ins"/>
+      <mv di="cap-round-stem" col="b" p="U-bot-ins"/>
     </mv>
     <callm nm="interpolated-stem">
       <pms>ref-a: top-serif-left, ref-b: bot-serif, stem-a: bar-bot, stem-b: bar-top, cv: cap-bar</pms>
@@ -1772,11 +1788,11 @@
     <setvs axis="y"/>
     <mv di="cap-height-overshoot" p="top">
       <sh p="top-serif"/>
-      <mv di="cap-curved-stem" col="b" p="top-ins"/>
+      <mv di="cap-round-stem" col="b" p="top-ins"/>
     </mv>
     <mv di="cap-baseline-undershoot" p="bottom">
       <sh p="bottom-serif"/>
-      <mv di="cap-curved-stem" col="b" p="bottom-ins"/>
+      <mv di="cap-round-stem" col="b" p="bottom-ins"/>
     </mv>
     <iup axis="y"/>
   </gl>
@@ -1880,13 +1896,13 @@
       <wpm nm="pt1" val="top"/>
       <wpm nm="pt2" val="top-ins"/>
       <wpm nm="cv" val="cap-height-overshoot"/>
-      <wpm nm="cv-h" val="cap-curved-stem"/>
+      <wpm nm="cv-h" val="cap-round-stem"/>
       <wpm nm="codefrag">
         <sh r="top" p="v-serif-top"/>
       </wpm>
     </callm>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bottom, pt2: bottom-ins, cv: baseline-undershoot, cv-h: cap-curved-stem</pms>
+      <pms>pt1: bottom, pt2: bottom-ins, cv: baseline-undershoot, cv-h: cap-round-stem</pms>
     </callm>
     <ip r="top bottom" p="serif-top"/>
     <mv p="serif-top">
@@ -1950,7 +1966,7 @@
       <pms>ref-a: bottom-left-a, ref-b: top-left-a, stem-a: bar-bottom, stem-b: bar-top, cv: cap-bar</pms>
     </callm>
     <mv di="baseline-undershoot" p="v-bottom">
-      <mv di="cap-curved-stem" col="b" p="v-bottom-ins"/>
+      <mv di="cap-round-stem" col="b" p="v-bottom-ins"/>
     </mv>
     <iup axis="y"/>
   </gl>
@@ -2155,10 +2171,10 @@
     <cn nm="bottom-ins" val="20"/>
     <setvs axis="y"/>
     <mv di="cap-height-overshoot" p="top">
-      <mv di="cap-curved-stem" p="top-ins"/>
+      <mv di="cap-round-stem" p="top-ins"/>
     </mv>
     <mv di="baseline-undershoot" p="bottom">
-      <mv di="cap-curved-stem" p="bottom-ins"/>
+      <mv di="cap-round-stem" p="bottom-ins"/>
     </mv>
     <compile-if test="include-iup = 0">
       <iup axis="y"/>
@@ -2195,11 +2211,11 @@
     <setvs axis="y"/>
     <mv di="cap-height" p="top">
       <sh p="E-top-a"/>
-      <mv di="cap-curved-stem" p="top-ins"/>
+      <mv di="cap-round-stem" p="top-ins"/>
     </mv>
     <mv di="baseline" p="bottom">
       <sh p="E-bottom-a"/>
-      <mv di="cap-curved-stem" p="bottom-ins"/>
+      <mv di="cap-round-stem" p="bottom-ins"/>
     </mv>
     <mv di="cap-bar" col="b" r="top" p="E-top-b"/>
     <mv di="cap-bar" col="b" r="bottom" p="E-bottom-b"/>
@@ -2225,13 +2241,13 @@
     <setvs axis="y"/>
     <mv di="cap-height-overshoot" p="top">
       <sh p="top-b"/>
-      <mv di="cap-curved-stem" p="top-ins">
+      <mv di="cap-round-stem" p="top-ins">
         <sh p="top-ins-b"/>
       </mv>
     </mv>
     <mv di="baseline-undershoot" p="bottom">
       <sh p="bottom-b"/>
-      <mv di="cap-curved-stem" p="bottom-ins">
+      <mv di="cap-round-stem" p="bottom-ins">
         <sh p="bottom-ins-b"/>
       </mv>
     </mv>
@@ -2255,7 +2271,7 @@
       <pms>pt-a: bottom-serif-left, pt-b: (bottom-serif-left + 1), sh-a: stem-bottom</pms>
     </callm>
     <callm nm="interpolated-stem">
-      <pms>ref-a: top-serif-left, ref-b: bottom-serif-left, stem-a: bowl-bottom, stem-b: bowl-bottom-ins, cv: cap-curved-stem</pms>
+      <pms>ref-a: top-serif-left, ref-b: bottom-serif-left, stem-a: bowl-bottom, stem-b: bowl-bottom-ins, cv: cap-round-stem</pms>
     </callm>
     <iup axis="y"/>
   </gl>
@@ -2276,7 +2292,7 @@
       <pms>pt-a: bottom-serif, pt-b: (bottom-serif + 1), sh-a: stem-bottom</pms>
     </callm>
     <callm nm="interpolated-stem">
-      <pms>ref-a: top-serif, ref-b: bottom-serif, stem-a: bowl-bottom, stem-b: (bowl-bottom + 1), cv: cap-curved-stem</pms>
+      <pms>ref-a: top-serif, ref-b: bottom-serif, stem-a: bowl-bottom, stem-b: (bowl-bottom + 1), cv: cap-round-stem</pms>
     </callm>
     <iup axis="y"/>
   </gl>
@@ -2290,11 +2306,11 @@
     <cn nm="tail-ins" val="46"/>
     <setvs axis="y"/>
     <mv di="cap-height-overshoot" p="top">
-      <mv di="cap-curved-stem" p="top-ins"/>
+      <mv di="cap-round-stem" p="top-ins"/>
     </mv>
     <mv di="baseline-undershoot" p="bottom">
       <sh round="yes" p="tail-bottom"/>
-      <mv di="cap-curved-stem" p="bottom-ins">
+      <mv di="cap-round-stem" p="bottom-ins">
         <sh p="tail-ins"/>
       </mv>
     </mv>
@@ -2310,11 +2326,11 @@
     <cn nm="tail-ins" val="55"/>
     <setvs axis="y"/>
     <mv di="cap-height-overshoot" p="top">
-      <mv di="cap-curved-stem" p="top-ins"/>
+      <mv di="cap-round-stem" p="top-ins"/>
     </mv>
     <mv di="baseline-undershoot" p="bottom">
       <sh round="yes" p="tail-bottom"/>
-      <mv di="cap-curved-stem" p="bottom-ins">
+      <mv di="cap-round-stem" p="bottom-ins">
         <sh p="tail-ins"/>
       </mv>
     </mv>
@@ -2341,7 +2357,7 @@
       <pms>pt-a: bottom-serif-left, pt-b: (bottom-serif-left + 1), sh-a: sh-a-pts, sh-b: (foot-bottom - 1), cv: baseline</pms>
     </callm>
     <callm nm="mid-stem">
-      <pms>ref1: top-serif-left, ref2: bottom-serif-left, pt1: bowl-bottom, pt2: bowl-bottom-ins, cv: cap-curved-stem</pms>
+      <pms>ref1: top-serif-left, ref2: bottom-serif-left, pt1: bowl-bottom, pt2: bowl-bottom-ins, cv: cap-round-stem</pms>
     </callm>
     <ip p="bowl-crotch"/>
     <iup axis="y"/>
@@ -2356,10 +2372,10 @@
     <cn nm="mid-lower" val="17"/>
     <setvs axis="y"/>
     <mv di="cap-height-overshoot" p="top">
-      <mv di="cap-curved-stem" col="b" p="top-ins"/>
+      <mv di="cap-round-stem" col="b" p="top-ins"/>
     </mv>
     <mv di="baseline-undershoot" p="bottom">
-      <mv di="cap-curved-stem" col="b" p="bottom-ins"/>
+      <mv di="cap-round-stem" col="b" p="bottom-ins"/>
     </mv>
     <ip r="top bottom" p="mid-upper mid-lower"/>
     <iup axis="y"/>
@@ -2395,7 +2411,7 @@
       <pms>first-left: serif-left, second-left: (serif-left - 1), first-right: serif-right, second-right: (serif-right - 1), stem1: stem-left, stem2: stem-right, cv: cap-height</pms>
     </callm>
     <mv di="baseline-undershoot" p="bottom">
-      <mv di="cap-curved-stem" col="b" p="bottom-ins"/>
+      <mv di="cap-round-stem" col="b" p="bottom-ins"/>
     </mv>
     <iup axis="y"/>
   </gl>
@@ -2533,11 +2549,11 @@
     <setvs axis="y"/>
     <mv di="cap-height" p="top">
       <sh p="top-sh"/>
-      <mv di="cap-serif" col="b" p="top-ins"/>
+      <mv di="cap-bar" col="b" p="top-ins"/>
     </mv>
     <mv di="baseline" p="bottom">
       <sh p="bottom-sh"/>
-      <mv di="cap-serif" col="b" p="bottom-ins"/>
+      <mv di="cap-bar" col="b" p="bottom-ins"/>
     </mv>
     <iup axis="y"/>
   </gl>
@@ -2631,7 +2647,7 @@
     </callm>
     <ip round="yes" r="top-serif bottom-serif" p="bowl-top bowl-bottom"/>
     <mv di="cap-serif" col="b" r="bowl-top" p="bowl-top-ins"/>
-    <mv di="cap-curved-stem" r="bowl-bottom" p="bowl-bottom-ins"/>
+    <mv di="cap-round-stem" r="bowl-bottom" p="bowl-bottom-ins"/>
     <iup axis="y"/>
   </gl>
 
@@ -2651,7 +2667,7 @@
     </mv>
     <mv p="stem-bottom"/>
     <mv di="baseline-undershoot" p="bowl-bottom">
-      <mv di="cap-curved-stem" p="bowl-bottom-ins"/>
+      <mv di="cap-round-stem" p="bowl-bottom-ins"/>
     </mv>
     <iup axis="y"/>
   </gl>
@@ -2667,10 +2683,10 @@
     <set nm="mid-sh" p="44 45"/>
     <setvs axis="y"/>
     <mv di="cap-height-overshoot" p="top">
-      <mv di="cap-curved-stem" col="b" p="top-ins"/>
+      <mv di="cap-round-stem" col="b" p="top-ins"/>
     </mv>
     <mv di="baseline-undershoot" p="bowl-bottom">
-      <mv di="cap-curved-stem" col="b" p="bowl-bottom-ins"/>
+      <mv di="cap-round-stem" col="b" p="bowl-bottom-ins"/>
     </mv>
     <ip r="top bowl-bottom" p="mid"/>
     <callm nm="round-point">
@@ -2700,7 +2716,7 @@
       </mv>
     </mv>
     <mv di="baseline-undershoot" p="bot">
-      <mv di="cap-curved-stem" p="bot-ins"/>
+      <mv di="cap-round-stem" p="bot-ins"/>
     </mv>
     <iup axis="y"/>
   </gl>
@@ -2749,7 +2765,7 @@
       </mv>
     </mv>
     <mv round="yes" p="bottom">
-      <mv di="cap-curved-stem" col="b" p="bottom-ins"/>
+      <mv di="cap-round-stem" col="b" p="bottom-ins"/>
     </mv>
     <ip round="yes" r="top bottom" p="mid-lower"/>
     <mv r="mid-lower" p="mid-upper"/>
@@ -2768,7 +2784,7 @@
       <sh p="(stem-top - 1) (stem-top - 2) bow-top"/>
     </mv>
     <mv p="bow-top">
-      <mv di="cap-curved-stem" col="b" p="bow-top-ins"/>
+      <mv di="cap-round-stem" col="b" p="bow-top-ins"/>
     </mv>
     <mv p="stem-bot"/>
     <callm nm="serif-sh">
@@ -2812,7 +2828,7 @@
       </mv>
     </mv>
     <mv di="cap-baseline-undershoot" p="bot">
-      <mv di="cap-curved-stem" p="bot-ins"/>
+      <mv di="cap-round-stem" p="bot-ins"/>
     </mv>
     <iup axis="y"/>
   </gl>
@@ -2831,13 +2847,13 @@
     <setvs axis="y"/>
     <mv di="xheight-overshoot" p="o-top">
       <sh p="e-top"/>
-      <mv di="lc-curved-stem" col="b" p="o-top-ins">
+      <mv di="lc-round-stem" col="b" p="o-top-ins">
         <sh p="e-top-ins"/>
       </mv>
     </mv>
     <mv di="baseline-undershoot" p="o-bot">
       <sh p="e-bot"/>
-      <mv di="lc-curved-stem" col="b" p="o-bot-ins"/>
+      <mv di="lc-round-stem" col="b" p="o-bot-ins"/>
     </mv>
     <mv col="b" r="e-bot" p="e-bot-ins"/>
     <callm nm="mid-stem">
@@ -2917,13 +2933,13 @@
     <setvs axis="y"/>
     <mv di="xheight-overshoot" p="top">
       <sh p="r-top"/>
-      <mv di="lc-curved-stem" col="b" p="top-ins">
+      <mv di="lc-round-stem" col="b" p="top-ins">
         <sh p="r-top-ins"/>
       </mv>
     </mv>
     <mv di="baseline-undershoot" p="bot">
       <sh p="r-bot"/>
-      <mv di="lc-curved-stem" col="b" p="bot-ins">
+      <mv di="lc-round-stem" col="b" p="bot-ins">
         <sh p="r-bot-ins"/>
       </mv>
     </mv>
@@ -2959,7 +2975,7 @@
       <pms>pt-a: serif, pt-b: (serif + 1), sh-a: stem-bot, cv-h: lc-serif</pms>
     </callm>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: s-bot, pt2: s-bot-ins, cv: baseline-undershoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: s-bot, pt2: s-bot-ins, cv: baseline-undershoot, cv-h: lc-round-stem</pms>
     </callm>
     <mv di="lc-ascender-top" p="top">
       <mv col="b" p="top-ins"/>
@@ -2999,7 +3015,7 @@
       </wpm>
     </callm>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bb-bot, pt2: bb-bot-ins, cv: baseline-undershoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bb-bot, pt2: bb-bot-ins, cv: baseline-undershoot, cv-h: lc-round-stem</pms>
     </callm>
     <iup axis="y"/>
   </gl>
@@ -3018,7 +3034,7 @@
       <mv col="b" p="bottom-inside"/>
     </mv>
     <mv di="xheight-overshoot" p="top">
-      <mv di="lc-curved-stem" col="b" p="top-inside"/>
+      <mv di="lc-round-stem" col="b" p="top-inside"/>
     </mv>
     <ip r="top bottom" p="mid-upper"/>
     <sh r="mid-upper" p="mid-lower"/>
@@ -3075,7 +3091,7 @@
       </mv>
     </mv>
     <mv di="lc-descender" p="bot">
-      <mv di="lc-curved-stem" p="bot-ins"/>
+      <mv di="lc-round-stem" p="bot-ins"/>
     </mv>
     <ip r="top bot" p="mid-bot"/>
     <push>mid-top mid-bot</push>
@@ -3111,7 +3127,7 @@
     </mv>
     <mv di="xheight-overshoot" p="a1-top">
       <al p="a2-top"/>
-      <mv di="lc-curved-stem" col="b" p="a1-top-inside">
+      <mv di="lc-round-stem" col="b" p="a1-top-inside">
         <al p="a2-top-inside"/>
       </mv>
     </mv>
@@ -3139,12 +3155,12 @@
     </mv>
     <mv di="xheight-overshoot" p="a-top">
       <sh p="o-top"/>
-      <mv di="lc-curved-stem" col="b" p="a-top-inside"/>
+      <mv di="lc-round-stem" col="b" p="a-top-inside"/>
     </mv>
     <ip r="a-top a-bottom" p="a-mid-upper"/>
     <sh r="a-mid-upper" p="a-mid-lower"/>
-    <mv di="lc-curved-stem" r="o-top" p="o-top-ins"/>
-    <mv di="lc-curved-stem" r="o-bot" p="o-bot-ins"/>
+    <mv di="lc-round-stem" r="o-top" p="o-top-ins"/>
+    <mv di="lc-round-stem" r="o-bot" p="o-bot-ins"/>
     <iup axis="y"/>
   </gl>
 
@@ -3243,10 +3259,10 @@
     <cn nm="bar-bot" val="33"/>
     <setvs axis="y"/>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: top, pt2: top-inside, cv: xheight-overshoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: top, pt2: top-inside, cv: xheight-overshoot, cv-h: lc-round-stem</pms>
     </callm>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bottom, pt2: bottom-inside, cv: baseline-undershoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bottom, pt2: bottom-inside, cv: baseline-undershoot, cv-h: lc-round-stem</pms>
     </callm>
     <callm nm="mid-stem">
       <pms>ref1: top, ref2: bottom, pt1: bar-bot, pt2: bar-top, cv: lc-bar</pms>
@@ -3358,7 +3374,7 @@
     </command>
     <command nm="SHP" modifier="1"/>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bot, pt2: bot-ins, cv: baseline-undershoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bot, pt2: bot-ins, cv: baseline-undershoot, cv-h: lc-round-stem</pms>
     </callm>
     <iup axis="y"/>
   </gl>
@@ -3491,7 +3507,7 @@
       <mv col="b" p="bottom-inside"/>
     </mv>
     <mv di="xheight-overshoot" p="top">
-      <mv di="lc-curved-stem" col="b" p="top-inside"/>
+      <mv di="lc-round-stem" col="b" p="top-inside"/>
     </mv>
     <ip r="top bottom" p="mid-upper mid-lower"/>
     <callm nm="serif-sh">
@@ -3520,10 +3536,10 @@
     <cn nm="bot-bar-bot" val="47"/>
     <setvs axis="y"/>
     <mv di="cap-height-overshoot" p="top">
-      <mv di="cap-curved-stem" col="b" p="top-ins"/>
+      <mv di="cap-round-stem" col="b" p="top-ins"/>
     </mv>
     <mv di="cap-baseline-undershoot" p="bot">
-      <mv di="cap-curved-stem" col="b" p="bot-ins"/>
+      <mv di="cap-round-stem" col="b" p="bot-ins"/>
     </mv>
     <ip r="top bot" p="top-bar-bot bot-bar-top"/>
     <callm nm="round-point">
@@ -5048,11 +5064,11 @@
     <setvs axis="y"/>
     <mv di="sc-height-overshoot" p="top">
       <sh p="top-serif"/>
-      <mv di="sc-curved-stem" col="b" p="top-ins"/>
+      <mv di="sc-round-stem" col="b" p="top-ins"/>
     </mv>
     <mv di="sc-baseline-undershoot" p="bottom">
       <sh p="bottom-serif"/>
-      <mv di="sc-curved-stem" col="b" p="bottom-ins"/>
+      <mv di="sc-round-stem" col="b" p="bottom-ins"/>
     </mv>
     <iup axis="y"/>
   </gl>
@@ -5094,7 +5110,7 @@
       </mv>
     </mv>
     <mv di="sc-baseline-undershoot" p="bot">
-      <mv di="sc-curved-stem" p="bot-ins"/>
+      <mv di="sc-round-stem" p="bot-ins"/>
     </mv>
     <iup axis="y"/>
   </gl>
@@ -5211,13 +5227,13 @@
       <wpm nm="pt1" val="top"/>
       <wpm nm="pt2" val="top-ins"/>
       <wpm nm="cv" val="sc-height-overshoot"/>
-      <wpm nm="cv-h" val="sc-curved-stem"/>
+      <wpm nm="cv-h" val="sc-round-stem"/>
       <wpm nm="codefrag">
         <sh r="top" p="v-serif-top"/>
       </wpm>
     </callm>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bottom, pt2: bottom-ins, cv: baseline-undershoot, cv-h: sc-curved-stem</pms>
+      <pms>pt1: bottom, pt2: bottom-ins, cv: baseline-undershoot, cv-h: sc-round-stem</pms>
     </callm>
     <ip r="top bottom" p="serif-top"/>
     <mv p="serif-top">
@@ -5249,7 +5265,7 @@
       </mv>
     </mv>
     <mv round="yes" p="bottom">
-      <mv di="sc-curved-stem" col="b" p="bottom-ins"/>
+      <mv di="sc-round-stem" col="b" p="bottom-ins"/>
     </mv>
     <ip round="yes" r="top bottom" p="mid-lower"/>
     <mv r="mid-lower" p="mid-upper"/>
@@ -5341,7 +5357,7 @@
       <pms>ref-a: bottom-left-a, ref-b: top-left-a, stem-a: bar-bottom, stem-b: bar-top, cv: sc-bar</pms>
     </callm>
     <mv di="baseline-undershoot" p="v-bottom">
-      <mv di="sc-curved-stem" col="b" p="v-bottom-ins"/>
+      <mv di="sc-round-stem" col="b" p="v-bottom-ins"/>
     </mv>
     <iup axis="y"/>
   </gl>
@@ -5540,10 +5556,10 @@
     <pm nm="bottom-ins" val="18"/>
     <setvs axis="y"/>
     <mv di="sc-height-overshoot" p="top">
-      <mv di="sc-curved-stem" p="top-ins"/>
+      <mv di="sc-round-stem" p="top-ins"/>
     </mv>
     <mv di="sc-baseline-undershoot" p="bottom">
-      <mv di="sc-curved-stem" p="bottom-ins"/>
+      <mv di="sc-round-stem" p="bottom-ins"/>
     </mv>
     <compile-if test="include-iup = 0">
       <iup axis="y"/>
@@ -5578,13 +5594,13 @@
     <setvs axis="y"/>
     <mv di="sc-height-overshoot" p="top">
       <sh p="top-right"/>
-      <mv di="sc-curved-stem" p="top-ins">
+      <mv di="sc-round-stem" p="top-ins">
         <sh p="top-ins-right"/>
       </mv>
     </mv>
     <mv di="sc-baseline-undershoot" p="bottom">
       <sh p="bottom-right"/>
-      <mv di="sc-curved-stem" p="bottom-ins">
+      <mv di="sc-round-stem" p="bottom-ins">
         <sh p="bottom-ins-right"/>
       </mv>
     </mv>
@@ -5607,11 +5623,11 @@
     <setvs axis="y"/>
     <mv di="sc-height" p="top">
       <sh p="E-top-a"/>
-      <mv di="sc-curved-stem" p="top-ins"/>
+      <mv di="sc-round-stem" p="top-ins"/>
     </mv>
     <mv di="baseline" p="bottom">
       <sh p="E-bottom-a"/>
-      <mv di="sc-curved-stem" p="bottom-ins"/>
+      <mv di="sc-round-stem" p="bottom-ins"/>
     </mv>
     <ip r="top bottom" p="bar-bottom"/>
     <mv p="bar-bottom">
@@ -5647,7 +5663,7 @@
       <pms>pt-a: bottom-serif-left, pt-b: (bottom-serif-left + 1), sh-a: stem-bottom, cv-h: sc-serif</pms>
     </callm>
     <callm nm="interpolated-stem">
-      <pms>ref-a: top-serif-left, ref-b: bottom-serif-left, stem-a: bowl-bottom, stem-b: bowl-bottom-ins, cv: sc-curved-stem</pms>
+      <pms>ref-a: top-serif-left, ref-b: bottom-serif-left, stem-a: bowl-bottom, stem-b: bowl-bottom-ins, cv: sc-round-stem</pms>
     </callm>
     <iup axis="y"/>
   </gl>
@@ -5670,7 +5686,7 @@
     </callm>
     <ip round="yes" r="top-serif bottom-serif" p="bowl-top bowl-bottom"/>
     <mv di="sc-serif" col="b" r="bowl-top" p="bowl-top-ins"/>
-    <mv di="sc-curved-stem" r="bowl-bottom" p="bowl-bottom-ins"/>
+    <mv di="sc-round-stem" r="bowl-bottom" p="bowl-bottom-ins"/>
     <iup axis="y"/>
   </gl>
 
@@ -5690,7 +5706,7 @@
     </mv>
     <mv p="stem-bottom"/>
     <mv di="baseline-undershoot" p="bowl-bottom">
-      <mv di="sc-curved-stem" p="bowl-bottom-ins"/>
+      <mv di="sc-round-stem" p="bowl-bottom-ins"/>
     </mv>
     <iup axis="y"/>
   </gl>
@@ -5704,11 +5720,11 @@
     <pm nm="tail-ins" val="42"/>
     <setvs axis="y"/>
     <mv di="sc-height-overshoot" p="top">
-      <mv di="sc-curved-stem" p="top-ins"/>
+      <mv di="sc-round-stem" p="top-ins"/>
     </mv>
     <mv di="baseline-undershoot" p="bottom">
       <sh round="yes" p="tail-bottom"/>
-      <mv di="sc-curved-stem" p="bottom-ins">
+      <mv di="sc-round-stem" p="bottom-ins">
         <sh p="tail-ins"/>
       </mv>
     </mv>
@@ -5743,7 +5759,7 @@
       <pms>pt-a: bottom-serif-left, pt-b: (bottom-serif-left + 1), sh-a: sh-a-pts, sh-b: (foot-bottom - 1), cv-h: sc-serif</pms>
     </callm>
     <ip round="yes" r="top-serif-left bottom-serif-left" p="bowl-bottom"/>
-    <mv di="sc-curved-stem" col="b" r="bowl-bottom" p="bowl-bottom-ins">
+    <mv di="sc-round-stem" col="b" r="bowl-bottom" p="bowl-bottom-ins">
       <ip p="bowl-crotch"/>
     </mv>
     <iup axis="y"/>
@@ -5761,7 +5777,7 @@
       <sh p="(stem-top - 1) (stem-top - 2) bow-top"/>
     </mv>
     <mv round="yes" p="bow-top">
-      <mv di="sc-curved-stem" p="bow-top-ins"/>
+      <mv di="sc-round-stem" p="bow-top-ins"/>
     </mv>
     <mv p="stem-bot"/>
     <callm nm="serif-sh">
@@ -5779,10 +5795,10 @@
     <cn nm="mid-lower" val="17"/>
     <setvs axis="y"/>
     <mv di="sc-height-overshoot" p="top">
-      <mv di="sc-curved-stem" col="b" p="top-ins"/>
+      <mv di="sc-round-stem" col="b" p="top-ins"/>
     </mv>
     <mv di="baseline-undershoot" p="bottom">
-      <mv di="sc-curved-stem" col="b" p="bottom-ins"/>
+      <mv di="sc-round-stem" col="b" p="bottom-ins"/>
     </mv>
     <ip r="top bottom" p="mid-upper mid-lower"/>
     <iup axis="y"/>
@@ -5820,7 +5836,7 @@
       <pms>pt-a: serif, pt-b: (serif + 1), sh-a: stem-bot, cv-h: sc-serif</pms>
     </callm>
     <mv di="sc-baseline-undershoot" p="bowl-bot">
-      <mv di="sc-curved-stem" col="b" p="bowl-bot-ins"/>
+      <mv di="sc-round-stem" col="b" p="bowl-bot-ins"/>
     </mv>
     <ip r="bowl-bot top" p="mid"/>
     <mv round="yes" p="mid">
@@ -5866,7 +5882,7 @@
       </mv>
     </mv>
     <mv di="sc-baseline-undershoot" p="bot">
-      <mv di="sc-curved-stem" p="bot-ins"/>
+      <mv di="sc-round-stem" p="bot-ins"/>
     </mv>
     <iup axis="y"/>
   </gl>
@@ -5884,7 +5900,7 @@
       <pms>first-left: serif-left, second-left: (serif-left - 1), first-right: serif-right, second-right: (serif-right - 1), stem1: stem-left, stem2: stem-right, cv: sc-height</pms>
     </callm>
     <mv di="baseline-undershoot" p="bottom">
-      <mv di="sc-curved-stem" col="b" p="bottom-ins"/>
+      <mv di="sc-round-stem" col="b" p="bottom-ins"/>
     </mv>
     <compile-if test="include-iup = 0">
       <iup axis="y"/>
@@ -5986,7 +6002,7 @@
       <pms>pt-a: bottom-serif, pt-b: (bottom-serif + 1), sh-a: stem-bottom, cv-h: sc-serif</pms>
     </callm>
     <callm nm="interpolated-stem">
-      <pms>ref-a: top-serif, ref-b: bottom-serif, stem-a: bowl-bottom, stem-b: (bowl-bottom + 1), cv: sc-curved-stem</pms>
+      <pms>ref-a: top-serif, ref-b: bottom-serif, stem-a: bowl-bottom, stem-b: (bowl-bottom + 1), cv: sc-round-stem</pms>
     </callm>
     <iup axis="y"/>
   </gl>
@@ -6223,7 +6239,7 @@
       <mv p="top-ins"/>
     </mv>
     <mv di="baseline-undershoot" p="bottom">
-      <mv di="lc-curved-stem" p="bottom-ins"/>
+      <mv di="lc-round-stem" p="bottom-ins"/>
     </mv>
     <ip r="top bottom" p="bar-top hook-top"/>
     <mv round="no" p="bar-top">
@@ -6275,11 +6291,11 @@
     <setvs axis="y"/>
     <mv di="xheight-overshoot" p="top">
       <sh p="stem-top"/>
-      <mv di="lc-curved-stem" p="top-ins"/>
+      <mv di="lc-round-stem" p="top-ins"/>
     </mv>
     <mv di="baseline-undershoot" p="bot">
       <sh p="bot-right"/>
-      <mv di="lc-curved-stem" p="bot-ins">
+      <mv di="lc-round-stem" p="bot-ins">
         <sh p="bot-right-ins"/>
       </mv>
     </mv>
@@ -6297,13 +6313,13 @@
     <setvs axis="y"/>
     <mv di="xheight-overshoot" p="top">
       <sh p="left-top"/>
-      <mv di="lc-curved-stem" p="top-ins">
+      <mv di="lc-round-stem" p="top-ins">
         <sh p="left-top-ins"/>
       </mv>
     </mv>
     <mv di="baseline-undershoot" p="bot">
       <sh p="stem-bot"/>
-      <mv di="lc-curved-stem" p="bot-ins"/>
+      <mv di="lc-round-stem" p="bot-ins"/>
     </mv>
     <iup axis="y"/>
   </gl>
@@ -6323,11 +6339,11 @@
       <mv col="b" p="top-mv"/>
     </mv>
     <mv di="xheight-overshoot" p="bowl-top">
-      <mv di="lc-curved-stem" p="bowl-top-ins"/>
+      <mv di="lc-round-stem" p="bowl-top-ins"/>
     </mv>
     <mv di="baseline-undershoot" p="bowl-bot">
       <sh p="stem-bot"/>
-      <mv di="lc-curved-stem" p="bowl-bot-ins"/>
+      <mv di="lc-round-stem" p="bowl-bot-ins"/>
     </mv>
     <iup axis="y"/>
   </gl>
@@ -6510,13 +6526,13 @@
       <wpm nm="pt1" val="top"/>
       <wpm nm="pt2" val="top-ins"/>
       <wpm nm="cv" val="xheight-overshoot"/>
-      <wpm nm="cv-h" val="lc-curved-stem"/>
+      <wpm nm="cv-h" val="lc-round-stem"/>
       <wpm nm="codefrag">
         <sh r="top" p="v-serif-top"/>
       </wpm>
     </callm>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bottom, pt2: bottom-ins, cv: baseline-undershoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bottom, pt2: bottom-ins, cv: baseline-undershoot, cv-h: lc-round-stem</pms>
     </callm>
     <ip r="top bottom" p="serif-top"/>
     <mv p="serif-top">
@@ -6698,7 +6714,7 @@
       </mv>
     </mv>
     <mv round="yes" p="bowl-bot">
-      <mv di="lc-curved-stem" p="bowl-bot-ins"/>
+      <mv di="lc-round-stem" p="bowl-bot-ins"/>
     </mv>
     <callm nm="mid-stem">
       <pms>ref1: bar-top, ref2: bowl-bot, pt1: bowl-top, pt2: bowl-top-ins</pms>
@@ -6903,13 +6919,13 @@
     <setvs axis="y"/>
     <mv di="xheight" p="top">
       <sh p="E-top-a"/>
-      <mv di="lc-curved-stem" p="top-ins">
+      <mv di="lc-round-stem" p="top-ins">
         <sh p="E-top-b"/>
       </mv>
     </mv>
     <mv di="baseline" p="bottom">
       <sh p="E-bottom-a"/>
-      <mv di="lc-curved-stem" p="bottom-ins">
+      <mv di="lc-round-stem" p="bottom-ins">
         <sh p="E-bottom-b"/>
       </mv>
     </mv>
@@ -6934,10 +6950,10 @@
     <cn nm="stem-bot" val="0"/>
     <setvs axis="y"/>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: top, pt2: top-inside, cv: xheight-overshoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: top, pt2: top-inside, cv: xheight-overshoot, cv-h: lc-round-stem</pms>
     </callm>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bottom, pt2: bottom-inside, cv: baseline-undershoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bottom, pt2: bottom-inside, cv: baseline-undershoot, cv-h: lc-round-stem</pms>
     </callm>
     <mv round="yes" p="top-serif">
       <sh p="stem-top"/>
@@ -7100,7 +7116,7 @@
       <pms>pt-a: bottom-serif-left, pt-b: (bottom-serif-left + 1), sh-a: sh-a-pts, sh-b: (foot-bottom - 1), cv-h: lc-serif</pms>
     </callm>
     <ip round="yes" r="top-serif-left bottom-serif-left" p="bowl-bottom"/>
-    <mv di="sc-curved-stem" col="b" r="bowl-bottom" p="bowl-bottom-ins">
+    <mv di="sc-round-stem" col="b" r="bowl-bottom" p="bowl-bottom-ins">
       <ip p="bowl-crotch"/>
     </mv>
     <iup axis="y"/>
@@ -7143,10 +7159,10 @@
     <cn nm="hook-top" val="67"/>
     <setvs axis="y"/>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: top, pt2: top-ins, cv: xheight-overshoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: top, pt2: top-ins, cv: xheight-overshoot, cv-h: lc-round-stem</pms>
     </callm>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bottom, pt2: bottom-ins, cv: baseline-undershoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bottom, pt2: bottom-ins, cv: baseline-undershoot, cv-h: lc-round-stem</pms>
     </callm>
     <ip r="top bottom" p="mid-top"/>
     <sh r="mid-top" p="mid-bottom"/>
@@ -7283,7 +7299,7 @@
       <pms>pt-a: top-left, pt-b: (top-left - 1), sh-a: sh-aa, sh-b: (top-right + 1), cv: xheight, cv-h: lc-serif</pms>
     </callm>
     <mv di="baseline-undershoot" p="bot">
-      <mv di="lc-curved-stem" col="b" p="bot-ins"/>
+      <mv di="lc-round-stem" col="b" p="bot-ins"/>
     </mv>
     <iup axis="y"/>
   </gl>
@@ -7437,7 +7453,7 @@
       <mv col="b" p="top-ins"/>
     </mv>
     <mv round="yes" p="bot">
-      <mv di="lc-curved-stem" col="b" p="bot-ins"/>
+      <mv di="lc-round-stem" col="b" p="bot-ins"/>
     </mv>
     <callm nm="mid-stem">
       <pms>ref1: top, ref2: bot, pt1: mid-upper, pt2: mid-lower</pms>
@@ -7462,7 +7478,7 @@
       <mv col="b" p="top-ins"/>
     </mv>
     <mv round="yes" p="bot">
-      <mv di="lc-curved-stem" col="b" p="bot-ins"/>
+      <mv di="lc-round-stem" col="b" p="bot-ins"/>
     </mv>
     <callm nm="mid-stem">
       <pms>ref1: top, ref2: bot, pt1: mid-upper, pt2: mid-lower</pms>
@@ -7483,7 +7499,7 @@
     <cn nm="mid-upper" val="2"/>
     <setvs axis="y"/>
     <mv di="lc-ascender-top-overshoot" p="top">
-      <mv di="lc-curved-stem" col="b" p="top-ins"/>
+      <mv di="lc-round-stem" col="b" p="top-ins"/>
     </mv>
     <callm nm="serif-sh">
       <pms>pt-a: serif, pt-b: (serif + 1), sh-a: stem-end, cv-h: lc-serif</pms>
@@ -7503,7 +7519,7 @@
     <cn nm="mid-upper" val="36"/>
     <setvs axis="y"/>
     <mv di="lc-ascender-top-overshoot" p="top">
-      <mv di="lc-curved-stem" col="b" p="top-ins"/>
+      <mv di="lc-round-stem" col="b" p="top-ins"/>
     </mv>
     <callm nm="serif-sh">
       <pms>pt-a: serif, pt-b: (serif + 1), sh-a: stem-end, cv-h: lc-serif</pms>
@@ -7523,7 +7539,7 @@
     <cn nm="mid-upper" val="31"/>
     <setvs axis="y"/>
     <mv di="baseline-undershoot" p="bot">
-      <mv di="lc-curved-stem" col="b" p="bot-ins"/>
+      <mv di="lc-round-stem" col="b" p="bot-ins"/>
     </mv>
     <callm nm="serif-sh">
       <pms>pt-a: serif, pt-b: (serif - 1), sh-a: stem-end, cv: lc-ascender-top, cv-h: lc-serif</pms>
@@ -7541,7 +7557,7 @@
     <cn nm="bot-ins" val="22"/>
     <setvs axis="y"/>
     <mv di="xheight-overshoot" p="top">
-      <mv di="lc-curved-stem" p="top-ins"/>
+      <mv di="lc-round-stem" p="top-ins"/>
     </mv>
     <mv round="yes" p="bot">
       <mv col="b" p="bot-ins"/>
@@ -7558,10 +7574,10 @@
     <cn nm="dot-bot" val="39"/>
     <setvs axis="y"/>
     <mv di="cap-height-overshoot" p="top">
-      <mv di="cap-curved-stem" p="top-ins"/>
+      <mv di="cap-round-stem" p="top-ins"/>
     </mv>
     <mv di="baseline-undershoot" p="bot">
-      <mv di="cap-curved-stem" col="b" p="bot-ins"/>
+      <mv di="cap-round-stem" col="b" p="bot-ins"/>
     </mv>
     <callm nm="mid-stem">
       <pms>ref1: top, ref2: bot, pt1: dot-top, pt2: dot-bot</pms>
@@ -7603,10 +7619,10 @@
     <cn nm="hook-bot" val="26"/>
     <setvs axis="y"/>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: top, pt2: top-ins, cv: xheight-overshoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: top, pt2: top-ins, cv: xheight-overshoot, cv-h: lc-round-stem</pms>
     </callm>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bottom, pt2: bottom-ins, cv: baseline-undershoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bottom, pt2: bottom-ins, cv: baseline-undershoot, cv-h: lc-round-stem</pms>
     </callm>
     <ip r="top bottom" p="serif-top"/>
     <mv p="serif-top">
@@ -7659,10 +7675,10 @@
       <pms>top: stem-top</pms>
     </callm>
     <mv di="lc-descender" p="bot">
-      <mv di="lc-curved-stem" p="bot-ins"/>
+      <mv di="lc-round-stem" p="bot-ins"/>
     </mv>
     <callm nm="mid-stem">
-      <pms>ref1: stem-top, ref2: bot, pt1: loop-top, pt2: loop-bot, cv: lc-curved-stem</pms>
+      <pms>ref1: stem-top, ref2: bot, pt1: loop-top, pt2: loop-bot, cv: lc-round-stem</pms>
     </callm>
     <callg pnm="dotaccent">
       <pms>offset: 44, include-iup: -1</pms>
@@ -7742,7 +7758,7 @@
       <mv col="b" p="58"/>
     </mv>
     <mv round="yes" p="63">
-      <mv di="lc-curved-stem" col="b" p="79"/>
+      <mv di="lc-round-stem" col="b" p="79"/>
     </mv>
     <callm nm="mid-stem">
       <pms>ref1: 59, ref2: 63, pt1: 95, pt2: 88</pms>
@@ -7797,7 +7813,7 @@
     </command>
     <command nm="SHP" modifier="0"/>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: s-top, pt2: s-top-ins, cv: xheight-overshoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: s-top, pt2: s-top-ins, cv: xheight-overshoot, cv-h: lc-round-stem</pms>
     </callm>
     <ip r="s-top bottom" p="mid-top"/>
     <sh r="mid-top" p="mid-bottom"/>
@@ -7862,7 +7878,7 @@
     </command>
     <command nm="SHP" modifier="0"/>
     <callm nm="lc-bowl">
-      <pms>t: c-top, t-ins: c-top-ins, cv-t: lc-curved-stem, b: c-bot, b-ins: c-bot-ins, cv-b: lc-thick-curve</pms>
+      <pms>t: c-top, t-ins: c-top-ins, cv-t: lc-round-stem, b: c-bot, b-ins: c-bot-ins, cv-b: lc-thick-curve</pms>
     </callm>
     <callm nm="mid-stem">
       <pms>ref1: c-top, ref2: c-bot, pt1: c-mid-a, pt2: c-mid-b</pms>
@@ -7914,7 +7930,7 @@
       <pms>include-iup: -1</pms>
     </callg>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: s-top, pt2: s-top-ins, cv: xheight-overshoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: s-top, pt2: s-top-ins, cv: xheight-overshoot, cv-h: lc-round-stem</pms>
     </callm>
     <ip r="s-top bottom" p="mid-top"/>
     <sh r="mid-top" p="mid-bottom"/>
@@ -8045,10 +8061,10 @@
     <cn nm="mid-top" val="41"/>
     <setvs axis="y"/>
     <mv di="baseline-undershoot" p="bot">
-      <mv di="lc-curved-stem" col="b" p="bot-ins"/>
+      <mv di="lc-round-stem" col="b" p="bot-ins"/>
     </mv>
     <mv p="top">
-      <mv di="lc-curved-stem" p="top-ins"/>
+      <mv di="lc-round-stem" p="top-ins"/>
     </mv>
     <ip r="top bot" p="mid-bot"/>
     <mv p="mid-bot">
@@ -8084,10 +8100,10 @@
     <cn nm="top-b" val="31"/>
     <setvs axis="y"/>
     <mv di="baseline-undershoot" p="bot-a">
-      <mv di="lc-curved-stem" p="bot-b"/>
+      <mv di="lc-round-stem" p="bot-b"/>
     </mv>
     <mv p="top-a">
-      <mv di="lc-curved-stem" p="top-b"/>
+      <mv di="lc-round-stem" p="top-b"/>
     </mv>
     <callm nm="mid-stem">
       <pms>ref1: top-a, ref2: bot-a, pt1: bar-a, pt2: bar-b, cv: lc-bar</pms>
@@ -8104,10 +8120,10 @@
     <cn nm="top-b" val="18"/>
     <setvs axis="y"/>
     <mv di="baseline-undershoot" p="bot-a">
-      <mv di="cap-curved-stem" p="bot-b"/>
+      <mv di="cap-round-stem" p="bot-b"/>
     </mv>
     <mv di="cap-height-overshoot" p="top-a">
-      <mv di="lc-curved-stem" p="top-b"/>
+      <mv di="lc-round-stem" p="top-b"/>
     </mv>
     <ip r="top-a bot-a" p="dot-a"/>
     <mv p="dot-a">
@@ -8705,9 +8721,9 @@
     <cn nm="top" val="2"/>
     <cn nm="bottom" val="0"/>
     <setvs axis="y"/>
-    <push>top bottom</push>
+    <push>top macronw bottom</push>
     <command nm="MDAP" modifier="1"/>
-    <command nm="MDRP">
+    <command nm="MIRP">
       <modifier type="col" val="b"/>
     </command>
     <iup axis="y"/>
@@ -9940,7 +9956,7 @@
       <pms>serif-bot: 54, vertical-bot: 10, top: 21, top-ins: 36, bar-top: f-bar-top, bar-bot: f-bar-bot, bar-bot-left: 11</pms>
     </callm>
     <sh r="f-bar-top" p="o-top"/>
-    <push>di-top-b di-top-a di-bot-b di-bot-a o-top o-top-ins lc-curved-stem o-top</push>
+    <push>di-top-b di-top-a di-bot-b di-bot-a o-top o-top-ins lc-round-stem o-top</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="MIRP">
       <modifier type="col" val="b"/>
@@ -9955,7 +9971,7 @@
     </command>
     <command nm="ALIGNRP"/>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: o-bot, pt2: o-bot-ins, cv: baseline-undershoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: o-bot, pt2: o-bot-ins, cv: baseline-undershoot, cv-h: lc-round-stem</pms>
     </callm>
     <iup axis="y"/>
   </gl>
@@ -9985,7 +10001,7 @@
       <pms>pt1: bowl-top, pt2: bowl-top-ins, cv: xheight-overshoot</pms>
     </callm>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bowl-bottom, pt2: bowl-bottom-ins, cv: baseline-undershoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bowl-bottom, pt2: bowl-bottom-ins, cv: baseline-undershoot, cv-h: lc-round-stem</pms>
     </callm>
     <iup axis="y"/>
   </gl>
@@ -10133,10 +10149,10 @@
     <mv di="lc-ascender-top" p="top"/>
     <mv di="lc-descender-undershoot" p="stem-bottom"/>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bowl-top, pt2: bowl-top-ins, cv: xheight-overshoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bowl-top, pt2: bowl-top-ins, cv: xheight-overshoot, cv-h: lc-round-stem</pms>
     </callm>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bowl-bottom, pt2: bowl-bottom-ins, cv: baseline-undershoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bowl-bottom, pt2: bowl-bottom-ins, cv: baseline-undershoot, cv-h: lc-round-stem</pms>
     </callm>
     <iup axis="y"/>
   </gl>
@@ -10161,13 +10177,13 @@
     <setvs axis="y"/>
     <mv di="xheight" p="top">
       <sh p="E-top-a"/>
-      <mv di="lc-curved-stem" p="top-ins">
+      <mv di="lc-round-stem" p="top-ins">
         <sh p="E-top-b"/>
       </mv>
     </mv>
     <mv di="baseline" p="bottom">
       <sh p="E-bottom-a"/>
-      <mv di="lc-curved-stem" p="bottom-ins">
+      <mv di="lc-round-stem" p="bottom-ins">
         <sh p="E-bottom-b"/>
       </mv>
     </mv>
@@ -10224,7 +10240,7 @@
       <mv col="b" p="bottom-inside"/>
     </mv>
     <mv di="xheight-overshoot" p="top">
-      <mv di="lc-curved-stem" col="b" p="top-inside"/>
+      <mv di="lc-round-stem" col="b" p="top-inside"/>
     </mv>
     <callm nm="rhotic-hook">
       <pms>d-top: hook-d-top, d-bot: hook-d-bot, a: hook-a, b: hook-b</pms>
@@ -10284,7 +10300,7 @@
       <pms>pt1: bottom, pt2: bottom-inside, cv: baseline-undershoot</pms>
     </callm>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: top, pt2: top-inside, cv: xheight-overshoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: top, pt2: top-inside, cv: xheight-overshoot, cv-h: lc-round-stem</pms>
     </callm>
     <ip r="top bottom" p="mid-bar-top mid-bar-bottom"/>
     <callm nm="rhotic-hook">
@@ -10397,13 +10413,13 @@
     <setvs axis="y"/>
     <mv di="xheight-overshoot" p="o-top">
       <sh p="e-top"/>
-      <mv di="lc-curved-stem" col="b" p="o-top-ins">
+      <mv di="lc-round-stem" col="b" p="o-top-ins">
         <sh p="e-top-ins"/>
       </mv>
     </mv>
     <mv di="baseline-undershoot" p="o-bot">
       <sh p="e-bot"/>
-      <mv di="lc-curved-stem" col="b" p="o-bot-ins"/>
+      <mv di="lc-round-stem" col="b" p="o-bot-ins"/>
     </mv>
     <mv col="b" r="e-bot" p="e-bot-ins"/>
     <ip r="e-top e-bot" p="bar-top bar-bot"/>
@@ -10647,15 +10663,15 @@
   </gl>
 
   <gl pnm="uniFB05">
-    <cn nm="longs-top" val="32"/>
-    <cn nm="bar-top" val="36"/>
-    <cn nm="bar-bottom1" val="39"/>
+    <cn nm="longs-top" val="33"/>
+    <cn nm="bar-top" val="37"/>
+    <cn nm="bar-bottom1" val="40"/>
     <cn nm="bar-bottom2" val="8"/>
     <cn nm="bottom" val="0"/>
-    <cn nm="bottom-ins" val="47"/>
+    <cn nm="bottom-ins" val="48"/>
     <setvs axis="y"/>
     <callm nm="longs-lig">
-      <pms>serif-bot: 55, vertical-bot: 22, top: 32, top-ins: 17, bar-bot: 24, bar-top: 25</pms>
+      <pms>serif-bot: 56, vertical-bot: 23, top: 33, top-ins: 18, bar-bot: 25, bar-top: 26</pms>
     </callm>
     <callm nm="lc-horz-stroke">
       <pms>pt1: bottom, pt2: bottom-ins, cv: baseline-undershoot</pms>
@@ -10720,10 +10736,10 @@
     <cn nm="bar-bottom2" val="65"/>
     <setvs axis="y"/>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: top, pt2: top-ins, cv: xheight-overshoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: top, pt2: top-ins, cv: xheight-overshoot, cv-h: lc-round-stem</pms>
     </callm>
     <callm nm="lc-horz-stroke-cv">
-      <pms>pt1: bottom, pt2: bottom-ins, cv: baseline-undershoot, cv-h: lc-curved-stem</pms>
+      <pms>pt1: bottom, pt2: bottom-ins, cv: baseline-undershoot, cv-h: lc-round-stem</pms>
     </callm>
     <mv p="loop-top">
       <mv col="b" p="loop-top-ins"/>

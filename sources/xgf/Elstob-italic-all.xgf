@@ -76,7 +76,8 @@
   <cv nm="mod-baseline" val="567"/>
   <cv nm="mod-baseline-undershoot" val="554"/>
   <cv nm="mod-xheight-overshoot" val="1102"/>
-<!--  <cv nm="mod-xheight" val="1095"/> -->
+  <!--  <cv nm="mod-xheight" val="1095"/> -->
+  <cv nm="macronw" val="81" col="b"/>
 
   <alias nm="lcas" target="lc-ascender-serif"/>
   <alias nm="lcat" target="lc-ascender-top"/>
@@ -130,6 +131,7 @@
       <cvv nm="sc-bar" val="45"/>
       <cvv nm="sc-curved-stem" val="31"/>
       <cvv nm="tilde-stem" val="81"/>
+      <cvv nm="macronw" val="66"/>
     </region>
     <region tag="wght" bot="0.0" peak="1.0" top="1.0">
     <!-- <region tag="wght" bot="0.33" peak="0.66" top="0.66"> -->
@@ -149,6 +151,7 @@
       <cvv nm="sc-bar" val="70"/>
       <cvv nm="sc-curved-stem" val="68"/>
       <cvv nm="tilde-stem" val="137"/>
+      <cvv nm="macronw" val="93"/>
     </region>
     <region tag="opsz" bot="-1.0" peak="-1.0" top="0.0">
       <cvv nm="xheight" val="944"/>
@@ -179,6 +182,7 @@
       <cvv nm="mod-baseline-undershoot" val="598"/>
       <cvv nm="mod-xheight-overshoot" val="1170"/>
       <cvv nm="mod-xheight" val="1065"/>
+      <cvv nm="macronw" val="104"/>
     </region>
     <region tag="opsz" bot="0.0" peak="1.0" top="1.0">
       <cvv nm="xheight" val="856"/>
@@ -207,6 +211,7 @@
       <cvv nm="mod-baseline-undershoot" val="510"/>
       <cvv nm="mod-xheight-overshoot" val="1034"/>
       <cvv nm="mod-xheight" val="1025"/>
+      <cvv nm="macronw" val="80"/>
     </region>
     <region tag="GRAD" bot="0.0" peak="1.0" top="1.0">
       <cvv nm="cap-serif" val="60"/>
@@ -227,6 +232,7 @@
       <cvv nm="sc-curved-stem" val="68"/>
       <cvv nm="tilde-stem" val="81"/>
       <cvv nm="tilde-stem" val="151"/>
+      <cvv nm="macronw" val="93"/>
     </region>
   </cvar>
 
@@ -249,6 +255,8 @@
     <if test="pixels-per-em &lt; 39"> 
       <setcv nm="xheight" unit="pixel" val="control-value(xheight-overshoot)"/>
       <setcv nm="baseline-undershoot" unit="pixel" val="control-value(baseline)"/>
+      <setcv nm="cap-baseline-undershoot" unit="pixel" val="control-value(baseline)"/>
+      <setcv nm="sc-baseline-undershoot" unit="pixel" val="control-value(baseline)"/>
       <else>
         <round val="xheight"/>
         <round val="baseline-undershoot"/>
@@ -256,6 +264,8 @@
     </if>
     <if test="pixels-per-em &lt; 37">
       <setcv nm="cap-bar" unit="pixel" val="control-value(cap-serif)"/>
+      <setcv nm="lc-bar" unit="pixel" val="control-value(lc-serif)"/>
+      <setcv nm="sc-bar" unit="pixel" val="control-value(sc-serif)"/>
     </if>
   </prep>
   
@@ -7034,7 +7044,7 @@
 
   <gl pnm="macron">
     <mv p="0">
-      <mv p="1"/>
+      <mv di="macronw" p="1"/>
     </mv>
   </gl>
 
