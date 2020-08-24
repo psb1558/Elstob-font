@@ -2,4 +2,7 @@
 .gitignore export-ignore
 webfiles/ export-ignore
 fonts/ export-ignore
+images/ export-ignore
 index.html export-ignore
+elstob-sample.png export-ignore
+README.md export-ignore
