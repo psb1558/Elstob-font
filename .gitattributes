@@ -1,4 +1,5 @@
 .gitattributes export-ignore
+.gitignore export-ignore
 webfiles/ export-ignore
 fonts/ export-ignore
 index.html export-ignore
