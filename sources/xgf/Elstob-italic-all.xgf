@@ -36,7 +36,8 @@
   <cv nm="xheight-overshoot" val="911"/>
   <cv nm="lc-round-stem" val="62" col="b"/>
   <cv nm="lc-baseline-undershoot" val="-23"/>
-  <cv nm="lc-bar" val="54" col="b"/>
+  <cv nm="lc-bar" val="62" col="b"/>
+  <cv nm="lc-serif" val="52" col="b"/>
   <cv nm="lc-ascender-top" val="1485"/>
   <cv nm="lc-ascender-top-alt" val="1451"/>
   <cv nm="lc-ascender-serif" val="59"/>
@@ -44,7 +45,6 @@
   <cv nm="lc-descender-alt" val="-466"/>
   <cv nm="dot-width" val="229" col="b"/>
   <cv nm="dot-height" val="1128"/>
-  <cv nm="lc-serif" val="52" col="b"/>
   <cv nm="rune-punct" val="258" col="b"/>
   <cv nm="euro-bar" val="102" col="b"/>
   <cv nm="num-top" val="1317"/>
@@ -116,10 +116,10 @@
       <cvv nm="cap-serif" val="40"/>
       <cvv nm="cap-bar" val="42"/>
       <cvv nm="cap-round-stem" val="31"/>
-      <cvv nm="lc-bar" val="42"/>
       <cvv nm="lc-ascender-serif" val="44"/>
       <cvv nm="dot-width" val="151"/>
       <cvv nm="lc-serif" val="40"/>
+      <cvv nm="lc-bar" val="42"/>
       <cvv nm="rune-punct" val="225"/>
       <cvv nm="period-height" val="207"/>
       <cvv nm="period-undershoot" val="-22"/>
@@ -139,9 +139,9 @@
       <cvv nm="cap-bar" val="70"/>
       <cvv nm="cap-round-stem" val="68"/>
       <cvv nm="lc-ascender-serif" val="81"/>
-      <cvv nm="lc-bar" val="70"/>
       <cvv nm="dot-width" val="332"/>
       <cvv nm="lc-serif" val="60"/>
+      <cvv nm="lc-bar" val="70"/>
       <cvv nm="rune-punct" val="313"/>
       <cvv nm="period-height" val="350"/>
       <cvv nm="period-undershoot" val="-47"/>
@@ -159,13 +159,13 @@
       <cvv nm="cap-serif" val="84"/>
       <cvv nm="cap-bar" val="93"/>
       <cvv nm="cap-round-stem" val="90"/>
+      <cvv nm="lc-serif" val="84"/>
       <cvv nm="lc-bar" val="96"/>
       <cvv nm="lc-descender" val="451"/>
       <cvv nm="lc-descender-alt" val="421"/>
       <cvv nm="dot-width" val="231"/>
       <cvv nm="dot-height" val="1170"/>
       <cvv nm="comma-height" val="250"/>
-      <cvv nm="lc-serif" val="84"/>
       <cvv nm="rune-punct" val="256"/>
       <cvv nm="euro-bar" val="111"/>
       <cvv nm="sc-height" val="1052"/>
@@ -190,13 +190,13 @@
       <cvv nm="cap-serif" val="50"/>
       <cvv nm="cap-bar" val="60"/>
       <cvv nm="cap-round-stem" val="57"/>
+      <cvv nm="lc-serif" val="50"/>
       <cvv nm="lc-bar" val="61"/>
       <cvv nm="lc-descender" val="551"/>
       <cvv nm="lc-descender-alt" val="511"/>
       <cvv nm="dot-width" val="224"/>
       <cvv nm="dot-height" val="1085"/>
       <cvv nm="comma-height" val="250"/>
-      <cvv nm="lc-serif" val="50"/>
       <cvv nm="euro-bar" val="98"/>
       <cvv nm="sc-height" val="980"/>
       <cvv nm="sc-height-overshoot" val="1000"/>
@@ -218,9 +218,9 @@
       <cvv nm="cap-bar" val="70"/>
       <cvv nm="cap-round-stem" val="68"/>
       <cvv nm="lc-ascender-serif" val="81"/>
+      <cvv nm="lc-serif" val="60"/>
       <cvv nm="lc-bar" val="70"/>
       <cvv nm="dot-width" val="340"/>
-      <cvv nm="lc-serif" val="60"/>
       <cvv nm="rune-punct" val="328"/>
       <cvv nm="period-height" val="350"/>
       <cvv nm="period-undershoot" val="-47"/>
@@ -246,17 +246,31 @@
     <round val="lc-baseline-undershoot"/>
     <round val="xheight"/>
     <round val="xheight-overshoot"/>
+    <round val="lc-serif"/>
+    <if test="control-value(cap-serif) &lt; 2.0">
+      <setcv nm="lc-serif" unit="pixel" val="control-value(lc-bar)"/>
+      <setcv nm="cap-serif" unit="pixel" val="control-value(cap-bar)"/>
+      <setcv nm="sc-serif" unit="pixel" val="control-value(sc-bar)"/>
+      <set-control-value-cut-in val="2.0"/>
+      <set-control-value-cut-in val="2.0"/>
+    </if>
+    <!--
     <if test="pixels-per-em &lt; 53">
       <setcv nm="cap-serif" unit="pixel"
 	     val="control-value(cap-bar)"/>
       <setcv nm="sc-bar" unit="pixel"
 	     val="control-value(sc-serif)"/>
-    </if>
+	     </if>
+	     -->
     <if test="pixels-per-em &lt; 39"> 
-      <setcv nm="xheight" unit="pixel" val="control-value(xheight-overshoot)"/>
-      <setcv nm="baseline-undershoot" unit="pixel" val="control-value(baseline)"/>
-      <setcv nm="cap-baseline-undershoot" unit="pixel" val="control-value(baseline)"/>
-      <setcv nm="sc-baseline-undershoot" unit="pixel" val="control-value(baseline)"/>
+      <setcv nm="xheight" unit="pixel"
+	     val="control-value(xheight-overshoot)"/>
+      <setcv nm="baseline-undershoot" unit="pixel"
+	     val="control-value(baseline)"/>
+      <setcv nm="cap-baseline-undershoot" unit="pixel"
+	     val="control-value(baseline)"/>
+      <setcv nm="sc-baseline-undershoot" unit="pixel"
+	     val="control-value(baseline)"/>
       <else>
         <round val="xheight"/>
         <round val="baseline-undershoot"/>
@@ -696,16 +710,18 @@
 
   <gl pnm="E">
     <callm nm="serif-sh">
-      <pms>pt-a: 25, pt-b: 24, sh-a: 1, cv: cap-height</pms>
+      <pms>pt-a: 29, pt-b: 28, sh-a: 1, cv: cap-height</pms>
     </callm>
+    <mv di="lc-bar" r="29" p="26"/>
     <callm nm="serif-sh">
       <pms>pt-a: 4, pt-b: 5, sh-a: 0, cv: baseline</pms>
     </callm>
+    <mv di="lc-bar" r="4" p="7"/>
     <callm nm="mid-stem">
-      <pms>ref1: 25, ref2: 4, pt1: 12, pt2: 13, cv: cap-bar</pms>
+      <pms>ref1: 29, ref2: 4, pt1: 14, pt2: 15, cv: cap-bar</pms>
     </callm>
-    <sh r="13" p="17"/>
-    <sh r="12" p="16"/>
+    <sh r="14" p="18"/>
+    <sh r="15" p="19"/>
   </gl>
 
   <gl pnm="F">
@@ -722,10 +738,10 @@
     <sh r="17" p="21"/>
   </gl>
 
-  <gl pnm="uniA784"> <!-- Insular F -->
+  <gl pnm="uniA77B"> <!-- Insular F -->
     <mv di="cap-height-overshoot" p="8">
       <mv min-distance="no" col="g" p="24">
-	<mv p="35"/>
+	<mv p="36"/>
       </mv>
     </mv>
     <mv p="0"/>
@@ -755,13 +771,13 @@
     <mv p="0">
       <mv di="caprs" p="53"/>
     </mv>
-    <mv di="cap-height" p="34">
-      <mv p="35">
+    <mv di="cap-height" p="29">
+      <mv p="36">
         <ip p="20 37"/>
         <sh p="21"/>
       </mv>
     </mv>
-    <ip r="34 0" p="62"/>
+    <ip r="29 0" p="62"/>
     <mv p="62">
       <mv p="10">
         <ip p="11"/>
@@ -1005,7 +1021,7 @@
   <gl pnm="uniA784"> <!-- Insular S -->
     <mv di="cap-height-overshoot" p="8">
       <mv min-distance="no" col="g" p="20">
-	<mv p="31"/>
+	<mv p="32"/>
       </mv>
     </mv>
     <mv p="0"/>
