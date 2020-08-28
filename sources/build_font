@@ -37,7 +37,7 @@ do
       echo ""
       echo "To create a font with a different family name (e.g. ElstobO), change the"
       echo "family name in Glyphs. Hinting by ttfautohint-vf may not be production"
-      echo "quality: use the VTT code instead."
+      echo "quality: use the Xgridfit code instead."
       return 0
     fi
     if [ $arg == "-s" ]
