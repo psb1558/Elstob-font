@@ -878,10 +878,6 @@
     <iup axis="y"/>
   </gl>
 
-  <gl pnm="minus.osf">
-    <callg pnm="minus"/>
-  </gl>
-
   <gl init-graphics="no" pnm="hyphen">
     <callg pnm="minus"/>
   </gl>
@@ -927,16 +923,12 @@
     <cn nm="cross-bottom" val="2"/>
     <setvs axis="y"/>
     <mv p="cross-bottom">
-      <sh p="bottom"/>
+      <sh p="bottom 10"/>
       <mv col="b" p="cross-top">
-        <sh p="top"/>
+        <sh p="top 7"/>
       </mv>
     </mv>
     <iup axis="y"/>
-  </gl>
-
-  <gl pnm="plus.osf">
-    <callg pnm="plus"/>
   </gl>
 
   <gl pnm="k">
@@ -3623,10 +3615,6 @@
     <iup axis="y"/>
   </gl>
 
-  <gl pnm="asciitilde.osf">
-    <callg pnm="asciitilde"/>
-  </gl>
-
   <gl pnm="at">
     <setvs axis="y"/>
     <push>6 10</push>
@@ -3699,10 +3687,6 @@
     <iup axis="y"/>
   </gl>
 
-  <gl pnm="divide.osf">
-    <callg pnm="divide"/>
-  </gl>
-
   <gl pnm="equal">
     <setvs axis="y"/>
     <mv p="5">
@@ -3712,10 +3696,6 @@
       <mv di="euro-bar" col="b" p="4"/>
     </mv>
     <iup axis="y"/>
-  </gl>
-
-  <gl pnm="equal.osf">
-    <callg pnm="equal"/>
   </gl>
 
   <gl pnm="notequal">
@@ -3733,10 +3713,6 @@
     <iup axis="y"/>
   </gl>
 
-  <gl pnm="notequal.osf">
-    <callg pnm="notequal"/>
-  </gl>
-
   <gl pnm="greaterequal">
     <setvs axis="y"/>
     <mv p="9">
@@ -3746,10 +3722,6 @@
       </mv>
     </mv>
     <iup axis="y"/>
-  </gl>
-
-  <gl pnm="greaterequal.osf">
-    <callg pnm="greaterequal"/>
   </gl>
 
   <gl pnm="lessequal">
@@ -3763,10 +3735,6 @@
     <iup axis="y"/>
   </gl>
 
-  <gl pnm="lessequal.osf">
-    <callg pnm="lessequal"/>
-  </gl>
-
   <gl pnm="logicalnot">
     <setvs axis="y"/>
     <mv p="3">
@@ -3775,10 +3743,6 @@
       </mv>
     </mv>
     <iup axis="y"/>
-  </gl>
-
-  <gl pnm="logicalnot.osf">
-    <callg pnm="logicalnot"/>
   </gl>
 
   <gl pnm="infinity">
@@ -3796,17 +3760,13 @@
     <iup axis="y"/>
   </gl>
 
-  <gl pnm="infinity.osf">
-    <callg pnm="infinity"/>
-  </gl>
-
   <gl pnm="integral">
     <callg pnm="uni0283"/>
   </gl>
 
   <gl pnm="uni2126"> <!-- Math Omega -->
     <setvs axis="y"/>
-    <mv di="baseline" p="55">
+    <mv di="baseline" p="0">
       <sh p="34"/>
       <mv p="6">
 	<sh p="53 35 26"/>
@@ -3834,21 +3794,24 @@
     <set nm="top-sh-a" p="10 1"/>
     <set nm="bot-sh-a" p="9 13 0"/>
     <setvs axis="y"/>
-    <callm nm="serif-sh">
-      <pms>pt-a: 20, pt-b: 19, sh-a: top-sh-a, sh-b: 22</pms>
-    </callm>
-    <callm nm="serif-sh">
-      <pms>pt-a: 4, pt-b: 5, sh-a: bot-sh-a, sh-b: 14</pms>
-    </callm>
+    <mv p="20">
+      <sh p="10 1"/>
+      <mv di="cap-serif" p="19">
+    </mv></mv>
+    <mv p="4">
+      <sh p="9 0 13"/>
+      <mv di="cap-serif" p="5">
+	<sh p="14"/>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
-  <gl pnm="uni2211"> <!-- Math Sigma -->
+  <gl pnm="summation"> <!-- Math Sigma -->
     <setvs axis="y"/>
-    <mv di="cap-height" p="4">
+    <mv p="4">
       <mv di="cap-bar" p="12"/>
     </mv>
-    <mv di="baseline" p="0">
+    <mv p="0">
       <mv di="cap-bar" p="14"/>
     </mv>
     <ip r="4 0" p="2 13"/>
@@ -3919,10 +3882,6 @@
     <iup axis="y"/>
   </gl>
 
-  <gl pnm="plusminus.osf">
-    <callg pnm="plusminus"/>
-  </gl>
-
   <gl pnm="approxequal">
     <setvs axis="y"/>
     <mv p="0">
@@ -3938,10 +3897,6 @@
       <mv p="41"/>
     </mv>
     <iup axis="y"/>
-  </gl>
-
-  <gl pnm="approxequal.osf">
-    <callg pnm="approxequal"/>
   </gl>
 
   <gl pnm="ordfeminine">

@@ -6397,6 +6397,16 @@
     <ip r="26 43" p="10 11 35 36"/>
   </gl>
 
+  <gl pnm="uni2083.osf"> <!-- old style subscript 3 -->
+    <mv p="0">
+      <mv p="1"/>
+    </mv>
+    <mv p="27">
+      <mv p="20"/>
+    </mv>
+    <ip r="0 27" p="11 12"/>
+  </gl>
+
   <gl pnm="uni2074"> <!-- superscript four -->
     <mv di="supsb" p="21">
       <sh p="0"/>
@@ -6680,7 +6690,6 @@
   <gl pnm="numbersign">
     <cn nm="top" val="5"/>
     <cn nm="bot" val="4"/>
-    <setvs axis="y"/>
     <mv di="baseline" p="bot">
       <sh p="12"/>
     </mv>
@@ -6693,7 +6702,6 @@
     <callm nm="mid-stem">
       <pms>ref1: top, ref2: bot, pt1: 9, pt2: 8, cv: numbersign-bar</pms>
     </callm>
-    <iup axis="y"/>
   </gl>
 
   <gl pnm="uni2016"> <!-- double bar -->
@@ -6933,7 +6941,6 @@
   <gl pnm="numbersign.sc">
     <cn nm="top" val="5"/>
     <cn nm="bot" val="4"/>
-    <setvs axis="y"/>
     <mv di="baseline" p="bot">
       <sh p="12"/>
     </mv>
@@ -6946,7 +6953,6 @@
     <callm nm="mid-stem">
       <pms>ref1: top, ref2: bot, pt1: 9, pt2: 8</pms>
     </callm>
-    <iup axis="y"/>
   </gl>
 
   <gl pnm="uni2E4A"> <!-- solidus with dot -->
@@ -7900,11 +7906,42 @@
   </gl>
 
   <gl pnm="equal">
-    <mv p="6">
-      <mv di="euro-bar" p="5"/>
+    <mv p="5">
+      <mv di="euro-bar" p="4"/>
     </mv>
-    <mv p="1">
+    <mv p="0">
       <mv di="euro-bar" p="2"/>
+    </mv>
+  </gl>
+
+  <gl pnm="notequal">
+    <mv p="9">
+      <mv col="w" p="4">
+        <mv di="euro-bar" col="b" p="5">
+	  <sh p="2"/>
+	</mv>
+      </mv>
+      <mv di="euro-bar" col="b" p="8">
+	<sh p="0"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="greaterequal">
+    <mv p="9">
+      <mv di="euro-bar" p="8"/>
+      <mv round="no" col="w" p="0">
+	<mv round="no" col="g" p="5"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="lessequal">
+    <mv p="10">
+      <mv di="euro-bar" p="9"/>
+      <mv round="no" col="w" p="0">
+	<mv round="no" col="g" p="3"/>
+      </mv>
     </mv>
   </gl>
 
@@ -7920,30 +7957,50 @@
   </gl>
 
   <gl pnm="plusminus">
-    <mv di="baseline" p="13">
-      <mv p="14"/>
+    <mv p="12">
+      <mv di="euro-bar" p="13">
+	<mv col="w" p="0">
+	  <mv col="g" p="5"/>
+    </mv></mv></mv>
+    <ip r="5 0" p="3"/>
+    <mv p="3">
+      <sh p="7"/>
+      <mv di="euro-bar" p="2">
+	<sh p="10"/>
+      </mv>
     </mv>
-    <mv p="5">
-      <sh p="1 3"/>
-      <mv p="6">
-	<sh p="10 9"/>
-    </mv></mv>
+  </gl>
+
+  <gl pnm="approxequal">
+    <mv p="0">
+      <mv col="g" p="5">
+	<mv p="12"/>
+      </mv>
+      <mv p="17"/>
+    </mv>
+    <mv p="24">
+      <mv col="g" p="29">
+	<mv p="36"/>
+      </mv>
+      <mv p="41"/>
+    </mv>
   </gl>
 
   <gl pnm="asciitilde">
     <mv p="0">
-      <mv p="4">
+      <mv p="5">
 	<mv p="12"/>
       </mv>
-      <mv p="16"/>
+      <mv p="17"/>
     </mv>
   </gl>
 
   <gl pnm="logicalnot">
-    <mv di="baseline" p="0">
-      <mv col="g" p="2">
-	<mv p="3"/>
-    </mv></mv>
+    <mv p="3">
+      <mv di="euro-bar" col="b" p="2">
+        <mv col="g" p="0"/>
+      </mv>
+    </mv>
   </gl>
 
   <gl pnm="asciicircum">
@@ -7954,17 +8011,155 @@
     </mv></mv>
   </gl>
 
+  <gl pnm="emptyset">
+    <mv di="baseline-undershoot" p="0">
+      <sh p="40"/>
+      <mv p="20"/>
+    </mv>
+    <mv p="10">
+      <sh p="42"/>
+      <mv p="30"/>
+    </mv>
+  </gl>
+
+  <gl pnm="emptyset.osf">
+    <callg pnm="emptyset"/>
+  </gl>
+
+  <gl pnm="infinity">
+    <mv p="0">
+      <sh p="45"/>
+      <mv p="29"/>
+      <mv p="15"/>
+    </mv>
+    <mv p="8">
+      <sh p="37"/>
+      <mv p="52"/>
+      <mv p="21"/>
+    </mv>
+  </gl>
+
+  <gl pnm="integral">
+    <cn nm="top" val="28"/>
+    <cn nm="top-ins" val="41"/>
+    <cn nm="bot" val="0"/>
+    <cn nm="bot-ins" val="13"/>
+    <mv di="lc-ascender-top" p="top">
+      <mv col="b" p="top-ins"/>
+    </mv>
+    <mv di="lc-descender" p="bot">
+      <mv col="b" p="bot-ins"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni2126"> <!-- Math Omega -->
+    <mv di="baseline" p="0">
+      <sh p="32"/>
+      <mv p="6">
+	<sh p="33 25"/>
+    </mv></mv>
+    <mv di="cap-height-overshoot" p="16">
+      <mv di="cap-round-stem" p="41"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni2206"> <!-- Math Delta -->
+    <mv di="baseline" p="0">
+      <mv p="7">
+	<ip p="6"/>
+      </mv>
+    </mv>
+    <mv di="cap-height-overshoot" p="2">
+      <sh p="10"/>
+    </mv>
+  </gl>
+    
+  <gl pnm="uni220F"> <!-- Math Pi -->
+    <set nm="top-sh-a" p="10 1"/>
+    <set nm="bot-sh-a" p="9 13 0"/>
+    <mv p="20">
+      <sh p="10 1"/>
+      <mv di="cap-serif" p="19">
+    </mv></mv>
+    <mv p="4">
+      <sh p="9 0 13"/>
+      <mv di="cap-serif" p="5">
+	<sh p="14"/>
+    </mv></mv>
+  </gl>
+
+  <gl pnm="summation"> <!-- Math Sigma -->
+    <mv p="4">
+      <mv di="cap-bar" p="12"/>
+    </mv>
+    <mv p="0">
+      <mv di="cap-bar" p="14"/>
+    </mv>
+    <ip r="4 0" p="2 13"/>
+  </gl>
+
+  <gl pnm="partialdiff">
+    <mv di="baseline-undershoot" p="0">
+      <mv di="lc-round-stem" p="25"/>
+    </mv>
+    <mv p="40">
+      <mv p="34"/>
+    </mv>
+    <ip r="40 0" p="9"/>
+    <mv p="9">
+      <mv p="16"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni207A"> <!-- superscript plus -->
+    <mv p="2">
+      <sh p="10 11"/>
+      <mv p="3">
+	<sh p="7 6"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="arrowright">
+    <mv p="2">
+      <sh p="0"/>
+      <mv di="euro-bar" p="5">
+	<sh p="7"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="arrowleft">
+    <mv p="7">
+      <sh p="0"/>
+      <mv di="euro-bar" p="4">
+	<sh p="2"/>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="lozenge">
+    <mv p="0">
+      <sh p="6"/>
+    </mv>
+    <mv p="2">
+      <sh p="9"/>
+    </mv>
+  </gl>
+
   <gl pnm="uni03BC"> <!-- mu -->
-    <mv di="lcbu" p="54">
-      <sh p="68"/>
-      <mv p="31">
-	<sh p="48"/>
+    <mv di="lcbu" p="23">
+      <sh p="40"/>
+      <mv p="29">
+	<sh p="54"/>
     </mv></mv>
     <mv p="0"/>
-    <mv di="xho" p="19">
-      <mv p="13"/>
+    <mv di="xho" p="14">
+      <mv p="6"/>
     </mv>
-    <mv di="xheight" p="40"/>
+    <mv di="xheight" p="34">
+      <sh p="47"/>
+    </mv>
   </gl>
 
   <gl pnm="yen" assume-y="no">
@@ -8353,6 +8548,18 @@
     <callm nm="mid-stem">
       <pms>ref1: 10, ref2: 0, pt1: 20, pt2: 21</pms>
     </callm>
+  </gl>
+
+  <gl pnm="pi">
+    <mv p="22" di="xh">
+      <mv p="15">
+	<ip p="13 49 46 26"/>
+      </mv>
+    </mv>
+    <mv di="lcbu" p="40">
+      <sh p="0"/>
+      <mv p="33"/>
+    </mv>
   </gl>
 
   <gl pnm="chi">
