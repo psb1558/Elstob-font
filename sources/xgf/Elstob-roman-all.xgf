@@ -242,10 +242,15 @@
       <setcv nm="lower-f-top" unit="pixel" val="control-value(lc-ascender-top)"/>
     </if>
     <if test="pixels-per-em &lt; 39">
-      <setcv nm="xheight" unit="pixel" val="control-value(xheight-overshoot)"/>
-      <setcv nm="baseline-undershoot" unit="pixel" val="control-value(baseline)"/>
-      <setcv nm="cap-baseline-undershoot" unit="pixel" val="control-value(baseline)"/>
-      <setcv nm="sc-baseline-undershoot" unit="pixel" val="control-value(baseline)"/>
+      <setcv nm="xheight" unit="pixel"
+	     val="control-value(xheight-overshoot)"/>
+      <setcv nm="baseline-undershoot" unit="pixel"
+	     val="control-value(baseline)"/>
+      <setcv nm="cap-baseline-undershoot" unit="pixel"
+	     val="control-value(baseline)"/>
+      <setcv nm="sc-baseline-undershoot" unit="pixel"
+	     val="control-value(baseline)"/>
+      <set-control-value-cut-in val="2.0"/>
       <else>
         <round val="xheight"/>
         <round val="baseline-undershoot"/>
@@ -873,6 +878,10 @@
     <iup axis="y"/>
   </gl>
 
+  <gl pnm="minus.osf">
+    <callg pnm="minus"/>
+  </gl>
+
   <gl init-graphics="no" pnm="hyphen">
     <callg pnm="minus"/>
   </gl>
@@ -918,12 +927,16 @@
     <cn nm="cross-bottom" val="2"/>
     <setvs axis="y"/>
     <mv p="cross-bottom">
-      <sh p="top"/>
+      <sh p="bottom"/>
       <mv col="b" p="cross-top">
-        <sh p="cross-bottom"/>
+        <sh p="top"/>
       </mv>
     </mv>
     <iup axis="y"/>
+  </gl>
+
+  <gl pnm="plus.osf">
+    <callg pnm="plus"/>
   </gl>
 
   <gl pnm="k">
@@ -1553,9 +1566,9 @@
     <cn nm="bar-top" val="1"/>
     <setvs axis="y"/>
     <mv p="R-top">
-      <mv col="b" p="R-top-ins">
+      <mv p="R-top-ins">
         <mv col="w" p="R-bottom-ins">
-          <mv col="b" p="R-bottom">
+          <mv p="R-bottom">
             <ip p="A-top"/>
           </mv>
         </mv>
@@ -1563,10 +1576,20 @@
     </mv>
     <sh r="A-top" p="A-top-ins"/>
     <callm nm="cap-dbl-serif">
-      <pms>first-left: serif-bottom-left, second-left: (serif-bottom-left + 1), first-right: serif-bottom-right, second-right: (serif-bottom-right + 1), stem1: left-diag-bottom, stem2: right-diag-bottom</pms>
+      <pms>
+	first-left: serif-bottom-left,
+	second-left: serif-bottom-left + 1,
+	first-right: serif-bottom-right,
+	second-right: serif-bottom-right + 1,
+	stem1: left-diag-bottom,
+	stem2: right-diag-bottom
+      </pms>
     </callm>
     <callm nm="mid-stem">
-      <pms>ref1: A-top, ref2: serif-bottom-left, pt1: bar-bottom, pt2: bar-top, cv: cap-bar</pms>
+      <pms>
+	ref1: A-top, ref2: serif-bottom-left,
+	pt1: bar-bottom, pt2: bar-top, cv: cap-bar
+      </pms>
     </callm>
     <iup axis="y"/>
   </gl>
@@ -1600,7 +1623,10 @@
       <mv col="b" p="Y-bottom-ins"/>
     </mv>
     <callm nm="interpolated-stem">
-      <pms>ref-a: A-bottom-serif, ref-b: A-top, stem-a: A-bar-bottom, stem-b: A-bar-top, cv: cap-bar</pms>
+      <pms>
+	ref-a: A-bottom-serif, ref-b: A-top, stem-a: A-bar-bottom,
+	stem-b: A-bar-top, cv: cap-bar
+      </pms>
     </callm>
     <iup axis="y"/>
   </gl>
@@ -1652,7 +1678,10 @@
       <mv di="cap-round-stem" col="b" p="O-top-ins"/>
     </mv>
     <callm nm="serif-sh">
-      <pms>pt-a: A-serif-left, pt-b: (A-serif-left + 1), sh-a: serif-sh-a, sh-b: (A-serif-right + 1)</pms>
+      <pms>
+	pt-a: A-serif-left, pt-b: A-serif-left + 1, sh-a: serif-sh-a,
+	sh-b: A-serif-right + 1
+      </pms>
     </callm>
     <sh r="A-serif-left" p="O-bot"/>
     <mv round="yes" p="O-bot">
@@ -3581,17 +3610,21 @@
 
   <gl init-graphics="yes" pnm="asciitilde">
     <cn nm="right-bot" val="0"/>
-    <cn nm="right-top" val="15"/>
-    <cn nm="left-bot" val="4"/>
-    <cn nm="left-top" val="11"/>
+    <cn nm="right-top" val="17"/>
+    <cn nm="left-bot" val="5"/>
+    <cn nm="left-top" val="12"/>
     <setvs axis="y"/>
     <mv p="right-bot">
-      <sh p="left-bot"/>
-      <mv col="b" p="right-top">
-        <sh p="left-top"/>
+      <mv col="g" p="left-bot">
+	<mv p="left-top"/>
       </mv>
+      <mv col="b" p="right-top"/>
     </mv>
     <iup axis="y"/>
+  </gl>
+
+  <gl pnm="asciitilde.osf">
+    <callg pnm="asciitilde"/>
   </gl>
 
   <gl pnm="at">
@@ -3666,6 +3699,10 @@
     <iup axis="y"/>
   </gl>
 
+  <gl pnm="divide.osf">
+    <callg pnm="divide"/>
+  </gl>
+
   <gl pnm="equal">
     <setvs axis="y"/>
     <mv p="5">
@@ -3675,6 +3712,59 @@
       <mv di="euro-bar" col="b" p="4"/>
     </mv>
     <iup axis="y"/>
+  </gl>
+
+  <gl pnm="equal.osf">
+    <callg pnm="equal"/>
+  </gl>
+
+  <gl pnm="notequal">
+    <setvs axis="y"/>
+    <mv p="9">
+      <mv col="w" p="4">
+        <mv di="euro-bar" col="b" p="5">
+	  <sh p="2"/>
+	</mv>
+      </mv>
+      <mv di="euro-bar" col="b" p="8">
+	<sh p="0"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="notequal.osf">
+    <callg pnm="notequal"/>
+  </gl>
+
+  <gl pnm="greaterequal">
+    <setvs axis="y"/>
+    <mv p="9">
+      <mv di="euro-bar" p="8"/>
+      <mv round="no" col="w" p="0">
+	<mv round="no" col="g" p="5"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="greaterequal.osf">
+    <callg pnm="greaterequal"/>
+  </gl>
+
+  <gl pnm="lessequal">
+    <setvs axis="y"/>
+    <mv p="10">
+      <mv di="euro-bar" p="9"/>
+      <mv round="no" col="w" p="0">
+	<mv round="no" col="g" p="3"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="lessequal.osf">
+    <callg pnm="lessequal"/>
   </gl>
 
   <gl pnm="logicalnot">
@@ -3687,18 +3777,171 @@
     <iup axis="y"/>
   </gl>
 
-  <gl pnm="plusminus">
+  <gl pnm="logicalnot.osf">
+    <callg pnm="logicalnot"/>
+  </gl>
+
+  <gl pnm="infinity">
     <setvs axis="y"/>
-    <mv di="baseline" p="12">
-      <mv di="euro-bar" p="13"/>
+    <mv p="0">
+      <sh p="45"/>
+      <mv p="29"/>
+      <mv p="15"/>
     </mv>
-    <mv p="3">
-      <sh p="7"/>
-      <mv di="euro-bar" col="b" p="2">
-        <sh p="10"/>
+    <mv p="8">
+      <sh p="37"/>
+      <mv p="52"/>
+      <mv p="21"/>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="infinity.osf">
+    <callg pnm="infinity"/>
+  </gl>
+
+  <gl pnm="integral">
+    <callg pnm="uni0283"/>
+  </gl>
+
+  <gl pnm="uni2126"> <!-- Math Omega -->
+    <setvs axis="y"/>
+    <mv di="baseline" p="55">
+      <sh p="34"/>
+      <mv p="6">
+	<sh p="53 35 26"/>
+    </mv></mv>
+    <mv di="cap-height-overshoot" p="16">
+      <mv di="cap-round-stem" p="45"/>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni2206"> <!-- Math Delta -->
+    <setvs axis="y"/>
+    <mv di="baseline" p="0">
+      <mv p="7">
+	<ip p="6"/>
+      </mv>
+    </mv>
+    <mv di="cap-height-overshoot" p="2">
+      <sh p="10"/>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+    
+  <gl pnm="uni220F"> <!-- Math Pi -->
+    <set nm="top-sh-a" p="10 1"/>
+    <set nm="bot-sh-a" p="9 13 0"/>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      <pms>pt-a: 20, pt-b: 19, sh-a: top-sh-a, sh-b: 22</pms>
+    </callm>
+    <callm nm="serif-sh">
+      <pms>pt-a: 4, pt-b: 5, sh-a: bot-sh-a, sh-b: 14</pms>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni2211"> <!-- Math Sigma -->
+    <setvs axis="y"/>
+    <mv di="cap-height" p="4">
+      <mv di="cap-bar" p="12"/>
+    </mv>
+    <mv di="baseline" p="0">
+      <mv di="cap-bar" p="14"/>
+    </mv>
+    <ip r="4 0" p="2 13"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="partialdiff">
+    <setvs axis="y"/>
+    <mv di="baseline-undershoot" p="0">
+      <mv di="lc-round-stem" p="22"/>
+    </mv>
+    <mv p="37">
+      <mv p="30"/>
+    </mv>
+    <ip r="37 0" p="8"/>
+    <mv p="8">
+      <mv p="15"/>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni207A"> <!-- superscript plus -->
+    <setvs axis="y"/>
+    <mv p="2">
+      <sh p="10 11"/>
+      <mv p="3">
+	<sh p="7 6"/>
       </mv>
     </mv>
     <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni207A.osf">
+    <callg pnm="uni207A"/>
+  </gl>
+    
+  <gl pnm="emptyset">
+    <setvs axis="y"/>
+    <mv di="baseline-undershoot" p="0">
+      <sh p="40"/>
+      <mv p="20"/>
+    </mv>
+    <mv p="10">
+      <sh p="42"/>
+      <mv p="30"/>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="emptyset.osf">
+    <callg pnm="emptyset"/>
+  </gl>
+
+  <gl pnm="plusminus">
+    <setvs axis="y"/>
+    <mv p="12">
+      <mv di="euro-bar" p="13">
+	<mv col="w" p="0">
+	  <mv col="g" p="5"/>
+    </mv></mv></mv>
+    <ip r="5 0" p="3"/>
+    <mv p="3">
+      <sh p="7"/>
+      <mv di="euro-bar" p="2">
+	<sh p="10"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="plusminus.osf">
+    <callg pnm="plusminus"/>
+  </gl>
+
+  <gl pnm="approxequal">
+    <setvs axis="y"/>
+    <mv p="0">
+      <mv col="g" p="5">
+	<mv p="12"/>
+      </mv>
+      <mv p="17"/>
+    </mv>
+    <mv p="24">
+      <mv col="g" p="29">
+	<mv p="36"/>
+      </mv>
+      <mv p="41"/>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="approxequal.osf">
+    <callg pnm="approxequal"/>
   </gl>
 
   <gl pnm="ordfeminine">
@@ -4619,6 +4862,18 @@
       <mv p="1"/>
     </mv>
     <mv di="sups-xheight-overshoot" p="23">
+      <mv p="16"/>
+    </mv>
+    <ip r="0 24" p="8 9"/>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni2083.osf">
+    <setvs axis="y"/>
+    <mv p="0">
+      <mv p="1"/>
+    </mv>
+    <mv p="23">
       <mv p="16"/>
     </mv>
     <ip r="0 24" p="8 9"/>
@@ -9755,11 +10010,11 @@
     <iup axis="y"/>
   </gl>
 
-  <gl pnm="uni033C">
+  <gl pnm="uni033D">
     <setvs axis="y"/>
     <mv p="1">
       <sh p="6"/>
-      <mv p="6">
+      <mv p="5">
         <sh p="0"/>
       </mv>
     </mv>
@@ -9805,7 +10060,7 @@
     <iup axis="y"/>
   </gl>
 
-  <gl pnm="uni02C1">
+  <gl pnm="uni02C8">
     <setvs axis="y"/>
     <mv p="0">
       <mv p="1"/>
@@ -9823,55 +10078,54 @@
 
   <gl pnm="uni02E5">
     <setvs axis="y"/>
-    <mv p="1">
-      <sh p="5"/>
-      <mv p="0"/>
+    <mv p="5">
+      <sh p="1"/>
+      <mv p="4"/>
     </mv>
-    <mv r="5" p="8"/>
+    <mv di="baseline" p="0"/>
     <iup axis="y"/>
   </gl>
 
   <gl pnm="uni02E6">
     <setvs axis="y"/>
-    <mv p="1">
-      <mv p="0"/>
+    <mv di="baseline" p="0">
+      <mv p="1"/>
     </mv>
     <mv p="5">
-      <mv p="8"/>
+      <mv p="4"/>
     </mv>
     <iup axis="y"/>
   </gl>
 
   <gl pnm="uni02E7">
     <setvs axis="y"/>
-    <mv p="1">
-      <mv p="0"/>
+    <mv di="baseline" p="0">
+      <mv p="1"/>
     </mv>
     <mv p="5">
-      <mv p="8"/>
+      <mv p="4"/>
     </mv>
     <iup axis="y"/>
   </gl>
 
   <gl pnm="uni02E8">
     <setvs axis="y"/>
-    <mv p="1">
-      <mv p="0"/>
+    <mv di="baseline" p="0">
+      <mv p="1"/>
     </mv>
     <mv p="5">
-      <mv p="8"/>
+      <mv p="4"/>
     </mv>
     <iup axis="y"/>
   </gl>
 
   <gl pnm="uni02E9">
     <setvs axis="y"/>
-    <mv p="1">
-      <mv p="0">
-        <sh p="8"/>
-      </mv>
+    <mv di="baseline" p="4">
+      <sh p="0"/>
+      <mv p="5"/>
     </mv>
-    <mv r="8" p="5"/>
+    <mv p="1"/>
     <iup axis="y"/>
   </gl>
 
@@ -11780,12 +12034,47 @@
   </gl>
 
   <gl pnm="equal">
-    <mv p="1">
-      <mv p="2" di="euro-bar"/>
+    <setvs axis="y"/>
+    <mv p="0">
+      <mv p="1" di="euro-bar"/>
     </mv>
-    <mv p="6">
-      <mv p="5" di="euro-bar"/>
+    <mv p="5">
+      <mv p="4" di="euro-bar"/>
     </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="arrowright">
+    <setvs axis="y"/>
+    <mv p="2">
+      <sh p="0"/>
+      <mv di="euro-bar" p="5">
+	<sh p="7"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="arrowleft">
+    <setvs axis="y"/>
+    <mv p="7">
+      <sh p="0"/>
+      <mv di="euro-bar" p="4">
+	<sh p="2"/>
+      </mv>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="lozenge">
+    <setvs axis="y"/>
+    <mv p="0">
+      <sh p="6"/>
+    </mv>
+    <mv p="2">
+      <sh p="9"/>
+    </mv>
+    <iup axis="y"/>
   </gl>
 
 </xgridfit>
