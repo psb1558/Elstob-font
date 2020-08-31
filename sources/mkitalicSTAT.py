@@ -151,4 +151,7 @@ ttfont = ttLib.TTFont(font)
 
 builder.buildStatTable(ttfont,axes,locations)
 
+ttfont['name'].setName("ElstobItalic", 25, 1, 0, 0)
+ttfont['name'].setName("ElstobItalic", 25, 3, 1, 0x409)
+
 ttfont.save(font + ".withSTAT")
