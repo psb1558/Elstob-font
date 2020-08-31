@@ -8148,17 +8148,17 @@
   </gl>
 
   <gl pnm="uni03BC"> <!-- mu -->
-    <mv di="lcbu" p="23">
-      <sh p="40"/>
-      <mv p="29">
-	<sh p="54"/>
+    <mv di="lcbu" p="25">
+      <sh p="42"/>
+      <mv p="31">
+	<sh p="56"/>
     </mv></mv>
     <mv p="0"/>
     <mv di="xho" p="14">
       <mv p="6"/>
     </mv>
-    <mv di="xheight" p="34">
-      <sh p="47"/>
+    <mv di="xheight" p="36">
+      <sh p="49"/>
     </mv>
   </gl>
 
