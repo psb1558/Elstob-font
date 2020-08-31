@@ -29,7 +29,11 @@ lining and oldstyle, with slashed zeros. Hinting now via Xgridfit 3 (updated to 
 font development and handle variable fonts. Grade (GRAD) scale changed to 0-1 at request of
 Google Fonts. A number of minor bugs and inconsistencies have been addressed.
 
-31 August 20200
+31 August 2020
+
 Math symbols corrected and expanded: the math symbols in the Adobe
 Latin 2 character set are now covered, with operators a consistent
-weight and correctly aligned on the math axis.
+weight and correctly aligned on the math axis (two different axes to
+harmonize with lining and oldstyle figures). Also subscript numbers
+(with a subs feature to support them), right- and left-pointing
+arrows, emptyset, and prime and double-prime.
