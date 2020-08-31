@@ -4285,16 +4285,16 @@
   <gl pnm="uni03BC">
     <setvs axis="y"/>
     <mv di="xheight" p="29">
-      <sh p="51"/>
+      <sh p="8"/>
       <mv di="lc-serif" col="b" p="28">
-        <sh p="50"/>
+        <sh p="6"/>
       </mv>
     </mv>
-    <mv di="baseline-undershoot" p="22">
-      <sh p="46"/>
-      <mv col="b" p="37"/>
+    <mv di="baseline-undershoot" p="0">
+      <sh p="24"/>
+      <mv col="b" p="15"/>
     </mv>
-    <mv p="0"/>
+    <mv p="46"/>
     <iup axis="y"/>
   </gl>
 
