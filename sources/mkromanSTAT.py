@@ -156,7 +156,6 @@ ttfont['name'].setName("ElstobRoman", 25, 3, 1, 0x409)
 
 for inst in ttfont['fvar'].instances:
     subfamilyName = ttfont['name'].getName(inst.subfamilyNameID,1,0,0).toUnicode().replace(" ","")
-    newID = ttfont['name'].addName("ElstobRoman" + "-" + subfamilyName)
-    inst.postscriptNameID = newID
+    inst.postscriptNameID = ttfont['name'].addName("ElstobRoman" + "-" + subfamilyName)
 
 ttfont.save(font + ".withSTAT")

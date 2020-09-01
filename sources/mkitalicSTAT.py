@@ -158,8 +158,7 @@ for inst in ttfont['fvar'].instances:
     subfamilyName = ttfont['name'].getName(inst.subfamilyNameID,1,0,0).toUnicode().replace(" Italic","").replace(" ","")
     if subfamilyName == "Italic":
         subfamilyName = "Regular"
-    newID = ttfont['name'].addName("ElstobItalic" + "-" + subfamilyName)
-    inst.postscriptNameID = newID
+    inst.postscriptNameID = ttfont['name'].addName("ElstobItalic" + "-" + subfamilyName)
 
 
 ttfont.save(font + ".withSTAT")
