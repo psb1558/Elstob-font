@@ -651,13 +651,17 @@
     <set nm="top-a" p="22 15"/>
     <set nm="bot-a" p="21 25 0"/>
     <callm nm="serif-sh">
-      <pms>pt-a: 6, pt-b: 5, sh-a: top-a, sh-b: 14, cv: cap-height</pms>
+      <pms>pt-a: 6, pt-b: 5, sh-a: top-a, sh-b: 14, cv: cap-height,
+      cv-h: cap-serif</pms>
     </callm>
+    <mv di="cap-bar" r="6" p="14"/>
     <callm nm="serif-sh">
-      <pms>pt-a: 17, pt-b: 18, sh-a: bot-a, sh-b: 26, cv: baseline</pms>
+      <pms>pt-a: 17, pt-b: 18, sh-a: bot-a, sh-b: 26, cv: baseline,
+      cv-h: cap-serif</pms>
     </callm>
+    <mv di="cap-bar" r="25" p="28"/>
     <callm nm="mid-stem">
-      <pms>ref1: 6, ref2: 17, pt1: 34, pt2: 35, cv: cap-bar</pms>
+      <pms>ref1: 6, ref2: 17, pt1: 36, pt2: 37, cv: cap-bar</pms>
     </callm>
     <sh r="35" p="39"/>
     <sh r="34" p="38"/>
@@ -665,13 +669,15 @@
 
   <gl pnm="B">
     <callm nm="serif-sh">
-      <pms>pt-a: 26, pt-b: 25, sh-a: 1, cv: cap-height</pms>
+      <pms>pt-a: 30, pt-b: 29, sh-a: 1, cv: cap-height</pms>
     </callm>
+    <mv di="cap-bar" r="30" p="26"/>
     <callm nm="serif-sh">
       <pms>pt-a: 4, pt-b: 5, sh-a: 0, cv: baseline</pms>
     </callm>
+    <mv di="cap-bar" r="4" p="7"/>
     <callm nm="mid-stem">
-      <pms>ref1: 26, ref2: 4, pt1: 15, pt2: 16, cv: cap-bar</pms>
+      <pms>ref1: 30, ref2: 4, pt1: 17, pt2: 18, cv: cap-bar</pms>
     </callm>
   </gl>
 
@@ -687,14 +693,15 @@
   </gl>
 
   <gl pnm="D">
-    <mv di="cap-height-overshoot" p="23">
-      <mv di="cap-round-stem" p="16">
-        <sh p="38"/>
+    <mv di="cap-height-overshoot" p="25">
+      <mv di="cap-round-stem" p="18">
+        <sh p="40"/>
       </mv>
     </mv>
     <callm nm="serif-sh">
-      <pms>pt-a: 0, pt-b: 1, sh-a: 37, cv: baseline</pms>
+      <pms>pt-a: 0, pt-b: 1, sh-a: 39, cv: baseline, cv-h: cap-serif</pms>
     </callm>
+    <mv di="cap-bar" r="0" p="3"/>
   </gl>
 
   <gl pnm="uniA779"> <!-- insular D -->
@@ -712,11 +719,11 @@
     <callm nm="serif-sh">
       <pms>pt-a: 29, pt-b: 28, sh-a: 1, cv: cap-height</pms>
     </callm>
-    <mv di="lc-bar" r="29" p="26"/>
+    <mv di="cap-bar" r="29" p="26"/>
     <callm nm="serif-sh">
       <pms>pt-a: 4, pt-b: 5, sh-a: 0, cv: baseline</pms>
     </callm>
-    <mv di="lc-bar" r="4" p="7"/>
+    <mv di="cap-bar" r="4" p="7"/>
     <callm nm="mid-stem">
       <pms>ref1: 29, ref2: 4, pt1: 14, pt2: 15, cv: cap-bar</pms>
     </callm>
@@ -726,16 +733,17 @@
 
   <gl pnm="F">
     <callm nm="serif-sh">
-      <pms>pt-a: 10, pt-b: 9, sh-a: 1, cv: cap-height</pms>
+      <pms>pt-a: 12, pt-b: 11, sh-a: 1, cv: cap-height</pms>
     </callm>
+    <mv di="cap-bar" r="12" p="9"/>
     <callm nm="serif-sh">
-      <pms>pt-a: 13, pt-b: 14, sh-a: 0, cv: baseline</pms>
+      <pms>pt-a: 15, pt-b: 16, sh-a: 0, cv: baseline</pms>
     </callm>
     <callm nm="mid-stem">
-      <pms>ref1: 10, ref2: 13, pt1: 17, pt2: 18, cv: cap-bar</pms>
+      <pms>ref1: 12, ref2: 15, pt1: 19, pt2: 20, cv: cap-bar</pms>
     </callm>
-    <sh r="18" p="22"/>
-    <sh r="17" p="21"/>
+    <sh r="19" p="23"/>
+    <sh r="20" p="24"/>
   </gl>
 
   <gl pnm="uniA77B"> <!-- Insular F -->
@@ -850,11 +858,12 @@
 
   <gl pnm="L">
     <callm nm="serif-sh">
-      <pms>pt-a: 14, pt-b: 13, sh-a: 10, cv: cap-height</pms>
+      <pms>pt-a: 16, pt-b: 15, sh-a: 12, cv: cap-height</pms>
     </callm>
     <callm nm="serif-sh">
-      <pms>pt-a: 0, pt-b: 1, sh-a: 9, cv: baseline</pms>
+      <pms>pt-a: 0, pt-b: 1, sh-a: 1, cv: baseline</pms>
     </callm>
+    <mv di="cap-bar" r="0" p="3"/>
   </gl>
 
   <gl pnm="M">
@@ -927,27 +936,29 @@
     <mv p="0">
       <mv p="27"/>
     </mv>
-    <mv di="cap-height" p="61">
-      <mv di="cap-serif" p="60">
+    <mv di="cap-height" p="63">
+      <mv di="cap-serif" p="62">
         <ip p="14"/>
       </mv>
     </mv>
     <callm nm="mid-stem">
-      <pms>ref1: 24, ref2: 61, pt1: 47, pt2: 48, cv: cap-bar</pms>
+      <pms>ref1: 24, ref2: 63, pt1: 47, pt2: 48, cv: cap-bar</pms>
     </callm>
     <sh r="47" p="51"/>
     <sh r="48" p="52"/>
+    <mv di="cap-bar" r="63" p="60"/>
   </gl>
 
   <gl pnm="P">
     <callm nm="serif-sh">
-      <pms>pt-a: 21, pt-b: 20, sh-a: 1, cv: cap-height</pms>
+      <pms>pt-a: 23, pt-b: 22, sh-a: 1, cv: cap-height</pms>
     </callm>
+    <mv di="cap-bar" r="23" p="20"/>
     <callm nm="serif-sh">
-      <pms>pt-a: 30, pt-b: 31, sh-a: 0, cv: baseline</pms>
+      <pms>pt-a: 32, pt-b: 33, sh-a: 0, cv: baseline</pms>
     </callm>
     <callm nm="mid-stem">
-      <pms>ref1: 30, ref2: 21, pt1: 4, pt2: 10, cv: cap-round-stem</pms>
+      <pms>ref1: 30, ref2: 23, pt1: 4, pt2: 10, cv: cap-round-stem</pms>
     </callm>
   </gl>
 
@@ -981,15 +992,16 @@
   </gl>
 
   <gl pnm="R">
-    <set nm="bot-a" p="45 40"/>
+    <set nm="bot-a" p="46 41"/>
     <callm nm="serif-sh">
-      <pms>pt-a: 21, pt-b: 20, sh-a: 46, cv: cap-height</pms>
+      <pms>pt-a: 22, pt-b: 21, sh-a: 47, cv: cap-height</pms>
     </callm>
+    <mv di="cap-bar" r="22" p="19"/>
     <callm nm="serif-sh">
-      <pms>pt-a: 41, pt-b: 42, sh-a: bot-a, sha-b: 39, cv: baseline</pms>
+      <pms>pt-a: 42, pt-b: 43, sh-a: bot-a, sha-b: 40, cv: baseline</pms>
     </callm>
     <callm nm="mid-stem">
-      <pms>ref1: 41, ref2: 21, pt1: 6, pt2: 11, cv: cap-round-stem</pms>
+      <pms>ref1: 42, ref2: 22, pt1: 6, pt2: 11, cv: cap-round-stem</pms>
     </callm>
   </gl>
 
@@ -1129,13 +1141,14 @@
 
   <gl pnm="uni01F7"> <!-- Wynn -->
     <callm nm="serif-sh">
-      <pms>pt-a: 16, pt-b: 15, sh-a: 1, cv: cap-height</pms>
+      <pms>pt-a: 18, pt-b: 17, sh-a: 1, cv: cap-height</pms>
     </callm>
+    <mv di="cap-bar" r="18" p="15"/>
     <callm nm="serif-sh">
-      <pms>pt-a: 27, pt-b: 28, sh-a: 0, cv: baseline</pms>
+      <pms>pt-a: 29, pt-b: 30, sh-a: 0, cv: baseline</pms>
     </callm>
     <callm nm="mid-stem">
-      <pms>ref1: 16, ref2: 27, pt1: 4, pt2: 5, cv: cap-round-stem</pms>
+      <pms>ref1: 18, ref2: 29, pt1: 4, pt2: 5, cv: cap-round-stem</pms>
     </callm>
   </gl>
 
@@ -1172,12 +1185,12 @@
 
   <gl pnm="Z">
     <mv di="cap-height" p="19">
-      <mv di="cap-serif" p="9">
+      <mv di="cap-bar" p="9">
         <ip p="7"/>
       </mv>
     </mv>
     <mv di="baseline" p="4">
-      <mv di="cap-serif" p="24">
+      <mv di="cap-bar" p="24">
         <ip p="22"/>
     </mv></mv>
   </gl>
@@ -1214,16 +1227,17 @@
 
   <gl pnm="uni2C62">
     <callm nm="serif-sh">
-      <pms>pt-a: 38, pt-b: 37, sh-a: 34, cv: cap-height</pms>
+      <pms>pt-a: 40, pt-b: 39, sh-a: 36, cv: cap-height</pms>
     </callm>
     <callm nm="serif-sh">
-      <pms>pt-a: 24, pt-b: 25, sh-a: 33, cv: baseline</pms>
+      <pms>pt-a: 24, pt-b: 25, sh-a: 35, cv: baseline</pms>
     </callm>
-    <ip r="38 24" p="0"/>
+    <mv di="cap-bar" r="24" p="27"/>
+    <ip r="40 24" p="0"/>
     <mv p="0">
-      <sh p="5"/>
+      <mv col="g" p="5"/>
       <mv p="17">
-        <sh p="12"/>
+        <mv col="g" p="12"/>
     </mv></mv>
   </gl>
 
