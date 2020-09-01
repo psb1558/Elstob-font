@@ -254,14 +254,6 @@
       <set-control-value-cut-in val="2.0"/>
       <set-control-value-cut-in val="2.0"/>
     </if>
-    <!--
-    <if test="pixels-per-em &lt; 53">
-      <setcv nm="cap-serif" unit="pixel"
-	     val="control-value(cap-bar)"/>
-      <setcv nm="sc-bar" unit="pixel"
-	     val="control-value(sc-serif)"/>
-	     </if>
-	     -->
     <if test="pixels-per-em &lt; 39"> 
       <setcv nm="xheight" unit="pixel"
 	     val="control-value(xheight-overshoot)"/>
@@ -275,11 +267,6 @@
         <round val="xheight"/>
         <round val="baseline-undershoot"/>
       </else>
-    </if>
-    <if test="pixels-per-em &lt; 37">
-      <setcv nm="cap-bar" unit="pixel" val="control-value(cap-serif)"/>
-      <setcv nm="lc-bar" unit="pixel" val="control-value(lc-serif)"/>
-      <setcv nm="sc-bar" unit="pixel" val="control-value(sc-serif)"/>
     </if>
   </prep>
   
