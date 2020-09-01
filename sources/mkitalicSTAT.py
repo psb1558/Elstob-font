@@ -154,4 +154,12 @@ builder.buildStatTable(ttfont,axes,locations)
 ttfont['name'].setName("ElstobItalic", 25, 1, 0, 0)
 ttfont['name'].setName("ElstobItalic", 25, 3, 1, 0x409)
 
+for inst in ttfont['fvar'].instances:
+    subfamilyName = ttfont['name'].getName(inst.subfamilyNameID,1,0,0).toUnicode().replace(" Italic","").replace(" ","")
+    if subfamilyName == "Italic":
+        subfamilyName = "Regular"
+    newID = ttfont['name'].addName("ElstobItalic" + "-" + subfamilyName)
+    inst.postscriptNameID = newID
+
+
 ttfont.save(font + ".withSTAT")

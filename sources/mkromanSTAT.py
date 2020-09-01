@@ -151,7 +151,12 @@ ttfont = ttLib.TTFont(font)
 
 builder.buildStatTable(ttfont,axes,locations)
 
-ttfont['name'].setName("ElstobRegular", 25, 1, 0, 0)
-ttfont['name'].setName("ElstobRegular", 25, 3, 1, 0x409)
+ttfont['name'].setName("ElstobRoman", 25, 1, 0, 0)
+ttfont['name'].setName("ElstobRoman", 25, 3, 1, 0x409)
+
+for inst in ttfont['fvar'].instances:
+    subfamilyName = ttfont['name'].getName(inst.subfamilyNameID,1,0,0).toUnicode().replace(" ","")
+    newID = ttfont['name'].addName("ElstobRoman" + "-" + subfamilyName)
+    inst.postscriptNameID = newID
 
 ttfont.save(font + ".withSTAT")
