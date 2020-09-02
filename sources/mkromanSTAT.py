@@ -1,6 +1,7 @@
 from fontTools.otlLib import builder
 from fontTools import ttLib
 
+<<<<<<< HEAD
 infont = "Elstob-Italic[GRAD,opsz,wght].ttf"
 outfont = "Elstob-Italic[GRAD,opsz,wght]-withSTAT.ttf"
 
@@ -88,6 +89,11 @@ format2axes = [
 ]
 
 format4axes = [
+=======
+font = "Elstob[GRAD,opsz,wght].ttf"
+
+axes = [
+>>>>>>> parent of 2cd8349... Produces format 1, 2 or 4 AxisValue
   dict(
     tag="opsz", name="Optical size"
   ),
@@ -231,10 +237,9 @@ format4locations = [
   )
 ]
 
-ttfont = ttLib.TTFont(infont)
+ttfont = ttLib.TTFont(font)
 
-# builder.buildStatTable(ttfont,axes,locations)
-builder.buildStatTable(ttfont,format2axes)
+builder.buildStatTable(ttfont,axes,locations)
 
 ttfont['name'].setName("ElstobItalic", 25, 1, 0, 0)
 ttfont['name'].setName("ElstobItalic", 25, 3, 1, 0x409)
@@ -246,4 +251,4 @@ for inst in ttfont['fvar'].instances:
     inst.postscriptNameID = ttfont['name'].addName("ElstobItalic" + "-" + subfamilyName)
 
 
-ttfont.save(outfont)
+ttfont.save(font + ".withSTAT")
