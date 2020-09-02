@@ -20,7 +20,7 @@ format1axes = [
     ),
     dict(
         tag="opsz",
-        name="Optical Size",
+        name="Optical size",
         values=[
             dict(value=6, name="6pt"),
             dict(value=8, name="8pt"),
@@ -61,7 +61,7 @@ format2axes = [
     ),
     dict(
         tag="opsz",
-        name="Optical Size",
+        name="Optical size",
         values=[
             dict(nominalValue=6, name="6pt", rangeMinValue=6, rangeMaxValue=7),
             dict(nominalValue=8, name="8pt", rangeMinValue=7, rangeMaxValue=9),
