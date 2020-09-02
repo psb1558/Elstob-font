@@ -321,8 +321,7 @@
       <sh p="first-right stem1 stem2"/>
       <mv di="cap-serif" col="b" p="second-left">
         <sh p="second-right"/>
-      </mv>
-    </mv>
+    </mv></mv>
   </mo>
 
   <mo nm="f-lig">
@@ -407,8 +406,7 @@
       <sh p="first-right stem1 stem2"/>
       <mv di="lc-serif" col="b" p="second-left">
         <sh p="second-right"/>
-      </mv>
-    </mv>
+    </mv></mv>
   </mo>
 
   <mo nm="lc-bowl">
@@ -465,8 +463,7 @@
           <al compile-if="nan(sh-b)">
             <set ref="sh-b"/>
           </al>
-        </mv>
-      </mv>
+        </mv></mv>
       <else>
         <mv di="cv" p="pt-a">
           <sh compile-if="not( nan(sh-a) ) and sh-a &gt;= 0" p="sh-a"/>
@@ -926,8 +923,7 @@
       <sh p="bottom 10"/>
       <mv col="b" p="cross-top">
         <sh p="top 7"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -1085,8 +1081,7 @@
     <mv di="lc-descender" p="serif-bottom">
       <mv di="lc-serif" col="b" p="(serif-bottom + 1)">
         <sh p="stem-bottom"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -1195,8 +1190,7 @@
       <sh p="top-right"/>
       <mv di="lc-serif" col="b" p="(top-left - 1)">
         <sh p="(top-right - 1)"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="baseline-undershoot" p="bottom">
       <sh p="stem-bottom"/>
       <mv col="b" p="bottom-ins"/>
@@ -1218,8 +1212,7 @@
       <sh p="serif-right"/>
       <mv di="lc-serif" col="b" p="(serif-left - 1)">
         <sh p="(serif-right - 1)"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="baseline-undershoot" p="bottom">
       <sh p="bottom-ins (bottom-ins - 1)"/>
     </mv>
@@ -1243,8 +1236,7 @@
       <sh p="serif-mid serif-right diag-left-top diag-mid-top diag-mid-top2 diag-right-top"/>
       <mv di="lc-serif" col="b" p="(serif-left - 1)">
         <sh p="(serif-mid - 1) (serif-right - 1)"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="baseline-undershoot" p="bottom">
       <sh p="bottom-ins (bottom-ins - 1) bottom-right bottom-right-ins (bottom-right-ins - 1)"/>
     </mv>
@@ -1265,14 +1257,12 @@
       <sh p="serif-top-right diag-top-left diag-top-right"/>
       <mv di="lc-serif" col="b" p="(serif-top-left - 1)">
         <sh p="(serif-top-right - 1)"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="baseline" p="serif-bottom-left">
       <sh p="serif-bottom-right diag-bottom-left diag-bottom-right"/>
       <mv di="lc-serif" col="b" p="(serif-bottom-left + 1)">
         <sh p="(serif-bottom-right + 1)"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -1290,8 +1280,7 @@
       <sh p="serif-top-right diag-top-left diag-top-right"/>
       <mv di="lc-serif" col="b" p="(serif-top-left - 1)">
         <sh p="(serif-top-right - 1)"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="lc-descender" p="bottom">
       <mv p="bottom-above"/>
     </mv>
@@ -1338,14 +1327,12 @@
       <sh p="top-right"/>
       <mv col="b" p="top-left-ins">
         <sh p="top-right-ins"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="baseline-undershoot" p="bottom-left">
       <sh p="bottom-right"/>
       <mv col="b" p="bottom-left-ins">
         <sh p="bottom-right-ins"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <ip r="top-left bottom-left" p="diag-bottom"/>
     <sh r="diag-bottom" p="diag-top"/>
     <iup axis="y"/>
@@ -1564,8 +1551,7 @@
             <ip p="A-top"/>
           </mv>
         </mv>
-      </mv>
-    </mv>
+    </mv></mv>
     <sh r="A-top" p="A-top-ins"/>
     <callm nm="cap-dbl-serif">
       <pms>
@@ -1853,8 +1839,7 @@
     <mv p="28">
       <mv col="b" p="27">
         <ip p="24"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <setvs axis="y"/>
     <callm nm="serif-sh">
       <pms>pt-a: bottom-serif, pt-b: (bottom-serif + 1), sh-a: bottom-pts, cv: baseline</pms>
@@ -1885,8 +1870,7 @@
     <mv p="24">
       <mv col="b" p="23">
         <ip p="20"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <setvs axis="y"/>
     <callm nm="serif-sh">
       <pms>pt-a: top-serif, pt-b: (top-serif - 1), sh-a: top-pts, cv: cap-height</pms>
@@ -1929,8 +1913,7 @@
     <mv p="serif-top">
       <mv di="cap-serif" col="b" p="(serif-top - 1)">
         <sh p="stema stemb"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -2065,8 +2048,7 @@
       <sh p="left-stem-bottom bottom-right-a"/>
       <mv di="cap-serif" col="b" p="bottom-left-b">
         <sh p="bottom-right-b"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <callm nm="mid-stem">
       <pms>ref1: top-left-a, ref2: bottom-left-a, pt1: bar-bottom, pt2: bar-top, cv: cap-bar</pms>
     </callm>
@@ -2138,8 +2120,7 @@
       <sh p="top-left-stem top-right-a top-right-sh1 top-right-sh2 point-lower point-upper"/>
       <mv di="cap-serif" col="b" p="top-left-b">
         <sh p="top-right-b"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -2245,8 +2226,7 @@
       <sh p="vserif-bottom"/>
       <mv di="cap-bar" col="b" p="bar-top">
         <sh p="vserif-top"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -2264,14 +2244,12 @@
       <sh p="top-b"/>
       <mv di="cap-round-stem" p="top-ins">
         <sh p="top-ins-b"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="baseline-undershoot" p="bottom">
       <sh p="bottom-b"/>
       <mv di="cap-round-stem" p="bottom-ins">
         <sh p="bottom-ins-b"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -2333,8 +2311,7 @@
       <sh round="yes" p="tail-bottom"/>
       <mv di="cap-round-stem" p="bottom-ins">
         <sh p="tail-ins"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -2353,8 +2330,7 @@
       <sh round="yes" p="tail-bottom"/>
       <mv di="cap-round-stem" p="bottom-ins">
         <sh p="tail-ins"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -2412,8 +2388,7 @@
     <mv di="cap-height" p="top">
       <mv di="cap-bar" col="b" p="top-ins-a">
         <sh p="top-ins-b"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <callm nm="serif-sh">
       <pms>pt-a: bottom-serif, pt-b: (bottom-serif + 1), sh-a: stem-bottom</pms>
     </callm>
@@ -2593,8 +2568,7 @@
     <mv p="41">
       <mv col="b" p="40">
         <ip p="37"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <setvs axis="y"/>
     <callm nm="serif-sh">
       <pms>pt-a: top-serif, pt-b: (top-serif - 1), sh-a: top-sh-a, cv: cap-height</pms>
@@ -2609,8 +2583,7 @@
       <sh p="vserif-bottom"/>
       <mv di="cap-bar" col="b" p="bar-top">
         <sh p="vserif-top"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup/>
   </gl>
 
@@ -2734,8 +2707,7 @@
       <sh p="top-sh"/>
       <mv di="cap-bar" col="b" p="top-ins">
         <sh p="top-ins-sh"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="baseline-undershoot" p="bot">
       <mv di="cap-round-stem" p="bot-ins"/>
     </mv>
@@ -2783,8 +2755,7 @@
         <sh>
           <set ref="top-under-sh"/>
         </sh>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv round="yes" p="bottom">
       <mv di="cap-round-stem" col="b" p="bottom-ins"/>
     </mv>
@@ -2846,8 +2817,7 @@
       </sh>
       <mv col="b" p="top-under">
         <sh p="curve-top"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="cap-baseline-undershoot" p="bot">
       <mv di="cap-round-stem" p="bot-ins"/>
     </mv>
@@ -2870,8 +2840,7 @@
       <sh p="e-top"/>
       <mv di="lc-round-stem" col="b" p="o-top-ins">
         <sh p="e-top-ins"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="baseline-undershoot" p="o-bot">
       <sh p="e-bot"/>
       <mv di="lc-round-stem" col="b" p="o-bot-ins"/>
@@ -2956,14 +2925,12 @@
       <sh p="r-top"/>
       <mv di="lc-round-stem" col="b" p="top-ins">
         <sh p="r-top-ins"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="baseline-undershoot" p="bot">
       <sh p="r-bot"/>
       <mv di="lc-round-stem" col="b" p="bot-ins">
         <sh p="r-bot-ins"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -3109,8 +3076,7 @@
     <mv di="xheight" p="top">
       <mv col="b" p="top-below">
         <ip p="stem-top"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="lc-descender" p="bot">
       <mv di="lc-round-stem" p="bot-ins"/>
     </mv>
@@ -3144,14 +3110,12 @@
       <sh p="a1-stub"/>
       <mv col="b" p="a1-bottom-inside">
         <al p="a2-bottom-inside"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="xheight-overshoot" p="a1-top">
       <al p="a2-top"/>
       <mv di="lc-round-stem" col="b" p="a1-top-inside">
         <al p="a2-top-inside"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <ip r="a1-top a1-bottom" p="a1-mid-upper"/>
     <sh r="a1-mid-upper" p="a1-mid-lower a2-mid-lower a2-mid-upper"/>
     <iup axis="y"/>
@@ -3209,8 +3173,7 @@
       <sh p="bottom-right u-stem-bot"/>
       <mv col="b" p="bottom-inside">
         <sh p="u-bow-ins"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <ip r="top bottom" p="mid-upper mid-lower"/>
     <iup axis="y"/>
   </gl>
@@ -3499,8 +3462,7 @@
         <sh>
           <set ref="serif-sh-b"/>
         </sh>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="baseline-undershoot" p="bot-pt">
       <sh p="bot-pt-sh"/>
     </mv>
@@ -3591,8 +3553,7 @@
       <sh p="bot-right"/>
       <mv col="b" p="bot-ins">
         <sh p="bot-right-ins"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="xheight" p="serif">
       <sh p="curve-end"/>
       <mv di="lc-serif" col="b" p="(serif - 1)"/>
@@ -3704,12 +3665,10 @@
       <mv col="w" p="4">
         <mv di="euro-bar" col="b" p="5">
 	  <sh p="2"/>
-	</mv>
-      </mv>
+      </mv></mv>
       <mv di="euro-bar" col="b" p="8">
 	<sh p="0"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -3719,8 +3678,7 @@
       <mv di="euro-bar" p="8"/>
       <mv round="no" col="w" p="0">
 	<mv round="no" col="g" p="5"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -3730,8 +3688,7 @@
       <mv di="euro-bar" p="9"/>
       <mv round="no" col="w" p="0">
 	<mv round="no" col="g" p="3"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -3740,8 +3697,7 @@
     <mv p="3">
       <mv di="euro-bar" col="b" p="2">
         <mv col="g" p="0"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -3782,8 +3738,7 @@
     <mv di="baseline" p="0">
       <mv p="7">
 	<ip p="6"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="cap-height-overshoot" p="2">
       <sh p="10"/>
     </mv>
@@ -3839,8 +3794,7 @@
       <sh p="10 11"/>
       <mv p="3">
 	<sh p="7 6"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -3877,8 +3831,7 @@
       <sh p="7"/>
       <mv di="euro-bar" p="2">
 	<sh p="10"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -3945,8 +3898,7 @@
       <sh p="0"/>
       <mv p="5">
         <sh p="2"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -3955,8 +3907,7 @@
     <mv p="0">
       <mv p="1">
         <ip p="5 8"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv p="5">
       <mv col="b" p="4"/>
     </mv>
@@ -4016,8 +3967,7 @@
       <sh p="serif-bottom2 vert-bottom1 vert-bottom2"/>
       <mv col="b" p="serif-top1">
         <sh p="serif-top2"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -4040,8 +3990,7 @@
       <sh p="1 23 9 5 28 13"/>
       <mv col="b" p="17">
         <sh p="22 27"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -4050,8 +3999,7 @@
     <mv p="19">
       <mv col="w" p="29">
         <mv col="b" p="35"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv p="0">
       <sh p="12"/>
       <mv p="6"/>
@@ -4072,8 +4020,7 @@
       <sh p="33 38 0"/>
       <mv col="b" p="29">
         <sh p="34"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -4087,8 +4034,7 @@
       <sh p="0 43 11"/>
       <mv col="b" p="39">
         <sh p="44"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -4164,8 +4110,7 @@
       <sh p="stem-top-left"/>
       <mv p="(top-serif-left - 1)">
         <al p="stem-top-right"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv p="bottom-serif-left">
       <sh p="stem-bottom foot-bottom"/>
       <mv p="(bottom-serif-left + 1)"/>
@@ -4205,8 +4150,7 @@
       <sh p="6"/>
       <mv p="64">
         <sh p="12 15 60"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <callm nm="mid-stem">
       <pms>ref1: 0, ref2: 28, pt1: 73, pt2: 74</pms>
     </callm>
@@ -4219,8 +4163,7 @@
       <sh p="24"/>
       <mv col="b" p="18">
         <sh p="30"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv p="0">
       <mv col="b" p="6"/>
     </mv>
@@ -4234,14 +4177,12 @@
       <sh p="60 38"/>
       <mv p="1">
         <sh p="30 46 76"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv p="32">
       <sh p="0 63 59 68 37 41 53"/>
       <mv p="64">
         <sh p="69"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -4288,8 +4229,7 @@
       <sh p="8"/>
       <mv di="lc-serif" col="b" p="28">
         <sh p="6"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="baseline-undershoot" p="0">
       <sh p="24"/>
       <mv col="b" p="15"/>
@@ -4731,8 +4671,7 @@
       <mv col="b" p="12"/>
       <mv col="g" p="6">
         <mv col="b" p="20"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -4784,8 +4723,7 @@
       <mv col="b" p="24"/>
       <mv p="16">
         <mv col="b" p="9"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -4806,8 +4744,7 @@
       <mv col="b" p="12"/>
       <mv p="36">
         <mv col="b" p="29"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -4860,8 +4797,7 @@
       <sh p="12"/>
       <mv col="b" p="5">
         <sh p="14"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -4871,8 +4807,7 @@
       <mv col="b" p="12"/>
       <mv col="g" p="23">
         <mv col="b" p="25"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <ip r="23 0" p="32"/>
     <mv p="32">
       <mv col="b" p="18"/>
@@ -4911,8 +4846,7 @@
     <mv di="sups-baseline" p="0">
       <mv col="g" p="13">
         <mv col="b" p="6"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -4924,8 +4858,7 @@
       <sh p="10"/>
       <mv col="b" p="3">
         <sh p="8"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -4935,8 +4868,7 @@
       <mv col="b" p="25"/>
       <mv col="g" p="37">
         <mv col="b" p="12"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -4946,8 +4878,7 @@
       <mv col="b" p="28"/>
       <mv col="g" p="40">
         <mv col="b" p="14"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -4988,8 +4919,7 @@
       <mv col="b" p="30"/>
       <mv p="22">
         <mv col="b" p="15"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -5005,8 +4935,7 @@
       <mv col="b" p="23"/>
       <mv p="37">
         <ip round="yes" p="42 28"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <sh r="28" p="47"/>
     <mv col="b" r="28" p="41">
       <sh p="44"/>
@@ -5020,15 +4949,13 @@
       <mv col="b" p="16"/>
       <mv p="40">
         <mv col="b" p="33"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="baseline" p="76">
       <sh p="54"/>
       <mv col="b" p="77"/>
       <mv p="64">
         <ip round="yes" p="69 55"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <sh r="55" p="74"/>
     <mv col="b" r="55" p="68">
       <sh p="71"/>
@@ -5080,8 +5007,7 @@
         <sh>
           <set ref="ring-bot-sh"/>
         </sh>
-      </mv>
-    </mv>
+    </mv></mv>
     <callm nm="serif-sh">
       <pms>pt-a: left-serif, pt-b: (left-serif + 1), sh-a: serif-sh-a, sh-b: (right-serif + 1), cv-h: sc-serif</pms>
     </callm>
@@ -5317,8 +5243,7 @@
       <sh p="top-sh"/>
       <mv di="sc-bar" col="b" p="top-ins">
         <sh p="top-ins-sh"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="sc-baseline-undershoot" p="bot">
       <mv di="sc-round-stem" p="bot-ins"/>
     </mv>
@@ -5341,8 +5266,7 @@
     <mv p="28">
       <mv col="b" p="27">
         <ip p="24"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <setvs axis="y"/>
     <callm nm="serif-sh">
       <pms>pt-a: bottom-serif, pt-b: (bottom-serif + 1), sh-a: bottom-pts, cv-h: sc-serif</pms>
@@ -5378,8 +5302,7 @@
     <mv p="24">
       <mv col="b" p="23">
         <ip p="20"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <setvs axis="y"/>
     <callm nm="serif-sh">
       <pms>pt-a: top-serif, pt-b: (top-serif - 1), sh-a: top-pts, cv: sc-height, cv-h: sc-serif</pms>
@@ -5449,8 +5372,7 @@
     <mv p="serif-top">
       <mv di="sc-serif" col="b" p="(serif-top - 1)">
         <sh p="stema stemb"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -5472,8 +5394,7 @@
         <sh>
           <set ref="top-under-sh"/>
         </sh>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv round="yes" p="bottom">
       <mv di="sc-round-stem" col="b" p="bottom-ins"/>
     </mv>
@@ -5633,8 +5554,7 @@
       <sh p="left-stem-bottom bottom-right-a"/>
       <mv di="sc-serif" col="b" p="bottom-left-b">
         <sh p="bottom-right-b"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <ip round="yes" r="top-left-a bottom-left-a" p="bar-bottom"/>
     <mv di="sc-bar" col="b" r="bar-bottom" p="bar-top">
       <sh p="bar-mid"/>
@@ -5683,8 +5603,7 @@
       <sh p="tilde-top-b"/>
       <mv col="b" p="tilde-bot-a">
         <sh p="tilde-bot-b"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -5712,8 +5631,7 @@
       <sh p="top-left-stem top-right-a top-right-sh1 top-right-sh2 point-lower point-upper"/>
       <mv di="sc-serif" col="b" p="top-left-b">
         <sh p="top-right-b"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -5806,14 +5724,12 @@
       <sh p="top-right"/>
       <mv di="sc-round-stem" p="top-ins">
         <sh p="top-ins-right"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="sc-baseline-undershoot" p="bottom">
       <sh p="bottom-right"/>
       <mv di="sc-round-stem" p="bottom-ins">
         <sh p="bottom-ins-right"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -5844,8 +5760,7 @@
       <sh p="vserif-bottom"/>
       <mv di="sc-bar" col="b" p="bar-top">
         <sh p="vserif-top"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <push>E-bottom-b sc-bar bottom E-top-b sc-bar top</push>
     <command nm="SRP0"/>
     <command nm="MIRP" modifier="11101"/>
@@ -5936,8 +5851,7 @@
       <sh round="yes" p="tail-bottom"/>
       <mv di="sc-round-stem" p="bottom-ins">
         <sh p="tail-ins"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -6067,8 +5981,7 @@
     <mv di="cap-height" p="top">
       <mv di="cap-bar" col="b" p="top-ins-a">
         <ip p="stem-top"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <callm nm="serif-sh">
       <pms>pt-a: bottom-serif, pt-b: (bottom-serif + 1), sh-a: stem-bottom, cv-h: sc-serif</pms>
     </callm>
@@ -6089,8 +6002,7 @@
       </sh>
       <mv col="b" p="top-under">
         <sh p="curve-top"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="sc-baseline-undershoot" p="bot">
       <mv di="sc-round-stem" p="bot-ins"/>
     </mv>
@@ -6285,8 +6197,7 @@
     <mv p="41">
       <mv col="b" p="40">
         <ip p="37"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <setvs axis="y"/>
     <callm nm="serif-sh">
       <pms>pt-a: top-serif, pt-b: (top-serif - 1), sh-a: top-sh-a, cv: sc-height, cv-h: sc-serif</pms>
@@ -6304,8 +6215,7 @@
       <sh p="vserif-bottom"/>
       <mv di="sc-bar" col="b" p="bar-top">
         <sh p="vserif-top"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup/>
   </gl>
 
@@ -6339,8 +6249,7 @@
         <mv col="w" p="stem-bot">
           <mv col="b" p="stem-top"/>
         </mv>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -6355,8 +6264,7 @@
         <mv col="w" p="stem-top">
           <mv col="b" p="stem-bot"/>
         </mv>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -6371,8 +6279,7 @@
         <mv col="w" p="stem-bot">
           <mv col="b" p="stem-top"/>
         </mv>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -6387,8 +6294,7 @@
         <mv col="w" p="stem-top">
           <mv col="b" p="stem-bot"/>
         </mv>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -6409,8 +6315,7 @@
       <sh p="bot-right"/>
       <mv col="b" p="bot-ins">
         <sh p="bot-right-ins"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv p="serif">
       <sh p="curve-end"/>
       <mv di="sc-serif" col="b" p="(serif - 1)"/>
@@ -6477,8 +6382,7 @@
       <sh p="top-left"/>
       <mv col="b" p="top-ins">
         <sh p="top-left-ins"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="baseline-undershoot" p="bot">
       <mv col="b" p="bot-ins"/>
     </mv>
@@ -6507,8 +6411,7 @@
       <sh p="bot-right"/>
       <mv di="lc-round-stem" p="bot-ins">
         <sh p="bot-right-ins"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -6525,8 +6428,7 @@
       <sh p="left-top"/>
       <mv di="lc-round-stem" p="top-ins">
         <sh p="left-top-ins"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="baseline-undershoot" p="bot">
       <sh p="stem-bot"/>
       <mv di="lc-round-stem" p="bot-ins"/>
@@ -6748,8 +6650,7 @@
     <mv p="serif-top">
       <mv di="lc-serif" col="b" p="(serif-top - 1)">
         <sh p="stema stemb"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -6778,8 +6679,7 @@
       <sh p="top-r"/>
       <mv p="top-l-ins">
         <sh p="top-r-ins"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="baseline-undershoot" p="bot">
       <mv p="bot-ins"/>
     </mv>
@@ -6921,8 +6821,7 @@
     <mv di="xheight" p="bar-top">
       <mv p="bar-bot">
         <sh p="diag-top"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv round="yes" p="bowl-bot">
       <mv di="lc-round-stem" p="bowl-bot-ins"/>
     </mv>
@@ -6953,16 +6852,14 @@
         <sh>
           <set ref="serif-sh-b"/>
         </sh>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="baseline-undershoot" p="bow-bot">
       <sh>
         <set ref="bow-bot-sh"/>
       </sh>
       <mv col="b" p="bow-bot-ins">
         <sh p="bow-bot-ins-r"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -6986,14 +6883,12 @@
         <sh>
           <set ref="serif-sh-b"/>
         </sh>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="baseline-undershoot" p="bow-bot">
       <sh p="bow-bot-r"/>
       <mv p="bow-bot-ins">
         <sh p="bow-bot-ins-r"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="lc-descender" p="stem-bot">
       <sh p="bot-serif-a bot-serif-b"/>
     </mv>
@@ -7131,21 +7026,18 @@
       <sh p="E-top-a"/>
       <mv di="lc-round-stem" p="top-ins">
         <sh p="E-top-b"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="baseline" p="bottom">
       <sh p="E-bottom-a"/>
       <mv di="lc-round-stem" p="bottom-ins">
         <sh p="E-bottom-b"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <ip r="top bottom" p="bar-bottom"/>
     <mv p="bar-bottom">
       <sh p="vserif-bottom"/>
       <mv di="lc-bar" col="b" p="bar-top">
         <sh p="vserif-top"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -7194,8 +7086,7 @@
       </sh>
       <mv p="arm-b">
         <ip p="arm-a"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -7218,8 +7109,7 @@
       </sh>
       <mv p="arm-b">
         <ip p="arm-a"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -7239,8 +7129,7 @@
     <mv di="baseline-undershoot" p="arm-bottom">
       <mv p="arm-b">
         <ip p="arm-a"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <callm nm="hook">
       <pms>init: hook-base, cv: lc-descender, sh: hook-mid, mv: hook-top</pms>
     </callm>
@@ -7279,8 +7168,7 @@
     <mv di="xheight-overshoot" p="arm-top">
       <mv p="arm-below2">
         <ip p="arm-below1"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <callm nm="lc-bottom-serif">
       <wpm nm="bottom-left" val="serif-bottom"/>
       <wpm nm="top-left" val="serif-bottom + 1"/>
@@ -7463,8 +7351,7 @@
       <sh p="bot"/>
       <mv col="b" p="bar-top-a">
         <sh p="bar-top-b"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -7838,8 +7725,7 @@
     <mv p="serif-top">
       <mv di="lc-serif" col="b" p="(serif-top - 1)">
         <sh p="stema stemb"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <callm nm="hook">
       <pms>init: hook-base, sh: hook-mid, mv: hook-bot</pms>
     </callm>
@@ -8190,8 +8076,7 @@
             <set ref="bot-serif-b-sh"/>
           </sh>
         </mv>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv p="top-w-pt-a">
       <sh p="top-w-pt-b"/>
       <mv p="top-serif-a">
@@ -8203,8 +8088,7 @@
             <set ref="top-serif-b-sh"/>
           </sh>
         </mv>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -8221,8 +8105,7 @@
             </mv>
           </mv>
         </mv>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -8283,8 +8166,7 @@
     <mv p="serif">
       <mv di="lc-serif" col="b" p="(serif + 1)">
         <sh p="stem-bot"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -8398,8 +8280,7 @@
       </sh>
       <mv di="period-height" col="b" p="top">
         <sh p="35"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <compile-if test="include-iup = 0">
       <iup axis="y"/>
     </compile-if>
@@ -8416,8 +8297,7 @@
         <mv col="w" p="b-bot">
           <mv di="period-height" col="b" p="b-top"/>
         </mv>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -8448,8 +8328,7 @@
         <sh>
           <set ref="top-sh"/>
         </sh>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -8464,8 +8343,7 @@
         <mv col="w" p="stem-bot">
           <mv col="b" p="stem-top"/>
         </mv>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -8480,8 +8358,7 @@
         <mv col="w" p="stem-top">
           <mv col="b" p="stem-bot"/>
         </mv>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -8496,8 +8373,7 @@
         <mv col="w" p="stem-bot">
           <mv col="b" p="stem-top"/>
         </mv>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -8512,8 +8388,7 @@
         <mv col="w" p="stem-top">
           <mv col="b" p="stem-bot"/>
         </mv>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -8549,8 +8424,7 @@
         <sh>
           <set ref="mid-sh"/>
         </sh>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -8566,8 +8440,7 @@
       </sh>
       <mv di="period-height" col="b" p="top">
         <sh p="35"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <compile-if test="include-iup = 0">
       <iup axis="y"/>
     </compile-if>
@@ -8583,8 +8456,7 @@
         <sh>
           <set ref="mid-sh"/>
         </sh>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -8635,8 +8507,7 @@
       </sh>
       <mv di="period-height" col="b" p="top">
         <sh p="top-sh"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <compile-if test="include-iup = 0">
       <iup axis="y"/>
     </compile-if>
@@ -8839,8 +8710,7 @@
     <mv round="yes" p="dot-lower">
       <mv di="period-height" col="b" p="dot-upper">
         <mv col="w" p="bow-lower"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -8990,8 +8860,7 @@
     <mv p="0">
       <mv col="b" p="6">
         <sh p="3 9"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -9058,8 +8927,7 @@
       <sh p="12"/>
       <mv di="dotaccent-height" p="6">
         <sh p="18"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -9069,8 +8937,7 @@
       <sh p="12"/>
       <mv di="dotaccent-height" p="6">
         <sh p="18"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -9106,8 +8973,7 @@
       <sh p="5"/>
       <mv col="b" p="3">
         <sh p="0"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -9211,8 +9077,7 @@
     <mv di="baseline" p="20">
       <mv p="0">
         <mv col="b" p="12"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -9352,13 +9217,11 @@
       <sh p="15 25"/>
       <mv col="b" p="13">
         <sh p="14 26 27"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv p="20">
       <mv col="w" p="0">
         <mv col="b" p="6"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -9383,8 +9246,7 @@
       <sh p="25"/>
       <mv col="b" p="5">
         <sh p="24"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -9420,8 +9282,7 @@
       <sh p="0 38 11"/>
       <mv p="34">
         <sh p="39"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <callm nm="round-point">
       <pms>p: 5</pms>
     </callm>
@@ -9437,14 +9298,12 @@
       <sh p="0 11 33 60 65"/>
       <mv col="b" p="56">
         <sh p="61 66"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv p="25">
       <sh p="5 47"/>
       <mv col="b" p="18">
         <sh p="40"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -9483,8 +9342,7 @@
       <sh p="1 15 5"/>
       <mv col="b" p="9">
         <sh p="14"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -9494,14 +9352,12 @@
       <sh p="6 25 1"/>
       <mv col="b" p="19">
         <sh p="24"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv p="8">
       <sh p="0 13 4"/>
       <mv col="b" p="9">
         <sh p="14"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -9524,8 +9380,7 @@
       <sh p="24"/>
       <mv col="b" p="63">
         <sh p="17"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv p="46">
       <sh p="53"/>
       <mv di="mark-curve" col="b" p="33"/>
@@ -9575,8 +9430,7 @@
       <sh p="0 32 11"/>
       <mv col="b" p="28">
         <sh p="33"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <ip r="5 27" p="39"/>
     <mv p="39">
       <sh p="22"/>
@@ -9603,8 +9457,7 @@
       <sh p="32 27 0"/>
       <mv col="b" p="23">
         <sh p="28"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv p="14">
       <sh p="37"/>
       <mv col="b" p="7"/>
@@ -9669,8 +9522,7 @@
     <mv p="4">
       <mv col="b" p="12">
         <sh p="0 9"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -9679,8 +9531,7 @@
     <mv p="4">
       <mv col="b" p="12">
         <sh p="0 9"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -9689,8 +9540,7 @@
     <mv p="4">
       <mv col="b" p="12">
         <sh p="0 9"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -9722,8 +9572,7 @@
       <sh p="left-bot"/>
       <mv col="b" p="right-top">
         <sh p="left-top"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -9737,8 +9586,7 @@
       <sh p="left-bot"/>
       <mv col="b" p="right-top">
         <sh p="left-top"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -9786,8 +9634,7 @@
     <mv p="8">
       <mv col="b" p="0">
         <ip p="9 15"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -9848,8 +9695,7 @@
       <sh p="18"/>
       <mv di="dotaccent-height" p="bottom">
         <sh p="12"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -9888,8 +9734,7 @@
         <mv p="7">
           <sh p="4"/>
         </mv>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -9898,8 +9743,7 @@
     <mv p="2">
       <mv col="b" p="8">
         <sh p="0 4"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -9913,8 +9757,7 @@
       <sh p="left-bot"/>
       <mv col="b" p="right-top">
         <sh p="left-top"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -9923,8 +9766,7 @@
     <mv p="8">
       <mv col="b" p="0">
         <ip p="7 1"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -9935,8 +9777,7 @@
         <mv p="2">
           <sh p="5"/>
         </mv>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -9946,8 +9787,7 @@
       <sh p="7"/>
       <mv p="0">
         <sh p="4"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -9960,8 +9800,7 @@
         <mv p="27">
           <sh p="21 14"/>
         </mv>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -9971,8 +9810,7 @@
       <sh p="6"/>
       <mv p="5">
         <sh p="0"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -9982,8 +9820,7 @@
       <sh p="5"/>
       <mv col="b" p="3">
         <sh p="0"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -9996,8 +9833,7 @@
       <sh p="9 41 11"/>
       <mv p="35">
         <sh p="40"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <ip r="36 0" p="10 7 13 27"/>
     <iup axis="y"/>
   </gl>
@@ -10091,8 +9927,7 @@
         <mv col="w" p="0">
           <mv col="b" p="1"/>
         </mv>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -10114,8 +9949,7 @@
       <sh p="left-bot"/>
       <mv col="b" p="right-top">
         <sh p="left-top"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -10239,8 +10073,7 @@
       <al p="13"/>
       <mv col="b" p="6">
         <al p="18"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -10388,21 +10221,18 @@
       <sh p="E-top-a"/>
       <mv di="lc-round-stem" p="top-ins">
         <sh p="E-top-b"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="baseline" p="bottom">
       <sh p="E-bottom-a"/>
       <mv di="lc-round-stem" p="bottom-ins">
         <sh p="E-bottom-b"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <ip r="top bottom" p="bar-bottom"/>
     <mv p="bar-bottom">
       <sh p="vserif-bottom"/>
       <mv di="lc-bar" col="b" p="bar-top">
         <sh p="vserif-top"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <callm nm="rhotic-hook">
       <pms>d-top: hook-d-top, d-bot: hook-d-bot, a: hook-a, b: hook-b</pms>
     </callm>
@@ -10477,14 +10307,12 @@
       <sh p="top-right"/>
       <mv col="b" p="top-left-ins">
         <sh p="top-right-ins"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="baseline-undershoot" p="bottom-left">
       <sh p="bottom-right"/>
       <mv col="b" p="bottom-left-ins">
         <sh p="bottom-right-ins"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <ip r="top-left bottom-left" p="diag-bottom"/>
     <sh r="diag-bottom" p="diag-top"/>
     <callm nm="rhotic-hook">
@@ -10624,8 +10452,7 @@
       <sh p="e-top"/>
       <mv di="lc-round-stem" col="b" p="o-top-ins">
         <sh p="e-top-ins"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <mv di="baseline-undershoot" p="o-bot">
       <sh p="e-bot"/>
       <mv di="lc-round-stem" col="b" p="o-bot-ins"/>
@@ -10787,8 +10614,7 @@
       <sh p="diag-top"/>
       <mv di="lc-serif" col="b" p="(xh - 1)">
         <sh p="27"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <ip r="xh serif-bottom" p="mid-top mid-mid"/>
     <push>mid-bottom mid-top</push>
     <command nm="MDAP" modifier="1"/>
@@ -12005,8 +11831,7 @@
       <sh p="0"/>
       <mv di="euro-bar" p="5">
 	<sh p="7"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
@@ -12016,8 +11841,7 @@
       <sh p="0"/>
       <mv di="euro-bar" p="4">
 	<sh p="2"/>
-      </mv>
-    </mv>
+    </mv></mv>
     <iup axis="y"/>
   </gl>
 
