@@ -7337,11 +7337,11 @@
   </gl>
 
   <gl pnm="uni0287">
-    <cn nm="top" val="16"/>
-    <cn nm="top-ins" val="9"/>
-    <cn nm="bar-bot" val="2"/>
-    <cn nm="bar-top-a" val="5"/>
-    <cn nm="bar-top-b" val="21"/>
+    <cn nm="top" val="21"/>
+    <cn nm="top-ins" val="13"/>
+    <cn nm="bar-bot" val="3"/>
+    <cn nm="bar-top-a" val="4"/>
+    <cn nm="bar-top-b" val="29"/>
     <cn nm="bot" val="0"/>
     <setvs axis="y"/>
     <mv di="xheight-overshoot" p="top">
