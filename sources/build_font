@@ -103,11 +103,11 @@ fi
 familyname=`gsed -n '1,/<source.*familyname/s/.*familyname="\([^"]*\)"[^\n]*/\1/p' $des`
 echo "Building font(s) with family name \"${familyname}\""
 
-# The Glyphs file has more instances than needed--some only there to hold down
-# the corners of the design space. There are standard collections of instances:
-# Variable fonts: all 7 standard weights, and for Regular and Bold all 6 Optical
-# sizes. Desktop set: all but the 6pt optical size and the Grade axis. Web
-# static set: Just the 7 standard weights in the default optical size.
+# Every glyph with a "us" anchor also needs a "_us" anchor or fontmake (glyphsLib,
+# I think) will mess up the anchors for that glyph. But there is no requirement
+# that anchors must be paired this way, and it's easy to imagine the extraneous
+# anchors causing problems (though I don't know that it has). As it is easy to
+# strip the extraneous anchors out of the UFO, it's best that we do so.
 
 Echo "Removing extraneous anchors"
 
@@ -126,6 +126,12 @@ do
 	fi
     done
 done
+
+# The Glyphs file has more instances than needed--some only there to hold down
+# the corners of the design space. There are standard collections of instances:
+# Variable fonts: all 7 standard weights, and for Regular and Bold all 6 Optical
+# sizes. Desktop set: all but the 6pt optical size and the Grade axis. Web
+# static set: Just the 7 standard weights in the default optical size.
 
 # We had to have a "Grade" instance for glyphsLib to calculate the axes properly, but
 # we don't actually want it in the output font(s). Remove that instance, if we haven't
