@@ -37,3 +37,10 @@ weight and correctly aligned on the math axis (two different axes to
 harmonize with lining and oldstyle figures). Also subscript numbers
 (with a subs feature to support them), right- and left-pointing
 arrows, emptyset, and prime and double-prime.
+
+5 September 2020
+
+Corrected the STAT table, which now uses mostly format 2 AxisValues. Earlier versions
+had problems with Adobe InDesign, but this version works there and in all other apps
+that I've been able to test. Thomas Linard contributed generously to the project of
+getting the STAT table right (See Issue #7, STAT version).
