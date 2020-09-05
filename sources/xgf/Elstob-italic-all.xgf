@@ -1621,6 +1621,7 @@
     </mv>
     <mv di="lc-descender" p="0">
       <mv p="12"/>
+      <mv p="6"/>
     </mv>
   </gl>
 
@@ -1686,6 +1687,7 @@
     </mv>
     <mv di="lc-descender" p="0">
       <mv p="12"/>
+      <mv p="6"/>
     </mv>
     <mv di="xho" p="64">
       <sh p="35"/>
