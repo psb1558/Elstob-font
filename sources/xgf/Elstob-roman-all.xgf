@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
-<?xml-model href="file:///Users/peterbaker/work/xgridfit/Schemas/xgridfit-sh.rnc"
+<?xml-model href="file:///Users/peterbaker/work/xgridfit/xgridfit/Schemas/xgridfit-sh.rnc"
 type="application/relax-ng-compact-syntax"?>
 <xgridfit xmlns="http://xgridfit.sourceforge.net/Xgridfit2"
 	  xmlns:xi="http://www.w3.org/2001/XInclude">
 
-  <infile>Elstob[GRAD,opsz,wght].ttf</infile>
-  <outfile>Elstob[GRAD,opsz,wght]-hinted.ttf</outfile>
+  <inputfont>Elstob[GRAD,opsz,wght].ttf</inputfont>
+  <outputfont>Elstob[GRAD,opsz,wght]-hinted.ttf</outputfont>
 
   <default type="max-storage" val="70"/>
   <default type="init-graphics" val="no"/>
@@ -59,7 +59,8 @@ type="application/relax-ng-compact-syntax"?>
   <cv nm="macronw" val="81" col="b"/>
 
   <cvar>
-    <region tag="wght" bot="-1.0" peak="-1.0" top="0.0">
+		<tuple>
+    	<region tag="wght" bot="-1.0" peak="-1.0" top="0.0"/>
       <cvv nm="xheight" val="891"/>
       <cvv nm="xheight-overshoot" val="914"/>
       <cvv nm="lc-round-stem" val="42"/>
@@ -88,8 +89,9 @@ type="application/relax-ng-compact-syntax"?>
       <cvv nm="percent-zero-sc" val="45"/>
       <cvv nm="rune-punct" val="253"/>
       <cvv nm="macronw" val="66"/>
-    </region>
-    <region tag="wght" bot="0.0" peak="1.0" top="1.0">
+    </tuple>
+		<tuple>
+    	<region tag="wght" bot="0.0" peak="1.0" top="1.0"/>
       <cvv nm="xheight" val="891"/>
       <cvv nm="xheight-overshoot" val="914"/>
       <cvv nm="lc-round-stem" val="68"/>
@@ -118,8 +120,9 @@ type="application/relax-ng-compact-syntax"?>
       <cvv nm="percent-zero-sc" val="75"/>
       <cvv nm="rune-punct" val="316"/>
       <cvv nm="macronw" val="93"/>
-    </region>
-    <region tag="opsz" bot="-1.0" peak="-1.0" top="0.0">
+    </tuple>
+		<tuple>
+    	<region tag="opsz" bot="-1.0" peak="-1.0" top="0.0"/>
       <cvv nm="xheight" val="933"/>
       <cvv nm="xheight-overshoot" val="957"/>
       <cvv nm="lc-round-stem" val="89"/>
@@ -152,8 +155,9 @@ type="application/relax-ng-compact-syntax"?>
       <cvv nm="percent-zero-sc" val="55"/>
       <cvv nm="rune-punct" val="275"/>
       <cvv nm="macronw" val="104"/>
-    </region>
-    <region tag="opsz" bot="0.0" peak="1.0" top="1.0">
+    </tuple>
+		<tuple>
+    	<region tag="opsz" bot="0.0" peak="1.0" top="1.0"/>
       <cvv nm="xheight" val="848"/>
       <cvv nm="xheight-overshoot" val="870"/>
       <cvv nm="lc-round-stem" val="57"/>
@@ -186,8 +190,9 @@ type="application/relax-ng-compact-syntax"?>
       <cvv nm="percent-zero-sc" val="54"/>
       <cvv nm="rune-punct" val="273"/>
       <cvv nm="macronw" val="80"/>
-    </region>
-    <region tag="GRAD" bot="0.0" peak="1.0" top="1.0">
+    </tuple>
+		<tuple>
+    	<region tag="GRAD" bot="0.0" peak="1.0" top="1.0"/>
       <cvv nm="xheight" val="891"/>
       <cvv nm="xheight-overshoot" val="914"/>
       <cvv nm="lc-round-stem" val="68"/>
@@ -216,7 +221,7 @@ type="application/relax-ng-compact-syntax"?>
       <cvv nm="percent-zero-sc" val="75"/>
       <cvv nm="rune-punct" val="316"/>
       <cvv nm="macronw" val="93"/>
-    </region>
+    </tuple>
   </cvar>
 
   <prep>
