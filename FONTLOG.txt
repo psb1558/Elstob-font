@@ -44,3 +44,13 @@ Corrected the STAT table, which now uses mostly format 2 AxisValues. Earlier ver
 had problems with Adobe InDesign, but this version works there and in all other apps
 that I've been able to test. Thomas Linard contributed generously to the project of
 getting the STAT table right (See Issue #7, STAT version).
+
+1 October 2020
+
+Adjusted features to match those of JuniusX as closely as possible. In
+all but a very few instances it should now be possible to change the font
+from Elstob or ElstobD to JuniusX without loss. Added U+0180, U+A748,
+U+A749 (plus small cap version of the latter two). These are basic
+needs for diplomatic transcription of Latin texts. Other changes are
+minor.
+
