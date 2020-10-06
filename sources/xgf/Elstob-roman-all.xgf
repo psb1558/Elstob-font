@@ -4,6 +4,10 @@ type="application/relax-ng-compact-syntax"?>
 <xgridfit xmlns="http://xgridfit.sourceforge.net/Xgridfit2"
 	  xmlns:xi="http://www.w3.org/2001/XInclude">
 
+	<!--
+		N.B. pi is missing.
+	-->
+
   <inputfont>Elstob[GRAD,opsz,wght].ttf</inputfont>
   <outputfont>Elstob[GRAD,opsz,wght]-hinted.ttf</outputfont>
 
@@ -3714,7 +3718,7 @@ type="application/relax-ng-compact-syntax"?>
 
   <gl pnm="lessequal">
     <setvs axis="y"/>
-    <mv p="10">
+    <mv p="8">
       <mv di="euro-bar" p="9"/>
       <mv round="no" col="w" p="0">
         <mv round="no" col="g" p="3"/>
@@ -9050,6 +9054,16 @@ type="application/relax-ng-compact-syntax"?>
     <iup axis="y"/>
   </gl>
 
+	<gl init-graphics="no" pnm="uni0335.case">
+    <setvs axis="y"/>
+    <push>1 cap-bar 0</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MIRP">
+      <modifier type="col" val="b"/>
+    </command>
+    <iup axis="y"/>
+  </gl>
+
   <gl init-graphics="no" pnm="uni0335.sc">
     <setvs axis="y"/>
     <push>1 sc-bar 0</push>
@@ -9254,18 +9268,6 @@ type="application/relax-ng-compact-syntax"?>
     <command nm="MDRP">
       <modifier type="col" val="b"/>
     </command>
-    <iup axis="y"/>
-  </gl>
-
-  <gl pnm="ring">
-    <setvs axis="y"/>
-    <push>20 7 14 0</push>
-    <command nm="MDAP" modifier="1"/>
-    <command nm="SHP" modifier="0"/>
-    <command nm="MDRP">
-      <modifier type="col" val="b"/>
-    </command>
-    <command nm="SHP" modifier="0"/>
     <iup axis="y"/>
   </gl>
 

@@ -3,6 +3,10 @@
     type="application/relax-ng-compact-syntax"?>
 <xgridfit xmlns="http://xgridfit.sourceforge.net/Xgridfit2" xmlns:xi="http://www.w3.org/2001/XInclude">
 
+  <!--
+    Check U+026B
+  -->
+
   <inputfont>Elstob-Italic[GRAD,opsz,wght].ttf</inputfont>
   <outputfont>Elstob-Italic[GRAD,opsz,wght]-hinted.ttf</outputfont>
 
@@ -634,7 +638,7 @@
     <set nm="top-a" p="22 15"/>
     <set nm="bot-a" p="21 25 0"/>
     <callm nm="serif-sh">
-      pt-a: 6, pt-b: 5, sh-a: top-a, sh-b: 14, cv: cap-height,
+      pt-a: 6, pt-b: 5, sh-a: top-a, cv: cap-height,
       cv-h: cap-serif
     </callm>
     <mv di="cap-bar" r="6" p="14"/>
@@ -646,8 +650,8 @@
     <callm nm="mid-stem">
       ref1: 6, ref2: 17, pt1: 36, pt2: 37, cv: cap-bar
     </callm>
-    <sh r="35" p="39"/>
-    <sh r="34" p="38"/>
+    <sh r="36" p="40"/>
+    <sh r="37" p="41"/>
   </gl>
 
   <gl pnm="B">
@@ -7948,7 +7952,7 @@
   </gl>
 
   <gl pnm="lessequal">
-    <mv p="10">
+    <mv p="8">
       <mv di="euro-bar" p="9"/>
       <mv round="no" col="w" p="0">
         <mv round="no" col="g" p="3"/>
