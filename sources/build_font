@@ -27,9 +27,10 @@ do
       echo ""
       echo "A script for building variable and static versions of the Elstob font."
       echo "It does several things that are specific to Elstob and probably unsuitable"
-      echo "for other fonts."
+      echo "for other fonts. Either run this script in the sources directory or copy"
+      echo "all files from the sources directory to a build directory and run it there."
       echo ""
-      echo "  -s Builds static TrueType fonts instead of a variable font"
+      echo "  -t Builds static TrueType fonts instead of a variable font"
       echo "  -o Builds static CFF fonts instead of a variable font"
       echo "  -a Autohint the variable font with ttfautohint-vf"
       echo "  -i Generate a shorter collection of instances"
@@ -40,7 +41,7 @@ do
       echo "quality: use the Xgridfit code instead."
       return 0
     fi
-    if [ $arg == "-s" ]
+    if [ $arg == "-t" ]
     then
       outputType="s"
       instanceScript="del_instances.xsl"
@@ -216,7 +217,7 @@ else
     echo "fontmake failed"
     return 1
   fi
-  cd variable_ttf
+  cp "variable_ttf/${fontname}-VF.ttf" .
   echo "Checking for dsig table"
   gftools fix-dsig --autofix "${fontname}-VF.ttf"
   if [ $autohint == 1 ]
@@ -228,6 +229,24 @@ else
   else
     cp "${fontname}-VF.ttf" "${fontname}[GRAD,opsz,wght].ttf"
   fi
+  echo "Applying hints"
+  xgridfit -q "xgf/Elstob-${fonttype}-all.xgf"
+  if [ $? -ne 0 ]
+  then
+    echo "Hinting failed"
+    return 1
+  else
+    cp "${fontname}[GRAD,opsz,wght]-hinted.ttf" "${fontname}[GRAD,opsz,wght].ttf"
+  fi
+  echo "Building STAT table and fixing names"
+  python mkstat.py $fonttype
+  if [ $? -ne 0 ]
+  then
+    echo "Failed to build STAT table"
+    return 1
+  else
+    cp "${fontname}[GRAD,opsz,wght]-withSTAT.ttf" "${fontname}[GRAD,opsz,wght].ttf"
+  fi
   if [ $createwoff == 1 ]
   then
     echo "Creating woff2 version"
@@ -235,5 +254,7 @@ else
   fi
   rm -f ${fontname}-VF.ttf
   rm -f tmp-font.ttf
+  rm -f "${fontname}[GRAD,opsz,wght]-withSTAT.ttf"
+  rm -f "${fontname}[GRAD,opsz,wght]-hinted.ttf"
   cd ..
 fi
