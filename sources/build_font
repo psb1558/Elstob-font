@@ -23,7 +23,7 @@ for arg in $@
 do
     if [ $arg == "-h" ] || [ $arg == "--help" ]
     then
-      echo "Usage: build_font [-s | -o] [-i] [-a] [-w] file.glyphs"
+      echo "Usage: build_font [-t | -o] [-i] [-a] [-w] file.glyphs"
       echo ""
       echo "A script for building variable and static versions of the Elstob font."
       echo "It does several things that are specific to Elstob and probably unsuitable"
