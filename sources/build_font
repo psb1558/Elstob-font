@@ -2,9 +2,9 @@
 
 if [ $# -lt 1 ]
 then
-    echo "Usage: build_font [-s | -o] [-i] [-a] [-w] file.glyphs"
+    echo "Usage: build_font [-t | -o] [-i] [-a] [-w] file.glyphs"
     echo " Type \"build_font -h\" for help."
-    return 1
+    exit 1
 fi
 
 outputType="v"
@@ -37,9 +37,8 @@ do
       echo "  -w Create a woff2 version of the variable font"
       echo ""
       echo "To create a font with a different family name (e.g. ElstobO), change the"
-      echo "family name in Glyphs. Hinting by ttfautohint-vf may not be production"
-      echo "quality: use the Xgridfit code instead."
-      return 0
+      echo "family name in Glyphs."
+      exit 0
     fi
     if [ $arg == "-t" ]
     then
@@ -67,21 +66,18 @@ do
 	        fontname=${ff%.*}
 	     else
 	        echo "${arg} appears not to be a Glyphs file"
-	        return 1
+	        exit 1
 	     fi
     else
   	    echo "Unknown argument or non-existent file ${arg}"
-        return 1
+        exit 1
     fi
   done
-
-# echo $instanceScript
-# return 0
 
 if [ $glyphsfile == "nofile" ] || [ $fontname == "nofont" ]
 then
     echo "Could not derive the filename or fontname."
-    return 1
+    exit 1
 fi
 
 if [[ $fontname == *"Italic"* ]]
@@ -98,7 +94,7 @@ glyphs2ufo --propagate-anchors --generate-GDEF --no-store-editor-state -m master
 if [ $? -ne 0 ]
 then
     echo "Failed to generate UFO and designspace"
-    return 1
+    exit 1
 fi
 
 familyname=`gsed -n '1,/<source.*familyname/s/.*familyname="\([^"]*\)"[^\n]*/\1/p' $des`
@@ -114,7 +110,6 @@ Echo "Removing extraneous anchors"
 
 for u in `gsed -n '/<source.*filename/s/.*filename="\([^"]*\)"[^\n]*/\1/p' $des`
 do
-    # echo "Checking $u"
     for fff in `grep -l "anchor.*\"_us\"" master_ufo/$u/glyphs/*.glif`
     do
 	if [[ ! $fff == *"usabovecomb.glif"* ]]
@@ -122,22 +117,15 @@ do
 	    xsltproc -o $fff del_usanchor.xsl $fff
 	    if [ $? -ne 0 ]
 	    then
-		return 1
+		exit 1
 	    fi
 	fi
     done
 done
 
 # The Glyphs file has more instances than needed--some only there to hold down
-# the corners of the design space. There are standard collections of instances:
-# Variable fonts: all 7 standard weights, and for Regular and Bold all 6 Optical
-# sizes. Desktop set: all but the 6pt optical size and the Grade axis. Web
-# static set: Just the 7 standard weights in the default optical size.
-
-# We had to have a "Grade" instance for glyphsLib to calculate the axes properly, but
-# we don't actually want it in the output font(s). Remove that instance, if we haven't
-# already performed this edit on the designspace file. Also several others that
-# aren't really needed.
+# the corners of the design space. There are standard collections of instances
+# for the variable font, the desktop set (ElstobD), and the web static set.
 
 if [ $fonttype == "italic" ]
 then
@@ -160,7 +148,7 @@ then
   if [ $? -ne 0 ]
   then
     echo "fontmake failed"
-    return 1
+    exit 1
   fi
   cd autohinted/instance_ttf
   if [ $fonttype == "italic" ]
@@ -191,7 +179,7 @@ then
   if [ $? -ne 0 ]
   then
     echo "fontmake failed"
-    return 1
+    exit 1
   fi
   cd instance_otf
   if [ $fonttype == "italic" ]
@@ -215,46 +203,59 @@ else
   if [ $? -ne 0 ]
   then
     echo "fontmake failed"
-    return 1
+    exit 1
   fi
   cp "variable_ttf/${fontname}-VF.ttf" .
   echo "Checking for dsig table"
   gftools fix-dsig --autofix "${fontname}-VF.ttf"
-  if [ $autohint == 1 ]
-  then
-    echo "Running ttfautohint-vf"
-    ttfautohint-vf "${fontname}-VF.ttf" tmp-font.ttf
-    gftools-fix-hinting.py tmp-font.ttf
-    mv tmp-font.ttf.fix "${fontname}[GRAD,opsz,wght].ttf"
-  else
-    cp "${fontname}-VF.ttf" "${fontname}[GRAD,opsz,wght].ttf"
-  fi
-  echo "Applying hints"
-  xgridfit -q "xgf/Elstob-${fonttype}-all.xgf"
-  if [ $? -ne 0 ]
-  then
-    echo "Hinting failed"
-    return 1
-  else
-    cp "${fontname}[GRAD,opsz,wght]-hinted.ttf" "${fontname}[GRAD,opsz,wght].ttf"
-  fi
-  echo "Building STAT table and fixing names"
+  echo "Building STAT table and fixing name table"
   python mkstat.py $fonttype
   if [ $? -ne 0 ]
   then
     echo "Failed to build STAT table"
-    return 1
+    exit 1
   else
     cp "${fontname}[GRAD,opsz,wght]-withSTAT.ttf" "${fontname}[GRAD,opsz,wght].ttf"
+  fi
+  #
+  # Hinting section: if autohinting requested, check for existence of
+  #     ttfautohint-vf and run it if available.
+  # If autohinting not requested, run Xgridfit.
+  # If either of these methods fails, user will be left with unhinted font
+  #     ${fontname}[GRAD,opsz,wght].ttf".
+  #
+  if [ $autohint == 1 ]
+  then
+    if command -v ttfautohint-vf &> /dev/null
+    then
+      echo "Running ttfautohint-vf"
+      ttfautohint-vf "${fontname}-VF.ttf" tmp-font.ttf
+      gftools-fix-hinting.py tmp-font.ttf
+      cp tmp-font.ttf.fix "${fontname}[GRAD,opsz,wght].ttf"
+      rm tmp-font.ttf.fix
+    else
+      echo "ttfautohint-vf (the variable-font-enabled version of ttfautohint)"
+      echo "is required to auto-hint a variable font."
+    fi
+  else
+    cp "${fontname}-VF.ttf" "${fontname}[GRAD,opsz,wght].ttf"
+    echo "Running Xgridfit"
+    xgridfit -q "xgf/Elstob-${fonttype}-all.xgf"
+    if [ $? -ne 0 ]
+    then
+      echo "Failed to hint with Xgridfit."
+    else
+      cp "${fontname}[GRAD,opsz,wght]-hinted.ttf" "${fontname}[GRAD,opsz,wght].ttf"
+    fi
   fi
   if [ $createwoff == 1 ]
   then
     echo "Creating woff2 version"
     woff2_compress "${fontname}[GRAD,opsz,wght].ttf"
   fi
+  echo "Cleaning up"
   rm -f ${fontname}-VF.ttf
   rm -f tmp-font.ttf
   rm -f "${fontname}[GRAD,opsz,wght]-withSTAT.ttf"
   rm -f "${fontname}[GRAD,opsz,wght]-hinted.ttf"
-  cd ..
 fi
