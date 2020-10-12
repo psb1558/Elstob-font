@@ -193,8 +193,8 @@ $( function() {
 	    fstring = featureString(fstring, "ss05", "on");
 	if ($("#romhist").is(":checked"))
 	    fstring = featureString(fstring, "hist", "on");
-	if ($("#romss11").is(":checked"))
-	    fstring = featureString(fstring, "ss11", "on");
+	if ($("#romcv33").is(":checked"))
+	    fstring = featureString(fstring, "cv33", "on");
 	if ($("#romss12").is(":checked"))
 	    fstring = featureString(fstring, "ss12", "on");
 	if ($("#romss13").is(":checked"))
@@ -203,12 +203,12 @@ $( function() {
 	    fstring = featureString(fstring, "ss14", "on");
 	if ($("#romss15").is(":checked"))
 	    fstring = featureString(fstring, "ss15", "on");
+	if ($("#romss11").is(":checked"))
+	    fstring = featureString(fstring, "ss11", "on");
+	if ($("#romss08").is(":checked"))
+	    fstring = featureString(fstring, "ss08", "on");
 	if ($("#romss16").is(":checked"))
 	    fstring = featureString(fstring, "ss16", "on");
-	if ($("#romss17").is(":checked"))
-	    fstring = featureString(fstring, "ss17", "on");
-	if ($("#romss18").is(":checked"))
-	    fstring = featureString(fstring, "ss18", "on");
 
 	// $("#errmsg").text(fstring);
 	$("#romtextarea").css("font-feature-settings", fstring);
