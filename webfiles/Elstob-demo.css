@@ -56,16 +56,6 @@ b{
          'GRAD' var(--romGRAD);
     font-feature-settings: 'calt' on;
 }
-#italtextarea {
-    background-color: #F8F8F8;
-    margin: 0 0 20px 0;
-    font-style: italic;
-    font-size: var(--italsize);
-    font-variation-settings: 'opsz' var(--italopsz),
-         'wght' var(--italwght),
-         'slnt' var(--italslnt);
-    font-feature-settings: 'calt' on;
-}
 .fineprint {
     font-variation-settings: 'opsz' 6, 'wght' 700, 'GRAD' 0;
 }
