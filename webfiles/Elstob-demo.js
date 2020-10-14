@@ -211,6 +211,7 @@ $( function() {
 		      });
 
     $("#rompresets").selectmenu();
+    $("#languages").selectmenu();
 
     $("#romsliders").on("change", function(event, size, wght, opsz, GRAD, spacing){
 	$('html').css('--romsize', size.toString() + "em");
