@@ -1,3 +1,4 @@
+/*jshint multistr: true */
 var modtext = "The Elstob font, named for Elizabeth Elstob (1683–1756), a celebrated \
 early scholar of Old English language and literature, is based on the Double Pica \
 commissioned by Bishop John Fell (1625–1686) and cut by Peter de Walpergen, and used \
@@ -37,7 +38,7 @@ wirt man am liecht hoͤren: was jr habend geredt ins or in der kam̄er / das wir
 taͤchern. Ich ſag üch aber / minen fründen / Foͤrchtēd üch nit vor denen die den lyb toͤdend / vnd \
 darnach nichts habennd das ſy mer thuͤgind. Ich wil üch aber zeigē vor welchem jr üch frchten \
 ſollend. Foͤrchtend üch vor dem / der / nach dem er toͤdet hat / ouch macht hat zewerffen inn die \
-hell: ja ich sag üch / vor dem ſelben foͤrchtēd üch."
+hell: ja ich sag üch / vor dem ſelben foͤrchtēd üch.";
 
 var gothictext = "Warþ þan in dagans jainans, urrann gagrefts fram kaisara Agustau, \
 gameljan allana midjungard. soh þan gilstrameleins frumista warþ at wisandin kindina Swriais \
@@ -144,7 +145,9 @@ langron huila.’   Thuo uuarth it san gilestid so,\n\
 giuuorđan te uuaron   so thar on them uuihe gisprak\n\
 engil thes alouualdon:  uuart ald gumo\n\
 spraka bilosid,   thuo hie spahan hugi\n\
-bari an is briostun."
+bari an is briostun.";
+
+var fstring = "normal";
 
 $( "romtextarea" ).text(modtext);
 
@@ -306,6 +309,7 @@ $( function() {
         case "ModEnglish":
           t = modtext;
           $( "input[type='checkbox']" ).prop("checked", false).first().change();
+          break;
   			case "eModEnglish":
           t = earlymodtext;
   				$( "input[type='checkbox']" ).not("#ss08, #dlig").prop("checked", false);
@@ -323,7 +327,7 @@ $( function() {
   				$("#hist, #ss16, #cv402").prop("checked",true).change();
   				break;
   			case "Latin":
-  				l = "la"
+  				l = "la";
   				t = latintext;
   				$( "input[type='checkbox']" ).not("#hist").prop("checked", false);
   				$("#hist").prop("checked",true).change();
@@ -385,7 +389,7 @@ $( function() {
   				}
   			}
   		});
-  		if (fstring.length == 0)
+  		if (fstring.length === 0)
   			fstring = "normal";
   		$("#romtextarea").css("font-feature-settings", fstring);
   	});
