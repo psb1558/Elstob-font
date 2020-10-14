@@ -109,7 +109,7 @@ b{
     font-feature-settings: 'hist' on;
 }
 .hoverable:hover {
-    font-variation-settings: 'opsz' 10, 'wght' 450, 'GRAD' 1;
+    font-variation-settings: 'opsz' 10, 'wght' 400, 'GRAD' 1;
 }
 /* #headerbox {
     width: 95%;
