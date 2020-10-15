@@ -41,6 +41,33 @@
     </div>
     <div class="row">
       <div class="controlbox">
+        <div class="selectbox overflow">
+          <label for="rompresets">Examples:</label><br/>
+          <select id="rompresets">
+            <option selected="selected">Any</option>
+            <option>6pt Medium 0.6em</option>
+            <option>8pt Medium 0.8em</option>
+            <option>10pt Regular 1.2em</option>
+            <option>Regular 1.5em</option>
+            <option>Medium 1.5em</option>
+            <option>14pt Regular 1.8em</option>
+            <option>14pt Bold 1.8em</option>
+            <option>18pt Light 2.3em</option>
+          </select>
+          <label for="languages">Languages:</label><br/>
+          <select id="languages">
+            <option value="ModEnglish" selected="selected">Modern English</option>
+            <option value="eModEnglish">Early Modern English</option>
+        	  <option value="OldEnglish">Old English</option>
+        	  <option value="MiddleEnglish">Middle English</option>
+        	  <option value="Latin">Latin</option>
+        	  <option value="Gothic">Gothic</option>
+        	  <option value="OldIcelandic">Old Icelandic</option>
+        	  <option value="OldSaxon">Old Saxon</option>
+        	  <option value="German">Early New High German</option>
+          </select>
+        </div>
+
 	<div class="slidecontainer" id="romsliders">
 	  <div class="sliderlabel">Size: <span id="romsizetext">1.5em</span></div>
 	  <div id="romsize" class="myslider"></div>
@@ -139,20 +166,6 @@
 	    <label for="romss15">Long Branch 2 Short Twig</label>
 	  </span>
 	</div>
-	<div class="selectbox overflow">
-	  <label for="rompresets">Examples</label><br/>
-	  <select id="rompresets">
-	    <option selected="selected">Any</option>
-	    <option>6pt Medium 0.6em</option>
-	    <option>8pt Medium 0.8em</option>
-	    <option>10pt Regular 1.2em</option>
-	    <option>Regular 1.5em</option>
-	    <option>Medium 1.5em</option>
-	    <option>14pt Regular 1.8em</option>
-	    <option>14pt Bold 1.8em</option>
-	    <option>18pt Light 2.3em</option>
-	  </select>
-	  </div>
       </div>
       <p contenteditable="true" id="romtextarea" class="samplebox">
       </p>
