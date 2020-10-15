@@ -149,9 +149,11 @@ spraka bilosid,   thuo hie spahan hugi\n\
 bari an is briostun.";
 
 $( function() {
+
     $("label").addClass("ui-widget");
     $(".sliderlabel").addClass("ui-widget");
     $( ".featurebutton").checkboxradio();
+
     $( "#romweight" ).slider({
         min: 200,
         max: 800,
@@ -159,212 +161,211 @@ $( function() {
     $( "#romopticalsize" ).slider({
         min: 6,
         max: 18,
-	step: 0.01,
+        step: 0.01,
         value: 10});
     $( "#romgrade" ).slider({
         min: 0,
         max: 1,
-	step: 0.01,
+        step: 0.01,
         value: 0});
     $( "#romsize" ).slider({
         min: 0.2,
         max: 5,
-	step: 0.05,
+        step: 0.05,
         value: 1.5});
     $( "#romspacing" ).slider({
         min: -0.2,
         max: 0.2,
-	step: 0.001,
+        step: 0.001,
         value: 0});
 
-
-    $(".slidecontainer").on("slide", ".myslider",
-		      function(event,info){
-			  // $("#errmsg").text(event.type + " " + $(this).attr("id"));
-			  var sliderid = $(this).attr("id");
-			  var valstring = info.value.toString();
-			  switch (sliderid) {
-			  case "romweight":
-			      $('html').css("--romwght", valstring);
-			      $('#romwghttext').text(valstring);
-			      break;
-			  case "romopticalsize":
-			      $('html').css('--romopsz', valstring);
-			      $('#romopsztext').text(valstring);
-			      break;
-			  case "romgrade":
-			      $('html').css('--romGRAD', valstring);
-			      $('#romGRADtext').text(valstring);
-			      break;
-			  case "romsize":
-			      $('html').css('--romsize', valstring + "em");
-			      $('#romsizetext').text(valstring + "em");
-			      break;
-			  case "romspacing":
-			      $('html').css('--romspacing', valstring + "em");
-			      $('#romspacingtext').text(valstring + "em");
-			      break;
-			  }
-		      });
+    $(".slidecontainer").on("slide", ".myslider", function(event,info) {
+      var sliderid = $(this).attr("id");
+      var valstring = info.value.toString();
+      switch (sliderid) {
+        case "romweight":
+          $('html').css("--romwght", valstring);
+          $('#romwghttext').text(valstring);
+          break;
+        case "romopticalsize":
+          $('html').css('--romopsz', valstring);
+          $('#romopsztext').text(valstring);
+          break;
+        case "romgrade":
+          $('html').css('--romGRAD', valstring);
+          $('#romGRADtext').text(valstring);
+          break;
+        case "romsize":
+          $('html').css('--romsize', valstring + "em");
+          $('#romsizetext').text(valstring + "em");
+          break;
+        case "romspacing":
+          $('html').css('--romspacing', valstring + "em");
+          $('#romspacingtext').text(valstring + "em");
+          break;
+        }
+      }
+    );
 
     $("#rompresets").selectmenu();
     $("#languages").selectmenu();
 
-    $("#romsliders").on("change", function(event, size, wght, opsz, GRAD, spacing){
-	$('html').css('--romsize', size.toString() + "em");
-	$('#romsizetext').text(size + "em");
-	$('html').css('--romspacing', spacing.toString() + "em");
-	$('#romspacingtext').text(spacing + "em");
-	$('html').css("--romwght", wght.toString());
-	$('#romwghttext').text(wght);
-	$('html').css('--romopsz', opsz.toString());
-	$('#romopsztext').text(opsz);
-	$('html').css('--romGRAD', GRAD.toString());
-	$('#romGRADtext').text(GRAD);
-    });
+    $("#romsliders").on("change", function(event, size, wght, opsz, GRAD, spacing) {
+        $('html').css('--romsize', size.toString() + "em");
+        $('#romsizetext').text(size + "em");
+        $('html').css('--romspacing', spacing.toString() + "em");
+        $('#romspacingtext').text(spacing + "em");
+        $('html').css("--romwght", wght.toString());
+        $('#romwghttext').text(wght);
+        $('html').css('--romopsz', opsz.toString());
+        $('#romopsztext').text(opsz);
+        $('html').css('--romGRAD', GRAD.toString());
+        $('#romGRADtext').text(GRAD);
+      }
+    );
 
-    $("#rompresets").selectmenu({
-	select: function(event, ui){
-	    switch (this.value) {
-	    case "Any":
-		break;
-	    case "6pt Medium 0.6em":
-		$("#romsize").slider("value", 0.6);
-		$("#romspacing").slider("value", 0);
-		$("#romgrade").slider("value", 0);
-		$("#romopticalsize").slider("value", 6);
-		$("#romweight").slider("value", 500);
-		$("#romsliders").trigger("change", [0.6, 500, 6, 0, 0]);
-		break;
-	    case "8pt Medium 0.8em":
-		$("#romsize").slider("value", 0.8);
-	        $("#romspacing").slider("value", 0);
-		$("#romgrade").slider("value", 0);
-		$("#romopticalsize").slider("value", 8);
-		$("#romweight").slider("value", 500);
-		$("#romsliders").trigger("change", [0.8, 500, 8, 0, 0]);
-		break;
-	    case "10pt Regular 1.2em":
-		$("#romsize").slider("value", 1.2);
-		$("#romspacing").slider("value", 0);
-		$("#romgrade").slider("value", 0);
-		$("#romopticalsize").slider("value", 10);
-		$("#romweight").slider("value", 400);
-		$("#romsliders").trigger("change", [1.2, 400, 10, 0, 0]);
-		break;
-	    case "Regular 1.5em":
-		$("#romsize").slider("value", 1.5);
-		$("#romspacing").slider("value", 0);
-		$("#romgrade").slider("value", 0);
-		$("#romopticalsize").slider("value", 12);
-		$("#romweight").slider("value", 400);
-		$("#romsliders").trigger("change", [1.5, 400, 12, 0, 0]);
-		break;
-	    case "Medium 1.5em":
-		$("#romsize").slider("value", 1.5);
-		$("#romspacing").slider("value", 0);
-		$("#romgrade").slider("value", 0);
-		$("#romopticalsize").slider("value", 12);
-		$("#romweight").slider("value", 500);
-		$("#romsliders").trigger("change", [1.5, 500, 12, 0, 0]);
-		break;
-	    case "14pt Regular 1.8em":
-		$("#romsize").slider("value", 1.8);
-		$("#romspacing").slider("value", 0);
-		$("#romgrade").slider("value", 0);
-		$("#romopticalsize").slider("value", 14);
-		$("#romweight").slider("value", 400);
-		$("#romsliders").trigger("change", [1.8, 400, 14, 0, 0]);
-		break;
-	    case "14pt Bold 1.8em":
-		$("#romsize").slider("value", 1.8);
-		$("#romspacing").slider("value", 0);
-		$("#romgrade").slider("value", 0);
-		$("#romopticalsize").slider("value", 14);
-		$("#romweight").slider("value", 700);
-		$("#romsliders").trigger("change", [1.8, 700, 14, 0, 0]);
-		break;
-	    case "18pt Light 2.3em":
-		$("#romsize").slider("value", 2.3);
-		$("#romspacing").slider("value", 0);
-		$("#romgrade").slider("value", 0);
-		$("#romopticalsize").slider("value", 18);
-		$("#romweight").slider("value", 300);
-		$("#romsliders").trigger("change", [2.3, 300, 18, 0, 0]);
-		break;
-	    }
-	}
-    });
+    $("#rompresets").selectmenu({	select: function(event, ui) {
+	      switch (this.value) {
+          case "Any":
+            break;
+          case "6pt Medium 0.6em":
+            $("#romsize").slider("value", 0.6);
+            $("#romspacing").slider("value", 0);
+            $("#romgrade").slider("value", 0);
+            $("#romopticalsize").slider("value", 6);
+            $("#romweight").slider("value", 500);
+            $("#romsliders").trigger("change", [0.6, 500, 6, 0, 0]);
+            break;
+          case "8pt Medium 0.8em":
+            $("#romsize").slider("value", 0.8);
+	          $("#romspacing").slider("value", 0);
+            $("#romgrade").slider("value", 0);
+            $("#romopticalsize").slider("value", 8);
+            $("#romweight").slider("value", 500);
+            $("#romsliders").trigger("change", [0.8, 500, 8, 0, 0]);
+            break;
+          case "10pt Regular 1.2em":
+            $("#romsize").slider("value", 1.2);
+            $("#romspacing").slider("value", 0);
+            $("#romgrade").slider("value", 0);
+            $("#romopticalsize").slider("value", 10);
+            $("#romweight").slider("value", 400);
+            $("#romsliders").trigger("change", [1.2, 400, 10, 0, 0]);
+            break;
+          case "Regular 1.5em":
+            $("#romsize").slider("value", 1.5);
+            $("#romspacing").slider("value", 0);
+      		  $("#romgrade").slider("value", 0);
+      		  $("#romopticalsize").slider("value", 12);
+      		  $("#romweight").slider("value", 400);
+      		  $("#romsliders").trigger("change", [1.5, 400, 12, 0, 0]);
+      		  break;
+	        case "Medium 1.5em":
+            $("#romsize").slider("value", 1.5);
+            $("#romspacing").slider("value", 0);
+        		$("#romgrade").slider("value", 0);
+        		$("#romopticalsize").slider("value", 12);
+        		$("#romweight").slider("value", 500);
+        		$("#romsliders").trigger("change", [1.5, 500, 12, 0, 0]);
+        		break;
+          case "14pt Regular 1.8em":
+            $("#romsize").slider("value", 1.8);
+            $("#romspacing").slider("value", 0);
+        		$("#romgrade").slider("value", 0);
+        		$("#romopticalsize").slider("value", 14);
+        		$("#romweight").slider("value", 400);
+        		$("#romsliders").trigger("change", [1.8, 400, 14, 0, 0]);
+        		break;
+          case "14pt Bold 1.8em":
+            $("#romsize").slider("value", 1.8);
+            $("#romspacing").slider("value", 0);
+        		$("#romgrade").slider("value", 0);
+        		$("#romopticalsize").slider("value", 14);
+        		$("#romweight").slider("value", 700);
+        		$("#romsliders").trigger("change", [1.8, 700, 14, 0, 0]);
+        		break;
+          case "18pt Light 2.3em":
+            $("#romsize").slider("value", 2.3);
+            $("#romspacing").slider("value", 0);
+        		$("#romgrade").slider("value", 0);
+        		$("#romopticalsize").slider("value", 18);
+        		$("#romweight").slider("value", 300);
+        		$("#romsliders").trigger("change", [2.3, 300, 18, 0, 0]);
+        		break;
+          }
+        }
+      }
+    );
 
     $("#romtextarea").text(modtext)
 
-    $("#languages").selectmenu({	select: function(event, ui){
-      var l = "en";
-  		var t = modtext;
-  		var whitespace = "normal";
-  		var currentfstring = fstring;
+    $("#languages").selectmenu({select: function(event, ui) {
+        var l = "en";
+  		  var t = modtext;
+  		  var whitespace = "normal";
+  		  var currentfstring = fstring;
 
-      alert(this.value)
+        alert(this.value)
 
-	    switch (this.value) {
-        case "ModEnglish":
-          t = modtext;
-          $( "input[type='checkbox']" ).prop("checked", false).first().change();
-          break;
-        case "eModEnglish":
-          t = earlymodtext;
-          $( "input[type='checkbox']" ).not("#ss08, #dlig").prop("checked", false);
-          $("#ss08, #dlig").prop("checked",true).change();
-          break;
-        case "OldEnglish":
-          // lang code is ang, but we use en to trigger English thorn and eth.
-          t = oldenglishtext;
-          $( "input[type='checkbox']" ).prop("checked", false).first().change();
-          break;
-        case "MiddleEnglish":
-          t = middleenglishtext;
-          // r rotunda with rules; always long s; crossed Tironian nota
-          $( "input[type='checkbox']" ).not("#hist, #ss16, #cv402").prop("checked", false);
-          $("#hist, #ss16, #cv402").prop("checked",true).change();
-          break;
-        case "Latin":
-          l = "la";
-          t = latintext;
-          $( "input[type='checkbox']" ).not("#hist").prop("checked", false);
-          $("#hist").prop("checked",true).change();
-          break;
-        case "Gothic":
-          // lang code for Gothic is got. Here it simply means "not English."
-          t = gothictext;
-          l = "got";
-          $( "input[type='checkbox']" ).prop("checked", false).first().change();
-          break;
-        case "OldIcelandic":
-          l = "is";
-          t = norsetext;
-          $( "input[type='checkbox']" ).prop("checked", false).first().change();
-          break;
-        case "OldSaxon":
-          // lang code is osx.
-          l = "osx";
-          t = oldsaxontext;
-          whitespace = "pre-wrap";
-          $( "input[type='checkbox']" ).prop("checked", false).first().change();
-          break;
-        case "German":
-          l = "de";
-          t = germantext;
-          // Long s is done manually for German. Use r rotunda with rules.
-          $( "input[type='checkbox']" ).not("#ss16").prop("checked", false);
-          $("#ss16").prop("checked",true).change();
+	      switch (this.value) {
+          case "ModEnglish":
+            t = modtext;
+            $( "input[type='checkbox']" ).prop("checked", false).first().change();
+            break;
+          case "eModEnglish":
+            t = earlymodtext;
+            $( "input[type='checkbox']" ).not("#ss08, #dlig").prop("checked", false);
+            $("#ss08, #dlig").prop("checked",true).change();
+            break;
+          case "OldEnglish":
+            // lang code is ang, but we use en to trigger English thorn and eth.
+            t = oldenglishtext;
+            $( "input[type='checkbox']" ).prop("checked", false).first().change();
+            break;
+          case "MiddleEnglish":
+            t = middleenglishtext;
+            // r rotunda with rules; always long s; crossed Tironian nota
+            $( "input[type='checkbox']" ).not("#hist, #ss16, #cv402").prop("checked", false);
+            $("#hist, #ss16, #cv402").prop("checked",true).change();
+            break;
+          case "Latin":
+            l = "la";
+            t = latintext;
+            $( "input[type='checkbox']" ).not("#hist").prop("checked", false);
+            $("#hist").prop("checked",true).change();
+            break;
+          case "Gothic":
+            // lang code for Gothic is got. Here it simply means "not English."
+            t = gothictext;
+            l = "got";
+            $( "input[type='checkbox']" ).prop("checked", false).first().change();
+            break;
+          case "OldIcelandic":
+            l = "is";
+            t = norsetext;
+            $( "input[type='checkbox']" ).prop("checked", false).first().change();
+            break;
+          case "OldSaxon":
+            // lang code is osx.
+            l = "osx";
+            t = oldsaxontext;
+            whitespace = "pre-wrap";
+            $( "input[type='checkbox']" ).prop("checked", false).first().change();
+            break;
+          case "German":
+            l = "de";
+            t = germantext;
+            // Long s is done manually for German. Use r rotunda with rules.
+            $( "input[type='checkbox']" ).not("#ss16").prop("checked", false);
+            $("#ss16").prop("checked",true).change();
+          }
 
+        $("#romtextarea").attr("lang",l)
+          .css({"white-space": whitespace})
+          .text(t);
+        }
       }
-
-      $("#romtextarea").attr("lang",l)
-        .css({"white-space": whitespace})
-        .text(t);
-
-    }});
+    );
 
 
 
