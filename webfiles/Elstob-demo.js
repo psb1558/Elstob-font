@@ -296,6 +296,8 @@ $( function() {
 	}
     });
 
+    $("#romtextarea").text(modtext)
+
     $("#languages").change(function() {
 
       var l = "en";
