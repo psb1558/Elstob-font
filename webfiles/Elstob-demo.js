@@ -358,7 +358,7 @@ $( function() {
           $("#ss16").prop("checked",true).change();
 
       }
-
+      alert("Here!")
       $("#romtextarea").attr("lang",l)
         .css({"white-space": whitespace})
         .text(t);
