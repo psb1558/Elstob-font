@@ -306,8 +306,6 @@ bari an is briostun.";
   		  var whitespace = "normal";
   		  var currentfstring = fstring;
 
-        alert(this.value)
-
 	      switch (this.value) {
           case "ModEnglish":
             t = modtext;
