@@ -301,7 +301,7 @@ $( function() {
 
     $("#languages").selectmenu({select: function(event, ui) {
         var l = "en";
-  		  var t = modtext;
+  		  var t = "";
   		  var whitespace = "normal";
   		  var currentfstring = fstring;
 
