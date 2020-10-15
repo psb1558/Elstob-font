@@ -1,4 +1,5 @@
 /*jshint multistr: true */
+
 var modtext = "The Elstob font, named for Elizabeth Elstob (1683–1756), a celebrated \
 early scholar of Old English language and literature, is based on the Double Pica \
 commissioned by Bishop John Fell (1625–1686) and cut by Peter de Walpergen, and used \
@@ -147,10 +148,6 @@ engil thes alouualdon:  uuart ald gumo\n\
 spraka bilosid,   thuo hie spahan hugi\n\
 bari an is briostun.";
 
-var fstring = "normal";
-
-$( "romtextarea" ).text(modtext);
-
 $( function() {
     $("label").addClass("ui-widget");
     $(".sliderlabel").addClass("ui-widget");
@@ -162,22 +159,22 @@ $( function() {
     $( "#romopticalsize" ).slider({
         min: 6,
         max: 18,
-        step: 0.01,
+	step: 0.01,
         value: 10});
     $( "#romgrade" ).slider({
         min: 0,
         max: 1,
-        step: 0.01,
+	step: 0.01,
         value: 0});
     $( "#romsize" ).slider({
         min: 0.2,
         max: 5,
-        step: 0.05,
+	step: 0.05,
         value: 1.5});
     $( "#romspacing" ).slider({
         min: -0.2,
         max: 0.2,
-        step: 0.001,
+	step: 0.001,
         value: 0});
 
 
@@ -301,101 +298,142 @@ $( function() {
 
     $("#languages").change(function() {
 
-  		var l = "en";
-  		var t = modtext;
-  		var whitespace = "normal";
-  		var currentfstring = fstring;
+      var l = "en";
+      var t = modtext;
+      var whitespace = "normal";
+      var currentfstring = fstring;
 
-  		switch ( $("#languages option:selected").attr("value") ) {
+      switch ( $("#languages option:selected").attr("value") ) {
         case "ModEnglish":
           t = modtext;
           $( "input[type='checkbox']" ).prop("checked", false).first().change();
           break;
-  			case "eModEnglish":
+        case "eModEnglish":
           t = earlymodtext;
-  				$( "input[type='checkbox']" ).not("#ss08, #dlig").prop("checked", false);
-  				$("#ss08, #dlig").prop("checked",true).change();
-  				break;
-  			case "OldEnglish":
-  				// lang code is ang, but we use en to trigger English thorn and eth.
-  				t = oldenglishtext;
-  				$( "input[type='checkbox']" ).prop("checked", false).first().change();
-  				break;
-  			case "MiddleEnglish":
-  				t = middleenglishtext;
-  				// r rotunda with rules; always long s; crossed Tironian nota
-  				$( "input[type='checkbox']" ).not("#hist, #ss16, #cv402").prop("checked", false);
-  				$("#hist, #ss16, #cv402").prop("checked",true).change();
-  				break;
-  			case "Latin":
-  				l = "la";
-  				t = latintext;
-  				$( "input[type='checkbox']" ).not("#hist").prop("checked", false);
-  				$("#hist").prop("checked",true).change();
-  				break;
-  			case "Gothic":
-  				// lang code for Gothic is got. Here it simply means "not English."
-  				t = gothictext;
-  				l = "got";
-  				$( "input[type='checkbox']" ).prop("checked", false).first().change();
-  				break;
-  			case "OldIcelandic":
-  				l = "is";
-  				t = norsetext;
-  				$( "input[type='checkbox']" ).prop("checked", false).first().change();
-  				break;
-  			case "OldSaxon":
-  				// lang code is osx.
-  				l = "osx";
-  				t = oldsaxontext;
-  				whitespace = "pre-wrap";
-  				$( "input[type='checkbox']" ).prop("checked", false).first().change();
-  				break;
-  			case "German":
-  				l = "de";
-  				t = germantext;
-  				// Long s is done manually for German. Use r rotunda with rules.
-  				$( "input[type='checkbox']" ).not("#ss16").prop("checked", false);
-  				$("#ss16").prop("checked",true).change();
+          $( "input[type='checkbox']" ).not("#ss08, #dlig").prop("checked", false);
+          $("#ss08, #dlig").prop("checked",true).change();
+          break;
+        case "OldEnglish":
+          // lang code is ang, but we use en to trigger English thorn and eth.
+          t = oldenglishtext;
+          $( "input[type='checkbox']" ).prop("checked", false).first().change();
+          break;
+        case "MiddleEnglish":
+          t = middleenglishtext;
+          // r rotunda with rules; always long s; crossed Tironian nota
+          $( "input[type='checkbox']" ).not("#hist, #ss16, #cv402").prop("checked", false);
+          $("#hist, #ss16, #cv402").prop("checked",true).change();
+          break;
+        case "Latin":
+          l = "la";
+          t = latintext;
+          $( "input[type='checkbox']" ).not("#hist").prop("checked", false);
+          $("#hist").prop("checked",true).change();
+          break;
+        case "Gothic":
+          // lang code for Gothic is got. Here it simply means "not English."
+          t = gothictext;
+          l = "got";
+          $( "input[type='checkbox']" ).prop("checked", false).first().change();
+          break;
+        case "OldIcelandic":
+          l = "is";
+          t = norsetext;
+          $( "input[type='checkbox']" ).prop("checked", false).first().change();
+          break;
+        case "OldSaxon":
+          // lang code is osx.
+          l = "osx";
+          t = oldsaxontext;
+          whitespace = "pre-wrap";
+          $( "input[type='checkbox']" ).prop("checked", false).first().change();
+          break;
+        case "German":
+          l = "de";
+          t = germantext;
+          // Long s is done manually for German. Use r rotunda with rules.
+          $( "input[type='checkbox']" ).not("#ss16").prop("checked", false);
+          $("#ss16").prop("checked",true).change();
 
-  		}
+      }
 
-  		$("#romtextarea").attr("lang",l)
-  			.css({"white-space": whitespace})
-  			.text(t);
+      $("#romtextarea").attr("lang",l)
+        .css({"white-space": whitespace})
+        .text(t);
 
-  	});
+    });
+
 
 
     function featureString (s, tag, v) {
-      var ss = s;
-      if (ss.length > 0)
-        ss += ", ";
-      ss += '"' + tag + '" ' + v;
-      return ss;
+	var ss = s;
+	if (ss.length > 0)
+	    ss += ", ";
+	ss += '"' + tag + '" ' + v;
+	return ss;
     }
 
-    $(".featurebutton").change(function() {
-  		fstring = "";
-  		$("input").each(function() {
-  			var tag = $(this).attr("id");
-  			if ($( this ).is(":checked")) {
-  				if ( tag.length == 5 ) {
-  					var basetag = tag.substring(0,4);
-  					var tagindex = tag.substring(4);
-  					fstring = featureString(fstring, basetag, tagindex);
-  				}
-  				else {
-  					fstring = featureString(fstring, tag, "on");
-  				}
-  			}
-  		});
-  		if (fstring.length === 0)
-  			fstring = "normal";
-  		$("#romtextarea").css("font-feature-settings", fstring);
-  	});
+    $(".featurebutton").on("change", function() {
+	var fstring = "";
+	if ($("#romital").is(":checked")) {
+	    $("#romtextarea").css("font-style", "italic");
+	    $("#aespan").css("display", "inline");
+	}
+	else {
+	    $("#romtextarea").css("font-style", "normal");
+	    $("#aespan").css("display", "none");
+	}
+	// Explicit with calt and liga since they are on by default.
+	if ($("#romcalt").is(":checked"))
+	    fstring = featureString(fstring, "calt", "on");
+	else
+	    fstring = featureString(fstring, "calt", "off");
+	if ($("#romliga").is(":checked"))
+	    fstring = featureString(fstring, "liga", "on");
+	else
+	    fstring = featureString(fstring, "liga", "off");
+	if ($("#romdlig").is(":checked"))
+	    fstring = featureString(fstring, "dlig", "on");
+	if ($("#romsmcp").is(":checked"))
+	    fstring = featureString(fstring, "smcp", "on");
+	if ($("#romc2sc").is(":checked"))
+	    fstring = featureString(fstring, "c2sc", "on");
+	if ($("#rompnum").is(":checked"))
+	    fstring = featureString(fstring, "pnum", "on");
+	if ($("#romonum").is(":checked"))
+	    fstring = featureString(fstring, "onum", "on");
+	if ($("#romzero").is(":checked"))
+	    fstring = featureString(fstring, "zero", "on");
+	if ($("#romss02").is(":checked"))
+	    fstring = featureString(fstring, "ss02", "on");
+	if ($("#romss01").is(":checked"))
+	    fstring = featureString(fstring, "ss01", "on");
+	if ($("#romss05").is(":checked"))
+	    fstring = featureString(fstring, "ss05", "on");
+	if ($("#romhist").is(":checked"))
+	    fstring = featureString(fstring, "hist", "on");
+	if ($("#romcv33").is(":checked"))
+	    fstring = featureString(fstring, "cv33", "on");
+	if ($("#romss12").is(":checked"))
+	    fstring = featureString(fstring, "ss12", "on");
+	if ($("#romss13").is(":checked"))
+	    fstring = featureString(fstring, "ss13", "on");
+	if ($("#romss14").is(":checked"))
+	    fstring = featureString(fstring, "ss14", "on");
+	if ($("#romss15").is(":checked"))
+	    fstring = featureString(fstring, "ss15", "on");
+	if ($("#romss11").is(":checked"))
+	    fstring = featureString(fstring, "ss11", "on");
+	if ($("#romss08").is(":checked"))
+	    fstring = featureString(fstring, "ss08", "on");
+	if ($("#romss16").is(":checked"))
+	    fstring = featureString(fstring, "ss16", "on");
+
+	// $("#errmsg").text(fstring);
+	$("#romtextarea").css("font-feature-settings", fstring);
+    });
 
     $(".featurebutton").prop("checked", false);
-    $("#calt,#liga").prop("checked", true);
+    $("#romcalt,#romliga").prop("checked", true);
     $(".featurebutton").change();
 } );

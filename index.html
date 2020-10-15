@@ -6,7 +6,7 @@
     <title>Elstob variable font specimen page</title>
     <link rel="stylesheet" href="./webfiles/jquery-ui.css"/>
     <script src="./webfiles/jquery.js"></script>
-    <!-- <script src="./webfiles/jquery-ui.js"></script> -->
+    <script src="./webfiles/jquery-ui.js"></script>
     <link rel="stylesheet" href="./webfiles/Elstob-demo.css"/>
   </head>
   <body>
@@ -46,15 +46,15 @@
           <label for="rompresets">Font Instances:</label>
           <br/>
           <select id="rompresets">
-            <option selected="selected">Any</option>
-            <option>6pt Medium 0.6em</option>
-            <option>8pt Medium 0.8em</option>
-            <option>10pt Regular 1.2em</option>
-            <option>Regular 1.5em</option>
-            <option>Medium 1.5em</option>
-            <option>14pt Regular 1.8em</option>
-            <option>14pt Bold 1.8em</option>
-            <option>18pt Light 2.3em</option>
+            <option>Any</option>
+            <option value="medium6">6pt Medium 0.6em</option>
+            <option value="medium8">8pt Medium 0.8em</option>
+            <option value="regular10">10pt Regular 1.2em</option>
+            <option value="regular" selected="selected">Regular 1.5em</option>
+            <option value="medium">Medium 1.5em</option>
+            <option value="regular14">14pt Regular 1.8em</option>
+            <option value="bold14">14pt Bold 1.8em</option>
+            <option value="light18">18pt Light 2.3em</option>
           </select>
           <br/>
           <label for="languages">Languages:</label>
@@ -72,16 +72,21 @@
           </select>
         </div>
         <div class="slidecontainer" id="romsliders">
-          <div class="sliderlabel">Size: <span id="romsizetext">1.5em</span></div>
-          <div id="romsize" class="myslider"></div>
-          <div class="sliderlabel">Spacing: <span id="romspacingtext">0em</span></div>
-          <div id="romspacing" class="myslider"></div>
-          <div class="sliderlabel">Weight: <span id="romwghttext">400</span></div>
-          <div id="romweight" class="myslider"></div>
-          <div class="sliderlabel">Optical Size: <span id="romopsztext">10</span></div>
-          <div id="romopticalsize" class="myslider"></div>
-          <div class="sliderlabel">Grade: <span id="romGRADtext">0</span></div>
-          <div id="romgrade" class="myslider"></div>
+          <div class="sliderlabel">Size: <span id="sizetext">1.5em</span></div>
+          <input type="range" min="0.2" max="5" value="1.5" step="0.05"
+            class="slider" id="sizerange">
+          <div class="sliderlabel">Spacing: <span id="spacingtext">0em</span></div>
+          <input type="range" min="-0.2" max="0.2" value="0" step="0.001"
+            class="slider" id="spacingrange">
+          <div class="sliderlabel">Weight: <span id="wghttext">400</span></div>
+          <input type="range" min="200" max="800" value="400"
+            class="slider" id="wghtrange">
+          <div class="sliderlabel">Optical Size: <span id="opsztext">10</span></div>
+          <input type="range" min="6" max="18" value="10" step="0.01"
+            class="slider" id="opszrange">
+          <div class="sliderlabel">Grade: <span id="GRADtext">0</span></div>
+          <input type="range" min="0" max="1" value="0" step="0.01"
+            class="slider" id="GRADrange">
         </div>
         <div class="featurebox" id="rfb">
           <span class="bbx">
