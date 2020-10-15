@@ -314,49 +314,49 @@ bari an is briostun.";
             break;
           case "eModEnglish":
             t = earlymodtext;
-            $( ".featurebutton" ).not("#ss08, #dlig").prop("checked", false);
-            $("#ss08, #dlig").prop("checked",true).change();
+            $( ".featurebutton" ).not("#romss08, #romdlig").prop("checked", false);
+            $("#romss08, #romdlig").prop("checked",true).change();
             break;
           case "OldEnglish":
             // lang code is ang, but we use en to trigger English thorn and eth.
             t = oldenglishtext;
-            $( "input[type='checkbox']" ).prop("checked", false).first().change();
+            $( ".featurebutton" ).prop("checked", false).first().change();
             break;
           case "MiddleEnglish":
             t = middleenglishtext;
             // r rotunda with rules; always long s; crossed Tironian nota
-            $( "input[type='checkbox']" ).not("#hist, #ss16, #cv402").prop("checked", false);
+            $( ".featurebutton" ).not("#romhist, #romss16, #romcv402").prop("checked", false);
             $("#hist, #ss16, #cv402").prop("checked",true).change();
             break;
           case "Latin":
             l = "la";
             t = latintext;
-            $( "input[type='checkbox']" ).not("#hist").prop("checked", false);
+            $( ".featurebutton" ).not("rom#hist").prop("checked", false);
             $("#hist").prop("checked",true).change();
             break;
           case "Gothic":
             // lang code for Gothic is got. Here it simply means "not English."
             t = gothictext;
             l = "got";
-            $( "input[type='checkbox']" ).prop("checked", false).first().change();
+            $( ".featurebutton" ).prop("checked", false).first().change();
             break;
           case "OldIcelandic":
             l = "is";
             t = norsetext;
-            $( "input[type='checkbox']" ).prop("checked", false).first().change();
+            $( ".featurebutton" ).prop("checked", false).first().change();
             break;
           case "OldSaxon":
             // lang code is osx.
             l = "osx";
             t = oldsaxontext;
             whitespace = "pre-wrap";
-            $( "input[type='checkbox']" ).prop("checked", false).first().change();
+            $( ".featurebutton" ).prop("checked", false).first().change();
             break;
           case "German":
             l = "de";
             t = germantext;
             // Long s is done manually for German. Use r rotunda with rules.
-            $( "input[type='checkbox']" ).not("#ss16").prop("checked", false);
+            $( ".featurebutton" ).not("#romss16").prop("checked", false);
             $("#ss16").prop("checked",true).change();
           }
 
