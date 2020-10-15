@@ -305,6 +305,8 @@ $( function() {
       var whitespace = "normal";
       var currentfstring = fstring;
 
+      alert("Event triggered")
+
       switch ( $("#languages option:selected").attr("value") ) {
         case "ModEnglish":
           t = modtext;
@@ -358,7 +360,7 @@ $( function() {
           $("#ss16").prop("checked",true).change();
 
       }
-      alert("Here!")
+
       $("#romtextarea").attr("lang",l)
         .css({"white-space": whitespace})
         .text(t);
