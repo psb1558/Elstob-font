@@ -297,7 +297,8 @@ $( function() {
       }
     );
 
-    $("#romtextarea").text(modtext)
+    var fstring = "normal";
+    $("#romtextarea").text(modtext);
 
     $("#languages").selectmenu({select: function(event, ui) {
         var l = "en";
