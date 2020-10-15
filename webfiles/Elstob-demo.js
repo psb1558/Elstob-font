@@ -362,7 +362,7 @@ $( function() {
         .css({"white-space": whitespace})
         .text(t);
 
-    });
+    }});
 
 
 
