@@ -298,16 +298,13 @@ $( function() {
 
     $("#romtextarea").text(modtext)
 
-    $("#languages").change(function() {
-
+    $("#languages").selectmenu({	select: function(event, ui){
       var l = "en";
-      var t = modtext;
-      var whitespace = "normal";
-      var currentfstring = fstring;
+  		var t = modtext;
+  		var whitespace = "normal";
+  		var currentfstring = fstring;
 
-      alert("Event triggered")
-
-      switch ( $("#languages option:selected").attr("value") ) {
+	    switch (this.value) {
         case "ModEnglish":
           t = modtext;
           $( "input[type='checkbox']" ).prop("checked", false).first().change();
