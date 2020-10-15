@@ -299,7 +299,7 @@ bari an is briostun.";
 
     var fstring = "normal";
     $("#romtextarea").text(modtext);
-/*
+
     $("#languages").selectmenu({select: function(event, ui) {
         var l = "en";
   		  var t = "";
@@ -311,11 +311,12 @@ bari an is briostun.";
 	      switch (this.value) {
           case "ModEnglish":
             t = modtext;
-            $( "input[type='checkbox']" ).prop("checked", false).first().change();
+            // $( "input[type='checkbox']" ).prop("checked", false).first().change();
+            $( ".featurebutton" ).prop("checked", false).first().change();
             break;
           case "eModEnglish":
             t = earlymodtext;
-            $( "input[type='checkbox']" ).not("#ss08, #dlig").prop("checked", false);
+            $( ".featurebutton" ).not("#ss08, #dlig").prop("checked", false);
             $("#ss08, #dlig").prop("checked",true).change();
             break;
           case "OldEnglish":
@@ -367,7 +368,6 @@ bari an is briostun.";
         }
       }
     );
-*/
 
 
     function featureString (s, tag, v) {
@@ -413,8 +413,8 @@ bari an is briostun.";
 	    fstring = featureString(fstring, "ss02", "on");
 	if ($("#romss01").is(":checked"))
 	    fstring = featureString(fstring, "ss01", "on");
-	if ($("#romss05").is(":checked"))
-	    fstring = featureString(fstring, "ss05", "on");
+	// if ($("#romss05").is(":checked"))
+	//    fstring = featureString(fstring, "ss05", "on");
 	if ($("#romhist").is(":checked"))
 	    fstring = featureString(fstring, "hist", "on");
 	if ($("#romcv33").is(":checked"))
