@@ -1,3 +1,5 @@
+$(document).ready(function(){
+
 /*jshint multistr: true */
 
 var modtext = "The Elstob font, named for Elizabeth Elstob (1683–1756), a celebrated \
@@ -148,8 +150,6 @@ engil thes alouualdon:  uuart ald gumo\n\
 spraka bilosid,   thuo hie spahan hugi\n\
 bari an is briostun.";
 
-$( function() {
-
     $("label").addClass("ui-widget");
     $(".sliderlabel").addClass("ui-widget");
     $( ".featurebutton").checkboxradio();
@@ -299,7 +299,7 @@ $( function() {
 
     var fstring = "normal";
     $("#romtextarea").text(modtext);
-
+/*
     $("#languages").selectmenu({select: function(event, ui) {
         var l = "en";
   		  var t = "";
@@ -367,7 +367,7 @@ $( function() {
         }
       }
     );
-
+*/
 
 
     function featureString (s, tag, v) {
