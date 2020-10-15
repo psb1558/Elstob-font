@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Elstob variable font specimen page</title>
-    <link rel="stylesheet" href="./webfiles/jquery-ui.css"/>
-    <script src="./webfiles/jquery.js"></script>
-    <script src="./webfiles/jquery-ui.js"></script>
-    <link rel="stylesheet" href="./webfiles/Elstob-demo.css"/>
-  </head>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Elstob variable font specimen page</title>
+		<link rel="stylesheet" href="./webfiles/jquery-ui.css"/>
+		<script src="./webfiles/jquery.js"></script>
+		<script src="./webfiles/jquery-ui.js"></script>
+		<link rel="stylesheet" href="./webfiles/Elstob-demo.css"/>
+	</head>
   <body>
     <div id="topbox">
       <h1><span class="bigtitle">Elstob</span> a variable font for
@@ -16,243 +16,218 @@
     </div>
     <div id="headerbox" class="paragroup">
       <p>
-				The Elstob font aims to include all Unicode characters commonly
-				used by medievalists. It is a variable font—that is, one that can
-				do the work of a number of conventional fonts by varying different
-				aspects of the characters’ shapes. Variable fonts are especially
-				appropriate for use on the web, since a single file can do the
-				work of multiple conventional fonts, with significant speed gains.
-				All the major browsers now support variable fonts: if this page
-				doesn’t work for you, consider updating your browser.
+	The Elstob font aims to include all Unicode characters commonly
+	used by medievalists. It is a variable font—that is, one that can
+	do the work of a number of conventional fonts by varying different
+	aspects of the characters’ shapes. Variable fonts are especially
+	appropriate for use on the web, since a single file can do the
+	work of multiple conventional fonts, with significant speed gains. All the
+	major browsers now support variable fonts: if this page doesn’t
+	work for you, consider updating your browser.
       </p>
       <p>
-				To get a sense of what Elstob can
-				do, play with the sliders and checkboxes below, and (if you don’t
-				know much about variable fonts) check out the
-				notes on the font’s axes at the bottom of this page. The
-				sample paragraph to the right of the control panel is editable: type or
-				paste in a bit of your
-				favorite text to see what it looks like in Elstob.
+	To get a sense of what Elstob can
+	do, play with the sliders and checkboxes below, and (if you don’t
+	know much about variable fonts) check out the
+	notes on the font’s axes at the bottom of this page. The
+	sample paragraph to the right of the control panel is editable: type or paste in a bit of your
+	favorite text to see what it looks like in Elstob.
       </p>
       <p>
-				For a list of all characters and all features, see the document
-				“Features and Charset.pdf”
-				<a href="https://github.com/psb1558/Elstob-font">in the repository</a>.
+	For a list of all characters and all features, see the document
+	      “Features and Charset.pdf” <a href="https://github.com/psb1558/Elstob-font">in the repository</a>.
       </p>
+
     </div>
     <div class="row">
       <div class="controlbox">
-        <div class="selectbox overflow">
-          <label for="rompresets">Font Instances:</label>
-          <br/>
-          <select id="rompresets">
-            <option>Any</option>
-            <option value="medium6">6pt Medium 0.6em</option>
-            <option value="medium8">8pt Medium 0.8em</option>
-            <option value="regular10">10pt Regular 1.2em</option>
-            <option value="regular" selected="selected">Regular 1.5em</option>
-            <option value="medium">Medium 1.5em</option>
-            <option value="regular14">14pt Regular 1.8em</option>
-            <option value="bold14">14pt Bold 1.8em</option>
-            <option value="light18">18pt Light 2.3em</option>
-          </select>
-          <br/>
-          <label for="languages">Languages:</label>
-          <br/>
-          <select id="languages">
-            <option value="ModEnglish" selected="selected">Modern English</option>
-            <option value="eModEnglish">Early Modern English</option>
-            <option value="OldEnglish">Old English</option>
-            <option value="MiddleEnglish">Middle English</option>
-            <option value="Latin">Latin</option>
-            <option value="Gothic">Gothic</option>
-            <option value="OldIcelandic">Old Icelandic</option>
-            <option value="OldSaxon">Old Saxon</option>
-            <option value="German">Early New High German</option>
-          </select>
-        </div>
-        <div class="slidecontainer" id="romsliders">
-          <div class="sliderlabel">Size: <span id="sizetext">1.5em</span></div>
-          <input type="range" min="0.2" max="5" value="1.5" step="0.05"
-            class="slider" id="sizerange">
-          <div class="sliderlabel">Spacing: <span id="spacingtext">0em</span></div>
-          <input type="range" min="-0.2" max="0.2" value="0" step="0.001"
-            class="slider" id="spacingrange">
-          <div class="sliderlabel">Weight: <span id="wghttext">400</span></div>
-          <input type="range" min="200" max="800" value="400"
-            class="slider" id="wghtrange">
-          <div class="sliderlabel">Optical Size: <span id="opsztext">10</span></div>
-          <input type="range" min="6" max="18" value="10" step="0.01"
-            class="slider" id="opszrange">
-          <div class="sliderlabel">Grade: <span id="GRADtext">0</span></div>
-          <input type="range" min="0" max="1" value="0" step="0.01"
-            class="slider" id="GRADrange">
-        </div>
-        <div class="featurebox" id="rfb">
-          <span class="bbx">
-            <input type="checkbox" class="featurebutton" id="ital"/>
-            <label for="ital">Italic</label>
-          </span>
-          <span class="bbx">
-            <input type="checkbox" class="featurebutton" id="calt" checked="checked"/>
-            <label for="calt">Contextual alternates</label>
-          </span>
-          <span class="bbx">
-            <input type="checkbox" class="featurebutton" id="liga" checked="checked"/>
-            <label for="liga">Standard ligatures</label>
-          </span>
-          <span class="bbx">
-            <input type="checkbox" class="featurebutton" id="dlig"/>
-            <label for="dlig">Discretionary ligatures</label>
-          </span>
-          <span class="bbx">
-            <input type="checkbox" class="featurebutton" id="smcp"/>
-            <label for="smcp">Small caps</label>
-          </span>
-          <span class="bbx">
-            <input type="checkbox" class="featurebutton" id="c2sc"/>
-            <label for="c2sc">Caps 2 small caps</label>
-          </span>
-          <span class="bbx">
-            <input type="checkbox" class="featurebutton" id="pnum"/>
-            <label for="pnum">Proportional figures</label>
-          </span>
-          <span class="bbx">
-            <input type="checkbox" class="featurebutton" id="onum"/>
-            <label for="onum">Old-style figures</label>
-          </span>
-          <span class="bbx">
-            <input type="checkbox" class="featurebutton" id="zero"/>
-            <label for="zero">Slashed zero</label>
-          </span>
-          <span class="bbx">
-            <input type="checkbox" class="featurebutton" id="ss02"/>
-            <label for="ss02">Insular letter-shapes</label>
-          </span>
-          <span class="bbx">
-            <input type="checkbox" class="featurebutton" id="ss01"/>
-            <label for="ss01">Alternate &#xFE; and &#xF0;</label>
-          </span>
-          <!--	  <span class="bbx">
-	    <input type="checkbox"  class="featurebutton" id="ss05"/>
-	    <label for="ss05">English þ and ð</label>
+	<div class="slidecontainer" id="romsliders">
+	  <div class="sliderlabel">Size: <span id="romsizetext">1.5em</span></div>
+	  <div id="romsize" class="myslider"></div>
+	  <div class="sliderlabel">Spacing: <span id="romspacingtext">0em</span></div>
+	  <div id="romspacing" class="myslider"></div>
+	  <div class="sliderlabel">Weight: <span id="romwghttext">500</span></div>
+	  <div id="romweight" class="myslider"></div>
+	  <div class="sliderlabel">Optical Size: <span id="romopsztext">10</span></div>
+	  <div id="romopticalsize" class="myslider"></div>
+	  <div class="sliderlabel">Grade: <span id="romGRADtext">0</span></div>
+	  <div id="romgrade" class="myslider"></div>
+	</div>
+	<div class="featurebox" id="rfb">
+	  <span class="bbx">
+	    <input type="checkbox" class="featurebutton" id="romital"/>
+	    <label for="romital">Italic</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox" class="featurebutton" id="romcalt" checked="checked"/>
+	    <label for="romcalt">Contextual alternates</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox" class="featurebutton" id="romliga" checked="checked"/>
+	    <label for="romliga">Standard ligatures</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox" class="featurebutton" id="romdlig"/>
+	    <label for="romdlig">Discretionary ligatures</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox" class="featurebutton" id="romsmcp"/>
+	    <label for="romsmcp">Small caps</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox" class="featurebutton" id="romc2sc"/>
+	    <label for="romc2sc">Caps 2 small caps</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox"  class="featurebutton" id="rompnum"/>
+	    <label for="rompnum">Proportional figures</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox"  class="featurebutton" id="romonum"/>
+	    <label for="romonum">Old-style figures</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox"  class="featurebutton" id="romzero"/>
+	    <label for="romzero">Slashed zero</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox"  class="featurebutton" id="romss02"/>
+	    <label for="romss02">Insular letter-shapes</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox"  class="featurebutton" id="romss01"/>
+	    <label for="romss01">Alternate þ and ð</label>
+	  </span>
+<!--	  <span class="bbx">
+	    <input type="checkbox"  class="featurebutton" id="romss05"/>
+	    <label for="romss05">English þ and ð</label>
 	  </span> -->
-          <span class="bbx">
-            <input type="checkbox" class="featurebutton" id="hist"/>
-            <label for="hist">Long s</label>
-          </span>
-          <span class="bbx">
-            <input type="checkbox" class="featurebutton" id="ss08"/>
-            <label for="ss08">Contextual long s</label>
-          </span>
-          <span class="bbx" id="aespan">
-            <input type="checkbox" class="featurebutton" id="cv33"/>
-            <label for="cv33">Alternate &#xE6;</label>
-          </span>
-          <span class="bbx">
-            <input type="checkbox" class="featurebutton" id="ss11"/>
-            <label for="ss11">r rotunda</label>
-          </span>
-          <span class="bbx">
-            <input type="checkbox" class="featurebutton" id="ss16"/>
-            <label for="ss16">Contextual r rotunda</label>
-          </span>
-          <span class="bbx">
-            <input type="checkbox" class="featurebutton" id="cv401"/>
-            <label for="cv401">Alternate Tironian sign 1</label>
-          </span>
-          <span class="bbx">
-            <input type="checkbox" class="featurebutton" id="cv402"/>
-            <label for="cv402"> Alternate Tironian sign 2</label>
-          </span>
-          <span class="bbx">
-            <input type="checkbox" class="featurebutton" id="ss12"/>
-            <label for="ss12">Early English futhorc</label>
-          </span>
-          <span class="bbx">
-            <input type="checkbox" class="featurebutton" id="ss13"/>
-            <label for="ss13">Elder futhark</label>
-          </span>
-          <span class="bbx">
-            <input type="checkbox" class="featurebutton" id="ss14"/>
-            <label for="ss14">Younger futhark</label>
-          </span>
-          <span class="bbx">
-            <input type="checkbox" class="featurebutton" id="ss15"/>
-            <label for="ss15">Long Branch 2 Short Twig</label>
-          </span>
-        </div>
+	  <span class="bbx">
+	    <input type="checkbox"  class="featurebutton" id="romhist"/>
+	    <label for="romhist">Long s</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox"  class="featurebutton" id="romss08"/>
+	    <label for="romss08">Variable long s</label>
+	  </span>
+	  <span class="bbx" id="aespan">
+	    <input type="checkbox" class="featurebutton" id="romcv33"/>
+	    <label for="romcv33">Alternate æ</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox" class="featurebutton" id="romss11"/>
+	    <label for="romss11">r rotunda</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox" class="featurebutton" id="romss16"/>
+	    <label for="romss16">Variable r rotunda</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox"  class="featurebutton" id="romss12"/>
+	    <label for="romss12">Early English futhorc</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox"  class="featurebutton" id="romss13"/>
+	    <label for="romss13">Elder futhark</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox"  class="featurebutton" id="romss14"/>
+	    <label for="romss14">Younger futhark</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox"  class="featurebutton" id="romss15"/>
+	    <label for="romss15">Long Branch 2 Short Twig</label>
+	  </span>
+	</div>
+	<div class="selectbox overflow">
+	  <label for="rompresets">Examples</label><br/>
+	  <select id="rompresets">
+	    <option selected="selected">Any</option>
+	    <option>6pt Medium 0.6em</option>
+	    <option>8pt Medium 0.8em</option>
+	    <option>10pt Regular 1.2em</option>
+	    <option>Regular 1.5em</option>
+	    <option>Medium 1.5em</option>
+	    <option>14pt Regular 1.8em</option>
+	    <option>14pt Bold 1.8em</option>
+	    <option>18pt Light 2.3em</option>
+	  </select>
+	  </div>
       </div>
       <p contenteditable="true" id="romtextarea" class="samplebox">
-      The Elstob font, named for
-      Elizabeth Elstob (1683–1756), a celebrated early scholar of
+	The Elstob font, named for
+	Elizabeth Elstob (1683–1756), a celebrated early scholar of
         Old English language and literature, is based on the Double Pica
-        commissioned by Bishop John
-        Fell (1625–1686) and cut by Peter de Walpergen, and used for
-        many years by the Oxford University
-        Press. Wherever possible, it is modeled on a specimen book
-        printed in 1925 with type cast in the 1890s from the
-        seventeenth-century matrices; digital images from the 1693 and
-        1706 Fell specimen books served as backup, and also an early
-        eighteenth-century folio in which a lengthy dedication was
-        in the modern sense; rather, each of the different sizes (Pica, French,
-        Canon, Great Primer, and so on) is at least subtly different from the
-        others in design, and the “English” face is entirely different.
-        For the closest approximation to the original type, set the sliders to
-        Weight 500, Optical Size 18, and Grade 0.
+	commissioned by Bishop John
+	Fell (1625–1686) and cut by Peter de Walpergen, and used for
+	many years by the Oxford University
+	Press. Wherever possible, it is modeled on a specimen book
+	printed in 1925 with type cast in the 1890s from the
+	seventeenth-century matrices; digital images from the 1693 and
+	1706 Fell specimen books served as backup, and also an early
+	eighteenth-century folio in which a lengthy dedication was
+	printed in Fell’s Double Pica. The Fell types are not a font family
+	in the modern sense; rather, each of the different sizes (Pica, French,
+	Canon, Great Primer, and so on) is at least subtly different from the
+	others in design, and the “English” face is entirely different.
+	For the closest
+	approximation to the original type, set the sliders to Weight
+	500, Optical Size 18, and Grade 0. Some basic medieval characters:
+	þigeð þær þǣr ȝer ȝernes ful ȝern. Þonne Ðider Æfter Ȝol.
       </p>
     </div>
+<!--    <div id="errmsg">nothing</div> -->
     <div id="underbox" class="paragroup">
       <h2>Notes on the Variable Axes</h2>
       <p>
-        An <em>axis</em> is an aspect of a font that can be varied
-        along a numerical range. A web designer can either choose some
-        combination of axes for static text or vary the axes
-        dynamically (for example, changing the weight of a stretch of
-        type in response to some kind of user action). Each of
-        Elstob’s two faces has three axes:<b>Weight</b>, <b>Optical
-        Size</b>, and <b>Grade</b>.
+	An <em>axis</em> is an aspect of a font that can be varied
+	along a numerical range. A web designer can either choose some
+	combination of axes for static text or vary the axes
+	dynamically (for example, changing the weight of a stretch of
+	type in response to some kind of user action). Each of
+	Elstob’s two faces has three axes:<b>Weight</b>, <b>Optical
+	Size</b>, and <b>Grade</b>.
       </p>
       <p>
-        <b>Weight</b> varies the heaviness of the font along a
-        numerical axis from 200 to 800, where 200 is
-        <span class="extralight">“Extra Light”</span> and 800 is
-        <span class="extrabold">“Extra Bold.”</span> There are several
-        standard weights between these extremes:
-        <span class="light">“Light”</span> 300, “Regular” 400,
-        <span class="medium">“Medium”</span> 500,
-        <span class="semibold">“Semibold”</span> 600,
-        <span class="bold">“Bold”</span> 700. However, there are 601
-        possible values for Weight.
+	<b>Weight</b> varies the heaviness of the font along a
+	numerical axis from 200 to 800, where 200 is <span
+	class="extralight">“Extra Light”</span> and 800 is <span
+	class="extrabold">“Extra Bold.”</span> There are several
+	standard weights between these extremes:
+	<span class="light">“Light”</span> 300, “Regular” 400, <span
+	class="medium">“Medium”</span> 500, <span
+	class="semibold">“Semibold”</span> 600, <span
+	class="bold">“Bold”</span> 700. However, there are 601
+	possible values for Weight.
       </p>
       <p>
-        <b>Optical Size</b> optimizes the type for display at different
-        sizes by varying the x-height, the contrast, and the width of thin
-        strokes. The numbers on the Optical Size axis (6–18) correspond roughly to
-        recommended point sizes: <span class="fineprint">“6pt”</span>
-        (for fine print); <span class="footnote">“8pt”</span> (footnotes and
-        indexes), <span class="blockquote">“10pt”</span> (block quotes and
-        appendices), <b>“Regular”</b> (main text),
-        <span class="subhead">“14pt”</span> (subheads),
-        <span class="display">“18pt”</span> (Display text, 18 points or larger).
+	<b>Optical Size</b> optimizes the type for display at different
+	sizes by varying the x-height, the contrast, and the width of thin
+	strokes. The numbers on the Optical Size axis (6–18) correspond roughly to
+	recommended point sizes: <span
+	class="fineprint">“6pt”</span> (for fine print);
+	<span class="footnote">“8pt”</span> (footnotes and indexes), <span
+	class="blockquote">“10pt”</span> (block quotes and appendices),
+	<b>“Regular”</b> (main text), <span
+	class="subhead">“14pt”</span> (subheads), <span
+	class="display">“18pt”</span> (Display text, 18 points or larger).
 	      However, there’s nothing to prevent your using any Optical
-        Size you like at any actual point size, if you like the look of it.
+	Size you like at any actual point size, if you like the look of it.
       </p>
       <p>
-        <b>Grade</b> is like Weight in that it varies the heaviness of
-        the letters; but it does so without changing their width. Use
-        Grade when you want to change the weight of a stretch of text
-        dynamically <span class="hoverable">(for example, on
-        mouseover)</span> without annoying your readers by forcing the
-        text to reflow. You can also combine Grade with Weight to make
-        <span class="heavy">weights beyond Extra Bold</span>, but if you
-        take it to extremes, you may
-        lose the counters in some letters and the space between. It is
-        suggested that you set Grade to no more than 0.4 when Weight
-        is 800.
-        The range of allowable numbers on this axis is 0-1.
+	<b>Grade</b> is like Weight in that it varies the heaviness of
+	the letters; but it does so without changing their width. Use
+	Grade when you want to change the weight of a stretch of text
+	dynamically <span class="hoverable">(for example, on
+	mouseover)</span> without annoying your readers by forcing the
+	text to reflow. You can also combine Grade with Weight to make
+	<span class="heavy">weights beyond Extra Bold</span>, but if you take it to extremes, you may
+	lose the counters in some letters and the space between. It is
+	suggested that you set Grade to no more than 0.4 when Weight
+	is 800.
+	The range of allowable numbers on this axis is 0-1.
       </p>
     </div>
-    <script src="./webfiles/Elstob-demo.js"></script>
+    <script src="./webfiles/Elstob-demo.js" type="text/javascript"></script>
   </body>
 </html>

@@ -99,7 +99,7 @@ b{
     font-feature-settings: 'hist' on;
 }
 .hoverable:hover {
-    font-variation-settings: 'opsz' 10, 'wght' 400, 'GRAD' 1;
+    font-variation-settings: 'opsz' 10, 'wght' 450, 'GRAD' 1;
 }
 /* #headerbox {
     width: 95%;
@@ -134,13 +134,7 @@ b{
     padding: 20px;
 }
 .bbx {
-  line-height: 2.5em;
   white-space: nowrap;
-  background-color: lightgray;
-  padding: 5px 8px 5px 5px;
-  margin: 5px;
-  font-family: Elstob;
-  font-variation-settings: 'opsz' 10, 'wght' 400, 'GRAD' 0;
 }
 .featurebox, .selectbox {
     padding: 20px 0 0 0;
