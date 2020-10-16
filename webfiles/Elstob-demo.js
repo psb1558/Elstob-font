@@ -56,18 +56,6 @@ fraujins biskain ins, jah ohtedun agisa mikilamma. jah qaþ du im sa aggilus: ni
 unte sai, spillo izwis faheid mikila, sei wairþiþ allai managein, þatei gabaurans ist izwis \
 himma daga nasjands, saei ist Xristus frauja, in baurg Daweidis.";
 
-/* var norsetext = "Þá mælti Hárr: Þá er þeir gengu með sævarstrǫndu Borssynir, fundu þeir \
-tré tvau ok tóku upp trén ok skǫpuðu af menn. Gaf inn fyrsti ǫnd ok líf, annarr vit ok \
-hræring, þriði ásjónu, mál ok heyrn ok sjón, gáfu þeim klæði ok nǫfn. Hét karlmaðrinn Askr, \
-en konan Embla, ok ólst þaðan af mannkindin, sú er byggðin var gefinn undir Miðgarði. Þar \
-næst gerðu þeir sér borg í miðjum heimi, er kǫlluð er Ásgarðr. Þat kǫllum vér Trója. Þar byggðu \
-goðin ok ættir þeira, ok gerðust þaðan af mǫrg tíðendi ok greinir bæði á jǫrðu ok í lofti. Þar \
-er einn staðr, er Hliðskjálf heitir, ok þá er Óðinn settist þar í hásæti, þá sá hann of alla \
-heima ok hvers manns athæfi ok vissi alla hluti, þá er hann sá. Kona hans hét Frigg Fjǫrgvinsdóttir, \
-ok af þeira ætt er sú kynslóð komin, er vér kǫllum ása ættir, er byggt hafa Ásgarð inn forna ok þau \
-ríki, er þar liggja til, ok er þat allt goðkunnug ætt. Ok fyrir því má hann heita Alfǫðr, at hann er \
-faðir allra goðanna ok manna ok alls þess, er af honum ok hans krafti var fullgert."; */
-
 var norsetext = "Ulꝼr het mͬ ⁊ vͬ bialꝼa son ⁊ hallb͛v ꝺott᷑ vlꝼs híns v arɡa. hͦ vͬ sẏstir \
 halbiarnͬ halꝼtravllz oꝛ hraꝼnistv. ꝼaðir ketils hǽnɡs. vlꝼr vͬ svo mikill \
 ⁊ sterkr at æͥ vͦ h̵s ȷaꝼninɡíar i þ̵n tīa i lꝺ̵inu en er h̵ vͬ aꝼ vnɡa allꝺͥ \
@@ -116,20 +104,25 @@ extendıt dexterā suā & deuorauıt eos  t̄ra· \
 
 var oldenglishtext = "Her on ðisum geare forðferde \
 Ælfgiue Ymma Eadwardes cynges modor ⁊ Hardacnutes cynges. ⁊ on \
-þam sylfan geare gerædde se cyng ⁊ his witan þæt mann sceolde \
+þam sylfan geare gerædde se cyng ⁊ his witan ꝥ mann sceolde \
 forðian ut to Sandwic scipu. ⁊ setton Raulf eorl ⁊ Oddan eorl to \
-heafodmannum þærto. Ða gewende Godwine eorl ut fram Brycge mid \
-his scypum to Yseran. and let ut ane dæge ær midsumeres \
-mæsseæfene þæt he com to Næsse. þe is besuðan Rumenea. Þa com \
-hit to witenne þam eorlum ut to Sandwic. ⁊ hi þa gewendon ut \
+heafodmannū þærto. Ða gewende Godwine eorl út frā brycge mid \
+his scypum to yseran. and let ut ane dæge ær midsumeres \
+mæsseæfene ꝥ he cō to næsse. þe is besuðan Rumenea. Þa cō \
+hit to witenne þā eorlū ut to Sandwic. ⁊ hi þa gewendon ut \
 æfter þam oðrum scipum. ⁊ bead man landfyrde ut ongean þa \
 scipu. Þa amang þison þa wearð Godwine eorl gewarnod. ⁊ gewende \
-him þa into Pefenesea. ⁊ wearð þæt wæder swiðe strang. þæt þa \
+him þa into pefenesea. ⁊ wearð ꝥ wæder swiðe strang. ꝥ þa \
 eorlas ne mihton gewitan hwet Godwine eorl gefaren hæfde. ⁊ \
-gewende þa Godwine eorl ut agean þæt he com eft to Brycge. ⁊ ða \
-oðra scipu gewenden heom eft ongean to Sandwic. ⁊ gerædde man þa \
-þæt þa scipu gewendan eft ongean to Lundene. ⁊ sceolde man \
-setton oðre eorlas ⁊ oðre hasæton to þam scipum.";
+gewende þa godwine eorl ut agean ꝥ he cō eft to brycge. ⁊ ða \
+oðra scipu gewenden heom eft ongean to sandwic. ⁊ gerædde man þa \
+ꝥ þa scipu gewendan eft ongean to lundene. ⁊ sceolde man \
+setton oðre eorlas ⁊ oðre hasæton to þā scipū. þa lenged hit \
+man swa lange. ꝥ seo scipfyrd eall belaf. ⁊ gewendon ealle heō \
+ham. Ða geaxode Godwine eorl þet ⁊ teah þa úp his segl ⁊ his \
+li. ⁊ gewendon heom þa west to wiht. ⁊ eodon þær úp. ⁊ hergodon \
+swa lange þær ꝥ ꝥ folc geald heom swa mycel. swa hi heō on legden. \
+⁊ gewendon heō þa westwearð oð þet hi comon to portlande.";
 
 var middleenglishtext = "Nan ancre bi mi read ne schal makien \
 ꝓfessiun. ꝥ is bihaten ase heast⹎ but þreo þinges. ꝥ beoð obedience. \
