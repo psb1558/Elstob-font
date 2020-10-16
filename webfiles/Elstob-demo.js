@@ -68,20 +68,20 @@ ok af þeira ætt er sú kynslóð komin, er vér kǫllum ása ættir, er byggt 
 ríki, er þar liggja til, ok er þat allt goðkunnug ætt. Ok fyrir því má hann heita Alfǫðr, at hann er \
 faðir allra goðanna ok manna ok alls þess, er af honum ok hans krafti var fullgert."; */
 
-var norsetext = "Ulꝼr het mͬ ⁊ vͬ bıalꝼa ſon ⁊ hallb͛v ꝺott᷑ vlꝼſ hínſ v arɡa. hͦ vͬ ſẏſtır \
-halbıarnͬ halꝼtravllz oꝛ hraꝼnıſtv. ꝼaðır ketılſ hǽnɡſ. vlꝼr vͬ ſvo mıkıll \
-⁊ ſterkr at æͥ vͦ h̵ſ ȷaꝼnınɡíar ı þ̵n tı̄a ı lꝺ̄ınu en er h̵ vͬ aꝼ vnɡa allꝺͥ \
-la h̵ ı vıkınɡu ⁊ h͛ naðı. M; h̵m vͬ ſa mͬ ı vıkínɡv ⁊ ꝼelaɡ ſkap e͛ karı hͭ \
-⁊ uͬ kallaðꝛ berzlv karı. h̵ vͬ ɡoꝼuɡ men̄ı ⁊ hın̄ meſtı aꝼrekſ mͬ. þ̵r vlꝼr \
-⁊ karı attu eın̄ ſeoꝺ ⁊ uͬ þ̵ra vınatta mıkıl. En er þ̵r reðuz oꝛ hernaꝺı. þa ꝼoꝛ karı tͥ \
-buſſ ſınſ ı herðzlu. h̵ vͬ ſtorauðıɡꝛ mͬ ⁊ attı þrıu boꝛn. Eẏvınꝺꝛ lambı het ſ. h̵ſ an̄aʀ \
-het aulꝼv͛ hnuꝼa. sabıoꝛɡ hͭ ꝺ. h̵ſ. hͦ vͬ ꝼͥð. h̵ar ꝼekk vlꝼr ⁊ ꝼoꝛ m; h̵a heı̄ tͥ buſſ ſınſ \
-vlꝼr vͬ mͬ auðıɡꝛ bæꝺı at lꝺ̵m ⁊ lauſa ꝼé. h̵ tok lenꝺz mᷦ rett ſem h̵ſ lanɡꝼeꝺɡͬ. ɡ͛ꝺız h̵ \
-rıkr ⁊ burıſnu mͬ mıkıll. vͬ þ̵ ſıꝺꝛ at rıſa upp ꜳrꝺeɡíſſ ⁊ ɡɡ̄a ū ſẏſlur \
-at ſea v͛km̵. eðꝛ þ̵ɡat ſem ſmıꝺır vͦ Sa h̵ ẏꝼ͛ tun ⁊ akra. en vͬ atalı vͥ vıtᷓ m̄ þa er raða \
-h̵ſ þẏrꝼtu. kun̄ı h̵ tͥ ꝼlez ɡoꝺ raꝺ at leɡɡͣ. En hv͛n ꝺaɡ e͛ at kuellꝺı kō þa ɡ͛ꝺı \
-h̵ sͣ ſtẏɡɡꝛ at ꝼaır m̵ mattu orðū vͥ h̵ ſkıpta h̵ vͬ akaꝼlıɡa kuellꝺſuæꝼr ⁊ mẏrɡín \
-vakr. þ̵ vͬ mꜳl mͣ at h̵ v͛ı hamram̵r. þͥ vͬ h̵ kvellꝺulꝼr kallaðꝛ þau ulꝼr attu tua .ſſ."
+var norsetext = "Ulꝼr het mͬ ⁊ vͬ bialꝼa ſon ⁊ hallb͛v ꝺott᷑ vlꝼſ hínſ v arɡa. hͦ vͬ ſẏſtir \
+halbiarnͬ halꝼtravllz oꝛ hraꝼniſtv. ꝼaðir ketilſ hǽnɡſ. vlꝼr vͬ ſvo mikill \
+⁊ ſterkr at æͥ vͦ h̵ſ ȷaꝼninɡíar i þ̵n tīa i lꝺ̵inu en er h̵ vͬ aꝼ vnɡa allꝺͥ \
+la h̵ i vikinɡu ⁊ h͛ naði. M; h̵m vͬ ſa mͬ i vikínɡv ⁊ ꝼelaɡ ſkap e͛ kari hͭ \
+⁊ uͬ kallaðꝛ berzlv kari. h̵ vͬ ɡoꝼuɡ men̄i ⁊ hin̄ meſti aꝼrekſ mͬ. þ̵r vlꝼr \
+⁊ kari attu ein̄ ſeoꝺ ⁊ uͬ þ̵ra vinatta mikil. En er þ̵r reðuz oꝛ hernaꝺi. þa ꝼoꝛ kari tͥ \
+buſſ ſinſ i herðzlu. h̵ vͬ ſtorauðiɡꝛ mͬ ⁊ atti þriu boꝛn. Eẏvinꝺꝛ lambi het ſ. h̵ſ an̄aʀ \
+het aulꝼv͛ hnuꝼa. sabioꝛɡ hͭ ꝺ. h̵ſ. hͦ vͬ ꝼͥð. h̵ar ꝼekk vlꝼr ⁊ ꝼoꝛ m; h̵a heī tͥ buſſ ſinſ \
+vlꝼr vͬ mͬ auðiɡꝛ bæꝺi at lꝺ̵m ⁊ lauſa ꝼé. h̵ tok lenꝺz mᷦ rett ſem h̵ſ lanɡꝼeꝺɡͬ. ɡ͛ꝺiz h̵ \
+rikr ⁊ buriſnu mͬ mikill. vͬ þ̵ ſiꝺꝛ at riſa upp ꜳrꝺeɡíſſ ⁊ ɡɡ̄a ū ſẏſlur \
+at ſea v͛km̄. eðꝛ þ̵ɡat ſem ſmiꝺir vͦ Sa h̵ ẏꝼ͛ tun ⁊ akra. en vͬ atali vͥ vitᷓ m̄ þa er raða \
+h̵ſ þẏrꝼtu. kun̄i h̵ tͥ ꝼlez ɡoꝺ raꝺ at leɡɡͣ. En hv͛n ꝺaɡ e͛ at kuellꝺi kō þa ɡ͛ꝺi \
+h̵ sͣ ſtẏɡɡꝛ at ꝼair m̄ mattu orðū vͥ h̵ ſkipta h̵ vͬ akaꝼliɡa kuellꝺſuæꝼr ⁊ mẏrɡín \
+vakr. þ̵ vͬ mꜳl mͣ at h̵ v͛i hamram̄r. þͥ vͬ h̵ kvellꝺulꝼr kallaðꝛ þau ulꝼr attu tua .ſſ."
 
 var latintext = "Humanas laudes et mortalium \
 ınsulas uıdımus aut ére ıncıso \
@@ -434,7 +434,8 @@ bari an is briostun.";
           case "OldIcelandic":
             l = "is";
             t = norsetext;
-            $( ".featurebutton" ).not("#romital").prop("checked", false).change();
+            $( ".featurebutton" ).not("#romital, #romcv131, #romcv402").prop("checked", false).change();
+            $("#romhist, #romcv131, #romcv402").prop("checked",true).change();
             break;
           case "OldSaxon":
             // lang code is osx.
@@ -505,8 +506,6 @@ bari an is briostun.";
         fstring = featureString(fstring, "ss02", "on");
       if ($("#romss01").is(":checked"))
         fstring = featureString(fstring, "ss01", "on");
-	// if ($("#romss05").is(":checked"))
-	//    fstring = featureString(fstring, "ss05", "on");
       if ($("#romhist").is(":checked"))
 	      fstring = featureString(fstring, "hist", "on");
       if ($("#romcv33").is(":checked"))
@@ -515,6 +514,8 @@ bari an is briostun.";
   	    fstring = featureString(fstring, "cv40", "1");
       if ($("#romcv402").is(":checked"))
     	  fstring = featureString(fstring, "cv40", "2");
+      if ($("#romcv131").is(":checked"))
+      	fstring = featureString(fstring, "cv13", "1");
       if ($("#romss12").is(":checked"))
 	      fstring = featureString(fstring, "ss12", "on");
       if ($("#romss13").is(":checked"))
