@@ -233,9 +233,10 @@ bari an is briostun.";
             $("#romopticalsize").slider("value", 12);
             $("#romweight").slider("value", 400);
             // Order: size, wght, opsz, grad, spacing
-            $("#romsliders").trigger("change", [1.2, 400, 12, 0, 0]);
+            $("#romsliders").trigger("change", [1.5, 400, 12, 0, 0]);
             break;
-          case "6pt (Fine Print)":
+          // case "6pt (Fine Print)":
+          case "Reg6pt":
             $("#romsize").slider("value", 0.6);
 	          $("#romspacing").slider("value", 0);
             $("#romgrade").slider("value", 0);
