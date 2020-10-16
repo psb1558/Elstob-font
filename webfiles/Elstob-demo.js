@@ -68,20 +68,20 @@ ok af þeira ætt er sú kynslóð komin, er vér kǫllum ása ættir, er byggt 
 ríki, er þar liggja til, ok er þat allt goðkunnug ætt. Ok fyrir því má hann heita Alfǫðr, at hann er \
 faðir allra goðanna ok manna ok alls þess, er af honum ok hans krafti var fullgert."; */
 
-var norsetext = "Ulꝼr het mͬ ⁊ vͬ bialꝼa son ⁊ hallb͛v ꝺott᷑ vlꝼs híns v arɡa. hͦ vͬ sẏstir \
+var norsetext = "Ulꝼr het mͬ ⁊ vͬ bialꝼa son ⁊ hallb͛v dott᷑ vlꝼs híns v arɡa. hͦ vͬ sẏstir \
 halbiarnͬ halꝼtravllz oꝛ hraꝼnistv. ꝼaðir ketils hǽnɡs. vlꝼr vͬ svo mikill \
-⁊ sterkr at æͥ vͦ h̵s ȷaꝼninɡíar i þ̵n tīa i lꝺ̵inu en er h̵ vͬ aꝼ vnɡa allꝺͥ \
+⁊ sterkr at æͥ vͦ h̵s ȷaꝼninɡíar i þ̵n tīa i ld̵inu en er h̵ vͬ aꝼ vnɡa alldͥ \
 la h̵ i vikinɡu ⁊ h͛ naði. M; h̵m vͬ sa mͬ i vikínɡv ⁊ ꝼelaɡ skap e͛ kari hͭ \
 ⁊ uͬ kallaðꝛ berzlv kari. h̵ vͬ ɡoꝼuɡ men̄i ⁊ hin̄ mesti aꝼreks mͬ. þ̵r vlꝼr \
-⁊ kari attu ein̄ seoꝺ ⁊ uͬ þ̵ra vinatta mikil. En er þ̵r reðuz oꝛ hernaꝺi. þa ꝼoꝛ kari tͥ \
-buss sins i herðzlu. h̵ vͬ storauðiɡꝛ mͬ ⁊ atti þriu boꝛn. Eẏvinꝺꝛ lambi het s. h̵s an̄aʀ \
-het aulꝼv͛ hnuꝼa. sabioꝛɡ hͭ ꝺ. h̵s. hͦ vͬ ꝼͥð. h̵ar ꝼekk vlꝼr ⁊ ꝼoꝛ m; h̵a heī tͥ buss sins \
-vlꝼr vͬ mͬ auðiɡꝛ bæꝺi at lꝺ̵m ⁊ lausa ꝼé. h̵ tok lenꝺz mᷦ rett sem h̵s lanɡꝼeꝺɡͬ. ɡ͛ꝺiz h̵ \
-rikr ⁊ burisnu mͬ mikill. vͬ þ̵ siꝺꝛ at risa upp ꜳrꝺeɡíss ⁊ ɡɡ̄a ū sẏslur \
-at sea v͛km̄. eðꝛ þ̵ɡat sem smiꝺir vͦ sa h̵ ẏꝼ͛ tun ⁊ akra. en vͬ atali vͥ vitᷓ m̄ þa er raða \
-h̵s þẏrꝼtu. kun̄i h̵ tͥ ꝼlez ɡoꝺ raꝺ at leɡɡͣ. En hv͛n ꝺaɡ e͛ at kuellꝺi kō þa ɡ͛ꝺi \
-h̵ sͣ stẏɡɡꝛ at ꝼair m̄ mattu orðū vͥ h̵ skipta h̵ vͬ akaꝼliɡa kuellꝺsuæꝼr ⁊ mẏrɡín \
-vakr. þ̵ vͬ mꜳl mͣ at h̵ v͛i hamram̄r. þͥ vͬ h̵ kvellꝺulꝼr kallaðꝛ þau ulꝼr attu tua .ss."
+⁊ kari attu ein̄ seod ⁊ uͬ þ̵ra vinatta mikil. En er þ̵r reðuz oꝛ hernadi. þa ꝼoꝛ kari tͥ \
+buss sins i herðzlu. h̵ vͬ storauðiɡꝛ mͬ ⁊ atti þriu boꝛn. Eẏvindꝛ lambi het s. h̵s an̄aʀ \
+het aulꝼv͛ hnuꝼa. sabioꝛɡ hͭ d. h̵s. hͦ vͬ ꝼͥð. h̵ar ꝼekk vlꝼr ⁊ ꝼoꝛ m; h̵a heī tͥ buss sins \
+vlꝼr vͬ mͬ auðiɡꝛ bædi at ld̵m ⁊ lausa ꝼé. h̵ tok lendz mᷦ rett sem h̵s lanɡꝼedɡͬ. ɡ͛diz h̵ \
+rikr ⁊ burisnu mͬ mikill. vͬ þ̵ sidꝛ at risa upp ꜳrdeɡíss ⁊ ɡɡ̄a ū sẏslur \
+at sea v͛km̄. eðꝛ þ̵ɡat sem smidir vͦ sa h̵ ẏꝼ͛ tun ⁊ akra. en vͬ atali vͥ vitᷓ m̄ þa er raða \
+h̵s þẏrꝼtu. kun̄i h̵ tͥ ꝼlez ɡod rad at leɡɡͣ. En hv͛n daɡ e͛ at kuelldi kō þa ɡ͛di \
+h̵ sͣ stẏɡɡꝛ at ꝼair m̄ mattu orðū vͥ h̵ skipta h̵ vͬ akaꝼliɡa kuelldsuæꝼr ⁊ mẏrɡín \
+vakr. þ̵ vͬ mꜳl mͣ at h̵ v͛i hamram̄r. þͥ vͬ h̵ kvelldulꝼr kallaðꝛ þau ulꝼr attu tua .ss."
 
 var latintext = "Humanas laudes et mortalium \
 ınsulas uıdımus aut ére ıncıso \
@@ -435,7 +435,7 @@ bari an is briostun.";
           case "OldIcelandic":
             l = "is";
             t = norsetext;
-            featurestringbase = '"cv52" 2';
+            featurestringbase = '"cv52" 2, "cv05" 1';
             $( ".featurebutton" ).not("#romital, #romcv131, #romcv402").prop("checked", false).change();
             $("#romhist, #romcv131, #romcv402").prop("checked",true).change();
             featurestringbase = "";
