@@ -386,7 +386,7 @@ bari an is briostun.";
           case "ModEnglish":
             t = modtext;
             // $( "input[type='checkbox']" ).prop("checked", false).first().change();
-            $( ".featurebutton" ).prop("checked", false).change();
+            $( ".featurebutton" ).not("#romital").prop("checked", false).change();
             break;
           case "eModEnglish":
             t = earlymodtext;
@@ -396,7 +396,7 @@ bari an is briostun.";
           case "OldEnglish":
             // lang code is ang, but we use en to trigger English thorn and eth.
             t = oldenglishtext;
-            $( ".featurebutton" ).prop("checked", false).change();
+            $( ".featurebutton" ).not("#romital").prop("checked", false).change();
             break;
           case "MiddleEnglish":
             t = middleenglishtext;
@@ -414,19 +414,19 @@ bari an is briostun.";
             // lang code for Gothic is got. Here it simply means "not English."
             t = gothictext;
             l = "got";
-            $( ".featurebutton" ).prop("checked", false).change();
+            $( ".featurebutton" ).not("#romital").prop("checked", false).change();
             break;
           case "OldIcelandic":
             l = "is";
             t = norsetext;
-            $( ".featurebutton" ).prop("checked", false).change();
+            $( ".featurebutton" ).not("#romital").prop("checked", false).change();
             break;
           case "OldSaxon":
             // lang code is osx.
             l = "osx";
             t = oldsaxontext;
             whitespace = "pre-wrap";
-            $( ".featurebutton" ).prop("checked", false).change();
+            $( ".featurebutton" ).not("#romital").prop("checked", false).change();
             break;
           case "German":
             l = "de";
