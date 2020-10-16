@@ -314,7 +314,7 @@ bari an is briostun.";
             break;
           case "eModEnglish":
             t = earlymodtext;
-            $( ".featurebutton" ).not("#romss08, #romdlig").prop("checked", false);
+            $( ".featurebutton" ).not("#romss08, #romdlig").prop("checked", false).change();
             $("#romss08, #romdlig").prop("checked",true).change();
             break;
           case "OldEnglish":
@@ -325,38 +325,38 @@ bari an is briostun.";
           case "MiddleEnglish":
             t = middleenglishtext;
             // r rotunda with rules; always long s; crossed Tironian nota
-            $( ".featurebutton" ).not("#romhist, #romss16, #romcv402").prop("checked", false);
+            $( ".featurebutton" ).not("#romhist, #romss16, #romcv402").prop("checked", false).change();
             $("#hist, #ss16, #cv402").prop("checked",true).change();
             break;
           case "Latin":
             l = "la";
             t = latintext;
-            $( ".featurebutton" ).not("rom#hist").prop("checked", false);
+            $( ".featurebutton" ).not("rom#hist").prop("checked", false).change();
             $("#hist").prop("checked",true).change();
             break;
           case "Gothic":
             // lang code for Gothic is got. Here it simply means "not English."
             t = gothictext;
             l = "got";
-            $( ".featurebutton" ).prop("checked", false).first().change();
+            $( ".featurebutton" ).prop("checked", false).change();
             break;
           case "OldIcelandic":
             l = "is";
             t = norsetext;
-            $( ".featurebutton" ).prop("checked", false).first().change();
+            $( ".featurebutton" ).prop("checked", false).change();
             break;
           case "OldSaxon":
             // lang code is osx.
             l = "osx";
             t = oldsaxontext;
             whitespace = "pre-wrap";
-            $( ".featurebutton" ).prop("checked", false).first().change();
+            $( ".featurebutton" ).prop("checked", false).change();
             break;
           case "German":
             l = "de";
             t = germantext;
             // Long s is done manually for German. Use r rotunda with rules.
-            $( ".featurebutton" ).not("#romss16").prop("checked", false);
+            $( ".featurebutton" ).not("#romss16").prop("checked", false).change();
             $("#ss16").prop("checked",true).change();
           }
 
