@@ -228,47 +228,40 @@ bari an is briostun.";
 	      switch (this.value) {
           case "Any":
             break;
-          case "6pt Medium 0.6em":
-            $("#romsize").slider("value", 0.6);
+          case "Reg":
+            $("#romsize").slider("value", 1.5);
             $("#romspacing").slider("value", 0);
             $("#romgrade").slider("value", 0);
-            $("#romopticalsize").slider("value", 6);
-            $("#romweight").slider("value", 500);
-            $("#romsliders").trigger("change", [0.6, 500, 6, 0, 0]);
+            $("#romopticalsize").slider("value", 12);
+            $("#romweight").slider("value", 400);
+            // Order: size, wght, opsz, grad, spacing
+            $("#romsliders").trigger("change", [1.2, 400, 12, 0, 0]);
             break;
-          case "8pt Medium 0.8em":
-            $("#romsize").slider("value", 0.8);
+          case "Reg6pt":
+            $("#romsize").slider("value", 0.6);
 	          $("#romspacing").slider("value", 0);
             $("#romgrade").slider("value", 0);
-            $("#romopticalsize").slider("value", 8);
-            $("#romweight").slider("value", 500);
-            $("#romsliders").trigger("change", [0.8, 500, 8, 0, 0]);
+            $("#romopticalsize").slider("value", 6);
+            $("#romweight").slider("value", 400);
+            $("#romsliders").trigger("change", [0.6, 400, 6, 0, 0]);
             break;
-          case "10pt Regular 1.2em":
-            $("#romsize").slider("value", 1.2);
+          case "Reg8pt":
+            $("#romsize").slider("value", 0.9);
             $("#romspacing").slider("value", 0);
             $("#romgrade").slider("value", 0);
-            $("#romopticalsize").slider("value", 10);
+            $("#romopticalsize").slider("value", 8);
             $("#romweight").slider("value", 400);
-            $("#romsliders").trigger("change", [1.2, 400, 10, 0, 0]);
+            $("#romsliders").trigger("change", [0.8, 400, 8, 0, 0]);
             break;
-          case "Regular 1.5em":
-            $("#romsize").slider("value", 1.5);
+          case "Reg10pt":
+            $("#romsize").slider("value", 1.2);
             $("#romspacing").slider("value", 0);
       		  $("#romgrade").slider("value", 0);
-      		  $("#romopticalsize").slider("value", 12);
+      		  $("#romopticalsize").slider("value", 10);
       		  $("#romweight").slider("value", 400);
-      		  $("#romsliders").trigger("change", [1.5, 400, 12, 0, 0]);
+      		  $("#romsliders").trigger("change", [1.0, 400, 10, 0, 0]);
       		  break;
-	        case "Medium 1.5em":
-            $("#romsize").slider("value", 1.5);
-            $("#romspacing").slider("value", 0);
-        		$("#romgrade").slider("value", 0);
-        		$("#romopticalsize").slider("value", 12);
-        		$("#romweight").slider("value", 500);
-        		$("#romsliders").trigger("change", [1.5, 500, 12, 0, 0]);
-        		break;
-          case "14pt Regular 1.8em":
+	        case "Reg14pt":
             $("#romsize").slider("value", 1.8);
             $("#romspacing").slider("value", 0);
         		$("#romgrade").slider("value", 0);
@@ -276,22 +269,102 @@ bari an is briostun.";
         		$("#romweight").slider("value", 400);
         		$("#romsliders").trigger("change", [1.8, 400, 14, 0, 0]);
         		break;
-          case "14pt Bold 1.8em":
-            $("#romsize").slider("value", 1.8);
-            $("#romspacing").slider("value", 0);
-        		$("#romgrade").slider("value", 0);
-        		$("#romopticalsize").slider("value", 14);
-        		$("#romweight").slider("value", 700);
-        		$("#romsliders").trigger("change", [1.8, 700, 14, 0, 0]);
-        		break;
-          case "18pt Light 2.3em":
+          case "Reg18pt":
             $("#romsize").slider("value", 2.3);
             $("#romspacing").slider("value", 0);
         		$("#romgrade").slider("value", 0);
         		$("#romopticalsize").slider("value", 18);
-        		$("#romweight").slider("value", 300);
-        		$("#romsliders").trigger("change", [2.3, 300, 18, 0, 0]);
+        		$("#romweight").slider("value", 400);
+        		$("#romsliders").trigger("change", [2.3, 400, 18, 0, 0]);
         		break;
+          case "ExtraLight":
+            $("#romsize").slider("value", 1.5);
+            $("#romspacing").slider("value", 0);
+        		$("#romgrade").slider("value", 0);
+        		$("#romopticalsize").slider("value", 12);
+        		$("#romweight").slider("value", 200);
+        		$("#romsliders").trigger("change", [1.5, 400, 12, 0, 0]);
+        		break;
+          case "Light":
+            $("#romsize").slider("value", 1.5);
+            $("#romspacing").slider("value", 0);
+        		$("#romgrade").slider("value", 0);
+        		$("#romopticalsize").slider("value", 12);
+        		$("#romweight").slider("value", 300);
+        		$("#romsliders").trigger("change", [1.5, 300, 12, 0, 0]);
+        		break;
+          case "Medium":
+            $("#romsize").slider("value", 1.5);
+            $("#romspacing").slider("value", 0);
+          	$("#romgrade").slider("value", 0);
+          	$("#romopticalsize").slider("value", 12);
+          	$("#romweight").slider("value", 500);
+          	$("#romsliders").trigger("change", [1.5, 500, 12, 0, 0]);
+          	break;
+          case "SemiBold":
+            $("#romsize").slider("value", 1.5);
+            $("#romspacing").slider("value", 0);
+            $("#romgrade").slider("value", 0);
+            $("#romopticalsize").slider("value", 12);
+            $("#romweight").slider("value", 600);
+            $("#romsliders").trigger("change", [1.5, 600, 12, 0, 0]);
+            break;
+          case "Bold":
+            $("#romsize").slider("value", 1.5);
+            $("#romspacing").slider("value", 0);
+            $("#romgrade").slider("value", 0);
+            $("#romopticalsize").slider("value", 12);
+            $("#romweight").slider("value", 700);
+            $("#romsliders").trigger("change", [1.5, 700, 12, 0, 0]);
+            break;
+          case "Bold6pt":
+            $("#romsize").slider("value", 0.6);
+            $("#romspacing").slider("value", 0);
+            $("#romgrade").slider("value", 0);
+            $("#romopticalsize").slider("value", 6);
+            $("#romweight").slider("value", 700);
+            $("#romsliders").trigger("change", [0.6, 700, 6, 0, 0]);
+            break;
+          case "Bold8pt":
+            $("#romsize").slider("value", 0.9);
+            $("#romspacing").slider("value", 0);
+            $("#romgrade").slider("value", 0);
+            $("#romopticalsize").slider("value", 8);
+            $("#romweight").slider("value", 700);
+            $("#romsliders").trigger("change", [0.9, 700, 8, 0, 0]);
+            break;
+          case "Bold10pt":
+            $("#romsize").slider("value", 1.2);
+            $("#romspacing").slider("value", 0);
+            $("#romgrade").slider("value", 0);
+            $("#romopticalsize").slider("value", 10);
+            $("#romweight").slider("value", 700);
+            $("#romsliders").trigger("change", [1.2, 700, 10, 0, 0]);
+            break;
+          case "Bold14pt":
+            $("#romsize").slider("value", 1.8);
+            $("#romspacing").slider("value", 0);
+            $("#romgrade").slider("value", 0);
+            $("#romopticalsize").slider("value", 14);
+            $("#romweight").slider("value", 700);
+            $("#romsliders").trigger("change", [1.8, 700, 14, 0, 0]);
+            break;
+          case "Bold18pt":
+            $("#romsize").slider("value", 2.3);
+            $("#romspacing").slider("value", 0);
+            $("#romgrade").slider("value", 0);
+            $("#romopticalsize").slider("value", 18);
+            $("#romweight").slider("value", 700);
+            $("#romsliders").trigger("change", [2.3, 700, 18, 0, 0]);
+            break;
+          case "ExtraBold":
+            $("#romsize").slider("value", 1.5);
+            $("#romspacing").slider("value", 0);
+            $("#romgrade").slider("value", 0);
+            $("#romopticalsize").slider("value", 12);
+            $("#romweight").slider("value", 800);
+            $("#romsliders").trigger("change", [1.5, 800, 12, 0, 0]);
+            break;
           }
         }
       }
