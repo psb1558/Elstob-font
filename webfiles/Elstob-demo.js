@@ -282,7 +282,7 @@ bari an is briostun.";
         		$("#romgrade").slider("value", 0);
         		$("#romopticalsize").slider("value", 12);
         		$("#romweight").slider("value", 200);
-        		$("#romsliders").trigger("change", [1.5, 400, 12, 0, 0]);
+        		$("#romsliders").trigger("change", [1.5, 200, 12, 0, 0]);
         		break;
           case "Light":
             $("#romsize").slider("value", 1.5);
