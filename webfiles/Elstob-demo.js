@@ -68,20 +68,20 @@ ok af þeira ætt er sú kynslóð komin, er vér kǫllum ása ættir, er byggt 
 ríki, er þar liggja til, ok er þat allt goðkunnug ætt. Ok fyrir því má hann heita Alfǫðr, at hann er \
 faðir allra goðanna ok manna ok alls þess, er af honum ok hans krafti var fullgert."; */
 
-var norsetext = "Ulꝼr het mͬ ⁊ vͬ bialꝼa ſon ⁊ hallb͛v ꝺott᷑ vlꝼſ hínſ v arɡa. hͦ vͬ ſẏſtir \
-halbiarnͬ halꝼtravllz oꝛ hraꝼniſtv. ꝼaðir ketilſ hǽnɡſ. vlꝼr vͬ ſvo mikill \
-⁊ ſterkr at æͥ vͦ h̵ſ ȷaꝼninɡíar i þ̵n tīa i lꝺ̵inu en er h̵ vͬ aꝼ vnɡa allꝺͥ \
-la h̵ i vikinɡu ⁊ h͛ naði. M; h̵m vͬ ſa mͬ i vikínɡv ⁊ ꝼelaɡ ſkap e͛ kari hͭ \
-⁊ uͬ kallaðꝛ berzlv kari. h̵ vͬ ɡoꝼuɡ men̄i ⁊ hin̄ meſti aꝼrekſ mͬ. þ̵r vlꝼr \
-⁊ kari attu ein̄ ſeoꝺ ⁊ uͬ þ̵ra vinatta mikil. En er þ̵r reðuz oꝛ hernaꝺi. þa ꝼoꝛ kari tͥ \
-buſſ ſinſ i herðzlu. h̵ vͬ ſtorauðiɡꝛ mͬ ⁊ atti þriu boꝛn. Eẏvinꝺꝛ lambi het ſ. h̵ſ an̄aʀ \
-het aulꝼv͛ hnuꝼa. sabioꝛɡ hͭ ꝺ. h̵ſ. hͦ vͬ ꝼͥð. h̵ar ꝼekk vlꝼr ⁊ ꝼoꝛ m; h̵a heī tͥ buſſ ſinſ \
-vlꝼr vͬ mͬ auðiɡꝛ bæꝺi at lꝺ̵m ⁊ lauſa ꝼé. h̵ tok lenꝺz mᷦ rett ſem h̵ſ lanɡꝼeꝺɡͬ. ɡ͛ꝺiz h̵ \
-rikr ⁊ buriſnu mͬ mikill. vͬ þ̵ ſiꝺꝛ at riſa upp ꜳrꝺeɡíſſ ⁊ ɡɡ̄a ū ſẏſlur \
-at ſea v͛km̄. eðꝛ þ̵ɡat ſem ſmiꝺir vͦ Sa h̵ ẏꝼ͛ tun ⁊ akra. en vͬ atali vͥ vitᷓ m̄ þa er raða \
-h̵ſ þẏrꝼtu. kun̄i h̵ tͥ ꝼlez ɡoꝺ raꝺ at leɡɡͣ. En hv͛n ꝺaɡ e͛ at kuellꝺi kō þa ɡ͛ꝺi \
-h̵ sͣ ſtẏɡɡꝛ at ꝼair m̄ mattu orðū vͥ h̵ ſkipta h̵ vͬ akaꝼliɡa kuellꝺſuæꝼr ⁊ mẏrɡín \
-vakr. þ̵ vͬ mꜳl mͣ at h̵ v͛i hamram̄r. þͥ vͬ h̵ kvellꝺulꝼr kallaðꝛ þau ulꝼr attu tua .ſſ."
+var norsetext = "Ulꝼr het mͬ ⁊ vͬ bialꝼa son ⁊ hallb͛v ꝺott᷑ vlꝼs híns v arɡa. hͦ vͬ sẏstir \
+halbiarnͬ halꝼtravllz oꝛ hraꝼnistv. ꝼaðir ketils hǽnɡs. vlꝼr vͬ svo mikill \
+⁊ sterkr at æͥ vͦ h̵s ȷaꝼninɡíar i þ̵n tīa i lꝺ̵inu en er h̵ vͬ aꝼ vnɡa allꝺͥ \
+la h̵ i vikinɡu ⁊ h͛ naði. M; h̵m vͬ sa mͬ i vikínɡv ⁊ ꝼelaɡ skap e͛ kari hͭ \
+⁊ uͬ kallaðꝛ berzlv kari. h̵ vͬ ɡoꝼuɡ men̄i ⁊ hin̄ mesti aꝼreks mͬ. þ̵r vlꝼr \
+⁊ kari attu ein̄ seoꝺ ⁊ uͬ þ̵ra vinatta mikil. En er þ̵r reðuz oꝛ hernaꝺi. þa ꝼoꝛ kari tͥ \
+buss sins i herðzlu. h̵ vͬ storauðiɡꝛ mͬ ⁊ atti þriu boꝛn. Eẏvinꝺꝛ lambi het s. h̵s an̄aʀ \
+het aulꝼv͛ hnuꝼa. sabioꝛɡ hͭ ꝺ. h̵s. hͦ vͬ ꝼͥð. h̵ar ꝼekk vlꝼr ⁊ ꝼoꝛ m; h̵a heī tͥ buss sins \
+vlꝼr vͬ mͬ auðiɡꝛ bæꝺi at lꝺ̵m ⁊ lausa ꝼé. h̵ tok lenꝺz mᷦ rett sem h̵s lanɡꝼeꝺɡͬ. ɡ͛ꝺiz h̵ \
+rikr ⁊ burisnu mͬ mikill. vͬ þ̵ siꝺꝛ at risa upp ꜳrꝺeɡíss ⁊ ɡɡ̄a ū sẏslur \
+at sea v͛km̄. eðꝛ þ̵ɡat sem smiꝺir vͦ sa h̵ ẏꝼ͛ tun ⁊ akra. en vͬ atali vͥ vitᷓ m̄ þa er raða \
+h̵s þẏrꝼtu. kun̄i h̵ tͥ ꝼlez ɡoꝺ raꝺ at leɡɡͣ. En hv͛n ꝺaɡ e͛ at kuellꝺi kō þa ɡ͛ꝺi \
+h̵ sͣ stẏɡɡꝛ at ꝼair m̄ mattu orðū vͥ h̵ skipta h̵ vͬ akaꝼliɡa kuellꝺsuæꝼr ⁊ mẏrɡín \
+vakr. þ̵ vͬ mꜳl mͣ at h̵ v͛i hamram̄r. þͥ vͬ h̵ kvellꝺulꝼr kallaðꝛ þau ulꝼr attu tua .ss."
 
 var latintext = "Humanas laudes et mortalium \
 ınsulas uıdımus aut ére ıncıso \
