@@ -472,7 +472,7 @@ bari an is briostun.";
     }
 
     $(".featurebutton").on("change", function() {
-      var fstring = "";
+      var fstring = featurestringbase;
       if ($("#romital").is(":checked")) {
         $("#romtextarea").css("font-style", "italic");
         $("#aespan").css("display", "inline");
