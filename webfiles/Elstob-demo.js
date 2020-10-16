@@ -373,6 +373,8 @@ bari an is briostun.";
     $("#romtextarea").text(modtext);
     $("#languages").val("ModEnglish");
     $("#languages").selectmenu("refresh");
+    $("#rompresets").val("Reg");
+    $("#rompresets").selectmenu("refresh");
 
     $("#languages").selectmenu({select: function(event, ui) {
         var l = "en";
