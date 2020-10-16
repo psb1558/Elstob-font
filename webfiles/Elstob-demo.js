@@ -39,7 +39,7 @@ phariſeern / welches iſt die heuchley. Es iſt aber nichts verborgens / das ni
 noch heimlichs / das man nitt wüſſen werde. Darumb was jr in der finſter nuß geſagt habēd / das \
 wirt man am liecht hoͤren: was jr habend geredt ins or in der kam̄er / das wirt man predigen vff den \
 taͤchern. Ich ſag üch aber / minen fründen / Foͤrchtēd üch nit vor denen die den lyb toͤdend / vnd \
-darnach nichts habennd das ſy mer thuͤgind. Ich wil üch aber zeigē vor welchem jr üch frchten \
+darnach nichts habennd das ſy mer thuͤgind. Ich wil üch aber zeigē vor welchem jr üch förchten \
 ſollend. Foͤrchtend üch vor dem / der / nach dem er toͤdet hat / ouch macht hat zewerffen inn die \
 hell: ja ich sag üch / vor dem ſelben foͤrchtēd üch.";
 
