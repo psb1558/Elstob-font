@@ -314,7 +314,7 @@ bari an is briostun.";
             break;
           case "eModEnglish":
             t = earlymodtext;
-            $( ".featurebutton" ).not("#romss08, #romdlig").prop("checked", false).change();
+            $( ".featurebutton" ).not("#romital, #romss08, #romdlig").prop("checked", false).change();
             $("#romss08, #romdlig").prop("checked",true).change();
             break;
           case "OldEnglish":
