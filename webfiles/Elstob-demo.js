@@ -299,6 +299,8 @@ bari an is briostun.";
 
     var fstring = "normal";
     $("#romtextarea").text(modtext);
+    $("#languages").val("Modern English");
+    $("#languages").selectmenu("refresh");
 
     $("#languages").selectmenu({select: function(event, ui) {
         var l = "en";
