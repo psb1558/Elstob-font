@@ -320,7 +320,7 @@ bari an is briostun.";
           case "OldEnglish":
             // lang code is ang, but we use en to trigger English thorn and eth.
             t = oldenglishtext;
-            $( ".featurebutton" ).prop("checked", false).first().change();
+            $( ".featurebutton" ).prop("checked", false).change();
             break;
           case "MiddleEnglish":
             t = middleenglishtext;
