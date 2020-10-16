@@ -326,13 +326,13 @@ bari an is briostun.";
             t = middleenglishtext;
             // r rotunda with rules; always long s; crossed Tironian nota
             $( ".featurebutton" ).not("#romhist, #romss16, #romcv402").prop("checked", false).change();
-            $("#hist, #ss16, #cv402").prop("checked",true).change();
+            $("#romhist, #romss16, #romcv402").prop("checked",true).change();
             break;
           case "Latin":
             l = "la";
             t = latintext;
             $( ".featurebutton" ).not("rom#hist").prop("checked", false).change();
-            $("#hist").prop("checked",true).change();
+            $("#romhist").prop("checked",true).change();
             break;
           case "Gothic":
             // lang code for Gothic is got. Here it simply means "not English."
@@ -357,7 +357,7 @@ bari an is briostun.";
             t = germantext;
             // Long s is done manually for German. Use r rotunda with rules.
             $( ".featurebutton" ).not("#romss16").prop("checked", false).change();
-            $("#ss16").prop("checked",true).change();
+            $("#romss16").prop("checked",true).change();
           }
 
         $("#romtextarea").attr("lang",l)
@@ -420,6 +420,10 @@ bari an is briostun.";
 	      fstring = featureString(fstring, "hist", "on");
       if ($("#romcv33").is(":checked"))
 	      fstring = featureString(fstring, "cv33", "on");
+      if ($("#romcv401").is(":checked"))
+  	    fstring = featureString(fstring, "cv40", "1");
+      if ($("#romcv402").is(":checked"))
+    	  fstring = featureString(fstring, "cv40", "2");
       if ($("#romss12").is(":checked"))
 	      fstring = featureString(fstring, "ss12", "on");
       if ($("#romss13").is(":checked"))
