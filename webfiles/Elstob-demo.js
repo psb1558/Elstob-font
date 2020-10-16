@@ -226,8 +226,6 @@ bari an is briostun.";
 
     $("#rompresets").selectmenu({	select: function(event, ui) {
 	      switch (this.value) {
-          case "Any":
-            break;
           case "Reg":
             $("#romsize").slider("value", 1.5);
             $("#romspacing").slider("value", 0);
@@ -237,7 +235,7 @@ bari an is briostun.";
             // Order: size, wght, opsz, grad, spacing
             $("#romsliders").trigger("change", [1.2, 400, 12, 0, 0]);
             break;
-          case "Reg6pt":
+          case "6pt (Fine Print)":
             $("#romsize").slider("value", 0.6);
 	          $("#romspacing").slider("value", 0);
             $("#romgrade").slider("value", 0);
