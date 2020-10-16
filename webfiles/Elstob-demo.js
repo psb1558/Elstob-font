@@ -310,7 +310,7 @@ bari an is briostun.";
           case "ModEnglish":
             t = modtext;
             // $( "input[type='checkbox']" ).prop("checked", false).first().change();
-            $( ".featurebutton" ).prop("checked", false).change();
+            $( ".featurebutton" ).prop("checked", false).last().change();
             break;
           case "eModEnglish":
             t = earlymodtext;
