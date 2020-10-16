@@ -168,6 +168,7 @@ bari an is briostun.";
     $("label").addClass("ui-widget");
     $(".sliderlabel").addClass("ui-widget");
     $( ".featurebutton").checkboxradio();
+    var featurestringbase = "";
 
     $( "#romweight" ).slider({
         min: 200,
@@ -434,8 +435,10 @@ bari an is briostun.";
           case "OldIcelandic":
             l = "is";
             t = norsetext;
+            featurestringbase = '"cv52" 2';
             $( ".featurebutton" ).not("#romital, #romcv131, #romcv402").prop("checked", false).change();
             $("#romhist, #romcv131, #romcv402").prop("checked",true).change();
+            featurestringbase = "";
             break;
           case "OldSaxon":
             // lang code is osx.
@@ -478,18 +481,6 @@ bari an is briostun.";
         $("#romtextarea").css("font-style", "normal");
         $("#aespan").css("display", "none");
       }
-      // Explicit with calt and liga since they are on by default.
-      // Actually no reason to let folks turn them off.
-      /*
-      if ($("#romcalt").is(":checked"))
-        fstring = featureString(fstring, "calt", "on");
-      else
-        fstring = featureString(fstring, "calt", "off");
-	    if ($("#romliga").is(":checked"))
-	      fstring = featureString(fstring, "liga", "on");
-	    else
-	      fstring = featureString(fstring, "liga", "off");
-      */
       if ($("#romdlig").is(":checked"))
         fstring = featureString(fstring, "dlig", "on");
       if ($("#romsmcp").is(":checked"))
