@@ -56,7 +56,7 @@ fraujins biskain ins, jah ohtedun agisa mikilamma. jah qaþ du im sa aggilus: ni
 unte sai, spillo izwis faheid mikila, sei wairþiþ allai managein, þatei gabaurans ist izwis \
 himma daga nasjands, saei ist Xristus frauja, in baurg Daweidis.";
 
-var norsetext = "Þá mælti Hárr: Þá er þeir gengu með sævarstrǫndu Borssynir, fundu þeir \
+/* var norsetext = "Þá mælti Hárr: Þá er þeir gengu með sævarstrǫndu Borssynir, fundu þeir \
 tré tvau ok tóku upp trén ok skǫpuðu af menn. Gaf inn fyrsti ǫnd ok líf, annarr vit ok \
 hræring, þriði ásjónu, mál ok heyrn ok sjón, gáfu þeim klæði ok nǫfn. Hét karlmaðrinn Askr, \
 en konan Embla, ok ólst þaðan af mannkindin, sú er byggðin var gefinn undir Miðgarði. Þar \
@@ -66,7 +66,22 @@ er einn staðr, er Hliðskjálf heitir, ok þá er Óðinn settist þar í hás�
 heima ok hvers manns athæfi ok vissi alla hluti, þá er hann sá. Kona hans hét Frigg Fjǫrgvinsdóttir, \
 ok af þeira ætt er sú kynslóð komin, er vér kǫllum ása ættir, er byggt hafa Ásgarð inn forna ok þau \
 ríki, er þar liggja til, ok er þat allt goðkunnug ætt. Ok fyrir því má hann heita Alfǫðr, at hann er \
-faðir allra goðanna ok manna ok alls þess, er af honum ok hans krafti var fullgert.";
+faðir allra goðanna ok manna ok alls þess, er af honum ok hans krafti var fullgert."; */
+
+var norsetext = "Ulꝼr het mͬ ⁊ vͬ bıalꝼa ſon ⁊ hallb͛v ꝺott᷑ vlꝼſ hínſ v arɡa. hͦ vͬ ſẏſtır \
+halbıarnͬ halꝼtravllz oꝛ hraꝼnıſtv. ꝼaðır ketılſ hǽnɡſ. vlꝼr vͬ ſvo mıkıll \
+⁊ ſterkr at æͥ vͦ h̵ſ ȷaꝼnınɡíar ı þ̵n tı̄a ı lꝺ̄ınu en er h̵ vͬ aꝼ vnɡa allꝺͥ \
+la h̵ ı vıkınɡu ⁊ h͛ naðı. M; h̵m vͬ ſa mͬ ı vıkínɡv ⁊ ꝼelaɡ ſkap e͛ karı hͭ \
+⁊ uͬ kallaðꝛ berzlv karı. h̵ vͬ ɡoꝼuɡ men̄ı ⁊ hın̄ meſtı aꝼrekſ mͬ. þ̵r vlꝼr \
+⁊ karı attu eın̄ ſeoꝺ ⁊ uͬ þ̵ra vınatta mıkıl. En er þ̵r reðuz oꝛ hernaꝺı. þa ꝼoꝛ karı tͥ \
+buſſ ſınſ ı herðzlu. h̵ vͬ ſtorauðıɡꝛ mͬ ⁊ attı þrıu boꝛn. Eẏvınꝺꝛ lambı het ſ. h̵ſ an̄aʀ \
+het aulꝼv͛ hnuꝼa. sabıoꝛɡ hͭ ꝺ. h̵ſ. hͦ vͬ ꝼͥð. h̵ar ꝼekk vlꝼr ⁊ ꝼoꝛ m; h̵a heı̄ tͥ buſſ ſınſ \
+vlꝼr vͬ mͬ auðıɡꝛ bæꝺı at lꝺ̵m ⁊ lauſa ꝼé. h̵ tok lenꝺz mᷦ rett ſem h̵ſ lanɡꝼeꝺɡͬ. ɡ͛ꝺız h̵ \
+rıkr ⁊ burıſnu mͬ mıkıll. vͬ þ̵ ſıꝺꝛ at rıſa upp ꜳrꝺeɡíſſ ⁊ ɡɡ̄a ū ſẏſlur \
+at ſea v͛km̵. eðꝛ þ̵ɡat ſem ſmıꝺır vͦ Sa h̵ ẏꝼ͛ tun ⁊ akra. en vͬ atalı vͥ vıtᷓ m̄ þa er raða \
+h̵ſ þẏrꝼtu. kun̄ı h̵ tͥ ꝼlez ɡoꝺ raꝺ at leɡɡͣ. En hv͛n ꝺaɡ e͛ at kuellꝺı kō þa ɡ͛ꝺı \
+h̵ sͣ ſtẏɡɡꝛ at ꝼaır m̵ mattu orðū vͥ h̵ ſkıpta h̵ vͬ akaꝼlıɡa kuellꝺſuæꝼr ⁊ mẏrɡín \
+vakr. þ̵ vͬ mꜳl mͣ at h̵ v͛ı hamram̵r. þͥ vͬ h̵ kvellꝺulꝼr kallaðꝛ þau ulꝼr attu tua .ſſ."
 
 var latintext = "Humanas laudes et mortalium \
 ınsulas uıdımus aut ére ıncıso \
