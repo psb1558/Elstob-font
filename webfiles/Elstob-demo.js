@@ -325,13 +325,13 @@ bari an is briostun.";
           case "MiddleEnglish":
             t = middleenglishtext;
             // r rotunda with rules; always long s; crossed Tironian nota
-            $( ".featurebutton" ).not("#romhist, #romss16, #romcv402").prop("checked", false).change();
+            $( ".featurebutton" ).not("#romital, #romhist, #romss16, #romcv402").prop("checked", false).change();
             $("#romhist, #romss16, #romcv402").prop("checked",true).change();
             break;
           case "Latin":
             l = "la";
             t = latintext;
-            $( ".featurebutton" ).not("rom#hist").prop("checked", false).change();
+            $( ".featurebutton" ).not("#romital, #romhist").prop("checked", false).change();
             $("#romhist").prop("checked",true).change();
             break;
           case "Gothic":
@@ -356,7 +356,7 @@ bari an is briostun.";
             l = "de";
             t = germantext;
             // Long s is done manually for German. Use r rotunda with rules.
-            $( ".featurebutton" ).not("#romss16").prop("checked", false).change();
+            $( ".featurebutton" ).not("#romital, #romss16").prop("checked", false).change();
             $("#romss16").prop("checked",true).change();
           }
 
