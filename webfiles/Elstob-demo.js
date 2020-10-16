@@ -120,7 +120,7 @@ oðra scipu gewenden heom eft ongean to sandwic. ⁊ gerædde man þa \
 setton oðre eorlas ⁊ oðre hasæton to þā scipū. þa lenged hit \
 man swa lange. ꝥ seo scipfyrd eall belaf. ⁊ gewendon ealle heō \
 ham. Ða geaxode Godwine eorl þet ⁊ teah þa úp his segl ⁊ his \
-li. ⁊ gewendon heom þa west to wiht. ⁊ eodon þær úp. ⁊ hergodon \
+lið. ⁊ gewendon heom þa west to wiht. ⁊ eodon þær úp. ⁊ hergodon \
 swa lange þær ꝥ ꝥ folc geald heom swa mycel. swa hi heō on legden. \
 ⁊ gewendon heō þa westwearð oð þet hi comon to portlande.";
 
