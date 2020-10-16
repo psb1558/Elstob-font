@@ -34,8 +34,8 @@ into me, that selflove is better than any guilding, to make that seem gorgious w
 parties.";
 
 var germantext = "Es hat ſich vil volcks geſamlet / alſo / das ſy ſich vnder einandern \
-trattēd / do fieng er an / vnd ſagt zuͦ ſinen jüngeren zum erſten: Huͤtend üch vor dē ſurteig ꝺ̕ \
-phariſeern / welches iſt die heuchley. Es iſt aber nichts verborgens / das nitt offenbar werde: \
+trattēd / do fieng er an / vnd ſagt zuͦ ſinen jüngeren zum erſten: Huͤtend üch vor dē ſurteig \
+ꝺ̕ phariſeern / welches iſt die heuchley. Es iſt aber nichts verborgens / das nitt offenbar werde: \
 noch heimlichs / das man nitt wüſſen werde. Darumb was jr in der finſter nuß geſagt habēd / das \
 wirt man am liecht hoͤren: was jr habend geredt ins or in der kam̄er / das wirt man predigen vff den \
 taͤchern. Ich ſag üch aber / minen fründen / Foͤrchtēd üch nit vor denen die den lyb toͤdend / vnd \
