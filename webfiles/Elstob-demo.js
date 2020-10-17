@@ -103,13 +103,13 @@ extendıt dexterā suā & deuorauıt eos  t̄ra· \
 & popꝉm suum sanguınıs suı pr&ıo lıƀerauıt;";
 
 var oldenglishtext = "Her on ðisum geare forðferde \
-Ælfgiue Ymma Eadwardes cynges modor ⁊ Hardacnutes cynges. ⁊ on \
+ælfgiue ymma Eadwardes cynges modor ⁊ hardacnutes cynges. ⁊ on \
 þam sylfan geare gerædde se cyng ⁊ his witan ꝥ mann sceolde \
-forðian ut to Sandwic scipu. ⁊ setton Raulf eorl ⁊ Oddan eorl to \
+forðian ut to Sandwic scipu. ⁊ setton raulf eorl ⁊ oddan eorl to \
 heafodmannū þærto. Ða gewende Godwine eorl út frā brycge mid \
 his scypum to yseran. and let ut ane dæge ær midsumeres \
-mæsseæfene ꝥ he cō to næsse. þe is besuðan Rumenea. Þa cō \
-hit to witenne þā eorlū ut to Sandwic. ⁊ hi þa gewendon ut \
+mæsseæfene ꝥ he cō to næsse. þe is besuðan rumenea. Þa cō \
+hit to witenne þā eorlū ut to sandwic. ⁊ hi þa gewendon ut \
 æfter þam oðrum scipum. ⁊ bead man landfyrde ut ongean þa \
 scipu. Þa amang þison þa wearð Godwine eorl gewarnod. ⁊ gewende \
 him þa into pefenesea. ⁊ wearð ꝥ wæder swiðe strang. ꝥ þa \
