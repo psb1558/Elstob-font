@@ -54,3 +54,10 @@ U+A749 (plus small cap version of the latter two). These are basic
 needs for diplomatic transcription of Latin texts. Other changes are
 minor.
 
+18 October 2020
+
+Changed features so that hist/ss03 produces invariable longs and ss11 invariable
+rrotunda, and the same is true when these letters are entered directly. ss08 and
+ss16 produce contextual longs (in English and French text) and contextual
+rrotunda. This arrangement will be less confusing for users. Added cv52 for
+access to a wider U+0335 and one that's wider on the right. Various minor fixes.
