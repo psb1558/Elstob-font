@@ -9449,6 +9449,18 @@ type="application/relax-ng-compact-syntax"?>
     <iup axis="y"/>
   </gl>
 
+  <gl pnm="uni0365.alt">
+    <setvs axis="y"/>
+    <mv p="0">
+      <sh p="3 13"/>
+      <mv col="b" p="1">
+        <sh p="2 14 15"/>
+      </mv>
+    </mv>
+    <mv p="8"/>
+    <iup axis="y"/>
+  </gl>
+
   <gl pnm="uni0366">
     <setvs axis="y"/>
     <callm nm="one-wd-stem">

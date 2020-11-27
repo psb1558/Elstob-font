@@ -1782,11 +1782,11 @@
 
   <gl pnm="oe">
     <mv di="lcbu" p="0">
-      <sh p="40"/>
+      <sh p="33"/>
       <mv di="lcrs" p="15"/>
     </mv>
     <mv di="xho" p="8">
-      <sh p="33"/>
+      <sh p="40"/>
       <mv di="lcrs" p="24">
         <sh p="56"/>
       </mv>
@@ -4085,9 +4085,9 @@
       pt-a: 25, pt-b: 24, sh-a: top-sh-a, sh-b: top-sh-b, cv: cap-height
     </callm>
     <callm nm="serif-sh">
-      pt-a: 37, pt-b: 36, sh-a: 0
+      pt-a: 36, pt-b: 37, sh-a: 0
     </callm>
-    <ip r="25 37" p="5 4 14 13"/>
+    <ip r="25 36" p="5 4 14 13"/>
   </gl>
 
   <gl pnm="uni16A1">
@@ -4383,9 +4383,9 @@
 
   <gl pnm="uni16BC">
     <callm nm="rune-vert">
-      serif-top: 25, serif-bot: 32, stem-top: 21, stem-bot: 20
+      serif-top: 25, serif-bot: 28, stem-top: 21, stem-bot: 20
     </callm>
-    <ip r="25 32" p="4 10"/>
+    <ip r="25 28" p="4 10"/>
     <push>9 10 15 4</push>
     <command nm="MDAP" modifier="1"/>
     <command nm="SHP" modifier="1"/>
@@ -4803,7 +4803,7 @@
   <gl pnm="uni16E3">
     <set nm="bot-a" p="12 8 0 16 20"/>
     <set nm="bot-b" p="9 17"/>
-    <cn nm="top-a" val="24"/>
+    <cn nm="top-a" val="1"/>
     <callm nm="serif-sh">
       pt-a: 25, pt-b: 24, sh-a: top-a, cv: cap-height
     </callm>
@@ -6340,10 +6340,10 @@
 
   <gl pnm="uni2074.osf">
     <mv di="supsb" p="1">
-      <sh p="9 16"/>
+      <sh p="2 3 9 16"/>
       <sh round="y" p="0"/>
       <mv p="13">
-        <sh p="6 18"/>
+        <sh p="6 11 12 18"/>
       </mv>
     </mv>
     <mv di="supsoto" p="4">
@@ -6986,6 +6986,18 @@
     </mv>
   </gl>
 
+  <gl pnm="uni0335.wide">
+    <mv p="0">
+      <mv di="lc-bar" p="1"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni0335.wideright">
+    <mv p="0">
+      <mv di="lc-bar" p="1"/>
+    </mv>
+  </gl>
+
   <gl pnm="uni0335.case">
     <mv p="0">
       <mv di="cap-bar" p="1"/>
@@ -7527,6 +7539,16 @@
       <mv col="w" p="36">
         <mv p="42"/>
       </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="uni0365.alt">
+    <!-- dotlessi -->
+    <mv di="mkbu" p="0">
+      <mv p="29"/>
+    </mv>
+    <mv di="mkxo" p="18">
+      <mv p="11"/>
     </mv>
   </gl>
 
