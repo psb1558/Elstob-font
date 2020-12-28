@@ -6034,6 +6034,47 @@ type="application/relax-ng-compact-syntax"?>
     </mv>
   </gl>
 
+  <gl pnm="uni211F" assume-y="yes"> <!-- response -->
+    <cn nm="top-serif-left" val="76"/>
+    <cn nm="stem-top-left" val="22"/>
+    <cn nm="stem-top-right" val="19"/>
+    <cn nm="bottom-serif-left" val="40"/>
+    <cn nm="stem-bottom" val="21"/>
+    <cn nm="bowl-bottom" val="7"/>
+    <cn nm="bowl-bottom-ins" val="12"/>
+    <cn nm="foot-bottom" val="39"/>
+    <cn nm="bowl-crotch" val="30"/>
+    <set nm="sh-a-pts" p="stem-bottom foot-bottom"/>
+    <callm nm="serif-sh">
+	pt-a: top-serif-left,
+	pt-b: (top-serif-left - 1),
+	sh-a: stem-top-left,
+	cv: sc-height,
+	cv-h: sc-serif
+    </callm>
+    <push>stem-top-right sc-bar top-serif-left</push>
+    <command nm="SRP0"/>
+    <command nm="MIRP" modifier="11101"/>
+    <callm nm="serif-sh">
+	pt-a: bottom-serif-left,
+	pt-b: (bottom-serif-left + 1),
+	sh-a: sh-a-pts,
+	sh-b: (foot-bottom - 1),
+	cv-h: sc-serif
+    </callm>
+    <ip r="top-serif-left bottom-serif-left" p="bowl-bottom"/>
+    <mv p="bowl-bottom">
+      <mv di="sc-round-stem" col="b" p="bowl-bottom-ins">
+        <ip p="bowl-crotch"/>
+      </mv>
+    </mv>
+    <!-- the stroke -->
+    <mv p="59"/>
+    <mv p="45">
+      <mv col="b" p="73"/>
+    </mv>
+  </gl>
+
   <gl pnm="uniA783.sc">
     <cn nm="stem-top" val="30"/>
     <cn nm="stem-bot" val="22"/>
@@ -6199,10 +6240,44 @@ type="application/relax-ng-compact-syntax"?>
     <cn nm="bottom-ins" val="4"/>
     <setvs axis="y"/>
     <callm nm="cap-dbl-serif">
-      first-left: serif-left, second-left: (serif-left - 1), first-right: serif-right, second-right: (serif-right - 1), stem1: stem-left, stem2: stem-right, cv: sc-height
+      first-left: serif-left,
+      second-left: (serif-left - 1),
+      first-right: serif-right,
+      second-right: (serif-right - 1),
+      stem1: stem-left,
+      stem2: stem-right,
+      cv: sc-height
     </callm>
     <mv di="baseline-undershoot" p="bottom">
       <sh p="bottom-ins"/>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+  <gl pnm="uni2123"> <!-- versicle -->
+    <cn nm="serif-left" val="10"/>
+    <cn nm="serif-right" val="15"/>
+    <cn nm="stem-left" val="1"/>
+    <cn nm="stem-right" val="6"/>
+    <cn nm="bottom" val="0"/>
+    <cn nm="bottom-ins" val="4"/>
+    <setvs axis="y"/>
+    <callm nm="cap-dbl-serif">
+      first-left: serif-left,
+      second-left: (serif-left - 1),
+      first-right: serif-right,
+      second-right: (serif-right - 1),
+      stem1: stem-left,
+      stem2: stem-right,
+      cv: sc-height
+    </callm>
+    <mv di="baseline-undershoot" p="bottom">
+      <sh p="bottom-ins"/>
+    </mv>
+    <!-- the stroke -->
+    <mv p="31"/>
+    <mv p="18">
+      <mv col="b" p="45"/>
     </mv>
     <iup axis="y"/>
   </gl>

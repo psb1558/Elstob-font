@@ -5666,6 +5666,25 @@
     </mv>
   </gl>
 
+  <gl pnm="uni211F"> <!-- response -->
+    <set nm="bot-sh-a" p="46 41"/>
+    <callm nm="serif-sh">
+	pt-a: 22, pt-b: 21, sh-a: 47, cv: sch, cv-h: sc-serif
+    </callm>
+    <callm nm="serif-sh">
+	pt-a: 42, pt-b: 43, sh-a: bot-sh-a, sh-b: 40, cv-h: sc-serif
+    </callm>
+    <ip r="42 22" p="7"/>
+    <mv p="7">
+      <mv p="12"/>
+    </mv>
+    <!-- stroke -->
+    <mv p="62"/>
+    <mv p="50">
+      <mv p="72"/>
+    </mv>
+  </gl>
+
   <gl pnm="uniA783.sc">
     <!-- insular r -->
     <mv di="scho" p="16">
@@ -5797,6 +5816,22 @@
     </callm>
     <mv p="0">
       <sh p="3 4"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uni2123"> <!-- versicle -->
+    <set nm="top-sh-a" p="1 14 5"/>
+    <callm nm="serif-sh">
+	pt-a: 10, pt-b: 9, sh-a: top-sh-a, sh-b: 13,
+	cv: sch, cv-h: sc-serif
+    </callm>
+    <mv p="0">
+      <sh p="3 4"/>
+    </mv>
+    <!-- stroke -->
+    <mv p="28"/>
+    <mv p="17">
+      <mv p="39"/>
     </mv>
   </gl>
 
