@@ -1121,6 +1121,31 @@ type="application/relax-ng-compact-syntax"?>
     <iup axis="y"/>
   </gl>
 
+  <gl pnm="uniA759" assume-y="yes"> <!-- qdiagonalstroke -->
+    <cn nm="bowl-top" val="13"/>
+    <cn nm="bowl-top-inside" val="33"/>
+    <cn nm="bowl-bottom" val="5"/>
+    <cn nm="bowl-bottom-inside" val="24"/>
+    <cn nm="serif-bottom" val="41"/>
+    <cn nm="stem-top" val="17"/>
+    <cn nm="stem-bottom" val="0"/>
+    <callm nm="lc-horz-stroke-cv">
+      pt1: bowl-top, pt2: bowl-top-inside, cv: xheight-overshoot, cv-h: lc-round-stem
+    </callm>
+    <sh r="bowl-top" p="stem-top 54"/>
+    <callm nm="lc-horz-stroke-cv">
+      pt1: bowl-bottom, pt2: bowl-bottom-inside, cv: baseline-undershoot, cv-h: lc-round-stem
+    </callm>
+    <callm nm="lc-bottom-serif">
+      <wpm nm="bottom-left" val="serif-bottom"/>
+      <wpm nm="top-left" val="serif-bottom + 1"/>
+      <wpm nm="cv" val="lc-descender"/>
+      <wpm nm="codefrag">
+        <sh r="serif-bottom" p="stem-bottom 46"/>
+      </wpm>
+    </callm>
+  </gl>
+
   <gl pnm="r">
     <cn nm="stem-top" val="37"/>
     <cn nm="stem-bottom" val="32"/>
@@ -2329,6 +2354,19 @@ type="application/relax-ng-compact-syntax"?>
       <mv di="cap-round-stem" p="bottom-ins">
         <sh p="tail-ins"/>
       </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="uniA758" assume-y="yes"> <!-- Qdiagonalstroke -->
+    <mv di="cap-height-overshoot" p="11">
+      <mv di="cap-round-stem" p="38"/>
+    </mv>
+    <mv di="baseline-undershoot" p="21">
+      <sh round="yes" p="0"/>
+      <mv p="28"/>
+    </mv>
+    <mv r="0" p="49">
+      <sh p="56 64"/>
     </mv>
   </gl>
 
@@ -5990,6 +6028,26 @@ type="application/relax-ng-compact-syntax"?>
         <sh p="tail-ins"/>
       </mv>
     </mv>
+  </gl>
+
+  <gl pnm="uniA759.sc" assume-y="yes">
+    <pm nm="top" val="11"/>
+    <pm nm="top-ins" val="35"/>
+    <pm nm="bottom" val="20"/>
+    <pm nm="bottom-ins" val="27"/>
+    <pm nm="tail-bottom" val="0"/>
+    <pm nm="tail-ins" val="45"/>
+    <mv di="sc-height-overshoot" p="top">
+      <mv di="sc-round-stem" p="top-ins"/>
+    </mv>
+    <mv di="baseline-undershoot" p="bottom">
+      <sh round="yes" p="tail-bottom"/>
+      <mv di="sc-round-stem" p="bottom-ins">
+        <sh p="tail-ins"/>
+      </mv>
+    </mv>
+    <!-- the stroke -->
+    <sh r="0" p="52 60"/>
   </gl>
 
   <gl pnm="q.alt.sc">

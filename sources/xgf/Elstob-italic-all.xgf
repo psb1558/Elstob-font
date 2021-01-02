@@ -1264,6 +1264,20 @@
     </mv>
   </gl>
 
+  <gl pnm="uniA758"> <!-- Qdiagonalstroke -->
+    <mv di="cap-baseline-undershoot" p="22">
+      <sh p="0"/>
+      <mv p="37"/>
+    </mv>
+    <mv di="cap-height-overshoot" p="12">
+      <mv p="49"/>
+    </mv>
+    <mv p="0">
+      <sh p="61 69"/>
+      <mv p="30"/>
+    </mv>
+  </gl>
+
   <gl pnm="Thorn.loclENG">
     <mv di="cap-height-overshoot" p="8"/>
     <mv p="37">
@@ -1838,6 +1852,19 @@
     </mv>
     <mv p="46">
       <sh p="47 20 49"/>
+    </mv>
+  </gl>
+
+  <gl pnm="uniA759"> <!-- qdiagonalstroke -->
+    <mv di="lcbu" p="0">
+      <mv p="25"/>
+    </mv>
+    <mv di="xho" p="10">
+      <sh p="22 60"/>
+      <mv di="lcrs" p="36"/>
+    </mv>
+    <mv p="46">
+      <sh p="20 47 49 50"/>
     </mv>
   </gl>
 
@@ -5641,6 +5668,26 @@
     </mv>
   </gl>
 
+  <gl pnm="uniA759.sc">
+    <pm nm="top" val="11"/>
+    <pm nm="top-ins" val="44"/>
+    <pm nm="bottom" val="29"/>
+    <pm nm="bottom-ins" val="34"/>
+    <pm nm="tail-bottom" val="0"/>
+    <pm nm="tail-ins" val="27"/>
+    <mv di="sc-height-overshoot" p="top">
+      <sh p="62"/>
+      <mv di="sc-curved-stem" p="top-ins"/>
+    </mv>
+    <mv di="baseline-undershoot" p="bottom">
+      <sh p="tail-bottom 54"/>
+      <mv di="sc-curved-stem" p="bottom-ins"/>
+    </mv>
+    <mv p="tail-bottom">
+      <mv p="tail-ins"/>
+    </mv>
+  </gl>
+
   <gl pnm="q.alt.sc">
     <callg pnm="q.sc">
 	top: 12,
@@ -5820,18 +5867,17 @@
   </gl>
 
   <gl pnm="uni2123"> <!-- versicle -->
-    <set nm="top-sh-a" p="1 14 5"/>
+    <set nm="top-sh-a" p="1 14 5 28"/>
     <callm nm="serif-sh">
 	pt-a: 10, pt-b: 9, sh-a: top-sh-a, sh-b: 13,
 	cv: sch, cv-h: sc-serif
     </callm>
     <mv p="0">
-      <sh p="3 4"/>
+      <sh p="3 4 17"/>
     </mv>
-    <!-- stroke -->
     <mv p="28"/>
     <mv p="17">
-      <mv p="39"/>
+      <mv p="42"/>
     </mv>
   </gl>
 
