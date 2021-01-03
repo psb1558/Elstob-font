@@ -1309,11 +1309,11 @@ type="application/relax-ng-compact-syntax"?>
     <pm nm="include-iup" val="0"/>
     <cn nm="serif-top-left" val="21"/>
     <cn nm="serif-top-right" val="26"/>
-    <cn nm="diag-top-left" val="16"/>
-    <cn nm="diag-top-right" val="10"/>
+    <cn nm="diag-top-left" val="11"/>
+    <cn nm="diag-top-right" val="14"/>
     <cn nm="bottom" val="0"/>
     <cn nm="bottom-above" val="6"/>
-    <cn nm="crotch" val="15"/>
+    <cn nm="crotch" val="13"/>
     <setvs axis="y"/>
     <mv di="xheight" p="serif-top-left">
       <sh p="serif-top-right diag-top-left diag-top-right"/>
@@ -1324,7 +1324,7 @@ type="application/relax-ng-compact-syntax"?>
     <mv di="lc-descender" p="bottom">
       <mv p="bottom-above"/>
     </mv>
-    <ip r="serif-top-left bottom" p="crotch"/>
+    <ip r="serif-top-left bottom" p="crotch 10"/>
     <compile-if test="include-iup = 0">
       <iup axis="y"/>
     </compile-if>
