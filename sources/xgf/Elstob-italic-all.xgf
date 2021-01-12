@@ -5671,7 +5671,7 @@
   <gl pnm="uniA759.sc">
     <pm nm="top" val="11"/>
     <pm nm="top-ins" val="44"/>
-    <pm nm="bottom" val="29"/>
+    <pm nm="bottom" val="20"/>
     <pm nm="bottom-ins" val="34"/>
     <pm nm="tail-bottom" val="0"/>
     <pm nm="tail-ins" val="27"/>
