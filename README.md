@@ -13,8 +13,8 @@ It is strongly suggested that you avoid downloading Elstob from commercial sites
 as these do not generally offer the latest version, and some downloads may carry
 viruses.
 
-For the Mac, a Homebrew package is available. Use this if possible, as it will
-simplify updating to the latest version.
+For the Mac, a [Homebrew](https://brew.sh/) package is available. Use this if
+possible, as it will simplify updating to the latest version.
 
 For Linux users, packages exist for Debian, Arch Linux, Parrot, and others. Check
 your distribution for availability.
