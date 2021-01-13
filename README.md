@@ -7,6 +7,23 @@ The Elstob font (named for the eighteenth-century Anglo-Saxonist [Elizabeth Elst
 2. Outlines have been kept simple to limit file size.
 4. The intention of the font is to include everything in Unicode useful to a substantial number of medievalists, but the character set has been limited to around 1000 glyphs to keep file size reasonable. Many characters from the [Medieval Unicode Font Initiative](https://skaldic.abdn.ac.uk/m.php?p=mufi), present in the designer's [Junicode](https://github.com/psb1558/Junicode-New/tree/master/legacy) font, can be represented with combining diacritics.
 
+# Downloading and Installing
+
+It is strongly suggested that you avoid downloading Elstob from commercial sites,
+as these do not generally offer the latest version, and some downloads may carry
+viruses.
+
+For the Mac, a Homebrew package is available. Use this if possible, as it will
+simplify updating to the latest version.
+
+For Linux users, packages exist for Debian, Arch Linux, Parrot, and others. Check
+your distribution for availability.
+
+Windows users, Mac users who cannot use Homebrew, and Linux users whose distributions
+do not offer Elstob should download from
+[this site](https://github.com/psb1558/Elstob-font/releases/) and follow the
+instructions for installing on their systems.
+
 ---
 ![Elstob Sample](images/Specimen_Image.png)
 ---
@@ -35,4 +52,3 @@ Visit the [specimen page](https://psb1558.github.io/Elstob-font/)!
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at: [http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).
-
