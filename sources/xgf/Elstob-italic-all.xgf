@@ -6764,6 +6764,19 @@
     </mv>
   </gl>
 
+  <gl pnm="braceleft.rom">
+    <mv p="18">
+      <mv p="19"/>
+    </mv>
+    <mv p="0">
+      <mv p="42"/>
+    </mv>
+    <ip r="0 18" p="8"/>
+    <mv p="8">
+      <mv p="9"/>
+    </mv>
+  </gl>
+
   <gl pnm="braceright">
     <mv p="0">
       <mv p="1"/>
@@ -6777,6 +6790,19 @@
     </mv>
   </gl>
 
+  <gl pnm="braceright.rom">
+    <mv p="25">
+      <mv p="24"/>
+    </mv>
+    <mv p="0">
+      <mv p="1"/>
+    </mv>
+    <ip r="0 25" p="35"/>
+    <mv p="35">
+      <mv p="34"/>
+    </mv>
+  </gl>
+
   <gl pnm="bracketleft">
     <mv p="7">
       <mv p="6"/>
@@ -6786,7 +6812,25 @@
     </mv>
   </gl>
 
+  <gl pnm="bracketleft.rom">
+    <mv p="7">
+      <mv p="6"/>
+    </mv>
+    <mv p="2">
+      <mv p="3"/>
+    </mv>
+  </gl>
+
   <gl pnm="bracketright">
+    <mv p="5">
+      <mv p="4"/>
+    </mv>
+    <mv p="0">
+      <mv p="1"/>
+    </mv>
+  </gl>
+
+  <gl pnm="bracketright.rom">
     <mv p="5">
       <mv p="4"/>
     </mv>
