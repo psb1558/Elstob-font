@@ -1,8 +1,8 @@
-# Elstob-font
+![Elstob Header](TitlePageFacsimile.jpg)
 
 **New!** I'll share new developments on [Twitter](https://twitter.com/InPbaker) from time to time and will welcome your feedback there.
 
-![Elstob Header](images/Elstob_Header.png)
+
 
 The Elstob font (named for the eighteenth-century Anglo-Saxonist [Elizabeth Elstob](https://www.oxforddnb.com/view/10.1093/ref:odnb/9780198614128.001.0001/odnb-9780198614128-e-8761)) is based on the Double Pica commissioned by Bishop [John Fell](https://en.wikipedia.org/wiki/John_Fell_(bishop)) in the seventeenth century. Elstob is designed as a webfont. Thus:
 1. It is a variable font, with weights ranging from ExtraLight to ExtraBold, optical sizes from "Fine Print" (circa 6 points) to "Display" (circa 18 points or greater) and also a grade axis (1-500). (A non-variable desktop version is also available.)
