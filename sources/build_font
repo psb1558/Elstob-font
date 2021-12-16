@@ -205,16 +205,17 @@ else
     echo "fontmake failed"
     exit 1
   fi
-  cp "variable_ttf/${fontname}-VF.ttf" .
+  cp "variable_ttf/${fontname}-VF.ttf" "${fontname}[GRAD,opsz,wght].ttf"
   echo "Checking for dsig table"
-  gftools fix-dsig --autofix "${fontname}-VF.ttf"
+  gftools fix-dsig --autofix "${fontname}[GRAD,opsz,wght].ttf"
   echo "Building STAT table and fixing name table"
   python mkstat.py $fonttype
   if [ $? -ne 0 ]
   then
     echo "Failed to build STAT table"
     exit 1
-  else
+  else 
+    echo "copying ${fontname}[GRAD,opsz,wght]-withSTAT.ttf to ${fontname}[GRAD,opsz,wght].ttf"
     cp "${fontname}[GRAD,opsz,wght]-withSTAT.ttf" "${fontname}[GRAD,opsz,wght].ttf"
   fi
   #
@@ -229,7 +230,7 @@ else
     if command -v ttfautohint-vf &> /dev/null
     then
       echo "Running ttfautohint-vf"
-      ttfautohint-vf "${fontname}-VF.ttf" tmp-font.ttf
+      ttfautohint-vf "${fontname}[GRAD,opsz,wght].ttf" tmp-font.ttf
       gftools-fix-hinting.py tmp-font.ttf
       cp tmp-font.ttf.fix "${fontname}[GRAD,opsz,wght].ttf"
       rm tmp-font.ttf.fix
@@ -238,7 +239,6 @@ else
       echo "is required to auto-hint a variable font."
     fi
   else
-    cp "${fontname}-VF.ttf" "${fontname}[GRAD,opsz,wght].ttf"
     echo "Running Xgridfit"
     xgridfit -q "xgf/Elstob-${fonttype}-all.xgf"
     if [ $? -ne 0 ]
