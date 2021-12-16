@@ -72,6 +72,7 @@ type="application/relax-ng-compact-syntax"?>
       <cvv nm="lc-ascender-top-end" val="28"/>
       <cvv nm="lc-bar" val="50"/>
       <cvv nm="lc-serif" val="40"/>
+			<cvv nm="lc-thick-curve" val="59"/>
       <cvv nm="dotaccent-bottom" val="1128"/>
       <cvv nm="dotaccent-height" val="151"/>
       <cvv nm="cap-serif" val="40"/>
@@ -103,6 +104,7 @@ type="application/relax-ng-compact-syntax"?>
       <cvv nm="lc-ascender-top-end" val="61"/>
       <cvv nm="lc-bar" val="70"/>
       <cvv nm="lc-serif" val="60"/>
+			<cvv nm="lc-thick-curve" val="173"/>
       <cvv nm="dotaccent-bottom" val="1128"/>
       <cvv nm="dotaccent-height" val="340"/>
       <cvv nm="cap-serif" val="60"/>
