@@ -6,8 +6,8 @@ whichFont = "both"
 if len(sys.argv) > 1:
     whichFont = sys.argv[1]
 
-inItalicFont =  "Elstob-Italic[GRAD,opsz,wght].ttf"
-outItalicFont = "Elstob-Italic[GRAD,opsz,wght]-withSTAT.ttf"
+inItalicFont =  "Elstob-Italic-VF.ttf"
+outItalicFont = "Elstob-Italic-VF.ttf"
 inRomanFont =   "Elstob[GRAD,opsz,wght].ttf"
 outRomanFont =  "Elstob[GRAD,opsz,wght]-withSTAT.ttf"
 
@@ -48,6 +48,15 @@ commonGradeDict = dict(
     ]
 )
 
+slantDict = dict(
+    tag="slnt",
+    name="Slant",
+    values=[
+        dict(nominalValue=0, name="Slanted", flags=0x2, rangeMinValue=0, rangeMaxValue=7.5),
+        dict(nominalValue=15, name="Upright", flags=0x2, rangeMinValue=7.5, rangeMaxValue=15)
+    ]
+)
+
 format2RomanAxes = [
     commonOpticalSizeDict, commonWeightDict, commonGradeDict,
     dict(
@@ -58,7 +67,7 @@ format2RomanAxes = [
 ]
 
 format2ItalicAxes = [
-    commonOpticalSizeDict, commonWeightDict, commonGradeDict,
+    commonOpticalSizeDict, commonWeightDict, commonGradeDict, slantDict,
     dict(
         tag="ital",
         name="Italic",
