@@ -214,8 +214,8 @@ else
   then
     echo "Failed to build STAT table"
     exit 1
-  else
-    cp "${fontname}[GRAD,opsz,wght]-withSTAT.ttf" "${fontname}[GRAD,opsz,wght].ttf"
+# else
+#    cp "${fontname}[GRAD,opsz,wght]-withSTAT.ttf" "${fontname}-VF.ttf"
   fi
   #
   # Hinting section: if autohinting requested, check for existence of
