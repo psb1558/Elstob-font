@@ -15,52 +15,52 @@ type="application/relax-ng-compact-syntax"?>
   <default type="init-graphics" val="no"/>
   <default type="cleartype" val="yes"/>
 
-  <cv nm="xheight" val="891"/>
-  <cv nm="xheight-overshoot" val="914"/>
-  <cv nm="lc-round-stem" val="57" col="b"/>
-  <cv nm="lc-ascender-top" val="1487"/>
-  <cv nm="lc-ascender-top-slope" val="85"/>
-  <cv nm="lc-ascender-top-end" val="39"/>
+  <cv nm="xheight" val="435"/>
+  <cv nm="xheight-overshoot" val="446"/>
+  <cv nm="lc-round-stem" val="28" col="b"/>
+  <cv nm="lc-ascender-top" val="726"/>
+  <cv nm="lc-ascender-top-slope" val="36"/>
+  <cv nm="lc-ascender-top-end" val="16"/>
   <cv nm="baseline" val="0"/>
-  <cv nm="baseline-undershoot" val="-23"/>
-  <cv nm="lc-bar" val="61" col="b"/>
-  <cv nm="lc-ascender-top-overshoot" val="1492"/>
-  <cv nm="lc-serif" val="51" col="b"/>
-  <cv nm="dotaccent-bottom" val="1128"/>
-  <cv nm="dotaccent-height" val="214" col="b"/>
-  <cv nm="lc-descender" val="-501"/>
-  <cv nm="lc-descender-undershoot" val="-531"/>
-  <cv nm="cap-height" val="1358"/>
-  <cv nm="cap-height-overshoot" val="1385"/>
-  <cv nm="cap-baseline-undershoot" val="-27"/>
-  <cv nm="cap-serif" val="51" col="b"/>
-  <cv nm="cap-bar" val="61" col="b"/>
-  <cv nm="cap-round-stem" val="57" col="b"/>
-  <cv nm="sc-height" val="1016"/>
-  <cv nm="sc-serif" val="51" col="b"/>
-  <cv nm="sc-bar" val="61" col="b"/>
-  <cv nm="sc-round-stem" val="57" col="b"/>
-  <cv nm="sc-height-overshoot" val="1035"/>
-  <cv nm="sc-baseline-undershoot" val="-23"/>
-  <cv nm="lc-thick-curve" val="97" col="b"/>
-  <cv nm="period-height" val="247" col="b"/>
-  <cv nm="numbersign-bar" val="95" col="b"/>
-  <cv nm="num-top-round" val="1358"/>
-  <cv nm="num-top-flat" val="1321"/>
-  <cv nm="sups-baseline" val="519"/>
-  <cv nm="sups-baseline-undershoot" val="505"/>
-  <cv nm="sups-xheight" val="1194"/>
-  <cv nm="sups-xheight-overshoot" val="1209"/>
-  <cv nm="ring-stem" val="66" col="b"/>
-  <cv nm="zero-osf-stem" val="106" col="b"/>
-  <cv nm="lower-f-top" val="1452"/>
-  <cv nm="longs-knob" val="797"/>
-  <cv nm="euro-bar" val="100" col="b"/>
-  <cv nm="mark-curve" val="43" col="b"/>
-  <cv nm="percent-zero" val="66"/>
-  <cv nm="percent-zero-sc" val="54"/>
-  <cv nm="rune-punct" val="274" col="b"/>
-  <cv nm="macronw" val="81" col="b"/>
+  <cv nm="baseline-undershoot" val="-12"/>
+  <cv nm="lc-bar" val="30" col="b"/>
+  <cv nm="lc-ascender-top-overshoot" val="729"/> <!-- top of f -->
+  <cv nm="lc-serif" val="25" col="b"/>
+  <cv nm="dotaccent-bottom" val="551"/>
+  <cv nm="dotaccent-height" val="104" col="b"/>
+  <cv nm="lc-descender" val="-245"/>
+  <cv nm="lc-descender-undershoot" val="-259"/>
+  <cv nm="cap-height" val="663"/>
+  <cv nm="cap-height-overshoot" val="676"/>
+  <cv nm="cap-baseline-undershoot" val="-13"/>
+  <cv nm="cap-serif" val="25" col="b"/>
+  <cv nm="cap-bar" val="30" col="b"/>
+  <cv nm="cap-round-stem" val="28" col="b"/>
+  <cv nm="sc-height" val="496"/>
+  <cv nm="sc-serif" val="25" col="b"/>
+  <cv nm="sc-bar" val="30" col="b"/>
+  <cv nm="sc-round-stem" val="27" col="b"/>
+  <cv nm="sc-height-overshoot" val="505"/>
+  <cv nm="sc-baseline-undershoot" val="-10"/>
+  <cv nm="lc-thick-curve" val="47" col="b"/>
+  <cv nm="period-height" val="121" col="b"/>
+  <cv nm="numbersign-bar" val="47" col="b"/>
+  <cv nm="num-top-round" val="663"/>
+  <cv nm="num-top-flat" val="645"/>
+  <cv nm="sups-baseline" val="253"/>
+  <cv nm="sups-baseline-undershoot" val="247"/>
+  <cv nm="sups-xheight" val="583"/>
+  <cv nm="sups-xheight-overshoot" val="590"/>
+  <cv nm="ring-stem" val="32" col="b"/>
+  <cv nm="zero-osf-stem" val="51" col="b"/>
+  <cv nm="lower-f-top" val="709"/>
+  <cv nm="longs-knob" val="389"/>
+  <cv nm="euro-bar" val="49" col="b"/>
+  <cv nm="mark-curve" val="21" col="b"/>
+  <cv nm="percent-zero" val="32"/>
+  <cv nm="percent-zero-sc" val="26"/>
+  <cv nm="rune-punct" val="134" col="b"/>
+  <cv nm="macronw" val="39" col="b"/> <!-- revised to here -->
 
   <cvar>
 		<tuple>
@@ -612,13 +612,13 @@ type="application/relax-ng-compact-syntax"?>
   </mo>
 
   <gl pnm="a">
-    <cn nm="top" val="24"/>
-    <cn nm="top-inside" val="11"/>
-    <cn nm="bottom" val="41"/>
-    <cn nm="bottom-inside" val="55"/>
-    <cn nm="bottom-right" val="0"/>
-    <cn nm="mid-upper" val="48"/>
-    <cn nm="mid-lower" val="49"/>
+    <cn nm="top" val="{238;446}"/>
+    <cn nm="top-inside" val="{198;410}"/>
+    <cn nm="bottom" val="{151;-11}"/>
+    <cn nm="bottom-inside" val="{185;37}"/>
+    <cn nm="bottom-right" val="{353;-11}"/>
+    <cn nm="mid-upper" val="{290;267}"/>
+    <cn nm="mid-lower" val="{294;237}"/>
     <setvs axis="y"/>
     <mv di="baseline-undershoot" p="bottom">
       <sh p="bottom-right"/>
@@ -704,13 +704,13 @@ type="application/relax-ng-compact-syntax"?>
   </gl>
 
   <gl pnm="f">
-    <cn nm="serif-bottom" val="36"/>
-    <cn nm="vertical-bottom" val="0"/>
-    <cn nm="top" val="10"/>
-    <cn nm="top-inside" val="26"/>
-    <cn nm="bar-top" val="32"/>
+    <cn nm="serif-bottom" val="{33;0}"/>
+    <cn nm="vertical-bottom" val="{92;10}"/>
+    <cn nm="top" val="{307;729}"/>
+    <cn nm="top-inside" val="{287;694}"/>
+    <cn nm="bar-top" val="{264;433}"/>
     <cn nm="bar-bottom" val="bar-top + 1"/>
-    <cn nm="bar-bottom-left" val="1"/>
+    <cn nm="bar-bottom-left" val="{33;389}"/>
     <setvs axis="y"/>
     <mv di="baseline" p="serif-bottom">
       <sh p="vertical-bottom"/>
@@ -1070,13 +1070,13 @@ type="application/relax-ng-compact-syntax"?>
   </gl>
 
   <gl pnm="p">
-    <cn nm="bowl-top" val="35"/>
-    <cn nm="bowl-top-inside" val="27"/>
-    <cn nm="bowl-bottom" val="11"/>
-    <cn nm="bowl-bottom-inside" val="19"/>
-    <cn nm="stem-top" val="5"/>
-    <cn nm="stem-bottom" val="0"/>
-    <cn nm="serif-bottom" val="43"/>
+    <cn nm="bowl-top" val="{296;446}"/>
+    <cn nm="bowl-top-inside" val="{249;388}"/>
+    <cn nm="bowl-bottom" val="{276;-12}"/>
+    <cn nm="bowl-bottom-inside" val="{260;12}"/>
+    <cn nm="stem-top" val="{149;446}"/>
+    <cn nm="stem-bottom" val="{88;-235}"/>
+    <cn nm="serif-bottom" val="{30;-245}"/>
     <setvs axis="y"/>
     <callm nm="minim-top">
       top: stem-top
@@ -2775,13 +2775,13 @@ type="application/relax-ng-compact-syntax"?>
   </gl>
 
   <gl pnm="uniA77B">
-    <cn nm="stem-top" val="8"/>
-    <cn nm="arm-top" val="24"/>
-    <cn nm="arm-top-ins" val="38"/>
-    <cn nm="arm-end" val="32"/>
-    <cn nm="stem-bot" val="0"/>
-    <cn nm="bar-bot" val="15"/>
-    <cn nm="bar-top" val="16"/>
+    <cn nm="stem-top" val="{188;678}"/>
+    <cn nm="arm-top" val="{420;660}"/>
+    <cn nm="arm-top-ins" val="{348;582}"/>
+    <cn nm="arm-end" val="{441;498}"/>
+    <cn nm="stem-bot" val="{72;-252}"/>
+    <cn nm="bar-bot" val="{442;160}"/>
+    <cn nm="bar-top" val="{442;190}"/>
     <setvs axis="y"/>
     <mv di="cap-height-overshoot" p="stem-top">
       <sh p="(stem-top - 1) (stem-top - 2) arm-top"/>
