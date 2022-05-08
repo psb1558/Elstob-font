@@ -33,6 +33,7 @@ do
       echo "  -t Builds static TrueType fonts instead of a variable font"
       echo "  -o Builds static CFF fonts instead of a variable font"
       echo "  -a Autohint the variable font with ttfautohint-vf"
+      echo "  -n Do not hint the variable font"
       echo "  -i Generate a shorter collection of instances"
       echo "  -w Create a woff2 version of the variable font"
       echo ""
@@ -51,6 +52,9 @@ do
     elif [ $arg == "-a" ]
     then
   	 autohint=1
+    elif [ $arg == "-n" ]
+    then
+     autohint=-1
     elif [ $arg == "-w" ]
     then
   	createwoff=1
@@ -205,6 +209,7 @@ else
     echo "fontmake failed"
     exit 1
   fi
+  echo "copying variable_ttf/${fontname}-VF.ttf"
   cp "variable_ttf/${fontname}-VF.ttf" .
   echo "Checking for dsig table"
   gftools fix-dsig --autofix "${fontname}-VF.ttf"
@@ -229,33 +234,39 @@ else
     if command -v ttfautohint-vf &> /dev/null
     then
       echo "Running ttfautohint-vf"
-      ttfautohint-vf "${fontname}-VF.ttf" tmp-font.ttf
+      ttfautohint-vf "${fontname}-VF-withSTAT.ttf" tmp-font.ttf
       gftools-fix-hinting.py tmp-font.ttf
-      cp tmp-font.ttf.fix "${fontname}[GRAD,opsz,wght].ttf"
+      cp tmp-font.ttf.fix "${fontname}.ttf"
       rm tmp-font.ttf.fix
     else
       echo "ttfautohint-vf (the variable-font-enabled version of ttfautohint)"
       echo "is required to auto-hint a variable font."
     fi
-  else
-    cp "${fontname}-VF.ttf" "${fontname}[GRAD,opsz,wght].ttf"
+  elif [ $autohint -ne -1 ]
+  then
+    # cp "${fontname}-VF-withSTAT.ttf" "${fontname}.ttf"
     echo "Running Xgridfit"
-    xgridfit -q "xgf/Elstob-${fonttype}-all.xgf"
+    # xgridfit -q "xgf/Elstob-${fonttype}-all.xgf"
+    xgridfit -qq -i "${fontname}-VF-withSTAT.ttf" -o "${fontname}.ttf" "xgf/Elstob-${fonttype}-all.xgf"
     if [ $? -ne 0 ]
     then
       echo "Failed to hint with Xgridfit."
-    else
-      cp "${fontname}[GRAD,opsz,wght]-hinted.ttf" "${fontname}[GRAD,opsz,wght].ttf"
+    # else
+    #  cp "${fontname}[GRAD,opsz,wght]-hinted.ttf" "${fontname}[GRAD,opsz,wght].ttf"
     fi
+  else
+    echo "Skipping hinting"
+    cp "${fontname}-VF-withSTAT.ttf" "${fontname}.ttf"
   fi
   if [ $createwoff == 1 ]
   then
     echo "Creating woff2 version"
-    woff2_compress "${fontname}[GRAD,opsz,wght].ttf"
+    woff2_compress "${fontname}.ttf"
   fi
   echo "Cleaning up"
-  rm -f ${fontname}-VF.ttf
-  rm -f tmp-font.ttf
-  rm -f "${fontname}[GRAD,opsz,wght]-withSTAT.ttf"
-  rm -f "${fontname}[GRAD,opsz,wght]-hinted.ttf"
+#  rm -f ${fontname}-VF.ttf
+#  rm -f tmp-font.ttf
+#  rm -f "${fontname}-VF-withSTAT.ttf"
+#  rm -f "${fontname}-withSTAT.ttf"
+#  rm -f "${fontname}-hinted.ttf"
 fi
