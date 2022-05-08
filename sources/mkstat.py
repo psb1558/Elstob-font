@@ -7,9 +7,9 @@ if len(sys.argv) > 1:
     whichFont = sys.argv[1]
 
 inItalicFont =  "Elstob-Italic-VF.ttf"
-outItalicFont = "Elstob-Italic-VF.ttf"
-inRomanFont =   "Elstob[GRAD,opsz,wght].ttf"
-outRomanFont =  "Elstob[GRAD,opsz,wght]-withSTAT.ttf"
+outItalicFont = "Elstob-Italic-VF-withSTAT.ttf"
+inRomanFont =   "Elstob-VF.ttf"
+outRomanFont =  "Elstob-VF-withSTAT.ttf"
 
 commonWeightDict = dict(
     tag="wght",
