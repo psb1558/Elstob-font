@@ -504,118 +504,155 @@
 
   <!-- Section: Basic alphabet -->
   <gl pnm="A">
-    <set nm="bot-a" p="0 22 4"/>
-    <mv di="cap-height-overshoot" p="11">
-      <sh p="1"/>
+    <cn nm="top" val="{748;676}"/>
+    <cn nm="diag-top" val="{633;621}"/>
+    <cn nm="serif-left" val="{-68;0}"/>
+    <cn nm="serif-right" val="{394;8}"/>
+    <cn nm="diag-left-bot" val="{12;8}"/>
+    <cn nm="diag-right-bot" val="{394;8}"/>
+    <cn nm="bar-bot" val="{300;259}"/>
+    <cn nm="bar-top" val="{313;289}"/>
+    <set nm="bot-a" p="serif-right diag-left-bot diag-right-bot"/>
+    <mv di="cap-height-overshoot" p="top">
+      <sh p="diag-top"/>
     </mv>
     <callm nm="serif-sh">
-      pt-a: 18, pt-b: 19, sh-a: bot-a, sh-b: 23, cv-h: cap-serif
+      pt-a: serif-left, pt-b: (serif-left + 1), sh-a: bot-a,
+      sh-b: (serif-right + 1), cv-h: cap-serif
     </callm>
     <callm nm="mid-stem">
-      ref1: 18, ref2: 11, pt1: 26, pt2: 27
+      ref1: serif-left, ref2: top, pt1: bar-bot, pt2: bar-top
     </callm>
   </gl>
 
   <gl pnm="uniA732">
     <!-- AA -->
-    <set nm="bot-a" p="0 48 4 18 52 22"/>
-    <set nm="bot-b" p="49 53"/>
-    <mv di="cap-height-overshoot" p="11">
-      <sh p="1 20 29"/>
+    <cn nm="top" val="{748;676}"/>
+    <cn nm="top-r" val="{1107;676}"/>
+    <cn nm="diag-top" val="{633;621}"/>
+    <cn nm="diag-top-r" val="{991;621}"/>
+    <cn nm="serif-left" val="{-68;0}"/>
+    <cn nm="bar-bot" val="{294;259}"/>
+    <cn nm="bar-bot-r" val="{650;260}"/>
+    <cn nm="bar-top" val="{310;285}"/>
+    <cn nm="bar-top-r" val="{671;285}"/>
+    <set nm="bot-a" p="{12;8} {394;8} {435;8} {753;8} {321;0} {681;0}"/>
+    <set nm="bot-b" p="{331;25} {690;25}"/>
+    <mv di="cap-height-overshoot" p="top">
+      <sh p="top-r diag-top diag-top-r"/>
     </mv>
     <callm nm="serif-sh">
-      pt-a: 44, pt-b: 45, sh-a: bot-a, sh-b: bot-b, cv-h: cap-serif
+      pt-a: serif-left, pt-b: (serif-left + 1), sh-a: bot-a, sh-b: bot-b, cv-h: cap-serif
     </callm>
     <callm nm="mid-stem">
-      ref1: 44, ref2: 11, pt1: 37, pt2: 38
+      ref1: serif-left, ref2: top, pt1: bar-bot, pt2: bar-top
     </callm>
+    <sh r="bar-bot" p="bar-bot-r"/>
+    <sh r="bar-top" p="bar-top-r"/>
   </gl>
 
   <gl pnm="uniA734">
     <!-- AO -->
-    <set nm="bot-a" p="66 58 0 18"/>
-    <mv di="cap-height-overshoot" p="11">
-      <sh p="67 27"/>
+    <cn nm="A-top" val="{745;676}"/>
+    <cn nm="diag-top" val="{633;621}"/>
+    <cn nm="bar-top" val="{300;259}"/>
+    <cn nm="bar-bot" val="{313;289}"/>
+    <cn nm="serif-left" val="{-68;0}"/>
+    <cn nm="serif-right" val="{328;0}"/>
+    <cn nm="O-top" val="{887;676}"/>
+    <cn nm="O-top-ins" val="{865;648}"/>
+    <cn nm="O-bot" val="{693;-13}"/>
+    <cn nm="O-bot-ins" val="{717;15}"/>
+    <set nm="bot-a" p="{401;8} serif-right {12;8} O-bot"/>
+    <mv di="cap-height-overshoot" p="A-top">
+      <sh p="diag-top O-top"/>
     </mv>
-    <callm nm="round-point">
-      p: 27
-    </callm>
-    <mv di="caprs" r="27" p="45"/>
+    <mv p="O-top">
+      <mv di="caprs" p="O-top-ins"/>
+    </mv>
     <callm nm="serif-sh">
-      pt-a: 54, pt-b: 55, sh-a: bot-a, sh-b: 59, cv-h: cap-serif
+      pt-a: serif-left, pt-b: (serif-left + 1), sh-a: bot-a, sh-b: (serif-right + 1), cv-h: cap-serif
     </callm>
-    <callm nm="round-point">
-      p: 18
-    </callm>
-    <mv di="caprs" r="18" p="36"/>
+    <mv p="O-bot">
+      <mv di="caprs" p="O-bot-ins"/>
+    </mv>
     <callm nm="mid-stem">
-      ref1: 54, ref2: 11, pt1: 62, pt2: 63
+      ref1: A-top, ref2: serif-left, pt1: bar-bot, pt2: bar-top
     </callm>
   </gl>
 
   <gl pnm="uniA736">
     <!-- AU -->
-    <set nm="top-a" p="8 30 38 22"/>
-    <set nm="bot-a" p="29 0"/>
+    <cn nm="top-serif" val="{538;663}"/>
+    <cn nm="bot-serif" val="{538;663}"/>
+    <cn nm="U-bot" val="{649;-13}"/>
+    <set nm="top-a" p="{1082;655} {735;655} {695;655} {973;663}"/>
+    <set nm="bot-a" p="U-bot {12;8}"/>
     <callm nm="serif-sh">
-      pt-a: 34, pt-b: 33, sh-a: top-a, sh-b: 37, cv: cap-height
+      pt-a: top-serif, pt-b: {529;638}, sh-a: top-a, sh-b: {963;638}, cv: cap-height
     </callm>
     <callm nm="serif-sh">
-      pt-a: 41, pt-b: 42, sh-a: bot-a
+      pt-a: bot-serif, pt-b: {-59;25}, sh-a: bot-a
     </callm>
-    <callm nm="round-point">
-      p: 0
-    </callm>
-    <mv di="cap-round-stem" r="0" p="17"/>
+    <mv p="U-bot">
+      <mv di="caprs" p="{675;17}"/>
+    </mv>
     <callm nm="mid-stem">
-      ref1: 41, ref2: 34, pt1: 45, pt2: 46
+      ref1: top-serif, ref2: bot-serif, pt1: {292;260}, pt2: {313;289}
     </callm>
   </gl>
 
   <gl pnm="uniA738">
     <!-- AV -->
-    <set nm="top-a" p="7 15 31"/>
-    <set nm="bot-a" p="30 0 14"/>
+    <cn nm="top-serif" val="{924;663}"/>
+    <cn nm="bot-serif" val="{-68;0}"/>
+    <set nm="top-a" p="{748;676} {1066;655} {633;621}"/>
+    <set nm="bot-a" p="{390;0} {438;0} {12;8}"/>
     <callm nm="serif-sh">
-      pt-a: 19, pt-b: 18, sh-a: top-a, cv: cap-height
+      pt-a: top-serif, pt-b: {915;638}, sh-a: top-a, cv: cap-height
     </callm>
     <callm nm="serif-sh">
-      pt-a: 22, pt-b: 23, sh-a: bot-a, cv: baseline
+      pt-a: bot-serif, pt-b: {-59;25}, sh-a: bot-a, cv: baseline
     </callm>
     <callm nm="mid-stem">
-      ref1: 22, ref2: 19, pt1: 26, pt2: 27
+      ref1: top-serif, ref2: bot-serif, pt1: {300;259}, pt2: {313;289}
     </callm>
   </gl>
 
   <gl pnm="uniA73A">
     <!-- AV with bar -->
-    <set nm="top-a" p="11 23 31 19"/>
-    <set nm="bot-a" p="30 4 18"/>
+    <cn nm="top-serif" val="{924;663}"/>
+    <cn nm="bot-serif" val="{-68;0}"/>
+    <set nm="top-a" p="{748;676} {1066;655} {664;615}"/>
+    <set nm="bot-a" p="{390;0} {438;0} {12;8}"/>
     <callm nm="serif-sh">
-      pt-a: 23, pt-b: 22, sh-a: top-a, cv: cap-height
+      pt-a: top-serif, pt-b: {915;638}, sh-a: top-a, cv: cap-height
     </callm>
     <callm nm="serif-sh">
-      pt-a: 26, pt-b: 27, sh-a: bot-a, cv: baseline
+      pt-a: bot-serif, pt-b: {-59;25}, sh-a: bot-a, cv: baseline
     </callm>
     <callm nm="mid-stem">
-      ref1: 23, ref2: 26, pt1: 0, pt2: 1
+      ref1: top-serif, ref2: bot-serif, pt1: {306;276}, pt2: {337;306}
     </callm>
   </gl>
 
   <gl pnm="uniA73C">
-    <!-- AV with bar -->
-    <set nm="top-a" p="15 38 50"/>
+    <!-- AY -->
+    <cn nm="bot" val="{146;-237}"/>
+    <cn nm="top-serif" val="{822;663}"/>
+    <cn nm="bot-serif" val="{-68;0}"/>
+    <set nm="top-a" p="{962;655} {640;676} {567;615}"/>
     <callm nm="serif-sh">
-      pt-a: 46, pt-b: 45, sh-a: top-a, cv: cap-height
+      pt-a: top-serif, pt-b: (top-serif - 1), sh-a: top-a, cv: cap-height
     </callm>
     <callm nm="serif-sh">
-      pt-a: 23, pt-b: 24, sh-a: 49, cv: baseline
+      pt-a: bot-serif, pt-b: (bot-serif + 1), sh-a: {12;8}, cv: baseline
     </callm>
     <callm nm="mid-stem">
-      ref1: 46, ref2: 23, pt1: 28, pt2: 29
+      ref1: top-serif, ref2: bot-serif, pt1: {253;259}, pt2: {266;289}
     </callm>
-    <mv p="0"/>
-    <ip r="23 0" p="31"/>
+    <mv p="bot"/>
+    <ip r="top-serif bot" p="{384;-50} {501;88}"/>
   </gl>
 
   <gl pnm="Aring">
@@ -669,13 +706,13 @@
   </gl>
 
   <gl pnm="C">
-    <mv di="cap-baseline-undershoot" p="0">
-      <sh p="39"/>
-      <mv di="cap-round-stem" p="33"/>
+    <mv di="cap-baseline-undershoot" p="{331;-13}">
+      <sh p="{531;-3}"/>
+      <mv di="cap-round-stem" p="{336;16}"/>
     </mv>
-    <mv di="cap-height-overshoot" p="9">
-      <sh p="15"/>
-      <mv di="cap-round-stem" p="23"/>
+    <mv di="cap-height-overshoot" p="{455;677}">
+      <sh p="{695;650}"/>
+      <mv di="cap-round-stem" p="{453;648}"/>
     </mv>
   </gl>
 
@@ -693,30 +730,34 @@
 
   <gl pnm="uniA779">
     <!-- insular D -->
-    <mv di="cap-height" p="37">
-      <mv p="28">
-        <ip p="10"/>
+    <mv di="cap-height" p="{532;661}">
+      <mv p="{508;619}">
+        <ip p="{427;630}"/>
       </mv>
     </mv>
-    <mv di="cap-baseline-undershoot" p="0">
-      <mv p="18"/>
+    <mv di="cap-baseline-undershoot" p="{344;-16}">
+      <mv p="{370;21}"/>
     </mv>
   </gl>
 
   <gl pnm="E">
+    <cn nm="top-serif" val="{192;663}"/>
+    <cn nm="bot-serif" val="{-40;0}"/>
+    <cn nm="bar-bot" val="{272;323}"/>
+    <cn nm="bar-top" val="{282;353}"/>
     <callm nm="serif-sh">
-      pt-a: 29, pt-b: 28, sh-a: 1, cv: cap-height
+      pt-a: top-serif, pt-b: (top-serif - 1), sh-a: {332;655}, cv: cap-height
     </callm>
-    <mv di="cap-bar" r="29" p="26"/>
+    <mv di="cap-bar" r="top-serif" p="{374;633}"/>
     <callm nm="serif-sh">
-      pt-a: 4, pt-b: 5, sh-a: 0, cv: baseline
+      pt-a: bot-serif, pt-b: (bot-serif + 1), sh-a: {97;8}, cv: baseline
     </callm>
-    <mv di="cap-bar" r="4" p="7"/>
+    <mv di="cap-bar" r="bot-serif" p="{152;30}"/>
     <callm nm="mid-stem">
-      ref1: 29, ref2: 4, pt1: 14, pt2: 15, cv: cap-bar
+      ref1: bot-serif, ref2: top-serif, pt1: bar-bot, pt2: bar-top, cv: cap-bar
     </callm>
-    <sh r="14" p="18"/>
-    <sh r="15" p="19"/>
+    <sh r="bar-bot" p="{458;210}"/>
+    <sh r="bar-top" p="{544;452}"/>
   </gl>
 
   <gl pnm="F">
@@ -748,36 +789,42 @@
   </gl>
 
   <gl pnm="G">
-    <mv di="cap-baseline-undershoot" p="0">
-      <mv p="32"/>
+    <cn nm="top" val="{438;676}"/>
+    <cn nm="bot" val="{368;-13}"/>
+    <cn nm="serif" val="{466;322}"/>
+    <mv di="cap-baseline-undershoot" p="bot">
+      <mv p="{357;19}"/>
     </mv>
-    <mv di="cap-height-overshoot" p="9">
-      <sh p="14"/>
-      <mv di="cap-round-stem" p="21"/>
+    <mv di="cap-height-overshoot" p="top">
+      <sh p="{681;669}"/>
+      <mv di="cap-round-stem" p="{435;648}"/>
     </mv>
-    <ip r="9 0" p="45"/>
-    <mv p="45">
-      <mv di="cap-serif" p="46">
-        <sh p="36"/>
+    <ip r="top bot" p="serif"/>
+    <mv p="serif">
+      <mv di="cap-serif" p="(serif - 1)">
+        <sh p="{542;311}"/>
       </mv>
     </mv>
   </gl>
 
   <gl pnm="uniA77D">
     <!-- insular G -->
-    <mv p="0">
-      <mv di="caprs" p="53"/>
+    <cn nm="top" val="{741;664}"/>
+    <cn nm="bot" val="{249;-188}"/>
+    <cn nm="loop-top" val="{350;248}"/>
+    <mv p="bot">
+      <mv di="caprs" p="{257;-161}"/>
     </mv>
-    <mv di="cap-height" p="29">
-      <mv p="36">
-        <ip p="20 37"/>
-        <sh p="21"/>
+    <mv di="cap-height" p="top">
+      <mv p="{725;613}">
+        <ip p="{536;639} {492;644}"/>
+        <sh p="{479;613}"/>
       </mv>
     </mv>
-    <ip r="29 0" p="62"/>
-    <mv p="62">
-      <mv p="10">
-        <ip p="11"/>
+    <ip r="top bot" p="loop-top"/>
+    <mv p="loop-top">
+      <mv p="{335;214}">
+        <ip p="{346;230}"/>
       </mv>
     </mv>
   </gl>
@@ -825,11 +872,11 @@
 
   <gl pnm="J">
     <callm nm="serif-sh">
-      pt-a: 31, pt-b: 30, sh-a: 18, cv: cap-height
+      pt-a: {201;663}, pt-b: {192;638}, sh-a: {310;655}, cv: cap-height
     </callm>
-    <mv p="0">
-      <sh p="11"/>
-      <mv p="6"/>
+    <mv p="{-106;-205}">
+      <sh p="{-85;-96}"/>
+      <mv p="{-48;-156}"/>
     </mv>
   </gl>
 
@@ -852,7 +899,7 @@
       pt-a: 16, pt-b: 15, sh-a: 12, cv: cap-height
     </callm>
     <callm nm="serif-sh">
-      pt-a: 0, pt-b: 1, sh-a: 1, cv: baseline
+      pt-a: 0, pt-b: 1, sh-a: 11, cv: baseline
     </callm>
     <mv di="cap-bar" r="0" p="3"/>
   </gl>
@@ -866,6 +913,7 @@
     <callm nm="serif-sh">
       pt-a: 28, pt-b: 29, sh-a: bot-a, sh-b: 33, cv: baseline
     </callm>
+    <sh r="0" p="10"/>
   </gl>
 
   <gl pnm="N">
@@ -880,40 +928,43 @@
   </gl>
 
   <gl pnm="Eng">
-    <set nm="top-a" p="47 43 31"/>
+    <cn nm="bot-serif" val="{-40;0}"/>
+    <cn nm="top-serif" val="{630;663}"/>
+    <set nm="top-a" p="{755;655} {184;663} {300;652}"/>
     <callm nm="serif-sh">
-      pt-a: 24, pt-b: 23, sh-a: top-a, sh-b: 42, cv: cap-height
+      pt-a: top-serif, pt-b: (top-serif - 1), sh-a: top-a, sh-b: {174;638},
+      cv: cap-height
     </callm>
     <callm nm="serif-sh">
-      pt-a: 38, pt-b: 39, sh-a: 46, cv: baseline
+      pt-a: bot-serif, pt-b: (bot-serif + 1), sh-a: {55;8}, cv: baseline
     </callm>
-    <mv p="0">
-      <sh p="12"/>
-      <mv p="6"/>
+    <mv p="{293;-245}">
+      <sh p="{310;-136}"/>
+      <mv p="{349;-196}"/>
     </mv>
   </gl>
 
   <gl pnm="O">
-    <mv di="cap-baseline-undershoot" p="0">
-      <mv p="20"/>
+    <mv di="cap-baseline-undershoot" p="{289;-13}">
+      <mv p="{256;23}"/>
     </mv>
-    <mv di="cap-height-overshoot" p="10">
-      <mv p="31"/>
+    <mv di="cap-height-overshoot" p="{390;676}">
+      <mv p="{419;644}"/>
     </mv>
   </gl>
 
   <gl pnm="uniA74E">
     <!-- OO -->
-    <mv di="cap-baseline-undershoot" p="0">
-      <sh p="27"/>
-      <mv p="34">
-        <sh p="58"/>
+    <mv di="cap-baseline-undershoot" p="{289;-13}">
+      <sh p="{726;-13}"/>
+      <mv p="{255;24}">
+        <sh p="{692;24}"/>
       </mv>
     </mv>
-    <mv di="cap-height-overshoot" p="10">
-      <sh p="17"/>
-      <mv p="47">
-        <sh p="69"/>
+    <mv di="cap-height-overshoot" p="{390;676}">
+      <sh p="{827;676}"/>
+      <mv p="{420;643}">
+        <sh p="{858;643}"/>
       </mv>
     </mv>
   </gl>
@@ -943,17 +994,21 @@
   </gl>
 
   <gl pnm="P">
+    <cn nm="top-serif" val="{123;663}"/>
+    <cn nm="bot-serif" val="{-40;0}"/>
     <callm nm="serif-sh">
-      pt-a: 23, pt-b: 22, sh-a: 1, cv: cap-height
+      pt-a: top-serif, pt-b: (top-serif - 1), sh-a: {288;655}, cv: cap-height
     </callm>
-    <mv di="cap-bar" r="23" p="20"/>
+    <mv di="cap-bar" r="top-serif" p="{330;633}"/>
     <callm nm="serif-sh">
-      pt-a: 32, pt-b: 33, sh-a: 0, cv: baseline
+      pt-a: bot-serif, pt-b: (bot-serif + 1), sh-a: {53;8}, cv: baseline
     </callm>
     <callm nm="mid-stem">
-      ref1: 30, ref2: 23, pt1: 4, pt2: 10, cv: cap-round-stem
+      ref1: bot-serif, ref2: top-serif, pt1: {364;280}, pt2: {332;310}, cv: cap-round-stem
     </callm>
   </gl>
+
+  <!-- stopped here -->
 
   <gl pnm="Thorn">
     <callm nm="serif-sh">
