@@ -247,7 +247,7 @@ else
     # cp "${fontname}-VF-withSTAT.ttf" "${fontname}.ttf"
     echo "Running Xgridfit"
     # xgridfit -q "xgf/Elstob-${fonttype}-all.xgf"
-    xgridfit -qq -i "${fontname}-VF-withSTAT.ttf" -o "${fontname}.ttf" "xgf/Elstob-${fonttype}-all.xgf"
+    xgridfit -q -i "${fontname}-VF-withSTAT.ttf" -o "${fontname}.ttf" "xgf/Elstob-${fonttype}-all.xgf"
     if [ $? -ne 0 ]
     then
       echo "Failed to hint with Xgridfit."
@@ -264,9 +264,8 @@ else
     woff2_compress "${fontname}.ttf"
   fi
   echo "Cleaning up"
-#  rm -f ${fontname}-VF.ttf
+  rm -f ${fontname}-VF.ttf
 #  rm -f tmp-font.ttf
-#  rm -f "${fontname}-VF-withSTAT.ttf"
-#  rm -f "${fontname}-withSTAT.ttf"
+  rm -f "${fontname}-VF-withSTAT.ttf"#  rm -f "${fontname}-withSTAT.ttf"
 #  rm -f "${fontname}-hinted.ttf"
 fi
