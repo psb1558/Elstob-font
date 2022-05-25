@@ -814,6 +814,74 @@ type="application/relax-ng-compact-syntax"?>
     <iup axis="y"/>
   </gl>
 
+	<gl pnm="uniA7D1" assume-y="yes"> <!-- Orm's g -->
+		<cn nm="bar-top" val="{258;435}"/>
+		<cn nm="loop-bot" val="{232;-245}"/>
+		<cn nm="bar-bot" val="{444;398}"/>
+		<mv di="xheight" p="bar-top">
+			<mv p="bar-bot"/>
+		</mv>
+		<mv di="lc-descender" p="loop-bot">
+			<mv di="lc-round-stem" p="{259;-215}"/>
+		</mv>
+		<!-- points on top of each other  -->
+		<mv di="baseline-undershoot" p="0">
+			<sh p="47"/>
+			<mv di="lc-round-stem" p="15">
+				<sh p="48"/>
+			</mv>
+		</mv>
+	</gl>
+
+	<gl pnm="uniA7D3" assume-y="yes"> <!-- double thorn -->
+		<cn nm="top" val="{142;726}"/>
+		<cn nm="bot" val="{45;-245}"/>
+		<cn nm="bot-loop-bot" val="{140;-42}"/>
+		<cn nm="bot-loop-top" val="{287;276}"/>
+		<cn nm="top-loop-bot" val="{280;264}"/>
+		<cn nm="top-loop-top" val="{287;510}"/>
+		<callm nm="ascender-top">
+			top: top
+		</callm>
+		<mv di="lc-descender" p="bot"/>
+		<ip r="top bot" p="bot-loop-bot bot-loop-top top-loop-top"/>
+		<mv p="top-loop-top">
+			<mv di="lc-round-stem" p="{259;482}"/>
+		</mv>
+		<mv p="bot-loop-top">
+			<mv di="lc-round-stem" p="{259;248}">
+				<ip p="top-loop-bot"/>
+			</mv>
+		</mv>
+		<mv p="bot-loop-bot">
+			<mv di="lc-round-stem" p="{149;-6}"/>
+		</mv>
+	</gl>
+
+	<gl pnm="uniA7D5" assume-y="yes"> <!-- double thorn -->
+		<cn nm="top" val="{142;510}"/>
+		<cn nm="bot" val="{45;-245}"/>
+		<cn nm="bot-loop-bot" val="{140;-42}"/>
+		<cn nm="bot-loop-top" val="{287;276}"/>
+		<cn nm="top-loop-bot" val="{280;264}"/>
+		<cn nm="top-loop-top" val="{287;510}"/>
+		<mv di="lc-descender" p="{45;-245}"/>
+		<mv p="top-loop-top">
+			<sh p="top"/>
+			<mv di="lc-round-stem" p="{259;482}"/>
+		</mv>
+		<mv di="lc-descender" p="bot"/>
+		<ip r="top-loop-top bot" p="bot-loop-bot bot-loop-top"/>
+		<mv p="bot-loop-top">
+			<mv di="lc-round-stem" p="{259;248}">
+				<ip p="top-loop-bot"/>
+			</mv>
+		</mv>
+		<mv p="bot-loop-bot">
+			<mv di="lc-round-stem" p="{149;-6}"/>
+		</mv>
+	</gl>
+
   <gl pnm="h">
     <cn nm="top" val="{148;726}"/>
     <cn nm="counter-top" val="{358;446}"/>
@@ -1973,6 +2041,30 @@ type="application/relax-ng-compact-syntax"?>
     </mv>
     <iup axis="y"/>
   </gl>
+
+	<gl pnm="uniA7D0" assume-y="yes"> <!-- Gormulum -->
+		<cn nm="top" val="{415;663}"/>
+		<cn nm="bot" val="{362;-245}"/>
+		<cn nm="bline" val="0"/> <!-- points on top of each other -->
+		<cn nm="bline-ins" val="18"/>
+		<cn nm="loop-top-a" val="53"/>
+		<cn nm="loop-top-b" val="54"/>
+		<mv di="cap-height" p="top">
+			<sh p="{120;722}"/>
+			<mv p="{675;611}">
+				<ip p="{438;631} {261;631}"/>
+			</mv>
+		</mv>
+		<mv di="cap-baseline-undershoot" p="bline">
+			<sh p="loop-top-a"/>
+			<mv di="cap-round-stem" p="bline-ins">
+				<sh p="loop-top-b"/>
+			</mv>
+		</mv>
+		<mv p="bot">
+			<mv p="{409;-215}"/>
+		</mv>
+	</gl>
 
   <gl pnm="H">
 		<pm nm="do-iup" val="0"/>
@@ -3242,14 +3334,14 @@ type="application/relax-ng-compact-syntax"?>
     <cn nm="top-inside" val="{200;410}"/>
     <cn nm="bottom" val="{151;-11}"/>
     <cn nm="bottom-inside" val="{185;37}"/>
-    <cn nm="bottom-right" val="{411;-11}"/>
+    <cn nm="bottom-right" val="{402;-11}"/>
     <cn nm="mid-upper" val="{290;267}"/>
     <cn nm="mid-lower" val="{294;237}"/>
-    <cn nm="u-bow-ins" val="{438;37}"/>
-    <cn nm="u-top-a" val="{505;435}"/>
-    <cn nm="u-top-b" val="{505;405}"/>
-    <cn nm="u-stem-top" val="{567;417}"/>
-    <cn nm="u-stem-bot" val="{584;-16}"/>
+    <cn nm="u-bow-ins" val="{430;37}"/>
+    <cn nm="u-top-a" val="{485;435}"/>
+    <cn nm="u-top-b" val="{485;405}"/>
+    <cn nm="u-stem-top" val="{547;417}"/>
+    <cn nm="u-stem-bot" val="{564;-16}"/>
     <setvs axis="y"/>
     <callm nm="serif-sh">
       pt-a: u-top-a, pt-b: u-top-b, sh-a: u-stem-top, cv: xheight, cv-h: lc-serif
@@ -10006,6 +10098,58 @@ type="application/relax-ng-compact-syntax"?>
     </mv>
     <iup axis="y"/>
   </gl>
+
+	<gl pnm="uni1ACD" assume-y="yes"> <!-- combining insular r -->
+		<cn nm="top" val="{-158;814}"/>
+		<cn nm="bot" val="{-325;521}"/>
+		<mv p="top">
+			<mv p="{-191;788}"/>
+		</mv>
+		<mv p="bot"/>
+		<ip r="top bot" p="{-102;648} {-159;635} {-78;653} {-84;669} {-183;625} {-175;610}"/>
+	</gl>
+
+	<gl pnm="uni1ACC" assume-y="yes"> <!-- combining insular g -->
+		<cn nm="top" val="{-202;792}"/>
+		<cn nm="bot" val="{-202;526}"/>
+		<cn nm="loop-top" val="{-210;633}"/>
+		<mv p="top">
+			<mv p="{-88;772}">
+				<ip p="{-171;779} {-194;781}"/>
+			</mv>
+		</mv>
+		<mv p="bot">
+			<mv p="{-206;542}"/>
+		</mv>
+		<ip r="top bot" p="loop-top"/>
+		<mv p="loop-top">
+			<mv p="{-208;653}">
+				<ip p="{-202;640}"/>
+			</mv>
+		</mv>
+	</gl>
+
+	<gl pnm="uni1ACE" assume-y="yes"> <!-- combining insular t -->
+		<cn nm="top" val="{-209;743}"/>
+		<cn nm="bot" val="{-197;520}"/>
+		<mv p="top">
+			<mv p="{-97;722}">
+				<ip p="{-186;732} {-242;732}"/>
+			</mv>
+		</mv>
+		<mv p="bot">
+			<mv p="{-162;555}"/>
+		</mv>
+	</gl>
+
+	<gl pnm="uni1ACB" assume-y="yes"> <!-- triple acute -->
+		<mv p="{-318;521}">
+			<sh p="{-216;521} {-114;521}"/>
+			<mv p="{-271;715}">
+				<sh p="{-169;715} {-67;715}"/>
+			</mv>
+		</mv>
+	</gl>
 
   <gl pnm="uni1DE3">
     <setvs axis="y"/>
