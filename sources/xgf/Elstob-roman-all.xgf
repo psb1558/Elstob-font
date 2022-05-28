@@ -927,6 +927,36 @@ type="application/relax-ng-compact-syntax"?>
     </compile-if>
   </gl>
 
+	<gl pnm="uniA7C0"> <!-- Old Polish O -->
+		<mv di="cap-height-overshoot" p="{373;676}">
+			<sh p="{404;786}"/>
+			<mv di="cap-round-stem" p="{370;648}">
+				<ip p="{404;663}"/>
+			</mv>
+		</mv>
+		<mv di="cap-baseline-undershoot" p="{370;-13}">
+			<sh p="{404;-123}"/>
+			<mv di="cap-round-stem" p="{379;15}">
+				<ip p="{404;0}"/>
+			</mv>
+		</mv>
+	</gl>
+
+	<gl pnm="uniA7C1"> <!-- Old Polish o -->
+		<mv di="xheight-overshoot" p="{255;446}">
+			<sh p="{274;526}"/>
+			<mv di="lc-round-stem" p="{255;418}">
+				<ip p="{235;435}"/>
+			</mv>
+		</mv>
+		<mv di="baseline-undershoot" p="{255;-12}">
+			<sh p="{274;-92}"/>
+			<mv di="lc-round-stem" p="{255;16}">
+				<ip p="{274;0}"/>
+			</mv>
+		</mv>
+	</gl>
+
   <gl pnm="uni0237">
     <cn nm="top" val="{151;446}"/>
     <cn nm="bottom" val="{40;-245}"/>
@@ -4202,14 +4232,13 @@ type="application/relax-ng-compact-syntax"?>
 
   <gl pnm="uni02B2">
     <setvs axis="y"/>
-    <mv p="19">
-      <mv col="w" p="29">
-        <mv col="b" p="35"/>
+    <mv p="{90;637}">
+      <mv col="w" p="{70;696}">
+        <mv col="b" p="{70;776}"/>
       </mv>
     </mv>
-    <mv p="0">
-      <sh p="12"/>
-      <mv p="6"/>
+    <mv p="{27;244}">
+      <sh p="{27;274}"/>
     </mv>
     <iup axis="y"/>
   </gl>
@@ -9544,7 +9573,7 @@ type="application/relax-ng-compact-syntax"?>
   <gl pnm="uni1DD1">
 		<cn nm="bot" val="{-293;541}"/>
 		<cn nm="top" val="{-238;760}"/>
-		<cn nm="top-sh" val="{82;782}"/>
+		<cn nm="top-sh" val="{101;786}"/>
 		<cn nm="top-ins" val="{-272;732}"/>
     <setvs axis="y"/>
     <push>top-ins top-sh top bot</push>
@@ -9727,18 +9756,24 @@ type="application/relax-ng-compact-syntax"?>
     <iup axis="y"/>
   </gl>
 
-  <gl pnm="uni1DD7">
-    <setvs axis="y"/>
-    <mv p="0">
-      <sh p="51"/>
-      <mv di="mark-curve" col="b" p="26"/>
+  <gl pnm="uni1DD7"> <!-- ccedilla comb -->
+		<cn nm="c-top" val="{-181;830}"/>
+		<cn nm="c-bot" val="{-199;631}"/>
+		<cn nm="ced-bot" val="{-223;521}"/>
+		<setvs axis="y"/>
+		<mv p="c-top">
+			<mv di="mark-curve" p="{-181;815}"/>
+		</mv>
+		<mv p="c-bot">
+			<sh p="ced-bot"/>
+			<mv di="mark-curve" p="{-168;666}">
+				<ip p="{-181;651}"/>
+			</mv>
     </mv>
-    <mv p="33">
-      <mv di="mark-curve" col="b" p="45"/>
-    </mv>
-    <mv p="6">
-      <mv col="b" p="19"/>
-    </mv>
+		<mv p="ced-bot">
+			<mv p="{-216;539}"/>
+		</mv>
+		<ip r="ced-bot c-bot" p="{-208;610} {-242;593}"/>
     <iup axis="y"/>
   </gl>
 
@@ -9850,10 +9885,10 @@ type="application/relax-ng-compact-syntax"?>
   <gl pnm="uni0368">
     <setvs axis="y"/>
     <callm nm="plain-stem">
-      pt1: 0, pt2: 28
+      pt1: {-198;521}, pt2: {-164;556}
     </callm>
     <callm nm="one-wd-stem">
-      pt1: 7, pt2: 21, cv: mark-curve
+      pt1: {-178;740}, pt2: {-178;725}, cv: mark-curve
     </callm>
     <iup axis="y"/>
   </gl>
@@ -10037,18 +10072,22 @@ type="application/relax-ng-compact-syntax"?>
   </gl>
 
   <gl pnm="uni1DDA">
+		<cn nm="bot" val="{-228;521}"/>
+		<cn nm="top" val="{-205;819}"/>
+		<cn nm="loop-top" val="{-186;651}"/>
     <setvs axis="y"/>
     <callm nm="one-wd-stem">
-      pt1: 0, pt2: 13, cv: mark-curve
+      pt1: bot, pt2: {-204;538}, cv: mark-curve
     </callm>
     <callm nm="one-wd-stem">
-      pt1: 46, pt2: 58, cv: mark-curve
+      pt1: top, pt2: {-207;805}, cv: mark-curve
+    </callm>
+		<sh r="top" p="{-93;819}"/>
+		<callm nm="mid-stem">
+      ref1: top, ref2: bot, pt1: {-191;608}, pt2: loop-top
     </callm>
     <callm nm="mid-stem">
-      ref1: 46, ref2: 0, pt1: 40, pt2: 52, cv: mark-curve
-    </callm>
-    <callm nm="mid-stem">
-      ref1: 40, ref2: 0, pt1: 33, pt2: 20
+      ref1: top, ref2: loop-top, pt1: {-212;679}, pt2: {-207;693}, cv: mark-curve
     </callm>
     <iup axis="y"/>
   </gl>
