@@ -147,6 +147,10 @@ fi
 # build the fonts.
 if [ $outputType = "s" ];
 then
+  if [ $fonttype == "italic" ]
+  then
+    xsltproc -o $des fix-italic-slant.xsl $des
+  fi
   echo "Running fontmake to build static TrueType instances"
   fontmake -o ttf -a -i -m $des
   if [ $? -ne 0 ]
@@ -157,22 +161,14 @@ then
   cd autohinted/instance_ttf
   if [ $fonttype == "italic" ]
   then
-    for ff in "${familyname}*Italic.ttf"
+    for ff in ${familyname}*Italic.ttf;
     do
-      gftools fix-dsig --autofix $ff
+      python ../../add_dsig.py $ff;
     done
   else
-    for ff in `find . -maxdepth 1 -name "${familyname}*.ttf" -not -name "*Italic.ttf"`
+    for ff in `find . -maxdepth 1 -name "${familyname}*.ttf" -not -name "*Italic.ttf"`;
     do
-      gftools fix-dsig --autofix $ff
-      gftools-fix-hinting.py $ff
-      if [ -f "${ff}.fix" ]
-      then
-        cp "${ff}.fix"  $ff
-        rm "${ff}.fix"
-      else
-        echo "fix for head table flags in ${ff} appears to have failed"
-      fi
+      python ../../add_dsig.py $ff
     done
   fi
   cd ../..
@@ -190,13 +186,13 @@ then
   then
     for ff in "${familyname}*Italic.otf"
     do
-      gftools fix-dsig --autofix $ff
+      python ../add_dsig.py $ff
 	    psautohint $ff
     done
   else
     for ff in `find . -maxdepth 1 -name "${familyname}*.otf" -not -name "*Italic.otf"`
     do
-      gftools fix-dsig --autofix $ff
+      python ../add_dsig.py $ff
       psautohint $ff
     done
   fi
@@ -211,8 +207,8 @@ else
   fi
   echo "copying variable_ttf/${fontname}-VF.ttf"
   cp "variable_ttf/${fontname}-VF.ttf" .
-  echo "Checking for dsig table"
-  gftools fix-dsig --autofix "${fontname}-VF.ttf"
+  echo "Adding dsig table"
+  python add_dsig.py "${fontname}-VF.ttf"
   echo "Building STAT table and fixing name table"
   python mkstat.py $fonttype
   if [ $? -ne 0 ]
@@ -247,7 +243,7 @@ else
     # cp "${fontname}-VF-withSTAT.ttf" "${fontname}.ttf"
     echo "Running Xgridfit"
     # xgridfit -q "xgf/Elstob-${fonttype}-all.xgf"
-    xgridfit -q -i "${fontname}-VF-withSTAT.ttf" -o "${fontname}.ttf" "xgf/Elstob-${fonttype}-all.xgf"
+    xgridfit -i "${fontname}-VF-withSTAT.ttf" -o "${fontname}.ttf" "xgf/Elstob-${fonttype}-all.xgf"
     if [ $? -ne 0 ]
     then
       echo "Failed to hint with Xgridfit."
