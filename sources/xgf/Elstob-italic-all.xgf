@@ -1547,7 +1547,7 @@
 
   <!-- end of capitals. begin lowercase -->
 
-  <gl pnm="a">
+  <gl pnm="a" xoffset="5">
     <mv di="lcbu" p="0">
       <sh p="38"/>
       <mv p="26"/>
@@ -2149,7 +2149,7 @@
     </mv>
   </gl>
 
-  <gl pnm="t">
+  <gl pnm="t" xoffset="10">
     <cn nm="top" val="{233;537}"/>
     <cn nm="bot" val="{64;-11}"/>
     <mv di="lcbu" p="bot">
