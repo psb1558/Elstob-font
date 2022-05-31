@@ -10,6 +10,7 @@
     </xsl:template>
 
     <xsl:template match="instance[starts-with(@stylename,'6pt') or
-			 starts-with(@stylename,'Grade')]"/>
-    
+			 starts-with(@stylename,'Grade') or
+       contains(@stylename,'Slant')]"/>
+
 </xsl:stylesheet>

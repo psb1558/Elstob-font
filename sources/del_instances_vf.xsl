@@ -13,6 +13,7 @@
        contains(@stylename,'pt Light') or
        contains(@stylename,'pt Extra') or
        contains(@stylename,'pt Medium') or
-       contains(@stylename,'pt SemiBold')]"/>
+       contains(@stylename,'pt SemiBold') or
+       contains(@stylename,'Slant')]"/>
 
 </xsl:stylesheet>
