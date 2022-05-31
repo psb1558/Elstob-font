@@ -186,6 +186,11 @@ bari an is briostun.";
         max: 0.2,
         step: 0.001,
         value: 0});
+    $( "#romslnt").slider({
+        min: 0,
+        max: 15,
+        step: 0.01,
+        value: 8});
 
     $("#rompresets").selectmenu();
     $("#languages").selectmenu();
@@ -464,10 +469,11 @@ bari an is briostun.";
       if ($("#romital").is(":checked")) {
         $("#romtextarea").css("font-style", "italic");
         $("#aespan").css("display", "inline");
+        $("#romslntlabel, #romslnt").css("display", "block");
       }
       else {
         $("#romtextarea").css("font-style", "normal");
-        $("#aespan").css("display", "none");
+        $("#aespan, #romslntlabel, #romslnt").css("display", "none");
       }
       if ($("#romdlig").is(":checked"))
         fstring = featureString(fstring, "dlig", "on");

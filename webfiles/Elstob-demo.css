@@ -16,7 +16,7 @@
     --romopsz: 10;
     --romwght: 400;
     --romGRAD: 0;
-    --romslnt: 8,
+    --romslnt: 8;
     --romspacing: 0em;
     --italopsz: 10;
     --italwght: 400;
@@ -54,7 +54,7 @@ b{
     letter-spacing: var(--romspacing);
     font-variation-settings: 'opsz' var(--romopsz),
          'wght' var(--romwght),
-         'slnt' 8,
+         'slnt' var(--romslnt),
          'GRAD' var(--romGRAD);
     font-feature-settings: 'calt' on;
 }
