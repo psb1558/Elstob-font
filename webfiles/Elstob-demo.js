@@ -408,14 +408,14 @@ bari an is briostun.";
           case "MiddleEnglish":
             t = middleenglishtext;
             // r rotunda with rules; always long s; crossed Tironian nota
-            $( ".featurebutton" ).not("#romital, #romhist, #romss16, #romcv692").prop("checked", false).change();
-            $("#romhist, #romss16, #romcv692").prop("checked",true).change();
+            $( ".featurebutton" ).not("#romital, #romcv382, #romss16, #romcv692").prop("checked", false).change();
+            $("#romcv382, #romss16, #romcv692").prop("checked",true).change();
             break;
           case "Latin":
             l = "la";
             t = latintext;
-            $( ".featurebutton" ).not("#romital, #romhist").prop("checked", false).change();
-            $("#romhist").prop("checked",true).change();
+            $( ".featurebutton" ).not("#romital, #romcv382").prop("checked", false).change();
+            $("#romcv382").prop("checked",true).change();
             break;
           case "Gothic":
             // lang code for Gothic is got. Here it simply means "not English."
@@ -427,7 +427,7 @@ bari an is briostun.";
             l = "is";
             t = norsetext;
             $( ".featurebutton" ).not("#romital, #romcv131, #romcv692").prop("checked", false).change();
-            $("#romhist, #romcv131, #romcv692").prop("checked",true).change();
+            $("#romcv382, #romcv131, #romcv692").prop("checked",true).change();
             break;
           case "OldSaxon":
             // lang code is osx.
@@ -485,8 +485,8 @@ bari an is briostun.";
         fstring = featureString(fstring, "ss02", "on");
       if ($("#romss01").is(":checked"))
         fstring = featureString(fstring, "ss01", "on");
-      if ($("#romhist").is(":checked"))
-	      fstring = featureString(fstring, "hist", "on");
+      if ($("#romcv382").is(":checked"))
+	      fstring = featureString(fstring, "cv38", "2");
       if ($("#romcv33").is(":checked"))
 	      fstring = featureString(fstring, "cv33", "on");
       if ($("#romcv691").is(":checked"))
