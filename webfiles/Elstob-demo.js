@@ -533,7 +533,7 @@ bari an is briostun.";
       if ($("#romss15").is(":checked"))
 	      fstring = featureString(fstring, "ss15", "on");
       if ($("#romcv362").is(":checked"))
-	      fstring = featureString(fstring, "ss36", "2");
+	      fstring = featureString(fstring, "cv36", "2");
       if ($("#romss08").is(":checked"))
         fstring = featureString(fstring, "ss08", "on");
       if ($("#romss16").is(":checked"))
