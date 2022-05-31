@@ -408,8 +408,8 @@ bari an is briostun.";
           case "MiddleEnglish":
             t = middleenglishtext;
             // r rotunda with rules; always long s; crossed Tironian nota
-            $( ".featurebutton" ).not("#romital, #romhist, #romss16, #romcv402").prop("checked", false).change();
-            $("#romhist, #romss16, #romcv402").prop("checked",true).change();
+            $( ".featurebutton" ).not("#romital, #romhist, #romss16, #romcv692").prop("checked", false).change();
+            $("#romhist, #romss16, #romcv692").prop("checked",true).change();
             break;
           case "Latin":
             l = "la";
@@ -426,8 +426,8 @@ bari an is briostun.";
           case "OldIcelandic":
             l = "is";
             t = norsetext;
-            $( ".featurebutton" ).not("#romital, #romcv131, #romcv402").prop("checked", false).change();
-            $("#romhist, #romcv131, #romcv402").prop("checked",true).change();
+            $( ".featurebutton" ).not("#romital, #romcv131, #romcv692").prop("checked", false).change();
+            $("#romhist, #romcv131, #romcv692").prop("checked",true).change();
             break;
           case "OldSaxon":
             // lang code is osx.
@@ -489,10 +489,10 @@ bari an is briostun.";
 	      fstring = featureString(fstring, "hist", "on");
       if ($("#romcv33").is(":checked"))
 	      fstring = featureString(fstring, "cv33", "on");
-      if ($("#romcv401").is(":checked"))
-  	    fstring = featureString(fstring, "cv40", "1");
-      if ($("#romcv402").is(":checked"))
-    	  fstring = featureString(fstring, "cv40", "2");
+      if ($("#romcv691").is(":checked"))
+  	    fstring = featureString(fstring, "cv69", "1");
+      if ($("#romcv692").is(":checked"))
+    	  fstring = featureString(fstring, "cv69", "2");
       if ($("#romcv131").is(":checked"))
       	fstring = featureString(fstring, "cv13", "1");
       if ($("#romss12").is(":checked"))
