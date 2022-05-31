@@ -487,8 +487,8 @@ bari an is briostun.";
         fstring = featureString(fstring, "ss01", "on");
       if ($("#romcv382").is(":checked"))
 	      fstring = featureString(fstring, "cv38", "2");
-      if ($("#romcv33").is(":checked"))
-	      fstring = featureString(fstring, "cv33", "on");
+      if ($("#romcv57").is(":checked"))
+	      fstring = featureString(fstring, "cv57", "1");
       if ($("#romcv691").is(":checked"))
   	    fstring = featureString(fstring, "cv69", "1");
       if ($("#romcv692").is(":checked"))
