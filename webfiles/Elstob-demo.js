@@ -233,7 +233,7 @@ bari an is briostun.";
       }
     );
 
-    $("#romsliders").on("change", function(event, size, wght, opsz, GRAD, spacing) {
+    $("#romsliders").on("change", function(event, size, wght, opsz, GRAD, spacing, slnt) {
         $('html').css('--romsize', size.toString() + "em");
         $('#romsizetext').text(size + "em");
         $('html').css('--romspacing', spacing.toString() + "em");
@@ -244,6 +244,8 @@ bari an is briostun.";
         $('#romopsztext').text(opsz);
         $('html').css('--romGRAD', GRAD.toString());
         $('#romGRADtext').text(GRAD);
+        $('html').css('--romslnt', slnt.toString());
+        $('#romslnttext').text(slnt);
       }
     );
 
