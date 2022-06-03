@@ -1558,7 +1558,7 @@
     </mv>
   </gl>
 
-  <gl pnm="uniA733"> <!-- aa -->
+  <gl pnm="uniA733" xoffset="5"> <!-- aa -->
     <cn nm="bot" val="{42;-11}"/>
     <cn nm="top" val="{311;445}"/>
     <mv di="lcbu" p="bot">
@@ -1575,7 +1575,7 @@
     </mv>
   </gl>
 
-  <gl pnm="uniA735"> <!-- ao -->
+  <gl pnm="uniA735" xoffset="5"> <!-- ao -->
     <cn nm="bot-right" val="{386;-12}"/>
     <mv di="lcbu" p="{42;-11}">
       <sh p="{202;0} bot-right"/>
@@ -1590,7 +1590,7 @@
     </mv>
   </gl>
 
-  <gl pnm="aogonek">
+  <gl pnm="aogonek" xoffset="5">
     <mv di="lcbu" p="{42;-11}">
       <sh p="{255;-10}"/>
       <mv p="{90;42}"/>
@@ -1604,7 +1604,7 @@
     </mv>
   </gl>
 
-  <gl pnm="uniA737"> <!-- au -->
+  <gl pnm="uniA737" xoffset="5"> <!-- au -->
     <cn nm="a-top" val="{311;445}"/>
     <mv di="lcbu" p="{42;-11}">
       <sh p="{273;-11} {513;-11}"/>
@@ -1620,7 +1620,7 @@
     </mv>
   </gl>
 
-  <gl pnm="uniA739" assume-y="no"> <!-- av -->
+  <gl pnm="uniA739" assume-y="no" xoffset="5"> <!-- av -->
     <pm nm="do-iup" val="0"/>
     <cn nm="bot-right" val="{402;-11}"/>
     <setvs axis="y"/>
@@ -1638,7 +1638,7 @@
     </compile-if>
   </gl>
 
-  <gl pnm="uniA73B"> <!-- av with bar -->
+  <gl pnm="uniA73B" xoffset="5"> <!-- av with bar -->
     <callg pnm="uniA739">
       do-iup: -1
     </callg>
@@ -1647,7 +1647,7 @@
     </callm>
   </gl>
 
-  <gl pnm="uniA73D"> <!-- ay -->
+  <gl pnm="uniA73D" xoffset="5"> <!-- ay -->
     <mv di="lcbu" p="{42;-11}">
       <sh p="{270;-12}"/>
       <mv p="{90;42}">
@@ -1663,7 +1663,7 @@
     </mv>
   </gl>
 
-  <gl pnm="ae">
+  <gl pnm="ae" xoffset="5">
     <cn nm="top" val="{458;445}"/>
     <cn nm="bot" val="{76;-11}"/>
     <mv di="lcbu" p="bot">
@@ -1692,7 +1692,7 @@
     </callm>
   </gl>
 
-  <gl pnm="c">
+  <gl pnm="c" xoffset="5">
     <mv di="xho" p="{283;445}">
       <sh p="{257;417}"/>
     </mv>
@@ -2086,7 +2086,7 @@
     <callg pnm="q">
       do-iup: -1
     </callg>
-    <sh r="{79;-11}" p="{663;458} {-48;-215}"/>
+    <sh r="{47;-11}" p="{631;458} {-80;-215}"/>
   </gl>
 
   <gl pnm="r">
@@ -2217,7 +2217,7 @@
     <iup axis="y"/>
   </gl>
 
-  <gl pnm="aringacute"> <!-- a with ring and acute -->
+  <gl pnm="aringacute" xoffset="5"> <!-- a with ring and acute -->
     <cn nm="a-top" val="{311;445}"/>
     <mv di="lcbu" p="{42;-11}">
       <sh p="{269;-12}"/>
@@ -3403,7 +3403,7 @@
     </mv>
   </gl>
 
-  <gl pnm="uni0256">
+  <gl pnm="uni0256" xoffset="5">
     <mv di="lcbu" p="{40;-14}">
       <mv p="{93;42}"/>
     </mv>
@@ -3418,7 +3418,7 @@
     </mv>
   </gl>
 
-  <gl pnm="uni0257">
+  <gl pnm="uni0257" xoffset="5">
     <mv di="lcbu" p="{40;-14}">
       <sh p="{278;-12}"/>
       <mv p="{93;42}"/>
@@ -3516,7 +3516,7 @@
     </callm>
   </gl>
 
-  <gl pnm="uni0260">
+  <gl pnm="uni0260" xoffset="5">
     <mv di="lcbu" p="{43;-12}">
       <mv p="{91;42}"/>
     </mv>
@@ -3531,7 +3531,7 @@
     </callm>
   </gl>
 
-  <gl pnm="uni0261">
+  <gl pnm="uni0261" xoffset="5">
     <mv di="lcbu" p="{43;-11}">
       <mv p="{91;43}"/>
     </mv>
@@ -3584,7 +3584,7 @@
     </mv>
   </gl>
 
-  <gl pnm="uni0265">
+  <gl pnm="uni0265" xoffset="5">
     <mv p="{314;-245}"/>
     <mv di="xh" p="{410;439}"/>
     <mv di="xho" p="{254;445}">
@@ -4264,7 +4264,7 @@
     </callm>
   </gl>
 
-  <gl pnm="uni02A0">
+  <gl pnm="uni02A0" xoffset="5">
     <mv di="lcbu" p="{42;-11}">
       <mv p="{89;43}"/>
     </mv>
@@ -4279,7 +4279,7 @@
     </callm>
   </gl>
 
-  <gl pnm="uni02A3">
+  <gl pnm="uni02A3" xoffset="5">
     <mv di="lcbu" p="{40;-14}">
       <sh p="{670;-11} {278;-12}"/>
       <mv p="{93;42}">
@@ -4296,7 +4296,7 @@
     </callm>
   </gl>
 
-  <gl pnm="uni02A4">
+  <gl pnm="uni02A4" xoffset="5">
     <cn nm="ezh-top" val="{691;439}"/>
     <cn nm="ezh-bot" val="{600;-213}"/>
     <cn nm="ezh-mid" val="{628;166}"/>
@@ -4324,7 +4324,7 @@
     </mv>
   </gl>
 
-  <gl pnm="uni02A5">
+  <gl pnm="uni02A5" xoffset="5">
     <cn nm="z-top" val=" {633;443}"/>
     <cn nm="z-bot" val="{675;-17}"/>
     <mv di="lcbu" p="{43;-14}">
