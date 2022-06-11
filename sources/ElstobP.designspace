@@ -1,0 +1,297 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<designspace format="5.0">
+  <axes>
+    <axis tag="XOPQ" name="Vertical stroke width" minimum="-41" maximum="90" default="0"/>
+    <axis tag="YOPQ" name="Horizontal stroke width" minimum="-150" maximum="90" default="0"/>
+    <axis tag="XTRA" name="Character width" minimum="-90" maximum="90" default="0"/>
+    <axis tag="YTUC" name="Capital height" minimum="-170" maximum="100" default="0"/>
+    <axis tag="YTLX" name="Lowercase height" minimum="367" maximum="511" default="435"/>
+    <axis tag="YTDE" name="Lowercase descender depth" minimum="-345" maximum="-79" default="-245"/>
+    <axis tag="YTAS" name="Lowercase ascender height" minimum="548" maximum="826" default="726"/>
+  </axes>
+  <sources>
+    <source filename="ElstobP-Regular.ufo" name="ElstobP Regular" familyname="ElstobP" stylename="Regular">
+      <lib copy="1"/>
+      <groups copy="1"/>
+      <features copy="1"/>
+      <info copy="1"/>
+      <location>
+        <dimension name="Vertical stroke width" xvalue="0"/>
+        <dimension name="Horizontal stroke width" xvalue="0"/>
+        <dimension name="Character width" xvalue="0"/>
+        <dimension name="Capital height" xvalue="0"/>
+        <dimension name="Lowercase height" xvalue="435"/>
+        <dimension name="Lowercase descender depth" xvalue="-245"/>
+        <dimension name="Lowercase ascender height" xvalue="726"/>
+      </location>
+    </source>
+    <source filename="ElstobP-XOPQ-min.ufo" name="ElstobP XOPQ-min" familyname="ElstobP" stylename="XOPQ-min">
+      <location>
+        <dimension name="Vertical stroke width" xvalue="-41"/>
+        <dimension name="Horizontal stroke width" xvalue="0"/>
+        <dimension name="Character width" xvalue="0"/>
+        <dimension name="Capital height" xvalue="0"/>
+        <dimension name="Lowercase height" xvalue="435"/>
+        <dimension name="Lowercase descender depth" xvalue="-245"/>
+        <dimension name="Lowercase ascender height" xvalue="726"/>
+      </location>
+    </source>
+    <source filename="ElstobP-XOPQ-max.ufo" name="ElstobP XOPQ-max" familyname="ElstobP" stylename="XOPQ-max">
+      <location>
+        <dimension name="Vertical stroke width" xvalue="90"/>
+        <dimension name="Horizontal stroke width" xvalue="0"/>
+        <dimension name="Character width" xvalue="0"/>
+        <dimension name="Capital height" xvalue="0"/>
+        <dimension name="Lowercase height" xvalue="435"/>
+        <dimension name="Lowercase descender depth" xvalue="-245"/>
+        <dimension name="Lowercase ascender height" xvalue="726"/>
+      </location>
+    </source>
+    <source filename="ElstobP-YOPQ-min.ufo" name="ElstobP YOPQ-min" familyname="ElstobP" stylename="YOPQ-min">
+      <location>
+        <dimension name="Vertical stroke width" xvalue="0"/>
+        <dimension name="Horizontal stroke width" xvalue="-150"/>
+        <dimension name="Character width" xvalue="0"/>
+        <dimension name="Capital height" xvalue="0"/>
+        <dimension name="Lowercase height" xvalue="435"/>
+        <dimension name="Lowercase descender depth" xvalue="-245"/>
+        <dimension name="Lowercase ascender height" xvalue="726"/>
+      </location>
+    </source>
+    <source filename="ElstobP-YOPQ-max.ufo" name="ElstobP YOPQ-max" familyname="ElstobP" stylename="YOPQ-max">
+      <location>
+        <dimension name="Vertical stroke width" xvalue="0"/>
+        <dimension name="Horizontal stroke width" xvalue="90"/>
+        <dimension name="Character width" xvalue="0"/>
+        <dimension name="Capital height" xvalue="0"/>
+        <dimension name="Lowercase height" xvalue="435"/>
+        <dimension name="Lowercase descender depth" xvalue="-245"/>
+        <dimension name="Lowercase ascender height" xvalue="726"/>
+      </location>
+    </source>
+    <source filename="ElstobP-XTRA-min.ufo" name="ElstobP XTRA-min" familyname="ElstobP" stylename="XTRA-min">
+      <location>
+        <dimension name="Vertical stroke width" xvalue="0"/>
+        <dimension name="Horizontal stroke width" xvalue="0"/>
+        <dimension name="Character width" xvalue="-90"/>
+        <dimension name="Capital height" xvalue="0"/>
+        <dimension name="Lowercase height" xvalue="435"/>
+        <dimension name="Lowercase descender depth" xvalue="-245"/>
+        <dimension name="Lowercase ascender height" xvalue="726"/>
+      </location>
+    </source>
+    <source filename="ElstobP-XTRA-max.ufo" name="ElstobP XTRA-max" familyname="ElstobP" stylename="XTRA-max">
+      <location>
+        <dimension name="Vertical stroke width" xvalue="0"/>
+        <dimension name="Horizontal stroke width" xvalue="0"/>
+        <dimension name="Character width" xvalue="90"/>
+        <dimension name="Capital height" xvalue="0"/>
+        <dimension name="Lowercase height" xvalue="435"/>
+        <dimension name="Lowercase descender depth" xvalue="-245"/>
+        <dimension name="Lowercase ascender height" xvalue="726"/>
+      </location>
+    </source>
+    <source filename="ElstobP-YTUC-min.ufo" name="ElstobP YTUC-min" familyname="ElstobP" stylename="YTUC-min">
+      <location>
+        <dimension name="Vertical stroke width" xvalue="0"/>
+        <dimension name="Horizontal stroke width" xvalue="0"/>
+        <dimension name="Character width" xvalue="0"/>
+        <dimension name="Capital height" xvalue="-170"/>
+        <dimension name="Lowercase height" xvalue="435"/>
+        <dimension name="Lowercase descender depth" xvalue="-245"/>
+        <dimension name="Lowercase ascender height" xvalue="726"/>
+      </location>
+    </source>
+    <source filename="ElstobP-YTUC-max.ufo" name="ElstobP YTUC-max" familyname="ElstobP" stylename="YTUC-max">
+      <location>
+        <dimension name="Vertical stroke width" xvalue="0"/>
+        <dimension name="Horizontal stroke width" xvalue="0"/>
+        <dimension name="Character width" xvalue="0"/>
+        <dimension name="Capital height" xvalue="100"/>
+        <dimension name="Lowercase height" xvalue="435"/>
+        <dimension name="Lowercase descender depth" xvalue="-245"/>
+        <dimension name="Lowercase ascender height" xvalue="726"/>
+      </location>
+    </source>
+    <source filename="ElstobP-YTDE-min.ufo" name="ElstobP YTDE-min" familyname="ElstobP" stylename="YTDE-min">
+      <location>
+        <dimension name="Vertical stroke width" xvalue="0"/>
+        <dimension name="Horizontal stroke width" xvalue="0"/>
+        <dimension name="Character width" xvalue="0"/>
+        <dimension name="Capital height" xvalue="0"/>
+        <dimension name="Lowercase height" xvalue="435"/>
+        <dimension name="Lowercase descender depth" xvalue="-345"/>
+        <dimension name="Lowercase ascender height" xvalue="726"/>
+      </location>
+    </source>
+    <source filename="ElstobP-YTDE-max.ufo" name="ElstobP YTDE-max" familyname="ElstobP" stylename="YTDE-max">
+      <location>
+        <dimension name="Vertical stroke width" xvalue="0"/>
+        <dimension name="Horizontal stroke width" xvalue="0"/>
+        <dimension name="Character width" xvalue="0"/>
+        <dimension name="Capital height" xvalue="0"/>
+        <dimension name="Lowercase height" xvalue="435"/>
+        <dimension name="Lowercase descender depth" xvalue="-79"/>
+        <dimension name="Lowercase ascender height" xvalue="726"/>
+      </location>
+    </source>
+    <source filename="ElstobP-YTAS-min.ufo" name="ElstobP YTAS-min" familyname="ElstobP" stylename="YTAS-min">
+      <location>
+        <dimension name="Vertical stroke width" xvalue="0"/>
+        <dimension name="Horizontal stroke width" xvalue="0"/>
+        <dimension name="Character width" xvalue="0"/>
+        <dimension name="Capital height" xvalue="0"/>
+        <dimension name="Lowercase height" xvalue="435"/>
+        <dimension name="Lowercase descender depth" xvalue="-245"/>
+        <dimension name="Lowercase ascender height" xvalue="548"/>
+      </location>
+    </source>
+    <source filename="ElstobP-YTAS-max.ufo" name="ElstobP YTAS-max" familyname="ElstobP" stylename="YTAS-max">
+      <location>
+        <dimension name="Vertical stroke width" xvalue="0"/>
+        <dimension name="Horizontal stroke width" xvalue="0"/>
+        <dimension name="Character width" xvalue="0"/>
+        <dimension name="Capital height" xvalue="0"/>
+        <dimension name="Lowercase height" xvalue="435"/>
+        <dimension name="Lowercase descender depth" xvalue="-245"/>
+        <dimension name="Lowercase ascender height" xvalue="826"/>
+      </location>
+    </source>
+    <source filename="ElstobP-YTLX-min.ufo" name="ElstobP YTLX-min" familyname="ElstobP" stylename="YTLX-min">
+      <location>
+        <dimension name="Vertical stroke width" xvalue="0"/>
+        <dimension name="Horizontal stroke width" xvalue="0"/>
+        <dimension name="Character width" xvalue="0"/>
+        <dimension name="Capital height" xvalue="0"/>
+        <dimension name="Lowercase height" xvalue="367"/>
+        <dimension name="Lowercase descender depth" xvalue="-245"/>
+        <dimension name="Lowercase ascender height" xvalue="726"/>
+      </location>
+    </source>
+    <source filename="ElstobP-YTLX-max.ufo" name="ElstobP YTLX-max" familyname="ElstobP" stylename="YTLX-max">
+      <location>
+        <dimension name="Vertical stroke width" xvalue="0"/>
+        <dimension name="Horizontal stroke width" xvalue="0"/>
+        <dimension name="Character width" xvalue="0"/>
+        <dimension name="Capital height" xvalue="0"/>
+        <dimension name="Lowercase height" xvalue="511"/>
+        <dimension name="Lowercase descender depth" xvalue="-245"/>
+        <dimension name="Lowercase ascender height" xvalue="726"/>
+      </location>
+    </source>
+  </sources>
+  <instances>
+    <instance name="ElstobP Regular"
+      familyname="ElstobP"
+      stylename="Regular"
+      filename="../instance_ufo/ElstobP-Regular.ufo"
+      stylemapfamilyname="ElstobP"
+      stylemapstylename="regular">
+      <location>
+        <dimension name="Vertical stroke width" xvalue="0"/>
+        <dimension name="Horizontal stroke width" xvalue="0"/>
+        <dimension name="Character width" xvalue="0"/>
+        <dimension name="Capital height" xvalue="0"/>
+        <dimension name="Lowercase height" xvalue="435"/>
+        <dimension name="Lowercase descender depth" xvalue="-245"/>
+        <dimension name="Lowercase ascender height" xvalue="726"/>
+      </location>
+    </instance>
+    <instance name="ElstobP ExtraLight"
+      familyname="ElstobP"
+      stylename="ExtraLight"
+      filename="../instance_ufo/ElstobP-ExtraLight.ufo"
+      stylemapfamilyname="ElstobP ExtraLight"
+      stylemapstylename="regular">
+      <location>
+        <dimension name="Vertical stroke width" xvalue="-41"/>
+        <dimension name="Horizontal stroke width" xvalue="-150"/>
+        <dimension name="Character width" xvalue="0"/>
+        <dimension name="Capital height" xvalue="0"/>
+        <dimension name="Lowercase height" xvalue="435"/>
+        <dimension name="Lowercase descender depth" xvalue="-245"/>
+        <dimension name="Lowercase ascender height" xvalue="726"/>
+      </location>
+    </instance>
+    <instance name="ElstobP Light"
+      familyname="ElstobP"
+      stylename="Light"
+      filename="../instance_ufo/ElstobP-Light.ufo"
+      stylemapfamilyname="ElstobP Light"
+      stylemapstylename="regular">
+      <location>
+        <dimension name="Vertical stroke width" xvalue="-20"/>
+        <dimension name="Horizontal stroke width" xvalue="-75"/>
+        <dimension name="Character width" xvalue="0"/>
+        <dimension name="Capital height" xvalue="0"/>
+        <dimension name="Lowercase height" xvalue="435"/>
+        <dimension name="Lowercase descender depth" xvalue="-245"/>
+        <dimension name="Lowercase ascender height" xvalue="726"/>
+      </location>
+    </instance>
+    <instance name="ElstobP Medium"
+      familyname="ElstobP"
+      stylename="Medium"
+      filename="../instance_ufo/ElstobP-Medium.ufo"
+      stylemapfamilyname="ElstobP Medium"
+      stylemapstylename="regular">
+      <location>
+        <dimension name="Vertical stroke width" xvalue="19"/>
+        <dimension name="Horizontal stroke width" xvalue="5"/>
+        <dimension name="Character width" xvalue="0"/>
+        <dimension name="Capital height" xvalue="0"/>
+        <dimension name="Lowercase height" xvalue="435"/>
+        <dimension name="Lowercase descender depth" xvalue="-245"/>
+        <dimension name="Lowercase ascender height" xvalue="726"/>
+      </location>
+    </instance>
+    <instance name="ElstobP SemiBold"
+      familyname="ElstobP"
+      stylename="SemiBold"
+      filename="../instance_ufo/ElstobP-SemiBold.ufo"
+      stylemapfamilyname="ElstobP SemiBold"
+      stylemapstylename="regular">
+      <location>
+        <dimension name="Vertical stroke width" xvalue="45"/>
+        <dimension name="Horizontal stroke width" xvalue="10"/>
+        <dimension name="Character width" xvalue="0"/>
+        <dimension name="Capital height" xvalue="0"/>
+        <dimension name="Lowercase height" xvalue="435"/>
+        <dimension name="Lowercase descender depth" xvalue="-245"/>
+        <dimension name="Lowercase ascender height" xvalue="726"/>
+      </location>
+    </instance>
+    <instance name="ElstobP Bold"
+      familyname="ElstobP"
+      stylename="Bold"
+      filename="../instance_ufo/ElstobP-Bold.ufo"
+      stylemapfamilyname="ElstobP"
+      stylemapstylename="bold">
+      <location>
+        <dimension name="Vertical stroke width" xvalue="67.5"/>
+        <dimension name="Horizontal stroke width" xvalue="15"/>
+        <dimension name="Character width" xvalue="0"/>
+        <dimension name="Capital height" xvalue="0"/>
+        <dimension name="Lowercase height" xvalue="435"/>
+        <dimension name="Lowercase descender depth" xvalue="-245"/>
+        <dimension name="Lowercase ascender height" xvalue="726"/>
+      </location>
+    </instance>
+    <instance name="ElstobP ExtraBold"
+      familyname="ElstobP"
+      stylename="ExtraBold"
+      filename="../instance_ufo/ElstobP-ExtraBold.ufo"
+      stylemapfamilyname="ElstobP ExtraBold"
+      stylemapstylename="regular">
+      <location>
+        <dimension name="Vertical stroke width" xvalue="90"/>
+        <dimension name="Horizontal stroke width" xvalue="20"/>
+        <dimension name="Character width" xvalue="0"/>
+        <dimension name="Capital height" xvalue="0"/>
+        <dimension name="Lowercase height" xvalue="435"/>
+        <dimension name="Lowercase descender depth" xvalue="-245"/>
+        <dimension name="Lowercase ascender height" xvalue="726"/>
+      </location>
+    </instance>
+  </instances>
+</designspace>
