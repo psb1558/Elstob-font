@@ -3980,7 +3980,7 @@
     <ip r="top bot" p="{257;46} {252;12}"/>
   </gl>
 
-  <gl pnm="uni0288">
+  <gl pnm="uni0288" xoffset="10">
     <cn nm="top" val="{232;537}"/>
     <cn nm="bot" val="{73;-245}"/>
     <callm nm="hook">
@@ -4346,7 +4346,7 @@
     </callm>
   </gl>
 
-  <gl pnm="uni02A6">
+  <gl pnm="uni02A6" xoffset="10">
     <cn nm="t-top" val="{233;537}"/>
     <cn nm="t-bot" val="{65;-11}"/>
     <mv di="lcbu" p="t-bot">
@@ -4359,7 +4359,7 @@
     <ip r="t-top t-bot" p="{65;421} {61;387}"/>
   </gl>
 
-  <gl pnm="uni02A7">
+  <gl pnm="uni02A7" xoffset="9">
     <cn nm="t-top" val="{233;537}"/>
     <cn nm="t-bot" val="{65;-11}"/>
     <mv di="lcbu" p="t-bot">
@@ -4372,7 +4372,7 @@
     </callm>
   </gl>
 
-  <gl pnm="uni02A8">
+  <gl pnm="uni02A8" xoffset="10">
     <cn nm="t-top" val="{234;537}"/>
     <cn nm="t-bot" val="{64;-11}"/>
     <cn nm="c-top" val="{516;445}"/>
