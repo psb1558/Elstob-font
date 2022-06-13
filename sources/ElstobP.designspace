@@ -182,11 +182,11 @@
   </sources>
   <instances>
     <instance name="ElstobP Regular"
-      familyname="ElstobP"
-      stylename="Regular"
-      filename="../instance_ufo/ElstobP-Regular.ufo"
-      stylemapfamilyname="ElstobP"
-      stylemapstylename="regular">
+	      familyname="ElstobP"
+	      stylename="Regular"
+	      filename="../instance_ufo/ElstobP-Regular.ufo"
+	      stylemapfamilyname="ElstobP"
+	      stylemapstylename="regular">
       <location>
         <dimension name="Vertical stroke width" xvalue="0"/>
         <dimension name="Horizontal stroke width" xvalue="0"/>
@@ -198,11 +198,11 @@
       </location>
     </instance>
     <instance name="ElstobP ExtraLight"
-      familyname="ElstobP"
-      stylename="ExtraLight"
-      filename="../instance_ufo/ElstobP-ExtraLight.ufo"
-      stylemapfamilyname="ElstobP ExtraLight"
-      stylemapstylename="regular">
+	      familyname="ElstobP"
+	      stylename="ExtraLight"
+	      filename="../instance_ufo/ElstobP-ExtraLight.ufo"
+	      stylemapfamilyname="ElstobP ExtraLight"
+	      stylemapstylename="regular">
       <location>
         <dimension name="Vertical stroke width" xvalue="-41"/>
         <dimension name="Horizontal stroke width" xvalue="-150"/>
@@ -214,11 +214,11 @@
       </location>
     </instance>
     <instance name="ElstobP Light"
-      familyname="ElstobP"
-      stylename="Light"
-      filename="../instance_ufo/ElstobP-Light.ufo"
-      stylemapfamilyname="ElstobP Light"
-      stylemapstylename="regular">
+	      familyname="ElstobP"
+	      stylename="Light"
+	      filename="../instance_ufo/ElstobP-Light.ufo"
+	      stylemapfamilyname="ElstobP Light"
+	      stylemapstylename="regular">
       <location>
         <dimension name="Vertical stroke width" xvalue="-20"/>
         <dimension name="Horizontal stroke width" xvalue="-75"/>
@@ -230,11 +230,11 @@
       </location>
     </instance>
     <instance name="ElstobP Medium"
-      familyname="ElstobP"
-      stylename="Medium"
-      filename="../instance_ufo/ElstobP-Medium.ufo"
-      stylemapfamilyname="ElstobP Medium"
-      stylemapstylename="regular">
+	      familyname="ElstobP"
+	      stylename="Medium"
+	      filename="../instance_ufo/ElstobP-Medium.ufo"
+	      stylemapfamilyname="ElstobP Medium"
+	      stylemapstylename="regular">
       <location>
         <dimension name="Vertical stroke width" xvalue="19"/>
         <dimension name="Horizontal stroke width" xvalue="5"/>
@@ -246,11 +246,11 @@
       </location>
     </instance>
     <instance name="ElstobP SemiBold"
-      familyname="ElstobP"
-      stylename="SemiBold"
-      filename="../instance_ufo/ElstobP-SemiBold.ufo"
-      stylemapfamilyname="ElstobP SemiBold"
-      stylemapstylename="regular">
+	      familyname="ElstobP"
+	      stylename="SemiBold"
+	      filename="../instance_ufo/ElstobP-SemiBold.ufo"
+	      stylemapfamilyname="ElstobP SemiBold"
+	      stylemapstylename="regular">
       <location>
         <dimension name="Vertical stroke width" xvalue="45"/>
         <dimension name="Horizontal stroke width" xvalue="10"/>
@@ -262,11 +262,11 @@
       </location>
     </instance>
     <instance name="ElstobP Bold"
-      familyname="ElstobP"
-      stylename="Bold"
-      filename="../instance_ufo/ElstobP-Bold.ufo"
-      stylemapfamilyname="ElstobP"
-      stylemapstylename="bold">
+	      familyname="ElstobP"
+	      stylename="Bold"
+	      filename="../instance_ufo/ElstobP-Bold.ufo"
+	      stylemapfamilyname="ElstobP"
+	      stylemapstylename="bold">
       <location>
         <dimension name="Vertical stroke width" xvalue="67.5"/>
         <dimension name="Horizontal stroke width" xvalue="15"/>
@@ -278,11 +278,11 @@
       </location>
     </instance>
     <instance name="ElstobP ExtraBold"
-      familyname="ElstobP"
-      stylename="ExtraBold"
-      filename="../instance_ufo/ElstobP-ExtraBold.ufo"
-      stylemapfamilyname="ElstobP ExtraBold"
-      stylemapstylename="regular">
+	      familyname="ElstobP"
+	      stylename="ExtraBold"
+	      filename="../instance_ufo/ElstobP-ExtraBold.ufo"
+	      stylemapfamilyname="ElstobP ExtraBold"
+	      stylemapstylename="regular">
       <location>
         <dimension name="Vertical stroke width" xvalue="90"/>
         <dimension name="Horizontal stroke width" xvalue="20"/>
@@ -293,5 +293,297 @@
         <dimension name="Lowercase ascender height" xvalue="726"/>
       </location>
     </instance>
+    <instance name="ElstobP 6pt"
+	      familyname="ElstobP"
+	      stylename="6pt"
+	      filename="instance_ufos/ElstobP-6pt.ufo">
+      <location>
+        <dimension name="Vertical stroke width" xvalue="3.5"/>
+        <dimension name="Horizontal stroke width" xvalue="90"/>
+        <dimension name="Character width" xvalue="34"/>
+        <dimension name="Capital height" xvalue="0"/>
+        <dimension name="Lowercase x-height" xvalue="456"/>
+        <dimension name="Lowercase descender depth" xvalue="-220"/>
+        <dimension name="Lowercase ascender height" xvalue="726"/>
+      </location>
+    </instance>
+    <instance name="ElstobP 8pt"
+	      familyname="ElstobP"
+	      stylename="8pt"
+	      filename="instance_ufos/ElstobP-8pt.ufo">
+      <location>
+        <dimension name="Vertical stroke width" xvalue="3"/>
+        <dimension name="Horizontal stroke width" xvalue="60"/>
+        <dimension name="Character width" xvalue="25"/>
+        <dimension name="Capital height" xvalue="0"/>
+        <dimension name="Lowercase x-height" xvalue="449"/>
+        <dimension name="Lowercase descender depth" xvalue="-228"/>
+        <dimension name="Lowercase ascender height" xvalue="726"/>
+      </location>
+    </instance>
+    <instance name="ElstobP 10pt"
+	      familyname="ElstobP"
+	      stylename="10pt"
+	      filename="instance_ufos/ElstobP-10pt.ufo">
+      <location>
+        <dimension name="Vertical stroke width" xvalue="1.5"/>
+        <dimension name="Horizontal stroke width" xvalue="30"/>
+        <dimension name="Character width" xvalue="13"/>
+        <dimension name="Capital height" xvalue="0"/>
+        <dimension name="Lowercase x-height" xvalue="442"/>
+        <dimension name="Lowercase descender depth" xvalue="-237"/>
+        <dimension name="Lowercase ascender height" xvalue="726"/>
+      </location>
+    </instance>
+    <instance name="ElstobP 14pt"
+	      familyname="ElstobP"
+	      stylename="14pt"
+	      filename="instance_ufos/ElstobP-14pt.ufo">
+      <location>
+        <dimension name="Vertical stroke width" xvalue="-2"/>
+        <dimension name="Horizontal stroke width" xvalue="-50"/>
+        <dimension name="Character width" xvalue="-11"/>
+        <dimension name="Capital height" xvalue="0"/>
+        <dimension name="Lowercase x-height" xvalue="428"/>
+        <dimension name="Lowercase descender depth" xvalue="-253"/>
+        <dimension name="Lowercase ascender height" xvalue="726"/>
+      </location>
+    </instance>
+    <instance name="ElstobP 18pt"
+	      familyname="ElstobP"
+	      stylename="18pt"
+	      filename="instance_ufos/ElstobP-18pt.ufo">
+      <location>
+        <dimension name="Vertical stroke width" xvalue="-4"/>
+        <dimension name="Horizontal stroke width" xvalue="-150"/>
+        <dimension name="Character width" xvalue="-32"/>
+        <dimension name="Capital height" xvalue="0"/>
+        <dimension name="Lowercase x-height" xvalue="414"/>
+        <dimension name="Lowercase descender depth" xvalue="-269"/>
+        <dimension name="Lowercase ascender height" xvalue="726"/>
+      </location>
+    </instance>
   </instances>
+  <lib>
+    <dict>
+      <key>GSDimensionPlugin.Dimensions</key>
+      <dict>
+        <key>16DF9356-34D2-4C02-8100-FB39A491A1B7</key>
+        <dict>
+          <key>HV</key>
+          <string>131</string>
+        </dict>
+        <key>263E301B-CB05-4AC6-937D-92FF8A6DC5EF</key>
+        <dict>
+          <key>HH</key>
+          <string>93</string>
+          <key>HV</key>
+          <string>192</string>
+          <key>OH</key>
+          <string>89</string>
+          <key>OV</key>
+          <string>225</string>
+          <key>nV</key>
+          <string>164</string>
+          <key>nd</key>
+          <string>58</string>
+          <key>oH</key>
+          <string>89</string>
+          <key>oV</key>
+          <string>188</string>
+          <key>tH</key>
+          <string>112</string>
+        </dict>
+        <key>47A2E270-4B46-41CD-B5AC-4450ECBAF00C</key>
+        <dict>
+          <key>HH</key>
+          <string>90</string>
+          <key>HV</key>
+          <string>130</string>
+          <key>OH</key>
+          <string>96</string>
+          <key>OV</key>
+          <string>155</string>
+          <key>nV</key>
+          <string>117</string>
+          <key>oH</key>
+          <string>90</string>
+          <key>oV</key>
+          <string>133</string>
+          <key>tH</key>
+          <string>89</string>
+        </dict>
+        <key>5E933A09-8E8D-4B36-A510-2D2E8DB125C4</key>
+        <dict>
+          <key>HH</key>
+          <string>70</string>
+          <key>HV</key>
+          <string>343</string>
+          <key>OH</key>
+          <string>68</string>
+          <key>OV</key>
+          <string>417</string>
+          <key>nV</key>
+          <string>288</string>
+          <key>nd</key>
+          <string>60</string>
+          <key>oH</key>
+          <string>68</string>
+          <key>oV</key>
+          <string>326</string>
+          <key>tH</key>
+          <string>100</string>
+        </dict>
+        <key>5F1B95D2-E37F-4604-99C9-24FF8B5B0DBF</key>
+        <dict>
+          <key>HH</key>
+          <string>42</string>
+          <key>HV</key>
+          <string>102</string>
+          <key>OH</key>
+          <string>42</string>
+          <key>OV</key>
+          <string>112</string>
+          <key>nV</key>
+          <string>91</string>
+          <key>nd</key>
+          <string>35</string>
+          <key>oH</key>
+          <string>42</string>
+          <key>oV</key>
+          <string>106</string>
+          <key>tH</key>
+          <string>75</string>
+        </dict>
+        <key>6B146B31-FE8A-4408-B9B5-0C900DD2277D</key>
+        <dict>
+          <key>HH</key>
+          <string>60</string>
+          <key>HV</key>
+          <string>176</string>
+          <key>OH</key>
+          <string>57</string>
+          <key>OV</key>
+          <string>206</string>
+          <key>nV</key>
+          <string>146</string>
+          <key>nd</key>
+          <string>42</string>
+          <key>oH</key>
+          <string>57</string>
+          <key>oV</key>
+          <string>175</string>
+          <key>tH</key>
+          <string>82</string>
+        </dict>
+        <key>6CE37295-6E30-426D-87AF-6FEE9061C297</key>
+        <dict>
+          <key>HH</key>
+          <string>95</string>
+          <key>HV</key>
+          <string>243</string>
+          <key>OH</key>
+          <string>88</string>
+          <key>OV</key>
+          <string>273</string>
+          <key>nV</key>
+          <string>229</string>
+          <key>nd</key>
+          <string>76</string>
+          <key>oH</key>
+          <string>77</string>
+          <key>oV</key>
+          <string>254</string>
+          <key>tH</key>
+          <string>105</string>
+        </dict>
+        <key>8332F7AA-8206-415D-BB36-0852EBCBB776</key>
+        <dict/>
+        <key>A0729024-D440-45B6-AF25-AD93ED95C2CA</key>
+        <dict>
+          <key>HH</key>
+          <string>119</string>
+          <key>HV</key>
+          <string>298</string>
+          <key>OH</key>
+          <string>99</string>
+          <key>OV</key>
+          <string>329</string>
+          <key>nV</key>
+          <string>265</string>
+          <key>nd</key>
+          <string>82</string>
+          <key>oH</key>
+          <string>120</string>
+          <key>oV</key>
+          <string>281</string>
+          <key>tH</key>
+          <string>120</string>
+        </dict>
+        <key>C5B93EC9-9EB6-4975-AE33-1741B73E6074</key>
+        <dict>
+          <key>HH</key>
+          <string>61</string>
+          <key>HV</key>
+          <string>187</string>
+          <key>OH</key>
+          <string>57</string>
+          <key>OV</key>
+          <string>218</string>
+          <key>nV</key>
+          <string>157</string>
+          <key>nd</key>
+          <string>45</string>
+          <key>oH</key>
+          <string>57</string>
+          <key>oV</key>
+          <string>183</string>
+          <key>tH</key>
+          <string>90</string>
+        </dict>
+        <key>D7B0979E-F273-40C0-A245-443BBF311E2D</key>
+        <dict>
+          <key>HH</key>
+          <string>70</string>
+          <key>HV</key>
+          <string>357</string>
+          <key>OH</key>
+          <string>68</string>
+          <key>OV</key>
+          <string>430</string>
+          <key>nV</key>
+          <string>289</string>
+          <key>nd</key>
+          <string>60</string>
+          <key>oH</key>
+          <string>68</string>
+          <key>oV</key>
+          <string>337</string>
+          <key>tH</key>
+          <string>100</string>
+        </dict>
+        <key>EBD25FEC-6C57-4903-A936-5FDFC9C63FB2</key>
+        <dict>
+          <key>HH</key>
+          <string>70</string>
+          <key>HV</key>
+          <string>122</string>
+          <key>OH</key>
+          <string>61</string>
+          <key>OV</key>
+          <string>146</string>
+          <key>nV</key>
+          <string>117</string>
+          <key>nd</key>
+          <string>49</string>
+          <key>oH</key>
+          <string>61</string>
+          <key>oV</key>
+          <string>133</string>
+          <key>tH</key>
+          <string>77</string>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
 </designspace>
