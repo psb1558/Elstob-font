@@ -1,7 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <designspace format="5.0">
   <axes>
-    <axis tag="slnt" name="Slant" minimum="0" maximum="15" default="0"/>
+    <axis tag="slnt" name="Slant" minimum="0" maximum="1000" default="0">
+      <map input="0" output="0"/>
+      <map input="1000" output="15"/>
+    </axis>
     <axis tag="XOPQ" name="Thick stroke width" minimum="-456"
 	  maximum="1000" default="0">
       <map input="1000" output="90"/>
@@ -247,7 +250,7 @@
         <dimension name="Lowercase x-height" xvalue="367"/>
         <dimension name="Lowercase descender depth" xvalue="-245"/>
         <dimension name="Lowercase ascender height" xvalue="726"/>
-        <dimension name="Figure height" xvalue="753"/>
+        <dimension name="Figure height" xvalue="656"/>
         <dimension name="Slant" xvalue="0"/>
       </location>
     </source>
