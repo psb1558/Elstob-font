@@ -107,7 +107,7 @@
       <region tag="wght" bot="-1.0" peak="-1.0" top="0.0"/>
       <!-- <region tag="wght" bot="-0.33" peak="-0.33" top="0.66"> -->
       <cvv nm="cap-serif" val="20"/>
-      <cvv nm="cap-bar" val="20"/>
+      <cvv nm="cap-bar" val="25"/>
       <cvv nm="cap-round-stem" val="15"/>
       <cvv nm="lc-ascender-serif" val="21"/>
       <cvv nm="dot-width" val="74"/>
