@@ -1,0 +1,470 @@
+@font-face {
+    font-family: 'ElstobP';
+    src:url("./ElstobP.woff2");
+    font-style: normal;
+}
+:root {
+    --romsize: 1.5em;
+    --axisYTUC: 0;
+    --axisXTRA: 0;
+    --axisYTFI: 0;
+    --axisYTAS: 0;
+    --axisYTDE: 0;
+    --axisYTLX: 0;
+    --axisXOPQ: 0;
+    --axisYOPQ: 0;
+}
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+}
+h1 {
+    font-family: ElstobP;
+    font-size: 3em;
+    font-variation-settings: 'XTRA' -400, 'YTAS' 562, 'YTDE' -602, 'XOPQ' -322, 'YOPQ' -500;
+}
+h2 {
+    font-family: ElstobP;
+    font-size: 1.8em;
+    font-variation-settings: 'XOPQ' -152, 'YOPQ' -450, 'YTLX' -186;
+    /* font-feature-settings: 'smcp' on; */
+}
+p, dd {
+    font-family: ElstobP;
+    font-size: 1.5em;
+    font-variation-settings: 'XOPQ' 100, 'YOPQ' 200, 'YTLX' 333;
+    /* font-feature-settings: 'calt' on; */
+}
+dt {
+  font-family: ElstobP;
+  font-size: 1.5em;
+  font-variation-settings:  'XOPQ' 750, 'YOPQ' 200, 'YTLX' 333;
+}
+b {
+  font-variation-settings:  'XOPQ' 750, 'YOPQ' 200, 'YTLX' 333;
+}
+.oldstyle {
+  font-feature-settings: 'onum' on;
+}
+#romtextarea {
+    background-color: #F8F8F8;
+    margin: 0 0 20px 0;
+    font-style: normal;
+    font-size: var(--romsize);
+    font-variation-settings:
+      'YTUC' var(--axisYTUC),
+      'XTRA' var(--axisXTRA),
+      'YTFI' var(--axisYTFI),
+      'YTAS' var(--axisYTAS),
+      'YTDE' var(--axisYTDE),
+      'YTLX' var(--axisYTLX),
+      'XOPQ' var(--axisXOPQ),
+      'YOPQ' var(--axisYOPQ);
+    font-feature-settings: 'calt' on;
+}
+.bigtitle {
+    font-size: 1.3em;
+    /* font-style: italic; */
+    font-variation-settings: 'XOPQ' 539, 'YOPQ' 133;
+}
+.paragroup {
+    width: 95%;
+    padding: 20px;
+ }
+#topbox {
+    margin: 0 0 0 20px;
+    width: 93%;
+    background-color: #F0F0F0;
+    padding: 20px;
+}
+.controlbox {
+    float: left;
+    width: 35%;
+    padding: 20px;
+    margin: 0 0 20px 0;
+    background-color: #F0F0F0;
+}
+.samplebox {
+    float: right;
+    width: 55%;
+    padding: 20px;
+}
+.bbx {
+  white-space: nowrap;
+}
+.featurebox, .selectbox {
+    padding: 20px 0 0 0;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.sliderlabel {
+    margin: 10px 0 0 0;
+}
+
+.small-caps {
+  font-feature-settings: 'smcp' on;
+}
+
+/* Instance Classes */
+
+.regular {
+  font-variation-settings:
+    'YTUC' 0,
+    'XTRA' 0,
+    'YTFI' 0,
+    'YTAS' 0,
+    'YTDE' 0,
+    'YTLX' 0,
+    'XOPQ' 0,
+    'YOPQ' 0  ;
+}
+
+.fineprint {
+  font-variation-settings:
+    'YTUC' 0,
+    'XTRA' 378,
+    'YTFI' 0,
+    'YTAS' 0,
+    'YTDE' 151,
+    'YTLX' 276,
+    'XOPQ' 39,
+    'YOPQ' 600 ;
+}
+
+.footnote {
+  font-variation-settings:
+    'YTUC' 0,
+    'XTRA' 278,
+    'YTFI' 0,
+    'YTAS' 0,
+    'YTDE' 102,
+    'YTLX' 184,
+    'XOPQ' 33,
+    'YOPQ' 400 ;
+}
+
+.blockquote {
+  font-variation-settings:
+    'YTUC' 0,
+    'XTRA' 144,
+    'YTFI' 0,
+    'YTAS' 0,
+    'YTDE' 48,
+    'YTLX' 92,
+    'XOPQ' 18,
+    'YOPQ' 200  ;
+}
+
+.subhead {
+  font-variation-settings:
+    'YTUC' 0,
+    'XTRA' -122,
+    'YTFI' 0,
+    'YTAS' 0,
+    'YTDE' -48,
+    'YTLX' 92,
+    'XOPQ' -22,
+    'YOPQ' -333  ;
+}
+
+.display {
+  font-variation-settings:
+    'YTUC' 0,
+    'XTRA' -356,
+    'YTFI' 0,
+    'YTAS' 0,
+    'YTDE' -144,
+    'YTLX' -276,
+    'XOPQ' -44,
+    'YOPQ' -1000  ;
+}
+
+.extralight {
+  font-variation-settings:
+    'YTUC' 0,
+    'XTRA' 0,
+    'YTFI' 0,
+    'YTAS' 0,
+    'YTDE' 0,
+    'YTLX' 0,
+    'XOPQ' -456,
+    'YOPQ' -1000  ;
+}
+
+.light {
+  font-variation-settings:
+    'YTUC' 0,
+    'XTRA' 0,
+    'YTFI' 0,
+    'YTAS' 0,
+    'YTDE' 0,
+    'YTLX' 0,
+    'XOPQ' -222,
+    'YOPQ' -500 ;
+}
+
+.blockquotelight {
+  font-variation-settings:
+    'YTUC' 0,
+    'XTRA' 144,
+    'YTFI' 0,
+    'YTAS' 0,
+    'YTDE' 48,
+    'YTLX' 92,
+    'XOPQ' -205,
+    'YOPQ' -300  ;
+}
+
+.subheadlight {
+  font-variation-settings:
+    'YTUC' 0,
+    'XTRA' -122,
+    'YTFI' 0,
+    'YTAS' 0,
+    'YTDE' -48,
+    'YTLX' -92,
+    'XOPQ' -245,
+    'YOPQ' -833  ;
+}
+
+.subheadlight {
+  font-variation-settings:
+    'XOPQ' -245,
+    'YOPQ' -833,
+    'XTRA' -122,
+    'YTUC' 0,
+    'YTLX' -92,
+    'YTDE' -48,
+    'YTAS' 0,
+    'YTFI' 0;
+}
+
+.displaylight {
+  font-variation-settings:
+    'XOPQ' -267,
+    'YOPQ' -1000,
+    'XTRA' -356,
+    'YTUC' 0,
+    'YTLX' -276,
+    'YTDE' -144,
+    'YTAS' 0,
+    'YTFI' 0;
+}
+
+.medium {
+  font-variation-settings:
+    'XOPQ' 211,
+    'YOPQ' 33,
+    'XTRA' 0,
+    'YTUC' 0,
+    'YTLX' 0,
+    'YTDE' 0,
+    'YTAS' 0,
+    'YTFI' 0;
+}
+
+.fineprintmedium {
+  font-variation-settings:
+    'XOPQ' 250,
+    'YOPQ' 600,
+    'XTRA' 378,
+    'YTUC' 0,
+    'YTLX' 0,
+    'YTDE' 151,
+    'YTAS' 0,
+    'YTFI' 0;
+}
+
+.footnotemedium {
+  font-variation-settings:
+    'XOPQ' 244,
+    'YOPQ' 433,
+    'XTRA' 278,
+    'YTUC' 0,
+    'YTLX' 184,
+    'YTDE' 102,
+    'YTAS' 0,
+    'YTFI' 0;
+}
+
+.blockquotemedium {
+  font-variation-settings:
+    'XOPQ' 229,
+    'YOPQ' 233,
+    'XTRA' 144,
+    'YTUC' 0,
+    'YTLX' 92,
+    'YTDE' 48,
+    'YTAS' 0,
+    'YTFI' 0;
+}
+
+.subheadmedium {
+  font-variation-settings:
+    'XOPQ' 189,
+    'YOPQ' -300,
+    'XTRA' -122,
+    'YTUC' 0,
+    'YTLX' -92,
+    'YTDE' -48,
+    'YTAS' 0,
+    'YTFI' 0;
+}
+
+.displaymedium {
+  font-variation-settings:
+    'XOPQ' 167,
+    'YOPQ' -967,
+    'XTRA' -356,
+    'YTUC' 0,
+    'YTLX' -276,
+    'YTDE' -144,
+    'YTAS' 0,
+    'YTFI' 0;
+}
+
+.semibold {
+  font-variation-settings:
+    'XOPQ' 500,
+    'YOPQ' 67,
+    'XTRA' 0,
+    'YTUC' 0,
+    'YTLX' 0,
+    'YTDE' 0,
+    'YTAS' 0,
+    'YTFI' 0;
+}
+
+.fineprintsemibold {
+  font-variation-settings:
+    'XOPQ' 539,
+    'YOPQ' 600,
+    'XTRA' 378,
+    'YTUC' 0,
+    'YTLX' 276,
+    'YTDE' 151,
+    'YTAS' 0,
+    'YTFI' 0;
+}
+
+.footnotesemibold {
+  font-variation-settings:
+    'XOPQ' 533,
+    'YOPQ' 467,
+    'XTRA' 278,
+    'YTUC' 0,
+    'YTLX' 184,
+    'YTDE' 102,
+    'YTAS' 0,
+    'YTFI' 0;
+}
+
+.blockquotesemibold {
+  font-variation-settings:
+    'XOPQ' 518,
+    'YOPQ' 267,
+    'XTRA' 144,
+    'YTUC' 0,
+    'YTLX' 92,
+    'YTDE' 48,
+    'YTAS' 0,
+    'YTFI' 0;
+}
+
+.subheadsemibold {
+  font-variation-settings:
+    'XOPQ' 478,
+    'YOPQ' -267,
+    'XTRA' -122,
+    'YTUC' 0,
+    'YTLX' -92,
+    'YTDE' -48,
+    'YTAS' 0,
+    'YTFI' 0;
+}
+
+.bold {
+  font-variation-settings:
+    'XOPQ' 750,
+    'YOPQ' 100,
+    'XTRA' 0,
+    'YTUC' 0,
+    'YTLX' 0,
+    'YTDE' 0,
+    'YTAS' 0,
+    'YTFI' 0;
+}
+
+.fineprintbold {
+  font-variation-settings:
+    'XOPQ' 783,
+    'YOPQ' 600,
+    'XTRA' 378,
+    'YTUC' 0,
+    'YTLX' 276,
+    'YTDE' 151,
+    'YTAS' 0,
+    'YTFI' 0;
+}
+
+.footnotebold {
+  font-variation-settings:
+    'XOPQ' 783,
+    'YOPQ' 500,
+    'XTRA' 278,
+    'YTUC' 0,
+    'YTLX' 184,
+    'YTDE' 102,
+    'YTAS' 0,
+    'YTFI' 0;
+}
+
+.blockquotebold {
+  font-variation-settings:
+    'XOPQ' 768,
+    'YOPQ' 300,
+    'XTRA' 144,
+    'YTUC' 0,
+    'YTLX' 92,
+    'YTDE' 48,
+    'YTAS' 0,
+    'YTFI' 0;
+}
+
+.subheadbold {
+  font-variation-settings:
+    'XOPQ' 728,
+    'YOPQ' -233,
+    'XTRA' -122,
+    'YTUC' 0,
+    'YTLX' -92,
+    'YTDE' -48,
+    'YTAS' 0,
+    'YTFI' 0;
+}
+
+.displaybold {
+  font-variation-settings:
+    'XOPQ' 706,
+    'YOPQ' -900,
+    'XTRA' -356,
+    'YTUC' 0,
+    'YTLX' -276,
+    'YTDE' -144,
+    'YTAS' 0,
+    'YTFI' 0;
+}
+
+.extrabold {
+  font-variation-settings:
+    'XOPQ' 1000,
+    'YOPQ' 133,
+    'XTRA' 0,
+    'YTUC' 0,
+    'YTLX' 0,
+    'YTDE' 0,
+    'YTAS' 0,
+    'YTFI' 0;
+}
