@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Elstob variable font specimen page</title>
+		<link rel="stylesheet" href="./webfiles/jquery-ui.css"/>
+		<link rel="stylesheet" href="./webfiles/Elstob-parametric-demo.css"/>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-CT1J49SQMN"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-CT1J49SQMN');
+		</script>
+	</head>
+  <body lang="en">
+    <div id="topbox">
+      <h1><span class="bigtitle">ElstobP</span> — an experimental parametric font</h1>
+    </div>
+    <div id="headerbox" class="paragroup">
+			<p>
+				This page previews and tests a
+				<a href="https://fonts.google.com/knowledge/using_type/introducing_parametric_axes">parametric</a>
+				version of <a href="https://github.com/psb1558/Elstob-font">Elstob</a>,
+				a font for medievalists.
+				As the parametric font is experimental, its character set is a subset of that
+				of the current version of Elstob, its collection
+				of OpenType features is much reduced, and it has no italic face. As development continues, the missing
+				glyphs and features will be restored.
+			</p>
+      <p>
+				A <b>parametric font</b> is a variable font in which each axis controls
+				a single aspect of the design. By contrast, the axes of most variable fonts
+				control several aspects.
+      </p>
+			<p>
+				For example, changing the Optical Size in the current version of Elstob changes the <b>x-height</b>,
+				the <b>character width</b>, the <b>descender depth</b>, and the relationship
+				between <b>thick stems</b> and <b>thin stems</b>. In ElstobP, those five aspects of the font’s design
+				can be controlled separately, though optical sizes can still be selected
+				via the font’s <b>named instances</b> (that is, preselected combinations of axis
+				values, each one corresponding to a traditional static font file).
+			</p>
+      <p>
+				A parametric font offers at least two advantages over static fonts and even
+				other variable fonts. The first of these is
+				flexibility. You can use the font’s eight axes to create a custom instance—like
+				the header on this page, in which the characters have been narrowed and the
+				ascenders and descenders of letters like <b>d</b> and <b>p</b> have been
+				lengthened. The second advantage, less visible but still important,
+				is a sturdier infrastructure for the font:
+				for it turns out that breaking a font’s design into separate components
+				produces, in the end, higher quality outlines and a correspondingly better reading experience.
+      </p>
+      <p>
+				These advantages come at a cost: a parametric font is more challenging for users
+				than a static font, or even another variable font. But the
+				font’s numerous named instances provide easy access to the most common
+				combinations of axis values and can also serve as starting
+				points for your own customized version of the font.
+      </p>
+			<p>
+				This page works like the main
+				<a href="https://psb1558.github.io/Elstob-font/">specimen page for Elstob</a>:
+				select a text
+				to display (or type or paste in your own) and play with the sliders to
+				get a feel for how a parametric font works. The font’s eight axes are
+				explained below.
+			</p>
+
+    </div>
+    <div class="row">
+      <div class="controlbox">
+        <div class="selectbox overflow">
+          <label for="rompresets">Instances (selection):</label><br/>
+          <select id="rompresets">
+						<option value="Reg" selected="selected">Regular (12pt)</option>
+            <option value="Reg6pt">Fine Print (6pt)</option>
+            <option value="Reg8pt">Footnote (8pt))</option>
+            <option value="Reg10pt">Block Quote (10pt))</option>
+            <option value="Reg14pt">Subhead (14pt))</option>
+            <option value="Reg18pt">Display (18pt))</option>
+            <option value="ExtraLight">ExtraLight</option>
+            <option value="Light">Light</option>
+						<option value="Light10pt">Block Quote Light</option>
+            <option value="Medium">Medium</option>
+						<option value="Medium14pt">Subhead Medium</option>
+            <option value="SemiBold">SemiBold</option>
+						<option value="SemiBold18pt">Display SemiBold</option>
+            <option value="Bold">Bold</option>
+            <option value="Bold8pt">Footnote Bold</option>
+						<option value="Bold10pt">Block Quote Bold</option>
+						<option value="Bold18pt">Display Bold</option>
+            <option value="ExtraBold">ExtraBold</option>
+          </select><br/>
+          <label for="languages">Languages:</label><br/>
+          <select id="languages">
+            <option value="ModEnglish" selected="selected">Modern English</option>
+            <option value="eModEnglish">Early Modern English</option>
+        	  <option value="OldEnglish">Old English</option>
+        	  <option value="MiddleEnglish">Middle English</option>
+        	  <option value="Latin">Latin</option>
+        	  <option value="Gothic">Gothic</option>
+        	  <option value="ModFrench">Early Modern French</option>
+        	  <option value="OldSaxon">Old Saxon</option>
+        	  <option value="German">Early New High German</option>
+          </select>
+        </div>
+
+	<div class="slidecontainer" id="romsliders">
+	  <div id="lSize" class="sliderlabel">Size: <span id="romsizetext">1.5em</span></div>
+	  <div id="romsize" class="myslider"></div>
+
+	  <div id="lCapHeight" class="sliderlabel">Capital Height: <span id="textCapHeight">0</span></div>
+	  <div id="pCapHeight" class="myslider"></div>
+
+	  <div id="lCharWidth" class="sliderlabel">Character Width: <span id="textCharWidth">0</span></div>
+	  <div id="pCharWidth" class="myslider"></div>
+
+	  <div id="lFigHeight" class="sliderlabel">Figure Height: <span id="textFigHeight">0</span></div>
+	  <div id="pFigHeight" class="myslider"></div>
+
+		<div id="lAscenderHeight" class="sliderlabel">Ascender Height: <span id="textAscenderHeight">0</span></div>
+		<div id="pAscenderHeight" class="myslider"></div>
+
+		<div id="lDescenderDepth" class="sliderlabel">Descender Depth: <span id="textDescenderDepth">0</span></div>
+		<div id="pDescenderDepth" class="myslider"></div>
+
+		<div id="lxHeight" class="sliderlabel">x-Height: <span id="textxHeight">0</span></div>
+		<div id="pxHeight" class="myslider"></div>
+
+		<div id="lThickStroke" class="sliderlabel">Thick Stroke Width: <span id="textThickStroke">0</span></div>
+		<div id="pThickStroke" class="myslider"></div>
+
+		<div id="lThinStroke" class="sliderlabel">Thin Stroke Width: <span id="textThinStroke">0</span></div>
+		<div id="pThinStroke" class="myslider"></div>
+	</div>
+	<div class="featurebox" id="rfb">
+		<!--
+	  <span class="bbx">
+	    <input type="checkbox" class="featurebutton" id="romital"/>
+	    <label for="romital">Italic</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox" class="featurebutton" id="romcalt" checked="checked"/>
+	    <label for="romcalt">Contextual alternates</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox" class="featurebutton" id="romliga" checked="checked"/>
+	    <label for="romliga">Standard ligatures</label>
+	  </span>
+-->
+<!--
+	  <span class="bbx">
+	    <input type="checkbox" class="featurebutton" id="romdlig"/>
+	    <label for="romdlig">Discretionary ligatures</label>
+	  </span> -->
+	  <span class="bbx">
+	    <input type="checkbox" class="featurebutton" id="romsmcp"/>
+	    <label for="romsmcp">Small caps</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox" class="featurebutton" id="romc2sc"/>
+	    <label for="romc2sc">Caps 2 small caps</label>
+	  </span>
+	  <!-- <span class="bbx">
+	    <input type="checkbox"  class="featurebutton" id="rompnum"/>
+	    <label for="rompnum">Proportional figures</label>
+	  </span>
+	-->
+	  <span class="bbx">
+	    <input type="checkbox"  class="featurebutton" id="romonum"/>
+	    <label for="romonum">Old-style figures</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox"  class="featurebutton" id="romzero"/>
+	    <label for="romzero">Slashed zero</label>
+	  </span>
+<!--	  <span class="bbx">
+	    <input type="checkbox"  class="featurebutton" id="romss02"/>
+	    <label for="romss02">Insular letter-shapes</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox"  class="featurebutton" id="romss01"/>
+	    <label for="romss01">Alternate þ and ð</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox"  class="featurebutton" id="romss05"/>
+	    <label for="romss05">English þ and ð</label>
+	  </span> -->
+<!--	  <span class="bbx">
+	    <input type="checkbox"  class="featurebutton" id="romcv382"/>
+	    <label for="romcv382">Long s</label>
+	  </span> -->
+	  <span class="bbx">
+	    <input type="checkbox"  class="featurebutton" id="romss08"/>
+	    <label for="romss08">Contextual long s</label>
+	  </span>
+<!--	  <span class="bbx" id="aespan">
+	    <input type="checkbox" class="featurebutton" id="romcv57"/>
+	    <label for="romcv57">Alternate æ</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox" class="featurebutton" id="romcv362"/>
+	    <label for="romcv362">r rotunda</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox" class="featurebutton" id="romss16"/>
+	    <label for="romss16">Contextual r rotunda</label>
+	  </span> -->
+    <span class="bbx">
+	    <input type="checkbox" class="featurebutton" id="romcv691"/>
+	    <label for="romcv691">Alt Tironian sign (1)</label>
+	  </span>
+    <span class="bbx">
+	    <input type="checkbox" class="featurebutton" id="romcv692"/>
+	    <label for="romcv692">Alt Tironian sign (2)</label>
+	  </span>
+    <span class="bbx">
+      <input type="checkbox" class="featurebutton" id="romcv181"/>
+      <label for="romcv181">Dotless i</label>
+    </span>
+<!--	  <span class="bbx">
+	    <input type="checkbox"  class="featurebutton" id="romss12"/>
+	    <label for="romss12">Early English futhorc</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox"  class="featurebutton" id="romss13"/>
+	    <label for="romss13">Elder futhark</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox"  class="featurebutton" id="romss14"/>
+	    <label for="romss14">Younger futhark</label>
+	  </span>
+	  <span class="bbx">
+	    <input type="checkbox"  class="featurebutton" id="romss15"/>
+	    <label for="romss15">Long Branch 2 Short Twig</label>
+	  </span> -->
+	</div>
+      </div>
+      <p contenteditable="true" id="romtextarea" class="samplebox">
+      </p>
+    </div>
+<!--    <div id="errmsg">nothing</div> -->
+    <div id="underbox" class="paragroup">
+      <h2>ElstobP’s parametric axes</h2>
+			<img src="webfiles/bbb-ascender.jpg" alt="Illustration of ascender heights"
+			width="30%" height="30%" style="float: right;"/>
+      <p>
+				A variable font axis has three key values: a minimum, a maximum, and a
+				default value somewhere in between. In ElstobP, the default value
+				for each axis is zero, while the minimum can be no less than
+				-1000 and the maximum no more than 1000. For example, the <b>Ascender
+				height</b> axis has a minimum of -1000 and a maximum of 562 because the
+				minimum height of an ascender is almost twice as far from the default
+				as the maximum height, as illustrated with the letter <b>b</b> (right). When all the
+				axes are set to zero, the result is what in a conventional font is called
+				“Regular.”
+      </p>
+			<img src="webfiles/bad-eth.png" alt="Malformed letter eth" style="float: right; width: 130px"/>
+      <p>
+				The eight axes can be combined in any way you like, and the
+				number of combinations in this font’s multidimensional design space is, for
+				practical purposes, infinite. Experiment with ElstobP on this page or
+				in an application like <a href="https://fontgoggles.org/">FontGoggles</a>
+				to discover combinations that please you. A couple of caveats. First,
+				and one hopes obviously, not every combination of parameters is guaranteed
+				to look good. Second, and more importantly, outlines can become
+				distorted when two or more axes are set at or near extreme values.
+				This has happened with the <b>ð</b> (“eth”) on the right (where both the
+				<b>x-height</b> and the <b>Thick stroke</b> axes are set to the maximum). Decrease
+				either or both of these a little and the distortion where the stroke
+				that closes the top of the bowl meets the right-hand stem disappears.
+      </p>
+			<img src="webfiles/elstob-parameters.jpg" alt="Elstob's axes" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"/>
+      <p>
+				Elstob’s axes (except for <b>Figure height</b>, which applies only to the font’s
+				default numbers) are here illustrated with the Icelandic letter <b>thorn</b>.
+				The following list adds some details. Apps that, like the Adobe Creative Suite, are aware of variable
+				fonts will display the English names of the axes. If you are writing the CSS for a web page, you will need
+				the four-letter tags, which are used by the makers of most parametric fonts. (For easy CSS access to the
+				font’s instances, copy the “Instance Classes” from the style sheet for this page.)
+      </p>
+			<dl>
+				<dt>Ascender height (YTAS)</dt>
+				<dd>
+					Range -1000–562. Changes the height of the ascenders on letters like
+					<b>b</b>, <b>d</b>, <b>þ</b>. Affects only lowercase letters and
+					some old-style figures.
+				</dd>
+				<dt>Capital height (YTUC)</dt>
+				<dd>
+					Range -1000–588. Changes the height of capitals (and capital-like
+					symbols such as the Euro sign) by vertically expanding or contracting the white
+					space within the letter. The width of stems is unchanged.
+				</dd>
+				<dt>Character width (XTRA)</dt>
+				<dd>
+					Range -1000–1000. Changes the width of all characters in the font
+					by horizontally
+					expanding or contracting the white space within the letter.
+					The width of stems is unchanged. Characters without interior
+					white space are usually unchanged.
+				</dd>
+				<dt>Descender depth (YTDE)</dt>
+				<dd>
+					Range -602–1000. Changes the length of the descenders on letters like
+					<b>j</b>, <b>p</b>, <b>q</b>. Lower numbers make the descender longer,
+					higher numbers shorter. A few uppercase and small cap letters (like <b>J</b>) are
+					also affected by this axis, and a few symbols (like the Tironian <b>et</b>
+					sign <b>⁊</b>)
+				</dd>
+				<dt>Figure height (YTFI)</dt>
+				<dd>
+					Range -1000–588. Changes the height of lining figures (like 01234)
+					by varying the amount of interior white space. Old-style figures
+					(like <span class="oldstyle">01234</span>) are not affected, since
+					these should harmonize with lowercase letters.
+				</dd>
+				<dt>Thick stroke width (XOPQ)</dt>
+				<dd>
+					Range -456–1000. Changes the width of thick strokes. These are usually
+					verticals (in letters like <b>d</b>, <b>f</b>, <b>H</b>, <b>O</b>),
+					but sometimes diagonals in letters like <b>x</b>, <b>A</b>, or
+					even thick horizontals in letters like <b class="oldstyle">2</b>.
+				</dd>
+				<dt>Thin stroke width (YOPQ)</dt>
+				<dd>
+					Range -1000–600. Changes the width of thin strokes. These are usually
+					horizontals (in letters like <b>p</b>, <b>H</b>), but also diagonals
+					in letters like <b>x</b>, <b>A</b>, and occasionally even verticals
+					(e.g. in <b>N</b>). This axis also changes the width of serifs in
+					upper- and lowercase letters.
+				</dd>
+				<dt>x-height (YTLX)</dt>
+				<dd>
+					Range -895–1000. Changes the x-height of lowercase and <span class="small-caps">small cap</span> letters—that is,
+					the height of the letter <b>x</b> and portions of letters
+					(for example, the bowl of <b>b</b>) at that same height. The absolute
+					height or depth of ascenders and descenders is not affected. This
+					axis also affects old-style numbers like <b class="oldstyle">01234</b>.
+				</dd>
+			</dl>
+    </div>
+    <script src="./webfiles/jquery.js"></script>
+		<script src="./webfiles/jquery-ui.js"></script>
+    <script src="./webfiles/Elstob-parametric-demo.js" type="text/javascript"></script>
+  </body>
+</html>
