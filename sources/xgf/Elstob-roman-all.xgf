@@ -817,7 +817,7 @@ type="application/relax-ng-compact-syntax"?>
 	<gl pnm="uniA7D1" assume-y="yes"> <!-- Orm's g -->
 		<cn nm="bar-top" val="{258;435}"/>
 		<cn nm="loop-bot" val="{232;-245}"/>
-		<cn nm="bar-bot" val="{444;398}"/>
+		<cn nm="bar-bot" val="{447;398}"/>
 		<mv di="xheight" p="bar-top">
 			<mv p="bar-bot"/>
 		</mv>

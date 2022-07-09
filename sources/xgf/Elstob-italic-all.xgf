@@ -579,8 +579,8 @@
   <gl pnm="A">
     <cn nm="top" val="{748;676}"/>
     <cn nm="diag-top" val="{633;621}"/>
-    <cn nm="serif-left" val="{-68;0}"/>
-    <cn nm="serif-right" val="{321;0}"/>
+    <cn nm="serif-left" val="{-77;0}"/>
+    <cn nm="serif-right" val="{323;0}"/>
     <cn nm="diag-left-bot" val="{12;8}"/>
     <cn nm="diag-right-bot" val="{394;8}"/>
     <cn nm="bar-bot" val="{300;259}"/>
@@ -611,13 +611,13 @@
     <cn nm="top-r" val="{1107;676}"/>
     <cn nm="diag-top" val="{633;621}"/>
     <cn nm="diag-top-r" val="{991;621}"/>
-    <cn nm="serif-left" val="{-68;0}"/>
+    <cn nm="serif-left" val="{-77;0}"/>
     <cn nm="bar-bot" val="{294;259}"/>
     <cn nm="bar-bot-r" val="{650;260}"/>
     <cn nm="bar-top" val="{310;285}"/>
     <cn nm="bar-top-r" val="{671;285}"/>
-    <set nm="bot-a" p="{12;8} {394;8} {435;8} {753;8} {321;0} {681;0}"/>
-    <set nm="bot-b" p="{331;25} {690;25}"/>
+    <set nm="bot-a" p="{12;8} {394;8} {435;8} {753;8} {323;0} {682;0}"/>
+    <set nm="bot-b" p="{333;25} {692;25}"/>
     <mv di="cap-height-overshoot" p="top">
       <sh p="top-r diag-top diag-top-r"/>
     </mv>
@@ -632,17 +632,17 @@
   </gl>
 
   <gl pnm="uniA734"> <!-- AO -->
-    <cn nm="A-top" val="{745;676}"/>
-    <cn nm="diag-top" val="{633;621}"/>
-    <cn nm="bar-top" val="{300;259}"/>
-    <cn nm="bar-bot" val="{313;289}"/>
-    <cn nm="serif-left" val="{-68;0}"/>
-    <cn nm="serif-right" val="{328;0}"/>
-    <cn nm="O-top" val="{887;676}"/>
-    <cn nm="O-top-ins" val="{865;648}"/>
-    <cn nm="O-bot" val="{693;-13}"/>
-    <cn nm="O-bot-ins" val="{717;15}"/>
-    <set nm="bot-a" p="{401;8} serif-right {12;8} O-bot"/>
+    <cn nm="A-top" val="{736;676}"/>
+    <cn nm="diag-top" val="{624;621}"/>
+    <cn nm="bar-top" val="{304;289}"/>
+    <cn nm="bar-bot" val="{291;259}"/>
+    <cn nm="serif-left" val="{-77;0}"/>
+    <cn nm="serif-right" val="{319;0}"/>
+    <cn nm="O-top" val="{878;676}"/>
+    <cn nm="O-top-ins" val="{856;648}"/>
+    <cn nm="O-bot" val="{684;-13}"/>
+    <cn nm="O-bot-ins" val="{708;15}"/>
+    <set nm="bot-a" p="{392;8} serif-right {3;8} O-bot"/>
     <mv di="cap-height-overshoot" p="A-top">
       <sh p="diag-top O-top"/>
     </mv>
@@ -660,7 +660,7 @@
     </callm>
   </gl>
 
-  <gl pnm="uniA736"> <!-- AU -->
+  <gl pnm="uniA736" xoffset="-9"> <!-- AU -->
     <cn nm="top-serif" val="{538;663}"/>
     <cn nm="bot-serif" val="{-68;0}"/>
     <cn nm="U-bot" val="{649;-13}"/>
@@ -680,7 +680,7 @@
     </callm>
   </gl>
 
-  <gl pnm="uniA738"> <!-- AV -->
+  <gl pnm="uniA738"  xoffset="-9"> <!-- AV -->
     <cn nm="top-serif" val="{924;663}"/>
     <cn nm="bot-serif" val="{-68;0}"/>
     <set nm="top-a" p="{748;676} {1066;655} {633;621}"/>
@@ -696,7 +696,7 @@
     </callm>
   </gl>
 
-  <gl pnm="uniA73A"> <!-- AV with bar -->
+  <gl pnm="uniA73A" xoffset="-9"> <!-- AV with bar -->
     <cn nm="top-serif" val="{924;663}"/>
     <cn nm="bot-serif" val="{-68;0}"/>
     <set nm="top-a" p="{748;676} {1066;655} {664;615}"/>
@@ -712,7 +712,7 @@
     </callm>
   </gl>
 
-  <gl pnm="uniA73C"> <!-- AY -->
+  <gl pnm="uniA73C" xoffset="-9"> <!-- AY -->
     <cn nm="bot" val="{146;-237}"/>
     <cn nm="top-serif" val="{822;663}"/>
     <cn nm="bot-serif" val="{-68;0}"/>
@@ -958,7 +958,7 @@
     </callm>
   </gl>
 
-  <gl pnm="J">
+  <gl pnm="J" xoffset="29">
     <callm nm="cap-serif-sh">
       pt-a: {201;663}, pt-b: {192;638}, sh-a: {310;655}, cv: cap-height
     </callm>
@@ -1081,7 +1081,7 @@
   </gl>
 
   <gl pnm="P">
-    <cn nm="top-serif" val="{123;663}"/>
+    <cn nm="top-serif" val="{143;663}"/>
     <cn nm="bot-serif" val="{-40;0}"/>
     <callm nm="cap-serif-sh">
       pt-a: top-serif, pt-b: (top-serif - 1), sh-a: {288;655}, cv: cap-height
@@ -1111,7 +1111,7 @@
     </mv>
   </gl>
 
-  <gl pnm="Q">
+  <gl pnm="Q" xoffset="-2">
     <cn nm="tail-top" val="{436;-18}"/>
     <mv di="cap-height-overshoot" p="{390;676}">
       <mv di="cap-round-stem" p="{420;643}"/>
@@ -1208,7 +1208,7 @@
     </mv>
   </gl>
 
-  <gl pnm="U" assume-y="no">
+  <gl pnm="U" assume-y="no" xoffset="60">
     <pm nm="do-iup" val="0"/>
     <set nm="top-a" p="{663;655} {193;655} {554;663}"/>
     <setvs axis="y"/>
@@ -1223,7 +1223,7 @@
     </compile-if>
   </gl>
 
-  <gl pnm="Uogonek">
+  <gl pnm="Uogonek" xoffset="60">
     <cn nm="left-serif" val="{84;663}"/>
     <cn nm="bot" val="{208;-13}"/>
     <cn nm="og-anchor" val="27"/>
@@ -1263,7 +1263,7 @@
     <ip r="17 8" p="13"/>
   </gl>
 
-  <gl pnm="uniA760">
+  <gl pnm="uniA760" xoffset="35">
     <cn nm="left-serif" val="{83;663}"/>
     <cn nm="bot" val="{-4;-11}"/>
     <cn nm="descender-bot" val="{103;-237}"/>
@@ -1418,7 +1418,7 @@
     </mv>
   </gl>
 
-  <gl pnm="uniA758"> <!-- Qdiagonalstroke -->
+  <gl pnm="uniA758" xoffset="-2"> <!-- Qdiagonalstroke -->
     <cn nm="top" val="{392;676}"/>
     <cn nm="bot" val="{288;-13}"/>
     <cn nm="tail-bot" val="{649;-122}"/>
@@ -1692,7 +1692,7 @@
     </callm>
   </gl>
 
-  <gl pnm="c" xoffset="5">
+  <gl pnm="c" xoffset="-9">
     <mv di="xho" p="{283;445}">
       <sh p="{257;417}"/>
     </mv>
@@ -1714,7 +1714,7 @@
     </callm>
   </gl>
 
-  <gl pnm="eth">
+  <gl pnm="eth" xoffset="-8">
     <cn nm="top" val="{262;706}"/>
     <cn nm="bot" val="{138;-12}"/>
     <mv di="lcbu" p="bot">
@@ -1727,7 +1727,7 @@
     <ip r="top bot" p="{451;606} {437;640} {202;542} {216;509}"/>
   </gl>
 
-  <gl pnm="e">
+  <gl pnm="e" xoffset="-8">
     <cn nm="top" val="{317;445}"/>
     <cn nm="bot" val="{160;-11}"/>
     <cn nm="mid-bot" val="{81;201}"/>
@@ -1870,7 +1870,7 @@
     </callm>
   </gl>
 
-  <gl pnm="dotlessi" assume-y="no">
+  <gl pnm="dotlessi" assume-y="no" xoffset="8">
     <pm nm="do-iup" val="0"/>
     <setvs axis="y"/>
     <mv di="xho" p="{220;445}">
@@ -1923,7 +1923,7 @@
     </compile-if>
   </gl>
 
-  <gl pnm="m">
+  <gl pnm="m" xoffset="8">
     <mv di="baseline" p="{25;0}">
       <sh p="{99;0} {250;0} {323;0}"/>
     </mv>
@@ -1938,7 +1938,7 @@
     </mv>
   </gl>
 
-  <gl pnm="n">
+  <gl pnm="n" xoffset="8">
     <mv di="baseline" p="{25;0}">
       <sh p="{99;0}"/>
     </mv>
@@ -1953,7 +1953,7 @@
     </mv>
   </gl>
 
-  <gl pnm="eng">
+  <gl pnm="eng" xoffset="8">
     <mv di="baseline" p="{25;0}">
       <sh p="{91;0}"/>
     </mv>
@@ -1985,7 +1985,7 @@
     </mv>
   </gl>
 
-  <gl pnm="o" assume-y="no">
+  <gl pnm="o" assume-y="no" xoffset="-8">
     <pm nm="do-iup" val="0"/>
     <setvs axis="y"/>
     <mv di="lcbu" p="{141;-11}">
@@ -1999,7 +1999,7 @@
     </compile-if>
   </gl>
 
-  <gl pnm="uni01EB"> <!-- oogonek -->
+  <gl pnm="uni01EB" xoffset="-8"> <!-- oogonek -->
     <mv di="lcbu" p="{120;-11}">
       <mv di="lcrs" p="{150;19}"/>
     </mv>
@@ -2011,7 +2011,7 @@
     </mv>
   </gl>
 
-  <gl pnm="oe">
+  <gl pnm="oe" xoffset="-8">
     <cn nm="bot" val="{141;-11}"/>
     <cn nm="top" val="{303;445}"/>
     <cn nm="bar-bot" val="{354;201}"/>
@@ -2089,7 +2089,7 @@
     <sh r="{47;-11}" p="{631;458} {-80;-215}"/>
   </gl>
 
-  <gl pnm="r">
+  <gl pnm="r" xoffset="8">
     <mv di="baseline" p="{25;0}">
       <sh p="{98;0}"/>
     </mv>
@@ -2108,7 +2108,7 @@
     </mv>
   </gl>
 
-  <gl pnm="s" assume-y="no">
+  <gl pnm="s" assume-y="no" xoffset="10">
     <pm nm="do-iup" val="0"/>
     <cn nm="top" val="{229;445}"/>
     <cn nm="bot" val="{83;-11}"/>
@@ -2170,7 +2170,7 @@
     <iup axis="y"/>
   </gl>
 
-  <gl pnm="u" assume-y="no">
+  <gl pnm="u" assume-y="no" xoffset="8">
     <pm nm="do-iup" val="0"/>
     <setvs axis="y"/>
     <mv di="lcbu" p="{78;-11}">
@@ -2385,7 +2385,7 @@
     </mv>
   </gl>
 
-  <gl pnm="a.ipa">
+  <gl pnm="a.ipa" xoffset="5">
     <cn nm="top" val="{323;446}"/>
     <cn nm="bot" val="{79;-11}"/>
     <mv di="xho" p="top">
@@ -2681,7 +2681,7 @@
     <iup axis="y"/>
   </gl>
 
-  <gl pnm="uniA7C1"> <!-- Old Polish o -->
+  <gl pnm="uniA7C1" xoffset="-8"> <!-- Old Polish o -->
     <mv di="xho" p="{303;445}">
       <sh p="{321;555}"/>
       <mv di="lcrs" p="{306;417}"/>
@@ -3017,7 +3017,7 @@
     </mv>
   </gl>
 
-  <gl pnm="a_s">
+  <gl pnm="a_s" xoffset="5">
     <mv di="lcbu" p="{42;-11}">
       <sh p="{257;-12} {555;-11}"/>
       <mv p="{675;408}"/>
@@ -3030,7 +3030,7 @@
     </mv>
   </gl>
 
-  <gl pnm="i_s">
+  <gl pnm="i_s" xoffset="8">
     <cn nm="top" val="{220;445}"/>
     <cn nm="bot" val="{78;-11}"/>
     <mv di="xho" p="top">
@@ -3046,7 +3046,7 @@
     <ip r="top bot" p="{424;325} {411;338}"/>
   </gl>
 
-  <gl pnm="u_s">
+  <gl pnm="u_s" xoffset="8">
     <cn nm="s-top" val="{747;445}"/>
     <cn nm="s-bot" val="{601;-11}"/>
     <mv di="lcbu" p="{78;-11}">
@@ -3067,7 +3067,7 @@
     <ip r="s-top s-bot" p="{648;328} {636;338}"/>
   </gl>
 
-  <gl pnm="c_t">
+  <gl pnm="c_t" xoffset="-9">
     <cn nm="t-top" val="{710;676}"/>
     <cn nm="t-bot" val="{425;-11}"/>
     <mv di="xh" p="{255;442}">
@@ -3085,7 +3085,7 @@
     <ip r="t-top t-bot" p="{426;421} {421;387}"/>
   </gl>
 
-  <gl pnm="uniFB06"> <!-- s t -->
+  <gl pnm="uniFB06" xoffset="10"> <!-- s t -->
     <cn nm="t-top" val="{620;666}"/>
     <cn nm="t-bot" val="{343;-11}"/>
     <cn nm="loop-top" val="{349;627}"/>
@@ -3149,7 +3149,7 @@
     </mv>
   </gl>
 
-  <gl pnm="uni006102DE">
+  <gl pnm="uni006102DE" xoffset="5">
     <cn nm="a-bot" val="{42;-11}"/>
     <cn nm="a-top" val="{311;445}"/>
     <cn nm="hook-bot" val="{565;160}"/>
@@ -3167,7 +3167,7 @@
     </mv>
   </gl>
 
-  <gl pnm="uni006102DE.ipa">
+  <gl pnm="uni006102DE.ipa" xoffset="5">
     <cn nm="a-bot" val="{69;-12}"/>
     <cn nm="a-top" val="{316;446}"/>
     <cn nm="hook-bot" val="{539;125}"/>
@@ -3242,7 +3242,7 @@
     </mv>
   </gl>
 
-  <gl pnm="uni026802DE">
+  <gl pnm="uni026802DE" xoffset="8">
     <cn nm="i-top" val="{220;445}"/>
     <cn nm="i-bot" val="{78;-11}"/>
     <cn nm="hook-bot" val="{384;63}"/>
@@ -3256,7 +3256,7 @@
     </mv>
   </gl>
 
-  <gl pnm="uni027502DE">
+  <gl pnm="uni027502DE" xoffset="-8">
     <cn nm="bar-bot" val="{101;207}"/>
     <cn nm="hook-bot" val="{607;57}"/>
     <callg pnm="o">do-iup: -1</callg>
@@ -3269,7 +3269,7 @@
     </mv>
   </gl>
 
-  <gl pnm="uni028902DE">
+  <gl pnm="uni028902DE" xoffset="8">
     <cn nm="bar-bot" val="{59;213}"/>
     <cn nm="hook-bot" val="{604;63}"/>
     <callg pnm="u">do-iup: -1</callg>
@@ -3338,7 +3338,7 @@
     </compile-if>
   </gl>
 
-  <gl pnm="uni0250"> <!-- turned a -->
+  <gl pnm="uni0250" xoffset="8"> <!-- turned a -->
     <cn nm="top" val="{392;446}"/>
     <cn nm="bot" val="{148;-11}"/>
     <mv di="lcbu" p="bot">
@@ -3544,7 +3544,7 @@
     </callm>
   </gl>
 
-  <gl pnm="uni0262">
+  <gl pnm="uni0262" xoffset="-8">
     <cn nm="top" val="{333;445}"/>
     <cn nm="bot" val="{185;-11}"/>
     <cn nm="serif" val="{265;178}"/>
@@ -3685,7 +3685,7 @@
     </mv>
   </gl>
 
-  <gl pnm="uni026F"> <!-- mturned -->
+  <gl pnm="uni026F" xoffset="8"> <!-- mturned -->
     <mv di="lcbu" p="{78;-11}">
       <sh p="{320;-11} {545;-11}"/>
       <mv p="{127;44}">
@@ -3700,7 +3700,7 @@
     </mv>
   </gl>
 
-  <gl pnm="uni0270">
+  <gl pnm="uni0270" xoffset="8">
     <mv di="lcbu" p="{79;-11}">
       <sh p="{321;-11}"/>
       <mv p="{127;44}">
@@ -3718,7 +3718,7 @@
     </mv>
   </gl>
 
-  <gl pnm="uni0271">
+  <gl pnm="uni0271" xoffset="8">
     <mv di="baseline" p="{25;0}">
       <sh p="{99;0} {251;0} {319;0}"/>
     </mv>
@@ -3733,7 +3733,7 @@
     </callm>
   </gl>
 
-  <gl pnm="uni0272">
+  <gl pnm="uni0272" xoffset="8">
     <mv di="lcbu" p="{298;-11}">
       <mv p="{349;44}"/>
     </mv>
@@ -3748,7 +3748,7 @@
     </callm>
   </gl>
 
-  <gl pnm="uni0273">
+  <gl pnm="uni0273" xoffset="8">
     <mv di="baseline" p="{25;0}">
       <sh p="{91;0}"/>
     </mv>
@@ -3775,7 +3775,7 @@
     </callm>
   </gl>
 
-  <gl pnm="uni0275">
+  <gl pnm="uni0275" xoffset="-8">
     <cn nm="top" val="{303;445}"/>
     <cn nm="bot" val="{141;-11}"/>
     <callg pnm="o">do-iup: -1</callg>
@@ -3803,7 +3803,7 @@
     </callm>
   </gl>
 
-  <gl pnm="uni0278">
+  <gl pnm="uni0278" xoffset="-8">
     <mv di="lcbu" p="{152;-11}">
       <mv di="lcrs" p="{142;28}"/>
     </mv>
@@ -3857,7 +3857,7 @@
     </callm>
   </gl>
 
-  <gl pnm="uni027D">
+  <gl pnm="uni027D" xoffset="8">
     <mv di="xho" p="{412;445}">
       <sh p="{202;445}"/>
       <mv p="{352;375}"/>
@@ -3919,7 +3919,7 @@
     </callm>
   </gl>
 
-  <gl pnm="uni0282">
+  <gl pnm="uni0282" xoffset="10">
     <mv di="xho" p="{229;445}">
       <mv p="{203;408}"/>
     </mv>
@@ -3990,7 +3990,7 @@
     <ip r="top bot" p="{334;359} {340;403} {64;421} {59;387}"/>
   </gl>
 
-  <gl pnm="uni0289">
+  <gl pnm="uni0289" xoffset="8">
     <cn nm="top" val="{222;445}"/>
     <cn nm="bot" val="{78;-11}"/>
     <callg pnm="u">do-iup: -1</callg>
@@ -3999,7 +3999,7 @@
     </callm>
   </gl>
 
-  <gl pnm="uni028B">
+  <gl pnm="uni028B" xoffset="8">
     <mv di="lcbu" p="{76;-12}">
       <mv p="{126;43}"/>
     </mv>
@@ -4197,7 +4197,7 @@
     </callm>
   </gl>
 
-  <gl pnm="uni029B">
+  <gl pnm="uni029B" xoffset="-8">
     <cn nm="top" val="{333;445}"/>
     <cn nm="bot" val="{185;-11}"/>
     <cn nm="serif" val="{265;178}"/>
@@ -5533,7 +5533,7 @@
     </callg>
   </gl>
 
-  <gl pnm="aring.sc">
+  <gl pnm="aring.sc" xoffset="-11">
     <cn nm="left-serif" val="{-63;0}"/>
     <cn nm="right-serif" val="{221;0}"/>
     <cn nm="left-bottom-stem" val="{-22;8}"/>
@@ -5606,7 +5606,7 @@
     <ip r="6 28" p="17 18"/>
   </gl>
 
-  <gl pnm="uniA73D.sc">
+  <gl pnm="uniA73D.sc" xoffset="-11">
     <cn nm="bot-serif" val="{-63;0}"/>
     <cn nm="top-serif" val="{632;496}"/>
     <cn nm="a-top" val="{480;506}"/>
@@ -5672,7 +5672,7 @@
     </mv>
   </gl>
 
-  <gl pnm="d.sc">
+  <gl pnm="d.sc" xoffset="-6">
     <mv di="scho" p="{268;506}">
       <sh p="{293;491}"/>
       <mv di="scrs" p="{244;478}"/>
@@ -5682,7 +5682,7 @@
     </callm>
   </gl>
 
-  <gl pnm="uniA77A.sc"> <!-- insular d -->
+  <gl pnm="uniA77A.sc" xoffset="10"> <!-- insular d -->
     <mv di="sch" p="{395;496}">
       <sh p="{185;543}"/>
       <mv p="{376;462}">
@@ -5720,7 +5720,7 @@
     </callm>
   </gl>
 
-  <gl pnm="uniA77C.sc"> <!-- insular f -->
+  <gl pnm="uniA77C.sc" xoffset="-56"> <!-- insular f -->
     <cn nm="top" val="{296;506}"/>
     <cn nm="bot" val="{-53;-163}"/>
     <mv di="scho" p="top">
@@ -5735,7 +5735,7 @@
     </callm>
   </gl>
 
-  <gl pnm="g.sc">
+  <gl pnm="g.sc" xoffset="-2">
     <cn nm="top" val="{336;506}"/>
     <cn nm="bot" val="{291;-10}"/>
     <cn nm="serif-top" val="{355;242}"/>
@@ -5753,7 +5753,7 @@
     <ip r="serif-top serif-bot" p="{499;232}"/>
   </gl>
 
-  <gl pnm="uni1D79.sc"> <!-- insular g -->
+  <gl pnm="uni1D79.sc" xoffset="30"> <!-- insular g -->
     <cn nm="top" val="{323;496}"/>
     <cn nm="bot" val="{157;-135}"/>
     <cn nm="loop-top" val="{215;166}"/>
@@ -5772,7 +5772,7 @@
     </mv>
   </gl>
 
-  <gl pnm="uni021D.sc"> <!-- yogh -->
+  <gl pnm="uni021D.sc" xoffset="-10"> <!-- yogh -->
     <cn nm="top" val="{303;505}"/>
     <cn nm="bot" val="{-26;-17}"/>
     <cn nm="mid" val="{206;243}"/>
@@ -5808,7 +5808,7 @@
     </compile-if>
   </gl>
 
-  <gl pnm="hbar.sc"> <!-- h with bar -->
+  <gl pnm="hbar.sc" xoffset="-5"> <!-- h with bar -->
     <cn nm="top" val="{141;496}"/>
     <cn nm="mid" val="{159;271}"/>
     <cn nm="bar-bot" val="{117;355}"/>
@@ -5819,7 +5819,7 @@
     </mv>
   </gl>
 
-  <gl pnm="uni0195.sc"> <!-- Gothic hv -->
+  <gl pnm="uni0195.sc" xoffset="-6"> <!-- Gothic hv -->
     <cn nm="top" val="{141;496}"/>
     <cn nm="bot" val="{-39;0}"/>
     <set nm="top-a" p="{494;481} {434;496} {282;481}"/>
@@ -5851,7 +5851,7 @@
     </callm>
   </gl>
 
-  <gl pnm="j.sc">
+  <gl pnm="j.sc" xoffset="24">
     <cn nm="top" val="{143;496}"/>
     <callm nm="serif-sh">
       pt-a: top, pt-b: (top - 1), sh-a: {229;489},
@@ -5914,7 +5914,7 @@
     <iup axis="y"/>
   </gl>
 
-  <gl pnm="thorn.loclENG.sc">
+  <gl pnm="thorn.loclENG.sc" xoffset="-44">
     <mv di="scho" p="{272;508}">
       <sh round="yes" p="{408;485}"/>
     </mv>
@@ -5955,7 +5955,7 @@
     </callm>
   </gl>
 
-  <gl pnm="n.sc">
+  <gl pnm="n.sc" xoffset="-5">
     <set nm="top-sh-a" p="{216;482} {584;489} {486;496}"/>
     <set nm="bot-sh-a" p="{424;0} {34;7} {447;6}"/>
     <callm nm="serif-sh">
@@ -5968,7 +5968,7 @@
     </callm>
   </gl>
 
-  <gl pnm="eng.sc">
+  <gl pnm="eng.sc" xoffset="-5">
     <set nm="top-sh-a" p="{554;489} {220;483} {451;496}"/>
     <set nm="bot-sh-a" p="{407;75} {375;-5} {34;6}"/>
     <callm nm="serif-sh">
@@ -6018,7 +6018,7 @@
     </mv>
   </gl>
 
-  <gl pnm="oe.sc">
+  <gl pnm="oe.sc" xoffset="-2">
     <cn nm="o-top" val="{289;506}"/>
     <cn nm="o-bot" val="{226;-10}"/>
     <cn nm="e-top" val="{427;496}"/>
@@ -6163,7 +6163,7 @@
     </callm>
   </gl>
 
-  <gl pnm="s.sc">
+  <gl pnm="s.sc" xoffset="-3">
     <mv di="scho" p="{252;505}">
       <sh p="{390;484}"/>
       <mv p="{269;473}"/>
@@ -6174,7 +6174,7 @@
     </mv>
   </gl>
 
-  <gl pnm="uniA785.sc"> <!-- insular s -->
+  <gl pnm="uniA785.sc" xoffset="-56"> <!-- insular s -->
     <mv di="scho" p="{296;506}">
       <mv min-distance="no" p="{459;494}">
         <mv p="{383;423}"/>
@@ -6194,7 +6194,7 @@
     </callm>
   </gl>
 
-  <gl pnm="uniA787.sc"> <!-- insular t -->
+  <gl pnm="uniA787.sc" xoffset="16"> <!-- insular t -->
     <mv di="sch" p="{366;496}">
       <mv p="{600;463}">
         <ip p="{355;469}"/>
@@ -6205,7 +6205,7 @@
     </mv>
   </gl>
 
-  <gl pnm="u.sc" assume-y="no">
+  <gl pnm="u.sc" assume-y="no" xoffset="43">
     <pm nm="do-iup" val="0"/>
     <pm nm="serif-left" val="{51;496}"/>
     <pm nm="serif-right" val="{415;496}"/>
@@ -6229,7 +6229,7 @@
     </compile-if>
   </gl>
 
-  <gl pnm="uogonek.sc" assume-y="no" xoffset="-74">
+  <gl pnm="uogonek.sc" assume-y="no" xoffset="-31">
     <pm nm="serif-left" val="{125;496}"/>
     <pm nm="serif-right" val="{489;496}"/>
     <cn nm="bottom" val="{209;-11}"/>
@@ -6256,7 +6256,7 @@
     <iup axis="y"/>
   </gl>
 
-  <gl pnm="uni01BF.sc"> <!-- wynn -->
+  <gl pnm="uni01BF.sc" xoffset="-6"> <!-- wynn -->
     <cn nm="top" val="{135;496}"/>
     <cn nm="bot" val="{-39;0}"/>
     <cn nm="mid" val="{149;121}"/>
@@ -6338,7 +6338,7 @@
     </callm>
   </gl>
 
-  <gl pnm="z.sc">
+  <gl pnm="z.sc" xoffset="-12">
     <mv di="sch" p="{237;496}">
       <sh p="{498;489}"/>
       <mv di="sc-serif" p="{256;470}"/>
@@ -6349,7 +6349,7 @@
     </mv>
   </gl>
 
-  <gl pnm="uniA761.sc">
+  <gl pnm="uniA761.sc" xoffset="-23">
     <cn nm="top" val="{100;496}"/>
     <cn nm="bot" val="{5;-11}"/>
     <set nm="top-sh-a" p="{401;489} {150;489} {362;496} {632;496} {698;489}"/>
@@ -6511,7 +6511,7 @@
     <ip r="top bot" p="{328;345} {216;329} {244;306} {298;367}"/>
   </gl>
 
-  <gl pnm="nine">
+  <gl pnm="nine" xoffset="1">
     <cn nm="bot" val="{16;-29}"/>
     <cn nm="top" val="{370;651}"/>
     <cn nm="mid" val="{248;257}"/>
@@ -6523,7 +6523,7 @@
     <mv r="mid" p="{275;309}"/>
   </gl>
 
-  <gl pnm="nine.lf">
+  <gl pnm="nine.lf" xoffset="-1">
     <cn nm="bot" val="{17;-29}"/>
     <cn nm="top" val="{371;651}"/>
     <cn nm="mid" val="{248;257}"/>
@@ -7584,17 +7584,17 @@
   </gl>
 
   <gl pnm="uni1ACD"> <!-- Orm's combining insular r -->
-    <cn nm="top" val="{60;819}"/>
+    <cn nm="top" val="{58;819}"/>
     <cn nm="bot" val="{-181;521}"/>
-    <cn nm="right-stem-bot" val="{-18;598}"/>
+    <cn nm="right-stem-bot" val="{-19;598}"/>
     <mv p="top">
-      <sh p="{-46;819}"/>
-      <mv p="{18;782}"/>
+      <sh p="{-48;819}"/>
+      <mv p="{20;785}"/>
     </mv>
     <mv p="bot"/>
-    <ip r="top bot" p="right-stem-bot {-86;627}"/>
+    <ip r="top bot" p="right-stem-bot {-89;627}"/>
     <mv p="right-stem-bot">
-      <mv p="{22;634}"/>
+      <mv p="{18;631}"/>
     </mv>
   </gl>
 
