@@ -9396,11 +9396,7 @@ type="application/relax-ng-compact-syntax"?>
     <callg pnm="macron"/>
   </gl>
 
-  <gl init-graphics="no" pnm="uni0305.high">
-    <callg pnm="macron"/>
-  </gl>
-
-  <gl init-graphics="no" pnm="uni0305.med">
+	<gl init-graphics="no" pnm="uni035E">
     <callg pnm="macron"/>
   </gl>
 

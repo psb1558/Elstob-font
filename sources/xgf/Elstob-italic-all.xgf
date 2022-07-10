@@ -1111,17 +1111,17 @@
     </mv>
   </gl>
 
-  <gl pnm="Q" xoffset="-2">
-    <cn nm="tail-top" val="{436;-18}"/>
-    <mv di="cap-height-overshoot" p="{390;676}">
-      <mv di="cap-round-stem" p="{420;643}"/>
+  <gl pnm="Q">
+    <cn nm="tail-top" val="{437;-170}"/>
+    <mv di="cap-height-overshoot" p="{388;676}">
+      <mv di="cap-round-stem" p="{417;644}"/>
     </mv>
-    <mv di="cap-baseline-undershoot" p="{289;-13}">
-      <sh p="tail-top {272;-2}"/>
-      <mv di="cap-round-stem" p="{255;24}"/>
+    <mv di="cap-baseline-undershoot" p="{272;-12}">
+      <sh p="tail-top {95;-95} {87;-103} {-132;-102} {-97;-200} {46;-129}"/>
+      <mv di="cap-round-stem" p="{306;1}"/>
     </mv>
     <mv p="tail-top">
-      <mv p="{343;-69}"/>
+      <mv p="{399;-216}"/>
     </mv>
   </gl>
 
@@ -1403,18 +1403,18 @@
   </gl>
 
   <gl pnm="Q.alt">
-    <cn nm="tail-bot" val="{678;-138}"/>
+    <cn nm="tail-bot" val="{893;-316}"/>
     <cn nm="top" val="{390;676}"/>
-    <cn nm="bot" val="{286;-13}"/>
+    <cn nm="bot" val="{274;-12}"/>
     <mv di="cap-baseline-undershoot" p="bot">
-      <mv di="caprs" p="{255;24}"/>
+      <mv di="caprs" p="{308;1}"/>
     </mv>
     <mv di="cap-height-overshoot" p="top">
-      <mv di="caprs" p="{420;643}"/>
+      <mv di="caprs" p="{419;644}"/>
     </mv>
     <sh r="bot" p="tail-bot"/>
     <mv p="tail-bot">
-      <mv p="{724;-87}"/>
+      <mv p="{960;-255}"/>
     </mv>
   </gl>
 
@@ -7708,6 +7708,12 @@
     </mv>
   </gl>
 
+  <gl pnm="uni035E">
+    <mv p="0">
+      <mv di="macronw" p="1"/>
+    </mv>
+  </gl>
+
   <gl pnm="uni0312">
     <mv p="0">
       <mv p="15">
@@ -8096,24 +8102,12 @@
     </mv>
   </gl>
 
-  <gl pnm="uni0305.high">
-    <mv p="0">
-      <mv di="macronw" p="1"/>
-    </mv>
-  </gl>
-
   <gl pnm="uni0361.high">
     <callg pnm="uni0361"/>
   </gl>
 
   <gl pnm="uni035C.low">
     <callg pnm="uni035C"/>
-  </gl>
-
-  <gl pnm="uni0305.med">
-    <mv p="0">
-      <mv di="macronw" p="1"/>
-    </mv>
   </gl>
 
   <gl pnm="uni0361.med">
