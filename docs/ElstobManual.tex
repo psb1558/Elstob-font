@@ -1,0 +1,1188 @@
+\documentclass[12pt,letterpaper,openany]{book}
+
+\usepackage{ElstobManual}
+
+\title{Elstob: A Variable Font for Medievalists}
+\author{Peter S. Baker}
+
+\begin{document}
+
+\maketitle
+
+\chapter{Introduction}
+
+\pagestyle{fancy}
+\fancyhead[CE]{\scshape\color{myRed} {\addfontfeatures{Numbers=OldStyle}\thepage}\hspace{10pt}%
+\addfontfeature{Letters=UppercaseSmallCaps}\leftmark}
+\fancyhead[CO]{\scshape\color{myRed} {elstob}\hspace{10pt}{\addfontfeatures{Numbers=OldStyle}\thepage}}
+
+The Elstob font (named for the eighteenth-century medievalist Elizabeth Elstob)
+is based on the Double Pica typeface commissioned by Bishop John Fell in the
+seventeenth century and used by the Oxford University Press for many years.
+Though its origin is an old-style typeface, it includes many modernizing touches,
+and it exploits the latest in font technology so as to provide capabilities
+available in few other fonts. It comes in two versions: \textbf{static} and
+\textbf{variable}.
+
+\section{The Static Font}
+
+Most of the fonts on your
+computer are static: that is, each file contains outlines for a single style.
+For example, the ubiquitous Times New Roman typically has four styles in four
+files: regular, bold, italic, and bold italic. Because it has more than one
+style, we call Times New Roman a \textbf{font family}. Think of this family as
+having two stylistic \textbf{axes}, one being the \textbf{roman--italic} axis, on which
+only two positions are available (since in serif typefaces there is no middle
+ground between roman and italic), and
+the other being the \textbf{Weight} axis, on which many positions are possible,
+though the Times New Roman font family provides only two---regular and bold.
+Some static font families come packaged in more than four files and provide both more
+stylistic axes and more positions on these axes.
+
+The static version of Elstob (ElstobD, where the D stands for “Desktop”) consists
+of forty-eight files (don't panic---you're not required to install them all) and
+has three stylistic
+axes: \textbf{Roman--Italic}, \textbf{Weight}, and \textbf{Optical Size}. The
+weights are {\extralight ExtraLight}, {\light Light}, Regular, {\medium Medium},
+{\semibold SemiBold}, \textbf{Bold}, and {\extrabold ExtraBold}.
+
+The \textbf{Optical Size} axis varies the shapes of characters to look good at
+particular sizes. The static version comes in five optical sizes: 8pt, 10pt,
+12pt (Regular), 14pt, and 18pt. You should choose the one that comes as close
+as possible to the point size of the text you are setting---for example, “ElstobD
+8pt” for footnotes and “ElstobD 14pt Medium” for subheads, depending on your
+stylistic preferences.
+
+\section{The Variable Font}
+
+A \textbf{variable} font packages an almost infinite number
+of styles into a single font file. Whereas the static version of Elstob consists
+of forty-eight files, the variable version consists of only two: Elstob.ttf
+(roman) and Elstob-Italic.ttf (italic). And yet the variable version provides
+many more stylistic choices than the static version because you can choose any
+value along any of the font’s stylistic axes. The \textbf{weight} axis
+runs from {\extralight 200 Extra Light} to {\extrabold 800 Extra Bold}. You
+can choose either of those, or one of the other standard weights: {\light 300} for
+{\light Light}, 400 for Regular, {\medium 500} for {\medium Medium},
+{\semibold 600} for {\semibold SemiBold}, or \textbf{700} for \textbf{Bold}.
+Or you can, if you're so minded, choose {\oddball an oddball weight like
+523.45}.
+
+In addition to the \textbf{Weight} axis, Elstob has two others, \textbf{Optical
+Size} and \textbf{Grade}, and the italic face has one more, \textbf{Slant}.
+\textbf{Optical Size} works the same in the variable version as it does in the
+static version, but you are not limited to five optical sizes, so you can tune
+your type more closely to the size of your text. This axis runs from 6 to
+18 (the numbers corresponding roughly to point sizes). Some applications (like
+Adobe InDesign) will automatically
+choose the appropriate value (though you may override it if you like).
+
+\textbf{Grade}
+(0--1) is like \textbf{Weight}, but it varies the weight of characters without changing
+their widths. This can be useful in web pages, where dynamically changing the
+\textbf{Weight} axis (for example, on mouseover) may cause text to reflow annoyingly. Grade will
+not generally be useful in printed documents.
+
+\textbf{Slant} (0--15) varies
+the slant of the italic from {\italslanted 0 steeply slanted} to {\italupright
+15 nearly upright}. The slant of the static fonts is
+equivalent to \textit{a Slant of 8 in the variable font}.
+
+The values of the various axes can be combined in any way you like. You will find,
+however, that some combinations are problematic or inadvisable. For example,
+you can add a little Grade to ExtraBold text to produce {\superbold even
+bolder text}, but if you overdo it, letters will collide and become
+misshapen---{\waytoobold like this}. You should add a Grade of no more than 0.2
+to the ExtraBold face.
+Combining ExtraBold and maximum Slant may also produce misshapen characters. It
+is not unexpected that, in a three- or four-dimensional design space, some positions
+will be less than optimal: experiment with the Elstob specimen page to find the
+styles you like.
+
+When beginning a project with Elstob, consider whether the software you're using
+has adequate support for variable fonts. If not, use the static version.
+All of the major web browsers support variable fonts, which you can control via
+CSS. The major programs of the Adobe Creative Suite also support variable fonts,
+as does {\ltech}, used to produce this document;\footnote{Make sure to use the
+latest version of {\ltech}, as support for variable fonts was added very
+recently. XeTeX does not support variable fonts.} but most desktop applications
+(such as word processors) do not. ElstobD, the static version of Elstob,
+should work with all applications.
+
+Elstob aims to cover all European languages using the Latin alphabet, and it offers
+a curated collection of Unicode characters of interest to medievalists. It includes
+the basic International Phonetic Alphabet and the most commonly used
+mathematical symbols. Version 2 includes many stylistic revisions and a few new
+characters, especially letters and diacritics from the \textit{Ormulum},
+recently added to Unicode. The OpenType features of the font have been revised
+to match as closely as possible those of the developer's Junicode font.
+Unnecessary or redundant features have been removed, and technical changes have
+been made to improve accessibility.\pagebreak
+
+\chapter{Specimens}
+
+{\fontsize{72pt}{72pt}\selectfont ABCD\kern-2ptEFG\kern-2ptHI\\[0.3ex]
+\fontsize{58}{58}\selectfont\textls[50]{JKLMNOPQRS}\\[0.1ex]
+\fontsize{48}{48}\selectfont\textls[48]{TUVWXYZÞÐ\kern-5ptÆǷ}\\[0.4ex]
+\fontsize{36}{36}\selectfont{}a\kern+0.5ptb\kern+0.5ptc\kern+0.5ptd\kern+0.5pte\kern+0.5ptfghijklmnopqrstuvwx\\[0.1ex]
+Quousque tandem abutere, \textls[20]{Catilina, patientia nostra?}\linebreak
+\italslanted \textls[20]{Qu\kern-1ptousque tandem abutere,\linebreak
+Catilina, patientia nostra?}\linebreak
+\textls[40]{0123456789}{\ }{\ } \ltab{\textls[40]{0123456789}}}
+
+
+\section{Old English (regular)}
+
+{\large Sum wer wæs ġeseten on þām lande þe is ġehāten Hus; his nama wæs Iob. Se wer wæs swīðe bilewite and rihtwīs and ondrǣdende God and forbūgende yfel. Him wǣron ācennede seofan suna and ðrēo dohtra. Hē hæfde seofon ðūsend scēapa and ðrēo ðūsend olfenda, fīf hund ġetȳmu oxena and fīf hund assan and ormǣte miċelne hīred. Se wer wæs swīðe mǣre betwux eallum ēasternum, and his suna fērdon and ðēnode ǣlċ ōðrum mid his gōdum on ymbhwyrfte æt his hūse, and þǣrtō heora swustru ġelaðodon.}
+
+\section{Old English with insular letter-forms (light)}
+
+{\large\light\addfontfeature{StylisticSet=2}Her on ðisum geare forðferde ælfgiue ymma Eadwardes cynges modor ⁊ hardacnutes cynges. ⁊ on þam sylfan geare gerædde se cyng ⁊ his witan ꝥ mann sceolde forðian ut to Sandwic scipu. ⁊ setton raulf eorl ⁊ oddan eorl to heafodmannū þærto. Ða gewende Godwine eorl út frā brycge mid his scypum to yseran. and let ut ane dæge ær midsumeres mæsseæfene ꝥ he cō to næsse. þe is besuðan rumenea. Þa cō hit to witenne þā eorlū ut to sandwic. ⁊ hi þa gewendon ut æfter þam oðrum scipum. ⁊ bead man landfyrde ut ongean þa scipu.}
+
+\section{Old English in runes (various weights)}
+
+{\extralight\addfontfeature{StylisticSet=12} fisc flodu ahof on fergenberig warþ gasric grorn þær he on greut giswom hronæs ban.
+\light\addfontfeature{StylisticSet=12} fisc flodu ahof on fergenberig warþ gasric grorn þær he on greut giswom hronæs ban.
+\medium\addfontfeature{StylisticSet=12} fisc flodu ahof on fergenberig warþ gasric grorn þær he on greut giswom hronæs ban.
+\semibold\addfontfeature{StylisticSet=12} fisc flodu ahof on fergenberig warþ gasric grorn þær he on greut giswom hronæs ban.
+\textbf{\addfontfeature{StylisticSet=12}fisc flodu ahof on fergenberig warþ gasric grorn þær he on greut giswom hronæs ban.}
+\extrabold\addfontfeature{StylisticSet=12} fisc flodu ahof on fergenberig warþ gasric grorn þær he on greut giswom hronæs ban.}
+
+\section{Middle English: \textit{Ancrene Wisse} (Medium)}
+
+{\large\medium\addfontfeatures{StylisticSet=16,Language=English}\cvd[1]{38}{\cvd[1]{69}{Nan ancre bi mi read ne schal makien ꝓfessiun. ꝥ is bihaten ase heast⹎ but þreo þinges. ꝥ beoð obedience. chastete. ⁊ stude steaðeluestnesse. ꝥ ha ne schal ꝥ stude neau͛ mare changin bute for nede ane. as strengðe ⁊ deaðes dred. obedience of hire bischop oðer of his herre. for hƿa se nimeð þing on hond ⁊ bihat hit Godd as heast forte don hit⹎ ha bint hire þerto. ⁊ sunegeð deadliche i þe bruche. ȝef ha hit brekeð ƿilles. ȝef ha hit ne bihat naƿt. ha hit mei do þah ⁊ leauen hƿen ha ƿel ƿule. as of mete. of drunch. flesch forgan oðer fisch. alle oþer sƿucche þinges. of ƿerunge. of liggunge. of ures. of oþre beoden.}}}
+
+\section{Middle English: \textit{The Ormulum} (SemiBold)}
+
+{\large\semibold\addfontfeatures{Language=English,CharacterVariant={8,38:1,40,36}}
+Nu broþerr ƿallte͛ broþer\kern-6ptᫍ\kern+6pt{} mın. affte͛ þe flæshess kīde. ⁊
+broþer\kern-6ptᫍ\kern+6pt{} mın ı crısstenndom.
+þurrh fulluhht ⁊ þurrh \hlig{troƿƿþe}. ⁊ broþerr mın ı \cvd[1]{14}{goddess} hus.
+\cvd{14}{ge̋t} o þe þrıde ƿıse.
+Þurrh þatt ƿıt hafenn takenᷠ ba. an \cvd{14}{regͪell} boc to \cvd{14}{follgͪenn}.
+Vnnderr kanunnkess had.
+⁊ lıf. Sƿa sumͫ sannt aƿƿstın sette. Icͨcͨ hafe don sƿa sumͫ þu badd⹎ ⁊ forþedd te
+þıᷠ ƿılle. ⹍ Icͨcͨ hafe ƿend ınᷠtıll \cvd[1]{14}{ennglıssh}. \cvd[1]{14}{goddspelless}
+\cvd{14}{hallgͪe} láre⹎ Affte͛ ꝥ lıtᫎle
+ƿıtt þatt me. mın drıhhtınn \hlig{hafeþþ} lenned.}
+
+\section{Early Modern English (Light Italic)}
+
+\textit{\large\itallight\addfontfeature{StylisticSet=8,Language=English}When the right vertuous E.W. and I were at the Emperours Court togither, wee gave our selves to learne horsemanship of Jon Pietro Pugliano, one that with great commendation had the place of an Esquire in his stable: and hee according to the fertilnes of the Italian wit, did not onely affoord us the demonstration of his practise, but sought to enrich our \mbox{mindes} with the contemplations therein, which he thought most precious. But with none I remember mine eares were at any time more loaden, then when (either angred with slow paiment, or mooved with our learnerlike admiration) hee exercised his speech in the praise of his facultie.}
+
+\section{Latin (Italic)}
+
+\textit{\large\cvd[1]{38}{Humanas laudes et mortalium ınsulas uıdımus aut ére ıncıso conscrıptas· aut auro radıantıb: lıtterıs· ad posterıtatıs memorıam cōmendatas· Et ısta attendentes mıror quare non erubescımꝰ mılıtum xpı uıctorıas sılentıo tégere \& n̄ ad laudem ımperatorıs eoꝝ qualıt̄ pugnauerınt contra hostes \& uıcerınt· sedulıs saltım uılıbus tradere \& ad ıncıtandos anımos bellatoꝝ dılıgentıus explıcare· Multa bona talıū narratıonū scrıpta conuertant; Laus deı est cum ısta leguntur· memorıa scōꝝ excolıtur⹎ aedıfıcacıo m̄tıb: tradıtur. honor martırıbus exhıb\&ur·}}
+
+\section{Old Icelandic (Medium Italic)}
+
+{\italmedium\large Þá mælti Hárr: Þá er þeir gengu með sævarstrǫndu Borssynir, fundu þeir tré tvau ok tóku upp trén ok skǫpuðu af menn. Gaf inn fyrsti ǫnd ok líf, annarr vit ok hræring, þriði ásjónu, mál ok heyrn ok sjón, gáfu þeim klæði ok nǫfn. Hét karlmaðrinn Askr, en konan Embla, ok ólst þaðan af mannkindin, sú er byggðin var gefinn undir Miðgarði. Þar næst gerðu þeir sér borg í miðjum heimi, er kǫlluð er Ásgarðr. Þat kǫllum vér Trója. iocoi oicio}
+
+\section{Gothic (Medium Italic, Maximum Slant)}
+
+{\italslantedmedium\large Warþ þan in dagans jainans, urrann gagrefts fram kaisara Agustau, gameljan allana midjungard. soh þan gilstrameleins frumista warþ at wisandin kindina Swriais raginondin Saurim Kwreinaiau. jah iddjedun allai, ei melidai weseina, ƕarjizuh in seinai baurg. Urrann þan jah Iosef us Galeilaia, us baurg Nazaraiþ, in Iudaian, in baurg Daweidis sei haitada Beþlaihaim, duþe ei was us garda fadreinais Daweidis, anameljan miþ Mariin sei in fragiftim was imma qeins, wisandein inkilþon. iocoi oicio}
+
+
+
+\chapter{OpenType features}
+
+OpenType is the format employed by most modern fonts. It enables such technical
+wizardry as ligatures, kerning, and several kinds of variation. OpenType features,
+when they can be controlled by users, can be selected via four-character tags.
+Some applications offer more access to these features than others. The major web browsers
+support all of Elstob's features, and so do LibreOffice, Affinity Publisher,
+XeTeX and {\ltech}. The Adobe Creative Suite supports a generous selection of
+them. Microsoft Word, unfortunately, supports only a few OpenType features.
+
+Elstob's OpenType
+features are for the most part a subset of those of Junicode. It will be noted
+below when the two fonts differ. Features are presented in alphabetical order,
+but this is not the order in which they are executed when more than one feature
+has been applied.
+
+Different applications provide different ways of accessing OpenType features.
+Those that are available in Microsoft Word can be accessed in the “Advanced”
+tab of the “Font” dialog. In the Adobe apps those features that are available
+can be accessed via the “Character” dialog, and in InDesign via the “O” icon that
+appears when text is selected (InDesign users should select the “World-Ready
+Paragraph Composer” when using this font). For variable font handling in
+{\ltech}, see the source for this document.
+
+\section{aalt (Access All Alternates)}
+Provides access to all variants in the font. Applications that use this feature
+usually do so via an element of the user interface.
+
+\section{c2sc (Small Capitals From Capitals)}
+Converts capitals to small caps. Every capital in the font has a corresponding
+small capital. ABCDÞÐÆ → {\addfontfeature{Letters=UppercaseSmallCaps} ABCDÞÐÆ}.
+
+\section{calt (Contextual Alternates)}
+In most applications this feature is on by default.
+Provides many alternate characters that vary automatically by context.
+
+\section{case (Case-Sensitive Forms)}
+Mostly provides alternate diacritics for capitals, e.g. ÂÄÉËÒÕŰŪ. Also converts
+old-style to lining figures to harmonize with capitals. Some applications turn
+this feature on automatically in the vicinity of capitals.
+
+\section{ccmp (Glyph Composition/Decomposition)}
+In most applications this feature is on by default and cannot be turned off.
+In Elstob it performs (1.) removal of dot from i and j when followed by combining
+marks; and (2.) substituting ligatures for certain vowel + rhotic hook (\ltab{U+02DE})
+combinations.
+
+\section{cv07 (Variants of D)}
+Provides insular D (\cvd{7}{D}).
+
+\section{cv08 (Variants of d)}
+Provides two shapes of insular d: 1. \cvd{8}{d}; 2. \cvd[1]{8}{d}.
+
+\section{cv11 (Variants of F)}
+Provides insular F (\cvd{11}{F}).
+
+\section{cv12 (Variants of f)}
+Provides: 1. \cvd{12}{f} (insular f); 2. \cvd[1]{12}{f} (narrow f).
+
+\section{cv13 (Variants of G)}
+Provides: 1. \cvd{13}{G} (insular G); 2. \cvd[1]{13}{G} (Orm's hard G).
+
+\section{cv14 (Variants of g)}
+Provides: 1. \cvd{14}{g} (insular g); 2. \cvd[1]{14}{g} (Orm's hard g);
+3. \cvd[2]{14}{g} (script g)
+
+\section{cv18 (Variants of i)}
+Provides dotless i (\cvd{18}{i}).
+
+\section{cv35 (Variants of R)}
+Provides insular R (\cvd{35}{R}).
+
+\section{cv36 (Variants of r)}
+Provides: 1. \cvd{36}{r} (insular r); 2. \cvd[1]{36}{r} (r rotunda).
+
+\section{cv37 (Variants of S)}
+Provides insular S (\cvd{37}{S}).
+
+\section{cv38 (Variants of s)}
+Provides: 1. \cvd{38}{s} (insular s); 2. \cvd[1]{38}{s} (long s);
+3. \cvd[2]{38}{s} (narrow long s).
+
+\section{cv39 (Variants of T)}
+Provides insular T (\cvd{39}{T}).
+
+\section{cv40 (Variants of t)}
+Provides insular t (\cvd{40}{t}).
+
+\section{cv57 (Variants of æ)}
+Italic face only. Provides an alternative (and in some contexts less ambiguous)
+\textit{æ} (\textit{\cvd{57}{æ}}).
+This feature also affects \ltab{U+01E3} (\textit{\cvd{57}{ǣ}})
+and \ltab{U+01FD} (\textit{\cvd{57}{ǽ}}).
+
+\section{cv69 (Variants of Tironian et sign ⁊)}
+Provides two variants of \ltab{U+204A}: 1. \cvd{69}{⁊}; 2. \cvd[1]{69}{⁊}.
+
+\section{cv76 (Variants of ?)}
+Provides the \textit{punctus interrogativus} (\cvd{76}{?}).
+
+\section{cv80 (variants of bracket characters)}
+In the italic face, provides upright variants of the most common bracket
+characters: (\ ) [\ ] \{\ \} ⟨\ ⟩.
+
+\section{dlig (Discretionary Ligatures)}
+Provides {\addfontfeature{Ligatures=Rare} ct} and
+{\addfontfeature{Ligatures=Rare} st} ligatures, and in italic only,
+{\addfontfeature{Ligatures=Rare} \textit{as}, \textit{is}, \textit{us}}.
+
+\section{frac (Fractions)}
+Elstob includes only three fractions: {\addfontfeature{Fractions=On} 1/4, 1/2,
+3/4}. Type as number + slash + number.
+
+\section{hlig (Historical Ligatures)}
+Provides several ligatures used in Orm's orthography:
+{\addfontfeatures{Ligatures=Historic} þþ ƿƿ hh} for
+{\addfontfeatures{Language=English}þþ ƿƿ hh}. The first two of these correspond
+to Unicode \ltab{U+A7D3 and U+A7D5}, but using the ligatures provides an intelligible
+fallback when a font with these rare Unicode characters is not available.
+
+\section{liga (Standard Ligatures)}
+In most applications this feature is on by default.
+Provides ligatures that should always be used for certain letter combinations
+(e.g. first flat office afflict offer).
+
+\section{locl (Localized Forms)}
+In most applications this feature is on by default and cannot be turned off.
+It provides the English forms of thorn and eth
+(\addfontfeature{Language=English}{Þ þ ð}) when English is the
+active language.
+
+\section{ordn (Ordinals)}
+Provides superscript forms of a and o when preceded by a figure:
+{\addfontfeature{VerticalPosition = Ordinal} 1a, 2o}.
+
+\section{smcp (Small Capitals)}
+Converts lowercase letters to small capitals. abcdeþðæ → \textsc{abcdeþðæ}.
+
+\section{ss01 (Alternate Thorn and Eth)}
+Overrides any language setting to provide alternate shapes of the letters thorn and eth: Nordic shapes when the language is English, and English shapes otherwise.
+
+\section{ss02 (Insular Letter-Shapes)}
+Transliterates from modern to insular (Old English, Old Irish) letter-shapes:\linebreak
+dfgirstw → {\addfontfeature{StylisticSet=2} dfgirstw}. Note that calt later
+changes the sequence \textbf{\addfontfeature{StylisticSet=2} s\kern0ptt}
+to \textbf{\addfontfeature{StylisticSet=2} st}. You can override this behavior by placing
+\ltab{U+200C} \textsc{zero-width non-joiner} or any invisible formatting mark
+between the \textbf{s} and the \textbf{t}.
+
+\section{ss04 (IPA Letter-Shapes)}
+Changes g to ɡ and (in italic only)
+\textit{a} to \textit{\addfontfeature{StylisticSet=4} a}. This feature has no counterpart in
+Junicode.
+
+\section{ss08 (Contextual Long s)}
+In English and French text, and in combination with calt, distributes \textbf{s} and
+\textbf{\cvd[1]{38}{s}}
+according to rules commonly employed by early printers in each language.
+
+\section{ss12 (Early English Futhorc)}
+Transliterates Latin script to runic with characters from the Early English futhorc. fuþorc
+→ {\addfontfeature{StylisticSet=12} fuþorc}.
+
+\section{ss13 (Elder Futhark)}
+Transliterates Latin script to runic with characters from the Elder futhark. fuþark
+→ {\addfontfeature{StylisticSet=13} fuþark}.
+
+\section{ss14 (Younger Futhark)}
+Transliterates Latin script to runic with characters from the Younger futhark. fuþark
+→ {\addfontfeature{StylisticSet=14} fuþark}.
+
+\section{ss15 (Long Branch to Short Twig)}
+Use with ss14. Converts the default (Long Branch) version of the Younger futhark
+to the Short Twig version. fuþark
+→ {\addfontfeature{StylisticSet=14,StylisticSet=15} fuþark}.
+
+\section{ss16 (Contextual r Rotunda)}
+Together with calt, distributes r and
+\cvd[1]{36}{r} in accordance with the rules most often employed in medieval manuscripts and early printed books: {\addfontfeature{StylisticSet=16} form workrooms priest prayer}.
+
+\section{subs (Subscripts)}
+Subscript numbers, both lining and old style. 01234 →
+{\addfontfeature{VerticalPosition=Inferior} 01234};
+\ltab{01234 →
+{\addfontfeature{VerticalPosition=Inferior} 01234}}.
+
+\section{sups (Superscripts)}
+Superscript numbers, both lining and old style. 56789 →
+{\addfontfeature{VerticalPosition=Superior} 56789};
+\ltab{56789 →
+{\addfontfeature{VerticalPosition=Superior} 56789}}.
+
+\section{swsh (Swash)}
+Italic only. Provides swash forms of certain capitals
+{\addfontfeature{Style=Swash}(\textit{A D J P R T} ) plus \textit{z} and \textit{k}.}
+
+\section{tnum (Tabular Figures), onum (Old-Style Figures), pnum (Proportional
+Figures), lnum (Lining Figures)}
+In various combinations, provides figures in four styles:
+tabular lining (the default),
+tabular old-style,
+proportional lining,
+proportional old-style. The font contains variants of its mathematical
+operators to harmonize with the old-style figures.
+% For some reason, proportional lining causes an error in luaotfload.
+% So we do without examples until it can be worked out.
+
+\section{zero (Slashed Zero)}
+Provides slashed zero ({\addfontfeature{Numbers=SlashedZero} 0 \ltab{0}}) in all figure styles.
+
+\chapter{Unicode character list}
+
+This is a list of characters with Unicode encodings in Elstob. In addition, the
+font contains more than 300 unencoded characters, including small
+caps, ligatures, and symbols, accessible via OpenType features (listed above).
+
+\begin{center}
+\tabletail{\hline}
+\tablelasttail{}
+ \begin{supertabular}{|m{0.25in}|m{0.5in}|m{4in}|}
+\hline\small
+Ꟁ & a7c0 & LATIN CAPITAL LETTER OLD POLISH O\\\hline
+Ꟑ & a7d0 & LATIN CAPITAL LETTER CLOSED INSULAR G\\\hline
+A & 0041 & LATIN CAPITAL LETTER A\\\hline
+Ꜳ & a732 & LATIN CAPITAL LETTER AA\\\hline
+Ꜻ & a73a & \fstr{LATIN CAPITAL LETTER AV WITH HORIZONTAL BAR}\\\hline
+Ꜽ & a73c & LATIN CAPITAL LETTER AY\\\hline
+Á & 00c1 & LATIN CAPITAL LETTER A WITH ACUTE\\\hline
+Ă & 0102 & LATIN CAPITAL LETTER A WITH BREVE\\\hline
+Â & 00c2 & LATIN CAPITAL LETTER A WITH CIRCUMFLEX\\\hline
+Ä & 00c4 & LATIN CAPITAL LETTER A WITH DIAERESIS\\\hline
+À & 00c0 & LATIN CAPITAL LETTER A WITH GRAVE\\\hline
+Ā & 0100 & LATIN CAPITAL LETTER A WITH MACRON\\\hline
+Ꜵ & a734 & LATIN CAPITAL LETTER AO\\\hline
+Ą & 0104 & LATIN CAPITAL LETTER A WITH OGONEK\\\hline
+Å & 00c5 & LATIN CAPITAL LETTER A WITH RING ABOVE\\\hline
+Ǻ & 01fa & \fstr{LATIN CAPITAL LETTER A WITH RING ABOVE AND ACUTE}\\\hline
+Ã & 00c3 & LATIN CAPITAL LETTER A WITH TILDE\\\hline
+Ꜷ & a736 & LATIN CAPITAL LETTER AU\\\hline
+Ꜹ & a738 & LATIN CAPITAL LETTER AV\\\hline
+Æ & 00c6 & LATIN CAPITAL LETTER AE\\\hline
+Ǽ & 01fc & LATIN CAPITAL LETTER AE WITH ACUTE\\\hline
+Ǣ & 01e2 & LATIN CAPITAL LETTER AE WITH MACRON\\\hline
+B & 0042 & LATIN CAPITAL LETTER B\\\hline
+C & 0043 & LATIN CAPITAL LETTER C\\\hline
+Ć & 0106 & LATIN CAPITAL LETTER C WITH ACUTE\\\hline
+Č & 010c & LATIN CAPITAL LETTER C WITH CARON\\\hline
+Ç & 00c7 & LATIN CAPITAL LETTER C WITH CEDILLA\\\hline
+Ċ & 010a & LATIN CAPITAL LETTER C WITH DOT ABOVE\\\hline
+D & 0044 & LATIN CAPITAL LETTER D\\\hline
+Ð & 00d0 & LATIN CAPITAL LETTER ETH\\\hline
+Ď & 010e & LATIN CAPITAL LETTER D WITH CARON\\\hline
+Đ & 0110 & LATIN CAPITAL LETTER D WITH STROKE\\\hline
+Ꝺ & a779 & LATIN CAPITAL LETTER INSULAR D\\\hline
+E & 0045 & LATIN CAPITAL LETTER E\\\hline
+É & 00c9 & LATIN CAPITAL LETTER E WITH ACUTE\\\hline
+Ĕ & 0114 & LATIN CAPITAL LETTER E WITH BREVE\\\hline
+Ě & 011a & LATIN CAPITAL LETTER E WITH CARON\\\hline
+Ê & 00ca & LATIN CAPITAL LETTER E WITH CIRCUMFLEX\\\hline
+Ë & 00cb & LATIN CAPITAL LETTER E WITH DIAERESIS\\\hline
+Ė & 0116 & LATIN CAPITAL LETTER E WITH DOT ABOVE\\\hline
+È & 00c8 & LATIN CAPITAL LETTER E WITH GRAVE\\\hline
+Ē & 0112 & LATIN CAPITAL LETTER E WITH MACRON\\\hline
+Ę & 0118 & LATIN CAPITAL LETTER E WITH OGONEK\\\hline
+F & 0046 & LATIN CAPITAL LETTER F\\\hline
+Ꝼ & a77b & LATIN CAPITAL LETTER INSULAR F\\\hline
+G & 0047 & LATIN CAPITAL LETTER G\\\hline
+Ģ & 0122 & LATIN CAPITAL LETTER G WITH CEDILLA\\\hline
+Ġ & 0120 & LATIN CAPITAL LETTER G WITH DOT ABOVE\\\hline
+Ᵹ & a77d & LATIN CAPITAL LETTER INSULAR G\\\hline
+Ȝ & 021c & LATIN CAPITAL LETTER YOGH\\\hline
+H & 0048 & LATIN CAPITAL LETTER H\\\hline
+Ħ & 0126 & LATIN CAPITAL LETTER H WITH STROKE\\\hline
+Ƕ & 01f6 & LATIN CAPITAL LETTER HWAIR\\\hline
+I & 0049 & LATIN CAPITAL LETTER I\\\hline
+Ĳ & 0132 & LATIN CAPITAL LIGATURE IJ\\\hline
+Í & 00cd & LATIN CAPITAL LETTER I WITH ACUTE\\\hline
+Ĭ & 012c & LATIN CAPITAL LETTER I WITH BREVE\\\hline
+Î & 00ce & LATIN CAPITAL LETTER I WITH CIRCUMFLEX\\\hline
+Ï & 00cf & LATIN CAPITAL LETTER I WITH DIAERESIS\\\hline
+İ & 0130 & LATIN CAPITAL LETTER I WITH DOT ABOVE\\\hline
+Ì & 00cc & LATIN CAPITAL LETTER I WITH GRAVE\\\hline
+Ī & 012a & LATIN CAPITAL LETTER I WITH MACRON\\\hline
+Į & 012e & LATIN CAPITAL LETTER I WITH OGONEK\\\hline
+J & 004a & LATIN CAPITAL LETTER J\\\hline
+K & 004b & LATIN CAPITAL LETTER K\\\hline
+Ķ & 0136 & LATIN CAPITAL LETTER K WITH CEDILLA\\\hline
+L & 004c & LATIN CAPITAL LETTER L\\\hline
+Ĺ & 0139 & LATIN CAPITAL LETTER L WITH ACUTE\\\hline
+Ƚ & 023d & LATIN CAPITAL LETTER L WITH BAR\\\hline
+Ľ & 013d & LATIN CAPITAL LETTER L WITH CARON\\\hline
+Ļ & 013b & LATIN CAPITAL LETTER L WITH CEDILLA\\\hline
+Ꝉ & a748 & LATIN CAPITAL LETTER L WITH HIGH STROKE\\\hline
+Ɫ & 2c62 & LATIN CAPITAL LETTER L WITH MIDDLE TILDE\\\hline
+Ł & 0141 & LATIN CAPITAL LETTER L WITH STROKE\\\hline
+M & 004d & LATIN CAPITAL LETTER M\\\hline
+N & 004e & LATIN CAPITAL LETTER N\\\hline
+Ń & 0143 & LATIN CAPITAL LETTER N WITH ACUTE\\\hline
+Ň & 0147 & LATIN CAPITAL LETTER N WITH CARON\\\hline
+Ņ & 0145 & LATIN CAPITAL LETTER N WITH CEDILLA\\\hline
+Ñ & 00d1 & LATIN CAPITAL LETTER N WITH TILDE\\\hline
+Ŋ & 014a & LATIN CAPITAL LETTER ENG\\\hline
+O & 004f & LATIN CAPITAL LETTER O\\\hline
+Ꝏ & a74e & LATIN CAPITAL LETTER OO\\\hline
+Ó & 00d3 & LATIN CAPITAL LETTER O WITH ACUTE\\\hline
+Ŏ & 014e & LATIN CAPITAL LETTER O WITH BREVE\\\hline
+Ô & 00d4 & LATIN CAPITAL LETTER O WITH CIRCUMFLEX\\\hline
+Ö & 00d6 & LATIN CAPITAL LETTER O WITH DIAERESIS\\\hline
+Ò & 00d2 & LATIN CAPITAL LETTER O WITH GRAVE\\\hline
+Ő & 0150 & LATIN CAPITAL LETTER O WITH DOUBLE ACUTE\\\hline
+Ꝋ & a74a & \fstr{LATIN CAPITAL LETTER O WITH LONG STROKE OVERLAY}\\\hline
+Ō & 014c & LATIN CAPITAL LETTER O WITH MACRON\\\hline
+Ǫ & 01ea & LATIN CAPITAL LETTER O WITH OGONEK\\\hline
+Ø & 00d8 & LATIN CAPITAL LETTER O WITH STROKE\\\hline
+Ǿ & 01fe & \fstr{LATIN CAPITAL LETTER O WITH STROKE AND ACUTE}\\\hline
+Õ & 00d5 & LATIN CAPITAL LETTER O WITH TILDE\\\hline
+Œ & 0152 & LATIN CAPITAL LIGATURE OE\\\hline
+P & 0050 & LATIN CAPITAL LETTER P\\\hline
+Þ & 00de & LATIN CAPITAL LETTER THORN\\\hline
+Q & 0051 & LATIN CAPITAL LETTER Q\\\hline
+Ꝙ & a758 & \fstr{LATIN CAPITAL LETTER Q WITH DIAGONAL STROKE}\\\hline
+R & 0052 & LATIN CAPITAL LETTER R\\\hline
+Ŕ & 0154 & LATIN CAPITAL LETTER R WITH ACUTE\\\hline
+Ř & 0158 & LATIN CAPITAL LETTER R WITH CARON\\\hline
+Ŗ & 0156 & LATIN CAPITAL LETTER R WITH CEDILLA\\\hline
+Ꞃ & a782 & LATIN CAPITAL LETTER INSULAR R\\\hline
+S & 0053 & LATIN CAPITAL LETTER S\\\hline
+Ś & 015a & LATIN CAPITAL LETTER S WITH ACUTE\\\hline
+Š & 0160 & LATIN CAPITAL LETTER S WITH CARON\\\hline
+Ş & 015e & LATIN CAPITAL LETTER S WITH CEDILLA\\\hline
+ẞ & 1e9e & LATIN CAPITAL LETTER SHARP S\\\hline
+Ꞅ & a784 & LATIN CAPITAL LETTER INSULAR S\\\hline
+T & 0054 & LATIN CAPITAL LETTER T\\\hline
+Ŧ & 0166 & LATIN CAPITAL LETTER T WITH STROKE\\\hline
+Ť & 0164 & LATIN CAPITAL LETTER T WITH CARON\\\hline
+Ţ & 0162 & LATIN CAPITAL LETTER T WITH CEDILLA\\\hline
+Ꞇ & a786 & LATIN CAPITAL LETTER INSULAR T\\\hline
+U & 0055 & LATIN CAPITAL LETTER U\\\hline
+Ú & 00da & LATIN CAPITAL LETTER U WITH ACUTE\\\hline
+Ŭ & 016c & LATIN CAPITAL LETTER U WITH BREVE\\\hline
+Û & 00db & LATIN CAPITAL LETTER U WITH CIRCUMFLEX\\\hline
+Ü & 00dc & LATIN CAPITAL LETTER U WITH DIAERESIS\\\hline
+Ù & 00d9 & LATIN CAPITAL LETTER U WITH GRAVE\\\hline
+Ű & 0170 & LATIN CAPITAL LETTER U WITH DOUBLE ACUTE\\\hline
+Ū & 016a & LATIN CAPITAL LETTER U WITH MACRON\\\hline
+Ų & 0172 & LATIN CAPITAL LETTER U WITH OGONEK\\\hline
+Ů & 016e & LATIN CAPITAL LETTER U WITH RING ABOVE\\\hline
+Ũ & 0168 & LATIN CAPITAL LETTER U WITH TILDE\\\hline
+V & 0056 & LATIN CAPITAL LETTER V\\\hline
+W & 0057 & LATIN CAPITAL LETTER W\\\hline
+Ꝡ & a760 & LATIN CAPITAL LETTER VY\\\hline
+Ẃ & 1e82 & LATIN CAPITAL LETTER W WITH ACUTE\\\hline
+Ŵ & 0174 & LATIN CAPITAL LETTER W WITH CIRCUMFLEX\\\hline
+Ẅ & 1e84 & LATIN CAPITAL LETTER W WITH DIAERESIS\\\hline
+Ẁ & 1e80 & LATIN CAPITAL LETTER W WITH GRAVE\\\hline
+Ƿ & 01f7 & LATIN CAPITAL LETTER WYNN\\\hline
+X & 0058 & LATIN CAPITAL LETTER X\\\hline
+Y & 0059 & LATIN CAPITAL LETTER Y\\\hline
+Ý & 00dd & LATIN CAPITAL LETTER Y WITH ACUTE\\\hline
+Ŷ & 0176 & LATIN CAPITAL LETTER Y WITH CIRCUMFLEX\\\hline
+Ÿ & 0178 & LATIN CAPITAL LETTER Y WITH DIAERESIS\\\hline
+Ẏ & 1e8e & LATIN CAPITAL LETTER Y WITH DOT ABOVE\\\hline
+Ỳ & 1ef2 & LATIN CAPITAL LETTER Y WITH GRAVE\\\hline
+Ȳ & 0232 & LATIN CAPITAL LETTER Y WITH MACRON\\\hline
+Z & 005a & LATIN CAPITAL LETTER Z\\\hline
+Ź & 0179 & LATIN CAPITAL LETTER Z WITH ACUTE\\\hline
+Ž & 017d & LATIN CAPITAL LETTER Z WITH CARON\\\hline
+Ż & 017b & LATIN CAPITAL LETTER Z WITH DOT ABOVE\\\hline
+Ƶ & 01b5 & LATIN CAPITAL LETTER Z WITH STROKE\\\hline
+ꟁ & a7c1 & LATIN SMALL LETTER OLD POLISH O\\\hline
+ꟑ & a7d1 & LATIN SMALL LETTER CLOSED INSULAR G\\\hline
+ꟓ & a7d3 & LATIN SMALL LETTER DOUBLE THORN data\\\hline
+ꟕ & a7d5 & LATIN SMALL LETTER DOUBLE WYNN\\\hline
+ʙ & 0299 & LATIN LETTER SMALL CAPITAL B\\\hline
+ɢ & 0262 & LATIN LETTER SMALL CAPITAL G\\\hline
+ʛ & 029b & LATIN LETTER SMALL CAPITAL G WITH HOOK\\\hline
+ʜ & 029c & LATIN LETTER SMALL CAPITAL H\\\hline
+ɪ & 026a & LATIN LETTER SMALL CAPITAL I\\\hline
+ʟ & 029f & LATIN LETTER SMALL CAPITAL L\\\hline
+ɴ & 0274 & LATIN LETTER SMALL CAPITAL N\\\hline
+ɶ & 0276 & LATIN LETTER SMALL CAPITAL OE\\\hline
+ʀ & 0280 & LATIN LETTER SMALL CAPITAL R\\\hline
+ʁ & 0281 & LATIN LETTER SMALL CAPITAL INVERTED R\\\hline
+ʏ & 028f & LATIN LETTER SMALL CAPITAL Y\\\hline
+a & 0061 & LATIN SMALL LETTER A\\\hline
+ꜳ & a733 & LATIN SMALL LETTER AA\\\hline
+á & 00e1 & LATIN SMALL LETTER A WITH ACUTE\\\hline
+ă & 0103 & LATIN SMALL LETTER A WITH BREVE\\\hline
+â & 00e2 & LATIN SMALL LETTER A WITH CIRCUMFLEX\\\hline
+ä & 00e4 & LATIN SMALL LETTER A WITH DIAERESIS\\\hline
+à & 00e0 & LATIN SMALL LETTER A WITH GRAVE\\\hline
+ɑ & 0251 & LATIN SMALL LETTER ALPHA\\\hline
+ɒ & 0252 & LATIN SMALL LETTER TURNED ALPHA\\\hline
+ā & 0101 & LATIN SMALL LETTER A WITH MACRON\\\hline
+ꜵ & a735 & LATIN SMALL LETTER AO\\\hline
+ą & 0105 & LATIN SMALL LETTER A WITH OGONEK\\\hline
+å & 00e5 & LATIN SMALL LETTER A WITH RING ABOVE\\\hline
+ǻ & 01fb & \fstr{LATIN SMALL LETTER A WITH RING ABOVE AND ACUTE}\\\hline
+ã & 00e3 & LATIN SMALL LETTER A WITH TILDE\\\hline
+ɐ & 0250 & LATIN SMALL LETTER TURNED A\\\hline
+ꜷ & a737 & LATIN SMALL LETTER AU\\\hline
+ꜹ & a739 & LATIN SMALL LETTER AV\\\hline
+ꜻ & a73b & LATIN SMALL LETTER AV WITH HORIZONTAL BAR\\\hline
+ꜽ & a73d & LATIN SMALL LETTER AY\\\hline
+æ & 00e6 & LATIN SMALL LETTER AE\\\hline
+ǽ & 01fd & LATIN SMALL LETTER AE WITH ACUTE\\\hline
+ǣ & 01e3 & LATIN SMALL LETTER AE WITH MACRON\\\hline
+b & 0062 & LATIN SMALL LETTER B\\\hline
+ɓ & 0253 & LATIN SMALL LETTER B WITH HOOK\\\hline
+ʭ & 02ad & LATIN LETTER BIDENTAL PERCUSSIVE\\\hline
+ʘ & 0298 & LATIN LETTER BILABIAL CLICK\\\hline
+ʬ & 02ac & LATIN LETTER BILABIAL PERCUSSIVE\\\hline
+ƀ & 0180 & LATIN SMALL LETTER B WITH STROKE\\\hline
+c & 0063 & LATIN SMALL LETTER C\\\hline
+ć & 0107 & LATIN SMALL LETTER C WITH ACUTE\\\hline
+č & 010d & LATIN SMALL LETTER C WITH CARON\\\hline
+ç & 00e7 & LATIN SMALL LETTER C WITH CEDILLA\\\hline
+ɕ & 0255 & LATIN SMALL LETTER C WITH CURL\\\hline
+ċ & 010b & LATIN SMALL LETTER C WITH DOT ABOVE\\\hline
+ꝯ & a76f & LATIN SMALL LETTER CON\\\hline
+ʗ & 0297 & LATIN LETTER STRETCHED C\\\hline
+d & 0064 & LATIN SMALL LETTER D\\\hline
+ð & 00f0 & LATIN SMALL LETTER ETH\\\hline
+ď & 010f & LATIN SMALL LETTER D WITH CARON\\\hline
+đ & 0111 & LATIN SMALL LETTER D WITH STROKE\\\hline
+ʤ & 02a4 & LATIN SMALL LETTER DEZH DIGRAPH\\\hline
+ɗ & 0257 & LATIN SMALL LETTER D WITH HOOK\\\hline
+ꝺ & a77a & LATIN SMALL LETTER INSULAR D\\\hline
+ɖ & 0256 & LATIN SMALL LETTER D WITH TAIL\\\hline
+ʣ & 02a3 & LATIN SMALL LETTER DZ DIGRAPH\\\hline
+ʥ & 02a5 & LATIN SMALL LETTER DZ DIGRAPH WITH CURL\\\hline
+e & 0065 & LATIN SMALL LETTER E\\\hline
+é & 00e9 & LATIN SMALL LETTER E WITH ACUTE\\\hline
+ĕ & 0115 & LATIN SMALL LETTER E WITH BREVE\\\hline
+ě & 011b & LATIN SMALL LETTER E WITH CARON\\\hline
+ê & 00ea & LATIN SMALL LETTER E WITH CIRCUMFLEX\\\hline
+ë & 00eb & LATIN SMALL LETTER E WITH DIAERESIS\\\hline
+ė & 0117 & LATIN SMALL LETTER E WITH DOT ABOVE\\\hline
+è & 00e8 & LATIN SMALL LETTER E WITH GRAVE\\\hline
+ē & 0113 & LATIN SMALL LETTER E WITH MACRON\\\hline
+ę & 0119 & LATIN SMALL LETTER E WITH OGONEK\\\hline
+ɛ & 025b & LATIN SMALL LETTER OPEN E\\\hline
+ɜ & 025c & LATIN SMALL LETTER REVERSED OPEN E\\\hline
+ɞ & 025e & LATIN SMALL LETTER CLOSED REVERSED OPEN E\\\hline
+ɝ & 025d & \fstr{LATIN SMALL LETTER REVERSED OPEN E WITH HOOK}\\\hline
+ɘ & 0258 & LATIN SMALL LETTER REVERSED E\\\hline
+ʃ & 0283 & LATIN SMALL LETTER ESH\\\hline
+ʆ & 0286 & LATIN SMALL LETTER ESH WITH CURL\\\hline
+ʅ & 0285 & LATIN SMALL LETTER SQUAT REVERSED ESH\\\hline
+ꝫ & a76b & LATIN SMALL LETTER ET\\\hline
+ə & 0259 & LATIN SMALL LETTER SCHWA\\\hline
+ɚ & 025a & LATIN SMALL LETTER SCHWA WITH HOOK\\\hline
+ʒ & 0292 & LATIN SMALL LETTER EZH\\\hline
+ʓ & 0293 & LATIN SMALL LETTER EZH WITH CURL\\\hline
+f & 0066 & LATIN SMALL LETTER F\\\hline
+ʩ & 02a9 & LATIN SMALL LETTER FENG DIGRAPH\\\hline
+ꝼ & a77c & LATIN SMALL LETTER INSULAR F\\\hline
+g & 0067 & LATIN SMALL LETTER G\\\hline
+ɣ & 0263 & LATIN SMALL LETTER GAMMA\\\hline
+ģ & 0123 & LATIN SMALL LETTER G WITH CEDILLA\\\hline
+ġ & 0121 & LATIN SMALL LETTER G WITH DOT ABOVE\\\hline
+ɠ & 0260 & LATIN SMALL LETTER G WITH HOOK\\\hline
+ᵹ & 1d79 & LATIN SMALL LETTER INSULAR G\\\hline
+ʔ & 0294 & LATIN LETTER GLOTTAL STOP\\\hline
+ʖ & 0296 & LATIN LETTER INVERTED GLOTTAL STOP\\\hline
+ʕ & 0295 & LATIN LETTER PHARYNGEAL VOICED FRICATIVE\\\hline
+ʡ & 02a1 & LATIN LETTER GLOTTAL STOP WITH STROKE\\\hline
+ʢ & 02a2 & \fstr{LATIN LETTER REVERSED GLOTTAL STOP WITH STROKE}\\\hline
+ɡ & 0261 & LATIN SMALL LETTER SCRIPT G\\\hline
+ȝ & 021d & LATIN SMALL LETTER YOGH\\\hline
+h & 0068 & LATIN SMALL LETTER H\\\hline
+ħ & 0127 & LATIN SMALL LETTER H WITH STROKE\\\hline
+ɧ & 0267 & LATIN SMALL LETTER HENG WITH HOOK\\\hline
+ɦ & 0266 & LATIN SMALL LETTER H WITH HOOK\\\hline
+ɥ & 0265 & LATIN SMALL LETTER TURNED H\\\hline
+ʮ & 02ae & \fstr{LATIN SMALL LETTER TURNED H WITH FISHHOOK}\\\hline
+ʯ & 02af & \ffstr{LATIN SMALL LETTER TURNED H WITH FISHHOOK AND TAIL}\\\hline
+ƕ & 0195 & LATIN SMALL LETTER HV\\\hline
+i & 0069 & LATIN SMALL LETTER I\\\hline
+ı & 0131 & LATIN SMALL LETTER DOTLESS I\\\hline
+í & 00ed & LATIN SMALL LETTER I WITH ACUTE\\\hline
+ĭ & 012d & LATIN SMALL LETTER I WITH BREVE\\\hline
+î & 00ee & LATIN SMALL LETTER I WITH CIRCUMFLEX\\\hline
+ï & 00ef & LATIN SMALL LETTER I WITH DIAERESIS\\\hline
+ì & 00ec & LATIN SMALL LETTER I WITH GRAVE\\\hline
+ĳ & 0133 & LATIN SMALL LIGATURE IJ\\\hline
+ī & 012b & LATIN SMALL LETTER I WITH MACRON\\\hline
+į & 012f & LATIN SMALL LETTER I WITH OGONEK\\\hline
+ꝭ & a76d & LATIN SMALL LETTER IS\\\hline
+ɨ & 0268 & LATIN SMALL LETTER I WITH STROKE\\\hline
+j & 006a & LATIN SMALL LETTER J\\\hline
+ȷ & 0237 & LATIN SMALL LETTER DOTLESS J\\\hline
+ʝ & 029d & LATIN SMALL LETTER J WITH CROSSED-TAIL\\\hline
+ɟ & 025f & LATIN SMALL LETTER DOTLESS J WITH STROKE\\\hline
+ʄ & 0284 & \fstr{LATIN SMALL LETTER DOTLESS J WITH STROKE AND HOOK}\\\hline
+k & 006b & LATIN SMALL LETTER K\\\hline
+ķ & 0137 & LATIN SMALL LETTER K WITH CEDILLA\\\hline
+ꝁ & a741 & LATIN SMALL LETTER K WITH STROKE\\\hline
+l & 006c & LATIN SMALL LETTER L\\\hline
+ĺ & 013a & LATIN SMALL LETTER L WITH ACUTE\\\hline
+ƚ & 019a & LATIN SMALL LETTER L WITH BAR\\\hline
+ɬ & 026c & LATIN SMALL LETTER L WITH BELT\\\hline
+ľ & 013e & LATIN SMALL LETTER L WITH CARON\\\hline
+ļ & 013c & LATIN SMALL LETTER L WITH CEDILLA\\\hline
+ɮ & 026e & LATIN SMALL LETTER LEZH\\\hline
+ꝉ & a749 & LATIN SMALL LETTER L WITH HIGH STROKE\\\hline
+ɭ & 026d & LATIN SMALL LETTER L WITH RETROFLEX HOOK\\\hline
+ɫ & 026b & LATIN SMALL LETTER L WITH MIDDLE TILDE\\\hline
+ẜ & 1e9c & \fstr{LATIN SMALL LETTER LONG S WITH DIAGONAL STROKE}\\\hline
+ʪ & 02aa & LATIN SMALL LETTER LS DIGRAPH\\\hline
+ł & 0142 & LATIN SMALL LETTER L WITH STROKE\\\hline
+ʫ & 02ab & LATIN SMALL LETTER LZ DIGRAPH\\\hline
+m & 006d & LATIN SMALL LETTER M\\\hline
+ɱ & 0271 & LATIN SMALL LETTER M WITH HOOK\\\hline
+ɰ & 0270 & LATIN SMALL LETTER TURNED M WITH LONG LEG\\\hline
+ɯ & 026f & LATIN SMALL LETTER TURNED M\\\hline
+n & 006e & LATIN SMALL LETTER N\\\hline
+ń & 0144 & LATIN SMALL LETTER N WITH ACUTE\\\hline
+ň & 0148 & LATIN SMALL LETTER N WITH CARON\\\hline
+ņ & 0146 & LATIN SMALL LETTER N WITH CEDILLA\\\hline
+ɲ & 0272 & LATIN SMALL LETTER N WITH LEFT HOOK\\\hline
+ɳ & 0273 & LATIN SMALL LETTER N WITH RETROFLEX HOOK\\\hline
+ñ & 00f1 & LATIN SMALL LETTER N WITH TILDE\\\hline
+ŋ & 014b & LATIN SMALL LETTER ENG\\\hline
+o & 006f & LATIN SMALL LETTER O\\\hline
+ó & 00f3 & LATIN SMALL LETTER O WITH ACUTE\\\hline
+ɵ & 0275 & LATIN SMALL LETTER BARRED O\\\hline
+ŏ & 014f & LATIN SMALL LETTER O WITH BREVE\\\hline
+ô & 00f4 & LATIN SMALL LETTER O WITH CIRCUMFLEX\\\hline
+ö & 00f6 & LATIN SMALL LETTER O WITH DIAERESIS\\\hline
+ò & 00f2 & LATIN SMALL LETTER O WITH GRAVE\\\hline
+ő & 0151 & LATIN SMALL LETTER O WITH DOUBLE ACUTE\\\hline
+ꝋ & a74b & \fstr{LATIN SMALL LETTER O WITH LONG STROKE OVERLAY}\\\hline
+ō & 014d & LATIN SMALL LETTER O WITH MACRON\\\hline
+ꝏ & a74f & LATIN SMALL LETTER OO\\\hline
+ǫ & 01eb & LATIN SMALL LETTER O WITH OGONEK\\\hline
+ɔ & 0254 & LATIN SMALL LETTER OPEN O\\\hline
+ø & 00f8 & LATIN SMALL LETTER O WITH STROKE\\\hline
+ǿ & 01ff & LATIN SMALL LETTER O WITH STROKE AND ACUTE\\\hline
+õ & 00f5 & LATIN SMALL LETTER O WITH TILDE\\\hline
+œ & 0153 & LATIN SMALL LIGATURE OE\\\hline
+p & 0070 & LATIN SMALL LETTER P\\\hline
+ꝓ & a753 & LATIN SMALL LETTER P WITH FLOURISH\\\hline
+ɸ & 0278 & LATIN SMALL LETTER PHI\\\hline
+þ & 00fe & LATIN SMALL LETTER THORN\\\hline
+ꝑ & a751 & \ffstr{LATIN SMALL LETTER P WITH STROKE THROUGH DESCENDER}\\\hline
+q & 0071 & LATIN SMALL LETTER Q\\\hline
+ꝙ & a759 & LATIN SMALL LETTER Q WITH DIAGONAL STROKE\\\hline
+ʠ & 02a0 & LATIN SMALL LETTER Q WITH HOOK\\\hline
+ꝗ & a757 & \ffstr{LATIN SMALL LETTER Q WITH STROKE THROUGH DESCENDER}\\\hline
+r & 0072 & LATIN SMALL LETTER R\\\hline
+ŕ & 0155 & LATIN SMALL LETTER R WITH ACUTE\\\hline
+ɤ & 0264 & LATIN SMALL LETTER RAMS HORN\\\hline
+ř & 0159 & LATIN SMALL LETTER R WITH CARON\\\hline
+ŗ & 0157 & LATIN SMALL LETTER R WITH CEDILLA\\\hline
+ɾ & 027e & LATIN SMALL LETTER R WITH FISHHOOK\\\hline
+ɿ & 027f & \fstr{LATIN SMALL LETTER REVERSED R WITH FISHHOOK}\\\hline
+ɻ & 027b & LATIN SMALL LETTER TURNED R WITH HOOK\\\hline
+ꞃ & a783 & LATIN SMALL LETTER INSULAR R\\\hline
+ɺ & 027a & LATIN SMALL LETTER TURNED R WITH LONG LEG\\\hline
+ꝛ & a75b & LATIN SMALL LETTER R ROTUNDA\\\hline
+ɽ & 027d & LATIN SMALL LETTER R WITH TAIL\\\hline
+ɹ & 0279 & LATIN SMALL LETTER TURNED R\\\hline
+ꝝ & a75d & LATIN SMALL LETTER RUM ROTUNDA\\\hline
+s & 0073 & LATIN SMALL LETTER S\\\hline
+ś & 015b & LATIN SMALL LETTER S WITH ACUTE\\\hline
+š & 0161 & LATIN SMALL LETTER S WITH CARON\\\hline
+ş & 015f & LATIN SMALL LETTER S WITH CEDILLA\\\hline
+ß & 00df & LATIN SMALL LETTER SHARP S\\\hline
+ʂ & 0282 & LATIN SMALL LETTER S WITH HOOK\\\hline
+ꞅ & a785 & LATIN SMALL LETTER INSULAR S\\\hline
+ſ & 017f & LATIN SMALL LETTER LONG S\\\hline
+t & 0074 & LATIN SMALL LETTER T\\\hline
+ŧ & 0167 & LATIN SMALL LETTER T WITH STROKE\\\hline
+ť & 0165 & LATIN SMALL LETTER T WITH CARON\\\hline
+ʨ & 02a8 & LATIN SMALL LETTER TC DIGRAPH WITH CURL\\\hline
+ţ & 0163 & LATIN SMALL LETTER T WITH CEDILLA\\\hline
+ʧ & 02a7 & LATIN SMALL LETTER TESH DIGRAPH\\\hline
+ꝥ & a765 & LATIN SMALL LETTER THORN WITH STROKE\\\hline
+ꞇ & a787 & LATIN SMALL LETTER INSULAR T\\\hline
+ʈ & 0288 & LATIN SMALL LETTER T WITH RETROFLEX HOOK\\\hline
+ʦ & 02a6 & LATIN SMALL LETTER TS DIGRAPH\\\hline
+ʇ & 0287 & LATIN SMALL LETTER TURNED T\\\hline
+u & 0075 & LATIN SMALL LETTER U\\\hline
+ú & 00fa & LATIN SMALL LETTER U WITH ACUTE\\\hline
+ʉ & 0289 & LATIN SMALL LETTER U BAR\\\hline
+ŭ & 016d & LATIN SMALL LETTER U WITH BREVE\\\hline
+û & 00fb & LATIN SMALL LETTER U WITH CIRCUMFLEX\\\hline
+ü & 00fc & LATIN SMALL LETTER U WITH DIAERESIS\\\hline
+ù & 00f9 & LATIN SMALL LETTER U WITH GRAVE\\\hline
+ű & 0171 & LATIN SMALL LETTER U WITH DOUBLE ACUTE\\\hline
+ū & 016b & LATIN SMALL LETTER U WITH MACRON\\\hline
+ų & 0173 & LATIN SMALL LETTER U WITH OGONEK\\\hline
+ʊ & 028a & LATIN SMALL LETTER UPSILON\\\hline
+ů & 016f & LATIN SMALL LETTER U WITH RING ABOVE\\\hline
+ũ & 0169 & LATIN SMALL LETTER U WITH TILDE\\\hline
+v & 0076 & LATIN SMALL LETTER V\\\hline
+ʋ & 028b & LATIN SMALL LETTER V WITH HOOK\\\hline
+ⱱ & 2c71 & LATIN SMALL LETTER V WITH RIGHT HOOK\\\hline
+ʌ & 028c & LATIN SMALL LETTER TURNED V\\\hline
+w & 0077 & LATIN SMALL LETTER W\\\hline
+ẃ & 1e83 & LATIN SMALL LETTER W WITH ACUTE\\\hline
+ŵ & 0175 & LATIN SMALL LETTER W WITH CIRCUMFLEX\\\hline
+ẅ & 1e85 & LATIN SMALL LETTER W WITH DIAERESIS\\\hline
+ẁ & 1e81 & LATIN SMALL LETTER W WITH GRAVE\\\hline
+ʍ & 028d & LATIN SMALL LETTER TURNED W\\\hline
+ꝡ & a761 & LATIN SMALL LETTER VY\\\hline
+ƿ & 01bf & LATIN LETTER WYNN\\\hline
+x & 0078 & LATIN SMALL LETTER X\\\hline
+y & 0079 & LATIN SMALL LETTER Y\\\hline
+ý & 00fd & LATIN SMALL LETTER Y WITH ACUTE\\\hline
+ŷ & 0177 & LATIN SMALL LETTER Y WITH CIRCUMFLEX\\\hline
+ÿ & 00ff & LATIN SMALL LETTER Y WITH DIAERESIS\\\hline
+ẏ & 1e8f & LATIN SMALL LETTER Y WITH DOT ABOVE\\\hline
+ỳ & 1ef3 & LATIN SMALL LETTER Y WITH GRAVE\\\hline
+ȳ & 0233 & LATIN SMALL LETTER Y WITH MACRON\\\hline
+ʎ & 028e & LATIN SMALL LETTER TURNED Y\\\hline
+z & 007a & LATIN SMALL LETTER Z\\\hline
+ź & 017a & LATIN SMALL LETTER Z WITH ACUTE\\\hline
+ž & 017e & LATIN SMALL LETTER Z WITH CARON\\\hline
+ʑ & 0291 & LATIN SMALL LETTER Z WITH CURL\\\hline
+ż & 017c & LATIN SMALL LETTER Z WITH DOT ABOVE\\\hline
+ʐ & 0290 & LATIN SMALL LETTER Z WITH RETROFLEX HOOK\\\hline
+ƶ & 01b6 & LATIN SMALL LETTER Z WITH STROKE\\\hline
+ﬀ & fb00 & LATIN SMALL LIGATURE FF\\\hline
+ﬄ & fb04 & LATIN SMALL LIGATURE FFL\\\hline
+ﬁ & fb01 & LATIN SMALL LIGATURE FI\\\hline
+ﬂ & fb02 & LATIN SMALL LIGATURE FL\\\hline
+ﬅ & fb05 & LATIN SMALL LIGATURE LONG S T\\\hline
+ﬆ & fb06 & LATIN SMALL LIGATURE ST\\\hline
+ʱ & 02b1 & MODIFIER LETTER SMALL H WITH HOOK\\\hline
+ʰ & 02b0 & MODIFIER LETTER SMALL H\\\hline
+ʲ & 02b2 & MODIFIER LETTER SMALL J\\\hline
+ˡ & 02e1 & MODIFIER LETTER SMALL L\\\hline
+ⁿ & 207f & SUPERSCRIPT LATIN SMALL LETTER N\\\hline
+ʷ & 02b7 & MODIFIER LETTER SMALL W\\\hline
+ǂ & 01c2 & LATIN LETTER ALVEOLAR CLICK\\\hline
+ǀ & 01c0 & LATIN LETTER DENTAL CLICK\\\hline
+ǁ & 01c1 & LATIN LETTER LATERAL CLICK\\\hline
+ª & 00aa & FEMININE ORDINAL INDICATOR\\\hline
+º & 00ba & MASCULINE ORDINAL INDICATOR\\\hline
+β & 03b2 & GREEK SMALL LETTER BETA\\\hline
+θ & 03b8 & GREEK SMALL LETTER THETA\\\hline
+π & 03c0 & GREEK SMALL LETTER PI\\\hline
+χ & 03c7 & GREEK SMALL LETTER CHI\\\hline
+ͼ & 037c & GREEK SMALL DOTTED LUNATE SIGMA SYMBOL\\\hline
+ᚠ & 16a0 & RUNIC LETTER FEHU FEOH FE F\\\hline
+ᚡ & 16a1 & RUNIC LETTER V\\\hline
+ᚢ & 16a2 & RUNIC LETTER URUZ UR U\\\hline
+ᚣ & 16a3 & RUNIC LETTER YR\\\hline
+ᚤ & 16a4 & RUNIC LETTER Y\\\hline
+ᚥ & 16a5 & RUNIC LETTER W\\\hline
+ᚦ & 16a6 & RUNIC LETTER THURISAZ THURS THORN\\\hline
+ᚧ & 16a7 & RUNIC LETTER ETH\\\hline
+ᚨ & 16a8 & RUNIC LETTER ANSUZ A\\\hline
+ᚩ & 16a9 & RUNIC LETTER OS O\\\hline
+ᚪ & 16aa & RUNIC LETTER AC A\\\hline
+ᚫ & 16ab & RUNIC LETTER AESC\\\hline
+ᚬ & 16ac & RUNIC LETTER LONG-BRANCH-OSS O\\\hline
+ᚭ & 16ad & RUNIC LETTER SHORT-TWIG-OSS O\\\hline
+ᚮ & 16ae & RUNIC LETTER O\\\hline
+ᚯ & 16af & RUNIC LETTER OE\\\hline
+ᚰ & 16b0 & RUNIC LETTER ON\\\hline
+ᚱ & 16b1 & RUNIC LETTER RAIDO RAD REID R\\\hline
+ᚲ & 16b2 & RUNIC LETTER KAUNA\\\hline
+ᚳ & 16b3 & RUNIC LETTER CEN\\\hline
+ᚴ & 16b4 & RUNIC LETTER KAUN K\\\hline
+ᚵ & 16b5 & RUNIC LETTER G\\\hline
+ᚶ & 16b6 & RUNIC LETTER ENG\\\hline
+ᚷ & 16b7 & RUNIC LETTER GEBO GYFU G\\\hline
+ᚸ & 16b8 & RUNIC LETTER GAR\\\hline
+ᚹ & 16b9 & RUNIC LETTER WUNJO WYNN W\\\hline
+ᚺ & 16ba & RUNIC LETTER HAGLAZ H\\\hline
+ᚻ & 16bb & RUNIC LETTER HAEGL H\\\hline
+ᚼ & 16bc & RUNIC LETTER LONG-BRANCH-HAGALL H\\\hline
+ᚽ & 16bd & RUNIC LETTER SHORT-TWIG-HAGALL H\\\hline
+ᚾ & 16be & RUNIC LETTER NAUDIZ NYD NAUD N\\\hline
+ᚿ & 16bf & RUNIC LETTER SHORT-TWIG-NAUD N\\\hline
+ᛀ & 16c0 & RUNIC LETTER DOTTED-N\\\hline
+ᛁ & 16c1 & RUNIC LETTER ISAZ IS ISS I\\\hline
+ᛂ & 16c2 & RUNIC LETTER E\\\hline
+ᛃ & 16c3 & RUNIC LETTER JERAN J\\\hline
+ᛄ & 16c4 & RUNIC LETTER GER\\\hline
+ᛅ & 16c5 & RUNIC LETTER LONG-BRANCH-AR AE\\\hline
+ᛆ & 16c6 & RUNIC LETTER SHORT-TWIG-AR A\\\hline
+ᛇ & 16c7 & RUNIC LETTER IWAZ EOH\\\hline
+ᛈ & 16c8 & RUNIC LETTER PERTHO PEORTH P\\\hline
+ᛉ & 16c9 & RUNIC LETTER ALGIZ EOLHX\\\hline
+ᛊ & 16ca & RUNIC LETTER SOWILO S\\\hline
+ᛋ & 16cb & RUNIC LETTER SIGEL LONG-BRANCH-SOL S\\\hline
+ᛌ & 16cc & RUNIC LETTER SHORT-TWIG-SOL S\\\hline
+ᛍ & 16cd & RUNIC LETTER C\\\hline
+ᛎ & 16ce & RUNIC LETTER Z\\\hline
+ᛏ & 16cf & RUNIC LETTER TIWAZ TIR TYR T\\\hline
+ᛐ & 16d0 & RUNIC LETTER SHORT-TWIG-TYR T\\\hline
+ᛑ & 16d1 & RUNIC LETTER D\\\hline
+ᛒ & 16d2 & RUNIC LETTER BERKANAN BEORC BJARKAN B\\\hline
+ᛓ & 16d3 & RUNIC LETTER SHORT-TWIG-BJARKAN B\\\hline
+ᛔ & 16d4 & RUNIC LETTER DOTTED-P\\\hline
+ᛕ & 16d5 & RUNIC LETTER OPEN-P\\\hline
+ᛖ & 16d6 & RUNIC LETTER EHWAZ EH E\\\hline
+ᛗ & 16d7 & RUNIC LETTER MANNAZ MAN M\\\hline
+ᛘ & 16d8 & RUNIC LETTER LONG-BRANCH-MADR M\\\hline
+ᛙ & 16d9 & RUNIC LETTER SHORT-TWIG-MADR M\\\hline
+ᛚ & 16da & RUNIC LETTER LAUKAZ LAGU LOGR L\\\hline
+ᛛ & 16db & RUNIC LETTER DOTTED-L\\\hline
+ᛜ & 16dc & RUNIC LETTER INGWAZ\\\hline
+ᛝ & 16dd & RUNIC LETTER ING\\\hline
+ᛞ & 16de & RUNIC LETTER DAGAZ DAEG D\\\hline
+ᛟ & 16df & RUNIC LETTER OTHALAN ETHEL O\\\hline
+ᛠ & 16e0 & RUNIC LETTER EAR\\\hline
+ᛡ & 16e1 & RUNIC LETTER IOR\\\hline
+ᛢ & 16e2 & RUNIC LETTER CWEORTH\\\hline
+ᛣ & 16e3 & RUNIC LETTER CALC\\\hline
+ᛤ & 16e4 & RUNIC LETTER CEALC\\\hline
+ᛥ & 16e5 & RUNIC LETTER STAN\\\hline
+ᛦ & 16e6 & RUNIC LETTER LONG-BRANCH-YR\\\hline
+ᛧ & 16e7 & RUNIC LETTER SHORT-TWIG-YR\\\hline
+ᛨ & 16e8 & RUNIC LETTER ICELANDIC-YR\\\hline
+ᛩ & 16e9 & RUNIC LETTER Q\\\hline
+ᛪ & 16ea & RUNIC LETTER X\\\hline
+ꝰ & a770 & MODIFIER LETTER US\\\hline
+0 & 0030 & DIGIT ZERO\\\hline
+1 & 0031 & DIGIT ONE\\\hline
+2 & 0032 & DIGIT TWO\\\hline
+3 & 0033 & DIGIT THREE\\\hline
+4 & 0034 & DIGIT FOUR\\\hline
+5 & 0035 & DIGIT FIVE\\\hline
+6 & 0036 & DIGIT SIX\\\hline
+7 & 0037 & DIGIT SEVEN\\\hline
+8 & 0038 & DIGIT EIGHT\\\hline
+9 & 0039 & DIGIT NINE\\\hline
+⁄ & 2044 & FRACTION SLASH\\\hline
+½ & 00bd & VULGAR FRACTION ONE HALF\\\hline
+¼ & 00bc & VULGAR FRACTION ONE QUARTER\\\hline
+¾ & 00be & VULGAR FRACTION THREE QUARTERS\\\hline
+₀ & 2080 & SUBSCRIPT ZERO\\\hline
+₁ & 2081 & SUBSCRIPT ONE\\\hline
+₂ & 2082 & SUBSCRIPT TWO\\\hline
+₃ & 2083 & SUBSCRIPT THREE\\\hline
+₄ & 2084 & SUBSCRIPT FOUR\\\hline
+₅ & 2085 & SUBSCRIPT FIVE\\\hline
+₆ & 2086 & SUBSCRIPT SIX\\\hline
+₇ & 2087 & SUBSCRIPT SEVEN\\\hline
+₈ & 2088 & SUBSCRIPT EIGHT\\\hline
+₉ & 2089 & SUBSCRIPT NINE\\\hline
+⁰ & 2070 & SUPERSCRIPT ZERO\\\hline
+¹ & 00b9 & SUPERSCRIPT ONE\\\hline
+² & 00b2 & SUPERSCRIPT TWO\\\hline
+³ & 00b3 & SUPERSCRIPT THREE\\\hline
+⁴ & 2074 & SUPERSCRIPT FOUR\\\hline
+⁵ & 2075 & SUPERSCRIPT FIVE\\\hline
+⁶ & 2076 & SUPERSCRIPT SIX\\\hline
+⁷ & 2077 & SUPERSCRIPT SEVEN\\\hline
+⁸ & 2078 & SUPERSCRIPT EIGHT\\\hline
+⁹ & 2079 & SUPERSCRIPT NINE\\\hline
+‌ & 200c & ZERO WIDTH NON-JOINER\\\hline
+ & 000d & <Carriage Return> (CR)\\\hline
+  & 2001 & EM QUAD\\\hline
+  & 2003 & EM SPACE\\\hline
+  & 2000 & EN QUAD\\\hline
+  & 2002 & EN SPACE\\\hline
+  & 2007 & FIGURE SPACE\\\hline
+  & 2005 & FOUR-PER-EM SPACE\\\hline
+  & 200a & HAIR SPACE\\\hline
+  & 202f & NARROW NO-BREAK SPACE\\\hline
+  & 2008 & PUNCTUATION SPACE\\\hline
+  & 2006 & SIX-PER-EM SPACE\\\hline
+  & 0020 & SPACE\\\hline
+  & 00a0 & NO-BREAK SPACE\\\hline
+  & 2009 & THIN SPACE\\\hline
+  & 2004 & THREE-PER-EM SPACE\\\hline
+​ & 200b & ZERO WIDTH SPACE\\\hline
+⹊ & 2e4a & DOTTED SOLIDUS\\\hline
+⹌ & 2e4c & MEDIEVAL COMMA\\\hline
+⹍ & 2e4d & PARAGRAPHUS MARK\\\hline
+⹎ & 2e4e & PUNCTUS ELEVATUS MARK\\\hline
+⟨ & 27e8 & MATHEMATICAL LEFT ANGLE BRACKET\\\hline
+⟩ & 27e9 & MATHEMATICAL RIGHT ANGLE BRACKET\\\hline
+᛫ & 16eb & RUNIC SINGLE PUNCTUATION\\\hline
+᛬ & 16ec & RUNIC MULTIPLE PUNCTUATION\\\hline
+᛭ & 16ed & RUNIC CROSS PUNCTUATION\\\hline
+. & 002e & FULL STOP\\\hline
+, & 002c & COMMA\\\hline
+: & 003a & COLON\\\hline
+; & 003b & SEMICOLON\\\hline
+… & 2026 & HORIZONTAL ELLIPSIS\\\hline
+! & 0021 & EXCLAMATION MARK\\\hline
+¡ & 00a1 & INVERTED EXCLAMATION MARK\\\hline
+? & 003f & QUESTION MARK\\\hline
+¿ & 00bf & INVERTED QUESTION MARK\\\hline
+· & 00b7 & MIDDLE DOT\\\hline
+• & 2022 & BULLET\\\hline
+* & 002a & ASTERISK\\\hline
+‖ & 2016 & DOUBLE VERTICAL LINE\\\hline
+⁊ & 204a & TIRONIAN SIGN ET\\\hline
+\# & 0023 & NUMBER SIGN\\\hline
+/ & 002f & SOLIDUS\\\hline
+\ & 005c & REVERSE SOLIDUS\\\hline
+- & 002d & HYPHEN-MINUS\\\hline
+­ & 00ad & SOFT HYPHEN\\\hline
+– & 2013 & EN DASH\\\hline
+— & 2014 & EM DASH\\\hline
+‒ & 2012 & FIGURE DASH\\\hline
+― & 2015 & HORIZONTAL BAR\\\hline
+‐ & 2010 & HYPHEN\\\hline
+‑ & 2011 & NON-BREAKING HYPHEN\\\hline
+\_ & 005f & LOW LINE\\\hline
+‗ & 2017 & DOUBLE LOW LINE\\\hline
+( & 0028 & LEFT PARENTHESIS\\\hline
+) & 0029 & RIGHT PARENTHESIS\\\hline
+\{ & 007b & LEFT CURLY BRACKET\\\hline
+\} & 007d & RIGHT CURLY BRACKET\\\hline
+[ & 005b & LEFT SQUARE BRACKET\\\hline
+] & 005d & RIGHT SQUARE BRACKET\\\hline
+〈 & 2329 & LEFT-POINTING ANGLE BRACKET\\\hline
+〉 & 232a & RIGHT-POINTING ANGLE BRACKET\\\hline
+‚ & 201a & SINGLE LOW-9 QUOTATION MARK\\\hline
+„ & 201e & DOUBLE LOW-9 QUOTATION MARK\\\hline
+“ & 201c & LEFT DOUBLE QUOTATION MARK\\\hline
+” & 201d & RIGHT DOUBLE QUOTATION MARK\\\hline
+‘ & 2018 & LEFT SINGLE QUOTATION MARK\\\hline
+’ & 2019 & RIGHT SINGLE QUOTATION MARK\\\hline
+‛ & 201b & SINGLE HIGH-REVERSED-9 QUOTATION MARK\\\hline
+‟ & 201f & DOUBLE HIGH-REVERSED-9 QUOTATION MARK\\\hline
+« & 00ab & \fstr{LEFT-POINTING DOUBLE ANGLE QUOTATION MARK}\\\hline
+» & 00bb & \fstr{RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK}\\\hline
+‹ & 2039 & \fstr{SINGLE LEFT-POINTING ANGLE QUOTATION MARK}\\\hline
+› & 203a & \fstr{SINGLE RIGHT-POINTING ANGLE QUOTATION MARK}\\\hline
+" & 0022 & QUOTATION MARK\\\hline
+' & 0027 & APOSTROPHE\\\hline
+ˠ & 02e0 & MODIFIER LETTER SMALL GAMMA\\\hline
+ᛮ & 16ee & RUNIC ARLAUG SYMBOL\\\hline
+ᛯ & 16ef & RUNIC TVIMADUR SYMBOL\\\hline
+ᛰ & 16f0 & RUNIC BELGTHOR SYMBOL\\\hline
+˷ & 02f7 & MODIFIER LETTER LOW TILDE\\\hline
+˥ & 02e5 & MODIFIER LETTER EXTRA-HIGH TONE BAR\\\hline
+˩ & 02e9 & MODIFIER LETTER EXTRA-LOW TONE BAR\\\hline
+˦ & 02e6 & MODIFIER LETTER HIGH TONE BAR\\\hline
+˨ & 02e8 & MODIFIER LETTER LOW TONE BAR\\\hline
+˧ & 02e7 & MODIFIER LETTER MID TONE BAR\\\hline
+˞ & 02de & MODIFIER LETTER RHOTIC HOOK\\\hline
+@ & 0040 & COMMERCIAL AT\\\hline
+\& & 0026 & AMPERSAND\\\hline
+¶ & 00b6 & PILCROW SIGN\\\hline
+§ & 00a7 & SECTION SIGN\\\hline
+© & 00a9 & COPYRIGHT SIGN\\\hline
+® & 00ae & REGISTERED SIGN\\\hline
+™ & 2122 & TRADE MARK SIGN\\\hline
+° & 00b0 & DEGREE SIGN\\\hline
+′ & 2032 & PRIME\\\hline
+″ & 2033 & DOUBLE PRIME\\\hline
+| & 007c & VERTICAL LINE\\\hline
+¦ & 00a6 & BROKEN BAR\\\hline
+† & 2020 & DAGGER\\\hline
+‡ & 2021 & DOUBLE DAGGER\\\hline
+℟ & 211f & RESPONSE\\\hline
+℣ & 2123 & VERSICLE\\\hline
+€ & 20ac & EURO SIGN\\\hline
+¢ & 00a2 & CENT SIGN\\\hline
+¤ & 00a4 & CURRENCY SIGN\\\hline
+\$ & 0024 & DOLLAR SIGN\\\hline
+£ & 00a3 & POUND SIGN\\\hline
+¥ & 00a5 & YEN SIGN\\\hline
+∕ & 2215 & DIVISION SLASH\\\hline
++ & 002b & PLUS SIGN\\\hline
+− & 2212 & MINUS SIGN\\\hline
+× & 00d7 & MULTIPLICATION SIGN\\\hline
+÷ & 00f7 & DIVISION SIGN\\\hline
+= & 003d & EQUALS SIGN\\\hline
+≠ & 2260 & NOT EQUAL TO\\\hline
+> & 003e & GREATER-THAN SIGN\\\hline
+< & 003c & LESS-THAN SIGN\\\hline
+≥ & 2265 & GREATER-THAN OR EQUAL TO\\\hline
+≤ & 2264 & LESS-THAN OR EQUAL TO\\\hline
+± & 00b1 & PLUS-MINUS SIGN\\\hline
+≈ & 2248 & ALMOST EQUAL TO\\\hline
+~ & 007e & TILDE\\\hline
+¬ & 00ac & NOT SIGN\\\hline
+\^ & 005e & CIRCUMFLEX ACCENT\\\hline
+∞ & 221e & INFINITY\\\hline
+∅ & 2205 & EMPTY SET\\\hline
+∫ & 222b & INTEGRAL\\\hline
+Ω & 2126 & OHM SIGN\\\hline
+∆ & 2206 & INCREMENT\\\hline
+∏ & 220f & N-ARY PRODUCT\\\hline
+∑ & 2211 & N-ARY SUMMATION\\\hline
+√ & 221a & SQUARE ROOT\\\hline
+µ & 00b5 & MICRO SIGN\\\hline
+∂ & 2202 & PARTIAL DIFFERENTIAL\\\hline
+% & 0025 & PERCENT SIGN\\\hline
+⁺ & 207a & SUPERSCRIPT PLUS SIGN\\\hline
+∴ & 2234 & THEREFORE\\\hline
+→ & 2192 & RIGHTWARDS ARROW\\\hline
+← & 2190 & LEFTWARDS ARROW\\\hline
+◌ & 25cc & DOTTED CIRCLE\\\hline
+◊ & 25ca & LOZENGE\\\hline
+◌ͣ & 0363 & COMBINING LATIN SMALL LETTER A\\\hline
+◌ᷔ & 1dd4 & COMBINING LATIN SMALL LETTER AE\\\hline
+◌ᷕ & 1dd5 & COMBINING LATIN SMALL LETTER AO\\\hline
+◌ᷖ & 1dd6 & COMBINING LATIN SMALL LETTER AV\\\hline
+◌ᷗ & 1dd7 & COMBINING LATIN SMALL LETTER C CEDILLA\\\hline
+◌ͨ & 0368 & COMBINING LATIN SMALL LETTER C\\\hline
+◌ͩ & 0369 & COMBINING LATIN SMALL LETTER D\\\hline
+◌ͤ & 0364 & COMBINING LATIN SMALL LETTER E\\\hline
+◌ᷙ & 1dd9 & COMBINING LATIN SMALL LETTER ETH\\\hline
+◌ᷓ & 1dd3 & \ffstr{COMBINING LATIN SMALL LETTER FLATTENED OPEN A ABOVE}\\\hline
+◌ᷚ & 1dda & COMBINING LATIN SMALL LETTER G\\\hline
+◌ͪ & 036a & COMBINING LATIN SMALL LETTER H\\\hline
+◌ͥ & 0365 & COMBINING LATIN SMALL LETTER I\\\hline
+◌ᷘ & 1dd8 & COMBINING LATIN SMALL LETTER INSULAR D\\\hline
+◌ᷜ & 1ddc & COMBINING LATIN SMALL LETTER K\\\hline
+◌ᷝ & 1ddd & COMBINING LATIN SMALL LETTER L\\\hline
+◌ᷥ & 1de5 & COMBINING LATIN SMALL LETTER LONG S\\\hline
+◌ͫ & 036b & COMBINING LATIN SMALL LETTER M\\\hline
+◌ᷠ & 1de0 & COMBINING LATIN SMALL LETTER N\\\hline
+◌ͦ & 0366 & COMBINING LATIN SMALL LETTER O\\\hline
+◌ͬ & 036c & COMBINING LATIN SMALL LETTER R\\\hline
+◌ᷣ & 1de3 & COMBINING LATIN SMALL LETTER R ROTUNDA\\\hline
+◌ᷤ & 1de4 & COMBINING LATIN SMALL LETTER S\\\hline
+◌ͭ & 036d & COMBINING LATIN SMALL LETTER T\\\hline
+◌ͧ & 0367 & COMBINING LATIN SMALL LETTER U\\\hline
+◌ᫍ & 1acd & COMBINING LATIN SMALL LETTER INSULAR R\\\hline
+◌ͮ & 036e & COMBINING LATIN SMALL LETTER V\\\hline
+◌ͯ & 036f & COMBINING LATIN SMALL LETTER X\\\hline
+◌ᷦ & 1de6 & COMBINING LATIN SMALL LETTER Z\\\hline
+◌̈ & 0308 & COMBINING DIAERESIS\\\hline
+◌̇ & 0307 & COMBINING DOT ABOVE\\\hline
+◌̀ & 0300 & COMBINING GRAVE ACCENT\\\hline
+◌́ & 0301 & COMBINING ACUTE ACCENT\\\hline
+◌̋ & 030b & COMBINING DOUBLE ACUTE ACCENT\\\hline
+◌̂ & 0302 & COMBINING CIRCUMFLEX ACCENT\\\hline
+◌̌ & 030c & COMBINING CARON\\\hline
+◌̆ & 0306 & COMBINING BREVE\\\hline
+◌̊ & 030a & COMBINING RING ABOVE\\\hline
+◌̃ & 0303 & COMBINING TILDE\\\hline
+◌̄ & 0304 & COMBINING MACRON\\\hline
+◌̅ & 0305 & COMBINING OVERLINE\\\hline
+◌̒ & 0312 & COMBINING TURNED COMMA ABOVE\\\hline
+◌̕ & 0315 & COMBINING COMMA ABOVE RIGHT\\\hline
+◌̘ & 0318 & COMBINING LEFT TACK BELOW\\\hline
+◌̙ & 0319 & COMBINING RIGHT TACK BELOW\\\hline
+◌̚ & 031a & COMBINING LEFT ANGLE ABOVE\\\hline
+◌̜ & 031c & COMBINING LEFT HALF RING BELOW\\\hline
+◌̝ & 031d & COMBINING UP TACK BELOW\\\hline
+◌̞ & 031e & COMBINING DOWN TACK BELOW\\\hline
+◌̟ & 031f & COMBINING PLUS SIGN BELOW\\\hline
+◌̠ & 0320 & COMBINING MINUS SIGN BELOW\\\hline
+◌̣ & 0323 & COMBINING DOT BELOW\\\hline
+◌̤ & 0324 & COMBINING DIAERESIS BELOW\\\hline
+◌̥ & 0325 & COMBINING RING BELOW\\\hline
+◌̦ & 0326 & COMBINING COMMA BELOW\\\hline
+◌̧ & 0327 & COMBINING CEDILLA\\\hline
+◌̨ & 0328 & COMBINING OGONEK\\\hline
+◌̩ & 0329 & COMBINING VERTICAL LINE BELOW\\\hline
+◌̪ & 032a & COMBINING BRIDGE BELOW\\\hline
+◌̬ & 032c & COMBINING CARON BELOW\\\hline
+◌̯ & 032f & COMBINING INVERTED BREVE BELOW\\\hline
+◌̰ & 0330 & COMBINING TILDE BELOW\\\hline
+◌̴ & 0334 & COMBINING TILDE OVERLAY\\\hline
+◌̵ & 0335 & COMBINING SHORT STROKE OVERLAY\\\hline
+◌̷ & 0337 & COMBINING SHORT SOLIDUS OVERLAY\\\hline
+◌̸ & 0338 & COMBINING LONG SOLIDUS OVERLAY\\\hline
+◌̹ & 0339 & COMBINING RIGHT HALF RING BELOW\\\hline
+◌̺ & 033a & COMBINING INVERTED BRIDGE BELOW\\\hline
+◌̻ & 033b & COMBINING SQUARE BELOW\\\hline
+◌̼ & 033c & COMBINING SEAGULL BELOW\\\hline
+◌̽ & 033d & COMBINING X ABOVE\\\hline
+◌͛ & 035b & COMBINING ZIGZAG ABOVE\\\hline
+◌͜◌ & 035c & COMBINING DOUBLE BREVE BELOW\\\hline
+◌͡◌ & 0361 & COMBINING DOUBLE INVERTED BREVE\\\hline
+◌᷎ & 1dce & COMBINING OGONEK ABOVE\\\hline
+◌᫋ & 1acb & COMBINING TRIPLE ACUTE ACCENT\\\hline
+◌ᫌ & 1acc & COMBINING LATIN SMALL LETTER INSULAR G\\\hline
+◌ᫎ & 1ace & COMBINING LATIN SMALL LETTER INSULAR T\\\hline
+◌᷑ & 1dd1 & COMBINING UR ABOVE\\\hline
+◌᷒ & 1dd2 & COMBINING US ABOVE\\\hline
+◌᷏ & 1dcf & COMBINING ZIGZAG BELOW\\\hline
+¨ & 00a8 & DIAERESIS\\\hline
+˙ & 02d9 & DOT ABOVE\\\hline
+` & 0060 & GRAVE ACCENT\\\hline
+´ & 00b4 & ACUTE ACCENT\\\hline
+ˆ & 02c6 & MODIFIER LETTER CIRCUMFLEX ACCENT\\\hline
+ˇ & 02c7 & CARON\\\hline
+˘ & 02d8 & BREVE\\\hline
+˚ & 02da & RING ABOVE\\\hline
+˜ & 02dc & SMALL TILDE\\\hline
+¯ & 00af & MACRON\\\hline
+¸ & 00b8 & CEDILLA\\\hline
+˛ & 02db & OGONEK\\\hline
+ʼ & 02bc & MODIFIER LETTER APOSTROPHE\\\hline
+ʽ & 02bd & MODIFIER LETTER REVERSED COMMA\\\hline
+ˑ & 02d1 & MODIFIER LETTER HALF TRIANGULAR COLON\\\hline
+ː & 02d0 & MODIFIER LETTER TRIANGULAR COLON\\\hline
+ˁ & 02c1 & MODIFIER LETTER REVERSED GLOTTAL STOP\\\hline
+ˌ & 02cc & MODIFIER LETTER LOW VERTICAL LINE\\\hline
+ˈ & 02c8 & MODIFIER LETTER VERTICAL LINE\\\hline
+\end{supertabular}
+\end{center}
+
+
+\end{document}
