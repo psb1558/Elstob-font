@@ -44,7 +44,16 @@ commonGradeDict = dict(
     name="Grade",
     values=[
         dict(nominalValue=0, name="LightGrade", flags=0x2, rangeMinValue=0, rangeMaxValue=0.5),
-        dict(nominalValue=1, name="HeavyGrade", flags=0x2, rangeMinValue=0.5, rangeMaxValue=1)
+        dict(nominalValue=1, name="HeavyGrade", rangeMinValue=0.5, rangeMaxValue=1)
+    ]
+)
+
+commonSpacingDict = dict(
+    tag="SPAC",
+    name="Spacing",
+    values=[
+        dict(nominalValue=0, name="NarrowSpacing", flags=0x2, rangeMinValue=0, rangeMaxValue=0.5),
+        dict(nominalValue=1, name="WideSpacing", rangeMinValue=0.5, rangeMaxValue=1)
     ]
 )
 
@@ -53,12 +62,12 @@ slantDict = dict(
     name="Slant",
     values=[
         dict(nominalValue=0, name="Slanted", flags=0x2, rangeMinValue=0, rangeMaxValue=7.5),
-        dict(nominalValue=15, name="Upright", flags=0x2, rangeMinValue=7.5, rangeMaxValue=15)
+        dict(nominalValue=15, name="Upright", rangeMinValue=7.5, rangeMaxValue=15)
     ]
 )
 
 format2RomanAxes = [
-    commonOpticalSizeDict, commonWeightDict, commonGradeDict,
+    commonOpticalSizeDict, commonWeightDict, commonGradeDict, commonSpacingDict,
     dict(
         tag="ital",
         name="Italic",
@@ -67,7 +76,7 @@ format2RomanAxes = [
 ]
 
 format2ItalicAxes = [
-    commonOpticalSizeDict, commonWeightDict, commonGradeDict, slantDict,
+    commonOpticalSizeDict, commonWeightDict, commonGradeDict, commonSpacingDict, slantDict,
     dict(
         tag="ital",
         name="Italic",
