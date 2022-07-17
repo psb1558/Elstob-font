@@ -30,6 +30,31 @@ do not offer Elstob should download from
 [this site](https://github.com/psb1558/Elstob-font/releases/) and follow the
 instructions for installing on their systems.
 
-Copyright 2020 by Peter S. Baker.
+# Building
+
+To build Elstob, you'll need [fontmake](https://github.com/googlefonts/fontmake), which requires
+Python 3.7 or later. (If your system supplies Python 2.N, install the latest version of Python in 
+a virtual environment.) Install fontmake via pip, and, if you want hinting in the variable font,
+install [Xgridfit version 3](https://github.com/psb1558/xgridfit-3), following the instructions at
+the Xgridfit 3 site.
+
+Aside from fontmake, the build script (`build_font`, a Bash script) requires tools that are standard on the Mac and in Linux
+systems (sorry, I know little about Windows). One possible catch: in lines 114 and 125 the script
+calls gsed—that's the name Homebrew gives to GNU sed to distinguish it from BSD sed, which
+comes with the system. If you are building in Linux, you may need to change “gsed” in those lines
+to “sed.”
+
+To run `build_font`, open a terminal, navigate to the `source` directory, and run `build_font -h`.
+The message that appears will tell you  how to build the various flavors of Elstob.
+
+If you are building static fonts, you may customize a couple of aspects before building. First, to adjust
+the slant of the italic, open the script `fix-italic-slant.xsl` and change the number on line 14 from the
+default **6** to any number (including decimals) between **0** (very slanted) and **15** (very upright).
+
+Second, for wider space characters, do the same with the script `fix-spacing.xsl`, but this time choose
+a value between **0** (the default, rather narrow space) and **1** (a much wider space, typical of
+old-style printing).
+
+Copyright 2020–2022 by Peter S. Baker.
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1. See the file OFL.txt or visit [http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).
