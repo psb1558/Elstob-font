@@ -11,7 +11,7 @@
 
     <xsl:template match="instance/location/dimension[@name='Spacing']/@xvalue">
       <xsl:attribute name="xvalue">
-        <xsl:value-of select="0.5"/>
+        <xsl:value-of select="0"/>
       </xsl:attribute>
     </xsl:template>
 </xsl:stylesheet>
