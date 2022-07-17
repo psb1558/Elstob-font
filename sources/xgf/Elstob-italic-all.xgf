@@ -3125,6 +3125,23 @@
     </mv>
   </gl>
 
+  <gl pnm="p_p.hlig">
+    <cn nm="stem-top" val="{272;539}"/>
+		<cn nm="top-bowl-top" val="{313;445}"/>
+		<cn nm="bot-bowl-bot" val="{150;-127}"/>
+		<cn nm="stem-bottom" val="{-54;-235}"/>
+    <cn nm="serif-bottom" val="{-119;-245}"/>
+    <mv p="stem-top"/>
+    <mv di="xho" p="top-bowl-top"/>
+		<mv p="bot-bowl-bot"/>
+		<ip r="top-bowl-top bot-bowl-bot" p="{209;147} {173;116} {166;-99} {277;414} {270;199} {254;171}"/>
+		<mv di="lc-descender" p="serif-bottom">
+      <mv di="lc-serif" col="b" p="(serif-bottom + 1)">
+        <sh p="stem-bottom"/>
+      </mv>
+    </mv>
+  </gl>
+
   <!-- Section: vowel + rhotic hook -->
 
   <gl pnm="uni027602DE">

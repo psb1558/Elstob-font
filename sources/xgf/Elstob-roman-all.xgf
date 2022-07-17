@@ -10956,6 +10956,46 @@ type="application/relax-ng-compact-syntax"?>
     <iup axis="y"/>
   </gl>
 
+	<gl pnm="h_h.hlig" assume-y="yes">
+		<cn nm="top-top" val="{345;626}"/>
+		<cn nm="bot-top" val="{358;326}"/>
+		<cn nm="serif-bot" val="{28;0}"/>
+		<cn nm="top-serif-bot" val="{313;360}"/>
+		<mv p="top-top">
+			<mv p="{304;577}"/>
+		</mv>
+		<callm nm="lc-dbl-serif">
+			first-left: serif-bot, second-left: {28;25}, first-right: {333;0},
+			second-right: {333;25}, stem1: {87;15}, stem2: {391;10}
+		</callm>
+		<ip r="top-top serif-bot" p="top-serif-bot"/>
+		<mv p="top-serif-bot">
+			<mv di="lc-serif" p="top-serif-bot - 1">
+				<sh p="{371;370}"/>
+			</mv>
+		</mv>
+	</gl>
+
+	<gl pnm="p_p.hlig" assume-y="yes">
+		<cn nm="stem-top" val="{149;446}"/>
+		<cn nm="top-bowl-top" val="{311;446}"/>
+		<cn nm="bot-bowl-bot" val="{281;-128}"/>
+		<cn nm="stem-bottom" val="{165;-235}"/>
+    <cn nm="serif-bottom" val="{30;-245}"/>
+		<callm nm="minim-top">
+      top: stem-top
+    </callm>
+		<sh r="stem-top" p="top-bowl-top"/>
+		<mv p="top-bowl-top"/>
+		<mv p="bot-bowl-bot"/>
+		<ip r="top-bowl-top bot-bowl-bot" p="{311;147} {271;89} {275;-104} {271;388} {275;195} {281;171}"/>
+		<mv di="lc-descender" p="serif-bottom">
+      <mv di="lc-serif" col="b" p="(serif-bottom + 1)">
+        <sh p="stem-bottom"/>
+      </mv>
+    </mv>
+	</gl>
+
   <gl pnm="uni027602DE">
     <cn nm="top" val="42"/>
     <cn nm="top-ins" val="52"/>
