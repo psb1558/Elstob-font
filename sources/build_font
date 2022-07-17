@@ -78,11 +78,15 @@ do
     fi
   done
 
+# If the arguments somehow haven't worked
+
 if [ $glyphsfile == "nofile" ] || [ $fontname == "nofont" ]
 then
     echo "Could not derive the filename or fontname."
     exit 1
 fi
+
+# Determine whether this is the italic or the roman font
 
 if [[ $fontname == *"Italic"* ]]
 then
@@ -91,15 +95,21 @@ else
     fonttype="roman"
 fi
 
+# Build the designspace filename
+
 des="master_ufo/${fontname}.designspace"
 
 echo "Generating master UFOs and designspace files"
+
 glyphs2ufo --propagate-anchors --generate-GDEF --no-store-editor-state -m master_ufo -d $des $glyphsfile
 if [ $? -ne 0 ]
 then
     echo "Failed to generate UFO and designspace"
     exit 1
 fi
+
+# If this line fails, maybe you need sed instead of gsed. But in any case you need
+# Gnu sed.
 
 familyname=`gsed -n '1,/<source.*familyname/s/.*familyname="\([^"]*\)"[^\n]*/\1/p' $des`
 echo "Building font(s) with family name \"${familyname}\""
@@ -144,26 +154,46 @@ then
     xsltproc -o $des $instanceScript $des
 fi
 
-# build the fonts.
+# build the fonts. First static TrueType
+
 if [ $outputType = "s" ];
 then
+
+  # fix-spacing.xsl sets the default spacing via the Spacing axis. Change
+  # the number in l. 14 of the script (use anything between 0 and 1) to
+  # change the spacing.
+
   xsltproc -o $des fix-spacing.xsl $des
   if [ $? -ne 0 ]
   then
     echo "fix-spacing script failed"
     exit 1
   fi
+
+  # Set the slant of the static Italic fonts. Change the number in l. 14
+  # of the script (using anything between 0 and 15) to change the slant.
+
   if [ $fonttype == "italic" ]
   then
     xsltproc -o $des fix-italic-slant.xsl $des
+    if [ $? -ne 0 ]
+    then
+      echo "fix-italic-slant script failed"
+      exit 1
+    fi
   fi
+
   echo "Running fontmake to build static TrueType instances"
+
   fontmake -o ttf -a -i -m $des
   if [ $? -ne 0 ]
   then
     echo "fontmake failed"
     exit 1
   fi
+
+  # Add a dummny dsig table in the fonts we've just built.
+
   cd autohinted/instance_ttf
   if [ $fonttype == "italic" ]
   then
@@ -178,6 +208,9 @@ then
     done
   fi
   cd ../..
+
+# Next CFF OpenType fonts, largely duplicating the moves for static TrueType.
+
 elif [ $outputType == "o" ]
 then
   echo "Running fontmake to build static CFF instances"
@@ -204,33 +237,42 @@ then
     done
   fi
   cd ..
+
+# Finally a variable font. We only build the TrueType flavor, since that seems
+# to work everywhere.
+
 else
+
   echo "Running fontmake to build variable font"
+
   fontmake -o variable -m $des
   if [ $? -ne 0 ]
   then
     echo "fontmake failed"
     exit 1
   fi
-  echo "copying variable_ttf/${fontname}-VF.ttf"
+
+  # echo "copying variable_ttf/${fontname}-VF.ttf"
   cp "variable_ttf/${fontname}-VF.ttf" .
+
   echo "Adding dsig table"
+
   python add_dsig.py "${fontname}-VF.ttf"
+
   echo "Building STAT table and fixing name table"
+
   python mkstat.py $fonttype
   if [ $? -ne 0 ]
   then
     echo "Failed to build STAT table"
     exit 1
-# else
-#    cp "${fontname}[GRAD,opsz,wght]-withSTAT.ttf" "${fontname}-VF.ttf"
   fi
   #
   # Hinting section: if autohinting requested, check for existence of
   #     ttfautohint-vf and run it if available.
   # If autohinting not requested, run Xgridfit.
-  # If either of these methods fails, user will be left with unhinted font
-  #     ${fontname}[GRAD,opsz,wght].ttf".
+  # If hinting suppressed or either of these methods fails, user will be left
+  # with unhinted font.
   #
   if [ $autohint == 1 ]
   then
@@ -238,6 +280,7 @@ else
     then
       echo "Running ttfautohint-vf"
       ttfautohint-vf "${fontname}-VF-withSTAT.ttf" tmp-font.ttf
+      # Fix a flag in head table, as Google Fonts prescribes; then clean up.
       gftools-fix-hinting.py tmp-font.ttf
       cp tmp-font.ttf.fix "${fontname}.ttf"
       rm tmp-font.ttf.fix
@@ -247,15 +290,12 @@ else
     fi
   elif [ $autohint -ne -1 ]
   then
-    # cp "${fontname}-VF-withSTAT.ttf" "${fontname}.ttf"
     echo "Running Xgridfit"
-    # xgridfit -q "xgf/Elstob-${fonttype}-all.xgf"
     xgridfit -i "${fontname}-VF-withSTAT.ttf" -o "${fontname}.ttf" "xgf/Elstob-${fonttype}-all.xgf"
     if [ $? -ne 0 ]
     then
       echo "Failed to hint with Xgridfit."
-    # else
-    #  cp "${fontname}[GRAD,opsz,wght]-hinted.ttf" "${fontname}[GRAD,opsz,wght].ttf"
+      cp "${fontname}-VF-withSTAT.ttf" "${fontname}.ttf"
     fi
   else
     echo "Skipping hinting"
@@ -269,6 +309,7 @@ else
   echo "Cleaning up"
   rm -f ${fontname}-VF.ttf
 #  rm -f tmp-font.ttf
-  rm -f "${fontname}-VF-withSTAT.ttf"#  rm -f "${fontname}-withSTAT.ttf"
+  echo "${fontname}-VF-withSTAT.ttf"
+  rm -f "${fontname}-VF-withSTAT.ttf"
 #  rm -f "${fontname}-hinted.ttf"
 fi
