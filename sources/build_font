@@ -147,6 +147,12 @@ fi
 # build the fonts.
 if [ $outputType = "s" ];
 then
+  xsltproc -o $des fix-spacing.xsl $des
+  if [ $? -ne 0 ]
+  then
+    echo "fix-spacing script failed"
+    exit 1
+  fi
   if [ $fonttype == "italic" ]
   then
     xsltproc -o $des fix-italic-slant.xsl $des
@@ -175,6 +181,7 @@ then
 elif [ $outputType == "o" ]
 then
   echo "Running fontmake to build static CFF instances"
+  xsltproc -o $des fix-spacing.xsl $des
   fontmake -o otf -i -m $des
   if [ $? -ne 0 ]
   then
