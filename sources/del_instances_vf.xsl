@@ -14,6 +14,7 @@
        contains(@stylename,'pt Extra') or
        contains(@stylename,'pt Medium') or
        contains(@stylename,'pt SemiBold') or
-       contains(@stylename,'Slant')]"/>
+       contains(@stylename,'Slant') or
+       contains(@stylename,'Spaced')]"/>
 
 </xsl:stylesheet>

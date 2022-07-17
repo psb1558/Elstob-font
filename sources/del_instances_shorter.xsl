@@ -13,6 +13,8 @@
 			 starts-with(@stylename,'Grade') or
 			 contains(@stylename,'8pt') or
 			 starts-with(@stylename,'14pt') or
-			 starts-with(@stylename,'10pt')]"/>
-    
+			 starts-with(@stylename,'10pt') or
+       contains(@stylename,'Slant') or
+       contains(@stylename,'Spaced')]"/>
+
 </xsl:stylesheet>

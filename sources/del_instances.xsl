@@ -11,6 +11,7 @@
 
     <xsl:template match="instance[starts-with(@stylename,'6pt') or
 			 starts-with(@stylename,'Grade') or
-       contains(@stylename,'Slant')]"/>
+       contains(@stylename,'Slant') or
+       contains(@stylename,'Spaced')]"/>
 
 </xsl:stylesheet>
