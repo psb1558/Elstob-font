@@ -54,7 +54,7 @@ default **6** to any number (including decimals) between **0** (very slanted) an
 
 Second, for wider space characters, do the same with the script `fix-spacing.xsl`, but this time choose
 a value between **0** (the default, rather narrow space) and **1** (a much wider space, typical of
-old-style printing).
+old-style printing). For example, **0.424** yields a space equal to one quarter of an em.
 
 Copyright 2020–2022 by Peter S. Baker.
 
