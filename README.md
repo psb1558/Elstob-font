@@ -44,8 +44,9 @@ calls gsed—that's the name Homebrew gives to GNU sed to distinguish it from BS
 comes with the system. If you are building in Linux, you may need to change “gsed” in those lines
 to “sed.”
 
-To run `build_font`, open a terminal, navigate to the `source` directory, and run `build_font -h`.
-The message that appears will tell you  how to build the various flavors of Elstob.
+To run `build_font`, open a terminal, navigate to the `source` directory, make the file `build_font` executable
+(`chmod +x build_font`), and run it: `./build_font -h`.
+The help message that appears will tell you  how to build the various flavors of Elstob.
 
 If you are building static fonts, you may customize a couple of aspects before building. First, to adjust
 the slant of the italic, open the script `fix-italic-slant.xsl` and change the number on line 14 from the
@@ -53,7 +54,7 @@ default **6** to any number (including decimals) between **0** (very slanted) an
 
 Second, for wider space characters, do the same with the script `fix-spacing.xsl`, but this time choose
 a value between **0** (the default, rather narrow space) and **1** (a much wider space, typical of
-old-style printing).
+old-style printing). For example, **0.424** yields a space equal to one quarter of an em.
 
 Copyright 2020–2022 by Peter S. Baker.
 
