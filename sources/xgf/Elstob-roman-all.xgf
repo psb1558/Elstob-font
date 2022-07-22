@@ -21,6 +21,7 @@ type="application/relax-ng-compact-syntax"?>
   <cv nm="xheight-overshoot" val="446"/>
   <cv nm="lc-round-stem" val="28" col="b"/>
   <cv nm="lc-ascender-top" val="726"/>
+	<cv nm="lc-ascender-top-alt" val="709"/>
   <cv nm="lc-ascender-top-slope" val="36"/>
   <cv nm="lc-ascender-top-end" val="16"/>
   <cv nm="baseline" val="0"/>
@@ -10706,6 +10707,562 @@ type="application/relax-ng-compact-syntax"?>
     <iup axis="y"/>
   </gl>
 
+	<!-- pseudo-ligature components -->
+
+	<gl pnm="f.lf">
+    <cn nm="serif-bottom" val="{33;0}"/>
+    <cn nm="vertical-bottom" val="{92;10}"/>
+    <cn nm="top" val="{307;729}"/>
+    <cn nm="top-inside" val="{287;694}"/>
+    <cn nm="bar-top" val="{264;433}"/>
+    <cn nm="bar-bottom" val="bar-top + 1"/>
+    <cn nm="bar-bottom-left" val="{33;389}"/>
+    <setvs axis="y"/>
+    <mv di="baseline" p="serif-bottom">
+      <sh p="vertical-bottom"/>
+      <mv di="lc-serif" col="b" p="(serif-bottom + 1)"/>
+    </mv>
+    <mv di="lc-ascender-top-overshoot" p="top">
+      <mv di="lc-round-stem" col="b" p="top-inside"/>
+    </mv>
+    <ip r="serif-bottom top" p="bar-top"/>
+    <callm nm="round-point">
+      p: bar-top
+    </callm>
+    <push>bar-bottom-left bar-bottom</push>
+    <command nm="MDRP">
+      <modifier type="col" val="b"/>
+    </command>
+    <command nm="SHP" modifier="0"/>
+    <iup axis="y"/>
+  </gl>
+
+	<gl pnm="f.lfrij">
+    <cn nm="serif-bottom" val="{33;0}"/>
+    <cn nm="vertical-bottom" val="{92;10}"/>
+    <cn nm="top" val="{307;729}"/>
+    <cn nm="top-inside" val="{287;694}"/>
+    <cn nm="bar-top" val="{410;433}"/>
+    <cn nm="bar-bottom" val="bar-top + 1"/>
+    <cn nm="bar-bottom-left" val="{33;389}"/>
+    <setvs axis="y"/>
+    <mv di="baseline" p="serif-bottom">
+      <sh p="vertical-bottom"/>
+      <mv di="lc-serif" col="b" p="(serif-bottom + 1)"/>
+    </mv>
+    <mv di="lc-ascender-top-overshoot" p="top">
+      <mv di="lc-round-stem" col="b" p="top-inside"/>
+    </mv>
+    <ip r="serif-bottom top" p="bar-top"/>
+    <callm nm="round-point">
+      p: bar-top
+    </callm>
+    <push>bar-bottom-left bar-bottom</push>
+    <command nm="MDRP">
+      <modifier type="col" val="b"/>
+    </command>
+    <command nm="SHP" modifier="0"/>
+    <iup axis="y"/>
+  </gl>
+
+	<gl pnm="f.lfrl">
+    <cn nm="serif-bottom" val="{33;0}"/>
+    <cn nm="vertical-bottom" val="{92;10}"/>
+    <cn nm="top" val="{307;729}"/>
+    <cn nm="top-inside" val="{287;694}"/>
+    <cn nm="bar-top" val="{414;433}"/>
+    <cn nm="bar-bottom" val="bar-top + 1"/>
+    <cn nm="bar-bottom-left" val="{33;389}"/>
+    <setvs axis="y"/>
+    <mv di="baseline" p="serif-bottom">
+      <sh p="vertical-bottom"/>
+      <mv di="lc-serif" col="b" p="(serif-bottom + 1)"/>
+    </mv>
+    <mv di="lc-ascender-top-overshoot" p="top">
+      <mv di="lc-round-stem" col="b" p="top-inside"/>
+    </mv>
+    <ip r="serif-bottom top" p="bar-top"/>
+    <callm nm="round-point">
+      p: bar-top
+    </callm>
+    <push>bar-bottom-left bar-bottom</push>
+    <command nm="MDRP">
+      <modifier type="col" val="b"/>
+    </command>
+    <command nm="SHP" modifier="0"/>
+    <iup axis="y"/>
+  </gl>
+
+	<gl pnm="f.lfrtall">
+    <cn nm="serif-bottom" val="{33;0}"/>
+    <cn nm="vertical-bottom" val="{92;10}"/>
+    <cn nm="top" val="{307;729}"/>
+    <cn nm="top-inside" val="{287;694}"/>
+    <cn nm="bar-top" val="{264;433}"/>
+    <cn nm="bar-bottom" val="bar-top + 1"/>
+    <cn nm="bar-bottom-left" val="{33;389}"/>
+    <setvs axis="y"/>
+    <mv di="baseline" p="serif-bottom">
+      <sh p="vertical-bottom"/>
+      <mv di="lc-serif" col="b" p="(serif-bottom + 1)"/>
+    </mv>
+    <mv di="lc-ascender-top-overshoot" p="top">
+      <mv di="lc-round-stem" col="b" p="top-inside"/>
+    </mv>
+    <ip r="serif-bottom top" p="bar-top"/>
+    <callm nm="round-point">
+      p: bar-top
+    </callm>
+    <push>bar-bottom-left bar-bottom</push>
+    <command nm="MDRP">
+      <modifier type="col" val="b"/>
+    </command>
+    <command nm="SHP" modifier="0"/>
+    <iup axis="y"/>
+  </gl>
+
+	<gl pnm="f.rf">
+    <cn nm="serif-bottom" val="{33;0}"/>
+    <cn nm="vertical-bottom" val="{92;10}"/>
+    <cn nm="top" val="{307;709}"/>
+    <cn nm="top-inside" val="{298;675}"/>
+    <cn nm="bar-top" val="{404;433}"/>
+    <cn nm="bar-bottom" val="bar-top + 1"/>
+    <cn nm="bar-bottom-left" val="{33;389}"/>
+    <setvs axis="y"/>
+    <mv di="baseline" p="serif-bottom">
+      <sh p="vertical-bottom"/>
+      <mv di="lc-serif" col="b" p="(serif-bottom + 1)"/>
+    </mv>
+    <mv di="lc-ascender-top-alt" p="top">
+      <mv di="lc-round-stem" col="b" p="top-inside"/>
+    </mv>
+    <ip r="serif-bottom top" p="bar-top"/>
+    <callm nm="round-point">
+      p: bar-top
+    </callm>
+    <push>bar-bottom-left bar-bottom</push>
+    <command nm="MDRP">
+      <modifier type="col" val="b"/>
+    </command>
+    <command nm="SHP" modifier="0"/>
+    <iup axis="y"/>
+  </gl>
+
+	<gl pnm="f.rij">
+    <cn nm="serif-bottom" val="{33;0}"/>
+    <cn nm="vertical-bottom" val="{92;10}"/>
+    <cn nm="top" val="{307;729}"/>
+    <cn nm="top-inside" val="{287;694}"/>
+    <cn nm="bar-top" val="{410;433}"/>
+    <cn nm="bar-bottom" val="bar-top + 1"/>
+    <cn nm="bar-bottom-left" val="{33;389}"/>
+    <setvs axis="y"/>
+    <mv di="baseline" p="serif-bottom">
+      <sh p="vertical-bottom"/>
+      <mv di="lc-serif" col="b" p="(serif-bottom + 1)"/>
+    </mv>
+    <mv di="lc-ascender-top-overshoot" p="top">
+      <mv di="lc-round-stem" col="b" p="top-inside"/>
+    </mv>
+    <ip r="serif-bottom top" p="bar-top"/>
+    <callm nm="round-point">
+      p: bar-top
+    </callm>
+    <push>bar-bottom-left bar-bottom</push>
+    <command nm="MDRP">
+      <modifier type="col" val="b"/>
+    </command>
+    <command nm="SHP" modifier="0"/>
+    <iup axis="y"/>
+  </gl>
+
+	<gl pnm="f.rl">
+    <cn nm="serif-bottom" val="{33;0}"/>
+    <cn nm="vertical-bottom" val="{92;10}"/>
+    <cn nm="top" val="{307;729}"/>
+    <cn nm="top-inside" val="{287;694}"/>
+    <cn nm="bar-top" val="{414;433}"/>
+    <cn nm="bar-bottom" val="bar-top + 1"/>
+    <cn nm="bar-bottom-left" val="{33;389}"/>
+    <setvs axis="y"/>
+    <mv di="baseline" p="serif-bottom">
+      <sh p="vertical-bottom"/>
+      <mv di="lc-serif" col="b" p="(serif-bottom + 1)"/>
+    </mv>
+    <mv di="lc-ascender-top-overshoot" p="top">
+      <mv di="lc-round-stem" col="b" p="top-inside"/>
+    </mv>
+    <ip r="serif-bottom top" p="bar-top"/>
+    <callm nm="round-point">
+      p: bar-top
+    </callm>
+    <push>bar-bottom-left bar-bottom</push>
+    <command nm="MDRP">
+      <modifier type="col" val="b"/>
+    </command>
+    <command nm="SHP" modifier="0"/>
+    <iup axis="y"/>
+  </gl>
+
+	<gl pnm="f.rtall">
+    <cn nm="serif-bottom" val="{33;0}"/>
+    <cn nm="vertical-bottom" val="{92;10}"/>
+    <cn nm="top" val="{307;729}"/>
+    <cn nm="top-inside" val="{287;694}"/>
+    <cn nm="bar-top" val="{264;433}"/>
+    <cn nm="bar-bottom" val="bar-top + 1"/>
+    <cn nm="bar-bottom-left" val="{33;389}"/>
+    <setvs axis="y"/>
+    <mv di="baseline" p="serif-bottom">
+      <sh p="vertical-bottom"/>
+      <mv di="lc-serif" col="b" p="(serif-bottom + 1)"/>
+    </mv>
+    <mv di="lc-ascender-top-overshoot" p="top">
+      <mv di="lc-round-stem" col="b" p="top-inside"/>
+    </mv>
+    <ip r="serif-bottom top" p="bar-top"/>
+    <callm nm="round-point">
+      p: bar-top
+    </callm>
+    <push>bar-bottom-left bar-bottom</push>
+    <command nm="MDRP">
+      <modifier type="col" val="b"/>
+    </command>
+    <command nm="SHP" modifier="0"/>
+    <iup axis="y"/>
+  </gl>
+
+	<gl pnm="f.alt.lf">
+    <cn nm="serif-bottom" val="{35;0}"/>
+    <cn nm="vertical-bottom" val="{92;10}"/>
+    <cn nm="top" val="{262;729}"/>
+    <cn nm="top-inside" val="{232;694}"/>
+    <cn nm="bar-top" val="{264;433}"/>
+    <cn nm="bar-bottom" val="bar-top + 1"/>
+    <cn nm="bar-bottom-left" val="{33;389}"/>
+    <setvs axis="y"/>
+    <mv di="baseline" p="serif-bottom">
+      <sh p="vertical-bottom"/>
+      <mv di="lc-serif" col="b" p="(serif-bottom + 1)"/>
+    </mv>
+    <mv di="lc-ascender-top-overshoot" p="top">
+      <mv di="lc-round-stem" col="b" p="top-inside"/>
+    </mv>
+    <ip r="serif-bottom top" p="bar-top"/>
+    <callm nm="round-point">
+      p: bar-top
+    </callm>
+    <push>bar-bottom-left bar-bottom</push>
+    <command nm="MDRP">
+      <modifier type="col" val="b"/>
+    </command>
+    <command nm="SHP" modifier="0"/>
+    <iup axis="y"/>
+  </gl>
+
+	<gl pnm="longs.llongs">
+		<cn nm="serif-bottom" val="{33;0}"/>
+		<cn nm="vertical-bottom" val="{92;10}"/>
+		<cn nm="top" val="{307;729}"/>
+		<cn nm="top-inside" val="{287;694}"/>
+		<cn nm="bar-bottom-left" val="{33;389}"/>
+		<setvs axis="y"/>
+		<mv di="baseline" p="serif-bottom">
+			<sh p="vertical-bottom"/>
+			<mv di="lc-serif" col="b" p="(serif-bottom + 1)"/>
+		</mv>
+		<mv di="lc-ascender-top-overshoot" p="top">
+			<mv di="lc-round-stem" col="b" p="top-inside"/>
+		</mv>
+		<ip r="serif-bottom top" p="bar-bottom-left"/>
+		<callm nm="round-point">
+			p: bar-bottom-left
+		</callm>
+		<iup axis="y"/>
+	</gl>
+
+	<gl pnm="longs.llongsrij">
+		<cn nm="serif-bottom" val="{33;0}"/>
+		<cn nm="vertical-bottom" val="{92;10}"/>
+		<cn nm="top" val="{307;729}"/>
+		<cn nm="top-inside" val="{287;694}"/>
+		<cn nm="bar-bottom-left" val="{33;389}"/>
+		<setvs axis="y"/>
+		<mv di="baseline" p="serif-bottom">
+			<sh p="vertical-bottom"/>
+			<mv di="lc-serif" col="b" p="(serif-bottom + 1)"/>
+		</mv>
+		<mv di="lc-ascender-top-overshoot" p="top">
+			<mv di="lc-round-stem" col="b" p="top-inside"/>
+		</mv>
+		<ip r="serif-bottom top" p="bar-bottom-left"/>
+		<callm nm="round-point">
+			p: bar-bottom-left
+		</callm>
+		<iup axis="y"/>
+	</gl>
+
+	<gl pnm="longs.llongsrtall">
+		<cn nm="serif-bottom" val="{33;0}"/>
+		<cn nm="vertical-bottom" val="{92;10}"/>
+		<cn nm="top" val="{307;729}"/>
+		<cn nm="top-inside" val="{287;694}"/>
+		<cn nm="bar-bottom-left" val="{33;389}"/>
+		<setvs axis="y"/>
+		<mv di="baseline" p="serif-bottom">
+			<sh p="vertical-bottom"/>
+			<mv di="lc-serif" col="b" p="(serif-bottom + 1)"/>
+		</mv>
+		<mv di="lc-ascender-top-overshoot" p="top">
+			<mv di="lc-round-stem" col="b" p="top-inside"/>
+		</mv>
+		<ip r="serif-bottom top" p="bar-bottom-left"/>
+		<callm nm="round-point">
+			p: bar-bottom-left
+		</callm>
+		<iup axis="y"/>
+	</gl>
+
+	<gl pnm="longs.rij">
+		<cn nm="serif-bottom" val="{33;0}"/>
+		<cn nm="vertical-bottom" val="{92;10}"/>
+		<cn nm="top" val="{307;729}"/>
+		<cn nm="top-inside" val="{287;694}"/>
+		<cn nm="bar-bottom-left" val="{33;389}"/>
+		<setvs axis="y"/>
+		<mv di="baseline" p="serif-bottom">
+			<sh p="vertical-bottom"/>
+			<mv di="lc-serif" col="b" p="(serif-bottom + 1)"/>
+		</mv>
+		<mv di="lc-ascender-top-overshoot" p="top">
+			<mv di="lc-round-stem" col="b" p="top-inside"/>
+		</mv>
+		<ip r="serif-bottom top" p="bar-bottom-left"/>
+		<callm nm="round-point">
+			p: bar-bottom-left
+		</callm>
+		<iup axis="y"/>
+	</gl>
+
+	<gl pnm="longs.rlongs">
+		<cn nm="serif-bottom" val="{33;0}"/>
+		<cn nm="vertical-bottom" val="{92;10}"/>
+		<cn nm="top" val="{307;709}"/>
+		<cn nm="top-inside" val="{298;675}"/>
+		<cn nm="bar-bottom-left" val="{33;389}"/>
+		<setvs axis="y"/>
+		<mv di="baseline" p="serif-bottom">
+			<sh p="vertical-bottom"/>
+			<mv di="lc-serif" col="b" p="(serif-bottom + 1)"/>
+		</mv>
+		<mv p="top">
+			<mv di="lc-round-stem" col="b" p="top-inside"/>
+		</mv>
+		<ip r="serif-bottom top" p="bar-bottom-left"/>
+		<callm nm="round-point">
+			p: bar-bottom-left
+		</callm>
+		<iup axis="y"/>
+	</gl>
+
+	<gl pnm="longs.rtall">
+		<cn nm="serif-bottom" val="{33;0}"/>
+		<cn nm="vertical-bottom" val="{92;10}"/>
+		<cn nm="top" val="{307;729}"/>
+		<cn nm="top-inside" val="{287;694}"/>
+		<cn nm="bar-bottom-left" val="{33;389}"/>
+		<setvs axis="y"/>
+		<mv di="baseline" p="serif-bottom">
+			<sh p="vertical-bottom"/>
+			<mv di="lc-serif" col="b" p="(serif-bottom + 1)"/>
+		</mv>
+		<mv di="lc-ascender-top-overshoot" p="top">
+			<mv di="lc-round-stem" col="b" p="top-inside"/>
+		</mv>
+		<ip r="serif-bottom top" p="bar-bottom-left"/>
+		<callm nm="round-point">
+			p: bar-bottom-left
+		</callm>
+		<iup axis="y"/>
+	</gl>
+
+	<gl pnm="b.lf">
+    <cn nm="top" val="{142;726}"/>
+    <cn nm="bowl-top" val="{289;446}"/>
+    <cn nm="bowl-top-inside" val="{261;411}"/>
+    <cn nm="bottom" val="{282;-11}"/>
+    <cn nm="bottom-inside" val="{277;21}"/>
+    <cn nm="stem-bot" val="{111;-15}"/>
+    <setvs axis="y"/>
+		<mv di="lc-ascender-top" p="top"/>
+    <callm nm="lc-bowl">
+      t: bowl-top, t-ins: bowl-top-inside, b: bottom, b-ins: bottom-inside
+    </callm>
+    <callm nm="shift-rel">
+      p: stem-bot, r: bottom
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+	<gl pnm="h.lf">
+    <cn nm="top" val="{142;726}"/>
+    <cn nm="counter-top" val="{352;446}"/>
+    <cn nm="counter-top-inside" val="{312;397}"/>
+    <cn nm="serif-bottom" val="{22;0}"/>
+    <cn nm="serif-top-left" val="{22;25}"/>
+    <setvs axis="y"/>
+		<mv di="lc-ascender-top" p="top"/>
+    <callm nm="lc-horz-stroke">
+      pt1: counter-top, pt2: counter-top-inside, cv: xheight-overshoot
+    </callm>
+    <callm nm="lc-bottom-serif">
+      <wpm nm="bottom-left" val="serif-bottom"/>
+      <wpm nm="top-left" val="serif-top-left"/>
+      <wpm nm="codefrag">
+        <sh r="serif-top-left" p="{327;25}"/>
+        <sh r="serif-bottom" p="{81;15} {327;0} {385;10}"/>
+      </wpm>
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+	<gl pnm="i.lf">
+		<pm nm="offset" val="0"/>
+		<pm nm="do-iup" val="0"/>
+		<cn nm="top" val="{151;446}"/>
+		<cn nm="serif-bottom" val="{31;0}"/>
+		<setvs axis="y"/>
+		<callm nm="minim-top">
+			top: top
+		</callm>
+		<callm nm="lc-bottom-serif">
+			<wpm nm="bottom-left" val="serif-bottom"/>
+			<wpm nm="top-left" val="serif-bottom + 1"/>
+			<wpm nm="codefrag">
+				<sh r="(serif-bottom + 1)" p="(serif-bottom + 2) (serif-bottom + 14) (serif-bottom + 15)"/>
+			</wpm>
+		</callm>
+		<compile-if test="do-iup = 0">
+			<iup axis="y"/>
+		</compile-if>
+	</gl>
+
+	<gl pnm="j.lf">
+    <cn nm="top" val="{150;446}"/>
+    <cn nm="bottom" val="{39;-245}"/>
+    <cn nm="bottom1" val="{55;-202}"/>
+    <setvs axis="y"/>
+    <callm nm="minim-top">
+      top: top
+    </callm>
+    <mv di="lc-descender" p="bottom">
+      <mv p="bottom1"/>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+	<gl pnm="k.lf">
+    <cn nm="top" val="{142;726}"/>
+    <cn nm="serif-bottom" val="{22;0}"/>
+    <cn nm="serif-top" val="{22;25}"/>
+    <cn nm="serif-top2" val="{290;25}"/>
+    <cn nm="serif-bottom2" val="{290;0}"/>
+    <cn nm="vert-bot" val="{81;10}"/>
+    <cn nm="diag-bot" val="{375;10}"/>
+    <cn nm="xh" val="{271;435}"/>
+    <cn nm="diag-top" val="{429;425}"/>
+    <cn nm="mid-top" val="{142;246}"/>
+    <cn nm="mid-bottom" val="{142;209}"/>
+    <cn nm="mid-mid" val="{231;226}"/>
+    <setvs axis="y"/>
+		<mv di="lc-ascender-top" p="top"/>
+    <callm nm="lc-bottom-serif">
+      <wpm nm="bottom-left" val="serif-bottom"/>
+      <wpm nm="top-left" val="serif-top"/>
+      <wpm nm="codefrag">
+        <sh r="serif-bottom" p="serif-bottom2 vert-bot diag-bot"/>
+        <sh r="serif-top" p="serif-top2"/>
+      </wpm>
+    </callm>
+    <mv di="xheight" p="xh">
+      <sh p="diag-top"/>
+      <mv di="lc-serif" col="b" p="(xh - 1)"/>
+    </mv>
+    <ip r="xh serif-bottom" p="mid-top mid-mid"/>
+    <push>mid-bottom mid-top</push>
+    <command nm="MDAP" modifier="1"/>
+    <command nm="MDRP"/>
+    <iup axis="y"/>
+  </gl>
+
+	<gl pnm="l.lf">
+		<pm nm="do-iup" val="0"/>
+		<pm nm="serif-bottom" val="{22;0}"/>
+		<pm nm="vertical-bottom" val="{81;10}"/>
+		<pm nm="top" val="{142;726}"/>
+		<setvs axis="y"/>
+		<callm nm="lc-bottom-serif">
+			<wpm nm="bottom-left" val="serif-bottom"/>
+			<wpm nm="top-left" val="serif-bottom + 1"/>
+			<wpm nm="codefrag">
+				<sh r="serif-bottom" p="vertical-bottom"/>
+			</wpm>
+		</callm>
+		<mv di="lc-ascender-top" p="top"/>
+		<compile-if test="do-iup = 0">
+			<iup axis="y"/>
+		</compile-if>
+	</gl>
+
+	<gl pnm="thorn.lf">
+    <cn nm="top" val="{142;726}"/>
+    <cn nm="serif-bottom" val="{17;-245}"/>
+    <cn nm="stem-bottom" val="{81;-235}"/>
+    <cn nm="bowl-top" val="{288;446}"/>
+    <cn nm="bowl-top-ins" val="{241;388}"/>
+    <cn nm="bowl-bottom" val="{268;-12}"/>
+    <cn nm="bowl-bottom-ins" val="{252;12}"/>
+    <setvs axis="y"/>
+		<mv di="lc-ascender-top" p="top"/>
+    <callm nm="lc-bottom-serif">
+      <wpm nm="bottom-left" val="serif-bottom"/>
+      <wpm nm="top-left" val="serif-bottom + 1"/>
+      <wpm nm="cv" val="lc-descender"/>
+      <wpm nm="codefrag">
+        <sh r="serif-bottom" p="stem-bottom"/>
+      </wpm>
+    </callm>
+    <callm nm="lc-horz-stroke">
+      pt1: bowl-top, pt2: bowl-top-ins, cv: xheight-overshoot
+    </callm>
+    <callm nm="lc-horz-stroke-cv">
+      pt1: bowl-bottom, pt2: bowl-bottom-ins, cv: baseline-undershoot, cv-h: lc-round-stem
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+	<gl pnm="thorn.loclENG.lf">
+    <cn nm="top" val="{142;726}"/>
+    <cn nm="stem-bottom" val="{40;-245}"/>
+    <cn nm="bowl-top" val="{273;446}"/>
+    <cn nm="bowl-top-ins" val="{252;418}"/>
+    <cn nm="bowl-bottom" val="{132;-10}"/>
+    <cn nm="bowl-bottom-ins" val="{141;20}"/>
+    <setvs axis="y"/>
+		<mv di="lc-ascender-top" p="top"/>
+    <mv di="lc-descender" p="stem-bottom"/>
+    <callm nm="lc-horz-stroke-cv">
+      pt1: bowl-top, pt2: bowl-top-ins, cv: xheight-overshoot, cv-h: lc-round-stem
+    </callm>
+    <callm nm="lc-horz-stroke-cv">
+      pt1: bowl-bottom, pt2: bowl-bottom-ins, cv: baseline-undershoot, cv-h: lc-round-stem
+    </callm>
+    <iup axis="y"/>
+  </gl>
+
+	<!-- ligatures -->
+
   <gl pnm="f_j">
     <cn nm="f-bar-top" val="22"/>
     <cn nm="f-bar-bot" val="25"/>
@@ -10826,6 +11383,7 @@ type="application/relax-ng-compact-syntax"?>
     <iup axis="y"/>
   </gl>
 
+<!--
   <gl pnm="uniFB00">
     <setvs axis="y"/>
     <callm nm="f-lig">
@@ -10932,7 +11490,7 @@ type="application/relax-ng-compact-syntax"?>
     <mv di="lc-ascender-top" p="l-top"/>
     <iup axis="y"/>
   </gl>
-
+-->
   <gl pnm="f_thorn.loclENG">
     <cn nm="top" val="{432;726}"/>
     <cn nm="stem-bottom" val="{330;-263}"/>
@@ -10977,10 +11535,10 @@ type="application/relax-ng-compact-syntax"?>
 	</gl>
 
 	<gl pnm="p_p.hlig" assume-y="yes">
-		<cn nm="stem-top" val="{149;446}"/>
-		<cn nm="top-bowl-top" val="{311;446}"/>
-		<cn nm="bot-bowl-bot" val="{281;-128}"/>
-		<cn nm="stem-bottom" val="{165;-235}"/>
+		<cn nm="stem-top" val="{149;510}"/>
+		<cn nm="top-bowl-top" val="{311;510}"/>
+		<cn nm="bot-bowl-bot" val="{281;-64}"/>
+		<cn nm="stem-bottom" val="{88;-235}"/>
     <cn nm="serif-bottom" val="{30;-245}"/>
 		<callm nm="minim-top">
       top: stem-top
@@ -10988,7 +11546,7 @@ type="application/relax-ng-compact-syntax"?>
 		<sh r="stem-top" p="top-bowl-top"/>
 		<mv p="top-bowl-top"/>
 		<mv p="bot-bowl-bot"/>
-		<ip r="top-bowl-top bot-bowl-bot" p="{311;147} {271;89} {275;-104} {271;388} {275;195} {281;171}"/>
+		<ip r="top-bowl-top bot-bowl-bot" p="{311;211} {271;153} {275;-40} {271;452} {275;259} {281;235}"/>
 		<mv di="lc-descender" p="serif-bottom">
       <mv di="lc-serif" col="b" p="(serif-bottom + 1)">
         <sh p="stem-bottom"/>
@@ -11324,7 +11882,7 @@ type="application/relax-ng-compact-syntax"?>
     </callm>
     <iup axis="y"/>
   </gl>
-
+<!--
   <gl pnm="longs_b">
     <cn nm="top" val="{312;726}"/>
     <cn nm="bowl-top" val="{566;446}"/>
@@ -11508,7 +12066,7 @@ type="application/relax-ng-compact-syntax"?>
     <mv di="lc-ascender-top" p="top"/>
     <iup axis="y"/>
   </gl>
-
+-->
   <gl pnm="uniFB05">
     <cn nm="longs-top" val="33"/>
     <cn nm="bar-top" val="37"/>
