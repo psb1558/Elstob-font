@@ -836,7 +836,7 @@ type="application/relax-ng-compact-syntax"?>
 
 	<gl pnm="uniA7D3" assume-y="yes"> <!-- double thorn -->
 		<cn nm="top" val="{142;726}"/>
-		<cn nm="bot" val="{45;-245}"/>
+		<cn nm="bot" val="{46;-245}"/>
 		<cn nm="bot-loop-bot" val="{140;-42}"/>
 		<cn nm="bot-loop-top" val="{287;276}"/>
 		<cn nm="top-loop-bot" val="{280;264}"/>
@@ -1200,8 +1200,8 @@ type="application/relax-ng-compact-syntax"?>
     <cn nm="bowl-top-inside" val="{249;388}"/>
     <cn nm="bowl-bottom" val="{276;-12}"/>
     <cn nm="bowl-bottom-inside" val="{260;12}"/>
-    <cn nm="stem-top" val="{149;446}"/>
-    <cn nm="stem-bottom" val="{88;-235}"/>
+    <cn nm="stem-top" val="{150;446}"/>
+    <cn nm="stem-bottom" val="{84;-235}"/>
     <cn nm="serif-bottom" val="{30;-245}"/>
     <setvs axis="y"/>
     <callm nm="minim-top">
@@ -1227,7 +1227,7 @@ type="application/relax-ng-compact-syntax"?>
     <cn nm="bowl-bottom-inside" val="{270;16}"/>
     <cn nm="serif-bottom" val="{315;-245}"/>
     <cn nm="stem-top" val="{448;448}"/>
-    <cn nm="stem-bottom" val="{379;-235}"/>
+    <cn nm="stem-bottom" val="{371;-235}"/>
     <setvs axis="y"/>
     <callm nm="lc-horz-stroke-cv">
       pt1: bowl-top, pt2: bowl-top-inside, cv: xheight-overshoot, cv-h: lc-round-stem
@@ -1254,7 +1254,7 @@ type="application/relax-ng-compact-syntax"?>
     <cn nm="bowl-bottom-inside" val="{270;16}"/>
     <cn nm="serif-bottom" val="{315;-245}"/>
     <cn nm="stem-top" val="{448;448}"/>
-    <cn nm="stem-bottom" val="{379;-235}"/>
+    <cn nm="stem-bottom" val="{371;-235}"/>
     <callm nm="lc-horz-stroke-cv">
       pt1: bowl-top, pt2: bowl-top-inside, cv: xheight-overshoot, cv-h: lc-round-stem
     </callm>
@@ -1318,9 +1318,9 @@ type="application/relax-ng-compact-syntax"?>
 
   <gl pnm="t">
     <cn nm="top" val="{138;546}"/>
-    <cn nm="bar-top" val="{163;433}"/>
-    <cn nm="bar-bottom1" val="{163;389}"/>
-    <cn nm="bar-bottom2" val="{86;389}"/>
+    <cn nm="bar-top" val="{152;433}"/>
+    <cn nm="bar-bottom1" val="{152;389}"/>
+    <cn nm="bar-bottom2" val="{89;389}"/>
     <cn nm="bottom" val="{199;-12}"/>
     <cn nm="bottom-ins" val="{233;36}"/>
     <setvs axis="y"/>
@@ -1509,7 +1509,7 @@ type="application/relax-ng-compact-syntax"?>
   <gl pnm="thorn">
     <cn nm="top" val="{143;726}"/>
     <cn nm="serif-bottom" val="{18;-245}"/>
-    <cn nm="stem-bottom" val="{82;-235}"/>
+    <cn nm="stem-bottom" val="{78;-235}"/>
     <cn nm="bowl-top" val="{289;446}"/>
     <cn nm="bowl-top-ins" val="{242;388}"/>
     <cn nm="bowl-bottom" val="{269;-12}"/>
@@ -1567,12 +1567,12 @@ type="application/relax-ng-compact-syntax"?>
   </gl>
 
   <gl pnm="thorn.loclENG">
-    <cn nm="top" val="8"/>
-    <cn nm="stem-bottom" val="0"/>
-    <cn nm="bowl-top" val="30"/>
-    <cn nm="bowl-top-ins" val="24"/>
-    <cn nm="bowl-bottom" val="15"/>
-    <cn nm="bowl-bottom-ins" val="16"/>
+    <cn nm="top" val="{142;726}"/>
+    <cn nm="stem-bottom" val="{40;-245}"/>
+    <cn nm="bowl-top" val="{273;446}"/>
+    <cn nm="bowl-top-ins" val="{252;418}"/>
+    <cn nm="bowl-bottom" val="{132;-10}"/>
+    <cn nm="bowl-bottom-ins" val="{141;20}"/>
     <setvs axis="y"/>
     <callm nm="ascender-top">
       top: top
@@ -1588,12 +1588,12 @@ type="application/relax-ng-compact-syntax"?>
   </gl>
 
   <gl pnm="uni01BF"> <!-- wynn -->
-    <cn nm="top" val="{142;446}"/>
-    <cn nm="stem-bottom" val="{45;-245}"/>
-    <cn nm="bowl-top" val="{287;446}"/>
-    <cn nm="bowl-top-ins" val="{259;418}"/>
-    <cn nm="bowl-bottom" val="{140;-12}"/>
-    <cn nm="bowl-bottom-ins" val="{149;24}"/>
+    <cn nm="top" val="{148;446}"/>
+    <cn nm="stem-bottom" val="{46;-245}"/>
+    <cn nm="bowl-top" val="{293;446}"/>
+    <cn nm="bowl-top-ins" val="{265;418}"/>
+    <cn nm="bowl-bottom" val="{146;-12}"/>
+    <cn nm="bowl-bottom-ins" val="{155;24}"/>
     <setvs axis="y"/>
     <callm nm="minim-top">
       top: top
@@ -3492,7 +3492,7 @@ type="application/relax-ng-compact-syntax"?>
     <cn nm="bowl-top" val="{417;446}"/>
     <cn nm="bowl-top-ins" val="{390;403}"/>
     <cn nm="serif" val="{146;-245}"/>
-    <cn nm="stem-bot" val="{210;-235}"/>
+    <cn nm="stem-bot" val="{207;-235}"/>
     <cn nm="bar-top-a" val="{287;44}"/>
     <cn nm="bar-top-b" val="{210;44}"/>
     <cn nm="bar-bot-a" val="{287;8}"/>
@@ -3576,13 +3576,13 @@ type="application/relax-ng-compact-syntax"?>
   </gl>
 
   <gl pnm="uniA77C">
-    <cn nm="stem-top" val="{142;446}"/>
-    <cn nm="arm-top" val="{341;446}"/>
-    <cn nm="arm-ins-a" val="{303;372}"/>
-    <cn nm="arm-ins-b" val="{360;339}"/>
-    <cn nm="bar-a" val="{143;30}"/>
-    <cn nm="bar-b" val="{143;0}"/>
-    <cn nm="stem-bot" val="{45;-245}"/>
+    <cn nm="stem-top" val="{148;446}"/>
+    <cn nm="arm-top" val="{347;446}"/>
+    <cn nm="arm-ins-a" val="{309;372}"/>
+    <cn nm="arm-ins-b" val="{366;339}"/>
+    <cn nm="bar-a" val="{344;30}"/>
+    <cn nm="bar-b" val="{344;0}"/>
+    <cn nm="stem-bot" val="{46;-245}"/>
     <setvs axis="y"/>
     <callm nm="minim-top">
       top: stem-top
@@ -3601,12 +3601,12 @@ type="application/relax-ng-compact-syntax"?>
   </gl>
 
   <gl pnm="uniA783">
-    <cn nm="stem-top" val="31"/>
-    <cn nm="bow" val="15"/>
-    <cn nm="bow-ins" val="8"/>
-    <cn nm="stem-bot" val="23"/>
-    <cn nm="right-stem-bot" val="0"/>
-    <cn nm="right-serif" val="38"/>
+    <cn nm="stem-top" val="{148;446}"/>
+    <cn nm="bow" val="{357;446}"/>
+    <cn nm="bow-ins" val="{317;397}"/>
+    <cn nm="stem-bot" val="{46;-245}"/>
+    <cn nm="right-stem-bot" val="{390;-1}"/>
+    <cn nm="right-serif" val="{348;-38}"/>
     <setvs axis="y"/>
     <push>stem-bot lc-descender bow-ins bow stem-top xheight-overshoot</push>
     <command nm="MIAP" modifier="1"/>
@@ -3619,12 +3619,12 @@ type="application/relax-ng-compact-syntax"?>
     <iup axis="y"/>
   </gl>
 
-  <gl pnm="uniA785">
+  <gl pnm="uniA785" xoffset="6">
     <cn nm="stem-top" val="{142;446}"/>
     <cn nm="arm-top" val="{307;446}"/>
     <cn nm="arm-ins-a" val="{268;372}"/>
     <cn nm="arm-ins-b" val="{326;339}"/>
-    <cn nm="stem-bot" val="{45;-245}"/>
+    <cn nm="stem-bot" val="{40;-245}"/>
     <setvs axis="y"/>
     <callm nm="minim-top">
       top: stem-top
@@ -7198,13 +7198,13 @@ type="application/relax-ng-compact-syntax"?>
   </gl>
 
   <gl pnm="uni0265">
-    <cn nm="bot" val="0"/>
-    <cn nm="bot-ins" val="15"/>
-    <cn nm="desc" val="22"/>
-    <cn nm="lower-serif-end" val="32"/>
+    <cn nm="bot" val="{191;-11}"/>
+    <cn nm="bot-ins" val="{231;38}"/>
+    <cn nm="desc" val="{401;-245}"/>
+    <cn nm="lower-serif-end" val="{513;-209}"/>
     <setvs axis="y"/>
     <callm nm="lc-dbl-serif">
-      first-left: 35, second-left: 34, first-right: 40, second-right: 39, stem1: 7, stem2: 27, cv: xheight
+      first-left: {21;435}, second-left: {21;410}, first-right: {326;435}, second-right: {326;410}, stem1: {159;425}, stem2: {386;420}, cv: xheight
     </callm>
     <mv di="baseline-undershoot" p="bot">
       <mv p="bot-ins"/>
@@ -8369,7 +8369,7 @@ type="application/relax-ng-compact-syntax"?>
 
   <gl pnm="uni02A0">
     <cn nm="serif" val="{315;-245}"/>
-    <cn nm="stem-bot" val="{379;-235}"/>
+    <cn nm="stem-bot" val="{371;-235}"/>
     <cn nm="bowl-top" val="{265;446}"/>
     <cn nm="bowl-top-ins" val="{263;418}"/>
     <cn nm="bowl-bot" val="{257;-12}"/>
@@ -8684,14 +8684,14 @@ type="application/relax-ng-compact-syntax"?>
 
   <gl pnm="uni02AE">
     <setvs axis="y"/>
-    <mv di="lc-descender" p="{491;-245}">
+    <mv di="lc-descender" p="{490;-245}">
       <sh p="15 14"/>
     </mv>
     <mv di="baseline-undershoot" p="{288;-11}">
       <mv col="b" p="{327;38}"/>
     </mv>
     <callm nm="serif-sh">
-      pt-a: {417;435}, pt-b: {417;410}, sh-a: {476;425}, cv: xheight, cv-h: lc-serif
+      pt-a: {417;435}, pt-b: {417;410}, sh-a: {475;420}, cv: xheight, cv-h: lc-serif
     </callm>
     <callm nm="hook">
       init: {75;446}, cv: xheight-overshoot, sh: {61;346}, mv: {75;446}
@@ -11218,7 +11218,7 @@ type="application/relax-ng-compact-syntax"?>
 	<gl pnm="thorn.lf">
     <cn nm="top" val="{142;726}"/>
     <cn nm="serif-bottom" val="{17;-245}"/>
-    <cn nm="stem-bottom" val="{81;-235}"/>
+    <cn nm="stem-bottom" val="{77;-235}"/>
     <cn nm="bowl-top" val="{288;446}"/>
     <cn nm="bowl-top-ins" val="{241;388}"/>
     <cn nm="bowl-bottom" val="{268;-12}"/>
@@ -11515,16 +11515,18 @@ type="application/relax-ng-compact-syntax"?>
   </gl>
 
 	<gl pnm="h_h.hlig" assume-y="yes">
+		<cn nm="stem-top" val="{148;726}"/>
 		<cn nm="top-top" val="{345;626}"/>
 		<cn nm="bot-top" val="{358;326}"/>
 		<cn nm="serif-bot" val="{28;0}"/>
 		<cn nm="top-serif-bot" val="{313;360}"/>
+		<mv di="lc-ascender-top" p="stem-top"/>
 		<mv p="top-top">
 			<mv p="{304;577}"/>
 		</mv>
 		<callm nm="lc-dbl-serif">
 			first-left: serif-bot, second-left: {28;25}, first-right: {333;0},
-			second-right: {333;25}, stem1: {87;15}, stem2: {391;10}
+			second-right: {333;25}, stem1: {87;10}, stem2: {391;10}
 		</callm>
 		<ip r="top-top serif-bot" p="top-serif-bot"/>
 		<mv p="top-serif-bot">
