@@ -15,6 +15,8 @@ fontname="nofont"
 
 instanceScript="del_instances_vf.xsl"
 
+hintoption="-a"
+
 autohint=0
 
 createwoff=0
@@ -55,6 +57,7 @@ do
     elif [ $arg == "-n" ]
     then
      autohint=-1
+     hintoption="-A"
     elif [ $arg == "-w" ]
     then
   	createwoff=1
@@ -111,7 +114,13 @@ fi
 # If this line fails, maybe you need sed instead of gsed. But in any case you need
 # Gnu sed.
 
-familyname=`gsed -n '1,/<source.*familyname/s/.*familyname="\([^"]*\)"[^\n]*/\1/p' $des`
+sedcmd="sed"
+if command -v gsed &> /dev/null
+then
+  sedcmd="gsed"
+fi
+
+familyname=`{$sedcmd} -n '1,/<source.*familyname/s/.*familyname="\([^"]*\)"[^\n]*/\1/p' $des`
 echo "Building font(s) with family name \"${familyname}\""
 
 # Every glyph with a "us" anchor also needs a "_us" anchor or fontmake (glyphsLib,
@@ -120,9 +129,9 @@ echo "Building font(s) with family name \"${familyname}\""
 # anchors causing problems (though I don't know that it has). As it is easy to
 # strip the extraneous anchors out of the UFO, it's best that we do so.
 
-Echo "Removing extraneous anchors"
+echo "Removing extraneous anchors"
 
-for u in `gsed -n '/<source.*filename/s/.*filename="\([^"]*\)"[^\n]*/\1/p' $des`
+for u in `{$sedcmd} -n '/<source.*filename/s/.*filename="\([^"]*\)"[^\n]*/\1/p' $des`
 do
     for fff in `grep -l "anchor.*\"_us\"" master_ufo/$u/glyphs/*.glif`
     do
@@ -185,7 +194,7 @@ then
 
   echo "Running fontmake to build static TrueType instances"
 
-  fontmake -o ttf -a -i -m $des
+  fontmake -o ttf $hintoption -i -m $des
   if [ $? -ne 0 ]
   then
     echo "fontmake failed"
@@ -208,6 +217,7 @@ then
     done
   fi
   cd ../..
+  rm -fr master_ufo
 
 # Next CFF OpenType fonts, largely duplicating the moves for static TrueType.
 
@@ -237,6 +247,7 @@ then
     done
   fi
   cd ..
+  rm -fr master_ufo
 
 # Finally a variable font. We only build the TrueType flavor, since that seems
 # to work everywhere.
@@ -291,7 +302,7 @@ else
   elif [ $autohint -ne -1 ]
   then
     echo "Running Xgridfit"
-    xgridfit -i "${fontname}-VF-withSTAT.ttf" -o "${fontname}.ttf" "xgf/Elstob-${fonttype}-all.xgf"
+    xgridfit -q -i "${fontname}-VF-withSTAT.ttf" -o "${fontname}.ttf" "xgf/Elstob-${fonttype}-all.xgf"
     if [ $? -ne 0 ]
     then
       echo "Failed to hint with Xgridfit."
@@ -308,8 +319,7 @@ else
   fi
   echo "Cleaning up"
   rm -f ${fontname}-VF.ttf
-#  rm -f tmp-font.ttf
-  echo "${fontname}-VF-withSTAT.ttf"
   rm -f "${fontname}-VF-withSTAT.ttf"
-#  rm -f "${fontname}-hinted.ttf"
+  rm -fr master_ufo
+  rm -fr variable_ttf
 fi
