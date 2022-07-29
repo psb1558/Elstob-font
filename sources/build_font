@@ -35,7 +35,7 @@ do
       echo "  -t Builds static TrueType fonts instead of a variable font"
       echo "  -o Builds static CFF fonts instead of a variable font"
       echo "  -a Autohint the variable font with ttfautohint-vf"
-      echo "  -n Do not hint the variable font"
+      echo "  -n Do not hint TrueType fonts"
       echo "  -i Generate a shorter collection of instances"
       echo "  -w Create a woff2 version of the variable font"
       echo ""
