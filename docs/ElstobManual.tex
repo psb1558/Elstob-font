@@ -40,7 +40,7 @@ Some static font families come packaged in more than four files and provide both
 stylistic axes and more positions on these axes.
 
 The static version of Elstob (ElstobD, where the D stands for “Desktop”) consists
-of forty-eight files (don't panic---you're not required to install them all) and
+of forty-eight files (don’t panic---you’re not required to install them all) and
 has three stylistic
 axes: \textbf{Roman--Italic}, \textbf{Weight}, and \textbf{Optical Size}. The
 weights are {\extralight ExtraLight}, {\light Light}, Regular, {\medium Medium},
@@ -65,11 +65,11 @@ runs from {\extralight 200 Extra Light} to {\extrabold 800 Extra Bold}. You
 can choose either of those, or one of the other standard weights: {\light 300} for
 {\light Light}, 400 for Regular, {\medium 500} for {\medium Medium},
 {\semibold 600} for {\semibold SemiBold}, or \textbf{700} for \textbf{Bold}.
-Or you can, if you're so minded, choose {\oddball an oddball weight like
+Or you can, if you’re so minded, choose {\oddball an oddball weight like
 523.45}.
 
-In addition to the \textbf{Weight} axis, Elstob has two others, \textbf{Optical
-Size} and \textbf{Grade}, and the italic face has one more, \textbf{Slant}.
+In addition to the \textbf{Weight} axis, Elstob has three others, \textbf{Optical
+Size}, \textbf{Grade}, and \textbf{Spacing}, and the italic face has one more, \textbf{Slant}.
 \textbf{Optical Size} works the same in the variable version as it does in the
 static version, but you are not limited to five optical sizes, so you can tune
 your type more closely to the size of your text. This axis runs from 6 to
@@ -83,10 +83,17 @@ their widths. This can be useful in web pages, where dynamically changing the
 \textbf{Weight} axis (for example, on mouseover) may cause text to reflow annoyingly. Grade will
 not generally be useful in printed documents.
 
+\textbf{Spacing} (0--1) increases the width of the space character and a few
+related characters (such as non-breaking space). A value of zero (the default)
+produces the original spacing of this font. A value of one produces the wider
+spacing typical of documents printed in the nineteenth century and earlier.
+Use this axis with ss18 (“Old-style punctuation spacing”) to adhere closely to
+the complex system of spacing typical of the era of metal type.
+
 \textbf{Slant} (0--15) varies
 the slant of the italic from {\italslanted 0 steeply slanted} to {\italupright
 15 nearly upright}. The slant of the static fonts is
-equivalent to \textit{a Slant of 8 in the variable font}.
+equivalent to \textit{a Slant of 6 in the variable font}.
 
 The values of the various axes can be combined in any way you like. You will find,
 however, that some combinations are problematic or inadvisable. For example,
@@ -99,7 +106,7 @@ is not unexpected that, in a three- or four-dimensional design space, some posit
 will be less than optimal: experiment with the Elstob specimen page to find the
 styles you like.
 
-When beginning a project with Elstob, consider whether the software you're using
+When beginning a project with Elstob, consider whether the software you’re using
 has adequate support for variable fonts. If not, use the static version.
 All of the major web browsers support variable fonts, which you can control via
 CSS. The major programs of the Adobe Creative Suite also support variable fonts,
@@ -115,7 +122,7 @@ the basic International Phonetic Alphabet and the most commonly used
 mathematical symbols. Version 2 includes many stylistic revisions and a few new
 characters, especially letters and diacritics from the \textit{Ormulum},
 recently added to Unicode. The OpenType features of the font have been revised
-to match as closely as possible those of the developer's Junicode font.
+to match as closely as possible those of the developer’s Junicode font.
 Unnecessary or redundant features have been removed, and technical changes have
 been made to improve accessibility.\pagebreak
 
@@ -168,7 +175,7 @@ Vnnderr kanunnkess had.
 
 \section{Early Modern English (Light Italic)}
 
-\textit{\large\itallight\addfontfeature{StylisticSet=8,Language=English}When the right vertuous E.W. and I were at the Emperours Court togither, wee gave our selves to learne horsemanship of Jon Pietro Pugliano, one that with great commendation had the place of an Esquire in his stable: and hee according to the fertilnes of the Italian wit, did not onely affoord us the demonstration of his practise, but sought to enrich our \mbox{mindes} with the contemplations therein, which he thought most precious. But with none I remember mine eares were at any time more loaden, then when (either angred with slow paiment, or mooved with our learnerlike admiration) hee exercised his speech in the praise of his facultie.}
+\textit{\large\itallight\addfontfeature{StylisticSet=8,Language=English}When the right vertuous E.W. and I were at the Emperours Court to\-gither, wee gave our selves to learne horsemanship of Jon Pietro Pugliano, one that with great commendation had the place of an Esquire in his stable: and hee according to the fertilnes of the Italian wit, did not onely affoord us the demonstration of his practise, but sought to enrich our \mbox{mindes} with the contemplations therein, which he thought most precious. But with none I remember mine eares were at any time more loaden, then when (either angred with slow paiment, or mooved with our learnerlike admiration) hee exercised his speech in the praise of his facultie.}
 
 \section{Latin (Italic)}
 
@@ -180,7 +187,7 @@ Vnnderr kanunnkess had.
 
 \section{Gothic (Medium Italic, Maximum Slant)}
 
-{\italslantedmedium\large Warþ þan in dagans jainans, urrann gagrefts fram kaisara Agustau, gameljan allana midjungard. soh þan gilstrameleins frumista warþ at wisandin kindina Swriais raginondin Saurim Kwreinaiau. jah iddjedun allai, ei melidai weseina, ƕarjizuh in seinai baurg. Urrann þan jah Iosef us Galeilaia, us baurg Nazaraiþ, in Iudaian, in baurg Daweidis sei haitada Beþlaihaim, duþe ei was us garda fadreinais Daweidis, anameljan miþ Mariin sei in fragiftim was imma qeins, wisandein inkilþon. iocoi oicio}
+{\italslantedmedium\large Warþ þan in dagans jainans, urrann gagrefts fram kaisara Agustau, gameljan allana midjungard. soh þan gilstrameleins frumista warþ at wisandin kindina Swriais raginondin Saurim Kwreinaiau. jah iddjedun allai, ei melidai weseina, ƕarjizuh in seinai baurg. Urrann þan jah Iosef us Galeilaia, us baurg Nazaraiþ, in Iudaian, in baurg Daweidis sei haitada Beþlaihaim, duþe ei was us garda fadreinais Daweidis, anameljan miþ Mariin sei in fragiftim was imma qeins, wisandein inkilþon.}
 
 
 
@@ -190,11 +197,11 @@ OpenType is the format employed by most modern fonts. It enables such technical
 wizardry as ligatures, kerning, and several kinds of variation. OpenType features,
 when they can be controlled by users, can be selected via four-character tags.
 Some applications offer more access to these features than others. The major web browsers
-support all of Elstob's features, and so do LibreOffice, Affinity Publisher,
+support all of Elstob’s features, and so do LibreOffice, Affinity Publisher,
 XeTeX and {\ltech}. The Adobe Creative Suite supports a generous selection of
 them. Microsoft Word, unfortunately, supports only a few OpenType features.
 
-Elstob's OpenType
+Elstob’s OpenType
 features are for the most part a subset of those of Junicode. It will be noted
 below when the two fonts differ. Features are presented in alphabetical order,
 but this is not the order in which they are executed when more than one feature
@@ -244,10 +251,10 @@ Provides insular F (\cvd{11}{F}).
 Provides: 1. \cvd{12}{f} (insular f); 2. \cvd[1]{12}{f} (narrow f).
 
 \section{cv13 (Variants of G)}
-Provides: 1. \cvd{13}{G} (insular G); 2. \cvd[1]{13}{G} (Orm's hard G).
+Provides: 1. \cvd{13}{G} (insular G); 2. \cvd[1]{13}{G} (Orm’s hard G).
 
 \section{cv14 (Variants of g)}
-Provides: 1. \cvd{14}{g} (insular g); 2. \cvd[1]{14}{g} (Orm's hard g);
+Provides: 1. \cvd{14}{g} (insular g); 2. \cvd[1]{14}{g} (Orm’s hard g);
 3. \cvd[2]{14}{g} (script g)
 
 \section{cv18 (Variants of i)}
@@ -264,7 +271,12 @@ Provides insular S (\cvd{37}{S}).
 
 \section{cv38 (Variants of s)}
 Provides: 1. \cvd{38}{s} (insular s); 2. \cvd[1]{38}{s} (long s);
-3. \cvd[2]{38}{s} (narrow long s).
+3. \cvd[1]{38}{s} (narrow long s). Instances of \textbf{\cvd[1]{38}{s}}
+provided by this feature are not subject to the contextual rules followed
+when ss08 is turned on. Use cv38[1] for \textbf{\cvd[1]{38}{s}}
+everywhere in the text, or enter U+017F directly for fine control over the
+distribution of \textbf{\cvd[1]{38}{s}}. Use cv38[2] to avoid collisions that
+Elstob’s contextual rules have not anticipated.
 
 \section{cv39 (Variants of T)}
 Provides insular T (\cvd{39}{T}).
@@ -298,25 +310,24 @@ Elstob includes only three fractions: {\addfontfeature{Fractions=On} 1/4, 1/2,
 3/4}. Type as number + slash + number.
 
 \section{hlig (Historical Ligatures)}
-Provides several ligatures used in Orm's orthography:
-{\addfontfeatures{Ligatures=Historic} þþ ƿƿ hh} for
-{\addfontfeatures{Language=English}þþ ƿƿ hh}. The first two of these correspond
+Provides several ligatures used in Orm’s orthography:
+{\addfontfeatures{Ligatures=Historic} þþ ƿƿ hh pp} for
+{\addfontfeatures{Language=English}þþ ƿƿ hh pp}. The first two of these correspond
 to Unicode \ltab{U+A7D3 and U+A7D5}, but using the ligatures provides an intelligible
 fallback when a font with these rare Unicode characters is not available.
 
 \section{liga (Standard Ligatures)}
-In most applications this feature is on by default.
-Provides ligatures that should always be used for certain letter combinations
-(e.g. first flat office afflict offer).
+Most of this font’s ligatures are Contextual Alternates (calt), but a few
+are provided by this feature, which should always be on.
 
 \section{locl (Localized Forms)}
 In most applications this feature is on by default and cannot be turned off.
 It provides the English forms of thorn and eth
-(\addfontfeature{Language=English}{Þ þ ð}) when English is the
+(\textbf{\addfontfeature{Language=English}{Þ þ ð}}) when English is the
 active language.
 
 \section{ordn (Ordinals)}
-Provides superscript forms of a and o when preceded by a figure:
+Provides superscript forms of \textbf{a} and \textbf{o} when preceded by a figure:
 {\addfontfeature{VerticalPosition = Ordinal} 1a, 2o}.
 
 \section{smcp (Small Capitals)}
@@ -334,14 +345,18 @@ to \textbf{\addfontfeature{StylisticSet=2} st}. You can override this behavior b
 between the \textbf{s} and the \textbf{t}.
 
 \section{ss04 (IPA Letter-Shapes)}
-Changes g to ɡ and (in italic only)
-\textit{a} to \textit{\addfontfeature{StylisticSet=4} a}. This feature has no counterpart in
+Changes \textbf{g} to \textbf{ɡ} and (in italic only)
+\textbf{a} to \textbf{\addfontfeature{StylisticSet=4} a}. This feature has no counterpart in
 Junicode.
 
 \section{ss08 (Contextual Long s)}
-In English and French text, and in combination with calt, distributes \textbf{s} and
+In English, French, Italian, and Spanish text, and in combination with calt, distributes \textbf{s} and
 \textbf{\cvd[1]{38}{s}}
-according to rules commonly employed by early printers in each language.
+according to rules commonly employed by early printers in each language. For all other languages,
+\textbf{s} and \textbf{\cvd[1]{38}{s}} are distributed according to the following rules:
+\textbf{s} in word-final position and immediately before or after \textbf{f};
+\textbf{\cvd[1]{38}{s}} everywhere else. To suppress any instance of \textbf{\cvd[1]{38}{s}},
+place U+200C \textsc{zero-width non-joiner} immediately after.
 
 \section{ss12 (Early English Futhorc)}
 Transliterates Latin script to runic with characters from the Early English futhorc. fuþorc
@@ -361,8 +376,30 @@ to the Short Twig version. fuþark
 → {\addfontfeature{StylisticSet=14,StylisticSet=15} fuþark}.
 
 \section{ss16 (Contextual r Rotunda)}
-Together with calt, distributes r and
-\cvd[1]{36}{r} in accordance with the rules most often employed in medieval manuscripts and early printed books: {\addfontfeature{StylisticSet=16} form workrooms priest prayer}.
+Together with calt, distributes \textbf{r} and
+\textbf{\cvd[1]{36}{r}} in accordance with the rules most often employed in medieval manuscripts and early printed books: {\addfontfeature{StylisticSet=16} form workrooms priest prayer}.
+
+\section{ss18 (Old-style punctuation spacing)}
+{\spaced\addfontfeature{StylisticSet=18} Adds extra space inside paired quotation marks and before semicolons, colons, question
+marks and exclamation marks. The width of a space between a sentence-ending sequence
+(e.g. period, period + quotation mark, question mark) and a capital letter is increased.
+The amount of space added in these environments is governed by the Spacing (SPAC) axis,
+which runs from 0 (the default) to 1. When Spacing is set to 1, the spacing between
+words and sentences and around punctuation marks is a good match for most books
+printed in the late eighteenth century.
+
+This feature will produce too much space in certain sequences that can be mistaken
+for the end of a sentence (like “Ofc. Smith”—though a number
+honorifics in various languages are accounted for in the rules. To solve this problem, place a}
+\textsc{zero-width non-joiner }{\spaced\addfontfeature{StylisticSet=18}(U+200C) anywhere between the period and the capital
+or replace the space with the non-breaking space (U+00A0) or thin space (U+2009) (“Ofc.^^a0Smith,” “Ofc.^^^^2009Smith”). If
+the rules produce a narrow space between sentences where you want a wide one,
+place a }\textsc{zero-width non-joiner} {\spaced\addfontfeature{StylisticSet=18}before the period (“Main St\/. And”).
+You can also override the effect of this feature by using the font’s alternative
+spaces: em space (U+2003), en space (U+2002), hair space (U+200A), thin space (U+2009),
+or three-per-em space (U+2004). Find rules for using these spaces in
+handbooks for compositors from the era of metal type.}
+
 
 \section{subs (Subscripts)}
 Subscript numbers, both lining and old style. 01234 →
