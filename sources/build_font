@@ -120,7 +120,7 @@ then
   sedcmd="gsed"
 fi
 
-familyname=`{$sedcmd} -n '1,/<source.*familyname/s/.*familyname="\([^"]*\)"[^\n]*/\1/p' $des`
+familyname=`$sedcmd -n '1,/<source.*familyname/s/.*familyname="\([^"]*\)"[^\n]*/\1/p' $des`
 echo "Building font(s) with family name \"${familyname}\""
 
 # Every glyph with a "us" anchor also needs a "_us" anchor or fontmake (glyphsLib,
@@ -131,7 +131,7 @@ echo "Building font(s) with family name \"${familyname}\""
 
 echo "Removing extraneous anchors"
 
-for u in `{$sedcmd} -n '/<source.*filename/s/.*filename="\([^"]*\)"[^\n]*/\1/p' $des`
+for u in `$sedcmd -n '/<source.*filename/s/.*filename="\([^"]*\)"[^\n]*/\1/p' $des`
 do
     for fff in `grep -l "anchor.*\"_us\"" master_ufo/$u/glyphs/*.glif`
     do
@@ -206,15 +206,11 @@ then
   cd autohinted/instance_ttf
   if [ $fonttype == "italic" ]
   then
-    for ff in ${familyname}*Italic.ttf;
-    do
-      python ../../add_dsig.py $ff;
-    done
+    echo "Adding a DSIG table to the italic font"
+    find . -maxdepth 1 -name "${familyname}*Italic.ttf" -exec python ../../add_dsig.py {} \;
   else
-    for ff in `find . -maxdepth 1 -name "${familyname}*.ttf" -not -name "*Italic.ttf"`;
-    do
-      python ../../add_dsig.py $ff
-    done
+    echo "Adding a DSIG table to the roman font"
+    find . -maxdepth 1 -name "${familyname}*.otf" -not -name "*Italic.ttf" -exec python ../../add_dsig.py {} \;
   fi
   cd ../..
   rm -fr master_ufo
@@ -234,17 +230,11 @@ then
   cd instance_otf
   if [ $fonttype == "italic" ]
   then
-    for ff in "${familyname}*Italic.otf"
-    do
-      python ../add_dsig.py $ff
-	    psautohint $ff
-    done
+    echo "Adding DSIG table and hinting the italic font"
+    find . -maxdepth 1 -name "${familyname}*Italic.otf" -exec python ../add_dsig.py {} \; -exec psautohint {} \;
   else
-    for ff in `find . -maxdepth 1 -name "${familyname}*.otf" -not -name "*Italic.otf"`
-    do
-      python ../add_dsig.py $ff
-      psautohint $ff
-    done
+    echo "Adding DSIG table and hinting the roman font"
+    find . -maxdepth 1 -name "${familyname}*.otf" -not -name "*Italic.otf" -exec python ../add_dsig.py {} \; -exec psautohint {} \;
   fi
   cd ..
   rm -fr master_ufo
