@@ -2302,14 +2302,16 @@
   </gl>
 
   <gl pnm="uniA75D"> <!-- rum -->
-    <mv di="baseline" p="28">
-      <mv p="27"/>
+    <cn nm="top" val="{262;445}"/>
+    <cn nm="bot" val="{405;0}"/>
+    <mv di="baseline" p="bot">
+      <mv p="{413;25}"/>
     </mv>
-    <mv di="xho" p="17">
-      <mv p="9"/>
+    <mv di="xho" p="top">
+      <mv p="{205;394}"/>
     </mv>
-    <sh r="27" p="31"/>
-    <sh r="28" p="29"/>
+    <ip r="top bot" p="{383;276}"/>
+    <sh r="bot" p="{83;-84}"/>
   </gl>
 
   <gl pnm="uniA76F"> <!-- con -->
@@ -6759,7 +6761,7 @@
   <gl pnm="nine" xoffset="1">
     <cn nm="bot" val="{16;-29}"/>
     <cn nm="top" val="{370;651}"/>
-    <cn nm="mid" val="{248;257}"/>
+    <cn nm="mid" val="{247;257}"/>
     <mv p="bot"/>
     <mv di="numto" p="top">
       <mv p="{358;621}"/>
@@ -6771,7 +6773,7 @@
   <gl pnm="nine.lf" xoffset="-1">
     <cn nm="bot" val="{17;-29}"/>
     <cn nm="top" val="{371;651}"/>
-    <cn nm="mid" val="{248;257}"/>
+    <cn nm="mid" val="{249;257}"/>
     <mv p="bot"/>
     <mv di="numto" p="top">
       <mv p="{359;621}"/>
@@ -7521,7 +7523,7 @@
     </callg>
   </gl>
 
-  <gl pnm="braceright">
+  <gl pnm="braceright" xoffset="1">
     <callg pnm="braceleft">
       do-iup: -1,
       bot: {-106;-156},
@@ -8415,7 +8417,7 @@
     <mv di="mkbu" p="{-142;522}">
       <sh p="{-48;521}"/>
       <mv p="{-109;553}"/>
-      <mv p="{-9;557}"/>
+      <mv p="{-8;557}"/>
     </mv>
     <mv di="mkxo" p="{-32;732}">
       <sh p="{12;741}"/>
