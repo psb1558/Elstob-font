@@ -87,7 +87,7 @@ not generally be useful in printed documents.
 related characters (such as non-breaking space). A value of zero (the default)
 produces the original spacing of this font. A value of one produces the wider
 spacing typical of documents printed in the nineteenth century and earlier.
-Use this axis with ss18 (“Old-style punctuation spacing”) to adhere closely to
+Use this axis with \textSourceText{ss18} (“Old-style punctuation spacing”) to adhere closely to
 the complex system of spacing typical of the era of metal type.
 
 \textbf{Slant} (0--15) varies
@@ -235,7 +235,7 @@ this feature on automatically in the vicinity of capitals.
 \section{ccmp (Glyph Composition/Decomposition)}
 In most applications this feature is on by default and cannot be turned off.
 In Elstob it performs (1.) removal of dot from i and j when followed by combining
-marks; and (2.) substituting ligatures for certain vowel + rhotic hook (\ltab{U+02DE})
+marks; and (2.) substituting ligatures for certain vowel + rhotic hook (\unic{\unic{U+02DE}})
 combinations.
 
 \section{cv07 (Variants of D)}
@@ -273,9 +273,9 @@ Provides insular S (\cvd{37}{S}).
 Provides: 1. \cvd{38}{s} (insular s); 2. \cvd[1]{38}{s} (long s);
 3. \cvd[1]{38}{s} (narrow long s). Instances of \textbf{\cvd[1]{38}{s}}
 provided by this feature are not subject to the contextual rules followed
-when ss08 is turned on. Use cv38[1] for \textbf{\cvd[1]{38}{s}}
-everywhere in the text, or enter U+017F directly for fine control over the
-distribution of \textbf{\cvd[1]{38}{s}}. Use cv38[2] to avoid collisions that
+when \textSourceText{ss08} is turned on. Use \textSourceText{cv38[1]} for \textbf{\cvd[1]{38}{s}}
+everywhere in the text, or enter \unic{\unic{U+017F}} directly for fine control over the
+distribution of \textbf{\cvd[1]{38}{s}}. Use \textSourceText{cv38[2]} to avoid collisions that
 Elstob’s contextual rules have not anticipated.
 
 \section{cv39 (Variants of T)}
@@ -287,11 +287,11 @@ Provides insular t (\cvd{40}{t}).
 \section{cv57 (Variants of æ)}
 Italic face only. Provides an alternative (and in some contexts less ambiguous)
 \textit{æ} (\textit{\cvd{57}{æ}}).
-This feature also affects \ltab{U+01E3} (\textit{\cvd{57}{ǣ}})
-and \ltab{U+01FD} (\textit{\cvd{57}{ǽ}}).
+This feature also affects \unic{\unic{U+01E3}} (\textit{\cvd{57}{ǣ}})
+and \unic{\unic{U+01FD}} (\textit{\cvd{57}{ǽ}}).
 
 \section{cv69 (Variants of Tironian et sign ⁊)}
-Provides two variants of \ltab{U+204A}: 1. \cvd{69}{⁊}; 2. \cvd[1]{69}{⁊}.
+Provides two variants of \unic{\unic{U+204A}}: 1. \cvd{69}{⁊}; 2. \cvd[1]{69}{⁊}.
 
 \section{cv76 (Variants of ?)}
 Provides the \textit{punctus interrogativus} (\cvd{76}{?}).
@@ -313,11 +313,11 @@ Elstob includes only three fractions: {\addfontfeature{Fractions=On} 1/4, 1/2,
 Provides several ligatures used in Orm’s orthography:
 {\addfontfeatures{Ligatures=Historic} þþ ƿƿ hh pp} for
 {\addfontfeatures{Language=English}þþ ƿƿ hh pp}. The first two of these correspond
-to Unicode \ltab{U+A7D3 and U+A7D5}, but using the ligatures provides an intelligible
+to Unicode \unic{\unic{U+A7D3}} and \unic{\unic{U+A7D5}}, but using the ligatures provides an intelligible
 fallback when a font with these rare Unicode characters is not available.
 
 \section{liga (Standard Ligatures)}
-Most of this font’s ligatures are Contextual Alternates (calt), but a few
+Most of this font’s ligatures are Contextual Alternates (\textSourceText{calt}), but a few
 are provided by this feature, which should always be on.
 
 \section{locl (Localized Forms)}
@@ -338,10 +338,10 @@ Overrides any language setting to provide alternate shapes of the letters thorn 
 
 \section{ss02 (Insular Letter-Shapes)}
 Transliterates from modern to insular (Old English, Old Irish) letter-shapes:\linebreak
-dfgirstw → {\addfontfeature{StylisticSet=2} dfgirstw}. Note that calt later
+dfgirstw → {\addfontfeature{StylisticSet=2} dfgirstw}. Note that \textSourceText{calt} later
 changes the sequence \textbf{\addfontfeature{StylisticSet=2} s\kern0ptt}
 to \textbf{\addfontfeature{StylisticSet=2} st}. You can override this behavior by placing
-\ltab{U+200C} \textsc{zero-width non-joiner} or any invisible formatting mark
+\unic{\unic{U+200C}} \textsc{zero-width non-joiner} or any invisible formatting mark
 between the \textbf{s} and the \textbf{t}.
 
 \section{ss04 (IPA Letter-Shapes)}
@@ -350,13 +350,13 @@ Changes \textbf{g} to \textbf{ɡ} and (in italic only)
 Junicode.
 
 \section{ss08 (Contextual Long s)}
-In English, French, Italian, and Spanish text, and in combination with calt, distributes \textbf{s} and
+In English, French, Italian, and Spanish text, and in combination with \textSourceText{calt}, distributes \textbf{s} and
 \textbf{\cvd[1]{38}{s}}
 according to rules commonly employed by early printers in each language. For all other languages,
 \textbf{s} and \textbf{\cvd[1]{38}{s}} are distributed according to the following rules:
 \textbf{s} in word-final position and immediately before or after \textbf{f};
 \textbf{\cvd[1]{38}{s}} everywhere else. To suppress any instance of \textbf{\cvd[1]{38}{s}},
-place U+200C \textsc{zero-width non-joiner} immediately after.
+place \unic{U+200C} \textsc{zero-width non-joiner} immediately after.
 
 \section{ss12 (Early English Futhorc)}
 Transliterates Latin script to runic with characters from the Early English futhorc. fuþorc
@@ -371,12 +371,12 @@ Transliterates Latin script to runic with characters from the Younger futhark. f
 → {\addfontfeature{StylisticSet=14} fuþark}.
 
 \section{ss15 (Long Branch to Short Twig)}
-Use with ss14. Converts the default (Long Branch) version of the Younger futhark
+Use with \textSourceText{ss14}. Converts the default (Long Branch) version of the Younger futhark
 to the Short Twig version. fuþark
 → {\addfontfeature{StylisticSet=14,StylisticSet=15} fuþark}.
 
 \section{ss16 (Contextual r Rotunda)}
-Together with calt, distributes \textbf{r} and
+Together with \textSourceText{calt}, distributes \textbf{r} and
 \textbf{\cvd[1]{36}{r}} in accordance with the rules most often employed in medieval manuscripts and early printed books: {\addfontfeature{StylisticSet=16} form workrooms priest prayer}.
 
 \section{ss18 (Old-style punctuation spacing)}
@@ -391,14 +391,18 @@ printed in the late eighteenth century.
 This feature will produce too much space in certain sequences that can be mistaken
 for the end of a sentence (like “Ofc. Smith”—though a number
 honorifics in various languages are accounted for in the rules. To solve this problem, place a}
-\textsc{zero-width non-joiner }{\spaced\addfontfeature{StylisticSet=18}(U+200C) anywhere between the period and the capital
-or replace the space with the non-breaking space (U+00A0) or thin space (U+2009) (“Ofc.^^a0Smith,” “Ofc.^^^^2009Smith”). If
+\textsc{zero-width non-joiner }{\spaced\addfontfeature{StylisticSet=18}(\unic{\unic{U+200C}}) anywhere between the period and the capital
+or replace the space with the non-breaking space (\unic{U+00A0}) or thin space (\unic{U+2009}) (“Ofc.^^a0Smith,”^^^^2009“Ofc.^^^^2009Smith”). If
 the rules produce a narrow space between sentences where you want a wide one,
 place a }\textsc{zero-width non-joiner} {\spaced\addfontfeature{StylisticSet=18}before the period (“Main St\/. And”).
 You can also override the effect of this feature by using the font’s alternative
-spaces: em space (U+2003), en space (U+2002), hair space (U+200A), thin space (U+2009),
-or three-per-em space (U+2004). Find rules for using these spaces in
-handbooks for compositors from the era of metal type.}
+spaces: em space (\unic{U+2003}), en space (\unic{U+2002}), hair space (\unic{U+200A}), thin space (\unic{U+2009}),
+or three-per-em space (\unic{U+2004}). Find rules for using these spaces in
+handbooks for compositors from the era of metal type.
+
+\textSourceText{ss18} and the Spacing axis will fail in a few OpenType-aware applications (including Safari) that
+handle spaces in a non-standard way. In these applications some spaces that should be increased
+will remain unchanged.}
 
 
 \section{subs (Subscripts)}

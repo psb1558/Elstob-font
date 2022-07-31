@@ -2,44 +2,9 @@
 
 \usepackage{microtype}
 \usepackage{fancyhdr}
-%\usepackage[english,greek,lithuanian,polish,latin]{babel}
+
 \usepackage[quiet]{fontspec}
-%\setmainfont{ElstobD}[
-%  UprightFont = {*-Regular},
-%  ItalicFont = {*-Italic},
-%  BoldFont = {*-Bold},
-%  BoldItalicFont = {*-Bold Italic},
-%  Numbers={Lowercase,Proportional},
-%  StylisticSet=10,
-%  UprightFeatures={
-%    SizeFeatures={
-%      {Size={-10.99}, Font=*-Medium},
-%      {Size={11-21.59},  Font=*-Regular},
-%      {Size={21.6-},     Font=*-Light}
-%    },
-%  },
-%  ItalicFeatures={
-%    SizeFeatures={
-%      {Size={-10.99}, Font={*-Medium Italic}},
-%      {Size={11-21.59},  Font=*-Italic},
-%      {Size={21.6-},     Font={*-Light Italic}}
-%    },
-%  },
-%  BoldFeatures={
-%    SizeFeatures={
-%      {Size={-10.99}, Font=*-Bold},
-%      {Size={11-21.59},  Font=*-Semibold},
-%      {Size={21.6-},     Font=*-Medium}
-%    },
-%  },
-%  BoldItalicFeatures={
-%    SizeFeatures={
-%      {Size={-10.99}, Font={*-Bold Italic}},
-%      {Size={11-21.59},  Font={*-Semibold Italic}},
-%      {Size={21.6-},     Font={*-Medium Italic}}
-%    },
-%  },
-%]
+
 \setmainfont{Elstob.ttf}[
   ItalicFont = Elstob-Italic.ttf,
   BoldFont = Elstob.ttf,
@@ -309,7 +274,7 @@
 \newcommand{\ffstr}[1]{{\addfontfeature{FakeStretch=0.75}#1}}
 \newcommand{\eng}{\addfontfeature{Language=English}}
 \newcommand{\icel}{\addfontfeature{Language=Icelandic}}
-\newcommand{\unic}[1]{{\addfontfeature{Numbers={Uppercase,Monospaced}}#1}}
+\newcommand{\unic}[1]{{\color{BrickRed}\addfontfeature{Numbers={Uppercase,Monospaced}}#1}}
 \newcommand{\colongs}{\addfontfeature{Language=English,StylisticSet=8}}
 \newcommand{\ltech}{Lua\kern-1.5pt\TeX}
 \newcommand{\ctosc}[1]{{\addfontfeature{Letters=UppercaseSmallCaps}#1}}
