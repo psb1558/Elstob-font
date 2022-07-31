@@ -3548,12 +3548,12 @@ type="application/relax-ng-compact-syntax"?>
   </gl>
 
   <gl pnm="uniA76F">
-    <cn nm="top" val="36"/>
-    <cn nm="top-ins" val="9"/>
-    <cn nm="bot-a" val="0"/>
-    <cn nm="bot-b" val="1"/>
-    <cn nm="mid-a" val="28"/>
-    <cn nm="mid-b" val="18"/>
+    <cn nm="top" val="{236;446}"/>
+    <cn nm="top-ins" val="{207;397}"/>
+    <cn nm="bot-a" val="{99;-223}"/>
+    <cn nm="bot-b" val="{83;-194}"/>
+    <cn nm="mid-a" val="{186;70}"/>
+    <cn nm="mid-b" val="{155;127}"/>
     <setvs axis="y"/>
     <callm nm="lc-horz-stroke">
       pt1: top, pt2: top-ins, cv: xheight-overshoot
