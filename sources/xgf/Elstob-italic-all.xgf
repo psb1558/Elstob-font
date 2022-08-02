@@ -2190,6 +2190,21 @@
     </compile-if>
   </gl>
 
+  <gl pnm="uhorn">
+    <mv di="lcbu" p="{86;-11}">
+      <sh p="{321;-11}"/>
+      <mv p="{135;44}">
+        <sh p="{358;44}"/>
+      </mv>
+    </mv>
+    <mv di="xh" p="{439;439}">
+      <sh p="{451;439} {457;439} {599;549}"/>
+    </mv>
+    <mv di="xho" p="{230;445}">
+      <mv p="{179;390}"/>
+    </mv>
+  </gl>
+
   <gl pnm="uni0195"> <!-- Gothic hv -->
     <mv di="baseline" p="{1;0}">
       <sh p="{54;0}"/>
@@ -6250,6 +6265,20 @@
     </compile-if>
   </gl>
 
+  <gl pnm="ohorn">
+    <pm nm="top" val="{295;445}"/>
+    <pm nm="top-ins" val="{298;417}"/>
+    <pm nm="bottom" val="{133;-11}"/>
+    <pm nm="bottom-ins" val="{138;17}"/>
+    <mv di="sc-height-overshoot" p="top">
+      <mv di="sc-curved-stem" p="top-ins"/>
+    </mv>
+    <mv di="sc-baseline-undershoot" p="bottom">
+      <mv di="sc-curved-stem" p="bottom-ins"/>
+    </mv>
+    <sh r="top" p="{489;545}"/>
+  </gl>
+
   <gl pnm="uniA74F.sc"> <!-- oo -->
     <mv di="scho" p="9">
       <sh p="15"/>
@@ -6318,19 +6347,21 @@
   </gl>
 
   <gl pnm="q.sc">
-    <pm nm="top" val="9"/>
-    <pm nm="top-ins" val="39"/>
-    <pm nm="bottom" val="18"/>
-    <pm nm="bottom-ins" val="29"/>
-    <pm nm="tail-bottom" val="0"/>
-    <pm nm="tail-ins" val="22"/>
+    <pm nm="top" val="{292;506}"/>
+    <pm nm="top-ins" val="{318;479}"/>
+    <pm nm="bottom" val="{199;-8}"/>
+    <pm nm="bottom-ins" val="{226;6}"/>
+    <pm nm="tail-bottom" val="{306;-163}"/>
+    <pm nm="tail-ins" val="{336;-126}"/>
     <mv di="sc-height-overshoot" p="top">
       <mv di="sc-curved-stem" p="top-ins"/>
     </mv>
     <mv di="baseline-undershoot" p="bottom">
-      <sh round="yes" p="tail-bottom"/>
-      <mv di="sc-curved-stem" p="bottom-ins">
-        <sh p="tail-ins"/>
+      <mv p="bottom-ins"/>
+    </mv>
+    <mv r="bottom" p="tail-ins">
+      <mv p="tail-bottom">
+        <ip p="{64;-72} {58;-78} {-110;-74} {-79;-156}"/>
       </mv>
     </mv>
   </gl>
@@ -6352,6 +6383,26 @@
     </mv>
     <mv p="tail-bottom">
       <mv p="tail-ins"/>
+    </mv>
+  </gl>
+
+  <gl pnm="q.alt.sc">
+    <pm nm="top" val="{290;506}"/>
+    <pm nm="top-ins" val="{317;479}"/>
+    <pm nm="bottom" val="{197;-8}"/>
+    <pm nm="bottom-ins" val="{226;4}"/>
+    <pm nm="tail-bottom" val="{691;-240}"/>
+    <pm nm="tail-ins" val="{750;-188}"/>
+    <mv di="sc-height-overshoot" p="top">
+      <mv di="sc-curved-stem" p="top-ins"/>
+    </mv>
+    <mv di="baseline-undershoot" p="bottom">
+      <mv p="bottom-ins"/>
+    </mv>
+    <mv r="bottom" p="tail-ins">
+      <mv p="tail-bottom">
+        <ip p="{62;-70} {56;-78} {-138;-76} {-109;-155}"/>
+      </mv>
     </mv>
   </gl>
 
@@ -6474,6 +6525,28 @@
     <compile-if test="do-iup = 0">
       <iup axis="y"/>
     </compile-if>
+  </gl>
+
+  <gl pnm="uhorn.sc">
+    <pm nm="serif-left" val="{95;496}"/>
+    <pm nm="serif-right" val="{467;496}"/>
+    <pm nm="bottom" val="{203;-11}"/>
+    <pm nm="bottom-ins" val="{223;12}"/>
+    <set nm="shift-a" p="{553;489} {181;490} serif-right"/>
+    <setvs axis="y"/>
+    <callm nm="serif-sh">
+      pt-a: serif-left,
+    	pt-b: serif-left - 1,
+    	sh-a: shift-a,
+    	sh-b: serif-right - 1,
+    	cv: sch,
+    	cv-h: sc-serif
+    </callm>
+    <mv di="baseline-undershoot" p="bottom">
+      <mv di="sc-curved-stem" p="bottom-ins"/>
+    </mv>
+    <sh r="serif-left" p="{703;596}"/>
+    <iup axis="y"/>
   </gl>
 
   <gl pnm="uogonek.sc" assume-y="no" xoffset="-31">
