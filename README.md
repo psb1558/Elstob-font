@@ -33,16 +33,15 @@ instructions for installing on their systems.
 # Building
 
 To build Elstob, you'll need [fontmake](https://github.com/googlefonts/fontmake), which requires
-Python 3.7 or later. (If your system supplies Python 2.N, install the latest version of Python in 
+Python 3.7 or later. (If your system supplies Python 2.N, install the latest version of Python in
 a virtual environment.) Install fontmake via pip, and, if you want hinting in the variable font,
 install [Xgridfit version 3](https://github.com/psb1558/xgridfit-3), following the instructions at
 the Xgridfit 3 site.
 
-Aside from fontmake, the build script (`build_font`, a Bash script) requires tools that are standard on the Mac and in Linux
-systems (sorry, I know little about Windows). One possible catch: in lines 114 and 125 the script
-calls gsed—that's the name Homebrew gives to GNU sed to distinguish it from BSD sed, which
-comes with the system. If you are building in Linux, you may need to change “gsed” in those lines
-to “sed.”
+In addition to fontmake and its dependencies, you will need ttfautohint (for hinting of
+TrueType static fonts), psautohint (for hinting of CFF fonts), Xgridfit (for hinting the
+variable fonts), GNU sed (already installed on Linux systems; on the Mac install gsed
+via Homebrew), and xsltproc (already installed on Linux systems and on the Mac).
 
 To run `build_font`, open a terminal, navigate to the `source` directory, make the file `build_font` executable
 (`chmod +x build_font`), and run it: `./build_font -h`.

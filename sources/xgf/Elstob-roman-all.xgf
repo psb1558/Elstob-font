@@ -230,6 +230,10 @@ type="application/relax-ng-compact-syntax"?>
     </tuple>
   </cvar>
 
+	<alias nm="xho" target="xheight-overshoot"/>
+	<alias nm="lcbu" target="baseline-undershoot"/>
+	<alias nm="lcrs" target="lc-round-stem"/>
+
   <prep>
     <if test="pixels-per-em &gt; 200">
       <disable-instructions/>
@@ -1194,6 +1198,16 @@ type="application/relax-ng-compact-syntax"?>
     </compile-if>
   </gl>
 
+	<gl pnm="ohorn" assume-y="yes">
+		<mv di="xho" p="{255;446}">
+			<sh p="{450;545}"/>
+			<mv di="lcrs" p="{255;418}"/>
+		</mv>
+		<mv di="lcbu" p="{255;-12}">
+			<mv p="{255;16}"/>
+		</mv>
+	</gl>
+
   <gl pnm="p">
     <cn nm="bowl-top" val="{296;446}"/>
     <cn nm="bowl-top-inside" val="{249;388}"/>
@@ -1339,11 +1353,11 @@ type="application/relax-ng-compact-syntax"?>
 
   <gl pnm="u">
     <pm nm="do-iup" val="0"/>
-    <cn nm="top-left" val="{17;435}"/>
-    <cn nm="top-right" val="{316;435}"/>
-    <cn nm="bottom" val="{221;-11}"/>
-    <cn nm="bottom-ins" val="{251;37}"/>
-    <cn nm="stem-bottom" val="{396;-16}"/>
+    <pm nm="top-left" val="{17;435}"/>
+    <pm nm="top-right" val="{316;435}"/>
+    <pm nm="bottom" val="{221;-11}"/>
+    <pm nm="bottom-ins" val="{251;37}"/>
+    <pm nm="stem-bottom" val="{396;-16}"/>
     <setvs axis="y"/>
     <mv di="xheight" p="top-left">
       <sh p="top-right"/>
@@ -1359,6 +1373,15 @@ type="application/relax-ng-compact-syntax"?>
       <iup axis="y"/>
     </compile-if>
   </gl>
+
+	<gl pnm="uhorn">
+		<cn nm="top" val="{316;435}"/>
+		<callg pnm="u">
+			top-left: {17;435}, top-right: top, bottom: {221;-11}, bottom-ins: {251;37},
+			stem-bottom: {396;-16}
+		</callg>
+		<sh r="top" p="{419;435} {531;545}"/>
+	</gl>
 
   <gl pnm="v">
     <cn nm="serif-left" val="{9;435}"/>
@@ -2361,10 +2384,10 @@ type="application/relax-ng-compact-syntax"?>
   <gl pnm="O">
     <pm nm="offset" val="0"/>
     <pm nm="do-iup" val="0"/>
-    <cn nm="top" val="10"/>
-    <cn nm="top-ins" val="30"/>
-    <cn nm="bottom" val="0"/>
-    <cn nm="bottom-ins" val="20"/>
+    <pm nm="top" val="10"/>
+    <pm nm="top-ins" val="30"/>
+    <pm nm="bottom" val="0"/>
+    <pm nm="bottom-ins" val="20"/>
     <setvs axis="y"/>
     <mv di="cap-height-overshoot" p="top">
       <mv di="cap-round-stem" p="top-ins"/>
@@ -2376,6 +2399,15 @@ type="application/relax-ng-compact-syntax"?>
       <iup axis="y"/>
     </compile-if>
   </gl>
+
+	<gl pnm="Ohorn">
+		<cn nm="Otop" val="{373;676}"/>
+		<callg pnm="O">
+			do-iup: -1, top: Otop, top-ins: {370;648}, bottom: {370;-13}, bottom-ins: {379;15}
+		</callg>
+		<sh r="Otop" p="{665;797}"/>
+		<iup axis="y"/>
+	</gl>
 
   <gl pnm="uniA74A">
     <cn nm="top" val="14"/>
@@ -2608,12 +2640,13 @@ type="application/relax-ng-compact-syntax"?>
   </gl>
 
   <gl pnm="U">
-    <cn nm="serif-left" val="29"/>
-    <cn nm="serif-right" val="34"/>
-    <cn nm="stem-left" val="8"/>
-    <cn nm="stem-right" val="18"/>
-    <cn nm="bottom" val="0"/>
-    <cn nm="bottom-ins" val="13"/>
+		<pm nm="do-iup" val="0"/>
+    <pm nm="serif-left" val="29"/>
+    <pm nm="serif-right" val="34"/>
+    <pm nm="stem-left" val="8"/>
+    <pm nm="stem-right" val="18"/>
+    <pm nm="bottom" val="0"/>
+    <pm nm="bottom-ins" val="13"/>
     <setvs axis="y"/>
     <callm nm="cap-dbl-serif">
       first-left: serif-left, second-left: (serif-left - 1), first-right: serif-right,
@@ -2622,8 +2655,20 @@ type="application/relax-ng-compact-syntax"?>
     <mv di="baseline-undershoot" p="bottom">
       <mv di="cap-round-stem" col="b" p="bottom-ins"/>
     </mv>
-    <iup axis="y"/>
+		<compile-if test="do-iup &gt;= 0">
+    	<iup axis="y"/>
+		</compile-if>
   </gl>
+
+	<gl pnm="Uhorn">
+		<cn nm="top" val="{21;663}"/>
+		<callg pnm="U">
+			do-iup: -1, serif-left: top, serif-right: {506;663}, stem-left: {114;645},
+			stem-right: {592;645}, bottom: {364;-13}, bottom-ins: {399;15}
+		</callg>
+		<sh r="top" p="{721;793}"/>
+		<iup axis="y"/>
+	</gl>
 
   <gl pnm="Uogonek">
     <cn nm="ogonek-connect" val="24"/>
@@ -6053,6 +6098,15 @@ type="application/relax-ng-compact-syntax"?>
     </compile-if>
   </gl>
 
+	<gl pnm="ohorn.sc">
+		<cn nm="top" val="{307;506}"/>
+		<callg pnm="o.sc">
+			do-iup: -1, top: top, top-ins: {305;478}, bottom: {303;-10}, bottom-ins: {312;18}
+		</callg>
+		<sh r="top" p="{540;600}"/>
+		<iup axis="y"/>
+	</gl>
+
   <gl pnm="uni01EB.sc">
     <cn nm="o-bottom" val="{330;-10}"/>
     <cn nm="og-top" val="{338;9}"/>
@@ -6465,6 +6519,16 @@ type="application/relax-ng-compact-syntax"?>
       <iup axis="y"/>
     </compile-if>
   </gl>
+
+	<gl pnm="uhorn.sc">
+		<cn nm="top" val="{20;496}"/>
+		<callg pnm="u.sc">
+			do-iup: -1, serif-left: {20;496}, serif-right: {398;496}, stem-left: {88;484},
+			stem-right: {466;484}, bottom: {290;-10}, bottom-ins: {319;18}
+		</callg>
+		<sh r="top" p="{568;596}"/>
+		<iup axis="y"/>
+	</gl>
 
   <gl pnm="uogonek.sc">
     <cn nm="ogonek-connect" val="23"/>

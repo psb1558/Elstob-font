@@ -1041,6 +1041,17 @@
     </mv>
   </gl>
 
+  <gl pnm="Ohorn">
+    <cn nm="top" val="{390;676}"/>
+    <mv di="cap-height-overshoot" p="{390;676}">
+      <sh p="{685;797}"/>
+      <mv di="cap-round-stem" p="{419;644}"/>
+    </mv>
+    <mv di="cap-baseline-undershoot" p="{289;-13}">
+      <mv di="cap-round-stem" p="{256;23}"/>
+    </mv>
+  </gl>
+
   <gl pnm="uniA74E"> <!-- OO -->
     <mv di="cap-baseline-undershoot" p="{289;-13}">
       <sh p="{726;-13}"/>
@@ -1221,6 +1232,16 @@
     <compile-if test="do-iup = 0">
       <iup axis="y"/>
     </compile-if>
+  </gl>
+
+  <gl pnm="Uhorn">
+    <set nm="top-a" p="{723;655} {253;655} {614;663} {903;793}"/>
+    <callm nm="cap-serif-sh">
+      pt-a: {144;663}, pt-b: {134;638}, sh-a: top-a, sh-b: {605;638}, cv: cap-height
+    </callm>
+    <mv di="cap-baseline-undershoot" p="{268;-13}">
+      <mv di="cap-round-stem" p="{293;15}"/>
+    </mv>
   </gl>
 
   <gl pnm="Uogonek" xoffset="60">
@@ -6263,6 +6284,15 @@
     <compile-if test="do-iup = 0">
       <iup axis="y"/>
     </compile-if>
+  </gl>
+
+  <gl pnm="ohorn.sc" assume-y="no">
+    <cn nm="top" val="{289;506}"/>
+    <callg pnm="o.sc">
+      do-iup: -1, top: top, top-ins: {313;481}, bottom: {219;-10}, bottom-ins: {192;18}
+    </callg>
+    <sh r="top" p="{526;600}"/>
+    <iup axis="y"/>
   </gl>
 
   <gl pnm="ohorn">
