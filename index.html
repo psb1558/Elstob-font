@@ -88,14 +88,14 @@
 	<div class="slidecontainer" id="romsliders">
 	  <div class="sliderlabel">Size: <span id="romsizetext">1.5em</span></div>
 	  <div id="romsize" class="myslider"></div>
-	  <div class="sliderlabel">Spacing: <span id="romspacingtext">0em</span></div>
-	  <div id="romspacing" class="myslider"></div>
 	  <div class="sliderlabel">Weight: <span id="romwghttext">400</span></div>
 	  <div id="romweight" class="myslider"></div>
 	  <div class="sliderlabel">Optical Size: <span id="romopsztext">10</span></div>
 	  <div id="romopticalsize" class="myslider"></div>
 	  <div class="sliderlabel">Grade: <span id="romGRADtext">0</span></div>
 	  <div id="romgrade" class="myslider"></div>
+		<div class="sliderlabel">Spacing: <span id="romspacingtext">0</span></div>
+	  <div id="romspacing" class="myslider"></div>
 		<div id="romslntlabel" class="sliderlabel">Slant: <span id="romslnttext">8</span></div>
 		<div id="romslnt" class="myslider"></div>
 	</div>
@@ -198,6 +198,10 @@
 	    <input type="checkbox"  class="featurebutton" id="romss15"/>
 	    <label for="romss15">Long Branch 2 Short Twig</label>
 	  </span>
+		<span class="bbx">
+	    <input type="checkbox"  class="featurebutton" id="romss18"/>
+	    <label for="romss18">Old-style punctuation spacing</label>
+	  </span>
 	</div>
       </div>
       <p contenteditable="true" id="romtextarea" class="samplebox">
@@ -239,7 +243,7 @@
 	class="blockquote">“10pt”</span> (block quotes and appendices),
 	<b>“Regular”</b> (main text), <span
 	class="subhead">“14pt”</span> (subheads), <span
-	class="display">“18pt”</span> (Display text, 18 points or larger).
+	class="display">“18pt”</span> (display text, 18 points or larger).
 	      However, there’s nothing to prevent your using any Optical
 	Size you like at any actual point size, if you like the look of it.
       </p>
@@ -256,6 +260,15 @@
 	is 800.
 	The range of allowable numbers on this axis is 0-1.
       </p>
+			<p>
+  <b>Spacing</b> is for adjusting the space between words, and before and
+	after marks of punctuation. It runs 0–1, where 0 produces spacing like that
+	of other modern fonts, and 1 produces spacing typical of the era of metal
+	type, especially the nineteenth century and earlier. Turn on the OpenType feature <b>ss18</b>
+	“Old-style punctuation spacing” when you set this axis to a value greater than
+	0: this applies the logic that governs spacing between sentences and around
+	punctuation, which is different from spacing between words.
+			</p>
 			<p>
 				<b>Slant</b> changes the angle of the italic face along a range
 				that runs 0–15, where 0 produces an old-style angle of about nineteen

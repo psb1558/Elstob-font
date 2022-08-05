@@ -13,7 +13,7 @@ $(document).ready(function(){
   each of the different sizes (Pica, French, Canon, Great Primer, and so on) is at least \
   subtly different from the others in design, and the “English” face is entirely different. \
   For the closest approximation to the original type, set the sliders to Weight 500, \
-  Optical Size 18, and Grade 0.";
+  Optical Size 18, Grade 0, Spacing 1, and (for the italic) Slant 0.";
 
   var earlymodtext = "When the right vertuous E.W. and I were at the Emperours Court togither, \
   wee gave our selves to learne horsemanship of Jon Pietro Pugliano, one that with great commendation \
@@ -182,9 +182,9 @@ bari an is briostun.";
         step: 0.05,
         value: 1.5});
     $( "#romspacing" ).slider({
-        min: -0.2,
-        max: 0.2,
-        step: 0.001,
+        min: 0,
+        max: 1,
+        step: 0.01,
         value: 0});
     $( "#romslnt").slider({
         min: 0,
@@ -226,18 +226,21 @@ bari an is briostun.";
           $('#romsizetext').text(valstring + "em");
           break;
         case "romspacing":
-          $('html').css('--romspacing', valstring + "em");
-          $('#romspacingtext').text(valstring + "em");
+          $('html').css('--romspacing', valstring);
+          $('#romspacingtext').text(valstring);
           break;
         }
       }
     );
 
     $("#romsliders").on("change", function(event, size, wght, opsz, GRAD, spacing, slnt) {
-        $('html').css('--romsize', size.toString() + "em");
-        $('#romsizetext').text(size + "em");
-        $('html').css('--romspacing', spacing.toString() + "em");
-        $('#romspacingtext').text(spacing + "em");
+        ts = size.toString();
+        if (ts.indexOf('em') < 0)
+          ts = ts + 'em'
+        $('html').css('--romsize', ts);
+        $('#romsizetext').text(ts);
+        $('html').css('--romspacing', spacing.toString());
+        $('#romspacingtext').text(spacing);
         $('html').css("--romwght", wght.toString());
         $('#romwghttext').text(wght);
         $('html').css('--romopsz', opsz.toString());
@@ -425,8 +428,12 @@ bari an is briostun.";
             break;
           case "eModEnglish":
             t = earlymodtext;
-            $( ".featurebutton" ).not("#romital, #romss08, #romdlig").prop("checked", false).change();
-            $("#romss08, #romdlig").prop("checked",true).change();
+            $( ".featurebutton" ).not("#romital, #romss08, #romss18, #romdlig").prop("checked", false).change();
+            $("#romss08, #romss18, #romdlig").prop("checked",true).change();
+            $("#romspacing").slider("value", 1);
+            $("#romsliders").trigger("change", [$('html').css('--romsize'), $('html').css("--romwght"),
+                                     $('html').css('--romopsz'), $('html').css('--romGRAD'),
+                                     1, $('html').css('--romslnt')]);
             break;
           case "OldEnglish":
             // lang code is ang, but we use en to trigger English thorn and eth.
@@ -538,6 +545,8 @@ bari an is briostun.";
         fstring = featureString(fstring, "ss08", "on");
       if ($("#romss16").is(":checked"))
         fstring = featureString(fstring, "ss16", "on");
+      if ($("#romss18").is(":checked"))
+        fstring = featureString(fstring, "ss18", "on");
 
 	    $("#romtextarea").css("font-feature-settings", fstring);
     });
