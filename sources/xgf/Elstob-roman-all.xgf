@@ -931,6 +931,87 @@ type="application/relax-ng-compact-syntax"?>
     </compile-if>
   </gl>
 
+	<gl pnm="iacute.loclVIT.alt" assume-y="yes">
+		<cn nm="i-top" val="{225;25}"/>
+		<mv di="baseline" p="{31;0}">
+			<mv di="lc-serif" p="{31;25}">
+				<sh p="{225;25}"/>
+			</mv>
+		</mv>
+		<callm nm="minim-top">
+      top: i-top
+    </callm>
+		<mv r="i-top" p="{120;551}" col="w">
+			<mv p="{120;655}">
+				<mv p="{82;690}" col="w">
+					<mv p="{193;856}"/>
+				</mv>
+			</mv>
+		</mv>
+	</gl>
+
+	<gl pnm="igrave.loclVIT.alt" assume-y="yes">
+		<cn nm="i-top" val="{151;446}"/>
+		<mv di="baseline" p="{31;0}">
+			<mv di="lc-serif" p="{31;25}">
+				<sh p="{225;25}"/>
+			</mv>
+		</mv>
+		<callm nm="minim-top">
+      top: i-top
+    </callm>
+		<mv r="i-top" p="{120;551}" col="w">
+			<mv p="{120;655}">
+				<mv p="{155;690}" col="w">
+					<mv p="{48;854}"/>
+				</mv>
+			</mv>
+		</mv>
+	</gl>
+
+	<gl pnm="uni1EC9.loclVIT.alt" assume-y="yes">
+		<cn nm="i-top" val="{151;446}"/>
+		<mv di="baseline" p="{31;0}">
+			<mv di="lc-serif" p="{31;25}">
+				<sh p="{225;25}"/>
+			</mv>
+		</mv>
+		<callm nm="minim-top">
+      top: i-top
+    </callm>
+		<mv r="i-top" p="{120;551}" col="w">
+			<mv p="{120;655}">
+				<mv p="{100;682}" col="w">
+					<mv p="{128;841}">
+						<ip p="{108;716} {99;807} {65;727}"/>
+					</mv>
+				</mv>
+			</mv>
+		</mv>
+	</gl>
+
+	<gl pnm="itilde.loclVIT.alt" assume-y="yes">
+		<cn nm="i-top" val="{151;446}"/>
+		<mv di="baseline" p="{31;0}">
+			<mv di="lc-serif" p="{31;25}">
+				<sh p="{225;25}"/>
+			</mv>
+		</mv>
+		<callm nm="minim-top">
+      top: i-top
+    </callm>
+		<mv r="i-top" p="{120;551}" col="w">
+			<mv p="{120;655}">
+				<mv p="{167;690}" col="w">
+					<mv p="{47;720}">
+						<mv p="{74;767}"/>
+					</mv>
+					<mv p="{194;736}"/>
+				</mv>
+			</mv>
+		</mv>
+	</gl>
+
 	<gl pnm="uniA7C0"> <!-- Old Polish O -->
 		<mv di="cap-height-overshoot" p="{373;676}">
 			<sh p="{404;786}"/>
