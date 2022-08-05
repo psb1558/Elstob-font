@@ -1200,7 +1200,7 @@ type="application/relax-ng-compact-syntax"?>
 
 	<gl pnm="ohorn" assume-y="yes">
 		<mv di="xho" p="{255;446}">
-			<sh p="{450;545}"/>
+			<sh p="{450;557}"/>
 			<mv di="lcrs" p="{255;418}"/>
 		</mv>
 		<mv di="lcbu" p="{255;-12}">
@@ -1380,7 +1380,7 @@ type="application/relax-ng-compact-syntax"?>
 			top-left: {17;435}, top-right: top, bottom: {221;-11}, bottom-ins: {251;37},
 			stem-bottom: {396;-16}
 		</callg>
-		<sh r="top" p="{419;435} {531;545}"/>
+		<sh r="top" p="{419;435} {531;557}"/>
 	</gl>
 
   <gl pnm="v">
@@ -9554,6 +9554,107 @@ type="application/relax-ng-compact-syntax"?>
   <gl pnm="circumflex.case">
     <callg pnm="circumflex"/>
   </gl>
+
+	<gl pnm="uni0302.loclVIT">
+    <setvs axis="y"/>
+    <mv p="{-322;498}">
+      <sh p="{-95;499}"/>
+      <mv p="{-198;644}"/>
+    </mv>
+    <iup axis="y"/>
+  </gl>
+
+	<gl pnm="circumflexcombacutecomb.sc" assume-y="yes">
+		<mv p="{-434;553}">
+			<sh p="{-160;553}"/>
+			<mv p="{-159;615}">
+				<mv p="{-27;753}"/>
+			</mv>
+			<mv p="{-287;698}"/>
+		</mv>
+	</gl>
+
+	<gl pnm="circumflexcombgravecomb.sc" assume-y="yes">
+		<mv p="{-434;553}">
+			<sh p="{-160;553}"/>
+			<mv p="{-439;614}">
+				<mv p="{-576;752}"/>
+			</mv>
+			<mv p="{-310;698}"/>
+		</mv>
+	</gl>
+
+	<gl pnm="hookabovecomb" assume-y="yes">
+		<mv p="{-232;498}">
+			<mv p="{-219;697}">
+				<ip p="{-239;552} {-256;663} {-282;563}"/>
+			</mv>
+		</mv>
+	</gl>
+
+	<gl pnm="hookabovecomb.case" assume-y="yes">
+		<mv p="{-232;718}">
+			<mv p="{-219;917}">
+				<ip p="{-239;772} {-256;883} {-282;783}"/>
+			</mv>
+		</mv>
+	</gl>
+
+	<gl pnm="hookabovecomb.sc" assume-y="yes">
+		<mv p="{-232;551}">
+			<mv p="{-219;750}">
+				<ip p="{-239;605} {-256;716} {-282;616}"/>
+			</mv>
+		</mv>
+	</gl>
+
+	<gl pnm="brevecombhookabovecomb" assume-y="yes">
+		<mv p="{-209;541}">
+			<mv p="{-210;592}">
+				<mv p="{-222;633}" col="w">
+					<mv p="{-209;832}" col="g">
+						<ip p="{-229;687} {-246;798} {-272;698}"/>
+					</mv>
+				</mv>
+			</mv>
+		</mv>
+	</gl>
+
+	<gl pnm="brevecombhookabovecomb.case" assume-y="yes">
+		<mv p="{-209;541}">
+			<mv p="{-210;592}">
+				<mv p="{-212;625}" col="w">
+					<mv p="{-199;824}" col="g">
+						<ip p="{-219;679} {-236;790} {-262;690}"/>
+					</mv>
+				</mv>
+			</mv>
+		</mv>
+	</gl>
+
+	<gl pnm="circumflexcombhookabovecomb" assume-y="yes">
+		<mv p="{-322;498}">
+			<sh p="{-95;499}"/>
+			<mv p="{-55;557}">
+				<mv p="{-42;756}">
+					<ip p="{-62;611} {-79;722} {-105;622}"/>
+				</mv>
+			</mv>
+			<mv p="{-198;644}"/>
+		</mv>
+	</gl>
+
+	<gl pnm="circumflexhookabove.case" assume-y="yes">
+		<mv p="{-434;720}">
+			<sh p="{-160;720}"/>
+			<mv p="{-158;791}">
+				<mv p="{-145;990}">
+					<ip p="{-165;845} {-182;956} {-208;856}"/>
+				</mv>
+			</mv>
+			<mv p="{-287;865}"/>
+		</mv>
+	</gl>
 
   <gl pnm="dotaccent">
     <pm nm="offset" val="0"/>
