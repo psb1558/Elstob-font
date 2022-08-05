@@ -4897,7 +4897,7 @@ type="application/relax-ng-compact-syntax"?>
     <iup axis="y"/>
   </gl>
 
-  <gl pnm="two.osf">
+  <gl pnm="two.osf" xoffset="-5">
     <setvs axis="y"/>
     <callm nm="one-cv-stem">
       pt1: {258;446}, pt2: {226;373}, cv: xheight-overshoot
@@ -6897,10 +6897,10 @@ type="application/relax-ng-compact-syntax"?>
   </gl>
 
   <gl pnm="question.sc">
-    <cn nm="dot-bot" val="34"/>
-    <cn nm="dot-top" val="40"/>
-    <cn nm="stem-bot" val="0"/>
-    <cn nm="stem-top" val="20"/>
+    <cn nm="dot-bot" val="{93;-16}"/>
+    <cn nm="dot-top" val="{88;105}"/>
+    <cn nm="stem-bot" val="{73;140}"/>
+    <cn nm="stem-top" val="{99;505}"/>
     <setvs axis="y"/>
     <mv round="yes" p="dot-bot">
       <mv di="period-height" p="dot-top">
@@ -6913,10 +6913,10 @@ type="application/relax-ng-compact-syntax"?>
   </gl>
 
   <gl pnm="questiondown.sc">
-    <cn nm="dot-bot" val="34"/>
-    <cn nm="dot-top" val="40"/>
-    <cn nm="stem-bot" val="0"/>
-    <cn nm="stem-top" val="13"/>
+    <cn nm="dot-bot" val="{190;407}"/>
+    <cn nm="dot-top" val="{185;528}"/>
+    <cn nm="stem-bot" val="{179;7}"/>
+    <cn nm="stem-top" val="{205;372}"/>
     <setvs axis="y"/>
     <mv round="yes" p="dot-top">
       <mv di="period-height" p="dot-bot">
@@ -9099,10 +9099,10 @@ type="application/relax-ng-compact-syntax"?>
   </gl>
 
   <gl pnm="question">
-    <cn nm="dot-bot" val="36"/>
-    <cn nm="dot-top" val="42"/>
-    <cn nm="stem-bot" val="0"/>
-    <cn nm="stem-top" val="21"/>
+    <cn nm="dot-bot" val="{116;-16}"/>
+    <cn nm="dot-top" val="{111;105}"/>
+    <cn nm="stem-bot" val="{97;168}"/>
+    <cn nm="stem-top" val="{126;666}"/>
     <setvs axis="y"/>
     <mv round="yes" p="dot-bot">
       <mv di="period-height" p="dot-top">
@@ -9115,10 +9115,10 @@ type="application/relax-ng-compact-syntax"?>
   </gl>
 
   <gl pnm="questiondown">
-    <cn nm="dot-bot" val="36"/>
-    <cn nm="dot-top" val="42"/>
-    <cn nm="stem-bot" val="0"/>
-    <cn nm="stem-top" val="14"/>
+    <cn nm="dot-bot" val="{245;346}"/>
+    <cn nm="dot-top" val="{240;467}"/>
+    <cn nm="stem-bot" val="{230;-215}"/>
+    <cn nm="stem-top" val="{259;283}"/>
     <setvs axis="y"/>
     <mv round="yes" p="dot-top">
       <mv di="period-height" p="dot-bot">

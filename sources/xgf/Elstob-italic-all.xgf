@@ -1905,6 +1905,79 @@
     </compile-if>
   </gl>
 
+  <gl pnm="iacute.loclVIT.alt" assume-y="yes">
+    <cn nm="i-top" val="{228;445}"/>
+    <mv di="xho" p="i-top">
+      <mv p="{179;390}"/>
+    </mv>
+    <mv di="lcbu" p="{86;-11}">
+      <mv p="{136;44}"/>
+    </mv>
+    <mv r="i-top" p="{262;551}" col="w">
+      <mv p="{281;663}">
+        <mv p="{266;698}" col="w">
+          <mv p="{401;854}"/>
+        </mv>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="igrave.loclVIT.alt" assume-y="yes">
+    <cn nm="i-top" val="{228;445}"/>
+    <mv di="xho" p="i-top">
+      <mv p="{179;390}"/>
+    </mv>
+    <mv di="lcbu" p="{86;-11}">
+      <mv p="{136;44}"/>
+    </mv>
+    <mv r="i-top" p="{262;551}" col="w">
+      <mv p="{281;663}">
+        <mv p="{343;700}" col="w">
+          <mv p="{208;857}"/>
+        </mv>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="uni1EC9.loclVIT.alt" assume-y="yes">
+    <cn nm="i-top" val="{228;445}"/>
+    <mv di="xho" p="i-top">
+      <mv p="{179;390}"/>
+    </mv>
+    <mv di="lcbu" p="{86;-11}">
+      <mv p="{136;44}"/>
+    </mv>
+    <mv r="i-top" p="{262;551}" col="w">
+      <mv p="{281;663}">
+        <mv p="{276;690}" col="w">
+          <mv p="{349;854}">
+            <ip p="{290;723} {323;820} {253;734}"/>
+          </mv>
+        </mv>
+      </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="itilde.loclVIT.alt" assume-y="yes">
+    <cn nm="i-top" val="{228;445}"/>
+    <mv di="xho" p="i-top">
+      <mv p="{179;390}"/>
+    </mv>
+    <mv di="lcbu" p="{86;-11}">
+      <mv p="{136;44}"/>
+    </mv>
+    <mv r="i-top" p="{262;551}" col="w">
+      <mv p="{281;663}">
+        <mv p="{377;698}" col="w">
+          <mv p="{223;743}">
+            <mv p="{237;793}"/>
+          </mv>
+          <mv p="{390;748}"/>
+        </mv>
+      </mv>
+    </mv>
+  </gl>
+
   <gl pnm="uni0237">
     <mv di="xho" p="{223;445}">
       <mv p="{175;389}"/>
