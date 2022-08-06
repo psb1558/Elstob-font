@@ -236,7 +236,7 @@ then
     find . -maxdepth 1 -name "${familyname}*.otf" -not -name "*Italic.ttf" -exec python ../../add_dsig.py {} \;
   fi
   cd ../..
-  # rm -fr master_ufo
+  rm -fr master_ufo
 
 # Next CFF OpenType fonts, largely duplicating the moves for static TrueType.
 
@@ -260,7 +260,7 @@ then
     find . -maxdepth 1 -name "${familyname}*.otf" -not -name "*Italic.otf" -exec python ../add_dsig.py {} \; -exec psautohint {} \;
   fi
   cd ..
-  # rm -fr master_ufo
+  rm -fr master_ufo
 
 # Finally a variable font. We only build the TrueType flavor, since that seems
 # to work everywhere.
@@ -333,6 +333,6 @@ else
   echo "Cleaning up"
   rm -f ${fontname}-VF.ttf
   rm -f "${fontname}-VF-withSTAT.ttf"
-#  rm -fr master_ufo
-#  rm -fr variable_ttf
+  rm -fr master_ufo
+  rm -fr variable_ttf
 fi
