@@ -1,9 +1,37 @@
 #!/bin/bash
 
+Help()
+{
+  echo "Usage: build_font [-t | -o] [-i] [-a] [-w] [-s NUM] [-p NUM] file.glyphs"
+  echo ""
+  echo "A script for building variable and static versions of the Elstob font."
+  echo "It does several things that are specific to Elstob and probably unsuitable"
+  echo "for other fonts. Either run this script in the sources directory or copy"
+  echo "all files from the sources directory to a build directory and run it there."
+  echo ""
+  echo "  -t Builds static TrueType fonts instead of a variable font"
+  echo "  -o Builds static CFF fonts instead of a variable font"
+  echo "  -a Autohint the variable font with ttfautohint-vf"
+  echo "  -n Do not hint TrueType fonts"
+  echo "  -i Generate a shorter collection of instances"
+  echo "  -w Create a woff2 version of the variable font"
+  echo "  -s NUM (0-15) Set the default italic slant"
+  echo "  -p NUM (0-1)  Set the width of a space"
+  echo ""
+  echo "To create a font with a different family name (e.g. ElstobD), change the"
+  echo "family name in Glyphs."
+  echo ""
+}
+
+Usage()
+{
+  echo "Usage: build_font [-t | -o] [-i] [-a] [-w] [-s NUM] [-p NUM] file.glyphs"
+  echo " Type \"build_font -h\" for help."
+}
+
 if [ $# -lt 1 ]
 then
-    echo "Usage: build_font [-t | -o] [-i] [-a] [-w] file.glyphs"
-    echo " Type \"build_font -h\" for help."
+    Usage
     exit 1
 fi
 
@@ -21,65 +49,60 @@ autohint=0
 
 createwoff=0
 
-for arg in $@
-do
-    if [ $arg == "-h" ] || [ $arg == "--help" ]
-    then
-      echo "Usage: build_font [-t | -o] [-i] [-a] [-w] file.glyphs"
-      echo ""
-      echo "A script for building variable and static versions of the Elstob font."
-      echo "It does several things that are specific to Elstob and probably unsuitable"
-      echo "for other fonts. Either run this script in the sources directory or copy"
-      echo "all files from the sources directory to a build directory and run it there."
-      echo ""
-      echo "  -t Builds static TrueType fonts instead of a variable font"
-      echo "  -o Builds static CFF fonts instead of a variable font"
-      echo "  -a Autohint the variable font with ttfautohint-vf"
-      echo "  -n Do not hint TrueType fonts"
-      echo "  -i Generate a shorter collection of instances"
-      echo "  -w Create a woff2 version of the variable font"
-      echo ""
-      echo "To create a font with a different family name (e.g. ElstobO), change the"
-      echo "family name in Glyphs."
+italslant=6
+
+spacing=0
+
+while getopts "htoanwis:p:" options; do
+  case "${options}" in
+    h)
+      Help
       exit 0
-    fi
-    if [ $arg == "-t" ]
-    then
+      ;;
+    t)
       outputType="s"
       instanceScript="del_instances.xsl"
-    elif [ $arg == "-o" ]
-    then
+      ;;
+    o)
       outputType="o"
       instanceScript="del_instances.xsl"
-    elif [ $arg == "-a" ]
-    then
-  	 autohint=1
-    elif [ $arg == "-n" ]
-    then
-     autohint=-1
-     hintoption="-A"
-    elif [ $arg == "-w" ]
-    then
-  	createwoff=1
-    elif [ $arg == "-i" ]
-    then
-  	instanceScript="del_instances_shorter.xsl"
-    elif [ -f $arg ]
-    then
-	     if [ ${arg##*.} == "glyphs" ]
-	     then
-	        glyphsfile=$arg
-	        ff=$(basename -- $arg)
-	        fontname=${ff%.*}
-	     else
-	        echo "${arg} appears not to be a Glyphs file"
-	        exit 1
-	     fi
-    else
-  	    echo "Unknown argument or non-existent file ${arg}"
-        exit 1
-    fi
-  done
+      ;;
+    a)
+      autohint=1
+      ;;
+    n)
+      autohint=-1
+      hintoption="-A"
+      ;;
+    w)
+      createwoff=1
+      ;;
+    i)
+      instanceScript="del_instances_shorter.xsl"
+      ;;
+    s)
+      italslant=${OPTARG}
+      ;;
+    p)
+      spacing=${OPTARG}
+      ;;
+  esac
+done
+
+if [ $(( $# - $OPTIND )) -ne 0 ]
+then
+  echo "Need name of Glyphs file"
+  exit 1
+fi
+glyphsfile=${@:$OPTIND:1}
+if [ ${glyphsfile##*.} == "glyphs" ]
+then
+   ff=$(basename -- $glyphsfile)
+   fontname=${ff%.*}
+else
+   echo "${glyphsfile} appears not to be a Glyphs file"
+   exit 1
+fi
 
 # If the arguments somehow haven't worked
 
@@ -172,7 +195,7 @@ then
   # the number in l. 14 of the script (use anything between 0 and 1) to
   # change the spacing.
 
-  xsltproc -o $des fix-spacing.xsl $des
+  xsltproc --param sp $spacing -o $des fix-spacing.xsl $des
   if [ $? -ne 0 ]
   then
     echo "fix-spacing script failed"
@@ -184,7 +207,7 @@ then
 
   if [ $fonttype == "italic" ]
   then
-    xsltproc -o $des fix-italic-slant.xsl $des
+    xsltproc --param sl $italslant -o $des fix-italic-slant.xsl $des
     if [ $? -ne 0 ]
     then
       echo "fix-italic-slant script failed"
@@ -213,7 +236,7 @@ then
     find . -maxdepth 1 -name "${familyname}*.otf" -not -name "*Italic.ttf" -exec python ../../add_dsig.py {} \;
   fi
   cd ../..
-  rm -fr master_ufo
+  # rm -fr master_ufo
 
 # Next CFF OpenType fonts, largely duplicating the moves for static TrueType.
 
@@ -237,7 +260,7 @@ then
     find . -maxdepth 1 -name "${familyname}*.otf" -not -name "*Italic.otf" -exec python ../add_dsig.py {} \; -exec psautohint {} \;
   fi
   cd ..
-  rm -fr master_ufo
+  # rm -fr master_ufo
 
 # Finally a variable font. We only build the TrueType flavor, since that seems
 # to work everywhere.
@@ -310,6 +333,6 @@ else
   echo "Cleaning up"
   rm -f ${fontname}-VF.ttf
   rm -f "${fontname}-VF-withSTAT.ttf"
-  rm -fr master_ufo
-  rm -fr variable_ttf
+#  rm -fr master_ufo
+#  rm -fr variable_ttf
 fi
