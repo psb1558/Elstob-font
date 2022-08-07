@@ -41,8 +41,8 @@ Linux, or other similar terminal. The script depends on several utilities
 available in all such systems: `grep`, `sed` (on the Mac, install `gsed` via Homebrew),
 and `xsltproc`. In addition, you will need [fontmake](https://github.com/googlefonts/fontmake)
 and its dependencies (which `pip` will install automatically). If you want the variable fonts to be hinted, install
-[Xgridfit 3](https://github.com/psb1558/xgridfit-3) (not available via `pip`: to install, follow the
-instructions at the site). If you are generating
+[Xgridfit 3](https://github.com/psb1558/xgridfit-3) (not in the PyPI repository—to install, follow the
+instructions at the `Xgridfit` site). If you are generating
 TrueType (.ttf) static fonts and want them to be hinted, install `ttfautohint`
 (available in Linux repositories and via Homebrew). If you are generating CFF
 (.otf) static fonts and want them to be hinted, use `pip` to install `psautohint`.
@@ -54,7 +54,7 @@ which will tell you  how to build the various flavors of Elstob.
 
 By default, the script builds variable fonts. To build static TrueType fonts
 (the most common kind, with the suffix `.ttf`),  use the `-t` option; to build
-static CFF fonts (with the suffix `.otf`), use the `o` option.
+static CFF fonts (with the suffix `.otf`), use the `-o` option.
 
 If you want to rename the font (like “ElstobD,” the desktop version of Elstob),
 use the `-f` option to specify another family name. Other options control
