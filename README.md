@@ -75,7 +75,7 @@ Some examples. To build a variable font with Xgridfit printing:
 ```
 ./build_font Elstob.glyphs
 ```
-To build a minimal collection of TrueType italic static fonts with the family
+To build a reduced collection of TrueType italic static fonts with the family
 name ElstobD and a relatively upright style:
 ```
 ./build_font -t -i -s 12 -f ElstobD Elstob-Italic.glyphs
