@@ -38,10 +38,10 @@ run the build script and install any Python-based dependencies in the environmen
 
 The build script, `build_font`, is a bash script, which you can run in a Mac OS,
 Linux, or other similar terminal. The script depends on several utilities
-available in all such systems: grep, sed (on the Mac, install gsed via Homebrew),
-and xsltproc. In addition, you will need [fontmake](https://github.com/googlefonts/fontmake)
-and its dependencies. If you want the variable fonts to be hinted, install
-[Xgridfit 3](https://github.com/psb1558/xgridfit-3) (to install, follow the
+available in all such systems: `grep`, `sed` (on the Mac, install `gsed` via Homebrew),
+and `xsltproc`. In addition, you will need [fontmake](https://github.com/googlefonts/fontmake)
+and its dependencies (which `pip` will install automatically). If you want the variable fonts to be hinted, install
+[Xgridfit 3](https://github.com/psb1558/xgridfit-3) (not available via `pip`: to install, follow the
 instructions at the site). If you are generating
 TrueType (.ttf) static fonts and want them to be hinted, install `ttfautohint`
 (available in Linux repositories and via Homebrew). If you are generating CFF
