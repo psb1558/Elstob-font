@@ -32,28 +32,54 @@ instructions for installing on their systems.
 
 # Building
 
-To build Elstob, you'll need [fontmake](https://github.com/googlefonts/fontmake), which requires
-Python 3.7 or later. (If your system supplies Python 2.N, install the latest version of Python in
-a virtual environment.) Install fontmake via pip, and, if you want hinting in the variable font,
-install [Xgridfit version 3](https://github.com/psb1558/xgridfit-3), following the instructions at
-the Xgridfit 3 site.
+To build Elstob, you will need Python 3.7 or later. It is best to create a
+[virtual environment](https://docs.python.org/3/library/venv.html) in which to
+run the build script and install any Python-based dependencies in the environment.
 
-In addition to fontmake and its dependencies, you will need ttfautohint (for hinting of
-TrueType static fonts), psautohint (for hinting of CFF fonts), Xgridfit (for hinting the
-variable fonts), GNU sed (already installed on Linux systems; on the Mac install gsed
-via Homebrew), and xsltproc (already installed on Linux systems and on the Mac).
+The build script, `build_font`, is a bash script, which you can run in a Mac OS,
+Linux, or other similar terminal. The script depends on several utilities
+available in all such systems: grep, sed (on the Mac, install gsed via Homebrew),
+and xsltproc. In addition, you will need [fontmake](https://github.com/googlefonts/fontmake)
+and its dependencies. If you want the variable fonts to be hinted, install
+[Xgridfit 3](https://github.com/psb1558/xgridfit-3) (to install, follow the
+instructions at the site). If you are generating
+TrueType (.ttf) static fonts and want them to be hinted, install 'ttfautohint`
+(available in Linux repositories and via Homebrew). If you are generating CFF
+(.otf) static fonts and want them to be hinted, use `pip` to install `psautohint`.
+If you want to generate `woff2` webfonts, install `woff2_config`
 
 To run `build_font`, open a terminal, navigate to the `source` directory, make the file `build_font` executable
-(`chmod +x build_font`), and run it: `./build_font -h`.
-The help message that appears will tell you  how to build the various flavors of Elstob.
+(`chmod +x build_font`), and run it to display the help text, `./build_font -h`,
+which will tell you  how to build the various flavors of Elstob.
 
-If you are building static fonts, you may customize a couple of aspects before building. First, to adjust
-the slant of the italic, open the script `fix-italic-slant.xsl` and change the number on line 14 from the
-default **6** to any number (including decimals) between **0** (very slanted) and **15** (very upright).
+By default, the script builds variable fonts. To build static TrueType fonts
+(the most common kind, with the suffix `.ttf`),  use the `-t` option; to build
+static CFF fonts (with the suffix `.otf`), use the `o` option.
 
-Second, for wider space characters, do the same with the script `fix-spacing.xsl`, but this time choose
-a value between **0** (the default, rather narrow space) and **1** (a much wider space, typical of
-old-style printing). For example, **0.424** yields a space equal to one quarter of an em.
+If you want to rename the font (like “ElstobD,” the desktop version of Elstob),
+use the `-f` option to specify another family name. Other options control
+hinting and other details of font generation.
+
+If you are building static fonts, you may customize a couple of aspects while building.
+The `-s` option controls the slant of the italic. Supply a number between 0 and
+15, where 0 is steeply slanted (in fact, the slant of the original typeface)
+and 15 is nearly upright. The `-p` option controls the width of the space
+character. Supply a number between 0 and 1, where 0 produces a narrow space
+(in the modern fashion), and 1 produces a wider space, as in old books printed
+with metal type.
+
+Once you have decided on your options, run the script once for each Glyphs
+file: `Elstob.glyphs` and `Elstob-Italic.glyphs`.
+
+Some examples. To build a variable font with Xgridfit printing:
+```
+./build_font Elstob.glyphs
+```
+To build a minimal collection of TrueType italic static fonts with the family
+name ElstobD and a relatively upright style:
+```
+./build_font -t -i -s 12 -f ElstobD Elstob-Italic.glyphs
+```
 
 Copyright 2020–2022 by Peter S. Baker.
 
