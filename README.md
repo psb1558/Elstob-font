@@ -43,7 +43,7 @@ and xsltproc. In addition, you will need [fontmake](https://github.com/googlefon
 and its dependencies. If you want the variable fonts to be hinted, install
 [Xgridfit 3](https://github.com/psb1558/xgridfit-3) (to install, follow the
 instructions at the site). If you are generating
-TrueType (.ttf) static fonts and want them to be hinted, install 'ttfautohint`
+TrueType (.ttf) static fonts and want them to be hinted, install `ttfautohint`
 (available in Linux repositories and via Homebrew). If you are generating CFF
 (.otf) static fonts and want them to be hinted, use `pip` to install `psautohint`.
 If you want to generate `woff2` webfonts, install `woff2_config`
