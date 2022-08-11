@@ -46,9 +46,9 @@ instructions at the `Xgridfit` site). If you are generating
 TrueType (.ttf) static fonts and want them to be hinted, install `ttfautohint`
 (available in Linux repositories and via Homebrew). If you are generating CFF
 (.otf) static fonts and want them to be hinted, use `pip` to install `psautohint`.
-If you want to generate `woff2` webfonts, install `woff2_config`
+If you want to generate `woff2` webfonts, install `woff2_compress`.
 
-To run `build_font`, open a terminal, navigate to the `source` directory, make the file `build_font` executable
+To run `build_font`, open a terminal, navigate to the `source` directory, make the file executable
 (`chmod +x build_font`), and run it to display the help text, `./build_font -h`,
 which will tell you  how to build the various flavors of Elstob.
 
@@ -71,7 +71,7 @@ with metal type.
 Once you have decided on your options, run the script once for each Glyphs
 file: `Elstob.glyphs` and `Elstob-Italic.glyphs`.
 
-Some examples. To build a variable font with Xgridfit printing:
+Some examples. To build a variable font with Xgridfit hinting:
 ```
 ./build_font Elstob.glyphs
 ```
