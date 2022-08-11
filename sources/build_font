@@ -2,7 +2,8 @@
 
 Help()
 {
-  echo "Usage: build_font [-t | -o] [-i] [-a] [-w] [-s NUM] [-p NUM] file.glyphs"
+  echo ""
+  echo "Usage: build_font [-t | -o] [-i] [-a] [-w] [-c] [-f FAMILYNAME] [-s NUM] [-p NUM] file.glyphs"
   echo ""
   echo "A script for building variable and static versions of the Elstob font."
   echo "It does several things that are specific to Elstob and probably unsuitable"
@@ -15,18 +16,19 @@ Help()
   echo "  -n Do not hint TrueType fonts"
   echo "  -i Generate a shorter collection of instances"
   echo "  -w Create a woff2 version of the variable font"
-  echo "  -s NUM (0-15) Set the default italic slant"
-  echo "  -p NUM (0-1)  Set the width of a space"
-  echo ""
-  echo "To create a font with a different family name (e.g. ElstobD), change the"
-  echo "family name in Glyphs."
+  echo "  -c Do not clean up temporary files and directories (for debugging)"
+  echo "  -f FAMILYNAME Supply a new family name"
+  echo "  -s NUM (0-15) Set italic slant for static fonts (15 = more upright)"
+  echo "  -p NUM (0-1)  Set width of space for static fonts (1 = wider)"
   echo ""
 }
 
 Usage()
 {
-  echo "Usage: build_font [-t | -o] [-i] [-a] [-w] [-s NUM] [-p NUM] file.glyphs"
-  echo " Type \"build_font -h\" for help."
+  echo
+  echo "Usage: build_font [-t | -o] [-i] [-a] [-w] [-c] [-f FAMILYNAME] [-s NUM] [-p NUM] file.glyphs"
+  echo "    Type \"build_font -h\" for a longer help message."
+  echo
 }
 
 if [ $# -lt 1 ]
@@ -41,6 +43,8 @@ glyphsfile="nofile"
 
 fontname="nofont"
 
+familyName="Elstob"
+
 instanceScript="del_instances_vf.xsl"
 
 hintoption="-a"
@@ -49,11 +53,13 @@ autohint=0
 
 createwoff=0
 
+cleanupafter=1
+
 italslant=6
 
 spacing=0
 
-while getopts "htoanwis:p:" options; do
+while getopts "htoanwcif:s:p:" options; do
   case "${options}" in
     h)
       Help
@@ -77,8 +83,14 @@ while getopts "htoanwis:p:" options; do
     w)
       createwoff=1
       ;;
+    c)
+      cleanupafter=0
+      ;;
     i)
       instanceScript="del_instances_shorter.xsl"
+      ;;
+    f)
+      familyName=${OPTARG}
       ;;
     s)
       italslant=${OPTARG}
@@ -95,14 +107,14 @@ then
   exit 1
 fi
 glyphsfile=${@:$OPTIND:1}
-if [ ${glyphsfile##*.} == "glyphs" ]
+if [ ${glyphsfile##*.} != "glyphs" ]
 then
-   ff=$(basename -- $glyphsfile)
-   fontname=${ff%.*}
-else
    echo "${glyphsfile} appears not to be a Glyphs file"
    exit 1
 fi
+
+ff=$(basename -- $glyphsfile)
+fontname=${ff%.*}
 
 # If the arguments somehow haven't worked
 
@@ -110,6 +122,19 @@ if [ $glyphsfile == "nofile" ] || [ $fontname == "nofont" ]
 then
     echo "Could not derive the filename or fontname."
     exit 1
+fi
+
+# If a new family name is specified, make a copy of the Glyphs file (with the
+# new familyName) in a temp directory and use that copy to build the font.
+# Remove the temp directory at the end of the program.
+
+tmp_d=""
+if [[ $familyName != "Elstob" ]]
+then
+  tmp_d=$(mktemp -d)
+  tmp_f=$tmp_d/$glyphsfile
+  sed -e "s/familyName = Elstob;/familyName = ${familyName};/" $glyphsfile > $tmp_f
+  glyphsfile=$tmp_f
 fi
 
 # Determine whether this is the italic or the roman font
@@ -186,11 +211,10 @@ then
     xsltproc -o $des $instanceScript $des
 fi
 
-# build the fonts. First static TrueType
+# build the fonts. First things to do for both static types
 
-if [ $outputType = "s" ];
+if [ $outputType != "v" ];
 then
-
   # fix-spacing.xsl sets the default spacing via the Spacing axis. Change
   # the number in l. 14 of the script (use anything between 0 and 1) to
   # change the spacing.
@@ -214,6 +238,10 @@ then
       exit 1
     fi
   fi
+fi
+
+if [ $outputType = "s" ];
+then
 
   echo "Running fontmake to build static TrueType instances"
 
@@ -236,13 +264,14 @@ then
     find . -maxdepth 1 -name "${familyname}*.otf" -not -name "*Italic.ttf" -exec python ../../add_dsig.py {} \;
   fi
   cd ../..
-  rm -fr master_ufo
 
 # Next CFF OpenType fonts, largely duplicating the moves for static TrueType.
 
 elif [ $outputType == "o" ]
 then
+
   echo "Running fontmake to build static CFF instances"
+
   xsltproc -o $des fix-spacing.xsl $des
   fontmake -o otf -i -m $des
   if [ $? -ne 0 ]
@@ -260,7 +289,6 @@ then
     find . -maxdepth 1 -name "${familyname}*.otf" -not -name "*Italic.otf" -exec python ../add_dsig.py {} \; -exec psautohint {} \;
   fi
   cd ..
-  rm -fr master_ufo
 
 # Finally a variable font. We only build the TrueType flavor, since that seems
 # to work everywhere.
@@ -276,7 +304,6 @@ else
     exit 1
   fi
 
-  # echo "copying variable_ttf/${fontname}-VF.ttf"
   cp "variable_ttf/${fontname}-VF.ttf" .
 
   echo "Adding dsig table"
@@ -291,13 +318,13 @@ else
     echo "Failed to build STAT table"
     exit 1
   fi
-  #
-  # Hinting section: if autohinting requested, check for existence of
-  #     ttfautohint-vf and run it if available.
+
+  # Hinting: if autohinting requested, check for existence of ttfautohint-vf and
+  #     run it if available.
   # If autohinting not requested, run Xgridfit.
   # If hinting suppressed or either of these methods fails, user will be left
-  # with unhinted font.
-  #
+  #     with unhinted font.
+
   if [ $autohint == 1 ]
   then
     if command -v ttfautohint-vf &> /dev/null
@@ -307,7 +334,10 @@ else
       # Fix a flag in head table, as Google Fonts prescribes; then clean up.
       gftools-fix-hinting.py tmp-font.ttf
       cp tmp-font.ttf.fix "${fontname}.ttf"
-      rm tmp-font.ttf.fix
+      if [ $cleanupafter -ne 0 ]
+      then
+        rm tmp-font.ttf.fix
+      fi
     else
       echo "ttfautohint-vf (the variable-font-enabled version of ttfautohint)"
       echo "is required to auto-hint a variable font."
@@ -330,9 +360,19 @@ else
     echo "Creating woff2 version"
     woff2_compress "${fontname}.ttf"
   fi
-  echo "Cleaning up"
-  rm -f ${fontname}-VF.ttf
-  rm -f "${fontname}-VF-withSTAT.ttf"
+  if [ $cleanupafter -ne 0 ]
+  then
+    rm -f "${fontname}-VF.ttf"
+    rm -f "${fontname}-VF-withSTAT.ttf"
+  fi
+fi
+
+if [ $cleanupafter -ne 0 ]
+then
   rm -fr master_ufo
   rm -fr variable_ttf
+  if [ ! -z "$tmp_d" ]
+  then
+    rm -fr $tmp_d
+  fi
 fi
