@@ -910,6 +910,26 @@ type="application/relax-ng-compact-syntax"?>
     <iup axis="y"/>
   </gl>
 
+	<gl pnm="i" assume-y="yes">
+		<cn nm="top" val="{151;446}"/>
+    <cn nm="serif-bottom" val="{31;0}"/>
+		<cn nm="dotbot" val="{120;551}"/>
+		<cn nm="dottop" val="{120;655}"/>
+    <callm nm="minim-top">
+      top: top
+    </callm>
+    <callm nm="lc-bottom-serif">
+      <wpm nm="bottom-left" val="serif-bottom"/>
+      <wpm nm="top-left" val="serif-bottom + 1"/>
+      <wpm nm="codefrag">
+        <sh r="(serif-bottom + 1)" p="(serif-bottom + 2) (serif-bottom + 14) (serif-bottom + 15)"/>
+      </wpm>
+    </callm>
+		<mv di="dotaccent-bottom" p="dotbot">
+			<mv di="dotaccent-height" p="dottop"/>
+		</mv>
+	</gl>
+
   <gl pnm="dotlessi">
     <pm nm="offset" val="0"/>
     <pm nm="do-iup" val="0"/>
@@ -1039,6 +1059,23 @@ type="application/relax-ng-compact-syntax"?>
 			<mv di="lc-round-stem" p="{255;16}">
 				<ip p="{274;0}"/>
 			</mv>
+		</mv>
+	</gl>
+
+	<gl pnm="j" assume-y="yes">
+		<cn nm="top" val="{151;446}"/>
+    <cn nm="bottom" val="{40;-245}"/>
+    <cn nm="bottom1" val="{56;-202}"/>
+		<cn nm="dotbot" val="{120;551}"/>
+		<cn nm="dottop" val="{120;655}"/>
+    <callm nm="minim-top">
+      top: top
+    </callm>
+    <mv di="lc-descender" p="bottom">
+      <mv p="bottom1"/>
+    </mv>
+		<mv di="dotaccent-bottom" p="dotbot">
+			<mv di="dotaccent-height" p="dottop"/>
 		</mv>
 	</gl>
 
@@ -1370,9 +1407,9 @@ type="application/relax-ng-compact-syntax"?>
     <cn nm="stem-top" val="{156;446}"/>
     <cn nm="stem-bottom" val="{94;10}"/>
     <cn nm="serif-bottom" val="{31;0}"/>
-    <cn nm="arm-top" val="{308;446}"/>
-    <cn nm="arm-below1" val="{270;372}"/>
-    <cn nm="arm-below2" val="{327;339}"/>
+    <cn nm="arm-top" val="{320;446}"/>
+    <cn nm="arm-below1" val="{261;361}"/>
+    <cn nm="arm-below2" val="{333;332}"/>
     <setvs axis="y"/>
     <callm nm="minim-top">
       top: stem-top
@@ -7752,9 +7789,9 @@ type="application/relax-ng-compact-syntax"?>
     <cn nm="serif" val="{123;435}"/>
     <cn nm="stem-top" val="{208;425}"/>
     <cn nm="stem-bottom" val="{223;-11}"/>
-    <cn nm="arm-bottom" val="{71;-11}"/>
-    <cn nm="arm-a" val="{109;63}"/>
-    <cn nm="arm-b" val="{52;96}"/>
+    <cn nm="arm-bottom" val="{59;-11}"/>
+    <cn nm="arm-a" val="{118;74}"/>
+    <cn nm="arm-b" val="{46;103}"/>
     <set nm="bottom-set" p="stem-bottom {334;25} {334;41}"/>
     <setvs axis="y"/>
     <callm nm="serif-sh">
@@ -7775,9 +7812,9 @@ type="application/relax-ng-compact-syntax"?>
     <cn nm="serif" val="{123;630}"/>
     <cn nm="stem-top" val="{208;621}"/>
     <cn nm="stem-bottom" val="{223;-11}"/>
-    <cn nm="arm-bottom" val="{71;-11}"/>
-    <cn nm="arm-a" val="{109;63}"/>
-    <cn nm="arm-b" val="{52;96}"/>
+    <cn nm="arm-bottom" val="{59;-11}"/>
+    <cn nm="arm-a" val="{118;74}"/>
+    <cn nm="arm-b" val="{46;103}"/>
     <set nm="bottom-set" p="stem-bottom {334;25} {334;41}"/>
     <setvs axis="y"/>
     <mv round="yes" p="serif">
@@ -7798,9 +7835,9 @@ type="application/relax-ng-compact-syntax"?>
   <gl pnm="uni027B">
     <cn nm="serif" val="{123;435}"/>
     <cn nm="stem-top" val="{207;425}"/>
-    <cn nm="arm-bottom" val="{71;-11}"/>
-    <cn nm="arm-a" val="{109;63}"/>
-    <cn nm="arm-b" val="{52;96}"/>
+    <cn nm="arm-bottom" val="{59;-11}"/>
+    <cn nm="arm-a" val="{118;74}"/>
+    <cn nm="arm-b" val="{46;103}"/>
     <cn nm="hook-base" val="{377;-245}"/>
     <cn nm="hook-mid" val="{347;-210}"/>
     <cn nm="hook-top" val="{413;-135}"/>
@@ -7820,13 +7857,13 @@ type="application/relax-ng-compact-syntax"?>
   </gl>
 
   <gl pnm="uni027D">
-    <cn nm="stem-top" val="9" coord="{142;446}"/>
-    <cn nm="arm-top" val="33" coord="{295;446}"/>
-    <cn nm="arm-below1" val="39" coord="{257;372}"/>
-    <cn nm="arm-below2" val="37" coord="{314;339}"/>
-    <cn nm="hook-base" val="0" coord="{250;-245}"/>
-    <cn nm="hook-mid" val="17" coord="{220;-210}"/>
-    <cn nm="hook-top" val="21" coord="{286;-135}"/>
+    <cn nm="stem-top" val="{142;446}"/>
+    <cn nm="arm-top" val="{307;446}"/>
+    <cn nm="arm-below1" val="{248;361}"/>
+    <cn nm="arm-below2" val="{320;332}"/>
+    <cn nm="hook-base" val="{250;-245}"/>
+    <cn nm="hook-mid" val="{220;-210}"/>
+    <cn nm="hook-top" val="{286;-135}"/>
     <setvs axis="y"/>
     <callm nm="minim-top">
       top: stem-top
@@ -9674,9 +9711,9 @@ type="application/relax-ng-compact-syntax"?>
 	</gl>
 
 	<gl pnm="hookabovecomb.case" assume-y="yes">
-		<mv p="{-232;718}">
-			<mv p="{-219;917}">
-				<ip p="{-239;772} {-256;883} {-282;783}"/>
+		<mv p="{-247;718}">
+			<mv p="{-219;877}">
+				<ip p="{-232;768} {-239;752} {-282;763}"/>
 			</mv>
 		</mv>
 	</gl>
@@ -9689,7 +9726,7 @@ type="application/relax-ng-compact-syntax"?>
 		</mv>
 	</gl>
 
-	<gl pnm="brevecombhookabovecomb" assume-y="yes">
+	<gl pnm="brevehookabove" assume-y="yes">
 		<mv p="{-209;541}">
 			<mv p="{-210;592}">
 				<mv p="{-222;633}" col="w">
@@ -9701,19 +9738,19 @@ type="application/relax-ng-compact-syntax"?>
 		</mv>
 	</gl>
 
-	<gl pnm="brevecombhookabovecomb.case" assume-y="yes">
-		<mv p="{-209;541}">
-			<mv p="{-210;592}">
-				<mv p="{-212;625}" col="w">
-					<mv p="{-199;824}" col="g">
-						<ip p="{-219;679} {-236;790} {-262;690}"/>
+	<gl pnm="brevehookabove.case" assume-y="yes">
+		<mv p="{-209;721}">
+			<mv p="{-210;772}">
+				<mv p="{-230;805}" col="w">
+					<mv p="{-202;964}" col="g">
+						<ip p="{-215;855} {-222;839} {-265;850}"/>
 					</mv>
 				</mv>
 			</mv>
 		</mv>
 	</gl>
 
-	<gl pnm="circumflexcombhookabovecomb" assume-y="yes">
+	<gl pnm="circumflexhookabove" assume-y="yes">
 		<mv p="{-322;498}">
 			<sh p="{-95;499}"/>
 			<mv p="{-55;557}">
@@ -9729,8 +9766,8 @@ type="application/relax-ng-compact-syntax"?>
 		<mv p="{-434;720}">
 			<sh p="{-160;720}"/>
 			<mv p="{-158;791}">
-				<mv p="{-145;990}">
-					<ip p="{-165;845} {-182;956} {-208;856}"/>
+				<mv p="{-130;950}">
+					<ip p="{-150;825} {-159;916} {-193;836}"/>
 				</mv>
 			</mv>
 			<mv p="{-287;865}"/>
