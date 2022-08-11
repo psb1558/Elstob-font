@@ -94,27 +94,34 @@ format2ItalicAxes = [
 if whichFont == "italic" or whichFont == "both":
     ttfont = ttLib.TTFont(inItalicFont)
     builder.buildStatTable(ttfont,format2ItalicAxes)
-    # ttfont['name'].setName("ElstobItalic", 25, 1, 0, 0)
     ttfont['name'].setName("ElstobItalic", 25, 3, 1, 0x409)
     for inst in ttfont['fvar'].instances:
-        subfamilyName = ttfont['name'].getName(
-            inst.subfamilyNameID,3,1,0x409).toUnicode().replace(" Italic","").replace(" ","")
-        if subfamilyName == "Italic":
-            subfamilyName = "Regular"
-        inst.postscriptNameID = ttfont['name'].addName("ElstobItalic" + "-" + subfamilyName,
-                                                       platforms=((3,1,0x409),))
+        if (inst.coordinates['wght'] == 400.0 and inst.coordinates['opsz'] == 12.0
+            and inst.coordinates['GRAD'] == 0.0 and inst.coordinates['slnt'] == 0.0
+            and inst.coordinates['SPAC'] == 0):
+            inst.subfamilyNameID = 2
+            inst.postscriptNameID = 6
+        else:
+            subfamilyName = ttfont['name'].getName(
+                inst.subfamilyNameID,3,1,0x409).toUnicode().replace(" Italic","").replace(" ","")
+            inst.postscriptNameID = ttfont['name'].addName("ElstobItalic" + "-" + subfamilyName,
+                                                           platforms=((3,1,0x409),))
     ttfont['name'].removeNames(platformID=1)
     ttfont.save(outItalicFont)
 
 if whichFont == "roman" or whichFont == "both":
     ttfont = ttLib.TTFont(inRomanFont)
     builder.buildStatTable(ttfont,format2RomanAxes)
-    # ttfont['name'].setName("ElstobRoman", 25, 1, 0, 0)
     ttfont['name'].setName("ElstobRoman", 25, 3, 1, 0x409)
     for inst in ttfont['fvar'].instances:
-        subfamilyName = ttfont['name'].getName(
-            inst.subfamilyNameID,3,1,0x409).toUnicode().replace(" ","")
-        inst.postscriptNameID = ttfont['name'].addName("ElstobRoman" + "-" + subfamilyName,
-                                                       platforms=((3,1,0x409),))
+        if (inst.coordinates['wght'] == 400.0 and inst.coordinates['opsz'] == 12.0
+            and inst.coordinates['GRAD'] == 0.0 and inst.coordinates['SPAC'] == 0):
+            inst.subfamilyNameID = 2
+            inst.postscriptNameID = 6
+        else:
+            subfamilyName = ttfont['name'].getName(
+                inst.subfamilyNameID,3,1,0x409).toUnicode().replace(" ","")
+            inst.postscriptNameID = ttfont['name'].addName("ElstobRoman" + "-" + subfamilyName,
+                                                           platforms=((3,1,0x409),))
     ttfont['name'].removeNames(platformID=1)
     ttfont.save(outRomanFont)
