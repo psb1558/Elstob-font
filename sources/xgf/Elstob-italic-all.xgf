@@ -1891,6 +1891,23 @@
     </callm>
   </gl>
 
+  <gl pnm="i" assume-y="no">
+    <pm nm="do-iup" val="0"/>
+    <setvs axis="y"/>
+    <mv di="xho" p="{228;445}">
+      <mv p="{179;390}"/>
+    </mv>
+    <mv di="lcbu" p="{86;-11}">
+      <mv p="{136;44}"/>
+    </mv>
+    <mv di="dot-height" p="{262;551}">
+      <mv di="dot-width" p="{281;663}"/>
+    </mv>
+    <compile-if test="do-iup = 0">
+      <iup axis="y"/>
+    </compile-if>
+  </gl>
+
   <gl pnm="dotlessi" assume-y="no" xoffset="8">
     <pm nm="do-iup" val="0"/>
     <setvs axis="y"/>
@@ -1975,6 +1992,20 @@
           <mv p="{390;748}"/>
         </mv>
       </mv>
+    </mv>
+  </gl>
+
+  <gl pnm="j">
+    <mv di="xho" p="{223;445}">
+      <mv p="{175;389}"/>
+    </mv>
+    <mv di="lc-descender" p="{-96;-245}">
+      <mv p="{-61;-199}">
+        <sh p="{-88;-172}"/>
+      </mv>
+    </mv>
+    <mv di="dot-height" p="{263;551}">
+      <mv di="dot-width" p="{282;663}"/>
     </mv>
   </gl>
 
