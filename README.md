@@ -11,7 +11,7 @@ The Elstob font (named for the eighteenth-century Anglo-Saxonist [Elizabeth Elst
 
 Visit the [specimen page](https://psb1558.github.io/Elstob-font/) to see how a variable font works and put Elstob through its paces.
 
-I'll share new developments on [Twitter](https://twitter.com/InPbaker) from time to time and will welcome your feedback there.
+~~I'll share new developments on Twitter from time to time and will welcome your feedback there.~~
 
 # Downloading and Installing
 
