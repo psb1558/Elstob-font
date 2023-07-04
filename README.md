@@ -19,20 +19,17 @@ It is strongly suggested that you avoid downloading Elstob from commercial sites
 as these do not generally offer the latest version, and some downloads may carry
 viruses.
 
-For the Mac, a [Homebrew](https://brew.sh/) package is available. Use this if
-possible, as it will simplify updating to the latest version.
-
 For Linux users, packages exist for Debian, Arch Linux, Parrot, and others. Check
 your distribution for availability.
 
-Windows users, Mac users who cannot use Homebrew, and Linux users whose distributions
+Windows users, Mac users, and Linux users whose distributions
 do not offer Elstob should download from
 [this site](https://github.com/psb1558/Elstob-font/releases/) and follow the
 instructions for installing on their systems.
 
 # Building
 
-To build Elstob, you will need Python 3.7 or later. It is best to create a
+To build Elstob, you will need Python 3.10.4 or later. It is best to create a
 [virtual environment](https://docs.python.org/3/library/venv.html) in which to
 run the build script and install any Python-based dependencies in the environment.
 
@@ -41,8 +38,7 @@ Linux, or other similar terminal. The script depends on several utilities
 available in all such systems: `grep`, `sed` (on the Mac, install `gsed` via Homebrew),
 and `xsltproc`. In addition, you will need [fontmake](https://github.com/googlefonts/fontmake)
 and its dependencies (which `pip` will install automatically). If you want the variable fonts to be hinted, install
-[Xgridfit 3](https://github.com/psb1558/xgridfit-3) (not in the PyPI repository—to install, follow the
-instructions at the `Xgridfit` site). If you are generating
+[Xgridfit 3](https://github.com/psb1558/xgridfit-3), also with pip. If you are generating
 TrueType (.ttf) static fonts and want them to be hinted, install `ttfautohint`
 (available in Linux repositories and via Homebrew). If you are generating CFF
 (.otf) static fonts and want them to be hinted, use `pip` to install `psautohint`.
@@ -81,6 +77,6 @@ name ElstobD and a relatively upright style:
 ./build_font -t -i -s 12 -f ElstobD Elstob-Italic.glyphs
 ```
 
-Copyright 2020–2022 by Peter S. Baker.
+Copyright 2020–2023 by Peter S. Baker.
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1. See the file OFL.txt or visit [http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).
