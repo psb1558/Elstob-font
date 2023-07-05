@@ -159,8 +159,8 @@ then
     exit 1
 fi
 
-# If this line fails, maybe you need sed instead of gsed. But in any case you need
-# Gnu sed.
+# Need Gnu sed. The default (BSD) sed on the Mac won't cut it. There use
+# Homebrew to get gsed.
 
 sedcmd="sed"
 if command -v gsed &> /dev/null
@@ -170,6 +170,8 @@ fi
 
 familyname=`$sedcmd -n '1,/<source.*familyname/s/.*familyname="\([^"]*\)"[^\n]*/\1/p' $des`
 echo "Building font(s) with family name \"${familyname}\""
+
+# PERFORM EDITS ON DESIGNSPACE AND UFO FILES.
 
 # Every glyph with a "us" anchor also needs a "_us" anchor or fontmake (glyphsLib,
 # I think) will mess up the anchors for that glyph. But there is no requirement
@@ -211,13 +213,11 @@ then
     xsltproc -o $des $instanceScript $des
 fi
 
-# build the fonts. First things to do for both static types
-
 if [ $outputType != "v" ];
 then
   # fix-spacing.xsl sets the default spacing via the Spacing axis. Change
-  # the number in l. 14 of the script (use anything between 0 and 1) to
-  # change the spacing.
+  # the number "sp" (use anything between 0 and 1) to change the spacing.
+  # Now use -p option for this (static fonts only).
 
   xsltproc --param sp $spacing -o $des fix-spacing.xsl $des
   if [ $? -ne 0 ]
@@ -226,8 +226,9 @@ then
     exit 1
   fi
 
-  # Set the slant of the static Italic fonts. Change the number in l. 14
-  # of the script (using anything between 0 and 15) to change the slant.
+  # Set the slant of the static Italic fonts. Change the number "sl"
+  # (using anything between 0 and 15) to change the slant.
+  # Now use -s option for this (static fonts only).
 
   if [ $fonttype == "italic" ]
   then
@@ -239,6 +240,8 @@ then
     fi
   fi
 fi
+
+# RUN FONTMAKE TO BUILD THE FONTS (s = static TrueType; o = static CFF; v = variable TrueType).
 
 if [ $outputType = "s" ];
 then
@@ -345,7 +348,7 @@ else
   elif [ $autohint -ne -1 ]
   then
     echo "Running Xgridfit"
-    xgridfit -q -i "${fontname}-VF-withSTAT.ttf" -o "${fontname}.ttf" "xgf/Elstob-${fonttype}-all.xgf"
+    xgridfit -q -i "${fontname}-VF-withSTAT.ttf" -o "${fontname}.ttf" "xgf/Elstob-${fonttype}-all.yaml"
     if [ $? -ne 0 ]
     then
       echo "Failed to hint with Xgridfit."
