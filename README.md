@@ -49,7 +49,7 @@ To run `build_font`, open a terminal, navigate to the `source` directory, make t
 which will tell you  how to build the various flavors of Elstob.
 
 By default, the script builds variable fonts. To build static TrueType fonts
-(the most common kind, with the suffix `.ttf`),  use the `-t` option; to build
+(the most common kind, with the suffix `.ttf`), use the `-t` option; to build
 static CFF fonts (with the suffix `.otf`), use the `-o` option.
 
 If you want to rename the font (like “ElstobD,” the desktop version of Elstob),
