@@ -293,16 +293,16 @@ then
 
   # Add a dummny dsig table in the fonts we've just built.
 
-  cd autohinted/instance_ttf
-  if [ $fonttype == "italic" ]
-  then
-    echo "Adding a DSIG table to the italic font"
-    find . -maxdepth 1 -name "${familyname}*Italic.ttf" -exec python $SOURCEDIR/add_dsig.py {} \;
-  else
-    echo "Adding a DSIG table to the roman font"
-    find . -maxdepth 1 -name "${familyname}*.otf" -not -name "*Italic.ttf" -exec python $SOURCEDIR/add_dsig.py {} \;
-  fi
-  cp $BUILDDIR/autohinted/instance_ttf/Elstob*.ttf $DESTDIR
+  #cd instance_ttf
+  #if [ $fonttype == "italic" ]
+  #then
+  #  echo "Adding a DSIG table to the italic font"
+  #  find . -maxdepth 1 -name "${familyname}*Italic.ttf" -exec python $SOURCEDIR/add_dsig.py {} \;
+  #else
+  #  echo "Adding a DSIG table to the roman font"
+  #  find . -maxdepth 1 -name "${familyname}*.otf" -not -name "*Italic.ttf" -exec python $SOURCEDIR/add_dsig.py {} \;
+  #fi
+  cp $BUILDDIR/instance_ttf/Elstob*.ttf $DESTDIR
 
 # Next CFF OpenType fonts, largely duplicating the moves for static TrueType.
 
@@ -319,15 +319,15 @@ then
     delete_tmp
     exit 1
   fi
-  cd instance_otf
-  if [ $fonttype == "italic" ]
-  then
-    echo "Adding DSIG table and hinting the italic font"
-    find . -maxdepth 1 -name "${familyname}*Italic.otf" -exec python $SOURCEDIR/add_dsig.py {} \; -exec psautohint {} \;
-  else
-    echo "Adding DSIG table and hinting the roman font"
-    find . -maxdepth 1 -name "${familyname}*.otf" -not -name "*Italic.otf" -exec python $SOURCEDIR/add_dsig.py {} \; -exec psautohint {} \;
-  fi
+  #cd instance_otf
+  #if [ $fonttype == "italic" ]
+  #then
+  #  echo "Adding DSIG table and hinting the italic font"
+  #  find . -maxdepth 1 -name "${familyname}*Italic.otf" -exec python $SOURCEDIR/add_dsig.py {} \; -exec psautohint {} \;
+  #else
+  #  echo "Adding DSIG table and hinting the roman font"
+  #  find . -maxdepth 1 -name "${familyname}*.otf" -not -name "*Italic.otf" -exec python $SOURCEDIR/add_dsig.py {} \; -exec psautohint {} \;
+  #fi
   cp $BUILDDIR/instance_otf/Elstob*.otf $DESTDIR
 # Finally a variable font. We only build the TrueType flavor, since that seems
 # to work everywhere.
