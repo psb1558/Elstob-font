@@ -2145,33 +2145,37 @@ glyphs:
   colon:
     y:
       points:
-      - ptid: '{56;-16}'
+      - ptid: '{116;-16}'
         pos: period-bottom
         points:
-        - ptid: '{60;118}'
+        - ptid: '{120;118}'
           rel: blackdist
-          round: false
           dist: period-dist
-      - ptid: '{159;268}'
-        points:
-        - ptid: '{163;401}'
-          rel: blackdist
-          round: false
-          dist: period-dist
+          points:
+          - ptid: '{219;268}'
+            rel: whitedist
+            points:
+            - ptid: '{223;401}'
+              rel: blackdist
+              dist: period-dist
   semicolon:
     y:
       points:
-      - ptid: '{109;-3}'
+      - ptid: '{135;-3}'
+        pos: baseline
         points:
-        - ptid: '{78;119}'
-          rel: blackdist
-          round: false
-      - ptid: '{172;271}'
-        points:
-        - ptid: '{172;401}'
+        - ptid: '{2;-156}'
+          rel: shift
+        - ptid: '{104;119}'
           rel: blackdist
           dist: period-dist
-          round: false
+          points:
+          - ptid: '{198;271}'
+            rel: whitedist
+            points:
+            - ptid: '{198;401}'
+              rel: blackdist
+              dist: period-dist
   equal:
     y:
       points:
@@ -4920,16 +4924,14 @@ glyphs:
   comma:
     y:
       points:
-      - ptid: '{83;119}'
+      - ptid: '{130;-3}'
+        pos: baseline
         points:
-        - ptid: '{-19;-156}'
+        - ptid: '{-3;-156}'
+          rel: shift
+        - ptid: '{99;119}'
           rel: blackdist
-          round: false
-      - ptid: '{114;-3}'
-        ref:
-        - '{83;119}'
-        - '{-19;-156}'
-        rel: interpolate
+          dist: period-dist
   hyphen:
     y:
       points:
@@ -13102,62 +13104,57 @@ glyphs:
   uniA75B:
     y:
       points:
+      - ptid: '{295;-12}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{303;13}'
+          rel: graydist
+          round: false
+        - ptid: '{-4;32}'
+          rel: graydist
+          round: false
+          points:
+          - ptid:
+            - '{-6;50}'
+            - '{80;68}'
+            - '{92;95}'
+            rel: shift
       - ptid: '{262;445}'
         pos: xheight-overshoot
         points:
         - ptid: '{205;394}'
           rel: blackdist
           round: false
-      - ptid: '{295;0}'
-        pos: baseline
-        points:
-        - ptid: '{303;25}'
-          rel: graydist
-          round: false
-        - ptid: '{-4;44}'
-          rel: graydist
-          points:
-          - ptid: '{-6;62}'
-            rel: blackdist
-            round: false
-          - ptid: '{92;107}'
-            rel: blackdist
-            round: false
   uniA75D:
     y:
       points:
+      - ptid: '{405;-12}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{83;-84}'
+          rel: shift
+        - ptid: '{413;13}'
+          rel: graydist
+          round: false
+        - ptid: '{-4;32}'
+          rel: graydist
+          round: false
+          points:
+          - ptid:
+            - '{-6;50}'
+            - '{80;68}'
+            - '{92;95}'
+            rel: shift
       - ptid: '{262;445}'
         pos: xheight-overshoot
         points:
         - ptid: '{205;394}'
           rel: blackdist
           round: false
-      - ptid: '{405;0}'
-        pos: baseline
-        points:
-        - ptid: '{413;25}'
-          rel: graydist
-          round: false
-        - ptid: '{-4;44}'
-          rel: graydist
-          points:
-          - ptid: '{-6;62}'
-            rel: blackdist
-            round: false
-          - ptid: '{92;107}'
-            rel: blackdist
-            round: false
-          - ptid: '{83;-84}'
-            rel: graydist
-            round: false
-            points:
-            - ptid: '{78;-55}'
-              rel: blackdist
-              round: false
       - ptid: '{383;276}'
         ref:
-        - '{-4;44}'
         - '{262;445}'
+        - '{405;-12}'
         rel: interpolate
   uniA760:
     y:
