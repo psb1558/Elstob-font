@@ -2193,37 +2193,39 @@ glyphs:
   question:
     y:
       points:
-      - ptid: '{44;-16}'
+      - ptid: '{75;-16}'
         pos: period-bottom
         points:
-        - ptid: '{70;102}'
+        - ptid: '{77;114}'
           rel: blackdist
-          round: false
-          dist: dot-dist
+          dist: period-dist
           points:
-          - ptid: '{85;192}'
+          - ptid: '{65;192}'
             rel: whitedist
-            round: false
-      - ptid: '{237;665}'
-        points:
-        - ptid: '{200;572}'
-          rel: blackdist
-          round: false
+            points:
+            - ptid: '{185;665}'
+              rel: blackdist
+      - ptid:
+        - '{150;573}'
+        - '{145;379}'
+        - '{158;304}'
+        ref:
+        - '{185;665}'
+        - '{65;192}'
+        rel: interpolate
   exclam:
     y:
       points:
-      - ptid: '{68;-16}'
+      - ptid: '{98;-16}'
         pos: period-bottom
         points:
-        - ptid: '{86;118}'
+        - ptid: '{100;114}'
           rel: blackdist
-          round: false
           dist: period-dist
           points:
-          - ptid: '{121;212}'
-            rel: whitedist
+          - ptid: '{143;212}'
+            rel: graydist
             round: false
-      - ptid: '{351;683}'
   quotedbl:
     y:
       points:
@@ -4949,16 +4951,15 @@ glyphs:
   exclamdown:
     y:
       points:
-      - ptid: '{181;425}'
+      - ptid: '{175;425}'
         points:
-        - ptid: '{163;292}'
+        - ptid: '{173;295}'
           rel: blackdist
           dist: period-dist
           points:
           - ptid: '{128;197}'
             rel: whitedist
             round: false
-      - ptid: '{-102;-273}'
   cent:
     y:
       points:
@@ -5622,21 +5623,25 @@ glyphs:
   questiondown:
     y:
       points:
-      - ptid: '{240;421}'
+      - ptid: '{239;449}'
         points:
-        - ptid: '{213;303}'
+        - ptid: '{237;319}'
           rel: blackdist
-          dist: dot-dist
+          dist: period-dist
           points:
-          - ptid: '{200;214}'
+          - ptid: '{249;241}'
             rel: whitedist
             points:
-            - ptid: '{47;-260}'
+            - ptid: '{129;-232}'
               rel: blackdist
-              points:
-              - ptid: '{85;-167}'
-                rel: blackdist
-                round: false
+      - ptid:
+        - '{164;-140}'
+        - '{156;129}'
+        - '{169;54}'
+        ref:
+        - '{249;241}'
+        - '{129;-232}'
+        rel: interpolate
   uni036A:
     y:
       points:
@@ -15732,16 +15737,16 @@ glyphs:
   o.sc:
     y:
       points:
-      - ptid: '{224;-11}'
+      - ptid: '{229;-11}'
         pos: lc-baseline-undershoot
         points:
-        - ptid: '{193;20}'
+        - ptid: '{198;20}'
           rel: blackdist
           round: false
-      - ptid: '{288;506}'
+      - ptid: '{293;506}'
         pos: sc-height-overshoot
         points:
-        - ptid: '{315;478}'
+        - ptid: '{320;478}'
           rel: blackdist
           round: false
   p.sc:
@@ -15895,16 +15900,16 @@ glyphs:
   s.sc:
     y:
       points:
-      - ptid: '{249;505}'
+      - ptid: '{254;505}'
         pos: sc-height-overshoot
         points:
-        - ptid: '{266;473}'
+        - ptid: '{271;473}'
           rel: blackdist
           round: false
-      - ptid: '{152;-11}'
+      - ptid: '{157;-11}'
         pos: lc-baseline-undershoot
         points:
-        - ptid: '{140;21}'
+        - ptid: '{145;21}'
           rel: blackdist
           round: false
   t.sc:
@@ -16475,49 +16480,40 @@ glyphs:
   exclam.sc:
     y:
       points:
-      - ptid: '{13;-14}'
+      - ptid: '{93;-16}'
         pos: period-bottom
         points:
-        - ptid: '{23;91}'
+        - ptid: '{95;114}'
           rel: blackdist
-          dist: dot-dist
+          dist: period-dist
           points:
-          - ptid: '{44;153}'
+          - ptid: '{98;160}'
             rel: whitedist
-            points:
-            - ptid: '{222;488}'
-              rel: blackdist
-              round: false
+            round: false
   exclam.ss18:
     y:
       points:
-      - ptid: '{130;-16}'
+      - ptid: '{138;-16}'
         pos: period-bottom
         points:
-        - ptid: '{148;118}'
+        - ptid: '{140;114}'
           rel: blackdist
           dist: period-dist
           points:
           - ptid: '{183;212}'
             rel: whitedist
-            points:
-            - ptid: '{413;683}'
-              rel: blackdist
-              round: false
+            round: false
   exclamdown.sc:
     y:
       points:
-      - ptid: '{-78;-194}'
+      - ptid: '{101;309}'
         points:
-        - ptid: '{62;141}'
+        - ptid: '{99;179}'
           rel: blackdist
+          dist: period-dist
           points:
-          - ptid: '{125;204}'
+          - ptid: '{96;133}'
             rel: whitedist
-            points:
-            - ptid: '{134;309}'
-              rel: blackdist
-              dist: dot-dist
   f.alt:
     y:
       points:
@@ -17714,55 +17710,71 @@ glyphs:
   question.sc:
     y:
       points:
-      - ptid: '{16;-14}'
+      - ptid: '{75;-16}'
         pos: period-bottom
         points:
-        - ptid: '{30;82}'
+        - ptid: '{77;114}'
           rel: blackdist
-          dist: dot-dist
+          dist: period-dist
           points:
-          - ptid: '{42;142}'
+          - ptid: '{61;149}'
             rel: whitedist
             points:
-            - ptid: '{162;476}'
+            - ptid: '{148;497}'
               rel: blackdist
-              points:
-              - ptid: '{133;402}'
-                rel: blackdist
-                round: false
+      - ptid:
+        - '{118;420}'
+        - '{123;292}'
+        - '{139;228}'
+        ref:
+        - '{61;149}'
+        - '{148;497}'
+        rel: interpolate
   question.ss18:
     y:
       points:
-      - ptid: '{116;-16}'
+      - ptid: '{166;-16}'
         pos: period-bottom
         points:
-        - ptid: '{142;102}'
+        - ptid: '{168;114}'
           rel: blackdist
-          dist: dot-dist
+          dist: period-dist
           points:
-          - ptid: '{157;192}'
+          - ptid: '{156;192}'
             rel: whitedist
-      - ptid: '{309;665}'
-        points:
-        - ptid: '{272;572}'
-          rel: blackdist
-          round: false
+            points:
+            - ptid: '{276;665}'
+              rel: blackdist
+      - ptid:
+        - '{241;573}'
+        - '{236;379}'
+        - '{249;304}'
+        ref:
+        - '{276;665}'
+        - '{156;192}'
+        rel: interpolate
   questiondown.sc:
     y:
       points:
-      - ptid: '{27;-186}'
+      - ptid: '{161;304}'
         points:
-        - ptid: '{56;-112}'
+        - ptid: '{159;174}'
           rel: blackdist
-          round: false
-      - ptid: '{173;304}'
-        points:
-        - ptid: '{160;208}'
-          rel: blackdist
-          dist: dot-dist
+          dist: period-dist
           points:
-          - ptid: '{147;148}'
+          - ptid: '{175;139}'
             rel: whitedist
+            points:
+            - ptid: '{88;-209}'
+              rel: blackdist
+      - ptid:
+        - '{97;60}'
+        - '{113;-4}'
+        - '{118;-132}'
+        ref:
+        - '{175;139}'
+        - '{88;-209}'
+        rel: interpolate
   quotedblleft.ss18:
     y:
       points:
