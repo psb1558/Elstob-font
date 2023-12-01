@@ -1,5 +1,7 @@
 .DS_Store
 sources/.DS_Store
+sources/dist/
+sources/build/
 build/
 sources/xgf/schemas.xml
 Features and CharSet.indd
@@ -9,3 +11,8 @@ images/orm_g_upper_12r.png
 images/orm_g_upper_lower_12r.png
 sources/Elstob-2048.glyphs
 sources/Elstob-Italic-2048.glyphs
+docs/Elstob-Italic.ttf
+docs/Elstob.ttf
+docs/ElstobManual.aux
+docs/ElstobManual.log
+docs/ElstobManual.out
