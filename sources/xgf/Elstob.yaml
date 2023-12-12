@@ -2156,7 +2156,7 @@ glyphs:
         - '{28;0}'
         - '{28;25}'
         rel: interpolate
-      - ptid: '{148;726}'
+      - ptid: '{147;726}'
         pos: lc-ascender
         points:
         - ptid: '{37;690}'
@@ -6512,12 +6512,6 @@ glyphs:
           - ptid: '{40;395}'
             rel: blackdist
             round: false
-      - ptid: '{120;551}'
-        pos: dot-bottom
-        points:
-        - ptid: '{120;655}'
-          rel: blackdist
-          dist: dot-width
       - ptid: '{0;-245}'
         pos: lc-descender
         points:
@@ -6526,14 +6520,20 @@ glyphs:
           round: false
       - ptid: '{45;-9}'
         ref:
-        - '{0;-245}'
         - '{151;446}'
+        - '{0;-245}'
         rel: interpolate
         round: true
         points:
         - ptid: '{63;-36}'
           rel: blackdist
           round: false
+      - ptid: '{120;541}'
+        pos: dot-bottom
+        points:
+        - ptid: '{120;645}'
+          rel: blackdist
+          dist: dot-width
   uni029F:
     y:
       points:
