@@ -1,6 +1,35 @@
 \documentclass[12pt]{article}
 
-\usepackage[opszadjust=-2]{Elstob}
+\usepackage[opszadjust=-2,
+MainRegularSizeFeatures={
+    SizeFeatures={
+        {Size={-10}, RawFeature={axis={wght=450,opsz=8}}},
+        {Size={10-13}, RawFeature={axis={wght=370,opsz=10}}},
+        {Size={13-}, RawFeature={axis={wght=350,opsz=16}}}
+    }
+},
+MainItalicSizeFeatures={
+    SizeFeatures={
+        {Size={-10}, RawFeature={axis={wght=450,opsz=8,slnt=12}}},
+        {Size={10-13}, RawFeature={axis={wght=370,opsz=12,slnt=10}}},
+        {Size={13-}, RawFeature={axis={wght=350,opsz=16,slnt=12}}}
+    }
+},
+MainBoldSizeFeatures={
+    SizeFeatures={
+        {Size={-10}, RawFeature={axis={wght=650,opsz=8}}},
+        {Size={10-13}, RawFeature={axis={wght=600,opsz=12}}},
+        {Size={13-}, RawFeature={axis={wght=5700,opsz=16}}}
+    }
+},
+MainBoldItalicSizeFeatures={
+    SizeFeatures={
+        {Size={-10}, RawFeature={axis={wght=650,opsz=8,slnt=12}}},
+        {Size={10-13}, RawFeature={axis={wght=600,opsz=12,slnt=12}}},
+        {Size={13-}, RawFeature={axis={wght=5700,opsz=16,slnt=12}}}
+    }
+}
+]{Elstob}
 \setfontface\samplefootnote{Elstob}[
     Renderer = HarfBuzz,
     SizeFeatures = {{Size={5-}, RawFeature={axis={wght=490,opsz=6}}}},
@@ -29,7 +58,10 @@
 \usepackage{supertabular}
 \usepackage[table,dvipsnames]{xcolor}
 \definecolor{myLightBlue}{RGB}{203,228,249}
+\definecolor{SlateGray}{RGB}{112,128,144}
 \newcommand{\bluerow}{\rowcolor{myLightBlue}}
+\usepackage{titlesec}
+\titleformat{\section}[hang]{\Large\color{SlateGray}}{\thesection.}{1em}{}
 \linespread{1.1}
 \title{Elstob}
 \author{Peter S. Baker}
@@ -42,11 +74,12 @@
 
 \section{Introduction}
 
-This package supports Elstob, the variable font for medievalists (though it is useful to
-scholars in a number of fields). The package requires \lltech, since {\ltech} is
-the only flavor of \TeX that supports variable fonts. Elstob is not in CTAN, so you must
+This package supports Elstob, the variable font for medievalists (and others).
+The package requires \lltech, since {\ltech} is
+the only flavor of {\TeX} that supports variable fonts. Elstob is not in CTAN, so you must
 install the font in your system in order to use it (be sure to get “Elstob,” the variable
-version, not “ElstobD,” the static font). This package loads
+version, not “ElstobD,” the static font). Place the file {\verb|Elstob.sty|} in the same
+directory with the document you're working on. This package loads
 \fspec, so it is not necessary to load that package separately, even if you are using
 other fonts alongside Elstob.
 
@@ -55,26 +88,25 @@ shape. These changes in shape are defined in one or more \textbf{axes}---for exa
 \textbf{Weight} (Light, Bold, etc.) and \textbf{Width} (Condensed, Expanded). A traditional
 “static” font family also has axes, but as every style requires a separate font file,
 the number of available styles is severely constrained. A variable font, by contrast,
-offers a limitless number of styles in a single file: you select from these styles with
-number values from the axes.
-
-Elstob has four axes (five in the italic):
+offers a practically limitless number of styles in a single file: you select from these styles
+by making a selection of number values from the axes, of which Elstob has four (five in the italic):
 
 \begin{description}
-    \item[Weight] Possible weights run from ExtraLight (200) to ExtraBold (800). 
-    \item[Optical Size] Optical size is a complex adjustment of a glyph's shape to
-    optimize for particular sizes. For small sizes (e.g. footnotes), glyphs are usually
+    \item[Weight] Possible weights run from ExtraLight (200) to ExtraBold (800). By
+    convention, Regular is 400 and Bold is 700.
+    \item[Optical Size] A complex adjustment of a glyph's shape to
+    optimize for particular type sizes. For small sizes (e.g. footnotes), glyphs are
     a little heavier and wider, and the xheight is higher. Values (corresponding to
     point sizes) run from 6 to 18.
     \item[Slant] Italic only. The axis has values from 0 to 15, where 0 is most
-    slanted and 15 is least slanted.
+    slanted and 15 is least slanted. The default is 8.
     \item[Grade] Increases the weight of glyphs without changing their width. This
-    axis is most useful to web application and likely will not interest \LaTeX Users
-    much. Possible values are 0–1 (and fractional values are permitted).
+    axis is most useful in web applications and likely will not interest {\LaTeX} users
+    much. Possible values are 0–1 (fractional values are permitted). The default is 0.
     \item[Spacing] Increases the width of space characters. In combination with
     Stylistic Set 18 “Old-Style Punctuation Spacing,” this can approximate the
-    spacing used by early printed books, which was generally more generous than now.
-    Possible values are 0–1.
+    spacing used by early printed books, which was more generous than now.
+    Possible values are 0–1, with 0 as the default.
 \end{description}
 
 \noindent You can access all these axes through this package, but
@@ -84,7 +116,7 @@ Spacing, and Slant.
 
 \section{Loading Elstob}
 
-Load the package in the usual way, with {\verb|\usepackage{JunicodeVF}|}.
+Load the package in the usual way, with {\verb|\usepackage{Elstob}|}.
 By default, the main font is not a set of static outlines whose proportions
 remain the same though they can be scaled, but rather a set of
 \emph{variable} outlines that change their Weight and Optical Size as the text size increases
@@ -115,10 +147,13 @@ as well:
     \item[light] The weight of the type for the main text is Light. As with the default
     style (and all styles defined by these options), “Light” is a set of outlines differing
     in weight and optical size.
+    \item[extralight] The weight of the type for the main text is ExtraLight.
     \item[medium] The weight of the type for the main text is Medium---that is, darker than
     Regular but lighter than Bold.
     \item[semibold] The weight of bold type is somewhat lighter than the usual bold. This may be a
     good choice if you have selected the \textbf{light} option.
+    \item[extrabold] The weight of bold type is somewhat heavier than the usual bold. This may be a
+    good choice if you have selected the \textbf{medium} option.
     \item[opszadjust] Adjusts the optical size. By default, the value of this axis
     is 8 for 8pt text, 12 for 12pt, etc. (within the range 6–18). But if you pass the
     option {\verb|opszadjust=-2|}, the optical size axis will have 6 for 8pt type, 10 for
@@ -164,82 +199,45 @@ they are passed straight through to \fspec.
 
 If you want to customize the four basic styles of the main text, use
 \textbf{MainRegularSizeFeatures}, \textbf{MainItalicSizeFeatures}, and so on.
-For example, here are the default \textbf{SizeFeatures} for Elstob's 
-Regular face:
+For example, here are the \textbf{SizeFeatures} for this document:
 
 \footnotesize
 \begin{verbatim}
     MainRegularSizeFeatures={
         SizeFeatures={
-            {Size={-6.5},       RawFeature={
-                axis={wght=490,opsz=6}
-            }},
-            {Size={6.5-7.5},    RawFeature={
-                axis={wght=477.5,opsz=7}
-            }},
-            {Size={7.5-8.5},    RawFeature={
-                axis={wght=465,opsz=8}
-            }},
-            {Size={8.5-9.5},    RawFeature={
-                axis={wght=452.5,opsz=9}
-            }},
-            {Size={9.5-10.5},   RawFeature={
-                axis={wght=440,opsz=10}
-            }},
-            {Size={10.5-11.5},  RawFeature={
-                axis={wght=415,opsz=11}
-            }},
-            {Size={11.5-12.5},  RawFeature={
-                axis={wght=390,opsz=12}
-            }},
-            {Size={12.5-13.5},  RawFeature={
-                axis={wght=370,opsz=13}
-            }},
-            {Size={13.5-14.5},  RawFeature={
-                axis={wght=365,opsz14}
-            }},
-            {Size={14.5-15.5},  RawFeature={
-                axis={wght=360,opsz=15}
-            }},
-            {Size={15.5-16.5},  RawFeature={
-                axis={wght=355,opsz=16}
-            }},
-            {Size={16.5-17.5},  RawFeature={
-                axis={wght=350,opsz=17}
-            }},
-            {Size={17.5-},      RawFeature={
-                axis={wght=345,opsz=18}
-            }}
+            {Size={-10}, RawFeature={axis={wght=450,opsz=8}}},
+            {Size={10-13}, RawFeature={axis={wght=370,opsz=10}}},
+            {Size={13-}, RawFeature={axis={wght=350,opsz=16}}}
         }
-    }
-\end{verbatim}\normalsize
-
-\noindent This package defines thirteen size records for each of the main styles, but if you
-define your own size records, you won't need so many. Instead, define size records only for
-the sizes your document will actually be using. Suppose, for example, you are using Elstob
-only for main text and footnotes (you're using another font for headers).
-Then your customization for \textbf{MainRegularSizeFeatures} might look like this:
-
-\footnotesize
-\begin{verbatim}
-    MainRegularSizeFeatures={
+    },
+    MainItalicSizeFeatures={
         SizeFeatures={
-            {Size={-10}, RawFeature={
-                axis={wght=425,opsz=8}
-            }},
-            {Size={10-}, RawFeature={
-                axis={wght=400,opsz=12}
-            }}
+            {Size={-10}, RawFeature={axis={wght=450,opsz=8,slnt=12}}},
+            {Size={10-13}, RawFeature={axis={wght=370,opsz=10,slnt=12}}},
+            {Size={13-}, RawFeature={axis={wght=350,opsz=16,slnt=12}}}
+        }
+    },
+    MainBoldSizeFeatures={
+        SizeFeatures={
+            {Size={-10}, RawFeature={axis={wght=650,opsz=8}}},
+            {Size={10-13}, RawFeature={axis={wght=600,opsz=10}}},
+            {Size={13-}, RawFeature={axis={wght=5700,opsz=16}}}
+        }
+    },
+    MainBoldItalicSizeFeatures={
+        SizeFeatures={
+            {Size={-10}, RawFeature={axis={wght=650,opsz=8,slnt=12}}},
+            {Size={10-13}, RawFeature={axis={wght=600,opsz=10,slnt=12}}},
+            {Size={13-}, RawFeature={axis={wght=5700,opsz=16,slnt=12}}}
         }
     }
 \end{verbatim}\normalsize
 
-\noindent That is, for sizes up to 10pt, you set the weight axis at 425 and optical size at 8.
-For sizes greater than 10pt, you set the weight axis at 400 and optical size at 12. Repeat 
-this (experimenting to find the right settings) for \textbf{MainItalicSizeFeatures},
-\textbf{MainBoldSizeFeatures}, and \textbf{MainBoldItalicSizeFeatures} (be sure to include
-the Slant (\textbf{slnt}) axis for the italic faces, and the Space (\textbf{SPAC}) axis if you
-want to customize word-spacing).
+\noindent By default, the Elstob package defines thirteen size-ranges, but here we
+need only three---for footnotes (less than 10pt),
+main text (10-13pt), and headers (greater than 13pt). For each of these sizes, the
+weight is a little lighter than the default, and the optical size a little less, giving
+the text a relatively open look. \textit{Italic type is relatively upright}.
 
 \section{Selecting Alternate Styles}
 
@@ -339,12 +337,12 @@ append “Italic” to any of the others, except “eRegular”):
 
 \noindent Use these commands
 to shift temporarily to a style other than that of the main text.
-For example, to shift to the 6pt Light style for a short phrase, use
+For example, to shift to the 6pt Medium style for a short phrase, use
 this code:
 \begin{center}
-{\small\verb|{\eSixPtLight a short phrase}|}.
+{\small\verb|{\eSixPtMedium a short phrase}|}.
 \end{center}
-The result: {\eSixPtLight a short phrase}.
+The result: {\eSixPtMedium a short phrase}.
 
 To add features to any of these styles, use the style name
 (without the prefixed “e” and with “Features” appended)
@@ -375,7 +373,7 @@ option, but only \textbf{SemiboldFeatures}.
 
 \section{Other Commands}
 
-This package's other commands are offered as conveniences---shorter and more
+This package's other commands (listed in Table 1) are offered as conveniences---shorter and more
 mnemonic than the {\fspec} commands they invoke (though of course all {\fspec} commands
 remain available). Each of these commands
 also has a corresponding “text” command that works like 
@@ -388,10 +386,9 @@ applied by these commands, see the \textit{Elstob Manual}.
 
 %\begin{center}
 \begin{table}[ht]
-    \tablehead{\hline}
-    \tabletail{\hline}
     \centering
-    \begin{supertabular}{| l | p{2.75in} |}
+    \begin{tabular}{| l | p{2.75in} |}
+        \hline
     \bluerow\textbackslash AltThornEth & Applies ss01, Alternate thorn and eth.\\
     \textbackslash InsularLetterForms & Applies ss02, Insular letter-forms.\\
     \bluerow\textbackslash ContextualLongS & Applies ss08, Contextual long s.\\
@@ -403,18 +400,19 @@ applied by these commands, see the \textit{Elstob Manual}.
     \bluerow\textbackslash ContextualRRotunda & Applies ss16, Contextual r rotunda.\\
     \textbackslash OldStylePunctuation & Applies ss18, Old-style Punctuation.\\
     \bluerow\textbackslash ecv, \textbackslash textcv & Applies a Character Variant feature.\\
-    \end{supertabular}
+    \hline
+    \end{tabular}
 %    \end{center}
 \caption{Stylistic Set and Character Variant Commands}
 \end{table}
 
-\noindent The syntax of \textbackslash ecv
+The syntax of \textbackslash ecv
 is {\verb|\ecv[num]{num}|}, where the second (required) argument is the number of the Character Variant feature,
 and the first (optional) argument is an index into the variants provided by that feature (starting with zero, the default).
 \textbackslash textcv takes an additional required argument ({\verb|\textcv[num]{num}{text}|}— the text to which the
 feature should be applied.
 
-Character Variant features can also be selected with mnemonics, listed below. For example, a feature for
+Character Variant features can also be selected with mnemonics, listed in Table 2. For example, a feature for
 lowercase \textbf{g} can be expressed as
 
 \begin{center}
@@ -423,38 +421,22 @@ lowercase \textbf{g} can be expressed as
 
 \noindent yielding \textbf{\textcv[1]{\ecvg}{g}}, one of the Middle English poet Orm’s phonetic characters.
 
-\begin{multicols}{3}
-    \textbackslash ecvD
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|l|l|l|}
+    \hline
+    \textbackslash ecvD & \textbackslash ecvd & \textbackslash ecvF\\
 
-    \textbackslash ecvd
+    \textbackslash ecvf & \textbackslash ecvG & \textbackslash ecvg\\
 
-    \textbackslash ecvF
+    \textbackslash ecvi & \textbackslash ecvR & \textbackslash ecvr\\
 
-    \textbackslash ecvf
+    \textbackslash ecvS & \textbackslash ecvs & \textbackslash ecvT\\
 
-    \textbackslash ecvG
-
-    \textbackslash ecvg
-
-    \textbackslash ecvi
-
-    \textbackslash ecvR
-
-    \textbackslash ecvr
-
-    \textbackslash ecvS
-
-    \textbackslash ecvs
-
-    \textbackslash ecvT
-
-    \textbackslash ecvt
-
-    \textbackslash ecvTironianEt
-
-    \textbackslash ecvquestion
-\end{multicols}
-
-\textit{\textsc{Now is the time.}}
+    \textbackslash ecvt & \textbackslash ecvTironianEt & \textbackslash ecvquestion\\
+    \hline
+\end{tabular}
+\caption{Mnemonics for Character Variants}
+\end{table}
 
 \end{document}
