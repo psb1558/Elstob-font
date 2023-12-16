@@ -82,7 +82,7 @@ The package requires \lltech, since {\ltech} is
 the only flavor of {\TeX} that supports variable fonts. Elstob is not in CTAN, so you must
 install the font in your system in order to use it (be sure to get “Elstob,” the variable
 version, not “ElstobD,” the static font). Place the files \src{Elstob.sty} and
-{\color{BrickRed}\verb|alt_styles.lua|} in the same
+\src{Elstob.lua} in the same
 directory with the document you're working on. This package loads
 \fspec, so it is not necessary to load that package separately, even if you are using
 other fonts alongside Elstob.
@@ -102,8 +102,8 @@ by making a selection of number values from the axes, of which Elstob has four (
     optimize for particular type sizes. For small sizes (e.g. footnotes), glyphs are
     a little heavier and wider, and the xheight is higher. Values (corresponding to
     point sizes) run from 6 to 18.
-    \item[Slant] Italic only. The axis has values from 0 to 15, where 0 is most
-    slanted and 15 is least slanted. The default is 8.
+    \item[Slant] Italic only. The axis has values from 0 to 15, where 0 is {\mostslanted most
+    slanted} and 15 is {\leastslanted least slanted}. The default is 8.
     \item[Grade] Increases the weight of glyphs without changing their width. This
     axis is most useful in web applications and likely will not interest {\LaTeX} users
     much. Possible values are 0–1 (fractional values are permitted). The default is 0.

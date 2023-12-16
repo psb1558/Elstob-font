@@ -1,4 +1,4 @@
--- alt_styles.lua
+-- Elstob.lua
 -- Copyright 2023 by Peter S. Baker
 --
 -- This work may be distributed and/or modified under the
@@ -7,10 +7,9 @@
 -- The latest version of this license is at
 --   https://www.latex-project.org/lppl.txt
 --
--- This work consists of the files Elstob.sty and alt_styles.lua.
+-- This work consists of the files Elstob.sty and Elstob.lua.
 
--- This file is for declaring and instantiating the 50+ alterante styles
--- supplied by the Elstob variable font package.
+-- This file provides helper functions for Elstob.sty.
 
     alt_styles =
     {
@@ -56,6 +55,61 @@
         TenPtExtraBold = {800, 10},
         FourteenPtExtraBold = {800, 14},
         EighteenPtExtraBold = {800, 18}
+    }
+
+    optical_sizes = {
+        elstob_at_RopszOne = 6,
+        elstob_at_IopszOne = 6,
+        elstob_at_BopszOne = 6,
+        elstob_at_BIopszOne = 6,
+        elstob_at_RopszTwo = 7,
+        elstob_at_IopszTwo = 7,
+        elstob_at_BopszTwo = 7,
+        elstob_at_BIopszTwo = 7,
+        elstob_at_RopszThree = 8,
+        elstob_at_IopszThree = 8,
+        elstob_at_BopszThree = 8,
+        elstob_at_BIopszThree = 8,
+        elstob_at_RopszFour = 9,
+        elstob_at_IopszFour = 9,
+        elstob_at_BopszFour = 9,
+        elstob_at_BIopszFour = 9,
+        elstob_at_RopszFive = 10,
+        elstob_at_IopszFive = 10,
+        elstob_at_BopszFive = 10,
+        elstob_at_BIopszFive = 10,
+        elstob_at_RopszSix = 11,
+        elstob_at_IopszSix = 11,
+        elstob_at_BopszSix = 11,
+        elstob_at_BIopszSix = 11,
+        elstob_at_RopszSeven = 12,
+        elstob_at_IopszSeven = 12,
+        elstob_at_BopszSeven = 12,
+        elstob_at_BIopszSeven = 12,
+        elstob_at_RopszEight = 13,
+        elstob_at_IopszEight = 13,
+        elstob_at_BopszEight = 13,
+        elstob_at_BIopszEight = 13,
+        elstob_at_RopszNine = 14,
+        elstob_at_IopszNine = 14,
+        elstob_at_BopszNine = 14,
+        elstob_at_BIopszNine = 14,
+        elstob_at_RopszTen = 15,
+        elstob_at_IopszTen = 15,
+        elstob_at_BopszTen = 15,
+        elstob_at_BIopszTen = 15,
+        elstob_at_RopszEleven = 16,
+        elstob_at_IopszEleven = 16,
+        elstob_at_BopszEleven = 16,
+        elstob_at_BIopszEleven = 16,
+        elstob_at_RopszTwelve = 17,
+        elstob_at_IopszTwelve = 17,
+        elstob_at_BopszTwelve = 17,
+        elstob_at_BIopszTwelve = 17,
+        elstob_at_RopszThirteen = 18,
+        elstob_at_IopszThirteen = 18,
+        elstob_at_BopszThirteen = 18,
+        elstob_at_BIopszThirteen = 18
     }
 
 -- Make commands and declare options
@@ -106,4 +160,17 @@ function mkfontcommands()
         tex.print("\\elstob@newfont{\\" .. italfontname .. "}{Elstob-Italic}{\\" .. romdef .."}{\\" .. italsizedef .. "}")
     end
 end
-  
+
+function adjustopsz(original, adjustment)
+    adjusted = original + adjustment
+    if adjusted > 18 then adjusted = 18 end
+    if adjusted < 6 then adjusted = 6 end
+    return adjusted
+end
+
+function mkopszcommands(adjustment)
+    for k, oz in pairs(optical_sizes) do
+        cmd, n = string.gsub(k, "_at_", "@")
+        tex.print("\\newcommand*{\\" .. cmd .. "}{" .. adjustopsz(oz,adjustment) .. "}")
+    end
+end

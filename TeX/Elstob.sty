@@ -7,16 +7,14 @@
 % The latest version of this license is at
 %   https://www.latex-project.org/lppl.txt
 %
-% This work consists of the files Elstob.sty and alt_styles.lua.
+% This work consists of the files Elstob.sty and Elstob.lua.
 
 \ProvidesPackage{Elstob}[%
-    2023/12/08 (Peter Baker) Supports the Elstob variable font for LuaLaTeX.]
+    2023/12/16 (Peter Baker) Supports the Elstob variable font for LuaLaTeX.]
 
 \RequirePackage{ifluatex,luacode,xkeyval,fontspec}
 
 \RequireLuaTeX
-
-\tracingmacros=0
 
 % Figures: default is OldStyle Proportional
 
@@ -28,6 +26,7 @@
 \DeclareOptionX{proportional}{\elstob@tabularfalse}
 \DeclareOptionX{oldstyle}{\elstob@liningfalse}
 
+% WEIGHT OPTIONS
 
 % Define the default weights
 
@@ -87,13 +86,13 @@
 \def\elstob@BIwghtTwelve{650}
 \def\elstob@BIwghtThirteen{645}
 
-% OPTIONS FOR WEIGHT AND WIDTH
+% Default settings
 
 \newif\ifelstob@regular \elstob@regulartrue
 \def\elstob@regularname{Regular}
 \newif\ifelstob@bold \elstob@boldtrue
 
-% Declare the weight options
+% Booleans and options
 
 \newif\ifelstob@extralight \elstob@extralightfalse
 \newif\ifelstob@light \elstob@lightfalse
@@ -107,12 +106,10 @@
 \DeclareOptionX{semibold}{\elstob@semiboldtrue}
 \DeclareOptionX{extrabold}{\elstob@extraboldtrue}
 
-% Whether to use old-style spacing.
+% OLD-STYLE SPACING; OPTICAL SIZE; ITALIC SLANT
 
 \newif\ifelstob@oldspacing \elstob@oldspacingfalse
 \DeclareOptionX{oldspacing}{\elstob@oldspacingtrue}
-
-% Declare the opsz options
 
 \newcommand*{\opszadj}{0}
 \DeclareOptionX{opszadjust}{\renewcommand*{\opszadj}{#1}}
@@ -120,7 +117,9 @@
 \newcommand*{\elstob@Islnt}{8}
 \DeclareOptionX{slant}{\renewcommand*{\elstob@Islnt}{#1}}
 
-% Options for the main text
+% MAIN TEXT OPTIONS
+
+% User options and macros for storing them
 
 \newcommand*{\MainDef}{}
 \newcommand*{\MainRegDef}{}
@@ -141,86 +140,21 @@
 
 % ALTERNATE STYLES
 
-\directlua{dofile("alt_styles.lua")
+\directlua{dofile("Elstob.lua")
 mkaltcommands()}
 
 \DeclareOptionX*{\PackageWarning{Elstob}{Unknown option `\CurrentOption' ignored}}
 \ProcessOptionsX\relax
 
-\def\adjustopsz#1#2{%
-\directlua{
-    originalval = #1
-    adjustment  = #2
-    adjusted = originalval + adjustment
-    if adjusted > 18 then adjusted = 18 end
-    if adjusted < 6 then adjusted = 6 end
-    tex.sprint(adjusted)
-}}
+% APPLY OPTICAL SIZE ADJUSTMENT
 
-\newcommand*{\elstob@RopszOne}{\adjustopsz{6}{\opszadj}}
-\newcommand*{\elstob@IopszOne}{\adjustopsz{6}{\opszadj}}
-\newcommand*{\elstob@BopszOne}{\adjustopsz{6}{\opszadj}}
-\newcommand*{\elstob@BIopszOne}{\adjustopsz{6}{\opszadj}}
+\def\mkopszcommands#1{%
+\directlua{adjustment = #1
+mkopszcommands(adjustment)}}
 
-\newcommand*{\elstob@RopszTwo}{\adjustopsz{7}{\opszadj}}
-\newcommand*{\elstob@IopszTwo}{\adjustopsz{7}{\opszadj}}
-\newcommand*{\elstob@BopszTwo}{\adjustopsz{7}{\opszadj}}
-\newcommand*{\elstob@BIopszTwo}{\adjustopsz{7}{\opszadj}}
+\mkopszcommands{\opszadj}
 
-\newcommand*{\elstob@RopszThree}{\adjustopsz{8}{\opszadj}}
-\newcommand*{\elstob@IopszThree}{\adjustopsz{8}{\opszadj}}
-\newcommand*{\elstob@BopszThree}{\adjustopsz{8}{\opszadj}}
-\newcommand*{\elstob@BIopszThree}{\adjustopsz{8}{\opszadj}}
-
-\newcommand*{\elstob@RopszFour}{\adjustopsz{9}{\opszadj}}
-\newcommand*{\elstob@IopszFour}{\adjustopsz{9}{\opszadj}}
-\newcommand*{\elstob@BopszFour}{\adjustopsz{9}{\opszadj}}
-\newcommand*{\elstob@BIopszFour}{\adjustopsz{9}{\opszadj}}
-
-\newcommand*{\elstob@RopszFive}{\adjustopsz{10}{\opszadj}}
-\newcommand*{\elstob@IopszFive}{\adjustopsz{10}{\opszadj}}
-\newcommand*{\elstob@BopszFive}{\adjustopsz{10}{\opszadj}}
-\newcommand*{\elstob@BIopszFive}{\adjustopsz{10}{\opszadj}}
-
-\newcommand*{\elstob@RopszSix}{\adjustopsz{11}{\opszadj}}
-\newcommand*{\elstob@IopszSix}{\adjustopsz{11}{\opszadj}}
-\newcommand*{\elstob@BopszSix}{\adjustopsz{11}{\opszadj}}
-\newcommand*{\elstob@BIopszSix}{\adjustopsz{11}{\opszadj}}
-
-\newcommand*{\elstob@RopszSeven}{\adjustopsz{12}{\opszadj}}
-\newcommand*{\elstob@IopszSeven}{\adjustopsz{12}{\opszadj}}
-\newcommand*{\elstob@BopszSeven}{\adjustopsz{12}{\opszadj}}
-\newcommand*{\elstob@BIopszSeven}{\adjustopsz{12}{\opszadj}}
-
-\newcommand*{\elstob@RopszEight}{\adjustopsz{13}{\opszadj}}
-\newcommand*{\elstob@IopszEight}{\adjustopsz{13}{\opszadj}}
-\newcommand*{\elstob@BopszEight}{\adjustopsz{13}{\opszadj}}
-\newcommand*{\elstob@BIopszEight}{\adjustopsz{13}{\opszadj}}
-
-\newcommand*{\elstob@RopszNine}{\adjustopsz{14}{\opszadj}}
-\newcommand*{\elstob@IopszNine}{\adjustopsz{14}{\opszadj}}
-\newcommand*{\elstob@BopszNine}{\adjustopsz{14}{\opszadj}}
-\newcommand*{\elstob@BIopszNine}{\adjustopsz{14}{\opszadj}}
-
-\newcommand*{\elstob@RopszTen}{\adjustopsz{15}{\opszadj}}
-\newcommand*{\elstob@IopszTen}{\adjustopsz{15}{\opszadj}}
-\newcommand*{\elstob@BopszTen}{\adjustopsz{15}{\opszadj}}
-\newcommand*{\elstob@BIopszTen}{\adjustopsz{15}{\opszadj}}
-
-\newcommand*{\elstob@RopszEleven}{\adjustopsz{16}{\opszadj}}
-\newcommand*{\elstob@IopszEleven}{\adjustopsz{16}{\opszadj}}
-\newcommand*{\elstob@BopszEleven}{\adjustopsz{16}{\opszadj}}
-\newcommand*{\elstob@BIopszEleven}{\adjustopsz{16}{\opszadj}}
-
-\newcommand*{\elstob@RopszTwelve}{\adjustopsz{17}{\opszadj}}
-\newcommand*{\elstob@IopszTwelve}{\adjustopsz{17}{\opszadj}}
-\newcommand*{\elstob@BopszTwelve}{\adjustopsz{17}{\opszadj}}
-\newcommand*{\elstob@BIopszTwelve}{\adjustopsz{17}{\opszadj}}
-
-\newcommand*{\elstob@RopszThirteen}{\adjustopsz{18}{\opszadj}}
-\newcommand*{\elstob@IopszThirteen}{\adjustopsz{18}{\opszadj}}
-\newcommand*{\elstob@BopszThirteen}{\adjustopsz{18}{\opszadj}}
-\newcommand*{\elstob@BIopszThirteen}{\adjustopsz{18}{\opszadj}}
+% SUBSTITUTED NEW WEIGHT VALUES (in response to options)
 
 \ifelstob@light
     \def\elstob@RwghtOne{390}
@@ -342,12 +276,15 @@ mkaltcommands()}
     \def\elstob@BIwghtThirteen{740}
 \fi
 
+% SET SS18 AND SPAC AXIS IF OLD-STYLE SPACING
 
 \def\elstob@spac{0}
 \ifelstob@oldspacing
     \renewcommand*{\MainDef}{StylisticSet=18,}
     \def\elstob@spac{1}
 \fi
+
+% GENERATE SizeFeatures FOR THE FOUR MAIN STYLES
 
 \@ifundefined{MainRegSizeDef}{
     \newcommand*{\MainRegSizeDef}{
@@ -429,12 +366,14 @@ mkaltcommands()}
     }
 }{}
 
-% Number strings for fontspec.
+% GENERATE NUMBER STRINGS (fontspec style)
 
 \def\elstob@figurestyle{Lowercase}
 \ifelstob@lining\def\elstob@figurestyle{Uppercase}\fi
 \def\elstob@figurealign{Proportional}
 \ifelstob@tabular\def\elstob@figurealign{Monospaced}\fi
+
+% SET UP THE MAIN FONT.
 
 \setmainfont{Elstob}[
     ItalicFont =         {*-Italic},
@@ -453,6 +392,8 @@ mkaltcommands()}
                           \MainBoldItalicSizeDef}
 ]
 
+% GENERATE THE ALTERNATE STYLES
+
 \newcommand*{\elstob@newfont}[4]{
     \setfontface#1{#2}[
         Renderer =          HarfBuzz,
@@ -468,14 +409,14 @@ mkaltcommands()}
 
 \directlua{mkfontcommands()}
 
-% Convenience commands for non-verbose access to the cvNN features.
-% See also the "jcv" mnemonics below.
+% CONVENIENCE COMMANDS FOR ACCESS TO ELSTOB'S OT FEATURES
+
+% Character Variants
 
 \newcommand*{\textcv}[3][0]{{\addfontfeature{CharacterVariant=#2:#1}#3}}
 \newcommand*{\ecv}[2][0]{\addfontfeature{CharacterVariant=#2:#1}}
 
-% Convenience commands for accessing the Stylistic Sets. These are
-% intended to be mnemonic.
+% Stylistic Sets.
 
 \newcommand*{\AltThornEth}{\addfontfeature{StylisticSet=1}} % ss01
 \newcommand*{\textAltThornEth}[1]{{\addfontfeature{StylisticSet=1}#1}}
