@@ -1,9 +1,22 @@
+%% Elstob.sty
+%% Copyright 2023 by Peter S. Baker
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3c
+% of this license or (at your option) any later version.
+% The latest version of this license is at
+%   https://www.latex-project.org/lppl.txt
+%
+% This work consists of the files Elstob.sty and alt_styles.lua.
+
 \ProvidesPackage{Elstob}[%
     2023/12/08 (Peter Baker) Supports the Elstob variable font for LuaLaTeX.]
 
-\RequirePackage{iftex,xkeyval,fontspec}
+\RequirePackage{ifluatex,luacode,xkeyval,fontspec}
 
 \RequireLuaTeX
+
+\tracingmacros=0
 
 % Figures: default is OldStyle Proportional
 
@@ -94,6 +107,8 @@
 \DeclareOptionX{semibold}{\elstob@semiboldtrue}
 \DeclareOptionX{extrabold}{\elstob@extraboldtrue}
 
+% Whether to use old-style spacing.
+
 \newif\ifelstob@oldspacing \elstob@oldspacingfalse
 \DeclareOptionX{oldspacing}{\elstob@oldspacingtrue}
 
@@ -126,314 +141,11 @@
 
 % ALTERNATE STYLES
 
-% I am trying to replace these individual definitions with a loop, and having no success at all.
-% One try with \foreach and one via a separate Lua file.
-
-\newcommand*{\RegDef}{}
-\newcommand*{\RegSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,opsz=12}}}}}
-\newcommand*{\ItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,opsz=12,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{RegularFeatures}{\renewcommand*{\RegDef}{#1,}}
-\DeclareOptionX{RegularSizeFeatures}{\renewcommand*{\RegSizeDef}{#1}}
-\DeclareOptionX{ItalicSizeFeatures}{\renewcommand*{\ItalicSizeDef}{#1}}
-
-\newcommand*{\SixPtDef}{}
-\newcommand*{\SixPtSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,opsz=6}}}}}
-\newcommand*{\SixPtItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,opsz=6,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{SixPtFeatures}{\renewcommand*{\SixPtDef}{#1,}}
-\DeclareOptionX{SixPtSizeFeatures}{\renewcommand*{\SixPtSizeDef}{#1}}
-\DeclareOptionX{SixPtItalicSizeFeatures}{\renewcommand*{\SixPtItalicSizeDef}{#1}}
-
-\newcommand*{\EightPtDef}{}
-\newcommand*{\EightPtSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,opsz=8}}}}}
-\newcommand*{\EightPtItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,opsz=8,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{EightPtFeatures}{\renewcommand*{\EightPtDef}{#1,}}
-\DeclareOptionX{EightPtSizeFeatures}{\renewcommand*{\EightPtSizeDef}{#1}}
-\DeclareOptionX{EightPtItalicSizeFeatures}{\renewcommand*{\EightPtItalicSizeDef}{#1}}
-
-\newcommand*{\TenPtDef}{}
-\newcommand*{\TenPtSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,opsz=10}}}}}
-\newcommand*{\TenPtItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,opsz=10,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{TenPtFeatures}{\renewcommand*{\TenPtDef}{#1,}}
-\DeclareOptionX{TenPtSizeFeatures}{\renewcommand*{\TenPtSizeDef}{#1}}
-\DeclareOptionX{TenPtItalicSizeFeatures}{\renewcommand*{\TenPtItalicSizeDef}{#1}}
-
-\newcommand*{\FourteenPtDef}{}
-\newcommand*{\FourteenPtSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,opsz=14}}}}}
-\newcommand*{\FourteenPtItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,opsz=14,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{FourteenPtFeatures}{\renewcommand*{\FourteenPtDef}{#1,}}
-\DeclareOptionX{FourteenPtSizeFeatures}{\renewcommand*{\FourteenPtSizeDef}{#1}}
-\DeclareOptionX{FourteenPtItalicSizeFeatures}{\renewcommand*{\FourteenPtItalicSizeDef}{#1}}
-
-\newcommand*{\EighteenPtDef}{}
-\newcommand*{\EighteenPtSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,opsz=18}}}}}
-\newcommand*{\EighteenPtItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=400,opsz=18,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{EighteenPtFeatures}{\renewcommand*{\EighteenPtDef}{#1,}}
-\DeclareOptionX{EighteenPtSizeFeatures}{\renewcommand*{\EighteenPtSizeDef}{#1}}
-\DeclareOptionX{EighteenPtItalicSizeFeatures}{\renewcommand*{\EighteenPtItalicSizeDef}{#1}}
-
-
-\newcommand*{\ExtraLightDef}{}
-\newcommand*{\ExtraLightSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=200,opsz=12}}}}}
-\newcommand*{\ExtraLightItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=200,opsz=12,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{ExtraLightFeatures}{\renewcommand*{\ExtraLightDef}{#1,}}
-\DeclareOptionX{ExtraLightSizeFeatures}{\renewcommand*{\ExtraLightSizeDef}{#1}}
-\DeclareOptionX{ExtraLightItalicSizeFeatures}{\renewcommand*{\ExtraLightItalicSizeDef}{#1}}
-
-\newcommand*{\SixPtExtraLightDef}{}
-\newcommand*{\SixPtExtraLightSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=200,opsz=6}}}}}
-\newcommand*{\SixPtExtraLightItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=200,opsz=6,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{SixPtExtraLightFeatures}{\renewcommand*{\SixPtExtraLightDef}{#1,}}
-\DeclareOptionX{SixPtExtraLightSizeFeatures}{\renewcommand*{\SixPtExtraLightSizeDef}{#1}}
-\DeclareOptionX{SixPtExtraLightItalicSizeFeatures}{\renewcommand*{\SixPtExtraLightItalicSizeDef}{#1}}
-
-\newcommand*{\EightPtExtraLightDef}{}
-\newcommand*{\EightPtExtraLightSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=200,opsz=8}}}}}
-\newcommand*{\EightPtExtraLightItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=200,opsz=8,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{EightPtExtraLightFeatures}{\renewcommand*{\EightPtExtraLightDef}{#1,}}
-\DeclareOptionX{EightPtExtraLightSizeFeatures}{\renewcommand*{\EightPtExtraLightSizeDef}{#1}}
-\DeclareOptionX{EightPtExtraLightItalicSizeFeatures}{\renewcommand*{\EightPtExtraLightItalicSizeDef}{#1}}
-
-\newcommand*{\TenPtExtraLightDef}{}
-\newcommand*{\TenPtExtraLightSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=200,opsz=10}}}}}
-\newcommand*{\TenPtExtraLightItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=200,opsz=10,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{TenPtExtraLightFeatures}{\renewcommand*{\TenPtExtraLightDef}{#1,}}
-\DeclareOptionX{TenPtExtraLightSizeFeatures}{\renewcommand*{\TenPtExtraLightSizeDef}{#1}}
-\DeclareOptionX{TenPtExtraLightItalicSizeFeatures}{\renewcommand*{\TenPtExtraLightItalicSizeDef}{#1}}
-
-\newcommand*{\FourteenPtExtraLightDef}{}
-\newcommand*{\FourteenPtExtraLightSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=200,opsz=14}}}}}
-\newcommand*{\FourteenPtExtraLightItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=200,opsz=14,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{FourteenPtExtraLightFeatures}{\renewcommand*{\FourteenPtExtraLightDef}{#1,}}
-\DeclareOptionX{FourteenPtExtraLightSizeFeatures}{\renewcommand*{\FourteenPtExtraLightSizeDef}{#1}}
-\DeclareOptionX{FourteenPtExtraLightItalicSizeFeatures}{\renewcommand*{\FourteenPtExtraLightItalicSizeDef}{#1}}
-
-\newcommand*{\EighteenPtExtraLightDef}{}
-\newcommand*{\EighteenPtExtraLightSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=200,opsz=18}}}}}
-\newcommand*{\EighteenPtExtraLightItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=200,opsz=18,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{EighteenPtExtraLightFeatures}{\renewcommand*{\EighteenPtExtraLightDef}{#1,}}
-\DeclareOptionX{EighteenPtExtraLightSizeFeatures}{\renewcommand*{\EighteenPtExtraLightSizeDef}{#1}}
-\DeclareOptionX{EighteenPtExtraLightItalicSizeFeatures}{\renewcommand*{\EighteenPtExtraLightItalicSizeDef}{#1}}
-
-
-\newcommand*{\LightDef}{}
-\newcommand*{\LightSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=300,opsz=12}}}}}
-\newcommand*{\LightItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=300,opsz=12,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{LightFeatures}{\renewcommand*{\LightDef}{#1,}}
-\DeclareOptionX{LightSizeFeatures}{\renewcommand*{\LightSizeDef}{#1}}
-\DeclareOptionX{LightItalicSizeFeatures}{\renewcommand*{\LightItalicSizeDef}{#1}}
-
-\newcommand*{\SixPtLightDef}{}
-\newcommand*{\SixPtLightSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=300,opsz=6}}}}}
-\newcommand*{\SixPtLightItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=300,opsz=6,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{SixPtLightFeatures}{\renewcommand*{\SixPtLightDef}{#1,}}
-\DeclareOptionX{SixPtLightSizeFeatures}{\renewcommand*{\SixPtLightSizeDef}{#1}}
-\DeclareOptionX{SixPtLightItalicSizeFeatures}{\renewcommand*{\SixPtLightItalicSizeDef}{#1}}
-
-\newcommand*{\EightPtLightDef}{}
-\newcommand*{\EightPtLightSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=300,opsz=8}}}}}
-\newcommand*{\EightPtLightItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=300,opsz=8,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{EightPtLightFeatures}{\renewcommand*{\EightPtLightDef}{#1,}}
-\DeclareOptionX{EightPtLightSizeFeatures}{\renewcommand*{\EightPtLightSizeDef}{#1}}
-\DeclareOptionX{EightPtLightItalicSizeFeatures}{\renewcommand*{\EightPtLightItalicSizeDef}{#1}}
-
-\newcommand*{\TenPtLightDef}{}
-\newcommand*{\TenPtLightSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=300,opsz=10}}}}}
-\newcommand*{\TenPtLightItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=300,opsz=10,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{TenPtLightFeatures}{\renewcommand*{\TenPtLightDef}{#1,}}
-\DeclareOptionX{TenPtLightSizeFeatures}{\renewcommand*{\TenPtLightSizeDef}{#1}}
-\DeclareOptionX{TenPtLightItalicSizeFeatures}{\renewcommand*{\TenPtLightItalicSizeDef}{#1}}
-
-\newcommand*{\FourteenPtLightDef}{}
-\newcommand*{\FourteenPtLightSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=300,opsz=14}}}}}
-\newcommand*{\FourteenPtLightItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=300,opsz=14,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{FourteenPtLightFeatures}{\renewcommand*{\FourteenPtLightDef}{#1,}}
-\DeclareOptionX{FourteenPtLightSizeFeatures}{\renewcommand*{\FourteenPtLightSizeDef}{#1}}
-\DeclareOptionX{FourteenPtLightItalicSizeFeatures}{\renewcommand*{\FourteenPtLightItalicSizeDef}{#1}}
-
-\newcommand*{\EighteenPtLightDef}{}
-\newcommand*{\EighteenPtLightSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=300,opsz=18}}}}}
-\newcommand*{\EighteenPtLightItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=300,opsz=18,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{EighteenPtLightFeatures}{\renewcommand*{\EighteenPtLightDef}{#1,}}
-\DeclareOptionX{EighteenPtLightSizeFeatures}{\renewcommand*{\EighteenPtLightSizeDef}{#1}}
-\DeclareOptionX{EighteenPtLightItalicSizeFeatures}{\renewcommand*{\EighteenPtLightItalicSizeDef}{#1}}
-
-
-\newcommand*{\MediumDef}{}
-\newcommand*{\MediumSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=500,opsz=12}}}}}
-\newcommand*{\MediumItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=500,opsz=12,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{MediumFeatures}{\renewcommand*{\MediumDef}{#1,}}
-\DeclareOptionX{MediumSizeFeatures}{\renewcommand*{\MediumSizeDef}{#1}}
-\DeclareOptionX{MediumItalicSizeFeatures}{\renewcommand*{\MediumItalicSizeDef}{#1}}
-
-\newcommand*{\SixPtMediumDef}{}
-\newcommand*{\SixPtMediumSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=500,opsz=6}}}}}
-\newcommand*{\SixPtMediumItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=500,opsz=6,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{SixPtMediumFeatures}{\renewcommand*{\SixPtMediumDef}{#1,}}
-\DeclareOptionX{SixPtMediumSizeFeatures}{\renewcommand*{\SixPtMediumSizeDef}{#1}}
-\DeclareOptionX{SixPtMediumItalicSizeFeatures}{\renewcommand*{\SixPtMediumItalicSizeDef}{#1}}
-
-\newcommand*{\EightPtMediumDef}{}
-\newcommand*{\EightPtMediumSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=500,opsz=8}}}}}
-\newcommand*{\EightPtMediumItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=500,opsz=8,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{EightPtMediumFeatures}{\renewcommand*{\EightPtMediumDef}{#1,}}
-\DeclareOptionX{EightPtMediumSizeFeatures}{\renewcommand*{\EightPtMediumSizeDef}{#1}}
-\DeclareOptionX{EightPtMediumItalicSizeFeatures}{\renewcommand*{\EightPtMediumItalicSizeDef}{#1}}
-
-\newcommand*{\TenPtMediumDef}{}
-\newcommand*{\TenPtMediumSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=500,opsz=10}}}}}
-\newcommand*{\TenPtMediumItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=500,opsz=10,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{TenPtMediumFeatures}{\renewcommand*{\TenPtMediumDef}{#1,}}
-\DeclareOptionX{TenPtMediumSizeFeatures}{\renewcommand*{\TenPtMediumSizeDef}{#1}}
-\DeclareOptionX{TenPtMediumItalicSizeFeatures}{\renewcommand*{\TenPtMediumItalicSizeDef}{#1}}
-
-\newcommand*{\FourteenPtMediumDef}{}
-\newcommand*{\FourteenPtMediumSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=500,opsz=14}}}}}
-\newcommand*{\FourteenPtMediumItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=500,opsz=14,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{FourteenPtMediumFeatures}{\renewcommand*{\FourteenPtMediumDef}{#1,}}
-\DeclareOptionX{FourteenPtMediumSizeFeatures}{\renewcommand*{\FourteenPtMediumSizeDef}{#1}}
-\DeclareOptionX{FourteenPtMediumItalicSizeFeatures}{\renewcommand*{\FourteenPtMediumItalicSizeDef}{#1}}
-
-\newcommand*{\EighteenPtMediumDef}{}
-\newcommand*{\EighteenPtMediumSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=500,opsz=18}}}}}
-\newcommand*{\EighteenPtMediumItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=500,opsz=18,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{EighteenPtMediumFeatures}{\renewcommand*{\EighteenPtMediumDef}{#1,}}
-\DeclareOptionX{EighteenPtMediumSizeFeatures}{\renewcommand*{\EighteenPtMediumSizeDef}{#1}}
-\DeclareOptionX{EighteenPtMediumItalicSizeFeatures}{\renewcommand*{\EighteenPtMediumItalicSizeDef}{#1}}
-
-
-\newcommand*{\SemiboldDef}{}
-\newcommand*{\SemiboldSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=600,opsz=12}}}}}
-\newcommand*{\SemiboldItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=600,opsz=12,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{SemiboldFeatures}{\renewcommand*{\SemiboldDef}{#1,}}
-\DeclareOptionX{SemiboldSizeFeatures}{\renewcommand*{\SemiboldSizeDef}{#1}}
-\DeclareOptionX{SemiboldItalicSizeFeatures}{\renewcommand*{\SemiboldItalicSizeDef}{#1}}
-
-\newcommand*{\SixPtSemiboldDef}{}
-\newcommand*{\SixPtSemiboldSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=600,opsz=6}}}}}
-\newcommand*{\SixPtSemiboldItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=600,opsz=6,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{SixPtSemiboldFeatures}{\renewcommand*{\SixPtSemiboldDef}{#1,}}
-\DeclareOptionX{SixPtSemiboldSizeFeatures}{\renewcommand*{\SixPtSemiboldSizeDef}{#1}}
-\DeclareOptionX{SixPtSemiboldItalicSizeFeatures}{\renewcommand*{\SixPtSemiboldItalicSizeDef}{#1}}
-
-\newcommand*{\EightPtSemiboldDef}{}
-\newcommand*{\EightPtSemiboldSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=600,opsz=8}}}}}
-\newcommand*{\EightPtSemiboldItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=600,opsz=8,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{EightPtSemiboldFeatures}{\renewcommand*{\EightPtSemiboldDef}{#1,}}
-\DeclareOptionX{EightPtSemiboldSizeFeatures}{\renewcommand*{\EightPtSemiboldSizeDef}{#1}}
-\DeclareOptionX{EightPtSemiboldItalicSizeFeatures}{\renewcommand*{\EightPtSemiboldItalicSizeDef}{#1}}
-
-\newcommand*{\TenPtSemiboldDef}{}
-\newcommand*{\TenPtSemiboldSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=600,opsz=10}}}}}
-\newcommand*{\TenPtSemiboldItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=600,opsz=10,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{TenPtSemiboldFeatures}{\renewcommand*{\TenPtSemiboldDef}{#1,}}
-\DeclareOptionX{TenPtSemiboldSizeFeatures}{\renewcommand*{\TenPtSemiboldSizeDef}{#1}}
-\DeclareOptionX{TenPtSemiboldItalicSizeFeatures}{\renewcommand*{\TenPtSemiboldItalicSizeDef}{#1}}
-
-\newcommand*{\FourteenPtSemiboldDef}{}
-\newcommand*{\FourteenPtSemiboldSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=600,opsz=14}}}}}
-\newcommand*{\FourteenPtSemiboldItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=600,opsz=14,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{FourteenPtSemiboldFeatures}{\renewcommand*{\FourteenPtSemiboldDef}{#1,}}
-\DeclareOptionX{FourteenPtSemiboldSizeFeatures}{\renewcommand*{\FourteenPtSemiboldSizeDef}{#1}}
-\DeclareOptionX{FourteenPtSemiboldItalicSizeFeatures}{\renewcommand*{\FourteenPtSemiboldItalicSizeDef}{#1}}
-
-\newcommand*{\EighteenPtSemiboldDef}{}
-\newcommand*{\EighteenPtSemiboldSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=600,opsz=18}}}}}
-\newcommand*{\EighteenPtSemiboldItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=600,opsz=18,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{EighteenPtSemiboldFeatures}{\renewcommand*{\EighteenPtSemiboldDef}{#1,}}
-\DeclareOptionX{EighteenPtSemiboldSizeFeatures}{\renewcommand*{\EighteenPtSemiboldSizeDef}{#1}}
-\DeclareOptionX{EighteenPtSemiboldItalicSizeFeatures}{\renewcommand*{\EighteenPtSemiboldItalicSizeDef}{#1}}
-
-
-\newcommand*{\BoldDef}{}
-\newcommand*{\BoldSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=700,opsz=12}}}}}
-\newcommand*{\BoldItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=700,opsz=12,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{BoldFeatures}{\renewcommand*{\BoldDef}{#1,}}
-\DeclareOptionX{BoldSizeFeatures}{\renewcommand*{\BoldSizeDef}{#1}}
-\DeclareOptionX{BoldItalicSizeFeatures}{\renewcommand*{\BoldItalicSizeDef}{#1}}
-
-\newcommand*{\SixPtBoldDef}{}
-\newcommand*{\SixPtBoldSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=700,opsz=6}}}}}
-\newcommand*{\SixPtBoldItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=700,opsz=6,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{SixPtBoldFeatures}{\renewcommand*{\SixPtBoldDef}{#1,}}
-\DeclareOptionX{SixPtBoldSizeFeatures}{\renewcommand*{\SixPtBoldSizeDef}{#1}}
-\DeclareOptionX{SixPtBoldItalicSizeFeatures}{\renewcommand*{\SixPtBoldItalicSizeDef}{#1}}
-
-\newcommand*{\EightPtBoldDef}{}
-\newcommand*{\EightPtBoldSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=700,opsz=8}}}}}
-\newcommand*{\EightPtBoldItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=700,opsz=8,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{EightPtBoldFeatures}{\renewcommand*{\EightPtBoldDef}{#1,}}
-\DeclareOptionX{EightPtBoldSizeFeatures}{\renewcommand*{\EightPtBoldSizeDef}{#1}}
-\DeclareOptionX{EightPtBoldItalicSizeFeatures}{\renewcommand*{\EightPtBoldItalicSizeDef}{#1}}
-
-\newcommand*{\TenPtBoldDef}{}
-\newcommand*{\TenPtBoldSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=700,opsz=10}}}}}
-\newcommand*{\TenPtBoldItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=700,opsz=10,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{TenPtBoldFeatures}{\renewcommand*{\TenPtBoldDef}{#1,}}
-\DeclareOptionX{TenPtBoldSizeFeatures}{\renewcommand*{\TenPtBoldSizeDef}{#1}}
-\DeclareOptionX{TenPtBoldItalicSizeFeatures}{\renewcommand*{\TenPtBoldItalicSizeDef}{#1}}
-
-\newcommand*{\FourteenPtBoldDef}{}
-\newcommand*{\FourteenPtBoldSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=700,opsz=14}}}}}
-\newcommand*{\FourteenPtBoldItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=700,opsz=14,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{FourteenPtBoldFeatures}{\renewcommand*{\FourteenPtBoldDef}{#1,}}
-\DeclareOptionX{FourteenPtBoldSizeFeatures}{\renewcommand*{\FourteenPtBoldSizeDef}{#1}}
-\DeclareOptionX{FourteenPtBoldItalicSizeFeatures}{\renewcommand*{\FourteenPtBoldItalicSizeDef}{#1}}
-
-\newcommand*{\EighteenPtBoldDef}{}
-\newcommand*{\EighteenPtBoldSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=700,opsz=18}}}}}
-\newcommand*{\EighteenPtBoldItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=700,opsz=18,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{EighteenPtBoldFeatures}{\renewcommand*{\EighteenPtBoldDef}{#1,}}
-\DeclareOptionX{EighteenPtBoldSizeFeatures}{\renewcommand*{\EighteenPtBoldSizeDef}{#1}}
-\DeclareOptionX{EighteenPtBoldItalicSizeFeatures}{\renewcommand*{\EighteenPtBoldItalicSizeDef}{#1}}
-
-
-\newcommand*{\ExtraBoldDef}{}
-\newcommand*{\ExtraBoldSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=800,opsz=12}}}}}
-\newcommand*{\ExtraBoldItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=800,opsz=12,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{ExtraBoldFeatures}{\renewcommand*{\ExtraBoldDef}{#1,}}
-\DeclareOptionX{ExtraBoldSizeFeatures}{\renewcommand*{\ExtraBoldSizeDef}{#1}}
-\DeclareOptionX{ExtraBoldItalicSizeFeatures}{\renewcommand*{\ExtraBoldItalicSizeDef}{#1}}
-
-\newcommand*{\SixPtExtraBoldDef}{}
-\newcommand*{\SixPtExtraBoldSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=800,opsz=6}}}}}
-\newcommand*{\SixPtExtraBoldItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=800,opsz=6,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{SixPtExtraBoldFeatures}{\renewcommand*{\SixPtExtraBoldDef}{#1,}}
-\DeclareOptionX{SixPtExtraBoldSizeFeatures}{\renewcommand*{\SixPtExtraBoldSizeDef}{#1}}
-\DeclareOptionX{SixPtExtraBoldItalicSizeFeatures}{\renewcommand*{\SixPtExtraBoldItalicSizeDef}{#1}}
-
-\newcommand*{\EightPtExtraBoldDef}{}
-\newcommand*{\EightPtExtraBoldSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=800,opsz=8}}}}}
-\newcommand*{\EightPtExtraBoldItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=800,opsz=8,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{EightPtExtraBoldFeatures}{\renewcommand*{\EightPtExtraBoldDef}{#1,}}
-\DeclareOptionX{EightPtExtraBoldSizeFeatures}{\renewcommand*{\EightPtExtraBoldSizeDef}{#1}}
-\DeclareOptionX{EightPtExtraBoldItalicSizeFeatures}{\renewcommand*{\EightPtExtraBoldItalicSizeDef}{#1}}
-
-\newcommand*{\TenPtExtraBoldDef}{}
-\newcommand*{\TenPtExtraBoldSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=800,opsz=10}}}}}
-\newcommand*{\TenPtExtraBoldItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=800,opsz=10,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{TenPtExtraBoldFeatures}{\renewcommand*{\TenPtExtraBoldDef}{#1,}}
-\DeclareOptionX{TenPtExtraBoldSizeFeatures}{\renewcommand*{\TenPtExtraBoldSizeDef}{#1}}
-\DeclareOptionX{TenPtExtraBoldItalicSizeFeatures}{\renewcommand*{\TenPtExtraBoldItalicSizeDef}{#1}}
-
-\newcommand*{\FourteenPtExtraBoldDef}{}
-\newcommand*{\FourteenPtExtraBoldSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=800,opsz=14}}}}}
-\newcommand*{\FourteenPtExtraBoldItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=800,opsz=14,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{FourteenPtExtraBoldFeatures}{\renewcommand*{\FourteenPtExtraBoldDef}{#1,}}
-\DeclareOptionX{FourteenPtExtraBoldSizeFeatures}{\renewcommand*{\FourteenPtExtraBoldSizeDef}{#1}}
-\DeclareOptionX{FourteenPtExtraBoldItalicSizeFeatures}{\renewcommand*{\FourteenPtExtraBoldItalicSizeDef}{#1}}
-
-\newcommand*{\EighteenPtExtraBoldDef}{}
-\newcommand*{\EighteenPtExtraBoldSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=800,opsz=18}}}}}
-\newcommand*{\EighteenPtExtraBoldItalicSizeDef}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=800,opsz=18,slnt=\elstob@Islnt}}}}}
-\DeclareOptionX{EighteenPtExtraBoldFeatures}{\renewcommand*{\EighteenPtExtraBoldDef}{#1,}}
-\DeclareOptionX{EighteenPtExtraBoldSizeFeatures}{\renewcommand*{\EighteenPtExtraBoldSizeDef}{#1}}
-\DeclareOptionX{EighteenPtExtraBoldItalicSizeFeatures}{\renewcommand*{\EighteenPtExtraBoldItalicSizeDef}{#1}}
-
+\directlua{dofile("alt_styles.lua")
+mkaltcommands()}
 
 \DeclareOptionX*{\PackageWarning{Elstob}{Unknown option `\CurrentOption' ignored}}
 \ProcessOptionsX\relax
-
-% Apply optical size adjustment.
 
 \def\adjustopsz#1#2{%
 \directlua{
@@ -510,36 +222,6 @@
 \newcommand*{\elstob@BopszThirteen}{\adjustopsz{18}{\opszadj}}
 \newcommand*{\elstob@BIopszThirteen}{\adjustopsz{18}{\opszadj}}
 
-\ifelstob@extralight
-    \def\elstob@RwghtOne{290}
-    \def\elstob@RwghtTwo{277.5}
-    \def\elstob@RwghtThree{265}
-    \def\elstob@RwghtFour{252.5}
-    \def\elstob@RwghtFive{240} % -10.5 440
-    \def\elstob@RwghtSix{215}
-    \def\elstob@RwghtSeven{200} % -12.5 390
-    \def\elstob@RwghtEight{200}
-    \def\elstob@RwghtNine{200} % -14.5 370
-    \def\elstob@RwghtTen{200}
-    \def\elstob@RwghtEleven{200}
-    \def\elstob@RwghtTwelve{200}
-    \def\elstob@RwghtThirteen{200} % 17.5- 350
-
-    \def\elstob@IwghtOne{290}
-    \def\elstob@IwghtTwo{277.5}
-    \def\elstob@IwghtThree{265}
-    \def\elstob@IwghtFour{252.5}
-    \def\elstob@IwghtFive{240} % -10.5 440
-    \def\elstob@IwghtSix{215}
-    \def\elstob@IwghtSeven{200} % -12.5 390
-    \def\elstob@IwghtEight{200}
-    \def\elstob@IwghtNine{200} % -14.5 370
-    \def\elstob@IwghtTen{200}
-    \def\elstob@IwghtEleven{200}
-    \def\elstob@IwghtTwelve{200}
-    \def\elstob@IwghtThirteen{200} % 17.5- 350
-\fi
-
 \ifelstob@light
     \def\elstob@RwghtOne{390}
     \def\elstob@RwghtTwo{377.5}
@@ -571,20 +253,6 @@
 \fi
 
 \ifelstob@medium
-    %\def\elstob@RwghtOne{590}
-    %\def\elstob@RwghtTwo{577.5}
-    %\def\elstob@RwghtThree{565}
-    %\def\elstob@RwghtFour{552.5}
-    %\def\elstob@RwghtFive{540} % -10.5 440
-    %\def\elstob@RwghtSix{515}
-    %\def\elstob@RwghtSeven{490} % -12.5 390
-    %\def\elstob@RwghtEight{470}
-    %\def\elstob@RwghtNine{465} % -14.5 370
-    %\def\elstob@RwghtTen{460}
-    %\def\elstob@RwghtEleven{455}
-    %\def\elstob@RwghtTwelve{450}
-    %\def\elstob@RwghtThirteen{445} % 17.5- 350
-
     \def\elstob@RwghtOne{560}
     \def\elstob@RwghtTwo{550}
     \def\elstob@RwghtThree{540}
@@ -612,20 +280,6 @@
     \def\elstob@IwghtEleven{460}
     \def\elstob@IwghtTwelve{450}
     \def\elstob@IwghtThirteen{440} % 17.5- 350
-
-    %\def\elstob@IwghtOne{590}
-    %\def\elstob@IwghtTwo{577.5}
-    %\def\elstob@IwghtThree{565}
-    %\def\elstob@IwghtFour{552.5}
-    %\def\elstob@IwghtFive{540} % -10.5 440
-    %\def\elstob@IwghtSix{515}
-    %\def\elstob@IwghtSeven{490} % -12.5 390
-    %\def\elstob@IwghtEight{470}
-    %\def\elstob@IwghtNine{465} % -14.5 370
-    %\def\elstob@IwghtTen{460}
-    %\def\elstob@IwghtEleven{455}
-    %\def\elstob@IwghtTwelve{450}
-    %\def\elstob@IwghtThirteen{445} % 17.5- 350
 \fi
 
 \ifelstob@semibold
@@ -656,34 +310,6 @@
     \def\elstob@BIwghtEleven{560}
     \def\elstob@BIwghtTwelve{550}
     \def\elstob@BIwghtThirteen{540}
-
-    %\def\elstob@BwghtOne{690}
-    %\def\elstob@BwghtTwo{677.5}
-    %\def\elstob@BwghtThree{665}
-    %\def\elstob@BwghtFour{652.5}
-    %\def\elstob@BwghtFive{640}
-    %\def\elstob@BwghtSix{615}
-    %\def\elstob@BwghtSeven{590}
-    %\def\elstob@BwghtEight{570}
-    %\def\elstob@BwghtNine{565}
-    %\def\elstob@BwghtTen{560}
-    %\def\elstob@BwghtEleven{555}
-    %\def\elstob@BwghtTwelve{550}
-    %\def\elstob@BwghtThirteen{545}
-
-    %\def\elstob@BIwghtOne{690}
-    %\def\elstob@BIwghtTwo{677.5}
-    %\def\elstob@BIwghtThree{665}
-    %\def\elstob@BIwghtFour{652.5}
-    %\def\elstob@BIwghtFive{640}
-    %\def\elstob@BIwghtSix{615}
-    %\def\elstob@BIwghtSeven{590}
-    %\def\elstob@BIwghtEight{570}
-    %\def\elstob@BIwghtNine{565}
-    %\def\elstob@BIwghtTen{560}
-    %\def\elstob@BIwghtEleven{555}
-    %\def\elstob@BIwghtTwelve{550}
-    %\def\elstob@BIwghtThirteen{545}
 \fi
 
 \ifelstob@extrabold
@@ -714,35 +340,8 @@
     \def\elstob@BIwghtEleven{760}
     \def\elstob@BIwghtTwelve{750}
     \def\elstob@BIwghtThirteen{740}
-
-    %\def\elstob@BwghtOne{690}
-    %\def\elstob@BwghtTwo{677.5}
-    %\def\elstob@BwghtThree{665}
-    %\def\elstob@BwghtFour{652.5}
-    %\def\elstob@BwghtFive{640}
-    %\def\elstob@BwghtSix{615}
-    %\def\elstob@BwghtSeven{590}
-    %\def\elstob@BwghtEight{570}
-    %\def\elstob@BwghtNine{565}
-    %\def\elstob@BwghtTen{560}
-    %\def\elstob@BwghtEleven{555}
-    %\def\elstob@BwghtTwelve{550}
-    %\def\elstob@BwghtThirteen{545}
-
-    %\def\elstob@BIwghtOne{690}
-    %\def\elstob@BIwghtTwo{677.5}
-    %\def\elstob@BIwghtThree{665}
-    %\def\elstob@BIwghtFour{652.5}
-    %\def\elstob@BIwghtFive{640}
-    %\def\elstob@BIwghtSix{615}
-    %\def\elstob@BIwghtSeven{590}
-    %\def\elstob@BIwghtEight{570}
-    %\def\elstob@BIwghtNine{565}
-    %\def\elstob@BIwghtTen{560}
-    %\def\elstob@BIwghtEleven{555}
-    %\def\elstob@BIwghtTwelve{550}
-    %\def\elstob@BIwghtThirteen{545}
 \fi
+
 
 \def\elstob@spac{0}
 \ifelstob@oldspacing
@@ -865,96 +464,9 @@
     ]
 }
 
-\elstob@newfont{\eRegular}{Elstob}{\RegDef}{\RegSizeDef}
-\elstob@newfont{\eItalic}{Elstob-Italic}{\RegDef}{\ItalicSizeDef}
-\elstob@newfont{\eSixPt}{Elstob}{\SixPtDef}{\SixPtSizeDef}
-\elstob@newfont{\eSixPtItalic}{Elstob-Italic}{\EightPtDef}{\EightPtItalicSizeDef}
-\elstob@newfont{\eEightPt}{Elstob}{\EightPtDef}{\EightPtSizeDef}
-\elstob@newfont{\eEightPtItalic}{Elstob-Italic}{\EightPtDef}{\EightPtItalicSizeDef}
-\elstob@newfont{\eTenPt}{Elstob}{\TenPtDef}{\TenPtSizeDef}
-\elstob@newfont{\eTenPtItalic}{Elstob-Italic}{\TenPtDef}{\TenPtItalicSizeDef}
-\elstob@newfont{\eFourteenPt}{Elstob}{\FourteenPtDef}{\FourteenPtSizeDef}
-\elstob@newfont{\eFourteenPtItalic}{Elstob-Italic}{\FourteenPtDef}{\FourteenPtItalicSizeDef}
-\elstob@newfont{\eEighteenPt}{Elstob}{\EighteenPtDef}{\EighteenPtSizeDef}
-\elstob@newfont{\eEighteenPtItalic}{Elstob-Italic}{\EighteenPtDef}{\EighteenPtItalicSizeDef}
+% Generate the commands for making the alt fonts.
 
-\elstob@newfont{\eExtraLight}{Elstob}{\ExtraLightDef}{\ExtraLightSizeDef}
-\elstob@newfont{\eExtraLightItalic}{Elstob-Italic}{\ExtraLightDef}{\ExtraLightItalicSizeDef}
-\elstob@newfont{\eSixPtExtraLight}{Elstob}{\SixPtExtraLightDef}{\SixPtExtraLightSizeDef}
-\elstob@newfont{\eSixPtExtraLightItalic}{Elstob-Italic}{\SixPtExtraLightDef}{\SixPtExtraLightItalicSizeDef}
-\elstob@newfont{\eEightPtExtraLight}{Elstob}{\EightPtExtraLightDef}{\EightPtExtraLightSizeDef}
-\elstob@newfont{\eEightPtExtraLightItalic}{Elstob-Italic}{\EightPtExtraLightDef}{\EightPtExtraLightItalicSizeDef}
-\elstob@newfont{\eTenPtExtraLight}{Elstob}{\TenPtExtraLightDef}{\TenPtExtraLightSizeDef}
-\elstob@newfont{\eTenPtExtraLightItalic}{Elstob-Italic}{\TenPtExtraLightDef}{\TenPtExtraLightItalicSizeDef}
-\elstob@newfont{\eFourteenPtExtraLight}{Elstob}{\FourteenPtExtraLightDef}{\FourteenPtExtraLightSizeDef}
-\elstob@newfont{\eFourteenPtExtraLightItalic}{Elstob-Italic}{\FourteenPtExtraLightDef}{\FourteenPtExtraLightItalicSizeDef}
-\elstob@newfont{\eEighteenPtExtraLight}{Elstob}{\EighteenPtExtraLightDef}{\EighteenPtExtraLightSizeDef}
-\elstob@newfont{\eEighteenPtExtraLightItalic}{Elstob-Italic}{\EighteenPtExtraLightDef}{\EighteenPtExtraLightItalicSizeDef}
-
-\elstob@newfont{\eLight}{Elstob}{\LightDef}{\LightSizeDef}
-\elstob@newfont{\eLightItalic}{Elstob-Italic}{\LightDef}{\LightItalicSizeDef}
-\elstob@newfont{\eSixPtLight}{Elstob}{\SixPtLightDef}{\SixPtLightSizeDef}
-\elstob@newfont{\eSixPtLightItalic}{Elstob-Italic}{\SixPtLightDef}{\SixPtLightItalicSizeDef}
-\elstob@newfont{\eEightPtLight}{Elstob}{\EightPtLightDef}{\EightPtLightSizeDef}
-\elstob@newfont{\eEightPtLightItalic}{Elstob-Italic}{\EightPtLightDef}{\EightPtLightItalicSizeDef}
-\elstob@newfont{\eTenPtLight}{Elstob}{\TenPtLightDef}{\TenPtLightSizeDef}
-\elstob@newfont{\eTenPtLightItalic}{Elstob-Italic}{\TenPtLightDef}{\TenPtLightItalicSizeDef}
-\elstob@newfont{\eFourteenPtLight}{Elstob}{\FourteenPtLightDef}{\FourteenPtLightSizeDef}
-\elstob@newfont{\eFourteenPtLightItalic}{Elstob-Italic}{\FourteenPtLightDef}{\FourteenPtLightItalicSizeDef}
-\elstob@newfont{\eEighteenPtLight}{Elstob}{\EighteenPtLightDef}{\EighteenPtLightSizeDef}
-\elstob@newfont{\eEighteenPtLightItalic}{Elstob-Italic}{\EighteenPtLightDef}{\EighteenPtLightItalicSizeDef}
-
-\elstob@newfont{\eMedium}{Elstob}{\MediumDef}{\MediumSizeDef}
-\elstob@newfont{\eMediumItalic}{Elstob-Italic}{\MediumDef}{\MediumItalicSizeDef}
-\elstob@newfont{\eSixPtMedium}{Elstob}{\SixPtMediumDef}{\SixPtMediumSizeDef}
-\elstob@newfont{\eSixPtMediumItalic}{Elstob-Italic}{\SixPtMediumDef}{\SixPtMediumItalicSizeDef}
-\elstob@newfont{\eEightPtMedium}{Elstob}{\EightPtMediumDef}{\EightPtMediumSizeDef}
-\elstob@newfont{\eEightPtMediumItalic}{Elstob-Italic}{\EightPtMediumDef}{\EightPtMediumItalicSizeDef}
-\elstob@newfont{\eTenPtMedium}{Elstob}{\TenPtMediumDef}{\TenPtMediumSizeDef}
-\elstob@newfont{\eTenPtMediumItalic}{Elstob-Italic}{\TenPtMediumDef}{\TenPtMediumItalicSizeDef}
-\elstob@newfont{\eFourteenPtMedium}{Elstob}{\FourteenPtMediumDef}{\FourteenPtMediumSizeDef}
-\elstob@newfont{\eFourteenPtMediumItalic}{Elstob-Italic}{\FourteenPtMediumDef}{\FourteenPtMediumItalicSizeDef}
-\elstob@newfont{\eEighteenPtMedium}{Elstob}{\EighteenPtMediumDef}{\EighteenPtMediumSizeDef}
-\elstob@newfont{\eEighteenPtMediumItalic}{Elstob-Italic}{\EighteenPtMediumDef}{\EighteenPtMediumItalicSizeDef}
-
-\elstob@newfont{\eSemibold}{Elstob}{\SemiboldDef}{\SemiboldSizeDef}
-\elstob@newfont{\eSemiboldItalic}{Elstob-Italic}{\SemiboldDef}{\SemiboldItalicSizeDef}
-\elstob@newfont{\eSixPtSemibold}{Elstob}{\SixPtSemiboldDef}{\SixPtSemiboldSizeDef}
-\elstob@newfont{\eSixPtSemiboldItalic}{Elstob-Italic}{\SixPtSemiboldDef}{\SixPtSemiboldItalicSizeDef}
-\elstob@newfont{\eEightPtSemibold}{Elstob}{\EightPtSemiboldDef}{\EightPtSemiboldSizeDef}
-\elstob@newfont{\eEightPtSemiboldItalic}{Elstob-Italic}{\EightPtSemiboldDef}{\EightPtSemiboldItalicSizeDef}
-\elstob@newfont{\eTenPtSemibold}{Elstob}{\TenPtSemiboldDef}{\TenPtSemiboldSizeDef}
-\elstob@newfont{\eTenPtSemiboldItalic}{Elstob-Italic}{\TenPtSemiboldDef}{\TenPtSemiboldItalicSizeDef}
-\elstob@newfont{\eFourteenPtSemibold}{Elstob}{\FourteenPtSemiboldDef}{\FourteenPtSemiboldSizeDef}
-\elstob@newfont{\eFourteenPtSemiboldItalic}{Elstob-Italic}{\FourteenPtSemiboldDef}{\FourteenPtSemiboldItalicSizeDef}
-\elstob@newfont{\eEighteenPtSemibold}{Elstob}{\EighteenPtSemiboldDef}{\EighteenPtSemiboldSizeDef}
-\elstob@newfont{\eEighteenPtSemiboldItalic}{Elstob-Italic}{\EighteenPtSemiboldDef}{\EighteenPtSemiboldItalicSizeDef}
-
-\elstob@newfont{\eBold}{Elstob}{\BoldDef}{\BoldSizeDef}
-\elstob@newfont{\eBoldItalic}{Elstob-Italic}{\BoldDef}{\BoldItalicSizeDef}
-\elstob@newfont{\eSixPtBold}{Elstob}{\SixPtBoldDef}{\SixPtBoldSizeDef}
-\elstob@newfont{\eSixPtBoldItalic}{Elstob-Italic}{\SixPtBoldDef}{\SixPtBoldItalicSizeDef}
-\elstob@newfont{\eEightPtBold}{Elstob}{\EightPtBoldDef}{\EightPtBoldSizeDef}
-\elstob@newfont{\eEightPtBoldItalic}{Elstob-Italic}{\EightPtBoldDef}{\EightPtBoldItalicSizeDef}
-\elstob@newfont{\eTenPtBold}{Elstob}{\TenPtBoldDef}{\TenPtBoldSizeDef}
-\elstob@newfont{\eTenPtBoldItalic}{Elstob-Italic}{\TenPtBoldDef}{\TenPtBoldItalicSizeDef}
-\elstob@newfont{\eFourteenPtBold}{Elstob}{\FourteenPtBoldDef}{\FourteenPtBoldSizeDef}
-\elstob@newfont{\eFourteenPtBoldItalic}{Elstob-Italic}{\FourteenPtBoldDef}{\FourteenPtBoldItalicSizeDef}
-\elstob@newfont{\eEighteenPtBold}{Elstob}{\EighteenPtBoldDef}{\EighteenPtBoldSizeDef}
-\elstob@newfont{\eEighteenPtBoldItalic}{Elstob-Italic}{\EighteenPtBoldDef}{\EighteenPtBoldItalicSizeDef}
-
-\elstob@newfont{\eExtraBold}{Elstob}{\ExtraBoldDef}{\ExtraBoldSizeDef}
-\elstob@newfont{\eExtraBoldItalic}{Elstob-Italic}{\ExtraBoldDef}{\ExtraBoldItalicSizeDef}
-\elstob@newfont{\eSixPtExtraBold}{Elstob}{\SixPtExtraBoldDef}{\SixPtExtraBoldSizeDef}
-\elstob@newfont{\eSixPtExtraBoldItalic}{Elstob-Italic}{\SixPtExtraBoldDef}{\SixPtExtraBoldItalicSizeDef}
-\elstob@newfont{\eEightPtExtraBold}{Elstob}{\EightPtExtraBoldDef}{\EightPtExtraBoldSizeDef}
-\elstob@newfont{\eEightPtExtraBoldItalic}{Elstob-Italic}{\EightPtExtraBoldDef}{\EightPtExtraBoldItalicSizeDef}
-\elstob@newfont{\eTenPtExtraBold}{Elstob}{\TenPtExtraBoldDef}{\TenPtExtraBoldSizeDef}
-\elstob@newfont{\eTenPtExtraBoldItalic}{Elstob-Italic}{\TenPtExtraBoldDef}{\TenPtExtraBoldItalicSizeDef}
-\elstob@newfont{\eFourteenPtExtraBold}{Elstob}{\FourteenPtExtraBoldDef}{\FourteenPtExtraBoldSizeDef}
-\elstob@newfont{\eFourteenPtExtraBoldItalic}{Elstob-Italic}{\FourteenPtExtraBoldDef}{\FourteenPtExtraBoldItalicSizeDef}
-\elstob@newfont{\eEighteenPtExtraBold}{Elstob}{\EighteenPtExtraBoldDef}{\EighteenPtExtraBoldSizeDef}
-\elstob@newfont{\eEighteenPtExtraBoldItalic}{Elstob-Italic}{\EighteenPtExtraBoldDef}{\EighteenPtExtraBoldItalicSizeDef}
+\directlua{mkfontcommands()}
 
 % Convenience commands for non-verbose access to the cvNN features.
 % See also the "jcv" mnemonics below.

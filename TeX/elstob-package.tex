@@ -59,9 +59,12 @@ MainBoldItalicSizeFeatures={
 \usepackage[table,dvipsnames]{xcolor}
 \definecolor{myLightBlue}{RGB}{203,228,249}
 \definecolor{SlateGray}{RGB}{112,128,144}
+\definecolor{BrickRed}{RGB}{146,18,6}
+\definecolor{RViolet}{RGB}{70,18,87}
 \newcommand{\bluerow}{\rowcolor{myLightBlue}}
 \usepackage{titlesec}
 \titleformat{\section}[hang]{\Large\color{SlateGray}}{\thesection.}{1em}{}
+\newcommand{\src}[1]{{\color{BrickRed}\texttt{#1}}}
 \linespread{1.1}
 \title{Elstob}
 \author{Peter S. Baker}
@@ -78,7 +81,8 @@ This package supports Elstob, the variable font for medievalists (and others).
 The package requires \lltech, since {\ltech} is
 the only flavor of {\TeX} that supports variable fonts. Elstob is not in CTAN, so you must
 install the font in your system in order to use it (be sure to get “Elstob,” the variable
-version, not “ElstobD,” the static font). Place the file {\verb|Elstob.sty|} in the same
+version, not “ElstobD,” the static font). Place the files \src{Elstob.sty} and
+{\color{BrickRed}\verb|alt_styles.lua|} in the same
 directory with the document you're working on. This package loads
 \fspec, so it is not necessary to load that package separately, even if you are using
 other fonts alongside Elstob.
@@ -116,12 +120,12 @@ Spacing, and Slant.
 
 \section{Loading Elstob}
 
-Load the package in the usual way, with {\verb|\usepackage{Elstob}|}.
+Load the package in the usual way, with {\color{BrickRed}\verb|\usepackage{Elstob}|}.
 By default, the main font is not a set of static outlines whose proportions
 remain the same though they can be scaled, but rather a set of
 \emph{variable} outlines that change their Weight and Optical Size as the text size increases
 or decreases. You can see the difference if we scale a line of fine print
-and a line of header text to the same {\verb|\large|} size:\\[0.5ex]
+and a line of header text to the same {\color{BrickRed}\verb|\large|} size:\\[0.5ex]
 
 \noindent {\large\samplefootnote Here is some sample fine print (6pt).}\\[0.2ex]
 {\large\sampleheader Here is some sample header text (18pt and up).}\\[0.5ex]
@@ -140,7 +144,7 @@ typically wider and heavier at small sizes.} Evenness of texture makes text in
 different point sizes \emph{look} the same.
 
 Elstob can be customized in an enormous number of ways, which will be explained
-in later sections, but the {\verb|\usepackage|} command takes a few simple options
+in later sections, but the {\color{BrickRed}\verb|\usepackage|} command takes a few simple options
 as well:
 
 \begin{description}
@@ -156,7 +160,7 @@ as well:
     good choice if you have selected the \textbf{medium} option.
     \item[opszadjust] Adjusts the optical size. By default, the value of this axis
     is 8 for 8pt text, 12 for 12pt, etc. (within the range 6–18). But if you pass the
-    option {\verb|opszadjust=-2|}, the optical size axis will have 6 for 8pt type, 10 for
+    option {\color{BrickRed}\verb|opszadjust=-2|}, the optical size axis will have 6 for 8pt type, 10 for
     12pt, etc. Because the value of the optical size axis must be between 6 and 18, the
     value of the optical size axis for 6- and 7pt type will be 6.
     \item[slant] A number from 0 to 15, specifying the slant of the italic face.
@@ -205,43 +209,56 @@ For example, here are the \textbf{SizeFeatures} for this document:
 \begin{verbatim}
     MainRegularSizeFeatures={
         SizeFeatures={
-            {Size={-10}, RawFeature={axis={wght=450,opsz=8}}},
-            {Size={10-13}, RawFeature={axis={wght=370,opsz=10}}},
-            {Size={13-}, RawFeature={axis={wght=350,opsz=16}}}
+            {Size={-10},
+                RawFeature={axis={wght=450,opsz=8}}},
+            {Size={10-13},
+                RawFeature={axis={wght=370,opsz=10}}},
+            {Size={13-},
+                RawFeature={axis={wght=350,opsz=16}}}
         }
     },
     MainItalicSizeFeatures={
         SizeFeatures={
-            {Size={-10}, RawFeature={axis={wght=450,opsz=8,slnt=12}}},
-            {Size={10-13}, RawFeature={axis={wght=370,opsz=10,slnt=12}}},
-            {Size={13-}, RawFeature={axis={wght=350,opsz=16,slnt=12}}}
+            {Size={-10},
+                RawFeature={axis={wght=450,opsz=8,slnt=12}}},
+            {Size={10-13},
+                RawFeature={axis={wght=370,opsz=10,slnt=12}}},
+            {Size={13-},
+                RawFeature={axis={wght=350,opsz=16,slnt=12}}}
         }
     },
     MainBoldSizeFeatures={
         SizeFeatures={
-            {Size={-10}, RawFeature={axis={wght=650,opsz=8}}},
-            {Size={10-13}, RawFeature={axis={wght=600,opsz=10}}},
-            {Size={13-}, RawFeature={axis={wght=5700,opsz=16}}}
+            {Size={-10},
+                RawFeature={axis={wght=650,opsz=8}}},
+            {Size={10-13},
+                RawFeature={axis={wght=600,opsz=10}}},
+            {Size={13-},
+                RawFeature={axis={wght=5700,opsz=16}}}
         }
     },
     MainBoldItalicSizeFeatures={
         SizeFeatures={
-            {Size={-10}, RawFeature={axis={wght=650,opsz=8,slnt=12}}},
-            {Size={10-13}, RawFeature={axis={wght=600,opsz=10,slnt=12}}},
-            {Size={13-}, RawFeature={axis={wght=5700,opsz=16,slnt=12}}}
+            {Size={-10},
+                RawFeature={axis={wght=650,opsz=8,slnt=12}}},
+            {Size={10-13},
+                RawFeature={axis={wght=600,opsz=10,slnt=12}}},
+            {Size={13-},
+                RawFeature={axis={wght=5700,opsz=16,slnt=12}}}
         }
     }
 \end{verbatim}\normalsize
 
-\noindent By default, the Elstob package defines thirteen size-ranges, but here we
+\noindent Because there's no way to know in advance what and how many sizes of type a document
+will use, the Elstob package defines thirteen size-ranges. Here, however, we
 need only three---for footnotes (less than 10pt),
 main text (10-13pt), and headers (greater than 13pt). For each of these sizes, the
 weight is a little lighter than the default, and the optical size a little less, giving
-the text a relatively open look. \textit{Italic type is relatively upright}.
+the page an open look. \textit{Italic type is relatively upright}.
 
 \section{Selecting Alternate Styles}
 
-In addition to the document's main font, you can choose from fifty
+In addition to the document's main font, you can choose from more than fifty
 predefined styles, most of which match the instances defined in the font.
 The commands for shifting to these
 styles are as follows (of the italic styles, only the base “eItalic” is listed;
@@ -340,7 +357,7 @@ to shift temporarily to a style other than that of the main text.
 For example, to shift to the 6pt Medium style for a short phrase, use
 this code:
 \begin{center}
-{\small\verb|{\eSixPtMedium a short phrase}|}.
+{\color{BrickRed}\small\verb|{\eSixPtMedium a short phrase}|}.
 \end{center}
 The result: {\eSixPtMedium a short phrase}.
 
@@ -380,8 +397,9 @@ also has a corresponding “text” command that works like
 {\verb|\textit{}|}—that is, it takes
 as its sole argument the text to which the command will be applied. Each “text” command
 consists of the main command with “text” prefixed—for example,
-{\verb|\textInsularLetterForms{}|}
-corresponding to {\verb|\InsularLetterForms|}.  For a fuller account of the OpenType features
+{\color{BrickRed}\verb|\textInsularLetterForms{}|}
+corresponding to {\color{BrickRed}\verb|\InsularLetterForms|}.\linebreak
+For a fuller account of the OpenType features
 applied by these commands, see the \textit{Elstob Manual}.
 
 %\begin{center}
@@ -407,33 +425,34 @@ applied by these commands, see the \textit{Elstob Manual}.
 \end{table}
 
 The syntax of \textbackslash ecv
-is {\verb|\ecv[num]{num}|}, where the second (required) argument is the number of the Character Variant feature,
+is {\color{BrickRed}\verb|\ecv[num]{num}|}, where the second (required) argument is the number of the Character Variant feature,
 and the first (optional) argument is an index into the variants provided by that feature (starting with zero, the default).
-\textbackslash textcv takes an additional required argument ({\verb|\textcv[num]{num}{text}|}— the text to which the
+\textbackslash textcv takes an additional required argument ({\color{BrickRed}\verb|\textcv[num]{num}{text}|}— the text to which the
 feature should be applied.
 
 Character Variant features can also be selected with mnemonics, listed in Table 2. For example, a feature for
 lowercase \textbf{g} can be expressed as
 
 \begin{center}
-{\verb|\textcv[1]{\ecvg}{g}|}
+{\color{BrickRed}\small\verb|\textcv[1]{\ecvg}{g}|}
 \end{center}
 
-\noindent yielding \textbf{\textcv[1]{\ecvg}{g}}, one of the Middle English poet Orm’s phonetic characters.
+\noindent yielding \textbf{\textcv[1]{\ecvg}{g}}, one of the phonetic characters devised by
+the Middle English poet Orm.
 
 \begin{table}[ht]
     \centering
     \begin{tabular}{|l|l|l|}
     \hline
-    \textbackslash ecvD & \textbackslash ecvd & \textbackslash ecvF\\
+    \textbackslash ecvD & \textbackslash ecvg & \textbackslash ecvs\\
 
-    \textbackslash ecvf & \textbackslash ecvG & \textbackslash ecvg\\
+    \textbackslash ecvd & \textbackslash ecvi & \textbackslash ecvT\\
 
-    \textbackslash ecvi & \textbackslash ecvR & \textbackslash ecvr\\
+    \textbackslash ecvF & \textbackslash ecvR & \textbackslash ecvT\\
 
-    \textbackslash ecvS & \textbackslash ecvs & \textbackslash ecvT\\
+    \textbackslash ecvf & \textbackslash ecvr & \textbackslash ecvt\\
 
-    \textbackslash ecvt & \textbackslash ecvTironianEt & \textbackslash ecvquestion\\
+    \textbackslash ecvG & \textbackslash ecvS & \textbackslash ecvTironianEt\\
     \hline
 \end{tabular}
 \caption{Mnemonics for Character Variants}
