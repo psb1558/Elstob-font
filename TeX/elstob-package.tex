@@ -1,35 +1,7 @@
 \documentclass[12pt]{article}
 
-\usepackage[opszadjust=-2,
-MainRegularSizeFeatures={
-    SizeFeatures={
-        {Size={-10}, RawFeature={axis={wght=450,opsz=8}}},
-        {Size={10-13}, RawFeature={axis={wght=370,opsz=10}}},
-        {Size={13-}, RawFeature={axis={wght=350,opsz=16}}}
-    }
-},
-MainItalicSizeFeatures={
-    SizeFeatures={
-        {Size={-10}, RawFeature={axis={wght=450,opsz=8,slnt=12}}},
-        {Size={10-13}, RawFeature={axis={wght=370,opsz=12,slnt=10}}},
-        {Size={13-}, RawFeature={axis={wght=350,opsz=16,slnt=12}}}
-    }
-},
-MainBoldSizeFeatures={
-    SizeFeatures={
-        {Size={-10}, RawFeature={axis={wght=650,opsz=8}}},
-        {Size={10-13}, RawFeature={axis={wght=600,opsz=12}}},
-        {Size={13-}, RawFeature={axis={wght=5700,opsz=16}}}
-    }
-},
-MainBoldItalicSizeFeatures={
-    SizeFeatures={
-        {Size={-10}, RawFeature={axis={wght=650,opsz=8,slnt=12}}},
-        {Size={10-13}, RawFeature={axis={wght=600,opsz=12,slnt=12}}},
-        {Size={13-}, RawFeature={axis={wght=5700,opsz=16,slnt=12}}}
-    }
-}
-]{Elstob}
+\usepackage[wghtadjust=-50,opszadjust=-2,slant=12]{elstob}
+
 \setfontface\samplefootnote{Elstob}[
     Renderer = HarfBuzz,
     SizeFeatures = {{Size={5-}, RawFeature={axis={wght=490,opsz=6}}}},
@@ -52,18 +24,19 @@ MainBoldItalicSizeFeatures={
 \usepackage{metalogo}
 \newcommand{\ltech}{Lua\kern-1.5pt\TeX}
 \newcommand{\lltech}{Lua\LaTeX}
-\setmonofont{SourceCodePro-Regular}[Scale=MatchLowercase,Numbers=Lowercase]
-\setsansfont{SourceSansPro-Regular}[Scale=MatchLowercase,Numbers=Lowercase]
+\setmonofont{DejaVu Sans Mono}[Scale=MatchLowercase,Numbers=Lowercase]
+\setsansfont{DejaVu Sans}[Scale=MatchLowercase,Numbers=Lowercase]
+%\newcommand{\fspec}{fontspec}
 \newcommand{\fspec}{{\sffamily fontspec}}
 \usepackage{supertabular}
 \usepackage[table,dvipsnames]{xcolor}
 \definecolor{myLightBlue}{RGB}{203,228,249}
-\definecolor{SlateGray}{RGB}{112,128,144}
+\definecolor{GunMetalGray}{RGB}{42,52,57}
 \definecolor{BrickRed}{RGB}{146,18,6}
 \definecolor{RViolet}{RGB}{70,18,87}
 \newcommand{\bluerow}{\rowcolor{myLightBlue}}
 \usepackage{titlesec}
-\titleformat{\section}[hang]{\Large\color{SlateGray}}{\thesection.}{1em}{}
+\titleformat{\section}[hang]{\Large\color{GunMetalGray}}{\thesection.}{1em}{}
 \newcommand{\src}[1]{{\color{BrickRed}\texttt{#1}}}
 \linespread{1.1}
 \title{Elstob}
@@ -81,8 +54,8 @@ This package supports Elstob, the variable font for medievalists (and others).
 The package requires \lltech, since {\ltech} is
 the only flavor of {\TeX} that supports variable fonts. Elstob is not in CTAN, so you must
 install the font in your system in order to use it (be sure to get “Elstob,” the variable
-version, not “ElstobD,” the static font). Place the files \src{Elstob.sty} and
-\src{Elstob.lua} in the same
+version, not “ElstobD,” the static font). Place the files \src{elstob.sty} and
+\src{elstob.lua} in the same
 directory with the document you're working on. This package loads
 \fspec, so it is not necessary to load that package separately, even if you are using
 other fonts alongside Elstob.
@@ -99,14 +72,16 @@ by making a selection of number values from the axes, of which Elstob has four (
     \item[Weight] Possible weights run from ExtraLight (200) to ExtraBold (800). By
     convention, Regular is 400 and Bold is 700.
     \item[Optical Size] A complex adjustment of a glyph's shape to
-    optimize for particular type sizes. For small sizes (e.g. footnotes), glyphs are
-    a little heavier and wider, and the xheight is higher. Values (corresponding to
-    point sizes) run from 6 to 18.
+    optimize for particular type sizes: at small sizes (e.g. footnotes), thin stems are
+    thicker, the xheight is higher, and glyphs are a little wider. Values from 6 to 18 correspond to point
+    sizes, but this correspondence is merely the designer's suggestion: changing the
+    font's optical size setting does not change the actual size of the text, and you can use any
+    optical size with type in any actual size.
     \item[Slant] Italic only. The axis has values from 0 to 15, where 0 is {\mostslanted most
     slanted} and 15 is {\leastslanted least slanted}. The default is 8.
     \item[Grade] Increases the weight of glyphs without changing their width. This
-    axis is most useful in web applications and likely will not interest {\LaTeX} users
-    much. Possible values are 0–1 (fractional values are permitted). The default is 0.
+    axis is more useful in web applications than in print.
+    Possible values are 0–1 (fractional values are permitted). The default is 0.
     \item[Spacing] Increases the width of space characters. In combination with
     Stylistic Set 18 “Old-Style Punctuation Spacing,” this can approximate the
     spacing used by early printed books, which was more generous than now.
@@ -120,7 +95,7 @@ Spacing, and Slant.
 
 \section{Loading Elstob}
 
-Load the package in the usual way, with {\color{BrickRed}\verb|\usepackage{Elstob}|}.
+Load the package in the usual way, with {\color{BrickRed}\verb|\usepackage{elstob}|}.
 By default, the main font is not a set of static outlines whose proportions
 remain the same though they can be scaled, but rather a set of
 \emph{variable} outlines that change their Weight and Optical Size as the text size increases
@@ -136,21 +111,20 @@ shape, in addition to promoting legibility,
 is to allow blocks of text in different sizes (headers, main text,
 block quotations, footnotes) to coexist on a page without any of them looking too
 dark or too light.\footnote{%
-For example, on a typical LaTeX page a footnote like this, looked at as a block
+For example, on a typical {\LaTeX} page a footnote like this, looked at as a block
 of gray, is usually a little lighter than the main text. But on this page, the
 “color” of the footnote matches that of the main text. The variation in glyph
 shape responsible for this effect approximates the way letters in metal type were
 typically wider and heavier at small sizes.} Evenness of texture makes text in
 different point sizes \emph{look} the same.
 
-Elstob can be customized in an enormous number of ways, which will be explained
-in later sections, but the {\color{BrickRed}\verb|\usepackage|} command takes a few simple options
-as well:
+Elstob's {\color{BrickRed}\verb|\usepackage|} options give you a number of ways to
+fine-tune the look of your text:
 
 \begin{description}
     \item[light] The weight of the type for the main text is Light. As with the default
-    style (and all styles defined by these options), “Light” is a set of outlines differing
-    in weight and optical size.
+    style (and all styles defined by these options), “Light” is not a fixed weight, but
+    a range of weights varying with type size.
     \item[extralight] The weight of the type for the main text is ExtraLight.
     \item[medium] The weight of the type for the main text is Medium---that is, darker than
     Regular but lighter than Bold.
@@ -158,6 +132,10 @@ as well:
     good choice if you have selected the \textbf{light} option.
     \item[extrabold] The weight of bold type is somewhat heavier than the usual bold. This may be a
     good choice if you have selected the \textbf{medium} option.
+    \item[wghtadjust] Adjusts the weight of the type. For example, if you choose \textbf{medium}
+    for your document (weight averages about 500) and \textbf{extrabold} (weight about 800)
+    and also include the option {\color{BrickRed}\verb|wghtadjust=-25|}, then the weights of medium and extrabold
+    text will be lightened by 25 (475, 775).
     \item[opszadjust] Adjusts the optical size. By default, the value of this axis
     is 8 for 8pt text, 12 for 12pt, etc. (within the range 6–18). But if you pass the
     option {\color{BrickRed}\verb|opszadjust=-2|}, the optical size axis will have 6 for 8pt type, 10 for
@@ -176,8 +154,8 @@ as well:
 
 \section{Customizing the Main Font}
 
-The simple options listed in the previous section provide a rough and ready
-way to vary Elstob's look, but with this package's more advanced options you can choose
+If the options listed in the previous section don't give you the effect you're looking for,
+this package's more advanced options allow you to choose
 from a virtually infinite number of styles. Do this by passing OpenType features 
 for your document's main text \emph{or} for one or more of the four main styles
 (Regular, Italic, Bold, Bold Italic), and also by supplying custom values for the
@@ -192,7 +170,7 @@ package this way:
     \usepackage[MainFeatures={
         Language=English,
         StylisticSet=8
-    }]{Elstob}
+    }]{elstob}
 \end{verbatim}
 \normalsize
 
@@ -203,7 +181,8 @@ they are passed straight through to \fspec.
 
 If you want to customize the four basic styles of the main text, use
 \textbf{MainRegularSizeFeatures}, \textbf{MainItalicSizeFeatures}, and so on.
-For example, here are the \textbf{SizeFeatures} for this document:
+For example, here are the \textbf{SizeFeatures} for an early version of
+this document (they were used to test these features):
 
 \footnotesize
 \begin{verbatim}
@@ -379,7 +358,7 @@ appended. For example:
                 Size={5-},RawFeature={axis={wght=620,opsz=8.5}}
             }
         }
-    ]{Elstob}
+    ]{elstob}
 \end{verbatim}\normalsize
 
 \noindent This will shift text in the 8pt Semibold style from default to insular

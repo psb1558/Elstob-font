@@ -1,0 +1,289 @@
+%% Elstob.sty
+%% Copyright 2023 by Peter S. Baker
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3c
+% of this license or (at your option) any later version.
+% The latest version of this license is at
+%   https://www.latex-project.org/lppl.txt
+%
+% This work consists of the files elstob.sty and elstob.lua.
+
+\ProvidesPackage{elstob}[%
+    2023/12/16 (Peter Baker) Supports the Elstob variable font for LuaLaTeX.]
+
+\RequirePackage{ifluatex,xkeyval,fontspec}
+
+\RequireLuaTeX
+
+% FIGURES (default is OldStyle Proportional)
+
+\newif\ifelstob@lining \elstob@liningfalse
+\newif\ifelstob@tabular \elstob@tabularfalse
+
+\DeclareOptionX{lining}{\elstob@liningtrue}
+\DeclareOptionX{tabular}{\elstob@tabulartrue}
+\DeclareOptionX{proportional}{\elstob@tabularfalse}
+\DeclareOptionX{oldstyle}{\elstob@liningfalse}
+
+% WEIGHT OPTIONS
+
+\newcommand*{\elstob@regidx}{1}
+\DeclareOptionX{extralight}{\renewcommand{\elstob@regidx}{4}}
+\DeclareOptionX{light}{\renewcommand{\elstob@regidx}{2}}
+\DeclareOptionX{medium}{\renewcommand{\elstob@regidx}{3}}
+\newcommand*{\elstob@boldidx}{1}
+\DeclareOptionX{semibold}{\renewcommand{\elstob@boldidx}{2}}
+\DeclareOptionX{extrabold}{\renewcommand{\elstob@boldidx}{3}}
+
+\newcommand*{\wghtadj}{0}
+\DeclareOptionX{wghtadjust}{\renewcommand*{\wghtadj}{#1}}
+
+% OLD-STYLE SPACING; OPTICAL SIZE; ITALIC SLANT
+
+\newif\ifelstob@oldspacing \elstob@oldspacingfalse
+\DeclareOptionX{oldspacing}{\elstob@oldspacingtrue}
+
+\newcommand*{\opszadj}{0}
+\DeclareOptionX{opszadjust}{\renewcommand*{\opszadj}{#1}}
+
+\newcommand*{\elstob@Islnt}{8}
+\DeclareOptionX{slant}{\renewcommand*{\elstob@Islnt}{#1}}
+
+% MAIN TEXT OPTIONS
+
+% User options and macros for storing them
+
+\newcommand*{\MainDef}{}
+\newcommand*{\MainRegDef}{}
+\newcommand*{\MainItalicDef}{}
+\newcommand*{\MainBoldDef}{}
+\newcommand*{\MainBoldItalicDef}{}
+
+\DeclareOptionX{MainFeatures}{\renewcommand*{\MainDef}{#1,}}
+\DeclareOptionX{MainRegularFeatures}{\renewcommand*{\MainRegDef}{#1,}}
+\DeclareOptionX{MainItalicFeatures}{\renewcommand*{\MainItalicDef}{#1,}}
+\DeclareOptionX{MainBoldFeatures}{\renewcommand*{\MainBoldDef}{#1,}}
+\DeclareOptionX{MainBoldItalicFeatures}{\renewcommand*{\MainBoldItalicDef}{#1,}}
+
+\DeclareOptionX{MainRegularSizeFeatures}{\newcommand*{\MainRegSizeDef}{#1}}
+\DeclareOptionX{MainItalicSizeFeatures}{\newcommand*{\MainItalicSizeDef}{#1}}
+\DeclareOptionX{MainBoldSizeFeatures}{\newcommand*{\MainBoldSizeDef}{#1}}
+\DeclareOptionX{MainBoldItalicSizeFeatures}{\newcommand*{\MainBoldItalicSizeDef}{#1}}
+
+% ALTERNATE STYLES
+
+\directlua{dofile("Elstob.lua")
+mkaltcommands()}
+
+% PROCESS OPTIONS
+
+\DeclareOptionX*{\PackageWarning{Elstob}{Unknown option `\CurrentOption' ignored}}
+\ProcessOptionsX\relax
+
+% APPLY OPTICAL SIZE ADJUSTMENT AND GENERATE opsz COMMANDS
+
+\def\mkopszcommands#1{%
+\directlua{adjustment = #1
+mkopszcommands(adjustment)}}
+
+\mkopszcommands{\opszadj}
+
+% APPLY WEIGHT ADJUSTMENT AND GENERATE wght COMMANDS
+
+\def\mkregwghtcommands#1#2{%
+\directlua{wtidx = #1
+adjustment = #2
+mkregcommands(wtidx, adjustment)}}
+
+\def\mkboldwghtcommands#1#2{%
+\directlua{wtidx = #1
+adjustment = #2
+mkboldcommands(wtidx, adjustment)}}
+
+\mkregwghtcommands{\elstob@regidx}{\wghtadj}
+
+\mkboldwghtcommands{\elstob@boldidx}{\wghtadj}
+
+% SET SS18 AND SPAC AXIS IF OLD-STYLE SPACING
+
+\def\elstob@spac{0}
+\ifelstob@oldspacing
+    \renewcommand*{\MainDef}{StylisticSet=18,}
+    \def\elstob@spac{1}
+\fi
+
+% GENERATE SizeFeatures FOR THE FOUR MAIN STYLES
+% (won't be done if user has supplied custom SizeFeatures)
+
+\@ifundefined{MainRegSizeDef}{
+    \newcommand*{\MainRegSizeDef}{
+        SizeFeatures={
+            {Size={-6.5},       RawFeature={axis={wght=\elstob@RwghtOne,opsz=\elstob@RopszOne,SPAC=\elstob@spac}}},
+            {Size={6.5-7.5},    RawFeature={axis={wght=\elstob@RwghtTwo,opsz=\elstob@RopszTwo,SPAC=\elstob@spac}}},
+            {Size={7.5-8.5},    RawFeature={axis={wght=\elstob@RwghtThree,opsz=\elstob@RopszThree,SPAC=\elstob@spac}}},
+            {Size={8.5-9.5},    RawFeature={axis={wght=\elstob@RwghtFour,opsz=\elstob@RopszFour,SPAC=\elstob@spac}}},
+            {Size={9.5-10.5},   RawFeature={axis={wght=\elstob@RwghtFive,opsz=\elstob@RopszFive,SPAC=\elstob@spac}}},
+            {Size={10.5-11.5},  RawFeature={axis={wght=\elstob@RwghtSix,opsz=\elstob@RopszSix,SPAC=\elstob@spac}}},
+            {Size={11.5-12.5},  RawFeature={axis={wght=\elstob@RwghtSeven,opsz=\elstob@RopszSeven,SPAC=\elstob@spac}}},
+            {Size={12.5-13.5},  RawFeature={axis={wght=\elstob@RwghtEight,opsz=\elstob@RopszEight,SPAC=\elstob@spac}}},
+            {Size={13.5-14.5},  RawFeature={axis={wght=\elstob@RwghtNine,opsz=\elstob@RopszNine,SPAC=\elstob@spac}}},
+            {Size={14.5-15.5},  RawFeature={axis={wght=\elstob@RwghtTen,opsz=\elstob@RopszTen,SPAC=\elstob@spac}}},
+            {Size={15.5-16.5},  RawFeature={axis={wght=\elstob@RwghtEleven,opsz=\elstob@RopszEleven,SPAC=\elstob@spac}}},
+            {Size={16.5-17.5},  RawFeature={axis={wght=\elstob@RwghtTwelve,opsz=\elstob@RopszTwelve,SPAC=\elstob@spac}}},
+            {Size={17.5-},      RawFeature={axis={wght=\elstob@RwghtThirteen,opsz=\elstob@RopszThirteen,SPAC=\elstob@spac}}}
+        }
+    }
+}{}
+
+\@ifundefined{MainItalicSizeDef}{
+    \newcommand*{\MainItalicSizeDef}{
+        SizeFeatures={
+            {Size={-6.5},       RawFeature={axis={wght=\elstob@IwghtOne,opsz=\elstob@IopszOne,SPAC=\elstob@spac,slnt=\elstob@Islnt}}},
+            {Size={6.5-7.5},    RawFeature={axis={wght=\elstob@IwghtTwo,opsz=\elstob@IopszTwo,SPAC=\elstob@spac,slnt=\elstob@Islnt}}},
+            {Size={7.5-8.5},    RawFeature={axis={wght=\elstob@IwghtThree,opsz=\elstob@IopszThree,SPAC=\elstob@spac,slnt=\elstob@Islnt}}},
+            {Size={8.5-9.5},    RawFeature={axis={wght=\elstob@IwghtFour,opsz=\elstob@IopszFour,SPAC=\elstob@spac,slnt=\elstob@Islnt}}},
+            {Size={9.5-10.5},   RawFeature={axis={wght=\elstob@IwghtFive,opsz=\elstob@IopszFive,SPAC=\elstob@spac,slnt=\elstob@Islnt}}},
+            {Size={10.5-11.5},  RawFeature={axis={wght=\elstob@IwghtSix,opsz=\elstob@IopszSix,SPAC=\elstob@spac,slnt=\elstob@Islnt}}},
+            {Size={11.5-12.5},  RawFeature={axis={wght=\elstob@IwghtSeven,opsz=\elstob@IopszSeven,SPAC=\elstob@spac,slnt=\elstob@Islnt}}},
+            {Size={12.5-13.5},  RawFeature={axis={wght=\elstob@IwghtEight,opsz=\elstob@IopszEight,SPAC=\elstob@spac,slnt=\elstob@Islnt}}},
+            {Size={13.5-14.5},  RawFeature={axis={wght=\elstob@IwghtNine,opsz=\elstob@IopszNine,SPAC=\elstob@spac,slnt=\elstob@Islnt}}},
+            {Size={14.5-15.5},  RawFeature={axis={wght=\elstob@IwghtTen,opsz=\elstob@IopszTen,SPAC=\elstob@spac,slnt=\elstob@Islnt}}},
+            {Size={15.5-16.5},  RawFeature={axis={wght=\elstob@IwghtEleven,opsz=\elstob@IopszEleven,SPAC=\elstob@spac,slnt=\elstob@Islnt}}},
+            {Size={16.5-17.5},  RawFeature={axis={wght=\elstob@IwghtTwelve,opsz=\elstob@IopszTwelve,SPAC=\elstob@spac,slnt=\elstob@Islnt}}},
+            {Size={17.5-},      RawFeature={axis={wght=\elstob@IwghtThirteen,opsz=\elstob@IopszThirteen,SPAC=\elstob@spac,slnt=\elstob@Islnt}}}
+        }
+    }
+}{}
+
+\@ifundefined{MainBoldSizeDef}{
+    \newcommand*{\MainBoldSizeDef}{
+        SizeFeatures={
+            {Size={-6.5},       RawFeature={axis={wght=\elstob@BwghtOne,opsz=\elstob@BopszOne,SPAC=\elstob@spac}}},
+            {Size={6.5-7.5},    RawFeature={axis={wght=\elstob@BwghtTwo,opsz=\elstob@BopszTwo,SPAC=\elstob@spac}}},
+            {Size={7.5-8.5},    RawFeature={axis={wght=\elstob@BwghtThree,opsz=\elstob@BopszThree,SPAC=\elstob@spac}}},
+            {Size={8.5-9.5},    RawFeature={axis={wght=\elstob@BwghtFour,opsz=\elstob@BopszFour,SPAC=\elstob@spac}}},
+            {Size={9.5-10.5},   RawFeature={axis={wght=\elstob@BwghtFive,opsz=\elstob@BopszFive,SPAC=\elstob@spac}}},
+            {Size={10.5-11.5},  RawFeature={axis={wght=\elstob@BwghtSix,opsz=\elstob@BopszSix,SPAC=\elstob@spac}}},
+            {Size={11.5-12.5},  RawFeature={axis={wght=\elstob@BwghtSeven,opsz=\elstob@BopszSeven,SPAC=\elstob@spac}}},
+            {Size={12.5-13.5},  RawFeature={axis={wght=\elstob@BwghtEight,opsz=\elstob@BopszEight,SPAC=\elstob@spac}}},
+            {Size={13.5-14.5},  RawFeature={axis={wght=\elstob@BwghtNine,opsz=\elstob@BopszNine,SPAC=\elstob@spac}}},
+            {Size={14.5-15.5},  RawFeature={axis={wght=\elstob@BwghtTen,opsz=\elstob@BopszTen,SPAC=\elstob@spac}}},
+            {Size={15.5-16.5},  RawFeature={axis={wght=\elstob@BwghtEleven,opsz=\elstob@BopszEleven,SPAC=\elstob@spac}}},
+            {Size={16.5-17.5},  RawFeature={axis={wght=\elstob@BwghtTwelve,opsz=\elstob@BopszTwelve,SPAC=\elstob@spac}}},
+            {Size={17.5-},      RawFeature={axis={wght=\elstob@BwghtThirteen,opsz=\elstob@BopszThirteen,SPAC=\elstob@spac}}}
+        }
+    }
+}{}
+
+\@ifundefined{MainBoldItalicSizeDef}{
+    \newcommand*{\MainBoldItalicSizeDef}{
+        SizeFeatures={
+            {Size={-6.5},       RawFeature={axis={wght=\elstob@BIwghtOne,opsz=\elstob@BIopszOne,SPAC=\elstob@spac,slnt=\elstob@Islnt}}},
+            {Size={6.5-7.5},    RawFeature={axis={wght=\elstob@BIwghtTwo,opsz=\elstob@BIopszTwo,SPAC=\elstob@spac,slnt=\elstob@Islnt}}},
+            {Size={7.5-8.5},    RawFeature={axis={wght=\elstob@BIwghtThree,opsz=\elstob@BIopszThree,SPAC=\elstob@spac,slnt=\elstob@Islnt}}},
+            {Size={8.5-9.5},    RawFeature={axis={wght=\elstob@BIwghtFour,opsz=\elstob@BIopszFour,SPAC=\elstob@spac,slnt=\elstob@Islnt}}},
+            {Size={9.5-10.5},   RawFeature={axis={wght=\elstob@BIwghtFive,opsz=\elstob@BIopszFive,SPAC=\elstob@spac,slnt=\elstob@Islnt}}},
+            {Size={10.5-11.5},  RawFeature={axis={wght=\elstob@BIwghtSix,opsz=\elstob@BIopszSix,SPAC=\elstob@spac,slnt=\elstob@Islnt}}},
+            {Size={11.5-12.5},  RawFeature={axis={wght=\elstob@BIwghtSeven,opsz=\elstob@BIopszSeven,SPAC=\elstob@spac,slnt=\elstob@Islnt}}},
+            {Size={12.5-13.5},  RawFeature={axis={wght=\elstob@BIwghtEight,opsz=\elstob@BIopszEight,SPAC=\elstob@spac,slnt=\elstob@Islnt}}},
+            {Size={13.5-14.5},  RawFeature={axis={wght=\elstob@BIwghtNine,opsz=\elstob@BIopszNine,SPAC=\elstob@spac,slnt=\elstob@Islnt}}},
+            {Size={14.5-15.5},  RawFeature={axis={wght=\elstob@BIwghtTen,opsz=\elstob@BIopszTen,SPAC=\elstob@spac,slnt=\elstob@Islnt}}},
+            {Size={15.5-16.5},  RawFeature={axis={wght=\elstob@BIwghtEleven,opsz=\elstob@BIopszEleven,SPAC=\elstob@spac,slnt=\elstob@Islnt}}},
+            {Size={16.5-17.5},  RawFeature={axis={wght=\elstob@BIwghtTwelve,opsz=\elstob@BIopszTwelve,SPAC=\elstob@spac,slnt=\elstob@Islnt}}},
+            {Size={17.5-},      RawFeature={axis={wght=\elstob@BIwghtThirteen,opsz=\elstob@BIopszThirteen,SPAC=\elstob@spac,slnt=\elstob@Islnt}}}
+        }
+    }
+}{}
+
+% GENERATE NUMBER STRINGS (fontspec style)
+
+\def\elstob@figurestyle{Lowercase}
+\ifelstob@lining\def\elstob@figurestyle{Uppercase}\fi
+\def\elstob@figurealign{Proportional}
+\ifelstob@tabular\def\elstob@figurealign{Monospaced}\fi
+
+% SET UP THE MAIN FONT.
+
+\setmainfont{Elstob}[
+    ItalicFont =         {*-Italic},
+    BoldFont =           {*},
+    BoldItalicFont =     {*-Italic},
+    Renderer =           HarfBuzz,
+    Numbers =            {\elstob@figurealign,\elstob@figurestyle},
+    \MainDef
+    UprightFeatures =    {\MainRegDef
+                          \MainRegSizeDef},
+    BoldFeatures =       {\MainBoldDef
+                          \MainBoldSizeDef},
+    ItalicFeatures =     {\MainItalicDef
+                          \MainItalicSizeDef},
+    BoldItalicFeatures = {\MainBoldItalicDef
+                          \MainBoldItalicSizeDef}
+]
+
+% GENERATE THE ALTERNATE STYLES
+
+% #1 Name of the face; #2 Elstob or Elstob-Italic;
+% #3 general features; #4 SizeFeatures
+\newcommand*{\elstob@newfont}[4]{
+    \setfontface#1{#2}[
+        Renderer =          HarfBuzz,
+        Numbers =           {\elstob@figurealign,\elstob@figurestyle},
+        SmallCapsFont =     {*},
+        SmallCapsFeatures = {Letters=SmallCaps},
+        #3
+        #4
+    ]
+}
+
+\directlua{mkfontcommands()}
+
+% CONVENIENCE COMMANDS FOR ACCESS TO ELSTOB'S OT FEATURES
+
+% Character Variants
+
+\newcommand*{\textcv}[3][0]{{\addfontfeature{CharacterVariant=#2:#1}#3}}
+\newcommand*{\ecv}[2][0]{\addfontfeature{CharacterVariant=#2:#1}}
+
+% Stylistic Sets.
+
+\newcommand*{\AltThornEth}{\addfontfeature{StylisticSet=1}} % ss01
+\newcommand*{\textAltThornEth}[1]{{\addfontfeature{StylisticSet=1}#1}}
+\newcommand*{\InsularLetterForms}{\addfontfeature{StylisticSet=2}} % ss02
+\newcommand*{\textInsularLetterForms}[1]{{\addfontfeature{StylisticSet=2}#1}}
+\newcommand*{\ContextualLongS}{\addfontfeature{StylisticSet=8}} % ss08
+\newcommand*{\textContextualLongS}[1]{{\addfontfeature{StylisticSet=8}#1}}
+\newcommand*{\LanguageSpecificVariants}{\addfontfeature{StylisticSet=9}} % ss09
+\newcommand*{\textLanguageSpecificVariants}[1]{{\addfontfeature{StylisticSet=9}#1}}
+\newcommand*{\EarlyEnglishFuthorc}{\addfontfeature{StylisticSet=12}} % ss12
+\newcommand*{\textEarlyEnglishFuthorc}[1]{{\addfontfeature{StylisticSet=12}#1}}
+\newcommand*{\ElderFuthark}{\addfontfeature{StylisticSet=13}} % ss13
+\newcommand*{\textElderFuthark}[1]{{\addfontfeature{StylisticSet=13}#1}}
+\newcommand*{\YoungerFuthark}{\addfontfeature{StylisticSet=14}} % ss14
+\newcommand*{\textYoungerFuthark}[1]{{\addfontfeature{StylisticSet=14}#1}}
+\newcommand*{\LongBranchToShortTwig}{\addfontfeature{StylisticSet=15}} % ss15
+\newcommand*{\textLongBranchToShortTwig}[1]{{\addfontfeature{StylisticSet=15}#1}}
+\newcommand*{\ContextualRRotunda}{\addfontfeature{StylisticSet=16}} % ss16
+\newcommand*{\textContextualRRotunda}[1]{{\addfontfeature{StylisticSet=16}#1}}
+\newcommand*{\OldStylePunctuation}{\addfontfeature{StylisticSet=18}} % ss18
+\newcommand*{\textOldStylePunctuation}[1]{{\addfontfeature{StylisticSet=18}#1}}
+
+% Tiny macros for providing mnemonic access to the cvNN features.
+
+\def\ecvD{7}
+\def\ecvd{8}
+\def\ecvF{11}
+\def\ecvf{12}
+\def\ecvG{13}
+\def\ecvg{14}
+\def\ecvi{18}
+\def\ecvR{35}
+\def\ecvr{36}
+\def\ecvS{37}
+\def\ecvs{38}
+\def\ecvT{39}
+\def\ecvt{40}
+\def\ecvTironianEt{69}
+\def\ecvquestion{76}
+
