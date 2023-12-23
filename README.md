@@ -1,7 +1,7 @@
 ![Elstob Header](TitlePageFacsimile.jpg)
 
 The Elstob font (named for the eighteenth-century Anglo-Saxonist [Elizabeth Elstob](https://www.oxforddnb.com/view/10.1093/ref:odnb/9780198614128.001.0001/odnb-9780198614128-e-8761)) is based on the Double Pica commissioned by Bishop [John Fell](https://en.wikipedia.org/wiki/John_Fell_(bishop)) in the seventeenth century. Elstob is designed as a webfont. Thus:
-1. It is a variable font, with weights ranging from ExtraLight to ExtraBold, optical sizes from "Fine Print" (circa 6 points) to "Display" (circa 18 points or greater) and also a grade axis (1-500). (A non-variable desktop version is also available.)
+1. It is a variable font, with weights ranging from ExtraLight to ExtraBold, optical sizes from "6pt" (for fine print) to "18pt" (for headlines) and also a grade axis (0.0–1.0). (A non-variable desktop version is also available.)
 2. Outlines have been kept simple to limit file size.
 4. The intention of the font is to include everything in Unicode useful to a substantial number of medievalists, but the character set has been limited to around 1000 glyphs to keep file size reasonable. Many characters from the [Medieval Unicode Font Initiative](https://skaldic.abdn.ac.uk/m.php?p=mufi), present in the designer's [Junicode](https://github.com/psb1558/Junicode-New/tree/master/legacy) font, can be represented with combining diacritics.
 
@@ -58,7 +58,7 @@ If you are building static fonts, you may customize a couple of aspects while bu
 The `-s` option controls the slant of the italic. Supply a number between 0 and
 15, where 0 is steeply slanted (in fact, the slant of the original typeface)
 and 15 is nearly upright. The `-p` option controls the width of the space
-character. Supply a number between 0 and 1, where 0 produces a narrow space
+character. Supply a number between 0.0 and 1.0, where 0 produces a narrow space
 (in the modern fashion), and 1 produces a wider space, as in old books printed
 with metal type.
 
