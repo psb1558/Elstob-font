@@ -20466,6 +20466,140 @@ glyphs:
           ref: '{41;239}'
           rel: graydist
           round: false
+  one.osf.ss03:
+    y:
+      points:
+      - ptid: '{283;445}'
+        pos: xheight-overshoot
+        points:
+        - ptid: '{112;354}'
+          rel: graydist
+          round: false
+          points:
+          - ptid: '{117;331}'
+            rel: blackdist
+            round: false
+      - ptid: '{-1;0}'
+        pos: baseline
+        points:
+        - ptid: '{6;25}'
+          rel: graydist
+          round: false
+      - ptid: '{73;8}'
+        ref:
+        - '{-1;0}'
+        - '{6;25}'
+        rel: interpolate
+    props:
+      category: Ll
+  one.tosf.ss03:
+    y:
+      points:
+      - ptid: '{358;445}'
+        pos: xheight-overshoot
+        points:
+        - ptid: '{138;344}'
+          rel: graydist
+          round: false
+          points:
+          - ptid: '{143;321}'
+            rel: blackdist
+            round: false
+      - ptid: '{30;0}'
+        pos: baseline
+        points:
+        - ptid: '{39;25}'
+          rel: graydist
+          round: false
+      - ptid: '{148;8}'
+        ref:
+        - '{30;0}'
+        - '{39;25}'
+        rel: interpolate
+    props:
+      category: Ll
+  zero.osf.ss03:
+    y:
+      points:
+      - ptid: '{227;-12}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{246;23}'
+          rel: blackdist
+          round: false
+      - ptid: '{342;445}'
+        pos: xheight-overshoot
+        points:
+        - ptid: '{328;410}'
+          rel: blackdist
+          round: false
+    props:
+      category: Ll
+  zero.tosf.ss03:
+    y:
+      points:
+      - ptid: '{311;445}'
+        pos: xheight-overshoot
+        points:
+        - ptid: '{296;410}'
+          rel: blackdist
+          round: false
+      - ptid: '{208;-12}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{227;23}'
+          rel: blackdist
+          round: false
+    props:
+      category: Ll
+  zero.zero.osf.ss03:
+    y:
+      points:
+      - ptid: '{228;-12}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{247;23}'
+          rel: blackdist
+          round: false
+      - ptid: '{343;445}'
+        pos: xheight-overshoot
+        points:
+        - ptid: '{329;410}'
+          rel: blackdist
+          round: false
+      - ptid:
+        - '{472;364}'
+        - '{95;68}'
+        ref:
+        - '{343;445}'
+        - '{228;-12}'
+        rel: interpolate
+    props:
+      category: Ll
+  zero.zero.tosf.ss03:
+    y:
+      points:
+      - ptid: '{208;-12}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{227;23}'
+          rel: blackdist
+          round: false
+      - ptid: '{311;445}'
+        pos: xheight-overshoot
+        points:
+        - ptid: '{296;410}'
+          rel: blackdist
+          round: false
+      - ptid:
+        - '{421;334}'
+        - '{91;63}'
+        ref:
+        - '{311;445}'
+        - '{208;-12}'
+        rel: interpolate
+    props:
+      category: Ll
 masters:
   wght-min:
     name: wght-min
