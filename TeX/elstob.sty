@@ -38,6 +38,7 @@
 
 \newcommand*{\wghtadj}{0}
 \DeclareOptionX{wghtadjust}{\renewcommand*{\wghtadj}{#1}}
+\DeclareOptionX{weightadjustment}{\renewcommand*{\wghtadj}{#1}}
 
 % OLD-STYLE SPACING; OPTICAL SIZE; ITALIC SLANT
 
@@ -46,13 +47,12 @@
 
 \newcommand*{\opszadj}{0}
 \DeclareOptionX{opszadjust}{\renewcommand*{\opszadj}{#1}}
+\DeclareOptionX{opticalsizeadjustment}{\renewcommand*{\opszadj}{#1}}
 
 \newcommand*{\elstob@Islnt}{8}
 \DeclareOptionX{slant}{\renewcommand*{\elstob@Islnt}{#1}}
 
 % MAIN TEXT OPTIONS
-
-% User options and macros for storing them
 
 \newcommand*{\MainDef}{}
 \newcommand*{\MainRegDef}{}
@@ -252,6 +252,8 @@ mkboldcommands(wtidx, adjustment)}}
 \newcommand*{\textAltThornEth}[1]{{\addfontfeature{StylisticSet=1}#1}}
 \newcommand*{\InsularLetterForms}{\addfontfeature{StylisticSet=2}} % ss02
 \newcommand*{\textInsularLetterForms}[1]{{\addfontfeature{StylisticSet=2}#1}}
+\newcommand*{\AlternateFigures}{\addfontfeature{StylisticSet=3}} % ss03
+\newcommand*{\textAlternateFigures}[1]{{\addfontfeature{StylisticSet=3}#1}}
 \newcommand*{\ContextualLongS}{\addfontfeature{StylisticSet=8}} % ss08
 \newcommand*{\textContextualLongS}[1]{{\addfontfeature{StylisticSet=8}#1}}
 \newcommand*{\LanguageSpecificVariants}{\addfontfeature{StylisticSet=9}} % ss09

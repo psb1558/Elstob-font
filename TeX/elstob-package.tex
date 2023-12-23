@@ -1,6 +1,9 @@
 \documentclass[12pt]{article}
 
-\usepackage[wghtadjust=-50,opszadjust=-2,slant=12]{elstob}
+\usepackage[
+    weightadjustment=-50,opticalsizeadjustment=-2,slant=12,
+    MainFeatures={StylisticSet=3,Numbers=Monospaced}
+]{elstob}
 
 \setfontface\samplefootnote{Elstob}[
     Renderer = HarfBuzz,
@@ -24,8 +27,8 @@
 \usepackage{metalogo}
 \newcommand{\ltech}{Lua\kern-1.5pt\TeX}
 \newcommand{\lltech}{Lua\LaTeX}
-\setmonofont{DejaVu Sans Mono}[Scale=MatchLowercase,Numbers=Lowercase]
-\setsansfont{DejaVu Sans}[Scale=MatchLowercase,Numbers=Lowercase]
+\setmonofont{Fira Mono}[Scale=MatchLowercase,Numbers=Lowercase]
+\setsansfont{Fira Sans}[Scale=MatchLowercase,Numbers=Lowercase]
 %\newcommand{\fspec}{fontspec}
 \newcommand{\fspec}{{\sffamily fontspec}}
 \usepackage{supertabular}
@@ -132,11 +135,11 @@ fine-tune the look of your text:
     good choice if you have selected the \textbf{light} option.
     \item[extrabold] The weight of bold type is somewhat heavier than the usual bold. This may be a
     good choice if you have selected the \textbf{medium} option.
-    \item[wghtadjust] Adjusts the weight of the type. For example, if you choose \textbf{medium}
+    \item[weightadjustment (or wghtadjust)] Adjusts the weight of the type. For example, if you choose \textbf{medium}
     for your document (weight averages about 500) and \textbf{extrabold} (weight about 800)
     and also include the option {\color{BrickRed}\verb|wghtadjust=-25|}, then the weights of medium and extrabold
     text will be lightened by 25 (475, 775).
-    \item[opszadjust] Adjusts the optical size. By default, the value of this axis
+    \item[opticalsizeadjustment (or opszadjust)] Adjusts the optical size. By default, the value of this axis
     is 8 for 8pt text, 12 for 12pt, etc. (within the range 6–18). But if you pass the
     option {\color{BrickRed}\verb|opszadjust=-2|}, the optical size axis will have 6 for 8pt type, 10 for
     12pt, etc. Because the value of the optical size axis must be between 6 and 18, the
@@ -388,15 +391,16 @@ applied by these commands, see the \textit{Elstob Manual}.
         \hline
     \bluerow\textbackslash AltThornEth & Applies ss01, Alternate thorn and eth.\\
     \textbackslash InsularLetterForms & Applies ss02, Insular letter-forms.\\
-    \bluerow\textbackslash ContextualLongS & Applies ss08, Contextual long s.\\
-    \textbackslash LanguageSpecificVariants & \small Applies ss09, Language-Specific Variants.\\
-    \bluerow\textbackslash EarlyEnglishFuthorc & Applies ss12, Early English Futhorc.\\
-    \textbackslash ElderFuthark & Applies ss13, Elder Futhark.\\
-    \bluerow\textbackslash YoungerFuthark & Applies ss14, Younger Futhark.\\
-    \textbackslash LongBranchToShortTwig & Applies ss15, Long Branch to Short Twig.\\
-    \bluerow\textbackslash ContextualRRotunda & Applies ss16, Contextual r rotunda.\\
-    \textbackslash OldStylePunctuation & Applies ss18, Old-style Punctuation.\\
-    \bluerow\textbackslash ecv, \textbackslash textcv & Applies a Character Variant feature.\\
+    \bluerow\textbackslash AlternateFigures & Applies ss03, Alternate Figures.\\
+    \textbackslash ContextualLongS & Applies ss08, Contextual long s.\\
+    \bluerow\textbackslash LanguageSpecificVariants & \small Applies ss09, Language-Specific Variants.\\
+    \textbackslash EarlyEnglishFuthorc & Applies ss12, Early English Futhorc.\\
+    \bluerow\textbackslash ElderFuthark & Applies ss13, Elder Futhark.\\
+    \textbackslash YoungerFuthark & Applies ss14, Younger Futhark.\\
+    \bluerow\textbackslash LongBranchToShortTwig & Applies ss15, Long Branch to Short Twig.\\
+    \textbackslash ContextualRRotunda & Applies ss16, Contextual r rotunda.\\
+    \bluerow\textbackslash OldStylePunctuation & Applies ss18, Old-style Punctuation.\\
+    \textbackslash ecv, \textbackslash textcv & Applies a Character Variant feature.\\
     \hline
     \end{tabular}
 %    \end{center}
