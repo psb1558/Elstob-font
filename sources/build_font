@@ -302,7 +302,7 @@ then
   #  echo "Adding a DSIG table to the roman font"
   #  find . -maxdepth 1 -name "${familyname}*.otf" -not -name "*Italic.ttf" -exec python $SOURCEDIR/add_dsig.py {} \;
   #fi
-  cp $BUILDDIR/instance_ttf/Elstob*.ttf $DESTDIR
+  cp $BUILDDIR/autohinted/instance_ttf/Elstob*.ttf $DESTDIR
 
 # Next CFF OpenType fonts, largely duplicating the moves for static TrueType.
 
