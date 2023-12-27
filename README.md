@@ -30,7 +30,7 @@ instructions for installing on their systems.
 To build Elstob, you will need Python 3.10.4 or later. It is best to create a
 [virtual environment](https://docs.python.org/3/library/venv.html) in which to
 run the build script and install any Python-based dependencies in the environment.
-<img align="right" width="50%" height="50%" src="./images/Specimen-tp.png">
+<img align="right" width="40%" height="40%" src="./images/Specimen-tp.png">
 
 The build script, `build_font`, is a bash script, which you can run in a Mac OS,
 Linux, or other similar terminal. The script depends on several utilities
