@@ -66,10 +66,10 @@
 \DeclareOptionX{MainBoldFeatures}{\renewcommand*{\MainBoldDef}{#1,}}
 \DeclareOptionX{MainBoldItalicFeatures}{\renewcommand*{\MainBoldItalicDef}{#1,}}
 
-\DeclareOptionX{MainRegularSizeFeatures}{\newcommand*{\MainRegSizeDef}{#1}}
-\DeclareOptionX{MainItalicSizeFeatures}{\newcommand*{\MainItalicSizeDef}{#1}}
-\DeclareOptionX{MainBoldSizeFeatures}{\newcommand*{\MainBoldSizeDef}{#1}}
-\DeclareOptionX{MainBoldItalicSizeFeatures}{\newcommand*{\MainBoldItalicSizeDef}{#1}}
+\DeclareOptionX{MainRegularSizeFeatures}{\newcommand*{\MainRegSizeDef}{\directlua{mksizecommand({#1})}}}
+\DeclareOptionX{MainItalicSizeFeatures}{\newcommand*{\MainItalicSizeDef}{\directlua{mksizecommand({#1})}}}
+\DeclareOptionX{MainBoldSizeFeatures}{\newcommand*{\MainBoldSizeDef}{\directlua{mksizecommand({#1})}}}
+\DeclareOptionX{MainBoldItalicSizeFeatures}{\newcommand*{\MainBoldItalicSizeDef}{\directlua{mksizecommand({#1})}}}
 
 % ALTERNATE STYLES
 
@@ -109,7 +109,9 @@ mkboldcommands(wtidx, adjustment)}}
 
 \def\elstob@spac{0}
 \ifelstob@oldspacing
-    \renewcommand*{\MainDef}{StylisticSet=18,}
+    % Append StylisticSet=18 to existing \MainDef (which may be empty).
+    \let\tttemp\MainDef
+    \renewcommand*{\MainDef}{\tttemp StylisticSet=18,}
     \def\elstob@spac{1}
 \fi
 
@@ -117,24 +119,25 @@ mkboldcommands(wtidx, adjustment)}}
 % (won't be done if user has supplied custom SizeFeatures)
 
 \@ifundefined{MainRegSizeDef}{
+    \typeout{Constructing MainRegSizeDef}
     \newcommand*{\MainRegSizeDef}{
         SizeFeatures={
-            {Size={-6.5},       RawFeature={axis={wght=\elstob@RwghtOne,opsz=\elstob@RopszOne,SPAC=\elstob@spac}}},
-            {Size={6.5-7.5},    RawFeature={axis={wght=\elstob@RwghtTwo,opsz=\elstob@RopszTwo,SPAC=\elstob@spac}}},
-            {Size={7.5-8.5},    RawFeature={axis={wght=\elstob@RwghtThree,opsz=\elstob@RopszThree,SPAC=\elstob@spac}}},
-            {Size={8.5-9.5},    RawFeature={axis={wght=\elstob@RwghtFour,opsz=\elstob@RopszFour,SPAC=\elstob@spac}}},
-            {Size={9.5-10.5},   RawFeature={axis={wght=\elstob@RwghtFive,opsz=\elstob@RopszFive,SPAC=\elstob@spac}}},
-            {Size={10.5-11.5},  RawFeature={axis={wght=\elstob@RwghtSix,opsz=\elstob@RopszSix,SPAC=\elstob@spac}}},
-            {Size={11.5-12.5},  RawFeature={axis={wght=\elstob@RwghtSeven,opsz=\elstob@RopszSeven,SPAC=\elstob@spac}}},
-            {Size={12.5-13.5},  RawFeature={axis={wght=\elstob@RwghtEight,opsz=\elstob@RopszEight,SPAC=\elstob@spac}}},
-            {Size={13.5-14.5},  RawFeature={axis={wght=\elstob@RwghtNine,opsz=\elstob@RopszNine,SPAC=\elstob@spac}}},
-            {Size={14.5-15.5},  RawFeature={axis={wght=\elstob@RwghtTen,opsz=\elstob@RopszTen,SPAC=\elstob@spac}}},
-            {Size={15.5-16.5},  RawFeature={axis={wght=\elstob@RwghtEleven,opsz=\elstob@RopszEleven,SPAC=\elstob@spac}}},
-            {Size={16.5-17.5},  RawFeature={axis={wght=\elstob@RwghtTwelve,opsz=\elstob@RopszTwelve,SPAC=\elstob@spac}}},
-            {Size={17.5-},      RawFeature={axis={wght=\elstob@RwghtThirteen,opsz=\elstob@RopszThirteen,SPAC=\elstob@spac}}}
+            {Size={-6.5},       RawFeature={axis={wght=\elstob@RwghtOne,      opsz=\elstob@RopszOne,      SPAC=\elstob@spac}}},
+            {Size={6.5-7.5},    RawFeature={axis={wght=\elstob@RwghtTwo,      opsz=\elstob@RopszTwo,      SPAC=\elstob@spac}}},
+            {Size={7.5-8.5},    RawFeature={axis={wght=\elstob@RwghtThree,    opsz=\elstob@RopszThree,    SPAC=\elstob@spac}}},
+            {Size={8.5-9.5},    RawFeature={axis={wght=\elstob@RwghtFour,     opsz=\elstob@RopszFour,     SPAC=\elstob@spac}}},
+            {Size={9.5-10.5},   RawFeature={axis={wght=\elstob@RwghtFive,     opsz=\elstob@RopszFive,     SPAC=\elstob@spac}}},
+            {Size={10.5-11.5},  RawFeature={axis={wght=\elstob@RwghtSix,      opsz=\elstob@RopszSix,      SPAC=\elstob@spac}}},
+            {Size={11.5-12.5},  RawFeature={axis={wght=\elstob@RwghtSeven,    opsz=\elstob@RopszSeven,    SPAC=\elstob@spac}}},
+            {Size={12.5-13.5},  RawFeature={axis={wght=\elstob@RwghtEight,    opsz=\elstob@RopszEight,    SPAC=\elstob@spac}}},
+            {Size={13.5-14.5},  RawFeature={axis={wght=\elstob@RwghtNine,     opsz=\elstob@RopszNine,     SPAC=\elstob@spac}}},
+            {Size={14.5-15.5},  RawFeature={axis={wght=\elstob@RwghtTen,      opsz=\elstob@RopszTen,      SPAC=\elstob@spac}}},
+            {Size={15.5-16.5},  RawFeature={axis={wght=\elstob@RwghtEleven,   opsz=\elstob@RopszEleven,   SPAC=\elstob@spac}}},
+            {Size={16.5-17.5},  RawFeature={axis={wght=\elstob@RwghtTwelve,   opsz=\elstob@RopszTwelve,   SPAC=\elstob@spac}}},
+            {Size={17.5-},      RawFeature={axis={wght=\elstob@RwghtThirteen, opsz=\elstob@RopszThirteen, SPAC=\elstob@spac}}}
         }
     }
-}{}
+}{\typeout{Using predefined MainRegSizeDef}}
 
 \@ifundefined{MainItalicSizeDef}{
     \newcommand*{\MainItalicSizeDef}{

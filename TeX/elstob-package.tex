@@ -2,12 +2,12 @@
 
 \usepackage[
     weightadjustment=-50,opticalsizeadjustment=-2,slant=12,
-    MainFeatures={StylisticSet=3,Numbers=Monospaced}
+    MainFeatures={StylisticSet=3},
 ]{elstob}
 
 \setfontface\samplefootnote{Elstob}[
     Renderer = HarfBuzz,
-    SizeFeatures = {{Size={5-}, RawFeature={axis={wght=490,opsz=6}}}},
+    SizeFeatures = {{Size={5-}, RawFeature={axis={wght=460,opsz=6}}}},
 ]
 \setfontface\sampleheader{Elstob}[
     Renderer = HarfBuzz,
@@ -68,8 +68,9 @@ shape. These changes in shape are defined in one or more \textbf{axes}---for exa
 \textbf{Weight} (Light, Bold, etc.) and \textbf{Width} (Condensed, Expanded). A traditional
 “static” font family also has axes, but as every style requires a separate font file,
 the number of available styles is severely constrained. A variable font, by contrast,
-offers a practically limitless number of styles in a single file: you select from these styles
-by making a selection of number values from the axes, of which Elstob has four (five in the italic):
+offers a practically limitless number of styles in a single file: you choose a style
+by making a selection of number values (usually called “coordinates”) from the axes, 
+of which Elstob has four (five in the italic):
 
 \begin{description}
     \item[Weight] Possible weights run from ExtraLight (200) to ExtraBold (800). By
@@ -179,64 +180,69 @@ package this way:
 
 \noindent If you want to use these conventions only for italic text, use
 \textbf{MainItalicFeatures} instead of \textbf{MainFeatures}. All of the
-features you pass via these options must be valid for \fspec: indeed,
+features you pass via these options must be valid for \fspec: in fact,
 they are passed straight through to \fspec.
 
 If you want to customize the four basic styles of the main text, use
 \textbf{MainRegularSizeFeatures}, \textbf{MainItalicSizeFeatures}, and so on.
-For example, here are the \textbf{SizeFeatures} for an early version of
-this document (they were used to test these features):
+Each of these defines a list of associative arrays, in which each array in the
+list prescribes axis coordinates for a range of sizes.
+For example, here is a hypothetical set of \textbf{SizeFeatures}:
 
 \footnotesize
 \begin{verbatim}
     MainRegularSizeFeatures={
-        SizeFeatures={
-            {Size={-10},
-                RawFeature={axis={wght=450,opsz=8}}},
-            {Size={10-13},
-                RawFeature={axis={wght=370,opsz=10}}},
-            {Size={13-},
-                RawFeature={axis={wght=350,opsz=16}}}
-        }
+        {size=10,wght=380,opsz=8},
+        {size=13,wght=370,opsz=10},
+        {size=13,wght=350,opsz=16}
     },
     MainItalicSizeFeatures={
-        SizeFeatures={
-            {Size={-10},
-                RawFeature={axis={wght=450,opsz=8,slnt=12}}},
-            {Size={10-13},
-                RawFeature={axis={wght=370,opsz=10,slnt=12}}},
-            {Size={13-},
-                RawFeature={axis={wght=350,opsz=16,slnt=12}}}
-        }
+        {size=10,wght=380,opsz=8,slnt=12},
+        {size=13,wght=370,opsz=10,slnt=12},
+        {size=13,wght=350,opsz=16,slnt=12}
     },
     MainBoldSizeFeatures={
-        SizeFeatures={
-            {Size={-10},
-                RawFeature={axis={wght=650,opsz=8}}},
-            {Size={10-13},
-                RawFeature={axis={wght=600,opsz=10}}},
-            {Size={13-},
-                RawFeature={axis={wght=5700,opsz=16}}}
-        }
+        {size=10,wght=620,opsz=8},
+        {size=13,wght=600,opsz=10},
+        {size=13,wght=700,opsz=16}
     },
     MainBoldItalicSizeFeatures={
-        SizeFeatures={
-            {Size={-10},
-                RawFeature={axis={wght=650,opsz=8,slnt=12}}},
-            {Size={10-13},
-                RawFeature={axis={wght=600,opsz=10,slnt=12}}},
-            {Size={13-},
-                RawFeature={axis={wght=5700,opsz=16,slnt=12}}}
-        }
+        {size=10,wght=620,opsz=8,slnt=12},
+        {size=13,wght=600,opsz=10,slnt=12},
+        {size=13,wght=700,opsz=16,slnt=12}
     }
 \end{verbatim}\normalsize
 
-\noindent Because there's no way to know in advance what and how many sizes of type a document
-will use, the Elstob package defines thirteen size-ranges. Here, however, we
-need only three---for footnotes (less than 10pt),
-main text (10-13pt), and headers (greater than 13pt). For each of these sizes, the
-weight is a little lighter than the default, and the optical size a little less, giving
-the page an open look. \textit{Italic type is relatively upright}.
+\noindent For each array, a \src{size} key is mandatory: any array without one
+is ignored. The arrays should be in order of point size. The first array
+prescribes axis coordinates for all sizes up to \src{size}, the last array for all sizes
+greater than \src{size}, and any intermediate items a range from the previous to the
+current \src{size}.\footnote{%
+If you want only one size array, make \src{size} improbably low (e.g. 5) and place
+a comma after the closing brace of the array.%
+} So the ranges covered in each list above are \src{-10}, \src{10-13},
+and \src{13-}.\footnote{Any modification of the default text size (e.g. in the
+\src{\textbackslash documentclass} command) can affect the size definitions in these
+arrays, with the result that (for example)
+\src{10} no longer means exactly “ten points.” You may have to experiment to get these numbers
+right.}
+
+The keys other than \src{size} are the four-letter tags for the font's axes: \src{wght}
+(Weight), \src{opsz} (Optical Size), \src{slnt} (Slant, italic only), \src{GRAD} (Grade),
+and \src{SPAC} (Spacing).\footnote{%
+By convention, tags for axes defined in the OpenType standard are lowercase; custom axes
+are uppercase. Elstob’s \src{GRAD} and \src{SPAC} are custom axes.%
+} When a key
+is omitted, the default value for that axis is used. It is up to you to make sure the values
+given for each axis are valid---the package does no checking (but {\fspec} will do a good bit
+of checking for you). When SizeFeatures are given in
+this way, they override any other options that set or change axis coordinates
+(e.g. \textbf{weightadjustment}).
+
+This example defines three sizes, since the (hypothetical) document in question uses
+only three sizes of type---for footnotes, main text, and headers. For each of these sizes, the
+weight is a little lighter than the default of 400, and the optical size a little less, giving
+the page a slightly more spacious look than the default. \textit{Italic type is relatively upright}.
 
 \section{Selecting Alternate Styles}
 
@@ -356,11 +362,7 @@ appended. For example:
             Language=English,
             StylisticSet=2
         },
-        EightPtSemiboldSizeFeatures={
-            SizeFeatures={
-                Size={5-},RawFeature={axis={wght=620,opsz=8.5}}
-            }
-        }
+        EightPtSemiboldSizeFeatures={{size=5,wght=650,opsz=8.5},}
     ]{elstob}
 \end{verbatim}\normalsize
 
@@ -376,7 +378,7 @@ This package's other commands (listed in Table 1) are offered as conveniences---
 mnemonic than the {\fspec} commands they invoke (though of course all {\fspec} commands
 remain available). Each of these commands
 also has a corresponding “text” command that works like 
-{\verb|\textit{}|}—that is, it takes
+{\color{BrickRed}\verb|\textit{}|}—that is, it takes
 as its sole argument the text to which the command will be applied. Each “text” command
 consists of the main command with “text” prefixed—for example,
 {\color{BrickRed}\verb|\textInsularLetterForms{}|}

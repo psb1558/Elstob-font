@@ -114,18 +114,18 @@
 
     -- 1. Reg   2. Light   3. Medium   4. ExtraLight
     regular_weights = {
-        elstob_at_RwghtOne =       { 490,   390,   560,   290   },
-        elstob_at_IwghtOne =       { 490,   390,   560,   290   },
-        elstob_at_RwghtTwo =       { 477.5, 377.5, 550,   277.5 },
-        elstob_at_IwghtTwo =       { 477.5, 377.5, 550,   277.5 },
-        elstob_at_RwghtThree =     { 465,   365,   540,   265   },
-        elstob_at_IwghtThree =     { 465,   365,   540,   265   },
-        elstob_at_RwghtFour =      { 452.5, 352.5, 530,   252.5 },
-        elstob_at_IwghtFour =      { 452.5, 352.5, 530,   252.5 },
-        elstob_at_RwghtFive =      { 440,   340,   520,   240   },
-        elstob_at_IwghtFive =      { 440,   340,   520,   240   },
-        elstob_at_RwghtSix =       { 415,   315,   510,   215   },
-        elstob_at_IwghtSix =       { 415,   315,   510,   215   },
+        elstob_at_RwghtOne =       { 460,   390,   560,   290   },
+        elstob_at_IwghtOne =       { 460,   390,   560,   290   },
+        elstob_at_RwghtTwo =       { 452.5, 377.5, 550,   277.5 },
+        elstob_at_IwghtTwo =       { 452.5, 377.5, 550,   277.5 },
+        elstob_at_RwghtThree =     { 445,   365,   540,   265   },
+        elstob_at_IwghtThree =     { 445,   365,   540,   265   },
+        elstob_at_RwghtFour =      { 437.5, 352.5, 530,   252.5 },
+        elstob_at_IwghtFour =      { 437.5, 352.5, 530,   252.5 },
+        elstob_at_RwghtFive =      { 430,   340,   520,   240   },
+        elstob_at_IwghtFive =      { 430,   340,   520,   240   },
+        elstob_at_RwghtSix =       { 410,   315,   510,   215   },
+        elstob_at_IwghtSix =       { 410,   315,   510,   215   },
         elstob_at_RwghtSeven =     { 390,   290,   500,   200   },
         elstob_at_IwghtSeven =     { 390,   290,   500,   200   },
         elstob_at_RwghtEight =     { 370,   270,   490,   170   },
@@ -195,8 +195,8 @@ function mkaltcommands()
     tex.print("\\newcommand{\\" .. italsizedef .. "}{SizeFeatures={{Size={5-}, RawFeature={axis={wght=" ..
                v[1] .. ",opsz=" .. v[2] .. ",slnt=\\elstob@Islnt}}}}}")
     tex.print("\\DeclareOptionX{" .. romfeat .. "}{\\renewcommand*{\\" .. romdef .. "}{#1,}}")
-    tex.print("\\DeclareOptionX{" .. romsizefeat .. "}{\\renewcommand*{\\" .. romsizedef .. "}{#1}}")
-    tex.print("\\DeclareOptionX{" .. italsizefeat .. "}{\\renewcommand*{\\" .. italsizedef .. "}{#1}}")
+    tex.print("\\DeclareOptionX{" .. romsizefeat .. "}{\\renewcommand*{\\" .. romsizedef .. "}{\\directlua{mksizecommand({#1})}}}")
+    tex.print("\\DeclareOptionX{" .. italsizefeat .. "}{\\renewcommand*{\\" .. italsizedef .. "}{\\directlua{mksizecommand({#1})}}}")
   end
 end
 
@@ -255,3 +255,57 @@ function mkboldcommands(wtidx, adjustment)
         tex.print("\\newcommand*{\\" .. cmd .. "}{" .. adjustwght(wt[wtidx],adjustment) .. "}")
     end
 end
+
+function mksizecommand(sizetable)
+    result = "Nothing yet"
+    if #sizetable > 0 then
+        result = "SizeFeatures={"
+        lastsize = 0
+        for i, v in ipairs(sizetable) do
+            if v["size"] then
+                axiscount = 0
+                sizeitem = "{Size={"
+                currentsize = v["size"]
+                csnum = v["size"]
+                if i == #sizetable then
+                    currentsize = currentsize .. "-"
+                elseif lastsize == 0 then
+                    currentsize = "-" .. currentsize
+                else
+                    currentsize = lastsize .. "-" .. currentsize
+                end
+                lastsize = csnum
+                sizeitem = sizeitem .. currentsize .. "},RawFeature={axis={"
+                if v["wght"] then
+                    sizeitem = sizeitem .. "wght=" .. v["wght"]
+                    axiscount = axiscount + 1
+                end
+                if v["opsz"] then
+                    if axiscount >= 1 then sizeitem = sizeitem .. "," end
+                    sizeitem = sizeitem .. "opsz=" .. v["opsz"]
+                    axiscount = axiscount + 1
+                end
+                if v["slnt"] then
+                    if axiscount >= 1 then sizeitem = sizeitem .. "," end
+                    sizeitem = sizeitem .. "slnt=" .. v["slnt"]
+                    axiscount = axiscount + 1
+                end
+                if v["GRAD"] then
+                    if axiscount >= 1 then sizeitem = sizeitem .. "," end
+                    sizeitem = sizeitem .. "GRAD=" .. v["GRAD"]
+                    axiscount = axiscount + 1
+                end
+                if v["SPAC"] then
+                    if axiscount >= 1 then sizeitem = sizeitem .. "," end
+                    sizeitem = sizeitem .. "SPAC=" .. v["SPAC"]
+                end
+                sizeitem = sizeitem .. "}}},"
+                result = result .. sizeitem
+            end
+        end
+        result = result .. "}"
+        tex.print(result)
+    end
+end
+
+
