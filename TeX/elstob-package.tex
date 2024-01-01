@@ -29,7 +29,6 @@
 \newcommand{\lltech}{Lua\LaTeX}
 \setmonofont{Fira Mono}[Scale=MatchLowercase,Numbers=Lowercase]
 \setsansfont{Fira Sans}[Scale=MatchLowercase,Numbers=Lowercase]
-%\newcommand{\fspec}{fontspec}
 \newcommand{\fspec}{{\sffamily fontspec}}
 \usepackage{supertabular}
 \usepackage[table,dvipsnames]{xcolor}
@@ -37,9 +36,21 @@
 \definecolor{GunMetalGray}{RGB}{42,52,57}
 \definecolor{BrickRed}{RGB}{146,18,6}
 \definecolor{RViolet}{RGB}{70,18,87}
+\definecolor{myRed}{rgb}{0.5,0,0}
 \newcommand{\bluerow}{\rowcolor{myLightBlue}}
 \usepackage{titlesec}
 \titleformat{\section}[hang]{\Large\color{GunMetalGray}}{\thesection.}{1em}{}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\footskip = 30pt
+\headsep = 30pt
+\renewcommand{\headrule}{}
+\fancyhead[L]{}
+\fancyhead[C]{}
+\fancyhead[R]{}
+\fancyfoot[L]{}
+\fancyfoot[C]{}
+\fancyfoot[R]{}
 \newcommand{\src}[1]{{\color{BrickRed}\texttt{#1}}}
 \linespread{1.1}
 \title{Elstob}
@@ -52,6 +63,11 @@
 \maketitle
 
 \section{Introduction}
+
+\pagestyle{fancy}
+\fancyhead[CE]{\scshape\color{myRed} {\addfontfeatures{Numbers=OldStyle}\thepage}\hspace{10pt}%
+\addfontfeature{Letters=UppercaseSmallCaps}\leftmark}
+\fancyhead[CO]{\scshape\color{myRed} {elstob}\hspace{10pt}{\addfontfeatures{Numbers=OldStyle}\thepage}}
 
 This package supports Elstob, the variable font for medievalists (and others).
 The package requires \lltech, since {\ltech} is
@@ -350,7 +366,7 @@ this code:
 The result: {\eSixPtMedium a short phrase}.
 
 To add features to any of these styles, use the style name
-(without the prefixed “e” and with “Features” appended)
+(without the prefixed \textbf{e} and with \textbf{Features} appended)
 as a package option. To change the size features for the style,
 do the same, but with \textbf{SizeFeatures} instead of \textbf{Features}
 appended. For example:
@@ -415,16 +431,6 @@ and the first (optional) argument is an index into the variants provided by that
 \textbackslash textcv takes an additional required argument ({\color{BrickRed}\verb|\textcv[num]{num}{text}|}— the text to which the
 feature should be applied.
 
-Character Variant features can also be selected with mnemonics, listed in Table 2. For example, a feature for
-lowercase \textbf{g} can be expressed as
-
-\begin{center}
-{\color{BrickRed}\small\verb|\textcv[1]{\ecvg}{g}|}
-\end{center}
-
-\noindent yielding \textbf{\textcv[1]{\ecvg}{g}}, one of the phonetic characters devised by
-the Middle English poet Orm.
-
 \begin{table}[ht]
     \centering
     \begin{tabular}{|l|l|l|}
@@ -442,5 +448,23 @@ the Middle English poet Orm.
 \end{tabular}
 \caption{Mnemonics for Character Variants}
 \end{table}
+
+Character Variant features can also be selected with mnemonics, listed in Table 2. For example, a feature for
+lowercase \textbf{g} can be expressed as
+
+\begin{center}
+{\color{BrickRed}\small\verb|\textcv[1]{\ecvg}{g}|}
+\end{center}
+
+\noindent yielding \textbf{\textcv[1]{\ecvg}{g}}, one of the phonetic characters devised by
+the Middle English poet Orm.
+
+\vspace*{\fill}
+
+\begin{center}
+    \itshape This document is set in 12pt Elstob with Weight 350, Optical Size Adjustment -2, and Italic Slant 12.\\
+    The font used for code is Fira Mono,\\
+    and the sans serif font is Fira Sans.
+\end{center}
 
 \end{document}
