@@ -3002,14 +3002,14 @@ glyphs:
   uni00B3:
     y:
       points:
-      - ptid: '{116;247}'
-        points:
-        - ptid: '{122;265}'
-          rel: blackdist
-          round: false
       - ptid: '{150;652}'
         points:
         - ptid: '{128;618}'
+          rel: blackdist
+          round: false
+      - ptid: '{116;247}'
+        points:
+        - ptid: '{122;265}'
           rel: blackdist
           round: false
       - ptid: '{115;458}'
@@ -3022,68 +3022,7 @@ glyphs:
         - ptid: '{81;480}'
           rel: blackdist
           round: false
-  uni03BC:
-    y:
-      points:
-      - ptid: '{17;435}'
-        pos: xheight
-        points:
-        - ptid: '{316;435}'
-          rel: shift
-        - ptid: '{17;410}'
-          rel: blackdist
-          round: false
-          points:
-          - ptid: '{316;410}'
-            rel: shift
-      - ptid: '{222;-11}'
-        points:
-        - ptid: '{250;37}'
-          rel: blackdist
-          round: false
-        - ptid: '{396;-16}'
-          rel: graydist
-          min: false
-      - ptid: '{83;-245}'
-      - ptid: '{83;191}'
-        ref:
-        - '{83;-245}'
-        - '{17;435}'
-        rel: interpolate
-  paragraph:
-    y:
-      points:
-      - ptid: '{186;0}'
-        points:
-        - ptid: '{186;25}'
-          rel: blackdist
-          round: false
-      - ptid:
-        - '{258;10}'
-        - '{389;10}'
-        ref:
-        - '{186;0}'
-        - '{186;25}'
-        rel: interpolate
-      - ptid: '{520;663}'
-        pos: cap-height
-        points:
-        - ptid: '{316;663}'
-          rel: shift
-        - ptid: '{520;638}'
-          rel: blackdist
-          round: false
-      - ptid: '{447;653}'
-        ref:
-        - '{520;663}'
-        - '{520;638}'
-        rel: interpolate
-      - ptid: '{285;283}'
-        ref:
-        - '{520;663}'
-        - '{186;0}'
-        rel: interpolate
-        round: true
+    paragraph: null
     props:
       category: Lu
   periodcentered:
@@ -8347,123 +8286,6 @@ glyphs:
         round: true
     props:
       category: Lu
-  beta:
-    y:
-      points:
-      - ptid: '{237;-11}'
-        pos: lc-baseline-undershoot
-        points:
-        - ptid: '{242;25}'
-          rel: blackdist
-          round: false
-      - ptid: '{275;651}'
-        points:
-        - ptid: '{259;614}'
-          rel: blackdist
-          round: false
-      - ptid: '{257;336}'
-        ref:
-        - '{237;-11}'
-        - '{275;651}'
-        rel: interpolate
-        round: true
-        points:
-        - ptid: '{220;372}'
-          rel: blackdist
-          round: false
-      - ptid: '{20;-162}'
-        points:
-        - ptid: '{20;-132}'
-          rel: blackdist
-          round: false
-      - ptid: '{80;-148}'
-        ref:
-        - '{20;-162}'
-        - '{20;-132}'
-        rel: interpolate
-      - ptid: '{297;351}'
-        ref:
-        - '{257;336}'
-        - '{220;372}'
-        rel: interpolate
-  theta:
-    y:
-      points:
-      - ptid: '{237;-8}'
-        pos: lc-baseline-undershoot
-        points:
-        - ptid: '{237;28}'
-          rel: blackdist
-          round: false
-      - ptid: '{239;654}'
-        points:
-        - ptid: '{240;619}'
-          rel: blackdist
-          round: false
-      - ptid: '{78;305}'
-        ref:
-        - '{239;654}'
-        - '{237;-8}'
-        rel: interpolate
-        round: true
-        points:
-        - ptid: '{78;349}'
-          rel: blackdist
-          round: false
-  pi:
-    y:
-      points:
-      - ptid: '{147;435}'
-        pos: xheight
-        points:
-        - ptid: '{118;366}'
-          rel: blackdist
-          round: false
-          points:
-          - ptid: '{196;366}'
-            rel: shift
-            points:
-            - ptid: '{474;366}'
-              rel: shift
-      - ptid: '{382;-11}'
-        pos: lc-baseline-undershoot
-        points:
-        - ptid: '{112;-11}'
-          rel: shift
-        - ptid: '{421;41}'
-          rel: blackdist
-          round: false
-      - ptid:
-        - '{172;383}'
-        - '{222;384}'
-        - '{355;399}'
-        - '{396;392}'
-        ref:
-        - '{118;366}'
-        - '{147;435}'
-        rel: interpolate
-  chi:
-    y:
-      points:
-      - ptid: '{381;435}'
-        pos: xheight
-        points:
-        - ptid:
-          - '{98;435}'
-          - '{341;420}'
-          rel: shift
-        - ptid: '{381;406}'
-          rel: blackdist
-          round: false
-      - ptid: '{13;-275}'
-        points:
-        - ptid:
-          - '{53;-261}'
-          - '{294;-275}'
-          rel: shift
-        - ptid: '{13;-246}'
-          rel: blackdist
-          round: false
   uni16A0:
     y:
       points:
@@ -11976,24 +11798,24 @@ glyphs:
   quoteleft:
     y:
       points:
-      - ptid: '{112;423}'
+      - ptid: '{119;423}'
         points:
-        - ptid: '{87;543}'
+        - ptid: '{94;543}'
           rel: blackdist
           dist: dot-width
           points:
-          - ptid: '{190;688}'
+          - ptid: '{197;688}'
             rel: graydist
   quoteright:
     y:
       points:
-      - ptid: '{135;688}'
+      - ptid: '{129;688}'
         points:
-        - ptid: '{160;567}'
+        - ptid: '{154;567}'
           rel: blackdist
           dist: dot-width
           points:
-          - ptid: '{57;423}'
+          - ptid: '{51;423}'
             rel: graydist
   quotesinglbase:
     y:
@@ -12020,38 +11842,38 @@ glyphs:
   quotedblleft:
     y:
       points:
-      - ptid: '{112;423}'
+      - ptid: '{119;423}'
         points:
-        - ptid: '{292;423}'
+        - ptid: '{299;423}'
           rel: shift
-        - ptid: '{87;543}'
+        - ptid: '{94;543}'
           rel: blackdist
           dist: dot-width
           points:
-          - ptid: '{268;543}'
+          - ptid: '{275;543}'
             rel: shift
-          - ptid: '{190;688}'
+          - ptid: '{197;688}'
             rel: graydist
             points:
-            - ptid: '{371;688}'
+            - ptid: '{378;688}'
               rel: shift
   quotedblright:
     y:
       points:
-      - ptid: '{135;688}'
+      - ptid: '{129;688}'
         points:
-        - ptid: '{315;688}'
+        - ptid: '{309;688}'
           rel: shift
-        - ptid: '{160;567}'
+        - ptid: '{154;567}'
           rel: blackdist
           dist: dot-width
           points:
-          - ptid: '{340;567}'
+          - ptid: '{334;567}'
             rel: shift
-          - ptid: '{57;423}'
+          - ptid: '{51;423}'
             rel: graydist
             points:
-            - ptid: '{237;423}'
+            - ptid: '{231;423}'
               rel: shift
   quotedblbase:
     y:
@@ -15239,43 +15061,50 @@ glyphs:
   eng.sc:
     y:
       points:
-      - ptid: '{16;496}'
+      - ptid: '{38;0}'
+        pos: baseline
+        points:
+        - ptid: '{38;25}'
+          rel: blackdist
+          round: false
+      - ptid:
+        - '{126;37}'
+        - '{112;10}'
+        ref:
+        - '{38;0}'
+        - '{38;25}'
+        rel: interpolate
+      - ptid: '{394;-199}'
+        points:
+        - ptid: '{422;-173}'
+          rel: blackdist
+          round: false
+      - ptid: '{404;496}'
         pos: sc-height
         points:
-        - ptid: '{389;496}'
+        - ptid: '{31;496}'
           rel: shift
-        - ptid: '{16;471}'
+        - ptid: '{404;471}'
           rel: blackdist
           round: false
           points:
-          - ptid: '{389;471}'
+          - ptid: '{31;471}'
             rel: shift
       - ptid:
-        - '{97;486}'
-        - '{110;496}'
-        - '{462;486}'
+        - '{477;486}'
+        - '{125;496}'
+        - '{112;486}'
         ref:
-        - '{16;471}'
-        - '{16;496}'
+        - '{404;471}'
+        - '{404;496}'
         rel: interpolate
-      - ptid: '{23;0}'
-        pos: baseline
-        points:
-        - ptid: '{23;25}'
-          rel: blackdist
-          round: false
       - ptid:
-        - '{97;10}'
-        - '{462;15}'
+        - '{477;15}'
+        - '{477;127}'
         ref:
-        - '{23;0}'
-        - '{23;25}'
+        - '{404;496}'
+        - '{38;0}'
         rel: interpolate
-      - ptid: '{379;-199}'
-        points:
-        - ptid: '{407;-173}'
-          rel: blackdist
-          round: false
   eth.loclENG:
     y:
       points:
@@ -19869,24 +19698,24 @@ glyphs:
   zero.zero.tosf:
     y:
       points:
-      - ptid: '{235;-11}'
+      - ptid: '{258;-11}'
         pos: lc-baseline-undershoot
         points:
-        - ptid: '{235;41}'
+        - ptid: '{258;41}'
           rel: blackdist
           round: false
-      - ptid: '{235;446}'
+      - ptid: '{258;446}'
         pos: xheight-overshoot
         points:
-        - ptid: '{235;395}'
+        - ptid: '{258;395}'
           rel: blackdist
           round: false
       - ptid:
-        - '{348;368}'
-        - '{116;50}'
+        - '{371;368}'
+        - '{139;50}'
         ref:
-        - '{235;446}'
-        - '{235;-11}'
+        - '{258;446}'
+        - '{258;-11}'
         rel: interpolate
     props:
       category: Ll
@@ -20571,48 +20400,48 @@ glyphs:
   zero.zero.tosf.ss03:
     y:
       points:
-      - ptid: '{235;-11}'
-        pos: lc-baseline-undershoot
-        points:
-        - ptid: '{235;19}'
-          rel: blackdist
-          round: false
-      - ptid: '{235;446}'
+      - ptid: '{258;446}'
         pos: xheight-overshoot
         points:
-        - ptid: '{235;419}'
+        - ptid: '{258;419}'
+          rel: blackdist
+          round: false
+      - ptid: '{258;-11}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{258;19}'
           rel: blackdist
           round: false
       - ptid:
-        - '{130;50}'
-        - '{362;368}'
+        - '{153;50}'
+        - '{385;368}'
         ref:
-        - '{235;446}'
-        - '{235;-11}'
+        - '{258;-11}'
+        - '{258;446}'
         rel: interpolate
     props:
       category: Ll
   one.osf.ss03:
     y:
       points:
-      - ptid: '{65;0}'
+      - ptid: '{45;0}'
         pos: baseline
         points:
-        - ptid: '{65;26}'
+        - ptid: '{45;26}'
           rel: blackdist
           round: false
       - ptid: '{127;16}'
         ref:
-        - '{65;0}'
-        - '{65;26}'
+        - '{45;0}'
+        - '{45;26}'
         rel: interpolate
       - ptid: '{185;446}'
         pos: xheight-overshoot
         points:
-        - ptid: '{55;348}'
+        - ptid: '{35;348}'
           rel: graydist
           points:
-          - ptid: '{65;323}'
+          - ptid: '{45;323}'
             rel: blackdist
             round: false
     props:
@@ -20658,6 +20487,572 @@ glyphs:
         rel: interpolate
     props:
       category: Ll
+  Alpha:
+    y:
+      points:
+      - ptid: '{19;0}'
+        pos: baseline
+        points:
+        - ptid:
+          - '{83;10}'
+          - '{392;0}'
+          - '{477;10}'
+          rel: shift
+        - ptid: '{212;25}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{392;25}'
+            rel: shift
+      - ptid: '{322;676}'
+        points:
+        - ptid: '{282;603}'
+          rel: shift
+      - ptid: '{170;222}'
+        ref:
+        - '{322;676}'
+        - '{19;0}'
+        rel: interpolate
+        round: true
+        points:
+        - ptid: '{183;251}'
+          rel: blackdist
+          round: false
+  Epsilon:
+    y:
+      points:
+      - ptid: '{30;663}'
+        pos: cap-height
+        points:
+        - ptid: '{123;663}'
+          rel: shift
+        - ptid: '{30;638}'
+          rel: blackdist
+          round: false
+        - ptid: '{123;633}'
+          rel: blackdist
+          round: false
+      - ptid: '{30;0}'
+        pos: baseline
+        points:
+        - ptid: '{123;0}'
+          rel: shift
+        - ptid: '{30;25}'
+          rel: blackdist
+          round: false
+        - ptid: '{123;30}'
+          rel: blackdist
+          round: false
+      - ptid: '{122;653}'
+        ref:
+        - '{30;638}'
+        - '{30;663}'
+        rel: interpolate
+      - ptid: '{122;10}'
+        ref:
+        - '{30;0}'
+        - '{30;25}'
+        rel: interpolate
+      - ptid: '{162;321}'
+        ref:
+        - '{30;663}'
+        - '{30;0}'
+        rel: interpolate
+        round: true
+        points:
+        - ptid: '{162;351}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{414;461}'
+            rel: shift
+        - ptid: '{414;218}'
+          rel: shift
+  Eta:
+    y:
+      points:
+      - ptid: '{30;663}'
+        pos: cap-height
+        points:
+        - ptid: '{523;663}'
+          rel: shift
+        - ptid: '{30;638}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{523;638}'
+            rel: shift
+      - ptid:
+        - '{128;653}'
+        - '{622;653}'
+        ref:
+        - '{30;638}'
+        - '{30;663}'
+        rel: interpolate
+      - ptid: '{30;0}'
+        pos: baseline
+        points:
+        - ptid: '{523;0}'
+          rel: shift
+        - ptid: '{30;25}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{523;25}'
+            rel: shift
+      - ptid:
+        - '{128;10}'
+        - '{622;10}'
+        ref:
+        - '{30;0}'
+        - '{30;25}'
+        rel: interpolate
+      - ptid: '{193;327}'
+        ref:
+        - '{30;0}'
+        - '{30;663}'
+        rel: interpolate
+        round: true
+        points:
+        - ptid: '{193;357}'
+          rel: blackdist
+          round: false
+  Iota:
+    y:
+      points:
+      - ptid: '{30;663}'
+        points:
+        - ptid: '{30;638}'
+          rel: blackdist
+          round: false
+      - ptid: '{125;653}'
+        ref:
+        - '{30;638}'
+        - '{30;663}'
+        rel: interpolate
+      - ptid: '{30;0}'
+        pos: baseline
+        points:
+        - ptid: '{30;25}'
+          rel: blackdist
+          round: false
+      - ptid: '{125;10}'
+        ref:
+        - '{30;0}'
+        - '{30;25}'
+        rel: interpolate
+  Omicron:
+    y:
+      points:
+      - ptid: '{373;676}'
+        pos: cap-height-overshoot
+        points:
+        - ptid: '{370;648}'
+          rel: blackdist
+          round: false
+      - ptid: '{370;-13}'
+        pos: cap-baseline-undershoot
+        points:
+        - ptid: '{379;15}'
+          rel: blackdist
+          round: false
+  Rho:
+    y:
+      points:
+      - ptid: '{30;0}'
+        pos: baseline
+        points:
+        - ptid: '{30;25}'
+          rel: blackdist
+          round: false
+      - ptid: '{123;10}'
+        ref:
+        - '{30;0}'
+        - '{30;25}'
+        rel: interpolate
+      - ptid: '{30;663}'
+        pos: cap-height
+        points:
+        - ptid: '{123;663}'
+          rel: shift
+        - ptid: '{30;638}'
+          rel: blackdist
+          round: false
+        - ptid: '{213;633}'
+          rel: blackdist
+          round: false
+      - ptid: '{315;291}'
+        ref:
+        - '{30;0}'
+        - '{30;663}'
+        rel: interpolate
+        round: true
+        points:
+        - ptid: '{282;319}'
+          rel: blackdist
+          round: false
+  Upsilon:
+    y:
+      points:
+      - ptid: '{219;0}'
+        pos: baseline
+        points:
+        - ptid: '{219;25}'
+          rel: blackdist
+          round: false
+      - ptid: '{317;10}'
+        ref:
+        - '{219;0}'
+        - '{219;25}'
+        rel: interpolate
+      - ptid: '{19;663}'
+        pos: cap-height
+        points:
+        - ptid: '{512;663}'
+          rel: shift
+        - ptid: '{19;638}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{512;638}'
+            rel: shift
+      - ptid:
+        - '{77;653}'
+        - '{622;653}'
+        ref:
+        - '{19;638}'
+        - '{19;663}'
+        rel: interpolate
+      - ptid:
+        - '{336;232}'
+        - '{378;285}'
+        - '{380;241}'
+        - '{400;293}'
+        - '{408;315}'
+        ref:
+        - '{19;663}'
+        - '{219;0}'
+        rel: interpolate
+  Gamma:
+    y:
+      points:
+      - ptid: '{30;663}'
+        pos: cap-height
+        points:
+        - ptid:
+          - '{122;653}'
+          - '{123;663}'
+          rel: shift
+        - ptid: '{30;638}'
+          rel: blackdist
+          round: false
+        - ptid: '{123;633}'
+          rel: blackdist
+          round: false
+      - ptid: '{30;0}'
+        pos: baseline
+        points:
+        - ptid: '{30;25}'
+          rel: blackdist
+          round: false
+      - ptid: '{122;10}'
+        ref:
+        - '{30;0}'
+        - '{30;25}'
+        rel: interpolate
+  uni0394:
+    y:
+      points:
+      - ptid: '{567;0}'
+        pos: baseline
+        points:
+        - ptid:
+          - '{521;0}'
+          - '{59;0}'
+          rel: shift
+      - ptid: '{316;682}'
+        pos: cap-height-overshoot
+        points:
+        - ptid: '{271;583}'
+          rel: shift
+  Theta:
+    y:
+      points:
+      - ptid: '{370;-13}'
+        pos: cap-baseline-undershoot
+        points:
+        - ptid: '{379;15}'
+          rel: blackdist
+          round: false
+      - ptid: '{373;676}'
+        pos: cap-height-overshoot
+        points:
+        - ptid: '{370;648}'
+          rel: blackdist
+          round: false
+      - ptid: '{240;350}'
+        ref:
+        - '{373;676}'
+        - '{370;-13}'
+        rel: interpolate
+        round: true
+        points:
+        - ptid: '{230;310}'
+          rel: graydist
+          points:
+          - ptid:
+            - '{482;245}'
+            - '{220;250}'
+            rel: shift
+        - ptid:
+          - '{239;412}'
+          - '{528;413}'
+          rel: shift
+  Lambda:
+    y:
+      points:
+      - ptid: '{19;0}'
+        pos: baseline
+        points:
+        - ptid:
+          - '{81;10}'
+          - '{422;0}'
+          - '{527;10}'
+          rel: shift
+        - ptid: '{19;25}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{422;25}'
+            rel: shift
+      - ptid: '{375;682}'
+        pos: cap-height-overshoot
+        points:
+        - ptid: '{330;583}'
+          rel: shift
+  Xi:
+    y:
+      points:
+      - ptid: '{78;637}'
+        points:
+        - ptid:
+          - '{73;677}'
+          - '{542;678}'
+          rel: shift
+        - ptid: '{55;563}'
+          rel: blackdist
+          points:
+          - ptid:
+            - '{29;515}'
+            - '{496;510}'
+            rel: shift
+      - ptid: '{97;9}'
+        points:
+        - ptid:
+          - '{70;-34}'
+          - '{541;-39}'
+          rel: shift
+        - ptid: '{119;84}'
+          rel: blackdist
+          points:
+          - ptid:
+            - '{114;128}'
+            - '{587;129}'
+            rel: shift
+      - ptid: '{173;281}'
+        ref:
+        - '{78;637}'
+        - '{97;9}'
+        rel: interpolate
+        round: true
+        points:
+        - ptid: '{196;355}'
+          rel: graydist
+          points:
+          - ptid:
+            - '{192;398}'
+            - '{481;399}'
+            rel: shift
+        - ptid:
+          - '{148;236}'
+          - '{435;231}'
+          rel: shift
+  Pi:
+    y:
+      points:
+      - ptid: '{30;663}'
+        pos: cap-height
+        points:
+        - ptid: '{30;638}'
+          rel: blackdist
+          round: false
+      - ptid:
+        - '{128;653}'
+        - '{562;653}'
+        ref:
+        - '{30;638}'
+        - '{30;663}'
+        rel: interpolate
+      - ptid: '{30;0}'
+        pos: baseline
+        points:
+        - ptid:
+          - '{128;10}'
+          - '{463;0}'
+          - '{562;10}'
+          rel: shift
+        - ptid: '{30;25}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{463;25}'
+            rel: shift
+  Sigma:
+    y:
+      points:
+      - ptid: '{15;663}'
+        pos: cap-height
+        points:
+        - ptid: '{142;633}'
+          rel: graydist
+      - ptid: '{15;0}'
+        pos: baseline
+        points:
+        - ptid: '{105;80}'
+          rel: blackdist
+          round: false
+      - ptid:
+        - '{258;319}'
+        - '{336;371}'
+        ref:
+        - '{15;0}'
+        - '{15;663}'
+        rel: interpolate
+  Phi:
+    y:
+      points:
+      - ptid: '{246;663}'
+        pos: cap-height
+        points:
+        - ptid: '{246;638}'
+          rel: blackdist
+          round: false
+      - ptid: '{341;653}'
+        ref:
+        - '{246;638}'
+        - '{246;663}'
+        rel: interpolate
+      - ptid: '{246;0}'
+        pos: baseline
+        points:
+        - ptid: '{246;25}'
+          rel: blackdist
+          round: false
+      - ptid: '{341;10}'
+        ref:
+        - '{246;0}'
+        - '{246;25}'
+        rel: interpolate
+      - ptid:
+        - '{360;82}'
+        - '{361;572}'
+        ref:
+        - '{246;0}'
+        - '{246;663}'
+        rel: interpolate
+        round: true
+        points:
+        - ptid: '{416;572}'
+          ref: '{361;572}'
+          rel: shift
+        - ptid: '{359;539}'
+          ref: '{361;572}'
+          rel: graydist
+          points:
+          - ptid: '{419;538}'
+            rel: shift
+        - ptid: '{418;83}'
+          ref: '{360;82}'
+          rel: shift
+        - ptid: '{360;119}'
+          ref: '{360;82}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{418;119}'
+            rel: shift
+  Psi:
+    y:
+      points:
+      - ptid: '{234;0}'
+        pos: baseline
+        points:
+        - ptid: '{234;25}'
+          rel: blackdist
+          round: false
+      - ptid: '{329;10}'
+        ref:
+        - '{234;0}'
+        - '{234;25}'
+        rel: interpolate
+      - ptid: '{234;663}'
+        pos: cap-height
+        points:
+        - ptid: '{234;638}'
+          rel: blackdist
+          round: false
+        - ptid: '{63;675}'
+          rel: graydist
+          min: false
+          points:
+          - ptid: '{684;675}'
+            rel: shift
+          - ptid: '{40;638}'
+            rel: blackdist
+            round: false
+            points:
+            - ptid: '{707;638}'
+              rel: shift
+      - ptid: '{329;653}'
+        ref:
+        - '{234;638}'
+        - '{234;663}'
+        rel: interpolate
+      - ptid:
+        - '{345;237}'
+        - '{401;237}'
+        ref:
+        - '{234;663}'
+        - '{234;0}'
+        rel: interpolate
+        round: true
+        points:
+        - ptid: '{401;276}'
+          ref: '{401;237}'
+          rel: blackdist
+          round: false
+          points:
+          - ptid: '{345;276}'
+            rel: shift
+  uni03A9:
+    y:
+      points:
+      - ptid: '{363;676}'
+        pos: cap-height-overshoot
+        points:
+        - ptid: '{361;629}'
+          rel: blackdist
+          round: false
+      - ptid: '{280;0}'
+        pos: baseline
+        points:
+        - ptid: '{442;0}'
+          rel: shift
+        - ptid: '{226;30}'
+          rel: graydist
+          points:
+          - ptid: '{496;30}'
+            rel: shift
 masters:
   wght-min:
     name: wght-min

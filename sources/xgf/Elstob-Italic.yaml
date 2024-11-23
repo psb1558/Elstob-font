@@ -3074,7 +3074,7 @@ glyphs:
   eth:
     y:
       points:
-      - ptid: '{130;-12}'
+      - ptid: '{139;-12}'
         pos: lc-baseline-undershoot
         points:
         - ptid: '{142;19}'
@@ -11753,15 +11753,15 @@ glyphs:
   quoteright:
     y:
       points:
-      - ptid: '{157;451}'
+      - ptid: '{43;451}'
         points:
-        - ptid: '{149;467}'
+        - ptid: '{35;467}'
           rel: shift
-      - ptid: '{313;724}'
-      - ptid: '{309;602}'
+      - ptid: '{199;724}'
+      - ptid: '{195;602}'
         ref:
-        - '{313;724}'
-        - '{157;451}'
+        - '{199;724}'
+        - '{43;451}'
         rel: interpolate
   quotesinglbase:
     y:
@@ -20538,13 +20538,13 @@ glyphs:
   zero.tosf.ss03:
     y:
       points:
-      - ptid: '{311;445}'
+      - ptid: '{298;445}'
         pos: xheight-overshoot
         points:
         - ptid: '{296;410}'
           rel: blackdist
           round: false
-      - ptid: '{208;-12}'
+      - ptid: '{225;-12}'
         pos: lc-baseline-undershoot
         points:
         - ptid: '{227;23}'
