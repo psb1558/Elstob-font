@@ -1,5 +1,7 @@
 ![Elstob Header](TitlePageFacsimile.jpg)
 
+**New!** New Greek additions in an unstable release (2.105). Check it out if you're interested and post suggestions as issues. (Note that Greek in the italic face is just a slanted version of the regular Greek.)
+
 The Elstob font (named for the eighteenth-century Anglo-Saxonist [Elizabeth Elstob](https://www.oxforddnb.com/view/10.1093/ref:odnb/9780198614128.001.0001/odnb-9780198614128-e-8761)) is based on the Double Pica commissioned by Bishop [John Fell](https://en.wikipedia.org/wiki/John_Fell_(bishop)) in the seventeenth century. Elstob is designed as a webfont. Thus:
 1. It is a variable font, with weights ranging from ExtraLight to ExtraBold, optical sizes from "6pt" (for fine print) to "18pt" (for headlines) and also a grade axis (0.0–1.0). (A non-variable desktop version is also available.)
 2. Outlines have been kept simple to limit file size.
