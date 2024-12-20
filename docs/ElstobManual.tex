@@ -19,7 +19,7 @@
 The Elstob font (named for the eighteenth-century medievalist Elizabeth Elstob)
 is based on the Double Pica typeface commissioned by Bishop John Fell in the
 seventeenth century and used by the Oxford University Press for many years.
-Though its origin is an old-style typeface, it includes many modernizing touches,
+Though it originates with an old-style typeface, it includes many modernizing touches,
 and it exploits the latest in font technology so as to provide capabilities
 available in few other fonts. It comes in two flavors: \textbf{static} and
 \textbf{variable}.
@@ -27,7 +27,7 @@ available in few other fonts. It comes in two flavors: \textbf{static} and
 \section{The Static Font}
 
 Most of the fonts on your
-computer are static: that is, each file contains outlines for a single style.
+computer are \textbf{static}: that is, each file contains outlines for a single style.
 For example, the ubiquitous Times New Roman typically has four styles in four
 files: regular, bold, italic, and bold italic. Because it has more than one
 style, we call Times New Roman a \textbf{font family}. Think of this family as
@@ -37,7 +37,8 @@ ground between roman and italic), and
 the other being the \textbf{Weight} axis, on which many positions are possible,
 though the Times New Roman font family provides only two---regular and bold.
 Some static font families come packaged in more than four files and provide both more
-stylistic axes and more positions on these axes.
+stylistic axes and more positions on these axes: these are called \textbf{extended
+families}.
 
 The static version of Elstob (ElstobD, where the D stands for “Desktop”) consists
 of forty-eight files (don’t panic---you’re not required to install them all) and
@@ -56,7 +57,7 @@ stylistic preferences.
 \section{The Variable Font}
 
 A \textbf{variable} font packages an almost infinite number
-of styles into a single font file. Whereas the static version of Elstob consists
+of styles into a single file. Whereas the static version of Elstob consists
 of forty-eight files, the variable version consists of only two: Elstob.ttf
 (roman) and Elstob-Italic.ttf (italic). And yet the variable version provides
 many more stylistic choices than the static version because you can choose any
@@ -75,12 +76,12 @@ static version, but you are not limited to five optical sizes, so you can tune
 your type more closely to the size of your text. This axis runs from 6 to
 18 (the numbers corresponding roughly to point sizes). Some applications (like
 Adobe InDesign) will automatically
-choose the appropriate value (though you may override it if you like).
+choose an appropriate value (though you may override it if you like).
 
 \textbf{Grade}
-(0--1) is like \textbf{Weight}, but it varies the weight of characters without changing
+(0--1) is like Weight, but it varies the weight of characters without changing
 their widths. This can be useful in web pages, where dynamically changing the
-\textbf{Weight} axis (for example, on mouseover) may cause text to reflow annoyingly. Grade will
+Weight axis (for example, on mouseover) may cause text to reflow annoyingly. Grade will
 not generally be useful in printed documents.
 
 \textbf{Spacing} (0--1) increases the width of the space character and a few
@@ -116,15 +117,13 @@ recently. XeTeX does not support variable fonts.} but most desktop applications
 (such as word processors) do not. ElstobD, the static version of Elstob,
 should work with all applications.
 
-Elstob aims to cover all European languages using the Latin alphabet, and it offers
-a curated collection of Unicode characters of interest to medievalists. It includes
-the basic International Phonetic Alphabet and the most commonly used
-mathematical symbols. Version 2 includes many stylistic revisions and a few new
-characters, especially letters and diacritics from the \textit{Ormulum},
-recently added to Unicode. The OpenType features of the font have been revised
-to match as closely as possible those of the developer’s Junicode font.
-Unnecessary or redundant features have been removed, and technical changes have
-been made to improve accessibility.\pagebreak
+Elstob aims to cover all European languages using the Latin alphabet, and it includes
+monotonic and polytonic Greek, both English and Scandinavian runes,
+the basic International Phonetic Alphabet, and the most commonly used
+mathematical symbols. It also has a curated collection of Unicode characters of
+interest to medievalists. If you are interested in using Elstob in a project
+but find that it lacks the characters you need, open an issue at the Elstob
+development site.\footnote{https://github.com/psb1558/Elstob-font.}\pagebreak
 
 \chapter{Specimens}
 
@@ -192,11 +191,11 @@ Vnnderr kanunnkess had.
 
 \section{Vietnamese (Regular + ss09)}
 
-{\addfontfeature{Language=Vietnamese,StylisticSet=9}Ban đầu Ðức Chúa Trời dựng nên trời và đất. Thuở ấy đất hoang vắng và trống không. Bóng tối bao phử trên mặt vực thẳm. Thần[a] của Ðức Chúa Trời vận hành trên mặt nước. Ðức Chúa Trời phán, “Phải có ánh sáng,” thì có ánh sáng. Ðức Chúa Trời thấy ánh sáng là tốt đẹp. Ðức Chúa Trời phân rẽ giữa ánh sáng và bóng tối. Ðức Chúa Trời gọi ánh sáng là ngày và bóng tối là đêm. Vậy có hoàng hôn và bình minh – ngày thứ nhất.}
+{\addfontfeature{Language=Vietnamese,StylisticSet=9}\large Ban đầu Ðức Chúa Trời dựng nên trời và đất. Thuở ấy đất hoang vắng và trống không. Bóng tối bao phử trên mặt vực thẳm. Thần[a] của Ðức Chúa Trời vận hành trên mặt nước. Ðức Chúa Trời phán, “Phải có ánh sáng,” thì có ánh sáng. Ðức Chúa Trời thấy ánh sáng là tốt đẹp. Ðức Chúa Trời phân rẽ giữa ánh sáng và bóng tối. Ðức Chúa Trời gọi ánh sáng là ngày và bóng tối là đêm. Vậy có hoàng hôn và bình minh – ngày thứ nhất.}
 
 \section{French (Medium + Spacing=1, ss08, ss18)}
 
-{\mediumspaced\addfontfeature{Language=French} Grandgousier était bon raillard en son temps,
+{\mediumspaced\addfontfeature{Language=French}\large Grandgousier était bon raillard en son temps,
 aimant à boire net autant qu’homme qui pour lors fût
 au monde, et mangeait volontiers salé. A cette fin,
 avait ordinairement bonne munition de jambons de Mayence
@@ -209,6 +208,32 @@ Gargamelle, fille du roi des Parpaillos, belle gouge» et de bonne
 trogne, et faisaient eux deux souvent ensemble la bête à deux
 dos, joyeusement se frottants leur lard, tant qu’elle engrossa
 d’un beau fils, et le porta jusques à l’onzième mois.}
+
+\section{Greek (Light)}
+
+{\light\large\addfontfeatures{Script=Greek,Language=Greek} Ἐγένετο δὲ ἐν ταῖς ἡμέραις ἐκείναις ἐξῆλθεν δόγμα παρὰ Καίσαρος 
+Αὐγούσ\-του ἀπογράφεσθαι πᾶσαν τὴν οἰκουμένην. αὕτη ἀπογραφὴ πρώτη 
+ἐγένετο ἡγε\-μονεύοντος τῆς Συρίας Κυρηνίου. καὶ ἐπορεύοντο πάντες 
+ἀπογράφεσθαι, ἕκαστος εἰς τὴν ἑαυτοῦ πόλιν. Ἀνέβη δὲ καὶ Ἰωσὴφ ἀπὸ 
+τῆς Γαλιλαίας ἐκ πόλεως Ναζαρὲθ εἰς τὴν Ἰουδαίαν εἰς πόλιν Δαυὶδ 
+ἥτις καλεῖται Βηθλέεμ, διὰ τὸ εἶναι αὐτὸν ἐξ οἴκου καὶ πατριᾶς Δαυίδ,
+ἀπογράψασθαι σὺν Μαριὰμ τῇ ἐμνηστευμένῃ αὐτῷ, οὔσῃ ἐγκύῳ. ἐγένετο δὲ 
+ἐν τῷ εἶναι αὐτοὺς ἐκεῖ ἐπλήσθησαν αἱ ἡμέραι τοῦ τεκεῖν αὐτήν, καὶ 
+ἔτεκεν τὸν υἱὸν αὐτῆς τὸν πρωτότοκον· καὶ ἐσπαργάνωσεν αὐτὸν καὶ 
+ἀνέκλινεν αὐτὸν ἐν φάτνῃ, διότι οὐκ ἦν αὐτοῖς τόπος ἐν τῷ καταλύματι.}
+
+\section{Greek {Bold Italic}}
+
+\textit{\textbf{\large Ἐγένετο δὲ ἐν ταῖς ἡμέραις ἐκείναις ἐξῆλθεν δόγμα παρὰ Καίσαρος 
+Αὐγούστου ἀπογράφεσθαι πᾶσαν τὴν οἰκουμένην. αὕτη ἀπογραφὴ πρώτη 
+ἐγένετο ἡγεμονεύοντος τῆς Συρίας Κυρηνίου. καὶ ἐπορεύοντο πάντες 
+ἀπογράφεσθαι, ἕκαστος εἰς τὴν ἑαυτοῦ πόλιν. Ἀνέβη δὲ καὶ Ἰωσὴφ ἀπὸ 
+τῆς Γαλιλαίας ἐκ πόλεως Ναζαρὲθ εἰς τὴν Ἰουδαίαν εἰς πόλιν Δαυὶδ 
+ἥτις καλεῖται Βηθλέεμ, διὰ τὸ εἶναι αὐτὸν ἐξ οἴκου καὶ πατριᾶς Δαυίδ,
+ἀπογράψασθαι σὺν Μαριὰμ τῇ ἐμνηστευμένῃ αὐτῷ, οὔσῃ ἐγκύῳ. ἐγένετο δὲ 
+ἐν τῷ εἶναι αὐτοὺς ἐκεῖ ἐπλήσθησαν αἱ ἡμέραι τοῦ τεκεῖν αὐτήν, καὶ 
+ἔτεκεν τὸν υἱὸν αὐτῆς τὸν πρωτότοκον· καὶ ἐσπαργάνωσεν αὐτὸν καὶ 
+ἀνέκλινεν αὐτὸν ἐν φάτνῃ, διότι οὐκ ἦν αὐτοῖς τόπος ἐν τῷ καταλύματι.}}
 
 
 
@@ -256,8 +281,9 @@ this feature on automatically in the vicinity of capitals.
 \section{ccmp (Glyph Composition/Decomposition)}
 In most applications this feature is on by default and cannot be turned off.
 In Elstob it performs (1.) removal of dot from i and j when followed by combining
-marks; and (2.) substituting ligatures for certain vowel + rhotic hook (\unic{\unic{U+02DE}})
-combinations.
+marks; (2.) substituting ligatures for certain vowel + rhotic hook (\unic{U+02DE})
+combinations; and (3.) substituting precomposed characters for letter +
+mark sequences in polytonic Greek.
 
 \section{cv07 (Variants of D)}
 Provides insular D (\cvd{7}{D}).
@@ -345,7 +371,9 @@ are provided by this feature, which should always be on.
 In most applications this feature is on by default and cannot be turned off.
 It provides the English forms of thorn and eth
 (\textbf{\addfontfeature{Language=English}{Þ þ ð}}) when English is the
-active language.
+active language. It also provides variants for several languages supported by this font:
+Azerbaijani, Catalan, Greek, Kazakh, Romanian, Turkish, Vietnamese, and a few minor
+languages.
 
 \section{ordn (Ordinals)}
 Provides superscript forms of \textbf{a} and \textbf{o} when preceded by a figure:
@@ -367,12 +395,12 @@ between the \textbf{s} and the \textbf{t}.
 
 \section{ss03 (Alternate Figures)}
 Changes oldstyle one and zero to more modern forms: a peaked one and a weighted zero. This
-feature also affects the slashed zero.
+feature also affects superscripts, subscripts, and the slashed zero.
 
 \section{ss04 (IPA Letter-Shapes)}
 Changes \textbf{g} to \textbf{ɡ} and (in italic only)
-\textbf{\textit{a}} to \textbf{\textit{\addfontfeature{StylisticSet=4} a}}. This feature has no counterpart in
-Junicode.
+\textbf{\textit{a}} to \textbf{\textit{\addfontfeature{StylisticSet=4} a}}. Some Greek letters
+are changed to shapes that harmonize with IPA characters.
 
 \section{ss08 (Contextual Long s)}
 In English, French, Italian, and Spanish text, and in combination with \textSourceText{calt}, distributes \textbf{s} and
@@ -466,10 +494,47 @@ operators to harmonize with the old-style figures.
 \section{zero (Slashed Zero)}
 Provides slashed zero ({\addfontfeature{Numbers=SlashedZero} 0 \ltab{0}}) in all figure styles.
 
+\chapter{Greek}
+
+As of version 3.0, Elstob supports both modern and ancient Greek.
+When typing accented characters in modern Greek, be sure to use
+forms with tonos (Ά \unic{U+0386}, ά \unic{U+03AC}, Έ \unic{U+0388}, έ \unic{U+03AD}, Ή \unic{U+0389}, ή \unic{U+03AE},
+Ί \unic{U+038A} ί \unic{U+03AF}, ΐ \unic{U+0390}, Ό \unic{U+038C}, ό \unic{U+03CC}, Ύ \unic{U+038E}, ύ \unic{U+03CD}, ΰ \unic{U+03B0},
+Ώ \unic{U+038F}, ώ \unic{U+03CE}). When typing polytonic Greek, instead
+use forms with oxia (Ά \unic{U+1FBB}, ά \unic{U+1F71}, Έ \unic{U+1FC9}, έ \unic{U+1F73}, Ή \unic{U+1FCB}, ή \unic{U+1F75},
+Ί \unic{U+1FDB}, ί \unic{U+1F77}, ΐ \unic{U+1FD3}, Ό \unic{U+1FF9}, ό \unic{U+1F79},
+Ύ \unic{U+1FEB}, ύ \unic{U+1F7B}, ΰ \unic{U+1FE3},
+Ώ \unic{U+1FFB}, ώ \unic{U+1F7D}). Although the tonos and oxia forms look the same, they
+behave differently: in a sequence of capital letters, or if you capitalize lowercase
+letters, the tonos disappears,
+in accordance with the modern rule; but the same does not happen with the oxia forms.
+
+Elstob has a full set of precomposed polytonic forms, but if you like you can
+type a base letter followed by the appropriate diacritics. For example, the sequence
+α \unic{U+03B1} ◌ͅ \unic{U+0345} ◌᾿ \unic{U+1FBF} ◌` \unic{U+1FEF} will yield 
+{\addfontfeature{Script=Greek,Language=Greek}ᾳ᾿`}, 
+and the sequence Α \unic{U+0391}
+ι \unic{U+1FBE} ◌῾ \unic{U+1FFE} ◌´ \unic{U+1FFD} will yield
+{\addfontfeature{Script=Greek,Language=Greek}Αι῾´}.
+Characters must come in this order:
+base character, prosgegrammeni \unic{U+1FBE} or ypogegrammeni \unic{U+0345}, and then other
+diacritics from left to right or bottom to top.
+If it's easier, you can type ◌́ \unic{U+0301} for oxia, ◌̀ \unic{U+0300} for varia,
+◌̕ \unic{U+0315} for psili, ◌̔ \unic{U+0314}
+for dasia, and ◌̆ \unic{U+0306} for vrachy. Elstob's OpenType programming
+will substitute the correct characters.\footnote{Always make sure the language for
+your document (or for a Greek passage) is set correctly. With fontspec, both
+Script and Language must be set to Greek.}
+
+Some users may be tempted to substitute Latin capitals for Greek capitals that
+look the same (e.g. B, H, T). Doing so, especially in polytonic text, will
+cause problems that may be difficult to diagnose.
+
+
 \chapter{Unicode character list}
 
 This is a list of characters with Unicode encodings in Elstob. In addition, the
-font contains more than 300 unencoded characters, including small
+font contains more than 600 unencoded characters, including small
 caps, ligatures, and symbols, accessible via OpenType features (listed above).
 
 Code points for which Elstob has no glyphs are represented in the table by blue
