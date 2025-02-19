@@ -21181,12 +21181,12 @@ glyphs:
         pos: lc-baseline-undershoot
         points:
         - ptid: '{190;78}'
-          rel: blackdist
+          rel: stem
           round: false
       - ptid: '{129;705}'
         points:
         - ptid: '{163;632}'
-          rel: blackdist
+          rel: stem
           round: false
       - ptid: '{211;412}'
         ref:
@@ -21196,7 +21196,7 @@ glyphs:
         round: true
         points:
         - ptid: '{230;330}'
-          rel: blackdist
+          rel: stem
           round: false
   epsilon:
     y:
@@ -21449,13 +21449,13 @@ glyphs:
         pos: Greek-xheight-overshoot
         points:
         - ptid: '{212;370}'
-          rel: blackdist
+          rel: stem
           round: false
       - ptid: '{202;-12}'
         pos: lc-baseline-undershoot
         points:
         - ptid: '{187;78}'
-          rel: blackdist
+          rel: stem
           round: false
       - ptid: '{45;-234}'
         pos: lc-descender
@@ -21566,16 +21566,16 @@ glyphs:
         pos: lc-baseline-undershoot
         points:
         - ptid: '{308;79}'
-          rel: blackdist
+          rel: stem
           round: false
       - ptid: '{470;451}'
         pos: Greek-xheight-overshoot
         points:
         - ptid: '{409;387}'
-          rel: blackdist
+          rel: stem
           round: false
         - ptid: '{140;451}'
-          rel: graydist
+          rel: stem
           min: false
   omega:
     y:
@@ -22714,6 +22714,36 @@ glyphs:
       - ptid: '{111;297}'
         points:
         - ptid: '{106;418}'
+          rel: blackdist
+          round: false
+  longs.rt:
+    y:
+      points:
+      - ptid: '{33;0}'
+        pos: baseline
+        points:
+        - ptid: '{33;25}'
+          rel: blackdist
+          round: false
+      - ptid: '{92;10}'
+        ref:
+        - '{33;0}'
+        - '{33;25}'
+        rel: interpolate
+      - ptid: '{303;726}'
+        pos: lc-ascender
+        points:
+        - ptid: '{280;692}'
+          rel: blackdist
+          round: false
+      - ptid: '{92;389}'
+        ref:
+        - '{303;726}'
+        - '{33;0}'
+        rel: interpolate
+        round: true
+        points:
+        - ptid: '{33;417}'
           rel: blackdist
           round: false
 masters:
