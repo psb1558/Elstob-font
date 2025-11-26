@@ -17290,50 +17290,45 @@ glyphs:
   oe.sc:
     y:
       points:
-      - ptid: '{224;-10}'
-        pos: lc-baseline-undershoot
+      - ptid: '{269;0}'
+        pos: baseline
         points:
-        - ptid: '{193;21}'
-          rel: blackdist
-          round: false
-      - ptid: '{287;506}'
-        pos: sc-height-overshoot
-        points:
-        - ptid: '{315;478}'
-          rel: blackdist
-          round: false
+        - ptid: '{339;25}'
+          rel: stem
       - ptid: '{425;496}'
         pos: sc-height
         points:
         - ptid: '{416;471}'
-          rel: blackdist
-          round: false
+          rel: stem
       - ptid: '{448;489}'
         ref:
-        - '{425;496}'
         - '{416;471}'
+        - '{425;496}'
         rel: interpolate
-      - ptid: '{286;0}'
-        pos: baseline
-        points:
-        - ptid: '{339;25}'
-          rel: blackdist
-          round: false
       - ptid: '{409;238}'
         ref:
-        - '{286;0}'
+        - '{269;0}'
         - '{425;496}'
         rel: interpolate
         round: true
         points:
         - ptid: '{419;268}'
-          rel: graydist
-          round: false
+          rel: stem
           points:
           - ptid: '{604;339}'
             rel: shift
         - ptid: '{539;157}'
           rel: shift
+      - ptid: '{217;-10}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{199;21}'
+          rel: stem
+      - ptid: '{293;506}'
+        pos: sc-height-overshoot
+        points:
+        - ptid: '{321;478}'
+          rel: stem
   ohorn.sc:
     y:
       points:
@@ -22677,6 +22672,41 @@ glyphs:
         - ptid: '{146;418}'
           rel: blackdist
           round: false
+  uniA7D6:
+    y:
+      points:
+      - ptid: '{-40;0}'
+        pos: baseline
+        points:
+        - ptid: '{-31;25}'
+          rel: stem
+      - ptid: '{75;10}'
+        ref:
+        - '{-40;0}'
+        - '{-31;25}'
+        rel: interpolate
+      - ptid: '{529;676}'
+        pos: cap-height-overshoot
+        points:
+        - ptid: '{487;630}'
+          rel: stem
+    props:
+      category: Lu
+  uniA7D7:
+    y:
+      points:
+      - ptid: '{-171;-245}'
+        pos: lc-descender
+        points:
+        - ptid: '{-135;-214}'
+          rel: stem
+      - ptid: '{404;725}'
+        pos: lc-ascender
+        points:
+        - ptid: '{390;697}'
+          rel: stem
+    props:
+      category: Ll
 masters:
   wght-min:
     name: wght-min
