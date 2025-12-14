@@ -6,7 +6,7 @@ defaults:
   cleartype: true
   cv_vars_generated: true
   no-round:
-  - blackdist
+  - stem
 cvt:
   baseline:
     val: 0
@@ -11636,15 +11636,14 @@ glyphs:
   quoteright:
     y:
       points:
-      - ptid: '{43;451}'
+      - ptid: '{179;451}'
         points:
-        - ptid: '{35;467}'
-          rel: shift
-      - ptid: '{199;724}'
-      - ptid: '{195;602}'
+        - ptid: '{335;724}'
+          rel: stem
+      - ptid: '{331;602}'
         ref:
-        - '{199;724}'
-        - '{43;451}'
+        - '{179;451}'
+        - '{335;724}'
         rel: interpolate
   quotesinglbase:
     y:
@@ -22707,6 +22706,95 @@ glyphs:
           rel: stem
     props:
       category: Ll
+  uniA7C2:
+    y:
+      points:
+      - ptid: '{207;-16}'
+        pos: cap-baseline-undershoot
+        points:
+        - ptid: '{552;-16}'
+          rel: stem
+          min: false
+      - ptid: '{169;663}'
+        pos: cap-height
+        points:
+        - ptid: '{512;663}'
+          rel: shift
+        - ptid: '{161;638}'
+          rel: stem
+          points:
+          - ptid: '{504;638}'
+            rel: shift
+      - ptid:
+        - '{223;653}'
+        - '{566;653}'
+        ref:
+        - '{161;638}'
+        - '{169;663}'
+        rel: interpolate
+      - ptid:
+        - '{281;86}'
+        - '{624;604}'
+        - '{620;42}'
+        ref:
+        - '{207;-16}'
+        - '{169;663}'
+        rel: interpolate
+      - ptid: '{892;677}'
+        pos: cap-height-overshoot
+        points:
+        - ptid: '{834;622}'
+          rel: stem
+          round: false
+      - ptid:
+        - '{733;363}'
+        - '{734;403}'
+        - '{829;422}'
+        ref:
+        - '{552;-16}'
+        - '{892;677}'
+        rel: interpolate
+  uniA7C3:
+    y:
+      points:
+      - ptid: '{121;-12}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{360;-12}'
+          rel: stem
+          min: false
+          points:
+          - ptid: '{429;50}'
+            rel: stem
+            round: false
+        - ptid: '{189;70}'
+          rel: stem
+          round: false
+      - ptid: '{579;446}'
+        pos: xheight-overshoot
+        points:
+        - ptid: '{531;406}'
+          rel: stem
+          round: false
+      - ptid:
+        - '{485;241}'
+        - '{484;270}'
+        - '{558;283}'
+        ref:
+        - '{360;-12}'
+        - '{579;446}'
+        rel: interpolate
+      - ptid: '{332;694}'
+        points:
+        - ptid: '{572;694}'
+          rel: shift
+      - ptid:
+        - '{299;185}'
+        - '{307;142}'
+        ref:
+        - '{121;-12}'
+        - '{332;694}'
+        rel: interpolate
 masters:
   wght-min:
     name: wght-min
