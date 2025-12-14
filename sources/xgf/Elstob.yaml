@@ -5,9 +5,9 @@ defaults:
   init-graphics: false
   cleartype: true
   cv_vars_generated: true
-  no-round:
-  - blackdist
   assume-always-y: true
+  no-round:
+  - stem
 cvt:
   baseline:
     val: 0
@@ -22793,6 +22793,80 @@ glyphs:
           rel: stem
     props:
       category: Ll
+  uniA7C2:
+    y:
+      points:
+      - ptid: '{294;-16}'
+        pos: cap-baseline-undershoot
+        points:
+        - ptid: '{639;-16}'
+          rel: shift
+      - ptid: '{19;663}'
+        pos: cap-height
+        points:
+        - ptid: '{362;663}'
+          rel: shift
+        - ptid: '{19;638}'
+          rel: stem
+          round: false
+          points:
+          - ptid: '{362;638}'
+            rel: shift
+      - ptid:
+        - '{76;653}'
+        - '{419;653}'
+        ref:
+        - '{19;638}'
+        - '{19;663}'
+        rel: interpolate
+      - ptid: '{737;677}'
+        pos: cap-height-overshoot
+        points:
+        - ptid: '{697;622}'
+          rel: stem
+          round: false
+      - ptid:
+        - '{332;86}'
+        - '{687;42}'
+        - '{494;604}'
+        ref:
+        - '{19;663}'
+        - '{294;-16}'
+        rel: interpolate
+  uniA7C3:
+    y:
+      points:
+      - ptid: '{202;-12}'
+        pos: lc-baseline-undershoot
+        points:
+        - ptid: '{441;-12}'
+          rel: stem
+          min: false
+          points:
+          - ptid: '{493;50}'
+            rel: stem
+            round: false
+        - ptid: '{248;70}'
+          rel: stem
+          round: false
+      - ptid: '{537;446}'
+        pos: xheight-overshoot
+        points:
+        - ptid: '{500;406}'
+          rel: stem
+          round: false
+      - ptid:
+        - '{498;241}'
+        - '{489;270}'
+        - '{560;283}'
+        ref:
+        - '{441;-12}'
+        - '{537;446}'
+        rel: interpolate
+      - ptid: '{224;694}'
+        points:
+        - ptid: '{464;694}'
+          rel: shift
 masters:
   wght-min:
     name: wght-min
